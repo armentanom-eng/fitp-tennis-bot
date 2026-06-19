@@ -1,50 +1,6 @@
-Report Aggiornato: 19/06/2026 15:52
-
-Singolare Maschile Open LIM. 3.5 - 2.4; PUGASSI FRANCESCO; 11:30
-Singolare Maschile Open LIM. 3.5 - 2.4; ROCCHI LUCA; 11:30
-Singolare Maschile Open LIM. 3.5 - 2.4; COMPAGNONE EDOARDO; 13:00
-Singolare Maschile Open LIM. 3.5 - 2.4; NACLERIO TOMMASO; 13:00
-Singolare Maschile Open LIM. 3.5 - 2.4; OGGERO MICHELE; 13:00
-Singolare Maschile Open LIM. 3.5 - 2.4; LOVECCHIO PRETTA SIMON ANDRES; 13:00
-Singolare Maschile Open LIM. 3.5 - 2.4; MARINO ALESSIO; 14:30
-Singolare Maschile Open LIM. 3.5 - 2.4; TOMASSETTI PIERPAOLO; 15:00
-Singolare Maschile Open LIM. 3.5 - 2.4; BASCIU EDOARDO; 15:00
-Singolare Maschile Open LIM. 3.5 - 2.4; MASSOLA ALESSANDRO; 16:00
-Singolare Femminile Open; LUPPI FEDERICA; 19:30
-Singolare Femminile Open; CANALI CARLOTTA; 19:30
-Singolare Maschile Open LIM. 4.NC - 3.1; MANCUSO ANGELO MARIO; 15:00
-Singolare Maschile Open LIM. 4.NC - 3.1; MATTACHINI MASSIMILIANO; 13:00
-Singolare Maschile Open LIM. 4.NC - 3.1; PAGLINO ROBERTO; 18:00
-Singolare Maschile Open LIM. 4.NC - 3.1; PILLIU GIAN PIETRO; 19:30
-Singolare Femminile Open LIM. 4.NC - 3.1; CASOTTO MATILDE; 20:00
-Singolare Maschile LIM. 4.NC - 3.1; DELLA CHA' CAMILLO COSIMO NAPOLEONE; 21:00
-Singolare Maschile LIM. 4.NC - 3.1; CIRILLO ANTONIO; 21:00
-Singolare Maschile Open LIM. 4.NC - 4.1; FERRERO FRANCESCO; 17:00
-Singolare Femminile Open LIM. 4.NC - 4.1; MONDINO CATERINA; 17:30
-Singolare Maschile Open LIM. 4.NC - 4.1; PANERO GABRIELE; 18:00
-Singolare Maschile Open LIM. 4.NC - 4.1; CIRAVEGNA ALESSANDRO; 18:00
-Singolare Maschile Open LIM. 4.NC - 4.1; PEURASAARI SAMULI; 19:30
-Singolare Femminile Open LIM. 4.NC - 4.1; CARATO DEBORAH; 20:00
-Doppio Maschile Open LIM. 4.NC - 3.1; CHICCO MARCO - REINA DAVIDE BUTCH; 19:00
-Doppio Maschile Open LIM. 4.NC - 3.1; ALFERO ALBERTO - CASALINI JACOPO; 21:00
-Doppio Maschile Open LIM. 4.NC - 3.1; GALETTO PAOLO - PROIETTI DAVIDE; 21:00
-Singolare Maschile Open; FRACCARO EDOARDO; 17:00
-Singolare Maschile Open; DELL'UTRI MARCO; 17:00
-Singolare Maschile Open; BELLOTTO MARTINO o Q; 18:30
-Singolare Maschile Open; BELTRAME GIOVANNI; 18:30
-Singolare Femminile Open; GOBBO SARA; 18:30
-Singolare Maschile Open; SACCHER PAOLO; 20:00
-Singolare Maschile Open; BONADIO PIETRO; 20:00
-Singolare Maschile Open; SANTAROSSA SIMONE; 20:00
-Singolare Maschile Open; Q o BRUNETTA ALESSANDRO; 20:00
-Singolare Maschile Open LIM. 4.NC - 4.3; MANNOCCI ANDREA; 14:30
-Singolare Maschile Open LIM. 4.NC - 4.3; MACELLARI RICCARDO; 14:30
-Singolare Maschile Open LIM. 4.NC - 4.3; MEDICI MAURIZIO; 16:00
-Singolare Maschile Open LIM. 4.NC - 4.3; GUZA LUKA; 16:00
-Singolare Maschile Open LIM. 4.NC - 4.3; BALDELLI MATTEO; 17:30
-Singolare Maschile Open LIM. 4.NC - 4.3; TONDINI EUGENIO; 17:30
-Singolare Maschile Open LIM. 4.NC - 4.3; BETTI STEFANO; 19:00
-Singolare Maschile Open LIM. 4.NC - 4.3; ANGELUCCI LORENZO; 19:00
-Singolare Maschile Open LIM. 4.NC - 4.3; CRAPAROTTA ANDREA; 20:30
-Singolare Maschile Open LIM. 4.NC - 4.3; BONDI DAVIDE; 20:00
-Singolare Maschile Open LIM. 4.NC - 4.3; CECCHETTI LUCA; 20:30
+19/06/2026; Singolare Maschile Open LIM. 4.NC - 4.1; MACULAN PAOLO; 18:00
+19/06/2026; Singolare Femminile Open LIM. 4.NC - 4.1; DISSEGNA VALENTINA; 18:00
+19/06/2026; Singolare Maschile Open LIM. 4.NC - 4.1; MOTTIN LUCA; 14:30
+19/06/2026; Singolare Maschile Open LIM. 4.NC - 4.1; MENIN RICCARDO; 19:30
+19/06/2026; Singolare Maschile Open LIM. 4.NC - 4.1; SINICO MARCO; 19:30
+19/06/2026; Singolare Maschile Open LIM. 4.NC - 4.1; CAPRARO SIMONE; 18:00
