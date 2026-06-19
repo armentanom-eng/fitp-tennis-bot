@@ -2,63 +2,51 @@ import time
 from playwright.sync_api import sync_playwright
 
 def run():
-    print("Avvio del bot...")
+    print("Avvio bot... Navigazione verso FITP")
     with sync_playwright() as p:
-        # Avvia browser in modalità headless (senza interfaccia grafica, necessaria per GitHub)
+        # Avvia il browser
         browser = p.chromium.launch(headless=True)
         page = browser.new_page()
         
-        # 1. Navigazione
-        print("Navigazione verso FITP...")
+        # 1. Vai alla pagina di ricerca
+        page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+        
+        # 2. Clicca sul primo torneo della lista (Dettagli)
+        # Il selettore cerca il link che contiene 'Dettaglio-Competizione'
+        print("Cerco il primo torneo disponibile...")
         try:
-            page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
-        except Exception as e:
-            print(f"Errore nella navigazione: {e}")
-            return
-
-        # 2. SELEZIONE FILTRI
-        # Se il sito chiede di accettare i cookie, il bot potrebbe bloccarsi. 
-        # Inseriamo un piccolo click generico se appare un popup, o procediamo.
-        try:
-            print("Cerco il bottone categoria...")
-            # Sostituisci 'TORNEI OPEN' con il testo esatto che vedi sul sito
-            # Se vuoi 'GIOVANILI', scrivi semplicemente 'GIOVANILI'
-            page.click("text='OPEN'", timeout=10000) 
-            page.wait_for_timeout(5000) # Attesa di 5 secondi per caricamento dati
-            print("Cliccato categoria correttamente.")
-        except Exception as e:
-            print(f"Bottone non trovato o errore: {e}")
-
-        # 3. ESTRAZIONE DATI
-        # Cerchiamo le 'card' o i blocchi che contengono i tornei
-        # (Adattiamo il selettore se il nome della classe cambia)
-        try:
-            # Esempio: cerchiamo tutti gli elementi che contengono i titoli dei tornei
-            # Se il sito usa tag specifici, vanno aggiornati qui
-            tornei = page.query_selector_all("h3, .card-title, .torneo-nome")
+            # Attendiamo che appaia almeno un link di dettaglio
+            page.wait_for_selector("a[href*='Dettaglio-Competizione']", timeout=15000)
             
-            data_file = []
-            for t in tornei:
-                text = t.inner_text().strip()
-                if text:
-                    data_file.append(text)
+            # Clicchiamo il primo che troviamo
+            dettaglio_link = page.query_selector("a[href*='Dettaglio-Competizione']")
+            dettaglio_link.click()
+            print("Entrato nella pagina Dettagli.")
             
-            # 4. SALVATAGGIO
+            # 3. Aspettiamo che si carichi la pagina di dettaglio
+            page.wait_for_load_state("networkidle")
+            
+            # 4. Cerchiamo il bottone Scarica (ID identificato: btnOrderGameDownload)
+            print("Cerco il bottone Scarica...")
+            page.wait_for_selector("#btnOrderGameDownload", timeout=15000)
+            
+            # Verifichiamo se il bottone esiste
+            bottone_scarica = page.query_selector("#btnOrderGameDownload")
+            if bottone_scarica:
+                print("TROVATO! Il bottone Scarica è presente.")
+                # Nota: In headless mode il download automatico è complesso.
+                # Per ora verifichiamo che il bot arrivi qui.
+                with open("Report_Partite.txt", "w", encoding="utf-8") as f:
+                    f.write("Successo: Il bot ha trovato il bottone di download per il torneo.")
+            
+        except Exception as e:
+            print(f"Errore durante la navigazione: {e}")
+            # Salviamo l'errore nel report per capire dove si ferma
             with open("Report_Partite.txt", "w", encoding="utf-8") as f:
-                f.write(f"--- REPORT ESTRATTO IL {time.strftime('%d/%m/%Y %H:%M')} ---\n\n")
-                if not data_file:
-                    f.write("Nessun torneo trovato. Controllare i selettori CSS.")
-                else:
-                    for item in data_file:
-                        f.write(f"- {item}\n")
-            
-            print(f"Salvato {len(data_file)} elementi nel file.")
-            
-        except Exception as e:
-            print(f"Errore durante l'estrazione: {e}")
+                f.write(f"Errore: {str(e)}")
 
         browser.close()
-        print("Operazione completata.")
+        print("Operazione terminata.")
 
 if __name__ == "__main__":
     run()
