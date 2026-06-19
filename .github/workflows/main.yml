@@ -1,31 +1,29 @@
-name: Bot Tennis Giornaliero
-
-# Diamo il permesso di scrivere nel repository
-permissions:
-  contents: write
+name: Bot Tennis Update
 
 on:
-  schedule:
-    - cron: '0 19 * * *'
+  push:
   workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.10'
       - name: Install dependencies
         run: |
-          pip install playwright pdfplumber
+          pip install playwright
           playwright install chromium
-      - name: Esegui Bot
+      - name: Run bot
         run: python bot.py
-      - name: Salva Risultati
+      - name: Commit files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Aggiornamento automatico partite"
-          file_pattern: 'Report_Partite.txt'
+          file_pattern: '*.txt'
