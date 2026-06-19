@@ -1,1 +1,27 @@
+name: Bot Tennis Giornaliero
 
+on:
+  schedule:
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          pip install playwright pdfplumber
+          playwright install chromium
+      - name: Esegui Bot
+        run: python bot.py
+      - name: Salva Risultati
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "Aggiornamento automatico partite"
+          file_pattern: 'Report_Partite.txt'
