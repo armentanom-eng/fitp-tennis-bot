@@ -2,10 +2,11 @@ import os
 import pdfplumber
 from playwright.sync_api import sync_playwright
 from datetime import datetime, timedelta
+import time
 
 def estrai_partite_con_filtro(percorso_pdf):
     partite_valide = []
-    # Generiamo le date per il filtro (formato gg/mm/aaaa)
+    # Data oggi e domani per il filtro
     oggi = datetime.now().strftime("%d/%m/%Y")
     domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
     
@@ -14,15 +15,14 @@ def estrai_partite_con_filtro(percorso_pdf):
             page = pdf.pages[0]
             testo_intero = page.extract_text()
             
-            # Verifichiamo se nel PDF è presente la data di oggi o domani
+            # Controllo se nel PDF c'è la data di oggi o domani
             data_trovata = None
             if oggi in testo_intero: data_trovata = oggi
             elif domani in testo_intero: data_trovata = domani
             
             if not data_trovata: 
-                return [] # Se non è oggi o domani, ignoriamo questo file
+                return [] 
 
-            # Estrazione tabelle dal PDF
             tabelle = page.extract_tables()
             for table in tabelle:
                 for row in table:
@@ -33,17 +33,15 @@ def estrai_partite_con_filtro(percorso_pdf):
                             giocatori = []
                             for r in righe:
                                 if "Inizio ore:" in r:
-                                    # Estrae l'orario dalla riga (es. "18:00")
                                     orario = r.replace("Inizio ore:", "").strip()
                                 elif "vs" not in r.lower() and len(r) > 4:
                                     giocatori.append(r.strip())
                             
-                            # Se abbiamo trovato l'orario e almeno due giocatori, salviamo
+                            # Formato: Data; G1; G2; Orario
                             if len(giocatori) >= 2 and orario:
-                                # Formato richiesto: Data; G1; G2; Orario
                                 partite_valide.append(f"{data_trovata}; {giocatori[0]}; {giocatori[1]}; {orario}")
     except Exception as e:
-        print(f"Errore durante l'estrazione: {e}")
+        print(f"Errore estrazione PDF: {e}")
         
     return partite_valide
 
@@ -51,34 +49,35 @@ def scarica_e_elabora(context, categoria_id, nome_file):
     page = context.new_page()
     page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
     
-    try:
-        # Filtro stato "In corso"
-        page.select_option("#select_status", label="In corso")
-        # Clic categoria
-        page.click(f'a[data-id="{categoria_id}"]')
-        page.wait_for_load_state("networkidle")
-        
-        # LOGICA PAGINAZIONE: Clicca finché il bottone esiste
-        while True:
-            bottone = page.locator("#btn-loadMore")
-            # Controlla se il bottone esiste ed è visibile
-            if bottone.is_visible():
-                bottone.click()
-                # Attesa dinamica per caricamento nuovi elementi
-                page.wait_for_timeout(2500) 
-            else:
-                # Il bottone non è più visibile, usciamo dal ciclo
-                break
-                
-    except Exception as e:
-        print(f"Errore durante la navigazione: {e}")
-
-    # Estrazione link tornei
-    tornei = page.query_selector_all("a[href*='Dettaglio-Competizione']")
-    urls = list(set([t.get_attribute("href") for t in tornei]))
+    # 1. Seleziona Categoria
+    page.select_option("#select_status", label="In corso")
+    page.click(f'a[data-id="{categoria_id}"]')
+    page.wait_for_load_state("networkidle")
+    
+    # 2. CARICAMENTO TOTALE: Clicca il bottone finché esiste
+    print(f"Caricamento tornei per {categoria_id}...")
+    while True:
+        bottone = page.locator("#btn-loadMore")
+        if bottone.is_visible():
+            bottone.click()
+            # Attesa più lunga per garantire il caricamento dei nuovi elementi
+            page.wait_for_timeout(3000) 
+        else:
+            print("Tutti i tornei caricati.")
+            break
+    
+    # 3. ESTRAZIONE LINK (dopo che tutto è stato caricato)
+    tornei_elements = page.query_selector_all("a[href*='Dettaglio-Competizione']")
+    urls = []
+    for t in tornei_elements:
+        href = t.get_attribute("href")
+        if href and href not in urls:
+            urls.append(href)
+    
+    print(f"Trovati {len(urls)} tornei da processare.")
     page.close()
     
-    # Scrittura file
+    # 4. Elaborazione sequenziale dei link
     with open(nome_file, "w", encoding="utf-8") as f:
         for url in urls:
             full_url = "https://www.fitp.it" + url
@@ -86,14 +85,13 @@ def scarica_e_elabora(context, categoria_id, nome_file):
             try:
                 p.goto(full_url, wait_until="domcontentloaded", timeout=20000)
                 
-                # Download diretto (senza passare per "Dettagli")
                 if p.locator("#btnOrderGameDownload").is_visible():
                     with p.expect_download(timeout=15000) as download_info:
                         p.click("#btnOrderGameDownload")
                     download = download_info.value
                     download.save_as("temp.pdf")
                     
-                    # Estrazione e scrittura dati
+                    # Estrai dati dal PDF appena scaricato
                     partite = estrai_partite_con_filtro("temp.pdf")
                     for p_data in partite:
                         f.write(f"{p_data}\n")
@@ -101,15 +99,15 @@ def scarica_e_elabora(context, categoria_id, nome_file):
                     if os.path.exists("temp.pdf"): os.remove("temp.pdf")
             except Exception as e:
                 print(f"Errore nel processare {full_url}: {e}")
-            finally:
+            finally: 
                 p.close()
 
 def run():
     with sync_playwright() as p:
+        # Uso 'headless=True' per GitHub Actions
         browser = p.chromium.launch(headless=True)
         context = browser.new_context(accept_downloads=True)
         
-        # Esecuzione per entrambe le categorie
         scarica_e_elabora(context, "t_giovanili", "Giovanili_Partite.txt")
         scarica_e_elabora(context, "t_affiliati", "Open_Partite.txt")
         
