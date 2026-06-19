@@ -1,5 +1,9 @@
 name: Bot Tennis Giornaliero
 
+# Diamo il permesso di scrivere nel repository
+permissions:
+  contents: write
+
 on:
   schedule:
     - cron: '0 19 * * *'
