@@ -1,3 +1,1 @@
-Errore: Page.wait_for_selector: Timeout 15000ms exceeded.
-Call log:
-  - waiting for locator("a[href*='Dettaglio-Competizione']") to be visible
+Pagina caricata ma nessun torneo trovato con quel selettore.
