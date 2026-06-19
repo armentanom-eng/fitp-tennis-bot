@@ -2,74 +2,65 @@ import time
 from playwright.sync_api import sync_playwright
 
 def scarica_dati(page, categoria_id, nome_file):
-    print(f"--- Inizio elaborazione: {nome_file} ---")
-    
-    # 1. Vai alla pagina ricerca
+    print(f"--- Inizio: {nome_file} ---")
     page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
     
-    # 2. Imposta filtro "In corso" (se il selettore esiste)
+    # 1. Filtro "In corso"
     try:
         page.select_option("#select_status", label="In corso")
-        page.wait_for_timeout(2000) # Attesa per caricamento dati dopo filtro
-    except:
-        print("Filtro 'In corso' non trovato, procedo con default.")
+        page.wait_for_timeout(3000) 
+    except Exception as e:
+        print(f"Avviso filtro status: {e}")
 
-    # 3. Clicca la categoria (Giovanili o Open)
+    # 2. Clicca categoria
     try:
         page.click(f'a[data-id="{categoria_id}"]')
-        page.wait_for_timeout(3000) # Attesa fondamentale
+        page.wait_for_timeout(3000)
     except Exception as e:
-        print(f"Errore cambio categoria: {e}")
+        print(f"Errore selezione categoria {categoria_id}: {e}")
         return
 
-    # 4. Loop per cliccare "Carica altri" finché esiste
-    print("Inizio caricamento completo lista...")
+    # 3. Carica tutti i tornei
+    print("Caricamento lista completa...")
     while True:
         try:
-            btn_more = page.locator("#btn-loadMore")
-            if btn_more.is_visible():
-                btn_more.click()
-                page.wait_for_timeout(2000) # Aspetta che carichi altri elementi
-                print("Caricati altri tornei...")
+            # Attendiamo che il bottone sia visibile
+            btn = page.locator("#btn-loadMore")
+            if btn.is_visible(timeout=5000):
+                btn.click()
+                page.wait_for_timeout(2000)
             else:
-                print("Tutti i tornei caricati.")
                 break
         except:
             break
 
-    # 5. Estrai i link dei dettagli
-    # Cerchiamo tutti i link che portano ai dettagli torneo
+    # 4. Estrazione link
     tornei = page.query_selector_all("a[href*='Dettaglio-Competizione']")
     urls = [t.get_attribute("href") for t in tornei]
     
     print(f"Trovati {len(urls)} tornei.")
 
-    # 6. Analizza i dettagli per ogni torneo
+    # 5. Controllo download
     risultati = []
     for url in urls:
-        # Costruiamo l'URL completo se necessario
         full_url = "https://www.fitp.it" + url if url.startswith('/') else url
-        
-        # Apriamo una nuova pagina per il dettaglio
         new_page = page.context.new_page()
         try:
             new_page.goto(full_url, wait_until="networkidle", timeout=30000)
-            
-            # Verifica presenza bottone download
+            # Verifica bottone
             if new_page.locator("#btnOrderGameDownload").is_visible():
-                risultati.append(f"TORNEO: {new_page.title()} | DOWNLOAD: DISPONIBILE | URL: {full_url}")
+                risultati.append(f"TORNEO: {new_page.title()} | DOWNLOAD: OK | URL: {full_url}")
             else:
-                risultati.append(f"TORNEO: {new_page.title()} | DOWNLOAD: NON TROVATO | URL: {full_url}")
-        except Exception as e:
-            print(f"Errore su torneo {full_url}: {e}")
+                risultati.append(f"TORNEO: {new_page.title()} | DOWNLOAD: NO | URL: {full_url}")
+        except:
+            risultati.append(f"ERRORE: {full_url}")
         finally:
             new_page.close()
 
-    # 7. Scrittura file
+    # 6. Salva
     with open(nome_file, "w", encoding="utf-8") as f:
         f.write(f"Report {nome_file} - {time.ctime()}\n\n")
         f.write("\n".join(risultati))
-    print(f"--- Salvato {nome_file} ---")
 
 def run():
     with sync_playwright() as p:
@@ -77,12 +68,10 @@ def run():
         context = browser.new_context()
         page = context.new_page()
         
-        # Esegui per Giovanili (t_giovanili)
+        # Esegui Giovanili
         scarica_dati(page, "t_giovanili", "Giovanili_Partite.txt")
-        
-        # Esegui per Open (t_open - ipotizzando l'ID, controlla se è t_open o simile nel tuo ispezione)
-        # Nota: controlla il data-id dell'elemento Open nel tuo browser e cambialo qui se diverso
-        scarica_dati(page, "t_open", "Open_Partite.txt") 
+        # Esegui Open
+        scarica_dati(page, "t_affiliati", "Open_Partite.txt")
         
         browser.close()
 
