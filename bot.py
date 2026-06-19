@@ -1,79 +1,93 @@
 import os
 import pdfplumber
+import time
 from playwright.sync_api import sync_playwright
 from datetime import datetime
 
-def estrai_partite_robusto(percorso_pdf):
+def estrai_partite_pulite(percorso_pdf):
     partite_trovate = []
-    nome_circolo = "Circolo Non Trovato"
     
     try:
         with pdfplumber.open(percorso_pdf) as pdf:
             page = pdf.pages[0]
-            testo = page.extract_text()
-            if not testo: return nome_circolo, []
+            # Usiamo extract_tables per essere precisi con la griglia del PDF
+            tabelle = page.extract_tables()
             
-            linee = testo.split('\n')
-            # La prima riga è solitamente il nome del circolo
-            nome_circolo = linee[0].strip()
-            
-            # Scorriamo le righe cercando il pattern
-            for i in range(len(linee)):
-                if "Inizio ore:" in linee[i]:
-                    orario = linee[i].replace("Inizio ore:", "").strip()
-                    
-                    # Proviamo a prendere le righe successive (giocatori)
-                    # Solitamente: riga(i+1) è Categoria, riga(i+2) è Gioc1, riga(i+3) è vs, riga(i+4) è Gioc2
-                    try:
-                        # Cerchiamo di trovare i giocatori ignorando la categoria
-                        giocatore1 = linee[i+2].strip()
-                        # La riga i+3 contiene "vs" o un separatore
-                        giocatore2 = linee[i+4].strip()
-                        
-                        # Pulizia: scartiamo righe che contengono 'vs' o sono troppo corte
-                        if "vs" not in giocatore1.lower() and len(giocatore1) > 4:
-                             partite_trovate.append(f"{giocatore1}; {giocatore2}; {orario}")
-                    except:
-                        continue
-                        
+            for table in tabelle:
+                for row in table:
+                    for cella in row:
+                        if cella and "Inizio ore:" in cella:
+                            # Pulizia del testo nella cella
+                            righe = cella.split('\n')
+                            orario = ""
+                            giocatori = []
+                            
+                            for r in righe:
+                                if "Inizio ore:" in r:
+                                    # Estrae solo l'orario (es. "18:00")
+                                    orario = r.replace("Inizio ore:", "").strip()
+                                elif "vs" not in r.lower() and len(r) > 4:
+                                    giocatori.append(r.strip())
+                            
+                            # Se abbiamo trovato l'orario e almeno due giocatori, salviamo
+                            if len(giocatori) >= 2 and orario:
+                                # Formato richiesto: G1; G2; Orario
+                                partite_trovate.append(f"{giocatori[0]}; {giocatori[1]}; {orario}")
     except Exception as e:
-        print(f"Errore lettura: {e}")
+        print(f"Errore durante l'estrazione del PDF: {e}")
         
-    return nome_circolo, partite_trovate
+    return partite_trovate
 
 def scarica_e_elabora(context, categoria_id, nome_file):
     page = context.new_page()
-    page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+    page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
     
     try:
         page.select_option("#select_status", label="In corso")
         page.click(f'a[data-id="{categoria_id}"]')
         page.wait_for_load_state("networkidle")
-    except: pass
+        
+        # --- LOGICA PAGINAZIONE ---
+        # Clicca il pulsante finché esiste
+        while True:
+            bottone = page.locator("#btn-loadMore")
+            if bottone.is_visible():
+                bottone.click()
+                page.wait_for_timeout(2000) # Attesa per caricamento nuovi elementi
+            else:
+                break
+        # --------------------------
+        
+    except Exception as e:
+        print(f"Errore navigazione: {e}")
 
-    urls = [t.get_attribute("href") for t in page.query_selector_all("a[href*='Dettaglio-Competizione']")]
+    # Estrazione link tornei
+    tornei = page.query_selector_all("a[href*='Dettaglio-Competizione']")
+    urls = list(set([t.get_attribute("href") for t in tornei]))
     page.close()
     
+    # Scrittura file pulito
     with open(nome_file, "w", encoding="utf-8") as f:
-        f.write(f"Report: {datetime.now().strftime('%d/%m/%Y')}\n\n")
-        for url in list(set(urls)):
+        f.write(f"Report Aggiornato: {datetime.now().strftime('%d/%m/%Y %H:%M')}\n\n")
+        
+        for url in urls:
             full_url = "https://www.fitp.it" + url
             p = context.new_page()
             try:
-                p.goto(full_url, wait_until="networkidle", timeout=20000)
+                p.goto(full_url, wait_until="domcontentloaded", timeout=15000)
                 if p.locator("#btnOrderGameDownload").is_visible():
-                    with p.expect_download() as download_info:
+                    with p.expect_download(timeout=10000) as download_info:
                         p.click("#btnOrderGameDownload")
                     download = download_info.value
                     download.save_as("temp.pdf")
                     
-                    nome, partite = estrai_partite_robusto("temp.pdf")
+                    partite = estrai_partite_pulite("temp.pdf")
                     if partite:
-                        f.write(f"\n>> {nome}\n")
                         for p_data in partite:
                             f.write(f"{p_data}\n")
+                    
                     if os.path.exists("temp.pdf"): os.remove("temp.pdf")
-            except Exception as e: print(f"Errore: {e}")
+            except: pass
             finally: p.close()
 
 def run():
