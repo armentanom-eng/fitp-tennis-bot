@@ -4,9 +4,11 @@ import pdfplumber
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
 
+# Impostazioni di velocità
 CONCURRENT_PAGES = 5 
 
 def estrai_dati_da_pdf(percorso_pdf, data_target):
+    """Estrae le partite dal PDF."""
     partite_trovate = []
     nome_circolo = "Circolo Non Trovato"
     try:
@@ -29,21 +31,25 @@ def estrai_dati_da_pdf(percorso_pdf, data_target):
     return nome_circolo, partite_trovate
 
 async def get_tournament_urls(page, categoria_id):
-    print(f"[{categoria_id}] Raccolta URL per il Lazio in corso...")
-    # Navigazione iniziale
+    """Raccolta URL con navigazione simulata."""
+    print(f"[{categoria_id}] Navigazione verso il sito...")
     await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
     
     # 1. Filtro Stato e Categoria
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
+    await asyncio.sleep(2)
     
-    # 2. FILTRO REGIONE (Usiamo l'ID trovato nello screenshot)
+    # 2. FILTRO REGIONE (Click simulato per aggirare il menu Bootstrap)
+    print(f"[{categoria_id}] Tentativo selezione Lazio...")
     try:
-        await page.select_option("#id_regioneSearch", label="Lazio")
-        # Attesa necessaria perché il sito ricarica i risultati via AJAX
-        await asyncio.sleep(3) 
+        await page.click('button[data-id="id_regioneSearch"]')
+        await asyncio.sleep(1)
+        await page.click('span.text:has-text("Lazio")')
+        await asyncio.sleep(3) # Attesa caricamento AJAX
+        print(f"[{categoria_id}] Filtro Lazio applicato con successo.")
     except Exception as e:
-        print(f"Errore filtro regione: {e}")
+        print(f"[{categoria_id}] Errore filtro regione (potrebbe essere già impostato): {e}")
     
     # Caricamento infinito
     while True:
@@ -59,9 +65,11 @@ async def get_tournament_urls(page, categoria_id):
     for el in elements:
         url = await el.get_attribute("href")
         if url and url not in urls: urls.append(url)
+    print(f"[{categoria_id}] Trovati {len(urls)} tornei.")
     return urls
 
 async def process_tournament(context, url, sem, nome_file):
+    """Elaborazione parallela dei tornei."""
     async with sem:
         full_url = "https://www.fitp.it" + url
         page = await context.new_page()
@@ -104,15 +112,19 @@ async def main():
         categorie = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
         
         for cat_id, file_name in categorie:
+            # Pulisci il file prima di iniziare
+            if os.path.exists(file_name): os.remove(file_name)
+            
             p_scout = await context.new_page()
-            # Assicuriamo che 'urls' sia sempre definito come lista vuota se non trova nulla
             urls = await get_tournament_urls(p_scout, cat_id) or []
             await p_scout.close()
             
-            print(f"[{cat_id}] Trovati {len(urls)} tornei. Avvio elaborazione...")
             if urls:
+                print(f"[{cat_id}] Avvio elaborazione {len(urls)} tornei...")
                 tasks = [process_tournament(context, url, sem, file_name) for url in urls]
                 await asyncio.gather(*tasks)
+            else:
+                print(f"[{cat_id}] Nessun torneo trovato, salto.")
         
         await browser.close()
 
