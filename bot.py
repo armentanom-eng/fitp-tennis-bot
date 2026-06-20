@@ -3,7 +3,7 @@ import os
 import pdfplumber
 from playwright.async_api import async_playwright
 
-CONCURRENT_PAGES = 5 
+CONCURRENT_PAGES = 3 # Ridotto leggermente per evitare timeout su GitHub
 URL_BASE = "https://www.fitp.it"
 
 def estrai_dati_da_pdf(percorso_pdf):
@@ -32,9 +32,15 @@ async def get_tournament_urls(page, categoria_id):
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
     
-    # Filtro Regione Lazio - FIXED con .first
+    # --- FIX ROBUSTO FILTRO LAZIO ---
+    # 1. Clicca per aprire
     await page.click('button[data-id="id_regioneSearch"]')
-    await page.locator('span.text:has-text("Lazio")').first.click() 
+    # 2. Aspetta che il menu sia visibile
+    await page.wait_for_selector('.dropdown-menu.show', state="visible")
+    # 3. Clicca "Lazio" forzando l'azione anche se Playwright pensa sia nascosto
+    await page.locator('span.text:has-text("Lazio")').first.click(force=True)
+    # 4. Attendi che il filtro si applichi
+    await page.wait_for_timeout(2000) 
     await page.wait_for_load_state("networkidle")
     
     # Caricamento completo
@@ -52,7 +58,7 @@ async def process_tournament(context, url, sem, nome_file, index):
             await page.goto(URL_BASE + url, wait_until="domcontentloaded", timeout=60000)
             btn = page.locator("text=Scarica")
             if await btn.is_visible():
-                async with page.expect_download(timeout=10000) as download_info:
+                async with page.expect_download(timeout=15000) as download_info:
                     await btn.click()
                 download = await download_info.value
                 path = f"temp_{index}.pdf"
@@ -70,7 +76,7 @@ async def process_tournament(context, url, sem, nome_file, index):
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True) # FONDAMENTALE
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         sem = asyncio.Semaphore(CONCURRENT_PAGES)
         
