@@ -4,7 +4,6 @@ import pdfplumber
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
 
-# Impostazioni di velocità
 CONCURRENT_PAGES = 5 
 
 def estrai_dati_da_pdf(percorso_pdf, data_target):
@@ -30,28 +29,28 @@ def estrai_dati_da_pdf(percorso_pdf, data_target):
     return nome_circolo, partite_trovate
 
 async def get_tournament_urls(page, categoria_id):
-    """Raccolta URL con FILTRO LAZIO."""
     print(f"[{categoria_id}] Raccolta URL per il Lazio in corso...")
+    # Navigazione iniziale
     await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
     
     # 1. Filtro Stato e Categoria
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
     
-    # 2. FILTRO REGIONE (Verifica l'ID: usa F12 sul browser per controllare il menu regione)
-    # Spesso è #select_regione, #regione o simili.
+    # 2. FILTRO REGIONE (Usiamo l'ID trovato nello screenshot)
     try:
-        await page.select_option("#select_regione", label="Lazio")
-        await asyncio.sleep(2) # Pausa per permettere il ricaricamento AJAX
+        await page.select_option("#id_regioneSearch", label="Lazio")
+        # Attesa necessaria perché il sito ricarica i risultati via AJAX
+        await asyncio.sleep(3) 
     except Exception as e:
-        print("Attenzione: Impossibile impostare filtro regione. Verifica l'ID del selettore.")
+        print(f"Errore filtro regione: {e}")
     
     # Caricamento infinito
     while True:
         btn = page.locator("#btn-loadMore")
         if await btn.is_visible():
             await btn.click()
-            await asyncio.sleep(1)
+            await asyncio.sleep(1.5)
         else:
             break
             
@@ -106,12 +105,14 @@ async def main():
         
         for cat_id, file_name in categorie:
             p_scout = await context.new_page()
-            urls = await get_tournament_urls(p_scout, cat_id)
+            # Assicuriamo che 'urls' sia sempre definito come lista vuota se non trova nulla
+            urls = await get_tournament_urls(p_scout, cat_id) or []
             await p_scout.close()
             
-            print(f"[{cat_id}] Trovati {len(urls)} tornei nel Lazio. Avvio elaborazione...")
-            tasks = [process_tournament(context, url, sem, file_name) for url in urls]
-            if tasks: await asyncio.gather(*tasks)
+            print(f"[{cat_id}] Trovati {len(urls)} tornei. Avvio elaborazione...")
+            if urls:
+                tasks = [process_tournament(context, url, sem, file_name) for url in urls]
+                await asyncio.gather(*tasks)
         
         await browser.close()
 
