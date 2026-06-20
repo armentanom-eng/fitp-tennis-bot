@@ -5,10 +5,9 @@ from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
 
 # Impostazioni di velocità
-CONCURRENT_PAGES = 5  # Quanti tornei scaricare in contemporanea (5 è il limite sicuro)
+CONCURRENT_PAGES = 5 
 
 def estrai_dati_da_pdf(percorso_pdf, data_target):
-    """Estrae le partite dal PDF (logica mantenuta identica)."""
     partite_trovate = []
     nome_circolo = "Circolo Non Trovato"
     try:
@@ -31,18 +30,28 @@ def estrai_dati_da_pdf(percorso_pdf, data_target):
     return nome_circolo, partite_trovate
 
 async def get_tournament_urls(page, categoria_id):
-    """Fase 1: Raccolta URL."""
-    print(f"[{categoria_id}] Raccolta URL in corso...")
+    """Raccolta URL con FILTRO LAZIO."""
+    print(f"[{categoria_id}] Raccolta URL per il Lazio in corso...")
     await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+    
+    # 1. Filtro Stato e Categoria
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
+    
+    # 2. FILTRO REGIONE (Verifica l'ID: usa F12 sul browser per controllare il menu regione)
+    # Spesso è #select_regione, #regione o simili.
+    try:
+        await page.select_option("#select_regione", label="Lazio")
+        await asyncio.sleep(2) # Pausa per permettere il ricaricamento AJAX
+    except Exception as e:
+        print("Attenzione: Impossibile impostare filtro regione. Verifica l'ID del selettore.")
     
     # Caricamento infinito
     while True:
         btn = page.locator("#btn-loadMore")
         if await btn.is_visible():
             await btn.click()
-            await asyncio.sleep(1) # Attesa minima per non sovraccaricare
+            await asyncio.sleep(1)
         else:
             break
             
@@ -54,7 +63,6 @@ async def get_tournament_urls(page, categoria_id):
     return urls
 
 async def process_tournament(context, url, sem, nome_file):
-    """Fase 2: Elaborazione parallela."""
     async with sem:
         full_url = "https://www.fitp.it" + url
         page = await context.new_page()
@@ -94,19 +102,16 @@ async def main():
         context = await browser.new_context(accept_downloads=True)
         sem = asyncio.Semaphore(CONCURRENT_PAGES)
         
-        # Eseguiamo per ogni categoria
         categorie = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
         
         for cat_id, file_name in categorie:
-            # 1. Raccolta URL
             p_scout = await context.new_page()
             urls = await get_tournament_urls(p_scout, cat_id)
             await p_scout.close()
             
-            # 2. Elaborazione Parallela
-            print(f"[{cat_id}] Trovati {len(urls)} tornei. Avvio elaborazione turbo...")
+            print(f"[{cat_id}] Trovati {len(urls)} tornei nel Lazio. Avvio elaborazione...")
             tasks = [process_tournament(context, url, sem, file_name) for url in urls]
-            await asyncio.gather(*tasks)
+            if tasks: await asyncio.gather(*tasks)
         
         await browser.close()
 
