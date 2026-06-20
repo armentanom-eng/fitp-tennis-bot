@@ -18,6 +18,11 @@ async def run_bot():
         
         for cat_id, filename in CATEGORIES.items():
             print(f"\n--- Inizio sessione: {filename} ---", flush=True)
+            
+            # Azzera il file all'inizio di ogni esecuzione
+            with open(filename, "w", encoding="utf-8") as f:
+                f.write(f"Report aggiornato al {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
+
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
@@ -39,9 +44,15 @@ async def run_bot():
                 else:
                     break
             
-            # Recupera URL tornei
-            links = await page.locator("a[href*='Dettaglio-Competizione']").all_attribute_values("href")
-            links = list(set(links))
+            # CORREZIONE ERRORE: Estrazione corretta dei link
+            locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            links = []
+            for loc in locators:
+                href = await loc.get_attribute("href")
+                if href:
+                    links.append(href)
+            links = list(set(links)) # Rimuovi duplicati
+            
             print(f"[*] Trovati {len(links)} tornei.", flush=True)
             
             for link in links:
@@ -50,9 +61,8 @@ async def run_bot():
                 nome = await page.locator("h1").first.inner_text()
                 print(f"  -> Elaborando: {nome}", flush=True)
                 
-                # ORA: Aspettiamo il menù a tendina con pazienza
+                # Attesa menù date
                 try:
-                    # Aspetta fino a 15 secondi che il menù sia visibile
                     await page.wait_for_selector("#select-ordergame", timeout=15000)
                     
                     # Date: Oggi e Domani
@@ -60,12 +70,9 @@ async def run_bot():
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                         
                         try:
-                            # Tentiamo di selezionare la data
-                            # usiamo 'label' per essere precisi
                             await page.select_option("#select-ordergame", label=data_target)
-                            await page.wait_for_timeout(2000) # Tempo per aggiornare la pagina
+                            await page.wait_for_timeout(2000)
                             
-                            # Clicchiamo il tasto download
                             async with page.expect_download(timeout=10000) as dl_info:
                                 await page.click("#btnOrderGameDownload")
                             
@@ -73,7 +80,6 @@ async def run_bot():
                             path = "temp.pdf"
                             await dl.save_as(path)
                             
-                            # Lettura dati
                             with pdfplumber.open(path) as pdf:
                                 save_data(filename, f">> {nome} ({data_target})")
                                 for page_pdf in pdf.pages:
@@ -83,12 +89,12 @@ async def run_bot():
                                             if "Inizio ore:" in line:
                                                 save_data(filename, f"{data_target}; {line.strip()}")
                             if os.path.exists(path): os.remove(path)
-                            print(f"     [OK] Scaricato PDF per {data_target}", flush=True)
+                            print(f"     [OK] {data_target}", flush=True)
                         except Exception:
                             print(f"     [-] Nessuna gara per {data_target}", flush=True)
                             
                 except Exception as e:
-                    print(f"     [!] Errore critico menù date: {e}", flush=True)
+                    print(f"     [!] Errore menù date su {nome}: {e}", flush=True)
             
             await page.close()
         await browser.close()
