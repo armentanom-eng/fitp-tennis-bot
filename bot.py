@@ -3,7 +3,7 @@ import os
 import pdfplumber
 from playwright.async_api import async_playwright
 
-CONCURRENT_PAGES = 3 # Ridotto leggermente per evitare timeout su GitHub
+CONCURRENT_PAGES = 3 
 URL_BASE = "https://www.fitp.it"
 
 def estrai_dati_da_pdf(percorso_pdf):
@@ -32,18 +32,18 @@ async def get_tournament_urls(page, categoria_id):
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
     
-    # --- FIX ROBUSTO FILTRO LAZIO ---
-    # 1. Clicca per aprire
+    # Clicca il pulsante del menu Regione
     await page.click('button[data-id="id_regioneSearch"]')
-    # 2. Aspetta che il menu sia visibile
-    await page.wait_for_selector('.dropdown-menu.show', state="visible")
-    # 3. Clicca "Lazio" forzando l'azione anche se Playwright pensa sia nascosto
-    await page.locator('span.text:has-text("Lazio")').first.click(force=True)
-    # 4. Attendi che il filtro si applichi
-    await page.wait_for_timeout(2000) 
+    
+    # Cerca l'opzione "Lazio" e cliccala (Metodo robusto)
+    lazio_option = page.get_by_role("option", name="Lazio")
+    await lazio_option.click(force=True)
+    
+    # Aspetta che il filtro carichi i risultati
+    await page.wait_for_timeout(3000) 
     await page.wait_for_load_state("networkidle")
     
-    # Caricamento completo
+    # Caricamento completo lista
     while await page.locator("#btn-loadMore").is_visible():
         await page.click("#btn-loadMore")
         await asyncio.sleep(1)
