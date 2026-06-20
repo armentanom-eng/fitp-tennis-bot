@@ -4,10 +4,11 @@ import pdfplumber
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
-URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
+URL_BASE = "https://www.fitp.it"
+URL_RICERCA = f"{URL_BASE}/Tornei/Ricerca-tornei"
 
-def salva_nel_file(file_output, nome_torneo, data_str, partite):
-    """Aggiunge le partite al file esistente."""
+def salva_risultati(file_output, nome_torneo, data_str, partite):
+    """Aggiunge i dati al file (append mode)."""
     with open(file_output, "a", encoding="utf-8") as f:
         f.write(f"\n>> {nome_torneo}\n")
         for p in partite:
@@ -19,26 +20,35 @@ def estrai_da_pdf(file_path):
     try:
         with pdfplumber.open(file_path) as pdf:
             for page in pdf.pages:
-                lines = page.extract_text().split('\n')
+                text = page.extract_text()
+                if not text: continue
+                lines = text.split('\n')
                 for i, line in enumerate(lines):
                     if "Inizio ore:" in line:
                         ora = line.replace("Inizio ore:", "").strip()
-                        g1 = lines[i+1].strip() if i+1 < len(lines) else ""
-                        g2 = lines[i+3].strip() if i+3 < len(lines) else ""
+                        g1 = lines[i+1].strip() if i+1 < len(lines) else "N/A"
+                        g2 = lines[i+3].strip() if i+3 < len(lines) else "N/A"
                         partite.append(f"{g1}; {g2}; {ora}")
-    except: pass
+    except Exception as e:
+        print(f"Errore estrazione PDF: {e}")
     return partite
 
-async def get_tournament_links(page, categoria_tab_name):
-    await page.goto(URL, wait_until="networkidle")
+async def get_tournament_links(page, tab_keyword):
+    """Naviga e trova i link, usando un approccio più permissivo per i click."""
+    await page.goto(URL_RICERCA, wait_until="networkidle")
+    
+    # Filtri: In corso e Lazio
     await page.select_option("#select_status", label="In corso")
     await page.click('button[data-id="id_regioneSearch"]')
     await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
     
-    await page.get_by_role("link", name=categoria_tab_name).click()
-    await page.wait_for_timeout(2000)
+    # Seleziona Tab categoria (Giovanili/Open)
+    tab = page.get_by_text(tab_keyword, exact=False).first
+    await tab.wait_for(state="visible", timeout=15000)
+    await tab.click()
+    await page.wait_for_timeout(3000)
 
-    # Paginazione: continua a cliccare finché il tasto c'è
+    # Caricamento paginazione
     while True:
         btn = page.locator("#btn-loadMore")
         if await btn.is_visible():
@@ -51,50 +61,58 @@ async def get_tournament_links(page, categoria_tab_name):
     return list(set([await el.get_attribute("href") for el in elements]))
 
 async def process_tournament(page, url, file_output):
-    await page.goto(f"https://www.fitp.it{url}")
-    nome_torneo = await page.locator("h1").first.inner_text()
-    
-    oggi = datetime.now().strftime("%d/%m/%Y")
-    domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
-    
-    for data_target in [oggi, domani]:
-        try:
-            await page.select_option("select[name='data_programma']", label=data_target)
-            async with page.expect_download() as download_info:
-                await page.click("#btnOrderGameDownload")
-            
-            download = await download_info.value
-            path = f"temp_{data_target.replace('/', '')}.pdf"
-            await download.save_as(path)
-            
-            partite = estrai_da_pdf(path)
-            if partite:
-                salva_nel_file(file_output, nome_torneo, data_target, partite)
-            
-            if os.path.exists(path): os.remove(path)
-        except Exception:
-            continue
+    """Entra nel torneo, seleziona date e scarica PDF."""
+    try:
+        await page.goto(f"{URL_BASE}{url}", wait_until="domcontentloaded")
+        nome_torneo = await page.locator("h1").first.inner_text()
+        
+        oggi = datetime.now().strftime("%d/%m/%Y")
+        domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
+        
+        for data_target in [oggi, domani]:
+            try:
+                await page.select_option("select[name='data_programma']", label=data_target)
+                async with page.expect_download(timeout=10000) as download_info:
+                    await page.click("#btnOrderGameDownload")
+                
+                download = await download_info.value
+                path = f"temp_{data_target.replace('/', '')}.pdf"
+                await download.save_as(path)
+                
+                partite = estrai_da_pdf(path)
+                if partite:
+                    salva_risultati(file_output, nome_torneo, data_target, partite)
+                
+                if os.path.exists(path): os.remove(path)
+            except:
+                continue # Salta se la data non è disponibile
+    except Exception as e:
+        print(f"Errore su {url}: {e}")
 
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
-        categorie = [("TORNEI GIOVANILI", "Giovanili_Partite.txt"), ("TORNEI OPEN", "Open_Partite.txt")]
+        # Mappa categorie (keyword nel testo del bottone, nome file)
+        categorie = [("Giovanili", "Giovanili_Partite.txt"), ("Open", "Open_Partite.txt")]
         
-        for tab_name, file_out in categorie:
-            # RESET DEL FILE: apre in 'w' e chiude subito, svuotando il contenuto
+        for keyword, file_out in categorie:
+            # RESET DEL FILE all'inizio di ogni categoria
             with open(file_out, "w", encoding="utf-8") as f:
                 f.write(f"Report del {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
             
             p_nav = await context.new_page()
-            links = await get_tournament_links(p_nav, tab_name)
-            await p_nav.close()
-            
-            for link in links:
-                p_proc = await context.new_page()
-                await process_tournament(p_proc, link, file_out)
-                await p_proc.close()
+            try:
+                links = await get_tournament_links(p_nav, keyword)
+                await p_nav.close()
+                
+                for link in links:
+                    p_proc = await context.new_page()
+                    await process_tournament(p_proc, link, file_out)
+                    await p_proc.close()
+            except Exception as e:
+                print(f"Errore cat {keyword}: {e}")
         
         await browser.close()
 
