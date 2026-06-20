@@ -7,7 +7,6 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 CATEGORIES = {"t_giovanili": "Giovanili_Partite.txt", "t_affiliati": "Open_Partite.txt"}
-# Ho aggiunto la lista degli stati da ciclare
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
 def save_data(filename, content):
@@ -15,11 +14,15 @@ def save_data(filename, content):
         f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
+    # Estrazione orario
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
+    
+    # Pulizia testo
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
+    # Estrazione Categoria
     cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
     found_cat = "N/A"
     for kw in cat_keywords:
@@ -60,28 +63,31 @@ async def run_bot():
         
         for cat_id, filename in CATEGORIES.items():
             print(f"\n--- Inizio sessione: {filename} ---", flush=True)
-            # Scrittura iniziale (sovrascrive solo all'inizio della categoria)
             with open(filename, "w", encoding="utf-8") as f:
                 f.write(f"Report aggiornato al {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
 
-            # Ciclo sugli stati (In corso -> Iscrizioni aperte)
             for status in STATUSES:
                 print(f"  -> Elaborando stato: {status}", flush=True)
-                
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # Applicazione filtri
-                await page.select_option("#select_status", label=status)
+                # 1. Selezione STATO (Click su bottone -> Click su opzione nel menu)
+                await page.click('button[data-id="select_status"]')
+                await asyncio.sleep(1)
+                await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await asyncio.sleep(2) 
+                
+                # 2. Selezione REGIONE (Click su bottone -> Click su opzione nel menu)
                 await page.click('button[data-id="id_regioneSearch"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(2) 
+                
+                # 3. Selezione CATEGORIA
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
-                # Caricamento progressivo (Carica altri...)
+                # Caricamento lista
                 while await page.locator("#btn-loadMore").is_visible():
                     await page.click("#btn-loadMore")
                     await asyncio.sleep(2)
@@ -95,9 +101,7 @@ async def run_bot():
                     full_url = f"https://www.fitp.it{link}"
                     try:
                         await page.goto(full_url, wait_until="networkidle")
-                        # Se è "Iscrizioni aperte", probabilmente non ci sono ancora orari/PDF
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000):
-                            print(f"    - Nessun orario/PDF trovato per: {full_url.split('/')[-1]}")
                             continue
                         
                         for i in range(2):
