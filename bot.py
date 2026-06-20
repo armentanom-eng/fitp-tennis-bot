@@ -64,24 +64,35 @@ async def process_tournament(page, url, file_output):
         full_url = f"{URL_BASE}{url}" if url.startswith('/') else url
         await page.goto(full_url, wait_until="domcontentloaded")
         
-        # NUOVA LOGICA: Se non trova il menu date, non crasha, ma salta il torneo
+        # Cerchiamo il trigger del menu (l'elemento che mostra la data)
+        trigger_selector = "xpath=//*[contains(text(), 'Orario di Gioco')]/following::div[contains(@class, 'select') or contains(@class, 'dropdown') or contains(@class, 'input')][1]"
+        
         try:
-            await page.wait_for_selector("select[name='data_programma']", timeout=30000)
+            trigger = page.locator(trigger_selector).first
+            await trigger.wait_for(state="visible", timeout=30000)
         except Exception:
-            print(f"  [!] Saltato: Nessuna programmazione trovata su {url}", flush=True)
-            return 
+            print(f"  [!] Saltato: Nessun menu date trovato su {url}", flush=True)
+            return
 
         nome_torneo = await page.locator("h1").first.inner_text()
         print(f"  -> Elaborazione: {nome_torneo}", flush=True)
         
-        oggi = datetime.now().strftime("%d/%m/%Y")
-        domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
+        oggi_str = datetime.now().strftime("%d/%m/%Y")
+        domani_str = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
         
-        for data_target in [oggi, domani]:
+        for data_target in [oggi_str, domani_str]:
             try:
-                await page.select_option("select[name='data_programma']", label=data_target)
+                # Clicchiamo per aprire il menu
+                await trigger.click()
                 
-                # Aspetta il tasto download
+                # Cerchiamo l'opzione con la data specifica nel dropdown aperto
+                data_option = page.locator(f"text='{data_target}'")
+                
+                # Aspettiamo che appaia e clicchiamo
+                await data_option.wait_for(state="visible", timeout=5000)
+                await data_option.click()
+                
+                # Aspettiamo il bottone download
                 await page.wait_for_selector("#btnOrderGameDownload", timeout=10000)
                 
                 async with page.expect_download(timeout=10000) as download_info:
@@ -97,7 +108,10 @@ async def process_tournament(page, url, file_output):
                     print(f"     [OK] {data_target}: {len(partite)} match estratti.", flush=True)
                 
                 if os.path.exists(path): os.remove(path)
-            except:
+                
+            except Exception:
+                # Se la data non è presente nel menu, passiamo oltre
+                print(f"     [-] Data {data_target} non disponibile.", flush=True)
                 continue 
     except Exception as e:
         print(f"  [!] Errore critico su {url}: {e}", flush=True)
