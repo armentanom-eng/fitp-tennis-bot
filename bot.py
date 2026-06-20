@@ -2,9 +2,7 @@ import asyncio
 import os
 import pdfplumber
 from playwright.async_api import async_playwright
-from datetime import datetime
 
-# Configurazione velocità
 CONCURRENT_PAGES = 5 
 URL_BASE = "https://www.fitp.it"
 
@@ -34,15 +32,15 @@ async def get_tournament_urls(page, categoria_id):
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
     
-    # Filtro Regione Lazio
+    # Filtro Regione Lazio - FIXED con .first
     await page.click('button[data-id="id_regioneSearch"]')
-    await page.locator('span.text:has-text("Lazio")').click()
+    await page.locator('span.text:has-text("Lazio")').first.click() 
     await page.wait_for_load_state("networkidle")
     
     # Caricamento completo
     while await page.locator("#btn-loadMore").is_visible():
         await page.click("#btn-loadMore")
-        await page.wait_for_timeout(1000)
+        await asyncio.sleep(1)
             
     elements = await page.locator("a[href*='Dettaglio-Competizione']").all()
     return list(set([await el.get_attribute("href") for el in elements]))
@@ -52,7 +50,6 @@ async def process_tournament(context, url, sem, nome_file, index):
         page = await context.new_page()
         try:
             await page.goto(URL_BASE + url, wait_until="domcontentloaded", timeout=60000)
-            # Tenta di scaricare (gestisce solo la pagina corrente che mostra i match del giorno)
             btn = page.locator("text=Scarica")
             if await btn.is_visible():
                 async with page.expect_download(timeout=10000) as download_info:
@@ -73,7 +70,7 @@ async def process_tournament(context, url, sem, nome_file, index):
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True) # FONDAMENTALE: Headless=True
+        browser = await p.chromium.launch(headless=True) # FONDAMENTALE
         context = await browser.new_context(accept_downloads=True)
         sem = asyncio.Semaphore(CONCURRENT_PAGES)
         
