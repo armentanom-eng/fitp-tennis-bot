@@ -1,27 +1,32 @@
-name: Bot Tennis Update
-
+name: Tennis Bot Runner
 on:
-  push:
-  workflow_dispatch:
-
+  schedule:
+    - cron: '0 8 * * *' # Gira ogni giorno alle 8:00
+  workflow_dispatch: # Permette di farlo partire manualmente
 jobs:
-  build:
+  run-bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout del codice
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: |
           pip install playwright pdfplumber
           playwright install chromium
 
-      - name: Run bot
-        env:
-          PYTHONUNBUFFERED: "1"
+      - name: Esecuzione Bot
         run: python bot.py
+
+      - name: Upload dei risultati
+        uses: actions/upload-artifact@v4
+        with:
+          name: risultati-partite
+          path: |
+            Giovanili.txt
+            Open.txt
