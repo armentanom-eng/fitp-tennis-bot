@@ -17,8 +17,7 @@ async def run_bot():
         context = await browser.new_context(accept_downloads=True)
         
         for cat_id, filename in CATEGORIES.items():
-            print(f"--- Inizio sessione: {filename} ---", flush=True)
-            
+            print(f"\n--- Inizio sessione: {filename} ---", flush=True)
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
@@ -31,7 +30,7 @@ async def run_bot():
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await page.wait_for_timeout(3000)
             
-            # Carica tutto
+            # Carica tutti i risultati
             while True:
                 btn = page.locator("#btn-loadMore")
                 if await btn.is_visible():
@@ -41,32 +40,32 @@ async def run_bot():
                     break
             
             # Recupera URL tornei
-            elements = await page.locator("a[href*='Dettaglio-Competizione']").all()
-            links = []
-            for el in elements:
-                links.append(await el.get_attribute("href"))
+            links = await page.locator("a[href*='Dettaglio-Competizione']").all_attribute_values("href")
             links = list(set(links))
-            
             print(f"[*] Trovati {len(links)} tornei.", flush=True)
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
-                await page.goto(full_url, wait_until="domcontentloaded")
+                await page.goto(full_url, wait_until="networkidle")
                 nome = await page.locator("h1").first.inner_text()
-                print(f"  -> {nome}", flush=True)
+                print(f"  -> Elaborando: {nome}", flush=True)
                 
-                # Date
-                for i in range(2):
-                    data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                # ORA: Aspettiamo il menù a tendina con pazienza
+                try:
+                    # Aspetta fino a 15 secondi che il menù sia visibile
+                    await page.wait_for_selector("#select-ordergame", timeout=15000)
                     
-                    # Verifica menu
-                    dropdown = page.locator("#select-ordergame")
-                    if await dropdown.count() > 0:
+                    # Date: Oggi e Domani
+                    for i in range(2):
+                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        
                         try:
-                            await dropdown.select_option(label=data_target)
-                            await page.wait_for_timeout(2000)
+                            # Tentiamo di selezionare la data
+                            # usiamo 'label' per essere precisi
+                            await page.select_option("#select-ordergame", label=data_target)
+                            await page.wait_for_timeout(2000) # Tempo per aggiornare la pagina
                             
-                            # Download
+                            # Clicchiamo il tasto download
                             async with page.expect_download(timeout=10000) as dl_info:
                                 await page.click("#btnOrderGameDownload")
                             
@@ -74,7 +73,7 @@ async def run_bot():
                             path = "temp.pdf"
                             await dl.save_as(path)
                             
-                            # Lettura
+                            # Lettura dati
                             with pdfplumber.open(path) as pdf:
                                 save_data(filename, f">> {nome} ({data_target})")
                                 for page_pdf in pdf.pages:
@@ -84,11 +83,13 @@ async def run_bot():
                                             if "Inizio ore:" in line:
                                                 save_data(filename, f"{data_target}; {line.strip()}")
                             if os.path.exists(path): os.remove(path)
-                            print(f"     [OK] {data_target}", flush=True)
-                        except Exception as e:
-                            print(f"     [!] Errore su {data_target}: {e}", flush=True)
-                    else:
-                        print(f"     [-] Menu date non trovato", flush=True)
+                            print(f"     [OK] Scaricato PDF per {data_target}", flush=True)
+                        except Exception:
+                            print(f"     [-] Nessuna gara per {data_target}", flush=True)
+                            
+                except Exception as e:
+                    print(f"     [!] Errore critico menù date: {e}", flush=True)
+            
             await page.close()
         await browser.close()
 
