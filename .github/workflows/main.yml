@@ -18,7 +18,7 @@ jobs:
           playwright install chromium
       - name: Run Bot
         run: python bot.py
-      - name: Upload
+      - name: Upload Risultati
         uses: actions/upload-artifact@v4
         with:
           name: risultati-partite
