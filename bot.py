@@ -4,7 +4,6 @@ import pdfplumber
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
 
-# Impostazioni
 CONCURRENT_PAGES = 5 
 
 def estrai_dati_da_pdf(percorso_pdf):
@@ -30,22 +29,22 @@ def estrai_dati_da_pdf(percorso_pdf):
     return nome_circolo, partite_trovate
 
 async def get_tournament_urls(page, categoria_id):
-    print(f"[{categoria_id}] Navigazione verso il sito...")
+    print(f"[{categoria_id}] Navigazione verso il sito...", flush=True)
     await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
     
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
     await asyncio.sleep(2)
     
-    print(f"[{categoria_id}] Tentativo selezione Lazio...")
+    print(f"[{categoria_id}] Tentativo selezione Lazio...", flush=True)
     try:
         await page.click('button[data-id="id_regioneSearch"]')
         await asyncio.sleep(1)
         await page.click('span.text:has-text("Lazio")')
         await asyncio.sleep(3)
-        print(f"[{categoria_id}] Filtro Lazio applicato.")
+        print(f"[{categoria_id}] Filtro Lazio applicato.", flush=True)
     except Exception as e:
-        print(f"[{categoria_id}] Errore filtro regione (non critico): {e}")
+        print(f"[{categoria_id}] Errore filtro regione: {e}", flush=True)
     
     while True:
         btn = page.locator("#btn-loadMore")
@@ -66,7 +65,7 @@ async def process_tournament(context, url, sem, nome_file, index, total):
     async with sem:
         full_url = "https://www.fitp.it" + url
         page = await context.new_page()
-        print(f"  --> [Progresso: {index}/{total}] Elaborazione: {url[-15:]}...")
+        print(f"  --> [Progresso: {index}/{total}] Elaborazione: {url[-15:]}...", flush=True)
         try:
             await page.goto(full_url, wait_until="domcontentloaded", timeout=60000)
             oggi = datetime.now().strftime("%d/%m/%Y")
@@ -93,7 +92,7 @@ async def process_tournament(context, url, sem, nome_file, index, total):
                             if os.path.exists(temp_file): os.remove(temp_file)
                 except: continue
         except Exception as e:
-            print(f"    ! Errore su {url}: {e}")
+            print(f"    ! Errore su {url}: {e}", flush=True)
         finally:
             await page.close()
 
@@ -106,26 +105,22 @@ async def main():
         categorie = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
         
         for cat_id, file_name in categorie:
-            # 1. Pulizia file precedente
             if os.path.exists(file_name): os.remove(file_name)
             
-            # 2. Ottenimento URL (forziamo una lista vuota se c'è errore)
-            print(f"--- Inizio categoria {cat_id} ---")
+            print(f"--- Inizio categoria {cat_id} ---", flush=True)
             p_scout = await context.new_page()
-            urls = await get_tournament_urls(p_scout, cat_id)
-            if urls is None: urls = [] 
+            urls = await get_tournament_urls(p_scout, cat_id) or []
             await p_scout.close()
             
-            # 3. Elaborazione (solo se la lista esiste)
-            if len(urls) > 0:
-                print(f"[{cat_id}] Trovati {len(urls)} tornei. Inizio download...")
+            if urls:
+                print(f"[{cat_id}] Trovati {len(urls)} tornei. Inizio download...", flush=True)
                 tasks = []
                 for i, url in enumerate(urls, 1):
                     tasks.append(process_tournament(context, url, sem, file_name, i, len(urls)))
                 await asyncio.gather(*tasks)
-                print(f"[{cat_id}] Operazione completata.")
+                print(f"[{cat_id}] Operazione completata.", flush=True)
             else:
-                print(f"[{cat_id}] Nessun torneo trovato o errore di recupero.")
+                print(f"[{cat_id}] Nessun torneo trovato.", flush=True)
         
         await browser.close()
 
