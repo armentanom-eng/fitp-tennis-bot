@@ -4,51 +4,89 @@ import pdfplumber
 from playwright.async_api import async_playwright
 from datetime import datetime, timedelta
 
-# Limite di pagine aperte contemporaneamente (3 è il numero d'oro per velocità/sicurezza)
-CONCURRENT_PAGES = 3 
+# Impostazioni di velocità
+CONCURRENT_PAGES = 5  # Quanti tornei scaricare in contemporanea (5 è il limite sicuro)
 
-async def process_tournament(context, url, sem):
-    async with sem: # Gestisce il limite di caricamento
+def estrai_dati_da_pdf(percorso_pdf, data_target):
+    """Estrae le partite dal PDF (logica mantenuta identica)."""
+    partite_trovate = []
+    nome_circolo = "Circolo Non Trovato"
+    try:
+        with pdfplumber.open(percorso_pdf) as pdf:
+            if not pdf.pages: return None, []
+            testo = pdf.pages[0].extract_text()
+            if not testo: return None, []
+            linee = testo.split('\n')
+            nome_circolo = linee[0].strip()
+            for i in range(len(linee)):
+                if "Inizio ore:" in linee[i]:
+                    orario = linee[i].replace("Inizio ore:", "").strip()
+                    try:
+                        g1 = linee[i+2].strip()
+                        g2 = linee[i+4].strip()
+                        if "vs" not in g1.lower() and len(g1) > 4:
+                             partite_trovate.append(f"{g1}; {g2}; {orario}")
+                    except: continue
+    except: pass
+    return nome_circolo, partite_trovate
+
+async def get_tournament_urls(page, categoria_id):
+    """Fase 1: Raccolta URL."""
+    print(f"[{categoria_id}] Raccolta URL in corso...")
+    await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+    await page.select_option("#select_status", label="In corso")
+    await page.click(f'a[data-id="{categoria_id}"]')
+    
+    # Caricamento infinito
+    while True:
+        btn = page.locator("#btn-loadMore")
+        if await btn.is_visible():
+            await btn.click()
+            await asyncio.sleep(1) # Attesa minima per non sovraccaricare
+        else:
+            break
+            
+    elements = await page.locator("a[href*='Dettaglio-Competizione']").all()
+    urls = []
+    for el in elements:
+        url = await el.get_attribute("href")
+        if url and url not in urls: urls.append(url)
+    return urls
+
+async def process_tournament(context, url, sem, nome_file):
+    """Fase 2: Elaborazione parallela."""
+    async with sem:
         full_url = "https://www.fitp.it" + url
         page = await context.new_page()
         try:
-            # Velocità: domcontentloaded non aspetta le pubblicità/immagini
             await page.goto(full_url, wait_until="domcontentloaded", timeout=60000)
-            
             oggi = datetime.now().strftime("%d/%m/%Y")
             domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
             
             for data in [oggi, domani]:
                 try:
-                    # Selettore unico per la data
                     if await page.locator("select").count() > 0:
                         await page.select_option("select", label=data)
-                        await asyncio.sleep(1.5) # Pausa minima tecnica
+                        await asyncio.sleep(1) 
                         
                         btn = page.locator("text=Scarica")
                         if await btn.is_visible():
-                            async with page.expect_download(timeout=10000) as download_info:
+                            async with page.expect_download(timeout=15000) as download_info:
                                 await btn.click()
                             download = await download_info.value
                             temp_file = f"temp_{data.replace('/', '-')}.pdf"
                             await download.save_as(temp_file)
                             
-                            # Logica estrazione (resta sincrona per semplicità)
-                            # Nota: pdfplumber è sincrono, va bene così
                             nome, partite = estrai_dati_da_pdf(temp_file, data)
                             if nome and partite:
-                                # Scrittura protetta (se il file è bloccato, riprova)
-                                with open("Risultati_Finali.txt", "a", encoding="utf-8") as f:
-                                    f.write(f"\n>> {nome} ({data})\n" + "\n".join(partite) + "\n")
+                                with open(nome_file, "a", encoding="utf-8") as f:
+                                    f.write(f"\n>> {nome} (Data: {data})\n" + "\n".join(partite) + "\n")
                             if os.path.exists(temp_file): os.remove(temp_file)
-                except Exception as e:
-                    pass
-        except Exception:
-            pass
+                except: continue
+        except Exception as e:
+            print(f"Errore su {url}: {e}")
         finally:
             await page.close()
-
-# Mantieni la tua funzione estrai_dati_da_pdf così com'è, è perfetta.
 
 async def main():
     async with async_playwright() as p:
@@ -56,10 +94,19 @@ async def main():
         context = await browser.new_context(accept_downloads=True)
         sem = asyncio.Semaphore(CONCURRENT_PAGES)
         
-        # Qui dovresti inserire la logica di raccolta URL (la Fase 1 e 2 del vecchio codice)
-        # Una volta ottenuta la lista 'urls', fai questo:
-        tasks = [process_tournament(context, url, sem) for url in urls]
-        await asyncio.gather(*tasks)
+        # Eseguiamo per ogni categoria
+        categorie = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
+        
+        for cat_id, file_name in categorie:
+            # 1. Raccolta URL
+            p_scout = await context.new_page()
+            urls = await get_tournament_urls(p_scout, cat_id)
+            await p_scout.close()
+            
+            # 2. Elaborazione Parallela
+            print(f"[{cat_id}] Trovati {len(urls)} tornei. Avvio elaborazione turbo...")
+            tasks = [process_tournament(context, url, sem, file_name) for url in urls]
+            await asyncio.gather(*tasks)
         
         await browser.close()
 
