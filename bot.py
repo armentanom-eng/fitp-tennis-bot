@@ -17,7 +17,7 @@ def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
     
-    # 2. Sostituisce "vs" con "; " per separare i giocatori (fondamentale per Swift)
+    # 2. Sostituisce "vs" con "; " per separare i giocatori
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     
     # 3. Rimuove le indicazioni testuali dell'orario
@@ -28,16 +28,13 @@ def format_line_for_swift(raw_text, date_target):
     found_cat = "N/A"
     for kw in cat_keywords:
         if kw in clean_text:
-            # Divide la categoria dal resto
             parts = re.split(r'\s+(?=[A-Z]{3,})', clean_text, maxsplit=1)
             found_cat = parts[0].strip()
-            # Se la parte 0 è troppo lunga, fallback
             if len(found_cat) > 50: found_cat = "Categoria non specificata"
             break
             
     final_match_data = clean_text.replace(found_cat, "").strip()
     
-    # Restituisce formato standard: Data; Ora; Categoria; Giocatore1; Giocatore2
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
 def get_pdf_info(pdf_path):
@@ -57,7 +54,8 @@ def get_pdf_info(pdf_path):
                         for cell in row:
                             if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
                                 matches.append(cell.replace("\n", " ").strip())
-    except: pass
+    except: 
+        pass
     return title, matches
 
 async def run_bot():
@@ -73,7 +71,7 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # --- APPLICAZIONE FILTRI (RIGOROSA) ---
+            # --- APPLICAZIONE FILTRI ---
             # Filtro 1: Stato
             await page.select_option("#select_status", label="In corso")
             await asyncio.sleep(2) 
@@ -102,3 +100,37 @@ async def run_bot():
                 full_url = f"https://www.fitp.it{link}"
                 for attempt in range(2): 
                     try:
+                        await page.goto(full_url, wait_until="networkidle")
+                        if not await page.locator("#select-ordergame").is_visible(timeout=5000):
+                            break
+                        
+                        for i in range(2):
+                            data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                            options = await page.locator("#select-ordergame option").all_text_contents()
+                            if data_target not in "".join(options): 
+                                continue 
+                                
+                            await page.select_option("#select-ordergame", label=data_target)
+                            await asyncio.sleep(2)
+                            
+                            async with page.expect_download(timeout=10000) as dl_info:
+                                await page.click("#btnOrderGameDownload")
+                            
+                            path = "temp.pdf"
+                            await (await dl_info.value).save_as(path)
+                            nome, matches = get_pdf_info(path)
+                            
+                            if matches:
+                                save_data(filename, f">> {nome} ({data_target})")
+                                for m in matches:
+                                    save_data(filename, format_line_for_swift(m, date_target=data_target))
+                            if os.path.exists(path): 
+                                os.remove(path)
+                        break 
+                    except Exception:
+                        await asyncio.sleep(2)
+            await page.close()
+        await browser.close()
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
