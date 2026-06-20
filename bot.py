@@ -13,37 +13,27 @@ def save_data(filename, content):
         f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
-    """
-    Formatta la riga in modo pulito: Data; Ora; Categoria; Giocatore 1; Giocatore 2
-    """
-    # 1. Estrae l'orario
-    match_time = re.search(r"(\d{2}:\d{2})", raw_text)
-    time = match_time.group(1) if match_time else "00:00"
+    # 1. Estrae l'orario (cerca sia "Inizio ore" che "Non prima delle")
+    match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
+    time = match_time.group(2) if match_time else "00:00"
     
-    # 2. Sostituisce il "vs" con "; " per separare i giocatori
+    # 2. Sostituisce "vs" con "; "
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     
-    # 3. Pulisce l'orario dal testo (lo abbiamo già isolato)
-    clean_text = re.sub(r"Inizio ore:\s*\d{2}:\d{2}", "", clean_text).strip()
+    # 3. Pulisce l'orario dal testo originale
+    clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
-    # 4. Tenta di estrarre la categoria se presente
+    # 4. Estrae categoria (euristica)
     cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
-    found_cat = ""
+    found_cat = "N/A"
     for kw in cat_keywords:
         if kw in clean_text:
-            # Prende la parte iniziale che contiene la descrizione categoria
-            # Questa è un'euristica: cerca di fermarsi prima del primo nome maiuscolo lungo
             parts = re.split(r'\s+(?=[A-Z]{3,})', clean_text, maxsplit=1)
             found_cat = parts[0].strip()
-            # Se la parte 0 è troppo lunga o non contiene la categoria, usiamo tutto
             if len(found_cat) > 50: found_cat = "Categoria non specificata"
             break
             
-    if not found_cat: found_cat = "N/A"
-    
-    # Rimuove la categoria dal resto della riga per evitare duplicati
     final_match_data = clean_text.replace(found_cat, "").strip()
-    
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
 def get_pdf_info(pdf_path):
@@ -62,7 +52,8 @@ def get_pdf_info(pdf_path):
                 if table:
                     for row in table:
                         for cell in row:
-                            if cell and "Inizio ore" in cell:
+                            # Cerca entrambi i tipi di indicazione oraria
+                            if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
                                 matches.append(cell.replace("\n", " ").strip())
     except: pass
     return title, matches
@@ -80,14 +71,14 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # Setup filtri
-            await page.select_option("#select_status", label="In corso")
+            # RIMOSSO: Filtro "In corso" che causava problemi
+            
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(3)
             
-            # Carica tutti i tornei
+            # Carica tutto
             while await page.locator("#btn-loadMore").is_visible():
                 await page.click("#btn-loadMore")
                 await asyncio.sleep(2)
@@ -95,15 +86,17 @@ async def run_bot():
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             
+            print(f"[*] Trovati {len(links)} tornei. Inizio elaborazione...", flush=True)
+            
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
-                for attempt in range(3):
+                # Tentativi ridotti per evitare di insistere troppo su tornei morti
+                for attempt in range(2): 
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # CONTROLLO CRITICO: esiste il menù?
+                        # Se il menu non c'è, magari è un torneo senza orari pubblicati
                         if not await page.locator("#select-ordergame").is_visible(timeout=5000):
-                            print(f"  -> {full_url}: Menù date non trovato, salto.", flush=True)
                             break
                         
                         for i in range(2):
@@ -127,9 +120,8 @@ async def run_bot():
                                     save_data(filename, format_line_for_swift(m, data_target))
                             if os.path.exists(path): os.remove(path)
                         break 
-                    except Exception as e:
-                        if attempt < 2: await asyncio.sleep(3)
-                        else: print(f"  -> [X] Errore su {full_url}", flush=True)
+                    except Exception:
+                        await asyncio.sleep(2)
             await page.close()
         await browser.close()
 
