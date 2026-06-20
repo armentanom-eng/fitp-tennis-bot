@@ -1,66 +1,91 @@
-Report aggiornato al 20/06/2026 14:04
+Report aggiornato al 20/06/2026 14:22
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 09:00 Inizio ore: 17:30
-20/06/2026; 2 Inizio ore: 17:30 Inizio ore: 19:00
-20/06/2026; 3 Inizio ore: 19:00 Inizio ore: 20:30
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 09:00
-20/06/2026; 2 Inizio ore: 10:30
-20/06/2026; 3 Inizio ore: 12:00
-20/06/2026; 4 Inizio ore: 15:00 Inizio ore: 15:00
-20/06/2026; 5 Inizio ore: 16:30 Inizio ore: 16:30
-20/06/2026; 6 Inizio ore: 18:00 Inizio ore: 18:00
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 17:00 Inizio ore: 17:00
-20/06/2026; 2 Inizio ore: 18:30 Inizio ore: 18:30
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 09:00
-20/06/2026; 2 Inizio ore: 10:30 Inizio ore: 11:00
-20/06/2026; 3 Inizio ore: 14:30
-20/06/2026; 4 Inizio ore: 16:00
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 14:00 Non prima delle: 14:00
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 14:00
-20/06/2026; 2 Inizio ore: 15:30
-20/06/2026; 3 Inizio ore: 17:00
-20/06/2026; 4 Inizio ore: 19:00
->> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 19:00 Inizio ore: 19:00
+20/06/2026; Inizio ore: 10:00 Singolare Maschile Under 12 COSMI FRANCESCO vs GIANSANTI FRANCESCO
+20/06/2026; Inizio ore: 10:00 Singolare Maschile Under 14 LEO FRANCESCO vs CESARONI ALESSANDRO
+20/06/2026; Inizio ore: 11:00 Singolare Maschile Under 14 BASSETTI MATTEO vs FERRAO RICCARDO
+20/06/2026; Inizio ore: 11:00 Singolare Maschile Under 12 DONATELLI GIOVANNI vs POZZI VALERIO
+20/06/2026; Inizio ore: 11:30 Singolare Maschile Under 18 ASCENZI FEDERICO vs D'AMICO VALERIO
+20/06/2026; Inizio ore: 11:30 Singolare Maschile Under 18 PIERETTI FEDERICO vs SALVATORE RICCARDO PRINCE
+20/06/2026; Inizio ore: 12:00 Singolare Maschile Under 18 BORREDON FRANCESCO vs ARCANGELI MARCO
 >> TORNEI FITP (21/06/2026)
-21/06/2026; 1 Inizio ore: 17:00 Inizio ore: 18:00
+21/06/2026; Inizio ore: 09:30 Singolare Maschile Under 12 CASARI FLAVIO vs SAMURA GABRIELE FODAYBA
+21/06/2026; Inizio ore: 09:30 Singolare Maschile Under 12 DE GENNARO SIMONE vs BISCIONE FEDERICO
+21/06/2026; Inizio ore: 11:00 Singolare Maschile Under 18 GIBERTINI DAVIDE vs BORREDON FRANCESCO o ARCANGELI MARCO
+21/06/2026; Inizio ore: 11:00 Singolare Maschile Under 14 FERRAO RICCARDO vs SCUDERI ANDREA
+21/06/2026; Inizio ore: 11:00 Singolare Maschile Under 12 POZZI VALERIO vs BLUMENTHAL LUDOVICO
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 14:00 Inizio ore: 14:00 Inizio ore: 14:00 Inizio ore: 14:00
-20/06/2026; 2 Inizio ore: 15:00 Inizio ore: 15:00 Inizio ore: 15:00
-20/06/2026; 3 Inizio ore: 16:00 Inizio ore: 16:00 Inizio ore: 16:00 Inizio ore: 16:00
-20/06/2026; 4 Inizio ore: 17:00 Inizio ore: 17:00 Inizio ore: 17:00 Inizio ore: 17:00
-20/06/2026; 5 Inizio ore: 18:00 Inizio ore: 18:00 Inizio ore: 18:00 Inizio ore: 18:00
-20/06/2026; 6 Inizio ore: 19:00 Inizio ore: 19:00
+20/06/2026; Inizio ore: 10:00 Singolare Maschile Under 18 SIMEONE SAMUELE vs CHIUMERA ALESSANDRO
+20/06/2026; Inizio ore: 11:30 Singolare Maschile Under 18 DE CIANTIS FABRIZIO vs LOMBARDI ALESSIO
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 12 CAMPAGNA FLAVIO ROSARIO vs VENTRE MARZIO
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 12 NOTARIANNI ANTONIO vs PRESTA MATTIA
+20/06/2026; Inizio ore: 16:30 Singolare Maschile Under 18 MESTRINARO LORENZO vs PALAZZO MANUEL
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 12 EGIDI EDOARDO vs MESTRINARO EMANUELE
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 10:00
-20/06/2026; 2 Inizio ore: 11:30
-20/06/2026; 3 Inizio ore: 15:00 Inizio ore: 15:00
-20/06/2026; 4 Inizio ore: 16:30
-20/06/2026; 5 Inizio ore: 18:00
+20/06/2026; Inizio ore: 14:00 Singolare Maschile Under 14 CANTONETTI LEONARDO vs BUONANNO ALESSANDRO
+20/06/2026; Inizio ore: 14:00 Singolare Maschile Under 14 COSTANTINI MANUEL vs D'AMICO FEDERICO
+20/06/2026; Inizio ore: 14:00 Singolare Maschile Under 12 MINGARELLI NICHOLAS vs FRESE EMILIANO
+20/06/2026; Inizio ore: 14:00 Singolare Maschile Under 12 DE AMICIS NICCOLO' vs GALLINA GIORGIO
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 18 TORRETTA TOMMASO vs MANFREDI GIUSEPPE
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 18 LUCIANI ALESSANDRO vs ANDREANI FEDERICO
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 18 ALEGI EDOARDO vs WERNER CONRAD RICCARDO
+20/06/2026; Inizio ore: 16:00 Singolare Maschile Under 14 FURINO FRANCESCO vs Q
+20/06/2026; Inizio ore: 16:00 Singolare Maschile Under 14 DEDALO FLAVIO vs FRESE FILIPPO
+20/06/2026; Inizio ore: 16:00 Singolare Maschile Under 14 Q vs SILVESTRI DIEGO
+20/06/2026; Inizio ore: 16:00 Singolare Maschile Under 12 RICCIARDELLI FRANCESCO vs MINGARELLI NICHOLAS o FRESE EMILIANO
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 18 ANTINORI ADRIANO vs Q
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 18 Q vs MATTIOLI ALESSANDRO
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 18 GAUDIO VASCO vs FUSCO PASQUALE
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 18 Q vs GULINO EMANUELE
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 14 MONTANARO JACOPO vs FURINO FRANCESCO o Q
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 14 DEDALO FLAVIO o FRESE FILIPPO vs IENNE LEONARDO
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 14 Q o SILVESTRI DIEGO vs ANTONANTE MATTEO FRANCESCO
+20/06/2026; Inizio ore: 18:00 Singolare Femminile Under 14 BOLOGNESI ALICE vs BRUSCA AURORA
+20/06/2026; Inizio ore: 19:00 Singolare Maschile Under 18 IANNOTTI MATTEO vs ANTINORI ADRIANO o Q
+20/06/2026; Inizio ore: 19:00 Singolare Maschile Under 18 Q o MATTIOLI ALESSANDRO vs DAHDAH PAOLO
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 10:00 Inizio ore: 10:00 Inizio ore: 11:00 Inizio ore: 11:00
-20/06/2026; 2 Inizio ore: 11:30 Inizio ore: 11:30 Inizio ore: 12:00
+20/06/2026; Inizio ore: 09:00 Singolare Maschile Under 16 LIM. 4.NC - 2.1 ROSSI JACOPO vs BERTONI ALESSIO
+20/06/2026; Inizio ore: 10:30 Singolare Maschile Under 14 LIM. 4.NC - 2.1 NAPOLI EMILIO vs GHEGAI FRANCESCO
+20/06/2026; Inizio ore: 12:00 Singolare Maschile Under 14 LIM. 4.NC - 2.1 SPAGNOLO ALESSIO vs LIBERATI EDOARDO
+20/06/2026; Inizio ore: 15:00 Singolare Maschile Under 16 LIM. 4.NC - 2.1 MICOZZI LORENZO vs FERRARI FRANCESCO
+20/06/2026; Inizio ore: 15:00 Singolare Femminile Under 16 LIM. 4.NC - 2.1 TAVERNA TERESA vs GRANDE GRETA
+20/06/2026; Inizio ore: 16:30 Singolare Maschile Under 16 LIM. 4.NC - 2.1 LUPERI FEDERICO vs BORRI ANDREA
+20/06/2026; Inizio ore: 16:30 Singolare Maschile Under 16 LIM. 4.NC - 2.1 GIULIANI NICCOLO vs NICOLETTI FEDERICO
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 14 LIM. 4.NC - 2.1 BARABINO DIEGO vs ZAFFINO JANNICK MATTIA o GIACOPELLO FRANCESCO
+20/06/2026; Inizio ore: 18:00 Singolare Maschile Under 14 LIM. 4.NC - 2.1 VEROLI ALESSANDRO o FIDALE EDOARDO vs GIAMMARIA MATTEO
+>> TORNEI FITP (20/06/2026)
+20/06/2026; Inizio ore: 09:00 Singolare Maschile Under 12 MAZZALI TOMMASO vs IORIO TOMMASO
+20/06/2026; Inizio ore: 10:30 Singolare Femminile Under 18 VOTTA ELEONORA vs DI PIETRO MARTINA
+20/06/2026; Inizio ore: 11:00 Singolare Maschile Under 14 RUGGIERO ANTONIO vs DELLE DONNE FELICE
+20/06/2026; Inizio ore: 14:30 Singolare Maschile Under 18 SINDONI STEFANO vs CAPUANO ALESSIO
+20/06/2026; Inizio ore: 16:00 Singolare Maschile Under 10 MADECCIA LORIS vs DE MARCHI NICOLO
+>> TORNEI FITP (20/06/2026)
+20/06/2026; Inizio ore: 09:00 Singolare Maschile Under 18 BIZZARRI LUCA vs SCUCCHIA MATTEO
+20/06/2026; Inizio ore: 09:00 Singolare Maschile Under 14 FRANGIPANE EMANUELE vs SENSINI MIRKO
+20/06/2026; Inizio ore: 10:00 Singolare Maschile Under 14 CIAPPICI NICOLO' vs PALCHETTI FILIPPO
+20/06/2026; Inizio ore: 10:00 Singolare Maschile Under 14 ANTONELLI LORENZO vs FRANGIPANE EMANUELE o SENSINI MIRKO
+20/06/2026; Inizio ore: 11:00 Singolare Maschile Under 14 CIAPPICI NICOLO' o PALCHETTI FILIPPO vs MERLINI GIANMARCO
+20/06/2026; Inizio ore: 11:00 Singolare Femminile Under 14 GILARDI SVEVA vs MASSACCESI BEATRICE
+20/06/2026; Inizio ore: 11:30 Singolare Maschile Under 14 TRECASTAGNI LUCA vs ANTONELLI LORENZO o FRANGIPANE EMANUELE o SENSINI MIRKO
+20/06/2026; Inizio ore: 11:30 Singolare Maschile Under 14 CIAPPICI NICOLO' o PALCHETTI FILIPPO o MERLINI GIANMARCO vs SCUCCHIA MARCO
+20/06/2026; Inizio ore: 12:30 Singolare Femminile Under 14 D'ACUNZO GRETA vs GILARDI SVEVA o MASSACCESI BEATRICE
+20/06/2026; Inizio ore: 12:30 Singolare Maschile Under 14 TRECASTAGNI LUCA o ANTONELLI LORENZO o FRANGIPANE EMANUELE o SENSINI MIRKO vs CIAPPICI NICOLO' o PALCHETTI FILIPPO o MERLINI GIANMARCO o SCUCCHIA MARCO
 >> TORNEI FITP (21/06/2026)
-21/06/2026; 1 Inizio ore: 09:30 Inizio ore: 09:30
-21/06/2026; 2 Inizio ore: 11:00 Inizio ore: 11:00 Inizio ore: 11:00
+21/06/2026; Inizio ore: 09:00 Singolare Maschile Under 12 FORMICA SAMUELE vs ACCIARESI SIMONE
+21/06/2026; Inizio ore: 09:00 Singolare Maschile Under 12 PELABASTO MATTEO vs KINDOR LEANDRO
+21/06/2026; Inizio ore: 10:00 Singolare Maschile Under 12 FORMICHI CARLOS MARIO vs FORMICA SAMUELE o ACCIARESI SIMONE
+21/06/2026; Inizio ore: 10:00 Singolare Maschile Under 12 PELABASTO MATTEO o KINDOR LEANDRO vs ALBANO STEFANO
+21/06/2026; Inizio ore: 10:30 Singolare Maschile Under 12 SCARINO FEDERICO vs FORMICHI CARLOS MARIO o FORMICA SAMUELE o ACCIARESI SIMONE
+21/06/2026; Inizio ore: 10:30 Singolare Maschile Under 12 SQUARCIA LEONARDO vs CHIRIVI' MATTEO
+21/06/2026; Inizio ore: 11:30 Singolare Maschile Under 12 PALMULLI VALERIO vs BUZZI LEONARDO
+21/06/2026; Inizio ore: 11:30 Singolare Maschile Under 12 SCUCCHIA MARCO vs SCARINO FEDERICO o FORMICHI CARLOS MARIO o FORMICA SAMUELE o ACCIARESI SIMONE
+21/06/2026; Inizio ore: 12:00 Singolare Maschile Under 12 PELABASTO MATTEO o KINDOR LEANDRO o ALBANO STEFANO vs ROMANO NICCOLÒ
+21/06/2026; Inizio ore: 12:00 Singolare Maschile Under 12 SCUCCHIA MARCO o SCARINO FEDERICO o FORMICHI CARLOS MARIO o FORMICA SAMUELE o ACCIARESI SIMONE vs SQUARCIA LEONARDO o CHIRIVI' MATTEO
+21/06/2026; Inizio ore: 12:30 Singolare Maschile Under 12 PALMULLI VALERIO o BUZZI LEONARDO vs PELABASTO MATTEO o KINDOR LEANDRO o ALBANO STEFANO o ROMANO NICCOLÒ
+21/06/2026; Inizio ore: 13:30 Singolare Maschile Under 12 SCUCCHIA MARCO o SCARINO FEDERICO o FORMICHI CARLOS MARIO o FORMICA SAMUELE o ACCIARESI SIMONE o SQUARCIA LEONARDO o CHIRIVI' MATTEO vs PALMULLI VALERIO o BUZZI LEONARDO o PELABASTO MATTEO o KINDOR LEANDRO o ALBANO STEFANO o ROMANO NICCOLÒ
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 16:00 Inizio ore: 15:30
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 18 PETRELLA FEDERICO vs CALICIOTTI ANDREA
+20/06/2026; Inizio ore: 17:00 Singolare Maschile Under 14 AMBROSINI ELIA vs FONTANA ALESSANDRO
+20/06/2026; Inizio ore: 18:30 Singolare Maschile Under 12 MATRUNDOLA LUCA vs FLAVI LORENZO
+20/06/2026; Inizio ore: 18:30 Singolare Maschile Under 10 BONANNI FRANCESCO vs BARTOLOMUCCI MICHELANGELO
 >> TORNEI FITP (20/06/2026)
-20/06/2026; 1 Inizio ore: 09:00 Inizio ore: 09:00
-20/06/2026; 2 Inizio ore: 10:00 Inizio ore: 10:00
-20/06/2026; 3 Inizio ore: 11:00 Inizio ore: 11:00
-20/06/2026; 4 Inizio ore: 11:30 Inizio ore: 11:30
-20/06/2026; 5 Inizio ore: 12:30 Inizio ore: 12:30
->> TORNEI FITP (21/06/2026)
-21/06/2026; 1 Inizio ore: 09:00 Inizio ore: 09:00
-21/06/2026; 2 Inizio ore: 10:00 Inizio ore: 10:00
-21/06/2026; 3 Inizio ore: 10:30 Inizio ore: 10:30
-21/06/2026; 4 Inizio ore: 11:30 Inizio ore: 11:30
-21/06/2026; 5 Inizio ore: 12:00 Inizio ore: 12:00
-21/06/2026; 6 Inizio ore: 12:30
-21/06/2026; 7 Inizio ore: 13:30
+20/06/2026; Inizio ore: 14:00 Singolare Maschile Under 15 ARAGONA JACOPO vs RETROSI VALERIO o MARCHINI FRANCESCO
