@@ -13,17 +13,12 @@ def save_data(filename, content):
         f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
-    # 1. Estrae l'orario (cerca sia "Inizio ore" che "Non prima delle")
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
     
-    # 2. Sostituisce "vs" con "; " per separare i giocatori
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
-    
-    # 3. Rimuove le indicazioni testuali dell'orario
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
-    # 4. Estrazione Categoria
     cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
     found_cat = "N/A"
     for kw in cat_keywords:
@@ -34,7 +29,6 @@ def format_line_for_swift(raw_text, date_target):
             break
             
     final_match_data = clean_text.replace(found_cat, "").strip()
-    
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
 def get_pdf_info(pdf_path):
@@ -54,8 +48,7 @@ def get_pdf_info(pdf_path):
                         for cell in row:
                             if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
                                 matches.append(cell.replace("\n", " ").strip())
-    except: 
-        pass
+    except: pass
     return title, matches
 
 async def run_bot():
@@ -72,17 +65,19 @@ async def run_bot():
             await page.goto(BASE_URL, wait_until="networkidle")
             
             # --- APPLICAZIONE FILTRI ---
-            # Filtro 1: Stato
+            print("  -> Impostando filtri...", flush=True)
             await page.select_option("#select_status", label="In corso")
             await asyncio.sleep(2) 
             
-            # Filtro 2: Regione Lazio
+            # Apertura menu regione
             await page.click('button[data-id="id_regioneSearch"]')
             await asyncio.sleep(1)
-            await page.get_by_role("option", name="Lazio").click()
+            
+            # LA CORREZIONE È QUI: usiamo il listbox per evitare il conflitto
+            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(2) 
             
-            # Filtro 3: Categoria
+            # Categoria
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(3) 
             
@@ -94,7 +89,7 @@ async def run_bot():
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             
-            print(f"[*] Trovati {len(links)} tornei filtrati. Inizio estrazione...", flush=True)
+            print(f"[*] Trovati {len(links)} tornei. Inizio estrazione...", flush=True)
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
@@ -107,8 +102,7 @@ async def run_bot():
                         for i in range(2):
                             data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                             options = await page.locator("#select-ordergame option").all_text_contents()
-                            if data_target not in "".join(options): 
-                                continue 
+                            if data_target not in "".join(options): continue 
                                 
                             await page.select_option("#select-ordergame", label=data_target)
                             await asyncio.sleep(2)
@@ -124,8 +118,7 @@ async def run_bot():
                                 save_data(filename, f">> {nome} ({data_target})")
                                 for m in matches:
                                     save_data(filename, format_line_for_swift(m, date_target=data_target))
-                            if os.path.exists(path): 
-                                os.remove(path)
+                            if os.path.exists(path): os.remove(path)
                         break 
                     except Exception:
                         await asyncio.sleep(2)
