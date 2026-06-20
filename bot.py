@@ -14,21 +14,33 @@ def save_data(filename, content):
         f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
+    # 1. Estrazione orario
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
+    
+    # 2. Pulizia testo di base
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
+    # 3. FIX: Separazione forzata per le linee con LIM.
+    # Cerca il pattern LIM. (es: LIM. 4.NC - 3.3) e aggiunge un ; subito dopo
+    clean_text = re.sub(r"(LIM\.\s+[\w\.]+\s*-\s*[\w\.]+)", r"\1;", clean_text)
+    
+    # 4. Estrazione Categoria
     cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
     found_cat = "N/A"
     for kw in cat_keywords:
         if kw in clean_text:
+            # Dividiamo per i primi caratteri in maiuscolo se necessario
             parts = re.split(r'\s+(?=[A-Z]{3,})', clean_text, maxsplit=1)
             found_cat = parts[0].strip()
             if len(found_cat) > 50: found_cat = "Categoria non specificata"
             break
             
     final_match_data = clean_text.replace(found_cat, "").strip()
+    # Rimuoviamo eventuali doppie punteggiature causate dal replace
+    final_match_data = final_match_data.lstrip(';').strip()
+    
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
 def get_pdf_info(pdf_path):
@@ -57,7 +69,6 @@ async def run_bot():
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
-        # Calcolo data 7 giorni fa
         start_date_filter = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
         
         for cat_id, filename in CATEGORIES.items():
@@ -70,29 +81,24 @@ async def run_bot():
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # 1. Filtro STATO
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await asyncio.sleep(1)
                 
-                # 2. Filtro REGIONE
                 await page.click('button[data-id="id_regioneSearch"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(1)
                 
-                # 3. Filtro DATA INIZIO (Nuovo)
                 print(f"  -> Applicando filtro data inizio: {start_date_filter}")
                 await page.fill("#dpk_start_date", start_date_filter)
                 await page.keyboard.press("Enter") 
                 await asyncio.sleep(2)
                 
-                # 4. Selezione CATEGORIA
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
-                # Caricamento lista
                 while await page.locator("#btn-loadMore").is_visible():
                     await page.click("#btn-loadMore")
                     await asyncio.sleep(2)
@@ -104,7 +110,6 @@ async def run_bot():
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
-                    # Log di avanzamento esplicito per ogni link
                     print(f"    [>] Analizzando: {full_url}", flush=True)
                     
                     try:
