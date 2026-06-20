@@ -1,4 +1,4 @@
-name: Tennis Bot Runner
+name: Tennis Bot Extractor
 on:
   workflow_dispatch: 
 
@@ -6,26 +6,22 @@ jobs:
   run-bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout del codice
+      - name: Checkout
         uses: actions/checkout@v4
-
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-
-      - name: Install Dependencies
+      - name: Install
         run: |
           pip install playwright pdfplumber
           playwright install chromium
-
-      - name: Esecuzione Bot
+      - name: Run Bot
         run: python bot.py
-
-      - name: Upload dei risultati
+      - name: Upload
         uses: actions/upload-artifact@v4
         with:
           name: risultati-partite
           path: |
-            Giovanili.txt
-            Open.txt
+            Giovanili_Partite.txt
+            Open_Partite.txt
