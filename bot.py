@@ -2,125 +2,102 @@ import asyncio
 import os
 import pdfplumber
 from playwright.async_api import async_playwright
-from datetime import datetime, timedelta
+from datetime import datetime
 
-CONCURRENT_PAGES = 5 
+# CONFIGURAZIONE TEST: Elabora solo il primo torneo trovato
+CONCURRENT_PAGES = 1 
 
 def estrai_dati_da_pdf(percorso_pdf):
-    partite_trovate = []
-    nome_circolo = "Circolo Non Trovato"
+    print(f"--- ANALISI PDF: {percorso_pdf} ---")
     try:
         with pdfplumber.open(percorso_pdf) as pdf:
             if not pdf.pages: return None, []
             testo = pdf.pages[0].extract_text()
             if not testo: return None, []
+            
             linee = testo.split('\n')
             nome_circolo = linee[0].strip()
+            partite_trovate = []
+            
+            # Debug: stampiamo il contenuto per vedere come legge
+            print(f"DEBUG: Trovato circolo '{nome_circolo}'. Prime 5 righe: {linee[:5]}")
+            
             for i in range(len(linee)):
                 if "Inizio ore:" in linee[i]:
                     orario = linee[i].replace("Inizio ore:", "").strip()
                     try:
                         g1 = linee[i+2].strip()
                         g2 = linee[i+4].strip()
+                        # Verifichiamo la validità
                         if "vs" not in g1.lower() and len(g1) > 4:
                              partite_trovate.append(f"{g1}; {g2}; {orario}")
+                             print(f"DEBUG: Trovata partita: {g1} vs {g2}")
                     except: continue
-    except: pass
-    return nome_circolo, partite_trovate
+            return nome_circolo, partite_trovate
+    except Exception as e:
+        print(f"ERRORE PDF: {e}")
+        return None, []
 
 async def get_tournament_urls(page, categoria_id):
-    print(f"[{categoria_id}] Navigazione verso il sito...", flush=True)
-    await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+    print(f"[{categoria_id}] Navigazione...", flush=True)
+    await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
     
     await page.select_option("#select_status", label="In corso")
     await page.click(f'a[data-id="{categoria_id}"]')
-    await asyncio.sleep(2)
+    await page.wait_for_load_state("networkidle")
     
-    print(f"[{categoria_id}] Tentativo selezione Lazio...", flush=True)
-    try:
-        await page.click('button[data-id="id_regioneSearch"]')
-        await asyncio.sleep(1)
-        await page.click('span.text:has-text("Lazio")')
-        await asyncio.sleep(3)
-        print(f"[{categoria_id}] Filtro Lazio applicato.", flush=True)
-    except Exception as e:
-        print(f"[{categoria_id}] Errore filtro regione: {e}", flush=True)
+    print(f"[{categoria_id}] Applicazione filtro Lazio...", flush=True)
+    # Selezione Regione
+    await page.click('button[data-id="id_regioneSearch"]')
+    await page.wait_for_selector('span.text:has-text("Lazio")', state="visible")
+    await page.click('span.text:has-text("Lazio")')
     
-    while True:
-        btn = page.locator("#btn-loadMore")
-        if await btn.is_visible():
-            await btn.click()
-            await asyncio.sleep(1.5)
-        else:
-            break
-            
-    elements = await page.locator("a[href*='Dettaglio-Competizione']").all()
-    urls = []
-    for el in elements:
-        url = await el.get_attribute("href")
-        if url and url not in urls: urls.append(url)
-    return urls
-
-async def process_tournament(context, url, sem, nome_file, index, total):
-    async with sem:
-        full_url = "https://www.fitp.it" + url
-        page = await context.new_page()
-        print(f"  --> [Progresso: {index}/{total}] Elaborazione: {url[-15:]}...", flush=True)
-        try:
-            await page.goto(full_url, wait_until="domcontentloaded", timeout=60000)
-            oggi = datetime.now().strftime("%d/%m/%Y")
-            domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
-            
-            for data in [oggi, domani]:
-                try:
-                    if await page.locator("select").count() > 0:
-                        await page.select_option("select", label=data)
-                        await asyncio.sleep(1) 
-                        
-                        btn = page.locator("text=Scarica")
-                        if await btn.is_visible():
-                            async with page.expect_download(timeout=15000) as download_info:
-                                await btn.click()
-                            download = await download_info.value
-                            temp_file = f"temp_{data.replace('/', '-')}.pdf"
-                            await download.save_as(temp_file)
-                            
-                            nome, partite = estrai_dati_da_pdf(temp_file)
-                            if nome and partite:
-                                with open(nome_file, "a", encoding="utf-8") as f:
-                                    f.write(f"\n>> {nome} (Data: {data})\n" + "\n".join(partite) + "\n")
-                            if os.path.exists(temp_file): os.remove(temp_file)
-                except: continue
-        except Exception as e:
-            print(f"    ! Errore su {url}: {e}", flush=True)
-        finally:
-            await page.close()
+    # ATTENZIONE: Questo wait è fondamentale per assicurarsi che la tabella si ricarichi
+    await page.wait_for_load_state("networkidle")
+    await asyncio.sleep(2) # Pausa di sicurezza per il ricaricamento asincrono
+    
+    # Prendi solo il PRIMO link (per il test)
+    first_link = await page.locator("a[href*='Dettaglio-Competizione']").first.get_attribute("href")
+    return [first_link] if first_link else []
 
 async def main():
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        browser = await p.chromium.launch(headless=False) # Mettiamo headless=False per vedere cosa fa
         context = await browser.new_context(accept_downloads=True)
-        sem = asyncio.Semaphore(CONCURRENT_PAGES)
         
-        categorie = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
+        categorie = [("t_giovanili", "Test_Giovanili.txt"), ("t_affiliati", "Test_Open.txt")]
         
         for cat_id, file_name in categorie:
-            if os.path.exists(file_name): os.remove(file_name)
-            
-            print(f"--- Inizio categoria {cat_id} ---", flush=True)
+            print(f"\n>>> TEST CATEGORIA: {cat_id} <<<")
             p_scout = await context.new_page()
-            urls = await get_tournament_urls(p_scout, cat_id) or []
+            urls = await get_tournament_urls(p_scout, cat_id)
             await p_scout.close()
             
             if urls:
-                print(f"[{cat_id}] Trovati {len(urls)} tornei. Inizio download...", flush=True)
-                tasks = []
-                for i, url in enumerate(urls, 1):
-                    tasks.append(process_tournament(context, url, sem, file_name, i, len(urls)))
-                await asyncio.gather(*tasks)
-                print(f"[{cat_id}] Operazione completata.", flush=True)
+                print(f"[{cat_id}] Trovato torneo: {urls[0]}")
+                # Creiamo una pagina per il download
+                page = await context.new_page()
+                full_url = "https://www.fitp.it" + urls[0]
+                await page.goto(full_url, wait_until="networkidle")
+                
+                # Semplifichiamo: proviamo a scaricare quello che è selezionato di default
+                # Senza selezionare date, vediamo se c'è un bottone scarica subito
+                btn = page.locator("text=Scarica")
+                if await btn.is_visible():
+                    async with page.expect_download() as download_info:
+                        await btn.click()
+                    download = await download_info.value
+                    await download.save_as("test_file.pdf")
+                    
+                    nome, partite = estrai_dati_da_pdf("test_file.pdf")
+                    if nome:
+                        with open(file_name, "w", encoding="utf-8") as f:
+                            f.write(f"TEST SUCCESS: {nome}\n" + "\n".join(partite))
+                        print(f"!!! SCRITTURA AVVENUTA NEL FILE: {file_name}")
+                
+                await page.close()
             else:
-                print(f"[{cat_id}] Nessun torneo trovato.", flush=True)
+                print(f"[{cat_id}] Nessun torneo trovato (il filtro potrebbe aver sbagliato).")
         
         await browser.close()
 
