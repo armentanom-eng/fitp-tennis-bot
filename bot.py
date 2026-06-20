@@ -64,10 +64,13 @@ async def process_tournament(page, url, file_output):
         full_url = f"{URL_BASE}{url}" if url.startswith('/') else url
         await page.goto(full_url, wait_until="domcontentloaded")
         
-        # ATTESA INTELLIGENTE: Aspetta il menu date (specifico della pagina torneo)
-        # prima di tentare di leggere il nome del torneo.
-        await page.wait_for_selector("select[name='data_programma']", timeout=15000)
-        
+        # NUOVA LOGICA: Se non trova il menu date, non crasha, ma salta il torneo
+        try:
+            await page.wait_for_selector("select[name='data_programma']", timeout=30000)
+        except Exception:
+            print(f"  [!] Saltato: Nessuna programmazione trovata su {url}", flush=True)
+            return 
+
         nome_torneo = await page.locator("h1").first.inner_text()
         print(f"  -> Elaborazione: {nome_torneo}", flush=True)
         
@@ -77,6 +80,9 @@ async def process_tournament(page, url, file_output):
         for data_target in [oggi, domani]:
             try:
                 await page.select_option("select[name='data_programma']", label=data_target)
+                
+                # Aspetta il tasto download
+                await page.wait_for_selector("#btnOrderGameDownload", timeout=10000)
                 
                 async with page.expect_download(timeout=10000) as download_info:
                     await page.click("#btnOrderGameDownload")
@@ -94,7 +100,7 @@ async def process_tournament(page, url, file_output):
             except:
                 continue 
     except Exception as e:
-        print(f"  [!] Errore su {url}: {e}", flush=True)
+        print(f"  [!] Errore critico su {url}: {e}", flush=True)
 
 async def main():
     async with async_playwright() as p:
