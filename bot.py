@@ -39,13 +39,10 @@ async def get_tournament_links(page, categoria_id):
     await page.click('button[data-id="id_regioneSearch"]')
     await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
     
-    print(f"[*] Selezione categoria ID: {categoria_id}", flush=True)
     tab = page.locator(f'a[data-id="{categoria_id}"]').first
-    await tab.wait_for(state="visible", timeout=15000)
     await tab.click()
     await page.wait_for_timeout(3000)
 
-    print(f"[*] Caricamento tornei...", flush=True)
     while True:
         btn = page.locator("#btn-loadMore")
         if await btn.is_visible():
@@ -55,48 +52,40 @@ async def get_tournament_links(page, categoria_id):
             break
         
     elements = await page.locator("a[href*='Dettaglio-Competizione']").all()
-    links = list(set([await el.get_attribute("href") for el in elements]))
-    print(f"[*] Trovati {len(links)} tornei.", flush=True)
-    return links
+    return list(set([await el.get_attribute("href") for el in elements]))
 
 async def process_tournament(page, url, file_output):
     try:
         full_url = f"{URL_BASE}{url}" if url.startswith('/') else url
         await page.goto(full_url, wait_until="domcontentloaded")
         
-        # Cerchiamo il trigger del menu (l'elemento che mostra la data)
-        trigger_selector = "xpath=//*[contains(text(), 'Orario di Gioco')]/following::div[contains(@class, 'select') or contains(@class, 'dropdown') or contains(@class, 'input')][1]"
-        
-        try:
-            trigger = page.locator(trigger_selector).first
-            await trigger.wait_for(state="visible", timeout=30000)
-        except Exception:
-            print(f"  [!] Saltato: Nessun menu date trovato su {url}", flush=True)
-            return
-
         nome_torneo = await page.locator("h1").first.inner_text()
         print(f"  -> Elaborazione: {nome_torneo}", flush=True)
         
-        oggi_str = datetime.now().strftime("%d/%m/%Y")
-        domani_str = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
+        oggi = datetime.now().strftime("%d/%m/%Y")
+        domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
         
-        for data_target in [oggi_str, domani_str]:
+        # Il selettore dell'input che apre il menu delle date
+        # (Cerchiamo l'input che si trova vicino alla scritta 'Orario di Gioco')
+        input_data = page.locator("xpath=//label[contains(text(), 'Orario di Gioco')]/following::input[1]")
+        
+        for data_target in [oggi, domani]:
             try:
-                # Clicchiamo per aprire il menu
-                await trigger.click()
+                # 1. Apriamo il menu cliccando sull'input
+                await input_data.click()
                 
-                # Cerchiamo l'opzione con la data specifica nel dropdown aperto
-                data_option = page.locator(f"text='{data_target}'")
-                
-                # Aspettiamo che appaia e clicchiamo
+                # 2. Clicchiamo sulla data specifica (usando il testo esatto che appare nella lista)
+                # Diamo tempo al menu di apparire
+                data_option = page.get_by_text(data_target, exact=True)
                 await data_option.wait_for(state="visible", timeout=5000)
                 await data_option.click()
                 
-                # Aspettiamo il bottone download
-                await page.wait_for_selector("#btnOrderGameDownload", timeout=10000)
+                # 3. Clicchiamo su scarica
+                # Usiamo locator per trovare il bottone 'Scarica' vicino all'input
+                btn_scarica = page.locator("xpath=//label[contains(text(), 'Orario di Gioco')]/following::button[contains(text(), 'Scarica')][1]")
                 
                 async with page.expect_download(timeout=10000) as download_info:
-                    await page.click("#btnOrderGameDownload")
+                    await btn_scarica.click()
                 
                 download = await download_info.value
                 path = f"temp_{data_target.replace('/', '')}.pdf"
@@ -109,38 +98,32 @@ async def process_tournament(page, url, file_output):
                 
                 if os.path.exists(path): os.remove(path)
                 
-            except Exception:
-                # Se la data non è presente nel menu, passiamo oltre
-                print(f"     [-] Data {data_target} non disponibile.", flush=True)
+            except Exception as e:
+                print(f"     [-] Data {data_target} non disponibile o menu non trovato.", flush=True)
                 continue 
     except Exception as e:
-        print(f"  [!] Errore critico su {url}: {e}", flush=True)
+        print(f"  [!] Errore su {url}: {e}", flush=True)
 
 async def main():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
-        
         config = [("t_giovanili", "Giovanili_Partite.txt"), ("t_affiliati", "Open_Partite.txt")]
         
         for cat_id, file_out in config:
-            print(f"\n--- Inizio sessione: {file_out} ---", flush=True)
+            print(f"\n--- Sessione: {file_out} ---", flush=True)
             with open(file_out, "w", encoding="utf-8") as f:
                 f.write(f"Report del {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
             
             p_nav = await context.new_page()
-            try:
-                links = await get_tournament_links(p_nav, cat_id)
-                await p_nav.close()
-                
-                for link in links:
-                    p_proc = await context.new_page()
-                    await process_tournament(p_proc, link, file_out)
-                    await p_proc.close()
-            except Exception as e:
-                print(f"Errore critico cat {cat_id}: {e}", flush=True)
+            links = await get_tournament_links(p_nav, cat_id)
+            await p_nav.close()
+            
+            for link in links:
+                p_proc = await context.new_page()
+                await process_tournament(p_proc, link, file_out)
+                await p_proc.close()
         
-        print(f"\n--- Processo completato ---", flush=True)
         await browser.close()
 
 if __name__ == "__main__":
