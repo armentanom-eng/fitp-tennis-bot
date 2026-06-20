@@ -14,15 +14,11 @@ def save_data(filename, content):
         f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
-    # Estrazione orario
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
-    
-    # Pulizia testo
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
-    # Estrazione Categoria
     cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
     found_cat = "N/A"
     for kw in cat_keywords:
@@ -61,6 +57,9 @@ async def run_bot():
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
+        # Calcolo data 7 giorni fa
+        start_date_filter = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
+        
         for cat_id, filename in CATEGORIES.items():
             print(f"\n--- Inizio sessione: {filename} ---", flush=True)
             with open(filename, "w", encoding="utf-8") as f:
@@ -71,19 +70,25 @@ async def run_bot():
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # 1. Selezione STATO (Click su bottone -> Click su opzione nel menu)
+                # 1. Filtro STATO
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
-                await asyncio.sleep(2) 
+                await asyncio.sleep(1)
                 
-                # 2. Selezione REGIONE (Click su bottone -> Click su opzione nel menu)
+                # 2. Filtro REGIONE
                 await page.click('button[data-id="id_regioneSearch"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-                await asyncio.sleep(2) 
+                await asyncio.sleep(1)
                 
-                # 3. Selezione CATEGORIA
+                # 3. Filtro DATA INIZIO (Nuovo)
+                print(f"  -> Applicando filtro data inizio: {start_date_filter}")
+                await page.fill("#dpk_start_date", start_date_filter)
+                await page.keyboard.press("Enter") 
+                await asyncio.sleep(2)
+                
+                # 4. Selezione CATEGORIA
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
@@ -95,10 +100,13 @@ async def run_bot():
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
                 
-                print(f"[*] Trovati {len(links)} tornei per '{status}'. Inizio estrazione...", flush=True)
+                print(f"[*] Trovati {len(links)} tornei per '{status}'. Inizio scansione...", flush=True)
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
+                    # Log di avanzamento esplicito per ogni link
+                    print(f"    [>] Analizzando: {full_url}", flush=True)
+                    
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000):
