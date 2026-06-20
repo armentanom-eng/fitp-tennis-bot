@@ -15,7 +15,6 @@ def save_data(filename, content):
 def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
-    
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
@@ -48,7 +47,8 @@ def get_pdf_info(pdf_path):
                         for cell in row:
                             if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
                                 matches.append(cell.replace("\n", " ").strip())
-    except: pass
+    except Exception as e:
+        print(f"    ! Errore lettura PDF: {e}")
     return title, matches
 
 async def run_bot():
@@ -64,24 +64,15 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # --- APPLICAZIONE FILTRI ---
-            print("  -> Impostando filtri...", flush=True)
             await page.select_option("#select_status", label="In corso")
             await asyncio.sleep(2) 
-            
-            # Apertura menu regione
             await page.click('button[data-id="id_regioneSearch"]')
             await asyncio.sleep(1)
-            
-            # LA CORREZIONE È QUI: usiamo il listbox per evitare il conflitto
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(2) 
-            
-            # Categoria
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(3) 
             
-            # Caricamento lista
             while await page.locator("#btn-loadMore").is_visible():
                 await page.click("#btn-loadMore")
                 await asyncio.sleep(2)
@@ -93,35 +84,46 @@ async def run_bot():
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
-                for attempt in range(2): 
-                    try:
-                        await page.goto(full_url, wait_until="networkidle")
-                        if not await page.locator("#select-ordergame").is_visible(timeout=5000):
-                            break
+                print(f"  -> Processando: {full_url}")
+                
+                try:
+                    await page.goto(full_url, wait_until="networkidle")
+                    if not await page.locator("#select-ordergame").is_visible(timeout=5000):
+                        print("    ! Menù orari non trovato.")
+                        continue
+                    
+                    for i in range(2):
+                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        options = await page.locator("#select-ordergame option").all_text_contents()
                         
-                        for i in range(2):
-                            data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
-                            options = await page.locator("#select-ordergame option").all_text_contents()
-                            if data_target not in "".join(options): continue 
-                                
-                            await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(2)
+                        if data_target not in "".join(options):
+                            print(f"    - Nessun orario per il giorno {data_target}")
+                            continue 
                             
-                            async with page.expect_download(timeout=10000) as dl_info:
-                                await page.click("#btnOrderGameDownload")
-                            
-                            path = "temp.pdf"
-                            await (await dl_info.value).save_as(path)
-                            nome, matches = get_pdf_info(path)
-                            
-                            if matches:
-                                save_data(filename, f">> {nome} ({data_target})")
-                                for m in matches:
-                                    save_data(filename, format_line_for_swift(m, date_target=data_target))
-                            if os.path.exists(path): os.remove(path)
-                        break 
-                    except Exception:
+                        await page.select_option("#select-ordergame", label=data_target)
                         await asyncio.sleep(2)
+                        
+                        print(f"    - Scaricando PDF per {data_target}...")
+                        async with page.expect_download(timeout=10000) as dl_info:
+                            await page.click("#btnOrderGameDownload")
+                        
+                        path = "temp.pdf"
+                        await (await dl_info.value).save_as(path)
+                        nome, matches = get_pdf_info(path)
+                        
+                        if matches:
+                            print(f"    + Trovate {len(matches)} partite.")
+                            save_data(filename, f">> {nome} ({data_target})")
+                            for m in matches:
+                                save_data(filename, format_line_for_swift(m, date_target=data_target))
+                        else:
+                            print("    ! PDF scaricato ma nessuna partita trovata (o formato illeggibile).")
+                        
+                        if os.path.exists(path): os.remove(path)
+                        
+                except Exception as e:
+                    print(f"    !! ERRORE CRITICO su {full_url}: {e}")
+            
             await page.close()
         await browser.close()
 
