@@ -46,39 +46,39 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def estrai_iscritti_u14(page):
-    """Cicla tutte le righe della tabella e cerca il testo parziale"""
+    """Strategia chirurgica: cerca il testo specifico e clicca il dettaglio della sua riga"""
     try:
-        print("    DEBUG: Cerco riga categoria (metodo iterativo)...", flush=True)
-        # Individuiamo tutte le righe della tabella
-        rows = page.locator("table tbody tr")
-        row_count = await rows.count()
+        # Aumentiamo il tempo di attesa per caricamento dinamico
+        await page.wait_for_load_state("networkidle")
+        await asyncio.sleep(2) 
         
-        found = False
-        for i in range(row_count):
-            row = rows.nth(i)
-            # Leggiamo il testo di tutta la riga
-            text = await row.inner_text()
+        print("    DEBUG: Cerco il bottone 'Dettaglio' per 'Singolare Femminile Under 14'...", flush=True)
+        
+        # Cerchiamo l'elemento che contiene il testo
+        target_text = "Singolare Femminile Under 14"
+        
+        # Usiamo un selettore che trova il testo e risale alla riga (tr) che lo contiene
+        # e poi trova il link "Dettaglio" dentro quella stessa riga
+        row_locator = page.locator(f"tr:has-text('{target_text}')")
+        dettaglio_btn = row_locator.get_by_role("link", name="Dettaglio")
+        
+        if await dettaglio_btn.count() > 0:
+            print("    DEBUG: Trovato! Clicco sul Dettaglio...", flush=True)
+            await dettaglio_btn.first.click()
+            await page.wait_for_load_state("networkidle")
             
-            # Verifichiamo se contiene la categoria (case-insensitive)
-            if "Singolare Femminile Under 14" in text:
-                print(f"    DEBUG: Trovata riga corrispondente: {text[:40]}...", flush=True)
-                # Clicchiamo Dettaglio dentro questa riga
-                await row.get_by_role("link", name="Dettaglio").first.click()
-                await page.wait_for_load_state("networkidle")
-                found = True
-                break
-        
-        if found:
             # Estrazione nomi
             nomi = await page.locator(".cc-name").all_text_contents()
             lista_pulita = [n.strip() for n in nomi if n.strip()]
             print(f"    DEBUG: Estratti {len(lista_pulita)} nomi.", flush=True)
+            
             await page.go_back()
             await page.wait_for_load_state("networkidle")
             return lista_pulita
         else:
-            print("    DEBUG: Categoria 'Singolare Femminile Under 14' non trovata in nessuna riga.", flush=True)
+            print(f"    DEBUG: Non ho trovato nessuna riga con '{target_text}'.", flush=True)
             return None
+            
     except Exception as e:
         print(f"    ! Errore estrazione iscritti: {e}", flush=True)
         return None
