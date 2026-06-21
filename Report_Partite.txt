@@ -1,2 +1,0 @@
-Report Generato il: bot.py
-

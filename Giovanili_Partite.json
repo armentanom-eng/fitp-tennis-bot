@@ -1,0 +1,62 @@
+{
+    "report_data": "21/06/2026 08:51",
+    "tornei": [
+        {
+            "nome": "XXV EDIZ. DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 \"",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 11:30; Singolare Maschile Under 18; GIORDANI LEONARDO; SIMEONE SAMUELE",
+                "21/06/2026; 17:00; Singolare Maschile Under 18 DI; MASCOLO LORENZO SALVATORE; LOMBARDI ALESSIO",
+                "21/06/2026; 17:00; Singolare Maschile Under 18; ROMANO LORIS; PALAZZO MANUEL",
+                "21/06/2026; 18:30; Singolare Maschile Under 12; BUGGIANI LEONARDO; CARNEVALE GIANLUIGI",
+                "21/06/2026; 18:30; Singolare Maschile Under 12; GIAROLA ALESSANDRO; MESTRINARO EMANUELE"
+            ]
+        },
+        {
+            "nome": "8° TAPPA CIRCUITO DEL TIRRENO ROMAN SPORT CITY",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 09:30; Singolare Maschile Under 12; CASARI FLAVIO; SAMURA GABRIELE FODAYBA",
+                "21/06/2026; 09:30; Singolare Maschile Under 12 DE; GENNARO SIMONE; BISCIONE FEDERICO",
+                "21/06/2026; 11:00; Singolare Maschile Under 18; GIBERTINI DAVIDE; BORREDON FRANCESCO o ARCANGELI MARCO",
+                "21/06/2026; 11:00; Singolare Maschile Under 14; FERRAO RICCARDO; SCUDERI ANDREA",
+                "21/06/2026; 11:00; Singolare Maschile Under 12; POZZI VALERIO; BLUMENTHAL LUDOVICO"
+            ]
+        },
+        {
+            "nome": "CIRCUITO FEDERICI SPORT - WILSON - ASD LEPINI TENNIS - PRESSO",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 15:30; Singolare Maschile Under 14; COLETTI LEONARDO; FONTANA ALESSANDRO",
+                "21/06/2026; 15:30; Singolare Femminile Under 12; SIMEONI GRETA; BOSCARINI EMMA"
+            ]
+        },
+        {
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING tappa G SPORT VILLAGE",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 09:00; Singolare Maschile Under 12; LIM. 4.NC - 3.5; SPARACCA DIEGO o CANCEIL GABRIELE; DEL GIUDICE LUCA",
+                "21/06/2026; 09:00; Singolare Maschile Under 16; LIM. 4.NC - 2.8; MANFREDI GIULIO; ROCCHI EDOARDO",
+                "21/06/2026; 09:00; Singolare Maschile Under 13; LIM. 4.NC - 3.3; MARRONI FRANCESCO o CAPPOTTO GABRIELE; TODDE MATTIA",
+                "21/06/2026; 10:00; Singolare Maschile Under 16; LIM. 4.NC - 2.8; GRANDE MASSIMILIANO o NEBULONI KEVIN; MONTINARI EUGENIO",
+                "21/06/2026; 10:00; Singolare Maschile Under 16; LIM. 4.NC - 2.8; CAPORALE LEONARDO; GASPERINI MATTEO",
+                "21/06/2026; 10:00; Singolare Maschile Under 12; LIM. 4.NC - 3.5; VITALE GIUSEPPE o LAVAGNINI FRANCESCO MARIA; VELLOTTI LEONARDO",
+                "21/06/2026; 11:30; Singolare Maschile Under 16; LIM. 4.NC - 2.8; BERALDI MATTIA o DILONARDO DANIELE; FUSO JACOPO",
+                "21/06/2026; 11:30; Singolare Maschile Under 16; LIM. 4.NC - 2.8; SCOPARO CHRISTIAN; BOLLERO ENRICO",
+                "21/06/2026; 12:00; Singolare Maschile Under 14; LIM. 4.NC - 3.1; FRESE FILIPPO o MULIERE GABRIELE; GHEGHI GABRIELE",
+                "21/06/2026; 11:30; Singolare Maschile Under 16; LIM. 4.NC - 2.8; MOCCIA EDOARDO o CECI FEDERICO; MONTEDURO GIORGIO",
+                "21/06/2026; 13:00; Singolare Maschile Under 14; LIM. 4.NC - 3.1; DELGADO LAMELA LEONARDO o TISMA ALESSANDRO; BALDINI FRANCESCO",
+                "21/06/2026; 13:00; Singolare Maschile Under 14; LIM. 4.NC - 3.1; BURCHIELLI VALERIO; PESANTE FABRIZIO",
+                "21/06/2026; 13:30; Singolare Maschile Under 14; LIM. 4.NC - 3.1; CASTELLUCCIO DANIEL o MORESCHINI TOMMASO; CAMONI FRANCESCO",
+                "21/06/2026; 13:00; Singolare Maschile Under 14; LIM. 4.NC - 3.1; MARZI FILIPPO o VERTUCCI RICCARDO; MAESTRI KIAN",
+                "21/06/2026; 14:30; Singolare Maschile Under 13; LIM. 4.NC - 3.3; FALDETTA FILIPPO; GANGAROSSA ALESSANDRO o MANFREDI FEDERICO",
+                "21/06/2026; 14:30; Singolare Maschile Under 13; LIM. 4.NC - 3.3; BOVERINO EDOARDO o GARUTI MATTEO; MORRONE SALVATORE LORENZO",
+                "21/06/2026; 15:00; Singolare Maschile Under 13; LIM. 4.NC - 3.3; VALENTINI FABRIZIO; IPPOLITI FILIPPO MARIA o ANSELMO ALESSANDRO",
+                "21/06/2026; 14:30; Singolare Maschile Under 12; LIM. 4.NC - 3.5; CAMPANA OSVALDO; RITTORE CARLO o SHARMA FRANCESCO",
+                "21/06/2026; 16:00; Singolare Maschile Under 10; TARALLO TOMMASO; PRIORI ANDREA",
+                "21/06/2026; 16:00; Singolare Maschile Under 10 DE; BONIS MASSIMO ANTONIO; XU RUI LI MICHELE",
+                "21/06/2026; 16:00; Singolare Maschile Under 14; LIM. 4.NC - 3.1; PUPILLO MATTEO; CIMARELLI MARCO o ANTONELLI FEDERICO"
+            ]
+        }
+    ]
+}
