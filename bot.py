@@ -107,9 +107,14 @@ async def run_bot():
                     print(f"     -> Analizzo: {full_url}", flush=True)
                     try:
                         await page.goto(full_url, wait_until="networkidle")
-                        title_element = await page.locator("h1").first.text_content()
-                        if title_element: torneo_entry["nome"] = title_element.strip()
-
+                        
+                        # --- MODIFICA: Selezione titolo più precisa ---
+                        # Spesso il titolo del torneo è in un div specifico o un h3/h4 in questa pagina
+                        title_loc = page.locator("h3").first # Prova a cercare un h3, spesso è quello
+                        if await title_loc.count() > 0:
+                             raw_title = await title_loc.text_content()
+                             torneo_entry["nome"] = raw_title.strip() if raw_title else "Nome non trovato"
+                        
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000): 
                             torneo_entry["date"].append({"data": "Info", "stato": "Nessuna data disponibile"})
                             continue
@@ -124,6 +129,7 @@ async def run_bot():
                                 
                             await page.select_option("#select-ordergame", label=data_target)
                             await asyncio.sleep(2)
+                            
                             async with page.expect_download(timeout=10000) as dl_info:
                                 await page.click("#btnOrderGameDownload")
                             
