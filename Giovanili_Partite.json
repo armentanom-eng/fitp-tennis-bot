@@ -1,9 +1,9 @@
 {
-    "report_data": "21/06/2026 09:21",
+    "report_data": "21/06/2026 09:27",
     "tornei": [
         {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=496AF366-41D7-40AB-8830-13A095412772",
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=866DBE30-E61C-473D-AD57-E4CAF161B1A4",
             "date": [
                 {
                     "data": "Info",
@@ -12,8 +12,8 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8387F036-C0AC-4603-A1B8-82897AD2621B",
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=51EC84D3-9394-4833-989F-1A6EA0BA178A",
             "date": [
                 {
                     "data": "Info",
@@ -22,17 +22,7 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5377A8F8-14F4-4D1C-86FE-FEF34B3AD784",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=99D5668E-1290-48A8-8BBC-08B59BFDDA27",
             "date": [
                 {
@@ -42,7 +32,17 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5377A8F8-14F4-4D1C-86FE-FEF34B3AD784",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D2F40767-C0DF-4639-B409-9684C55C7444",
             "date": [
                 {
@@ -52,7 +52,7 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F67145B4-977D-4D65-B98A-53DC405FD961",
             "date": [
                 {
@@ -73,7 +73,7 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD5E0BC2-8B0F-4091-85C2-53F29E41F738",
             "date": [
                 {
@@ -91,27 +91,7 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2B1CB361-5536-4420-9D96-2A2EE3F68AF5",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=866DBE30-E61C-473D-AD57-E4CAF161B1A4",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7B1C6B49-47ED-4E16-9570-8D98A198633E",
             "date": [
                 {
@@ -132,8 +112,8 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=51EC84D3-9394-4833-989F-1A6EA0BA178A",
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8387F036-C0AC-4603-A1B8-82897AD2621B",
             "date": [
                 {
                     "data": "Info",
@@ -142,7 +122,27 @@
             ]
         },
         {
-            "nome": "TORNEI FITP",
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=496AF366-41D7-40AB-8830-13A095412772",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "PORTALE UNICO COMPETIZIONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2B1CB361-5536-4420-9D96-2A2EE3F68AF5",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "PORTALE UNICO COMPETIZIONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3860F260-FE3B-48E7-ADAA-71EB0800F663",
             "date": [
                 {
