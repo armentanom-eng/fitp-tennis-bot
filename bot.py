@@ -52,18 +52,25 @@ def get_pdf_info(pdf_path):
         print(f"    ! Errore lettura PDF: {e}", flush=True)
     return matches
 
-# --- FUNZIONE AGGIORNATA CON ATTESA ATTIVA ---
+# --- FUNZIONE AGGIORNATA CON DEBUG URL ---
 async def estrai_iscritti(page):
     try:
-        # 1. Attendiamo che la pagina sia completamente caricata dopo il goto
-        await page.wait_for_load_state("networkidle")
-        # 2. Scrolliamo fino in fondo per attivare eventuali caricamenti lazy
-        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-        # 3. Aspettiamo che il selettore .cc-name sia presente nel DOM (con timeout generoso)
-        await page.wait_for_selector(".cc-name", timeout=10000)
+        # Debug: mostra esattamente dove si trova il bot
+        print(f"    DEBUG: Sto analizzando URL: {page.url}", flush=True)
         
-        # Ora estraiamo i nomi
-        nomi = await page.locator(".cc-name").all_text_contents()
+        # Check immediato: se la sezione non c'è, non aspettare 15 secondi
+        if await page.locator(".cc-section-participants").count() == 0:
+            print("    DEBUG: Sezione iscritti non trovata in questa pagina.", flush=True)
+            return None
+
+        # Se esiste, procediamo
+        await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+        await asyncio.sleep(1)
+        
+        # Aspettiamo solo se sappiamo che c'è qualcosa
+        await page.wait_for_selector(".cc-section-participants .cc-name", timeout=5000)
+        
+        nomi = await page.locator(".cc-section-participants .cc-name").all_text_contents()
         lista_pulita = [n.strip() for n in nomi if n.strip()]
         
         if lista_pulita:
@@ -71,8 +78,8 @@ async def estrai_iscritti(page):
             return list(set(lista_pulita))
         return None
     except Exception as e:
-        print(f"    DEBUG: Timeout o errore in estrai_iscritti: {e}", flush=True)
-    return None
+        print(f"    DEBUG: Errore durante estrazione iscritti: {e}", flush=True)
+        return None
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
@@ -80,7 +87,11 @@ async def run_bot():
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(accept_downloads=True)
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            accept_downloads=True
+        )
+        
         start_date_filter = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
         
         for cat_id, filename in CATEGORIES.items():
@@ -126,13 +137,11 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- FIX TITOLO ---
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- CHIAMATA FUNZIONE (INTEGRATA) ---
                         if cat_id == "t_giovanili":
                             lista_iscritti = await estrai_iscritti(page)
                             if lista_iscritti:
@@ -181,7 +190,6 @@ async def run_bot():
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
         
-        # Salvataggio iscritti
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
             json.dump(iscritti_report, f, ensure_ascii=False, indent=4)
             
