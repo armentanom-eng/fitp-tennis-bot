@@ -3,10 +3,10 @@ name: Bot Tornei FITP
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 8 * * *' # Ogni giorno alle 08:00
+    - cron: '0 8 * * *'
 
 permissions:
-  contents: write # ESSENZIALE per poter fare push dei nuovi file json
+  contents: write
 
 jobs:
   scrape:
@@ -24,15 +24,15 @@ jobs:
           playwright install chromium
           
       - name: Esegui Bot
-        run: python monitor_giovanili.py
+        run: |
+          echo "--- LISTA FILE RILEVATI ---"
+          ls -R
+          echo "---------------------------"
+          python monitor_giovanili.py
         
       - name: Commit Risultati
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          
-          # Aggiunge tutti i file .json generati
           git add *.json
-          
-          # Commit solo se ci sono modifiche reali
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento automatico risultati JSON" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento automatico JSON" && git push)
