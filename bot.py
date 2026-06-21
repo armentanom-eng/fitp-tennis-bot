@@ -77,40 +77,45 @@ async def run_bot():
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await asyncio.sleep(1)
-                
                 await page.click('button[data-id="id_regioneSearch"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(1)
-                
                 await page.fill("#dpk_start_date", start_date_filter)
                 await page.keyboard.press("Enter") 
                 await asyncio.sleep(2)
-                
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
                 while await page.locator("#btn-loadMore").is_visible():
-                    print("     Caricamento altri risultati...", flush=True)
                     await page.click("#btn-loadMore")
                     await asyncio.sleep(2)
                 
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
-                print(f"     Trovati {len(links)} tornei da analizzare.", flush=True)
+                print(f"     Trovati {len(links)} tornei.", flush=True)
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
-                    print(f"     -> Analizzo torneo: {full_url}", flush=True)
+                    print(f"     -> Analizzo: {full_url}", flush=True)
+                    
+                    # Inizializziamo l'oggetto del torneo qui
+                    torneo_entry = {"nome": "In attesa...", "date": []}
+                    
                     try:
                         await page.goto(full_url, wait_until="networkidle")
-                        if not await page.locator("#select-ordergame").is_visible(timeout=3000): continue
+                        if not await page.locator("#select-ordergame").is_visible(timeout=3000): 
+                            continue
                         
+                        # Loop sui 2 giorni
                         for i in range(2):
                             data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                             options = await page.locator("#select-ordergame option").all_text_contents()
-                            if data_target not in "".join(options): continue 
                             
+                            if data_target not in "".join(options):
+                                torneo_entry["date"].append({"data": data_target, "stato": "Nessuna pianificazione disponibile"})
+                                continue
+                                
                             await page.select_option("#select-ordergame", label=data_target)
                             await asyncio.sleep(2)
                             
@@ -120,20 +125,37 @@ async def run_bot():
                             path = "temp.pdf"
                             await (await dl_info.value).save_as(path)
                             nome, matches = get_pdf_info(path)
-                            if matches:
-                                torneo_entry = {"nome": nome, "data": data_target, "partite": [format_line_for_swift(m, date_target=data_target) for m in matches]}
-                                json_data["tornei"].append(torneo_entry)
-                            if os.path.exists(path): os.remove(path)
                             
-                    except Exception as e: print(f"    !! Errore su {full_url}: {e}", flush=True)
+                            # Aggiorniamo il nome del torneo se trovato
+                            if nome != "Torneo FITP": torneo_entry["nome"] = nome
+                            
+                            if matches:
+                                torneo_entry["date"].append({
+                                    "data": data_target,
+                                    "stato": "Partite trovate",
+                                    "partite": [format_line_for_swift(m, date_target=data_target) for m in matches]
+                                })
+                                print(f"        [OK] {data_target}: {len(matches)} partite.", flush=True)
+                            else:
+                                torneo_entry["date"].append({"data": data_target, "stato": "Partite non trovate"})
+                                print(f"        [SKIP] {data_target}: Nessuna partita.", flush=True)
+                            
+                            if os.path.exists(path): os.remove(path)
+                        
+                        # Aggiungiamo il torneo al JSON principale solo se abbiamo raccolto dati
+                        if torneo_entry["date"]:
+                            json_data["tornei"].append(torneo_entry)
+                            
+                    except Exception as e: 
+                        print(f"    !! Errore su {full_url}: {e}", flush=True)
                 await page.close()
             
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
-                print(f"--- [OK] File {filename} salvato correttamente. ---", flush=True)
+                print(f"--- [OK] File {filename} aggiornato. ---", flush=True)
                 
         await browser.close()
-        print(f"--- Bot completato con successo alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
+        print(f"--- Bot completato ---", flush=True)
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
