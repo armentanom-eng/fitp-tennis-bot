@@ -1,20 +1,22 @@
 import asyncio
+import os
 import re
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 # Configurazione
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 CATEGORIES = {"t_giovanili": "Giovanili_Partite.json"}
 ISCRITTI_FILE = "Iscritti_Giovanili.json"
-# Filtri richiesti
 STATUS_LIST = ["In corso", "Iscrizioni aperte"]
 
 async def estrai_iscritti(page):
     try:
-        # Attendiamo che la sezione partecipanti sia caricata
-        if await page.locator(".cc-section-participants").count() > 0:
+        # Attendiamo un po' più a lungo che la sezione appaia
+        if await page.locator(".cc-section-participants").wait_for(state="visible", timeout=10000) is not None:
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await asyncio.sleep(2)
             nomi = await page.locator(".cc-name").all_text_contents()
             return [n.strip() for n in nomi if n.strip()]
     except Exception as e:
@@ -37,15 +39,14 @@ async def run_bot():
                 print(f"\n--- Filtro attivo: {status} ---", flush=True)
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # 1. Selezione Categoria (Giovanili)
-                await page.locator(f'a[data-id="{cat_id}"]').click()
-                await asyncio.sleep(2)
+                # 1. Selezione Categoria - AGGIUNTO .first PER EVITARE CRASH
+                await page.locator(f'a[data-id="{cat_id}"]').first.click()
+                await asyncio.sleep(3)
                 
-                # 2. Selezione Stato (In corso / Iscrizioni aperte)
+                # 2. Selezione Stato
                 await page.click('button[data-id="select_status"]')
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await asyncio.sleep(2)
-                # Invio per confermare filtri se necessario
                 await page.keyboard.press("Enter")
                 await asyncio.sleep(3)
 
@@ -62,25 +63,22 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- NUOVA LOGICA DI RICERCA CATEGORIA (PIÙ ROBUSTA) ---
-                        # Cerchiamo tutti i link "Dettaglio"
+                        # Cerchiamo i link "Dettaglio"
                         dettagli = page.get_by_role("link", name="Dettaglio")
                         trovato = False
                         
                         count = await dettagli.count()
                         for i in range(count):
                             link = dettagli.nth(i)
-                            # Prendiamo il contenitore del blocco categoria
                             container = link.locator("xpath=ancestor::div[contains(@class, 'cc-single-tournament')]")
                             text_content = await container.text_content()
                             
-                            # Controllo flessibile: devono esserci tutte le parole chiave
+                            # Filtro per Singolare Femminile Under 14
                             if all(k in text_content for k in ["Singolare", "Femminile", "Under 14"]):
                                 print(f"    -> Trovata categoria: {text_content.strip()[:50]}...", flush=True)
                                 await link.click()
                                 await page.wait_for_load_state("networkidle")
                                 
-                                # Estrazione
                                 lista = await estrai_iscritti(page)
                                 if lista:
                                     iscritti_report["tornei"].append({
@@ -89,20 +87,12 @@ async def run_bot():
                                         "iscritti": lista
                                     })
                                     print(f"    [OK] Trovati {len(lista)} iscritti.")
-                                else:
-                                    print("    [!] Categoria trovata ma nessun iscritto (o errore caricamento).")
-                                
                                 trovato = True
-                                break # Usciamo dal ciclo delle categorie
+                                break
                         
-                        if not trovato:
-                            # Log opzionale per debug
-                            pass
-
                     except Exception as e:
                         print(f"    !! Errore sul torneo {full_url}: {e}")
 
-        # Salva i risultati
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
             json.dump(iscritti_report, f, ensure_ascii=False, indent=4)
             
