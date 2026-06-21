@@ -8,7 +8,7 @@ from playwright.async_api import async_playwright
 
 # Configurazione
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-CATEGORIES = {"t_giovanili": "Giovanili_Tornei.json"} # Usiamo solo giovanili come da tua richiesta
+CATEGORIES = {"t_giovanili": "Giovanili_Tornei.json"}
 STATUSES = ["In corso", "Iscrizioni aperte"]
 OUTPUT_FILE = "Tornei_e_Iscritti.json"
 
@@ -46,26 +46,38 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def estrai_iscritti_u14(page):
-    """Cerca la riga Singolare Femminile Under 14, entra nel dettaglio ed estrae i nomi"""
+    """Cicla tutte le righe della tabella e cerca il testo parziale"""
     try:
-        print("    DEBUG: Cerco riga categoria 'Singolare Femminile Under 14'...", flush=True)
-        # Cerchiamo la riga che contiene la categoria (anche con testo aggiuntivo) e clicchiamo Dettaglio
-        target_row = page.locator("tr").filter(has_text=re.compile("Singolare Femminile Under 14", re.IGNORECASE))
+        print("    DEBUG: Cerco riga categoria (metodo iterativo)...", flush=True)
+        # Individuiamo tutte le righe della tabella
+        rows = page.locator("table tbody tr")
+        row_count = await rows.count()
         
-        if await target_row.count() > 0:
-            print("    DEBUG: Categoria trovata, entro nel dettaglio...", flush=True)
-            await target_row.get_by_role("link", name="Dettaglio").click()
-            await page.wait_for_load_state("networkidle")
+        found = False
+        for i in range(row_count):
+            row = rows.nth(i)
+            # Leggiamo il testo di tutta la riga
+            text = await row.inner_text()
             
-            # Estrazione nomi (assumendo classe .cc-name come da screenshot)
+            # Verifichiamo se contiene la categoria (case-insensitive)
+            if "Singolare Femminile Under 14" in text:
+                print(f"    DEBUG: Trovata riga corrispondente: {text[:40]}...", flush=True)
+                # Clicchiamo Dettaglio dentro questa riga
+                await row.get_by_role("link", name="Dettaglio").first.click()
+                await page.wait_for_load_state("networkidle")
+                found = True
+                break
+        
+        if found:
+            # Estrazione nomi
             nomi = await page.locator(".cc-name").all_text_contents()
             lista_pulita = [n.strip() for n in nomi if n.strip()]
-            
+            print(f"    DEBUG: Estratti {len(lista_pulita)} nomi.", flush=True)
             await page.go_back()
             await page.wait_for_load_state("networkidle")
             return lista_pulita
         else:
-            print("    DEBUG: Categoria Under 14 non presente in questo torneo.", flush=True)
+            print("    DEBUG: Categoria 'Singolare Femminile Under 14' non trovata in nessuna riga.", flush=True)
             return None
     except Exception as e:
         print(f"    ! Errore estrazione iscritti: {e}", flush=True)
@@ -73,7 +85,7 @@ async def estrai_iscritti_u14(page):
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
-    dati_finali = {} # Struttura: { "Nome Torneo": ["Giocatore 1", "Giocatore 2"] }
+    dati_finali = {}
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -85,19 +97,14 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # Filtri
             await page.click('button[data-id="select_status"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name=status).click()
             await asyncio.sleep(1)
-            
-            # Filtro Regione
             await page.click('button[data-id="id_regioneSearch"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(1)
-            
-            # Filtro Provincia
             await page.click('button[data-id="id_provinciaSearch"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
@@ -106,12 +113,9 @@ async def run_bot():
             await page.fill("#dpk_start_date", start_date_filter)
             await page.keyboard.press("Enter") 
             await asyncio.sleep(2)
-            
-            # Categoria Giovanili
             await page.locator('a[data-id="t_giovanili"]').first.click()
             await asyncio.sleep(3) 
             
-            # Carica altri
             while await page.locator("#btn-loadMore").is_visible():
                 print("    Caricamento altri risultati...", flush=True)
                 await page.click("#btn-loadMore")
@@ -135,14 +139,13 @@ async def run_bot():
                         dati_finali[nome_torneo] = iscritti
                         print(f"       [OK] Trovati {len(iscritti)} iscritti.", flush=True)
                     else:
-                        print("       [Info] Nessun iscritto trovato per la categoria richiesta.", flush=True)
+                        print("       [Info] Nessun iscritto trovato.", flush=True)
                         
                 except Exception as e: 
                     print(f"    !! Errore su {full_url}: {e}", flush=True)
             
             await page.close()
             
-        # Salvataggio unico
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(dati_finali, f, ensure_ascii=False, indent=4)
             print(f"\n--- [OK] File {OUTPUT_FILE} salvato con successo. ---", flush=True)
