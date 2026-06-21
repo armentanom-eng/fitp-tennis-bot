@@ -1,6 +1,4 @@
 import asyncio
-import os
-import pdfplumber
 import re
 import json
 from datetime import datetime, timedelta
@@ -8,79 +6,49 @@ from playwright.async_api import async_playwright
 
 # Configurazione
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-CATEGORIES = {"t_giovanili": "Giovanili_Tornei.json"}
 STATUSES = ["In corso", "Iscrizioni aperte"]
 OUTPUT_FILE = "Tornei_e_Iscritti.json"
 
-def format_line_for_swift(raw_text, date_target):
-    match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
-    time = match_time.group(2) if match_time else "00:00"
-    clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
-    clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
-    clean_text = re.sub(r"(LIM\.\s+[\w\.]+\s*-\s*[\w\.]+)", r"\1;", clean_text)
-    cat_keywords = ["Singolare", "Doppio", "Maschile", "Femminile", "Open", "Under", "LIM."]
-    found_cat = "N/A"
-    for kw in cat_keywords:
-        if kw in clean_text:
-            parts = re.split(r'\s+(?=[A-Z]{3,})', clean_text, maxsplit=1)
-            found_cat = parts[0].strip()
-            if len(found_cat) > 50: found_cat = "Categoria non specificata"
-            break
-    final_match_data = clean_text.replace(found_cat, "").strip()
-    final_match_data = final_match_data.lstrip(';').strip()
-    return f"{date_target}; {time}; {found_cat}; {final_match_data}"
-
-def get_pdf_info(pdf_path):
-    matches = []
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for page in pdf.pages:
-                table = page.extract_table()
-                if table:
-                    for row in table:
-                        for cell in row:
-                            if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
-                                matches.append(cell.replace("\n", " ").strip())
-    except Exception as e:
-        print(f"    ! Errore lettura PDF: {e}", flush=True)
-    return matches
-
 async def estrai_iscritti_u14(page):
-    """Strategia chirurgica: cerca il testo specifico e clicca il dettaglio della sua riga"""
+    """
+    Versione ottimizzata per la struttura a 'card' visibile nello screenshot.
+    Cerca il blocco che contiene il testo e clicca il dettaglio al suo interno.
+    """
     try:
-        # Aumentiamo il tempo di attesa per caricamento dinamico
+        # Attendiamo che la pagina sia carica
         await page.wait_for_load_state("networkidle")
         await asyncio.sleep(2) 
         
-        print("    DEBUG: Cerco il bottone 'Dettaglio' per 'Singolare Femminile Under 14'...", flush=True)
+        print("    DEBUG: Cerco il blocco card con categoria 'Singolare Femminile Under 14'...", flush=True)
         
-        # Cerchiamo l'elemento che contiene il testo
-        target_text = "Singolare Femminile Under 14"
+        # LOGICA: Trova un elemento contenitore (div) che ha il testo cercato E che contiene un link "Dettaglio"
+        # Questo approccio ignora tutto ciò che viene scritto dopo "Under 14"
+        card_locator = page.locator("div:has-text('Singolare Femminile Under 14')").filter(
+            has=page.get_by_role("link", name="Dettaglio")
+        )
         
-        # Usiamo un selettore che trova il testo e risale alla riga (tr) che lo contiene
-        # e poi trova il link "Dettaglio" dentro quella stessa riga
-        row_locator = page.locator(f"tr:has-text('{target_text}')")
-        dettaglio_btn = row_locator.get_by_role("link", name="Dettaglio")
-        
-        if await dettaglio_btn.count() > 0:
-            print("    DEBUG: Trovato! Clicco sul Dettaglio...", flush=True)
-            await dettaglio_btn.first.click()
+        # Controlliamo se abbiamo trovato almeno una card
+        if await card_locator.count() > 0:
+            print("    DEBUG: Trovata card! Clicco sul link 'Dettaglio'...", flush=True)
+            await card_locator.get_by_role("link", name="Dettaglio").first.click()
             await page.wait_for_load_state("networkidle")
             
-            # Estrazione nomi
+            # Estrazione nomi (cercando elementi con classe che contiene 'name' o simili)
+            # Adattalo se la classe degli iscritti è diversa nel dettaglio
             nomi = await page.locator(".cc-name").all_text_contents()
             lista_pulita = [n.strip() for n in nomi if n.strip()]
+            
             print(f"    DEBUG: Estratti {len(lista_pulita)} nomi.", flush=True)
             
             await page.go_back()
             await page.wait_for_load_state("networkidle")
             return lista_pulita
         else:
-            print(f"    DEBUG: Non ho trovato nessuna riga con '{target_text}'.", flush=True)
+            print("    DEBUG: Categoria 'Singolare Femminile Under 14' non trovata in questa pagina.", flush=True)
             return None
             
     except Exception as e:
-        print(f"    ! Errore estrazione iscritti: {e}", flush=True)
+        print(f"    ! Errore critico in estrazione: {e}", flush=True)
         return None
 
 async def run_bot():
@@ -97,30 +65,34 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
+            # Filtri (Seleziona Stato, Regione, Provincia)
             await page.click('button[data-id="select_status"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name=status).click()
-            await asyncio.sleep(1)
+            
             await page.click('button[data-id="id_regioneSearch"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(1)
+            
             await page.click('button[data-id="id_provinciaSearch"]')
             await asyncio.sleep(1)
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(1)
             
             await page.fill("#dpk_start_date", start_date_filter)
             await page.keyboard.press("Enter") 
             await asyncio.sleep(2)
+            
+            # Clicca Giovanili
             await page.locator('a[data-id="t_giovanili"]').first.click()
             await asyncio.sleep(3) 
             
+            # Caricamento infinito
             while await page.locator("#btn-loadMore").is_visible():
                 print("    Caricamento altri risultati...", flush=True)
                 await page.click("#btn-loadMore")
                 await asyncio.sleep(2)
             
+            # Recupero link tornei
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             print(f"    Trovati {len(links)} tornei.", flush=True)
@@ -129,9 +101,10 @@ async def run_bot():
                 full_url = f"https://www.fitp.it{link}"
                 try:
                     await page.goto(full_url, wait_until="networkidle")
+                    
+                    # Recupero titolo torneo
                     title_el = page.locator("h1.cc-title-main.spn-competition-description")
                     nome_torneo = (await title_el.text_content()).strip() if await title_el.count() > 0 else "Torneo sconosciuto"
-                    
                     print(f"    -> Analizzo torneo: {nome_torneo} | Link: {full_url}", flush=True)
                     
                     iscritti = await estrai_iscritti_u14(page)
@@ -146,6 +119,7 @@ async def run_bot():
             
             await page.close()
             
+        # Salvataggio
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(dati_finali, f, ensure_ascii=False, indent=4)
             print(f"\n--- [OK] File {OUTPUT_FILE} salvato con successo. ---", flush=True)
