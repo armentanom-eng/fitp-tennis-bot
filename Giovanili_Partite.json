@@ -1,9 +1,9 @@
 {
-    "report_data": "21/06/2026 10:18",
+    "report_data": "21/06/2026 10:26",
     "tornei": [
         {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP BRALLO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D2F40767-C0DF-4639-B409-9684C55C7444",
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP FIUGGI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=866DBE30-E61C-473D-AD57-E4CAF161B1A4",
             "date": [
                 {
                     "data": "Info",
@@ -12,18 +12,8 @@
             ]
         },
         {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=496AF366-41D7-40AB-8830-13A095412772",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP SERRAMAZZONI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8387F036-C0AC-4603-A1B8-82897AD2621B",
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP SIBARI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=51EC84D3-9394-4833-989F-1A6EA0BA178A",
             "date": [
                 {
                     "data": "Info",
@@ -42,8 +32,8 @@
             ]
         },
         {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP FIUGGI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=866DBE30-E61C-473D-AD57-E4CAF161B1A4",
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP BRALLO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D2F40767-C0DF-4639-B409-9684C55C7444",
             "date": [
                 {
                     "data": "Info",
@@ -73,8 +63,26 @@
             ]
         },
         {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP SIBARI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=51EC84D3-9394-4833-989F-1A6EA0BA178A",
+            "nome": "CIRCUITO FEDERICI SPORT - WILSON - ASD LEPINI TENNIS - PRESSO CARPINETO ROMANO (RM)",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD5E0BC2-8B0F-4091-85C2-53F29E41F738",
+            "date": [
+                {
+                    "data": "21/06/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "21/06/2026; 15:30; Singolare Maschile Under 14; COLETTI LEONARDO; FONTANA ALESSANDRO",
+                        "21/06/2026; 15:30; Singolare Femminile Under 12; SIMEONI GRETA; BOSCARINI EMMA"
+                    ]
+                },
+                {
+                    "data": "22/06/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5377A8F8-14F4-4D1C-86FE-FEF34B3AD784",
             "date": [
                 {
                     "data": "Info",
@@ -83,8 +91,28 @@
             ]
         },
         {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5377A8F8-14F4-4D1C-86FE-FEF34B3AD784",
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP PRATO NEVOSO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2B1CB361-5536-4420-9D96-2A2EE3F68AF5",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP SERRAMAZZONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8387F036-C0AC-4603-A1B8-82897AD2621B",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=496AF366-41D7-40AB-8830-13A095412772",
             "date": [
                 {
                     "data": "Info",
@@ -110,34 +138,6 @@
                 {
                     "data": "22/06/2026",
                     "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "CIRCUITO FEDERICI SPORT - WILSON - ASD LEPINI TENNIS - PRESSO CARPINETO ROMANO (RM)",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD5E0BC2-8B0F-4091-85C2-53F29E41F738",
-            "date": [
-                {
-                    "data": "21/06/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "21/06/2026; 15:30; Singolare Maschile Under 14; COLETTI LEONARDO; FONTANA ALESSANDRO",
-                        "21/06/2026; 15:30; Singolare Femminile Under 12; SIMEONI GRETA; BOSCARINI EMMA"
-                    ]
-                },
-                {
-                    "data": "22/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TENNIS TROPHY FITP KINDER JOY OF MOVING C/O CENTRO ESTIVO FITP PRATO NEVOSO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2B1CB361-5536-4420-9D96-2A2EE3F68AF5",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
                 }
             ]
         },
