@@ -17,6 +17,7 @@ STATUSES = ["In corso", "Iscrizioni aperte"]
 def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
+    
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     clean_text = re.sub(r"(LIM\.\s+[\w\.]+\s*-\s*[\w\.]+)", r"\1;", clean_text)
@@ -32,24 +33,13 @@ def format_line_for_swift(raw_text, date_target):
             
     final_match_data = clean_text.replace(found_cat, "").strip()
     final_match_data = final_match_data.lstrip(';').strip()
+    
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
 def get_pdf_info(pdf_path):
-    # Estraiamo il nome dal PDF in modo più intelligente
-    nome_torneo = "Torneo FITP"
     matches = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
-            first_page = pdf.pages[0]
-            text = first_page.extract_text()
-            if text:
-                lines = [l.strip() for l in text.split('\n') if l.strip()]
-                # Il nome del torneo è solitamente nelle prime righe
-                for line in lines:
-                    if len(line) > 10 and "FITP" not in line and "Orario" not in line and "Campo" not in line:
-                        nome_torneo = line
-                        break
-            
             for page in pdf.pages:
                 table = page.extract_table()
                 if table:
@@ -59,7 +49,7 @@ def get_pdf_info(pdf_path):
                                 matches.append(cell.replace("\n", " ").strip())
     except Exception as e:
         print(f"    ! Errore lettura PDF: {e}", flush=True)
-    return nome_torneo, matches
+    return matches
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
@@ -73,8 +63,10 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
 
             for status in STATUSES:
+                print(f"  -> Elaborazione stato: {status}...", flush=True)
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
+                
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
@@ -90,19 +82,34 @@ async def run_bot():
                 await asyncio.sleep(3) 
                 
                 while await page.locator("#btn-loadMore").is_visible():
+                    print("     Caricamento altri risultati...", flush=True)
                     await page.click("#btn-loadMore")
                     await asyncio.sleep(2)
                 
+                await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                await asyncio.sleep(1)
+                
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
+                print(f"     Trovati {len(links)} tornei.", flush=True)
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
-                    torneo_entry = {"nome": "Caricamento...", "url": full_url, "date": []}
+                    torneo_entry = {"nome": "In caricamento...", "url": full_url, "date": []}
                     json_data["tornei"].append(torneo_entry)
                     
                     try:
                         await page.goto(full_url, wait_until="networkidle")
+                        
+                        # --- FIX TITOLO ---
+                        # Usa il selettore esatto preso dal tuo Screenshot
+                        title_el = page.locator("h1.cc-title-main.spn-competition-description")
+                        if await title_el.count() > 0:
+                            nome = await title_el.text_content()
+                            torneo_entry["nome"] = nome.strip()
+                        
+                        print(f"     -> Analizzo: {torneo_entry['nome']}", flush=True)
+
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000): 
                             torneo_entry["date"].append({"data": "Info", "stato": "Nessuna data disponibile"})
                             continue
@@ -123,11 +130,7 @@ async def run_bot():
                             
                             path = "temp.pdf"
                             await (await dl_info.value).save_as(path)
-                            
-                            # ORA usiamo il nome estratto dal PDF
-                            nome_pdf, matches = get_pdf_info(path)
-                            if nome_pdf != "Torneo FITP":
-                                torneo_entry["nome"] = nome_pdf
+                            matches = get_pdf_info(path)
                             
                             if matches:
                                 torneo_entry["date"].append({
@@ -146,7 +149,10 @@ async def run_bot():
             
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
+                print(f"--- [OK] File {filename} salvato. ---", flush=True)
+                
         await browser.close()
+        print(f"--- Bot completato ---", flush=True)
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
