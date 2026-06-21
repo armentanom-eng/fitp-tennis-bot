@@ -1,138 +1,63 @@
 import asyncio
+import httpx
 import json
-from datetime import datetime, timedelta
-from playwright.async_api import async_playwright
+from datetime import datetime
 
-# Configurazione
-BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-STATUSES = ["In corso", "Iscrizioni aperte"]
-OUTPUT_FILE = "Tornei_e_Iscritti.json"
+# 1. INSERISCI QUI I DATI CHE HAI RECUPERATO DAL BROWSER
+API_URL = "INSERISCI_URL_API_QUI" # Es: https://www.fitp.it/api/tornei/dettaglio/12345
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) ...",
+    "Referer": "https://www.fitp.it/Tornei/Ricerca-tornei",
+    "Cookie": "INSERISCI_IL_TUO_COOKIE_DI_SESSIONE_QUI", # Fondamentale!
+    "Accept": "application/json, text/plain, */*",
+}
 
-async def estrai_iscritti_u14(page):
+async def estrai_iscritti_api(client, id_torneo):
     """
-    Gestisce l'interazione dinamica (senza cambiare URL).
-    Clicca 'Dettaglio' sulla categoria corretta ed estrae i nomi.
+    Esegue una richiesta diretta all'API del server.
     """
-    print("    DEBUG: Cerco il blocco card con categoria 'Singolare Femminile Under 14'...", flush=True)
-    
     try:
-        # LOGICA: Trova il div che contiene la categoria E il link "Dettaglio"
-        # Usiamo .first per assicurarci di prendere il primo blocco che corrisponde
-        card = page.locator("div:has-text('Singolare Femminile Under 14')").filter(
-            has=page.get_by_role("link", name="Dettaglio")
-        ).first
+        # Se fosse una POST, dovresti usare client.post(url, json=payload)
+        response = await client.get(f"{API_URL}?id={id_torneo}", headers=HEADERS)
         
-        if await card.count() > 0:
-            print("    DEBUG: Trovata card! Clicco sul link 'Dettaglio'...", flush=True)
-            
-            # Clicchiamo sul link "Dettaglio" all'interno della card
-            await card.get_by_role("link", name="Dettaglio").click()
-            
-            # ATTESA: Attendiamo che appaia la lista iscritti (es. classe .cc-name)
-            # Senza cambiare URL, la pagina inietta la lista via JS
-            try:
-                await page.wait_for_selector(".cc-name", timeout=10000)
-                
-                # Estrazione nomi
-                nomi = await page.locator(".cc-name").all_text_contents()
-                lista_pulita = [n.strip() for n in nomi if n.strip()]
-                
-                print(f"    DEBUG: Estratti {len(lista_pulita)} nomi.", flush=True)
-                return lista_pulita
-                
-            except Exception as e:
-                print(f"    DEBUG: I nomi non sono apparsi dopo il click. {e}", flush=True)
-                return None
+        if response.status_code == 200:
+            data = response.json()
+            # ADATTA QUESTA PARTE: il JSON di ritorno sarà strutturato in modo specifico
+            # Es: return data['iscritti'] oppure data['dati']['players']
+            print(f"    [LOG] Dati ricevuti per torneo {id_torneo}")
+            return data 
         else:
-            print("    DEBUG: Categoria 'Singolare Femminile Under 14' non trovata in questa pagina.", flush=True)
+            print(f"    [LOG] Errore API {response.status_code}: {response.text}")
             return None
             
     except Exception as e:
-        print(f"    ! Errore critico in estrazione: {e}", flush=True)
+        print(f"    [LOG] Errore di connessione: {e}")
         return None
 
 async def run_bot():
-    print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
+    print(f"--- Avvio Bot API alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
     dati_finali = {}
     
-    async with async_playwright() as p:
-        # headless=True è OBBLIGATORIO per GitHub Actions
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(accept_downloads=True)
-        start_date_filter = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
+    # Lista di ID tornei che dovrai aver recuperato prima
+    lista_id_tornei = ["123", "456"] 
+    
+    async with httpx.AsyncClient(timeout=10.0) as client:
+        for id_torneo in lista_id_tornei:
+            print(f"    [LOG] Elaborazione torneo ID: {id_torneo}")
+            
+            iscritti = await estrai_iscritti_api(client, id_torneo)
+            
+            if iscritti:
+                dati_finali[id_torneo] = iscritti
+            
+            # Pausa breve per non intasare il server (buona norma)
+            await asyncio.sleep(1)
+            
+    # Salvataggio
+    with open("Tornei_e_Iscritti_API.json", "w", encoding="utf-8") as f:
+        json.dump(dati_finali, f, ensure_ascii=False, indent=4)
         
-        for status in STATUSES:
-            print(f"\n--- Inizio sessione: Stato '{status}' ---", flush=True)
-            page = await context.new_page()
-            
-            # Navigazione iniziale
-            await page.goto(BASE_URL, wait_until="domcontentloaded")
-            await asyncio.sleep(3) 
-            
-            # Applicazione filtri
-            await page.click('button[data-id="select_status"]')
-            await asyncio.sleep(1)
-            await page.get_by_role("listbox").get_by_role("option", name=status).click()
-            
-            await page.click('button[data-id="id_regioneSearch"]')
-            await asyncio.sleep(1)
-            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            
-            await page.click('button[data-id="id_provinciaSearch"]')
-            await asyncio.sleep(1)
-            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            
-            await page.fill("#dpk_start_date", start_date_filter)
-            await page.keyboard.press("Enter") 
-            await asyncio.sleep(2)
-            
-            # Clicca Giovanili
-            await page.locator('a[data-id="t_giovanili"]').first.click()
-            await asyncio.sleep(3) 
-            
-            # Caricamento infinito
-            while await page.locator("#btn-loadMore").is_visible():
-                print("    Caricamento altri risultati...", flush=True)
-                await page.click("#btn-loadMore")
-                await asyncio.sleep(2)
-            
-            # Recupero link tornei
-            locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-            links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"    Trovati {len(links)} tornei.", flush=True)
-            
-            # Ciclo tornei
-            for link in links:
-                full_url = f"https://www.fitp.it{link}"
-                try:
-                    # Carichiamo il torneo (URL cambia qui)
-                    await page.goto(full_url, wait_until="domcontentloaded")
-                    await asyncio.sleep(3)
-                    
-                    # Recupero titolo
-                    title_el = page.locator("h1.cc-title-main")
-                    nome_torneo = (await title_el.text_content()).strip() if await title_el.count() > 0 else "Torneo sconosciuto"
-                    print(f"    -> Analizzo torneo: {nome_torneo} | Link: {full_url}", flush=True)
-                    
-                    # Estrazione (SPA, URL NON cambia)
-                    iscritti = await estrai_iscritti_u14(page)
-                    
-                    if iscritti:
-                        dati_finali[nome_torneo] = iscritti
-                        print(f"       [OK] Trovati {len(iscritti)} iscritti.", flush=True)
-                    
-                except Exception as e: 
-                    print(f"    !! Errore su {full_url}: {e}", flush=True)
-            
-            await page.close()
-            
-        # Salvataggio
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(dati_finali, f, ensure_ascii=False, indent=4)
-            print(f"\n--- [OK] File {OUTPUT_FILE} salvato con successo. ---", flush=True)
-            
-        await browser.close()
-        print(f"--- Bot completato ---", flush=True)
+    print(f"--- Bot completato. File salvato. ---", flush=True)
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
