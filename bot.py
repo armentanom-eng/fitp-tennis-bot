@@ -2,13 +2,16 @@ import asyncio
 import os
 import pdfplumber
 import re
-import json # Importante: aggiunto per gestire il JSON
+import json
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
+# Configurazione
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-# Modificato estensione in .json
-CATEGORIES = {"t_giovanili": "Giovanili_Partite.json", "t_affiliati": "Open_Partite.json"}
+CATEGORIES = {
+    "t_giovanili": "Giovanili_Partite.json", 
+    "t_affiliati": "Open_Partite.json"
+}
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
 def format_line_for_swift(raw_text, date_target):
@@ -16,7 +19,7 @@ def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
     
-    # 2. Pulizia testo di base
+    # 2. Pulizia testo
     clean_text = re.sub(r"\s+vs\s+", "; ", raw_text, flags=re.IGNORECASE)
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
@@ -69,7 +72,6 @@ async def run_bot():
         for cat_id, filename in CATEGORIES.items():
             print(f"\n--- Inizio sessione: {filename} ---", flush=True)
             
-            # Struttura dati per il JSON
             json_data = {
                 "report_data": datetime.now().strftime("%d/%m/%Y %H:%M"),
                 "tornei": []
@@ -80,6 +82,7 @@ async def run_bot():
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
+                # Selezione filtri
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
@@ -90,7 +93,6 @@ async def run_bot():
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(1)
                 
-                print(f"  -> Applicando filtro data inizio: {start_date_filter}")
                 await page.fill("#dpk_start_date", start_date_filter)
                 await page.keyboard.press("Enter") 
                 await asyncio.sleep(2)
@@ -98,19 +100,17 @@ async def run_bot():
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
+                # Carica tutto
                 while await page.locator("#btn-loadMore").is_visible():
                     await page.click("#btn-loadMore")
                     await asyncio.sleep(2)
                 
+                # Analisi link
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
                 
-                print(f"[*] Trovati {len(links)} tornei per '{status}'. Inizio scansione...", flush=True)
-                
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
-                    print(f"    [>] Analizzando: {full_url}", flush=True)
-                    
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000):
@@ -127,7 +127,6 @@ async def run_bot():
                             await asyncio.sleep(2)
                             
                             async with page.expect_download(timeout=10000) as dl_info:
-                                await page.click("#btn-loadMore") # ATTENZIONE: qui era btnOrderGameDownload, ho lasciato quello del tuo codice originale
                                 await page.click("#btnOrderGameDownload")
                             
                             path = "temp.pdf"
@@ -135,7 +134,6 @@ async def run_bot():
                             nome, matches = get_pdf_info(path)
                             
                             if matches:
-                                # Aggiungiamo i dati alla struttura JSON invece di scrivere su file
                                 torneo_entry = {
                                     "nome": nome,
                                     "data": data_target,
@@ -150,9 +148,10 @@ async def run_bot():
                 
                 await page.close()
             
-            # Scrittura finale del file JSON per questa categoria
+            # Salvataggio file JSON finale
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
+                print(f"[OK] File {filename} salvato.")
                 
         await browser.close()
 
