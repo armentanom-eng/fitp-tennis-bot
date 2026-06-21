@@ -14,21 +14,6 @@ CATEGORIES = {
 }
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
-# --- FUNZIONE INTEGRATA DI ESTRAZIONE ---
-async def estrai_iscritti(page):
-    try:
-        # Attendiamo il caricamento della sezione
-        if await page.locator(".cc-section-participants").count() > 0:
-            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-            await asyncio.sleep(2)
-            nomi = await page.locator(".cc-name").all_text_contents()
-            lista_pulita = [n.strip() for n in nomi if n.strip()]
-            print(f"     -> [ISCRITTI] Trovati {len(lista_pulita)} atleti.", flush=True)
-            return list(set(lista_pulita))
-    except Exception as e:
-        print(f"    ! Errore estrazione iscritti: {e}", flush=True)
-    return []
-
 def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
     time = match_time.group(2) if match_time else "00:00"
@@ -65,6 +50,20 @@ def get_pdf_info(pdf_path):
     except Exception as e:
         print(f"    ! Errore lettura PDF: {e}", flush=True)
     return matches
+
+async def estrai_iscritti(page):
+    """Funzione integrata per estrarre iscritti"""
+    try:
+        # Attendiamo che la sezione appaia
+        if await page.locator(".cc-section-participants").count() > 0:
+            await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+            await asyncio.sleep(2)
+            nomi = await page.locator(".cc-name").all_text_contents()
+            lista_pulita = [n.strip() for n in nomi if n.strip()]
+            return list(set(lista_pulita))
+    except Exception as e:
+        print(f"    ! Errore estrazione iscritti: {e}", flush=True)
+    return []
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
@@ -118,28 +117,71 @@ async def run_bot():
                         
                         # --- INTEGRAZIONE: Clicco nella categoria desiderata ---
                         # Cerchiamo il blocco che contiene "Singolare Femminile Under 14"
-                        # e clicchiamo il suo link "Dettaglio"
-                        cat_locator = page.locator(".cc-single-tournament").filter(has_text="Singolare Femminile Under 14").get_by_role("link", name="Dettaglio")
+                        target_cat = "Singolare Femminile Under 14"
+                        cat_locator = page.locator(".cc-single-tournament").filter(has_text=target_cat).get_by_role("link", name="Dettaglio")
                         
                         if await cat_locator.count() > 0:
-                            print("     -> Categoria trovata, entro...", flush=True)
-                            await cat_locator.click()
+                            print(f"     -> [MATCH] Trovata categoria '{target_cat}', entro...", flush=True)
+                            await cat_locator.first.click()
                             await page.wait_for_load_state("networkidle")
-                            
-                            # Estraggo anche gli iscritti
                             torneo_entry["iscritti"] = await estrai_iscritti(page)
                         else:
-                            print("     -> Categoria 'Singolare Femminile Under 14' non presente, salto PDF.", flush=True)
-                            continue # Salta la parte PDF se non trova la categoria
+                            # Se non trova la categoria, saltiamo l'analisi PDF per questo torneo
+                            print("     -> Categoria non presente, salto PDF.", flush=True)
+                            continue 
                         
-                        # --- FINE INTEGRAZIONE ---
-
-                        # --- FIX TITOLO ---
-                        title_el = page.locator("h1.cc-title-main.spn-competition-description")
+                        # --- FIX TITOLO (Aggiunto .first per evitare strict mode) ---
+                        title_el = page.locator("h1.cc-title-main.spn-competition-description").first
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
                         print(f"     -> Analizzo: {torneo_entry['nome']}", flush=True)
 
-                        if not await page.locator("#select-ordergame").is_visible(timeout=3000):
+                        # --- FIX INDENTAZIONE ---
+                        if not await page.locator("#select-ordergame").is_visible(timeout=3000): 
+                            torneo_entry["date"].append({"data": "Info", "stato": "Nessuna data disponibile"})
+                            continue
+                        
+                        for i in range(2):
+                            data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                            options = await page.locator("#select-ordergame option").all_text_contents()
+                            
+                            if data_target not in "".join(options):
+                                torneo_entry["date"].append({"data": data_target, "stato": "Nessuna pianificazione disponibile"})
+                                continue
+                                
+                            await page.select_option("#select-ordergame", label=data_target)
+                            await asyncio.sleep(2)
+                            
+                            async with page.expect_download(timeout=10000) as dl_info:
+                                await page.click("#btnOrderGameDownload")
+                            
+                            path = "temp.pdf"
+                            await (await dl_info.value).save_as(path)
+                            matches = get_pdf_info(path)
+                            
+                            if matches:
+                                torneo_entry["date"].append({
+                                    "data": data_target,
+                                    "stato": "Partite trovate",
+                                    "partite": [format_line_for_swift(m, date_target=data_target) for m in matches]
+                                })
+                            else:
+                                torneo_entry["date"].append({"data": data_target, "stato": "Partite non trovate"})
+                            
+                            if os.path.exists(path): os.remove(path)
+                            
+                    except Exception as e: 
+                        print(f"    !! Errore su {full_url}: {e}", flush=True)
+                await page.close()
+            
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+                print(f"--- [OK] File {filename} salvato. ---", flush=True)
+                
+        await browser.close()
+        print(f"--- Bot completato ---", flush=True)
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
