@@ -1,77 +1,85 @@
 import asyncio
 import json
-import os
+from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 # --- CONFIGURAZIONE ---
-# Inserisci qui l'URL esatto della pagina FITP che contiene la lista iscritti
-URL_TARGET = "https://www.fitp.it/Tornei/..." 
-FILE_OUTPUT = "iscritti_torneo.json"
+URL_RICERCA = "https://www.fitp.it/Tornei/Ricerca-tornei"
+FILE_OUTPUT = "risultati_iscritti.json"
+DATA_INIZIO = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
+CATEGORIA_TARGET = "Singolare Femminile Under 14"
 
 async def main():
-    print(f"[LOG] Avvio script per il sito FITP...", flush=True)
-    
+    print(f"[LOG] Avvio script...", flush=True)
     async with async_playwright() as p:
-        print(f"[LOG] Avvio browser...", flush=True)
         browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
         
-        # Uso un user-agent reale per non essere bloccati dal sito
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        )
-        page = await context.new_page()
+        print(f"[LOG] Navigazione su: {URL_RICERCA}", flush=True)
+        await page.goto(URL_RICERCA, wait_until="networkidle")
         
-        try:
-            print(f"[LOG] Navigazione verso: {URL_TARGET}", flush=True)
-            # Caricamento pagina
-            await page.goto(URL_TARGET, wait_until="networkidle")
+        # 1. Imposta la data
+        print(f"[LOG] Imposto data inizio: {DATA_INIZIO}", flush=True)
+        await page.fill("#dpk_start_date", DATA_INIZIO)
+        
+        # 2. Clicca cerca (adatta il selettore se necessario)
+        print(f"[LOG] Eseguo ricerca...", flush=True)
+        # Assicurati di cliccare il bottone di ricerca dopo aver inserito la data
+        await page.keyboard.press("Enter") 
+        await asyncio.sleep(5) # Attesa per caricamento risultati
+        
+        # 3. Ottieni i link dei tornei
+        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+        links = list(set([await loc.get_attribute("href") for loc in locators]))
+        print(f"[LOG] Trovati {len(links)} tornei. Analizzo...", flush=True)
+        
+        risultati = []
+
+        for link in links:
+            full_url = f"https://www.fitp.it{link}"
+            print(f"[LOG] Entro in: {full_url}", flush=True)
             
-            print(f"[LOG] Pagina caricata. Cerco la sezione iscritti...", flush=True)
-            
-            # Controllo se il contenitore degli iscritti esiste
-            # Il selettore è basato sulla struttura standard FITP
-            container = page.locator(".cc-section-participants")
-            
-            if await container.is_visible(timeout=10000):
-                print(f"[LOG] Sezione iscritti trovata. Eseguo scroll per caricamento dinamico...", flush=True)
-                await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-                await asyncio.sleep(2)
+            try:
+                # Apro una nuova pagina per il torneo
+                page_torneo = await browser.new_page()
+                await page_torneo.goto(full_url, wait_until="networkidle")
                 
-                # Estrazione nomi
-                print(f"[LOG] Estrazione lista nomi...", flush=True)
-                nomi_elements = page.locator(".cc-name")
-                nomi_testo = await nomi_elements.all_text_contents()
+                # Controllo categorie (cerchiamo il testo parziale)
+                # Troviamo tutti i blocchi categoria
+                categorie = await page_torneo.locator(".cc-single-tournament").all()
+                trovato = False
                 
-                lista_iscritti = list(set([n.strip() for n in nomi_testo if n.strip()]))
+                for cat in categorie:
+                    testo = await cat.text_content()
+                    if CATEGORIA_TARGET in testo:
+                        print(f"[LOG] Categoria '{CATEGORIA_TARGET}' trovata in questo torneo.", flush=True)
+                        await cat.get_by_role("link", name="Dettaglio").click()
+                        await page_torneo.wait_for_load_state("networkidle")
+                        
+                        # Estrazione iscritti
+                        if await page_torneo.locator(".cc-section-participants").is_visible(timeout=5000):
+                            nomi = await page_torneo.locator(".cc-name").all_text_contents()
+                            lista_pulita = [n.strip() for n in nomi if n.strip()]
+                            risultati.append({"url": full_url, "iscritti": lista_pulita})
+                            print(f"[LOG] Estratti {len(lista_pulita)} giocatori.", flush=True)
+                        
+                        trovato = True
+                        break
                 
-                print(f"[LOG] Trovati {len(lista_iscritti)} iscritti.", flush=True)
+                if not trovato:
+                    print(f"[LOG] Categoria non presente in questo torneo. Salto.", flush=True)
                 
-                # Salvataggio file
-                dati = {
-                    "data_estrazione": "2026-06-21",
-                    "url_origine": URL_TARGET,
-                    "numero_iscritti": len(lista_iscritti),
-                    "iscritti": lista_iscritti
-                }
+                await page_torneo.close()
                 
-                with open(FILE_OUTPUT, "w", encoding="utf-8") as f:
-                    json.dump(dati, f, ensure_ascii=False, indent=4)
-                
-                print(f"[LOG] Dati salvati correttamente nel file: {FILE_OUTPUT}", flush=True)
-                
-            else:
-                print(f"[ERRORE] Sezione iscritti (.cc-section-participants) non trovata.", flush=True)
-                print(f"[DEBUG] Il selettore CSS potrebbe essere cambiato o sei sulla pagina sbagliata.", flush=True)
-                
-        except Exception as e:
-            print(f"[ERRORE] Si è verificato un errore: {e}", flush=True)
-            
-        finally:
-            print(f"[LOG] Chiusura browser.", flush=True)
-            await browser.close()
+            except Exception as e:
+                print(f"[ERRORE] Impossibile elaborare {full_url}: {e}", flush=True)
+
+        # 4. Salvataggio
+        with open(FILE_OUTPUT, "w", encoding="utf-8") as f:
+            json.dump(risultati, f, ensure_ascii=False, indent=4)
+        
+        print(f"[LOG] Operazione completata. Dati salvati in {FILE_OUTPUT}", flush=True)
+        await browser.close()
 
 if __name__ == "__main__":
-    if "https://www.fitp.it" in URL_TARGET:
-        asyncio.run(main())
-    else:
-        print("[ERRORE] URL non valido. Inserisci un link che inizia con https://www.fitp.it")
+    asyncio.run(main())
