@@ -13,10 +13,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
       - uses: actions/setup-python@v5
-        with: 
-          python-version: '3.10'
+        with: {python-version: '3.10'}
         
       - name: Install dependencies
         run: |
@@ -24,15 +22,14 @@ jobs:
           playwright install chromium
           
       - name: Esegui Bot
-        run: |
-          echo "--- LISTA FILE RILEVATI ---"
-          ls -R
-          echo "---------------------------"
-          python monitor_giovanili.py
+        run: python bot.py
         
       - name: Commit Risultati
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Rimuove i vecchi file txt se presenti
+          git rm -f *.txt || true
+          # Aggiunge i nuovi file json
           git add *.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento automatico JSON" && git push)
