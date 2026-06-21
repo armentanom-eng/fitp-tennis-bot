@@ -53,27 +53,22 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def estrai_iscritti(page):
-    """Estrae i nomi direttamente dalla pagina usando un unico selettore."""
+    # Cerca il link della categoria (Under 14 o 16 in base all'anno)
     target_age = "16" if datetime.now().year >= 2027 else "14"
     pattern = rf"Singolare\s+Femminile\s+(Under|U)\s*{target_age}"
     
     try:
-        # Trova e clicca il link della categoria
         link_cat = page.get_by_role("link", name=re.compile(pattern, re.IGNORECASE))
         if await link_cat.count() > 0:
             await link_cat.first.click()
             await page.wait_for_load_state("networkidle")
             
-            # ESTRAZIONE DIRETTA: Prende tutti i testi che corrispondono al selettore
-            # Se la lista è vuota, verifica su Chrome il selettore corretto (es: .text-bold, .name, ecc.)
-            nomi = await page.locator(".participant-name, .player-name, .name").all_text_contents()
-            
-            # Pulisce i nomi da eventuali spazi superflui
-            nomi_puliti = [n.strip() for n in nomi if n.strip()]
+            # Utilizzo del selettore corretto .cc-name visto nell'inspector
+            nomi = await page.locator(".cc-name").all_text_contents()
             
             await page.go_back()
             await page.wait_for_load_state("networkidle")
-            return nomi_puliti
+            return [n.strip() for n in nomi if n.strip()]
     except:
         pass
     return None
@@ -110,6 +105,7 @@ async def run_bot():
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
+                # Corretto l'indentazione qui sotto
                 while await page.locator("#btn-loadMore").is_visible():
                     print("    Caricamento altri risultati...", flush=True)
                     await page.click("#btn-loadMore")
@@ -130,13 +126,13 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- FIX TITOLO ---
+                        # --- TITOLO ---
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- INTEGRAZIONE ISCRITTI (Solo Giovanili) ---
+                        # --- INTEGRAZIONE ISCRITTI ---
                         if cat_id == "t_giovanili":
                             lista = await estrai_iscritti(page)
                             if lista:
@@ -185,7 +181,6 @@ async def run_bot():
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
         
-        # Salva file iscritti separato
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
             json.dump(iscritti_data, f, ensure_ascii=False, indent=4)
             print(f"--- [OK] File {ISCRITTI_FILE} salvato. ---", flush=True)
