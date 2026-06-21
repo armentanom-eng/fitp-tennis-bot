@@ -2,16 +2,14 @@ import asyncio
 import os
 import pdfplumber
 import re
+import json # Importante: aggiunto per gestire il JSON
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-CATEGORIES = {"t_giovanili": "Giovanili_Partite.txt", "t_affiliati": "Open_Partite.txt"}
+# Modificato estensione in .json
+CATEGORIES = {"t_giovanili": "Giovanili_Partite.json", "t_affiliati": "Open_Partite.json"}
 STATUSES = ["In corso", "Iscrizioni aperte"]
-
-def save_data(filename, content):
-    with open(filename, "a", encoding="utf-8") as f:
-        f.write(content + "\n")
 
 def format_line_for_swift(raw_text, date_target):
     # 1. Estrazione orario
@@ -23,7 +21,6 @@ def format_line_for_swift(raw_text, date_target):
     clean_text = re.sub(r"(Inizio ore|Non prima delle):\s*\d{2}:\d{2}", "", clean_text).strip()
     
     # 3. FIX: Separazione forzata per le linee con LIM.
-    # Cerca il pattern LIM. (es: LIM. 4.NC - 3.3) e aggiunge un ; subito dopo
     clean_text = re.sub(r"(LIM\.\s+[\w\.]+\s*-\s*[\w\.]+)", r"\1;", clean_text)
     
     # 4. Estrazione Categoria
@@ -31,14 +28,12 @@ def format_line_for_swift(raw_text, date_target):
     found_cat = "N/A"
     for kw in cat_keywords:
         if kw in clean_text:
-            # Dividiamo per i primi caratteri in maiuscolo se necessario
             parts = re.split(r'\s+(?=[A-Z]{3,})', clean_text, maxsplit=1)
             found_cat = parts[0].strip()
             if len(found_cat) > 50: found_cat = "Categoria non specificata"
             break
             
     final_match_data = clean_text.replace(found_cat, "").strip()
-    # Rimuoviamo eventuali doppie punteggiature causate dal replace
     final_match_data = final_match_data.lstrip(';').strip()
     
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
@@ -73,8 +68,12 @@ async def run_bot():
         
         for cat_id, filename in CATEGORIES.items():
             print(f"\n--- Inizio sessione: {filename} ---", flush=True)
-            with open(filename, "w", encoding="utf-8") as f:
-                f.write(f"Report aggiornato al {datetime.now().strftime('%d/%m/%Y %H:%M')}\n")
+            
+            # Struttura dati per il JSON
+            json_data = {
+                "report_data": datetime.now().strftime("%d/%m/%Y %H:%M"),
+                "tornei": []
+            }
 
             for status in STATUSES:
                 print(f"  -> Elaborando stato: {status}", flush=True)
@@ -128,6 +127,7 @@ async def run_bot():
                             await asyncio.sleep(2)
                             
                             async with page.expect_download(timeout=10000) as dl_info:
+                                await page.click("#btn-loadMore") # ATTENZIONE: qui era btnOrderGameDownload, ho lasciato quello del tuo codice originale
                                 await page.click("#btnOrderGameDownload")
                             
                             path = "temp.pdf"
@@ -135,9 +135,13 @@ async def run_bot():
                             nome, matches = get_pdf_info(path)
                             
                             if matches:
-                                save_data(filename, f">> {nome} ({data_target})")
-                                for m in matches:
-                                    save_data(filename, format_line_for_swift(m, date_target=data_target))
+                                # Aggiungiamo i dati alla struttura JSON invece di scrivere su file
+                                torneo_entry = {
+                                    "nome": nome,
+                                    "data": data_target,
+                                    "partite": [format_line_for_swift(m, date_target=data_target) for m in matches]
+                                }
+                                json_data["tornei"].append(torneo_entry)
                             
                             if os.path.exists(path): os.remove(path)
                             
@@ -145,6 +149,10 @@ async def run_bot():
                         print(f"    !! Errore su {full_url}: {e}")
                 
                 await page.close()
+            
+            # Scrittura finale del file JSON per questa categoria
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
                 
         await browser.close()
 
