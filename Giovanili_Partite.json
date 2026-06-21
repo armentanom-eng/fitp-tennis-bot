@@ -1,17 +1,6 @@
 {
-    "report_data": "21/06/2026 08:51",
+    "report_data": "21/06/2026 08:55",
     "tornei": [
-        {
-            "nome": "XXV EDIZ. DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 \"",
-            "data": "21/06/2026",
-            "partite": [
-                "21/06/2026; 11:30; Singolare Maschile Under 18; GIORDANI LEONARDO; SIMEONE SAMUELE",
-                "21/06/2026; 17:00; Singolare Maschile Under 18 DI; MASCOLO LORENZO SALVATORE; LOMBARDI ALESSIO",
-                "21/06/2026; 17:00; Singolare Maschile Under 18; ROMANO LORIS; PALAZZO MANUEL",
-                "21/06/2026; 18:30; Singolare Maschile Under 12; BUGGIANI LEONARDO; CARNEVALE GIANLUIGI",
-                "21/06/2026; 18:30; Singolare Maschile Under 12; GIAROLA ALESSANDRO; MESTRINARO EMANUELE"
-            ]
-        },
         {
             "nome": "8° TAPPA CIRCUITO DEL TIRRENO ROMAN SPORT CITY",
             "data": "21/06/2026",
@@ -21,6 +10,17 @@
                 "21/06/2026; 11:00; Singolare Maschile Under 18; GIBERTINI DAVIDE; BORREDON FRANCESCO o ARCANGELI MARCO",
                 "21/06/2026; 11:00; Singolare Maschile Under 14; FERRAO RICCARDO; SCUDERI ANDREA",
                 "21/06/2026; 11:00; Singolare Maschile Under 12; POZZI VALERIO; BLUMENTHAL LUDOVICO"
+            ]
+        },
+        {
+            "nome": "XXV EDIZ. DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 \"",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 11:30; Singolare Maschile Under 18; GIORDANI LEONARDO; SIMEONE SAMUELE",
+                "21/06/2026; 17:00; Singolare Maschile Under 18 DI; MASCOLO LORENZO SALVATORE; LOMBARDI ALESSIO",
+                "21/06/2026; 17:00; Singolare Maschile Under 18; ROMANO LORIS; PALAZZO MANUEL",
+                "21/06/2026; 18:30; Singolare Maschile Under 12; BUGGIANI LEONARDO; CARNEVALE GIANLUIGI",
+                "21/06/2026; 18:30; Singolare Maschile Under 12; GIAROLA ALESSANDRO; MESTRINARO EMANUELE"
             ]
         },
         {

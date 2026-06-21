@@ -1,4 +1,107 @@
 {
-    "report_data": "21/06/2026 08:52",
-    "tornei": []
+    "report_data": "21/06/2026 08:56",
+    "tornei": [
+        {
+            "nome": "TORNEO 3°/4° CAT. GIUGNO",
+            "data": "22/06/2026",
+            "partite": [
+                "22/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CELIO ANDREA; BARTOLANI DAVIDE",
+                "22/06/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; ZACCHINO MATTEO; CROCITTO ALESSANDRO",
+                "22/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; RE RICCARDO; CARAMANICA MARCO"
+            ]
+        },
+        {
+            "nome": "CIRCOLO MAGISTRATI CORTE DEI CONTI - CIRCUITO \"I SERALI DI ROMA\" - IV TAPPA - IV e III CAT. Singoli e Doppi - VIA DEL FORO ITALICO, 430,",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PRODON GIACOMO; MARINUCCI ERNESTO",
+                "21/06/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PECCI LORENZO; ZUANEL SIMONE",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MAIOLINI GIUSEPPE o PICCOLI EDOARDO; FAZIOLI PIETRO",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CASTRIGNANO' FRANCESCO; GIORDANO NICCOLO'",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CASTIGLIONE LORENZO; FORNARA GIANLUCA (G)",
+                "21/06/2026; 19:00; Singolare Femminile Open; LIM. 4.NC - 3.1; CRETAIO NIKOLE; PALMA ROSITA",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; BONA EUGENIO; CAPECE GIANCARLO",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CATELLI MATTEO; VOLPIN ANTONIO (G)",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CELLITTI CARLO; LIUNI MARCO",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CAPORRO DANIELE; ANTONIOZZI LEONE",
+                "21/06/2026; 20:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MANDIC VLADIMIR; SALVATORI ALESSANDRO",
+                "21/06/2026; 20:00; Singolare Maschile Open; LIM. 4.NC - 3.1; ZANACCHI LUCA; PULETTI GIACOMO",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; SALVATI VALERIO; STEGHER MARCO",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; NASO ALESSANDRO; RACO ANDREA",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; BIANCHI VALERIO; DE SANTIS GIULIO",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; EUSEBIO MAURO; LAZZARELLI GABRIELE",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; LEPORE NICOLA; GIANGIACOMO VINCENZO",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; GIACALONE ANTONINO; MANGIALETTO ALFREDO",
+                "21/06/2026; 21:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CASTELLI FRANCESCO PAOLO ROSARIO (G); LUPO NICOLA (G)",
+                "21/06/2026; 21:30; Singolare Maschile Open; LIM. 4.NC - 3.1; MALPEDE CARLO GUIDO; DI LORENZO FRANCESCO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; METTIMANO ALESSANDRO; FIORENZI GIORGIO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PALERMO ANTONIO; UMMARINO TIZIANO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; BAGGIANI MATTEO; TRANI LORENZO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; DI GIOACCHINO STEFANO; VERACHI GIANMARCO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARCHETTI PARMA FILIPPO FABIO; IAFRATE FRANCO",
+                "21/06/2026; 22:00; Singolare Maschile Open; LIM. 4.NC - 3.1; COLABELLA VITTORIO; MATARAZZO ANDREA",
+                "21/06/2026; 22:30; Singolare Maschile Open; LIM. 4.NC - 3.1; CAPODANNO PAOLO; LAURENTI ALESSANDRO",
+                "21/06/2026; 22:30; Singolare Maschile Open; LIM. 4.NC - 3.1; BUSETTI FABIO; TELARICO GIORGIO"
+            ]
+        },
+        {
+            "nome": "FIORANELLO OPEN SUMMER CUP SINGOLI E DOPPI",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 10:00; Singolare Maschile Open; GENTILINI CRISTIAN; CASTRICHELLA SIMONE",
+                "21/06/2026; 11:30; Singolare Maschile Open; CAROCCI LORENZO; ARMATI RICCARDO (G)",
+                "21/06/2026; 15:00; Singolare Maschile Open; CIPRIANI ALFREDO; GRANITO FLAVIO"
+            ]
+        },
+        {
+            "nome": "CENTRO SPORT MIRTENSE limitato 3.1 M/F doppio M",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARUCCI SIMONE; BARTIROMO MARIO"
+            ]
+        },
+        {
+            "nome": "6^ TAPPA ATP LAZIO TOUR 2026 - Singolare M/F lim. 3.1",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARCHETTI PARMA FILIPPO FABIO; TESTA VITTORIO",
+                "21/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PILERI GABRIELE; IACCARINO FRANCESCO",
+                "21/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; AGOSTINI GIOVANNI; SANTARPIA ALESSANDRO",
+                "21/06/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; BELLINI CLAUDIO; VELLA SAVERIO",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; SCARAPECCHIA VALERIO; SCARFÒ ANTONIO",
+                "21/06/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MORANDI EMILIANO; PIANA ANDREA",
+                "21/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; LASTELLA VIRGILIO; PIZZOLI ANDREA"
+            ]
+        },
+        {
+            "nome": "OPEN OASI DEL TENNIS",
+            "data": "22/06/2026",
+            "partite": [
+                "22/06/2026; 10:00; Singolare Maschile Open; SANTODONATO GIORDANO; SOLLI FEDERICO",
+                "22/06/2026; 16:30; Singolare Maschile Open; QUERQUI CARLO; MASI MANUEL",
+                "22/06/2026; 18:00; Singolare Maschile Open; ANSELMI PARIDE; NARDUCCI ALESSANDRO MARIA",
+                "22/06/2026; 18:00; Singolare Maschile Open; SOLLI LUCA; MARIANI TOMMASO",
+                "22/06/2026; 19:30; Singolare Maschile Open; CROCIANI LUCA; MASI ALESSANDRO"
+            ]
+        },
+        {
+            "nome": "TRE PUNTO CINQUE €350 \"OASI DI PACE\" (LIMITATO 3.5) SM/F DM/F/MISTO",
+            "data": "21/06/2026",
+            "partite": [
+                "21/06/2026; 12:30; Singolare Femminile Open; LIM. 4.NC - 3.5; ENACHE ANCA (G); DI PIERRO ELIANA",
+                "21/06/2026; 14:00; Singolare Maschile Open; LIM. 4.NC - 3.5; DEL CASTELLO FABIO; CERQUAGLIA MICHELE",
+                "21/06/2026; 14:00; Singolare Maschile Open; LIM. 4.NC - 3.5; Q; CALAMINICI PAOLO",
+                "21/06/2026; 14:00; Singolare Femminile Open; LIM. 4.NC - 3.5; MAZZUCCHI MARINA; PARAGONA MARTA o RUETTA CHIARA",
+                "21/06/2026; 15:30; Singolare Maschile Open; LIM. 4.NC - 3.5; Q; LOFFREDO GIAMPAOLO",
+                "21/06/2026; 15:30; Singolare Maschile Open; LIM. 4.NC - 3.5; Q; DIGIESI GIUSEPPE",
+                "21/06/2026; 15:30; Singolare Maschile Open; LIM. 4.NC - 3.5; Q; ZIANNA CARLO",
+                "21/06/2026; 15:30; Singolare Maschile Open; LIM. 4.NC - 3.5; GENTILINI CRISTIAN; MARIANI MARCO",
+                "21/06/2026; 15:30; Singolare Maschile Open; LIM. 4.NC - 3.5; PICCIONI GABRIELE; TERZINO ALESSIO",
+                "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; VENERANDO VALERIO; MASINI MARCO",
+                "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; LUPO NICOLA (G); ROSSI GABRIELE",
+                "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; LATROFA DANIELE; INCAGNOLA STEFANO",
+                "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; MORRONI GABRIELE; IANNOTTI MATTEO"
+            ]
+        }
+    ]
 }
