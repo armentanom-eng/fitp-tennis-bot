@@ -53,25 +53,17 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def estrai_iscritti(page):
-    # Cerca il link della categoria (Under 14 o 16 in base all'anno)
-    target_age = "16" if datetime.now().year >= 2027 else "14"
-    pattern = rf"Singolare\s+Femminile\s+(Under|U)\s*{target_age}"
-    
+    """Estrae i nomi dalla pagina dei partecipanti usando il selettore .cc-name."""
     try:
-        link_cat = page.get_by_role("link", name=re.compile(pattern, re.IGNORECASE))
-        if await link_cat.count() > 0:
-            await link_cat.first.click()
-            await page.wait_for_load_state("networkidle")
-            
-            # Utilizzo del selettore corretto .cc-name visto nell'inspector
-            nomi = await page.locator(".cc-name").all_text_contents()
-            
-            await page.go_back()
-            await page.wait_for_load_state("networkidle")
-            return [n.strip() for n in nomi if n.strip()]
-    except:
-        pass
-    return None
+        # Attendiamo che gli elementi siano caricati
+        await page.wait_for_selector(".cc-name", timeout=5000)
+        nomi = await page.locator(".cc-name").all_text_contents()
+        # Pulizia base: rimuove spazi vuoti e righe inutili
+        nomi_puliti = [n.strip() for n in nomi if n.strip()]
+        return list(set(nomi_puliti)) # Rimuove duplicati
+    except Exception as e:
+        print(f"    ! Errore estrazione iscritti: {e}", flush=True)
+        return None
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
@@ -91,6 +83,7 @@ async def run_bot():
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
+                # Setup filtri
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
@@ -102,10 +95,12 @@ async def run_bot():
                 await page.fill("#dpk_start_date", start_date_filter)
                 await page.keyboard.press("Enter") 
                 await asyncio.sleep(2)
+                
+                # Seleziona categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
-                # Corretto l'indentazione qui sotto
+                # Carica tutto
                 while await page.locator("#btn-loadMore").is_visible():
                     print("    Caricamento altri risultati...", flush=True)
                     await page.click("#btn-loadMore")
@@ -132,8 +127,10 @@ async def run_bot():
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- INTEGRAZIONE ISCRITTI ---
+                        # --- ESTRAZIONE ISCRITTI ---
                         if cat_id == "t_giovanili":
+                            # Se siamo sulla pagina del torneo, cerchiamo il tab o link iscritti
+                            # Assumiamo che la pagina contenga già i nomi o un link per arrivarci
                             lista = await estrai_iscritti(page)
                             if lista:
                                 iscritti_data["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": lista})
@@ -177,6 +174,7 @@ async def run_bot():
                         print(f"    !! Errore su {full_url}: {e}", flush=True)
                 await page.close()
             
+            # Salvataggio dati
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
