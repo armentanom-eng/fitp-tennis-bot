@@ -12,8 +12,9 @@ CATEGORIES = {
     "t_giovanili": "Giovanili_Partite.json", 
     "t_affiliati": "Open_Partite.json"
 }
-ISCRITTI_FILE = "Iscritti_Giovanili.json"
 STATUSES = ["In corso", "Iscrizioni aperte"]
+# File dove salveremo gli iscritti
+ISCRITTI_FILE = "Iscritti_Giovanili.json"
 
 def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(Inizio ore|Non prima delle):\s*(\d{2}:\d{2})", raw_text)
@@ -52,22 +53,27 @@ def get_pdf_info(pdf_path):
         print(f"    ! Errore lettura PDF: {e}", flush=True)
     return matches
 
-async def estrai_iscritti(page):
-    """Estrae i nomi dalla pagina dei partecipanti usando il selettore .cc-name."""
+# --- FUNZIONE AGGIUNTA ---
+async def estrai_iscritti(page, categoria_keyword="Under 14"):
     try:
-        # Attendiamo che gli elementi siano caricati
-        await page.wait_for_selector(".cc-name", timeout=5000)
-        nomi = await page.locator(".cc-name").all_text_contents()
-        # Pulizia base: rimuove spazi vuoti e righe inutili
-        nomi_puliti = [n.strip() for n in nomi if n.strip()]
-        return list(set(nomi_puliti)) # Rimuove duplicati
+        # Cerca il link che contiene la keyword (es. "Under 14") anche se c'è altro testo
+        target_card = page.get_by_role("link", name=re.compile(categoria_keyword, re.IGNORECASE))
+        if await target_card.count() > 0:
+            await target_card.first.click()
+            await page.wait_for_load_state("networkidle")
+            # Leggiamo i nomi dalla classe .cc-name trovata nello screenshot
+            nomi = await page.locator(".cc-name").all_text_contents()
+            lista_pulita = [n.strip() for n in nomi if n.strip()]
+            await page.go_back()
+            await page.wait_for_load_state("networkidle")
+            return list(set(lista_pulita))
     except Exception as e:
         print(f"    ! Errore estrazione iscritti: {e}", flush=True)
-        return None
+    return None
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
-    iscritti_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
+    iscritti_report = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
@@ -83,7 +89,6 @@ async def run_bot():
                 page = await context.new_page()
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # Setup filtri
                 await page.click('button[data-id="select_status"]')
                 await asyncio.sleep(1)
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
@@ -95,12 +100,9 @@ async def run_bot():
                 await page.fill("#dpk_start_date", start_date_filter)
                 await page.keyboard.press("Enter") 
                 await asyncio.sleep(2)
-                
-                # Seleziona categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
-                # Carica tutto
                 while await page.locator("#btn-loadMore").is_visible():
                     print("    Caricamento altri risultati...", flush=True)
                     await page.click("#btn-loadMore")
@@ -121,19 +123,17 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- TITOLO ---
+                        # --- FIX TITOLO ---
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- ESTRAZIONE ISCRITTI ---
+                        # --- NUOVA INTEGRAZIONE ---
                         if cat_id == "t_giovanili":
-                            # Se siamo sulla pagina del torneo, cerchiamo il tab o link iscritti
-                            # Assumiamo che la pagina contenga già i nomi o un link per arrivarci
-                            lista = await estrai_iscritti(page)
-                            if lista:
-                                iscritti_data["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": lista})
+                            iscritti = await estrai_iscritti(page, "Under 14")
+                            if iscritti:
+                                iscritti_report["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": iscritti})
                         
                         print(f"    -> Analizzo: {torneo_entry['nome']}", flush=True)
 
@@ -174,14 +174,13 @@ async def run_bot():
                         print(f"    !! Errore su {full_url}: {e}", flush=True)
                 await page.close()
             
-            # Salvataggio dati
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
         
+        # Salvataggio iscritti
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
-            json.dump(iscritti_data, f, ensure_ascii=False, indent=4)
-            print(f"--- [OK] File {ISCRITTI_FILE} salvato. ---", flush=True)
+            json.dump(iscritti_report, f, ensure_ascii=False, indent=4)
             
         await browser.close()
         print(f"--- Bot completato ---", flush=True)
