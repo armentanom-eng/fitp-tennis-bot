@@ -13,7 +13,6 @@ CATEGORIES = {
     "t_affiliati": "Open_Partite.json"
 }
 STATUSES = ["In corso", "Iscrizioni aperte"]
-# File dove salveremo gli iscritti
 ISCRITTI_FILE = "Iscritti_Giovanili.json"
 
 def format_line_for_swift(raw_text, date_target):
@@ -53,22 +52,16 @@ def get_pdf_info(pdf_path):
         print(f"    ! Errore lettura PDF: {e}", flush=True)
     return matches
 
-# --- FUNZIONE AGGIUNTA ---
-async def estrai_iscritti(page, categoria_keyword="Under 14"):
+# --- FUNZIONE CORRETTA ---
+async def estrai_iscritti(page):
     try:
-        # Cerca il link che contiene la keyword (es. "Under 14") anche se c'è altro testo
-        target_card = page.get_by_role("link", name=re.compile(categoria_keyword, re.IGNORECASE))
-        if await target_card.count() > 0:
-            await target_card.first.click()
-            await page.wait_for_load_state("networkidle")
-            # Leggiamo i nomi dalla classe .cc-name trovata nello screenshot
+        # Attendiamo solo che la sezione sia presente, non clicchiamo nulla
+        if await page.locator(".cc-name").first.is_visible(timeout=3000):
             nomi = await page.locator(".cc-name").all_text_contents()
             lista_pulita = [n.strip() for n in nomi if n.strip()]
-            await page.go_back()
-            await page.wait_for_load_state("networkidle")
             return list(set(lista_pulita))
     except Exception as e:
-        print(f"    ! Errore estrazione iscritti: {e}", flush=True)
+        print(f"    ! Nessun iscritto trovato o errore: {e}", flush=True)
     return None
 
 async def run_bot():
@@ -123,15 +116,14 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- FIX TITOLO ---
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- NUOVA INTEGRAZIONE ---
+                        # --- NUOVA INTEGRAZIONE SEMPLIFICATA ---
                         if cat_id == "t_giovanili":
-                            iscritti = await estrai_iscritti(page, "Under 14")
+                            iscritti = await estrai_iscritti(page)
                             if iscritti:
                                 iscritti_report["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": iscritti})
                         
@@ -178,7 +170,6 @@ async def run_bot():
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
         
-        # Salvataggio iscritti
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
             json.dump(iscritti_report, f, ensure_ascii=False, indent=4)
             
