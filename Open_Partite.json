@@ -1,8 +1,18 @@
 {
-    "report_data": "21/06/2026 09:47",
+    "report_data": "21/06/2026 09:56",
     "tornei": [
         {
-            "nome": "Caricamento...",
+            "nome": "TORNEO SERALE \"I SERALI MC DONALD'S\" lim 3.1",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E6625F6C-33B6-4B11-9324-D71610056F1D",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "4' TORNEO \"BAJOCCHI FAST PRINT\" 3' E 4' CATEGORIA SINGOLARE M e F, DOPPIO MASCHILE E MISTO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7D9951CE-ACA0-483A-BE7B-68E40D97F869",
             "date": [
                 {
@@ -16,31 +26,56 @@
             ]
         },
         {
-            "nome": "Caricamento...",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E6625F6C-33B6-4B11-9324-D71610056F1D",
+            "nome": "OPEN OASI DEL TENNIS",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=30FE0B10-80BD-4B43-BD4B-90E943A7F8B9",
             "date": [
                 {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
+                    "data": "21/06/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "22/06/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "22/06/2026; 10:00; Singolare Maschile Open; SANTODONATO GIORDANO; SOLLI FEDERICO",
+                        "22/06/2026; 16:30; Singolare Maschile Open; QUERQUI CARLO; MASI MANUEL",
+                        "22/06/2026; 18:00; Singolare Maschile Open; ANSELMI PARIDE; NARDUCCI ALESSANDRO MARIA",
+                        "22/06/2026; 18:00; Singolare Maschile Open; SOLLI LUCA; MARIANI TOMMASO",
+                        "22/06/2026; 19:30; Singolare Maschile Open; CROCIANI LUCA; MASI ALESSANDRO"
+                    ]
                 }
             ]
         },
         {
-            "nome": "FIORANELLO OPEN SUMMER CUP SINGOLI E DOPPI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=27D5D663-8BB7-4967-9B4B-83956028856D",
+            "nome": "Open F 500",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F9326214-79EE-4618-AB79-482EBCB89253",
             "date": [
                 {
                     "data": "21/06/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "21/06/2026; 10:00; Singolare Maschile Open; GENTILINI CRISTIAN; CASTRICHELLA SIMONE",
-                        "21/06/2026; 11:30; Singolare Maschile Open; CAROCCI LORENZO; ARMATI RICCARDO (G)",
-                        "21/06/2026; 15:00; Singolare Maschile Open; CIPRIANI ALFREDO; GRANITO FLAVIO"
-                    ]
+                    "stato": "Nessuna pianificazione disponibile"
                 },
                 {
                     "data": "22/06/2026",
                     "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO 3°/4° CAT. GIUGNO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=30FAE6D8-39B8-47E4-A5FC-55DE04580041",
+            "date": [
+                {
+                    "data": "21/06/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "22/06/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "22/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CELIO ANDREA; BARTOLANI DAVIDE",
+                        "22/06/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; ZACCHINO MATTEO; CROCITTO ALESSANDRO",
+                        "22/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; RE RICCARDO; CARAMANICA MARCO"
+                    ]
                 }
             ]
         },
@@ -68,7 +103,7 @@
             ]
         },
         {
-            "nome": "CIRCOLO MAGISTRATI CORTE DEI CONTI - CIRCUITO \"I SERALI DI ROMA\" - IV TAPPA - IV e III CAT. Singoli e Doppi - VIA DEL FORO ITALICO, 430,",
+            "nome": "CIRCOLO MAGISTRATI CORTE DEI CONTI - CIRCUITO \"I SERALI DI ROMA\" - IV TAPPA - IV e III CAT. Singoli e Doppi - VIA DEL FORO ITALICO, 430, 00191 ROMA RM",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=24787DE7-4434-419C-84B7-176D87AEC426",
             "date": [
                 {
@@ -112,77 +147,6 @@
             ]
         },
         {
-            "nome": "OPEN OASI DEL TENNIS",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=30FE0B10-80BD-4B43-BD4B-90E943A7F8B9",
-            "date": [
-                {
-                    "data": "21/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "22/06/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "22/06/2026; 10:00; Singolare Maschile Open; SANTODONATO GIORDANO; SOLLI FEDERICO",
-                        "22/06/2026; 16:30; Singolare Maschile Open; QUERQUI CARLO; MASI MANUEL",
-                        "22/06/2026; 18:00; Singolare Maschile Open; ANSELMI PARIDE; NARDUCCI ALESSANDRO MARIA",
-                        "22/06/2026; 18:00; Singolare Maschile Open; SOLLI LUCA; MARIANI TOMMASO",
-                        "22/06/2026; 19:30; Singolare Maschile Open; CROCIANI LUCA; MASI ALESSANDRO"
-                    ]
-                }
-            ]
-        },
-        {
-            "nome": "CENTRO SPORT MIRTENSE limitato 3.1 M/F doppio M",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=94EA5E7B-43A5-4EB8-9CD7-ED13AE4C9460",
-            "date": [
-                {
-                    "data": "21/06/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARUCCI SIMONE; BARTIROMO MARIO"
-                    ]
-                },
-                {
-                    "data": "22/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "Caricamento...",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F9326214-79EE-4618-AB79-482EBCB89253",
-            "date": [
-                {
-                    "data": "21/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "22/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO 3°/4° CAT. GIUGNO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=30FAE6D8-39B8-47E4-A5FC-55DE04580041",
-            "date": [
-                {
-                    "data": "21/06/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "22/06/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "22/06/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CELIO ANDREA; BARTOLANI DAVIDE",
-                        "22/06/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; ZACCHINO MATTEO; CROCITTO ALESSANDRO",
-                        "22/06/2026; 20:30; Singolare Maschile Open; LIM. 4.NC - 3.1; RE RICCARDO; CARAMANICA MARCO"
-                    ]
-                }
-            ]
-        },
-        {
             "nome": "TRE PUNTO CINQUE €350 \"OASI DI PACE\" (LIMITATO 3.5) SM/F DM/F/MISTO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E0F8A45-A447-4CD7-AAFD-5EF55519E24E",
             "date": [
@@ -203,6 +167,42 @@
                         "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; LUPO NICOLA (G); ROSSI GABRIELE",
                         "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; LATROFA DANIELE; INCAGNOLA STEFANO",
                         "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.5; MORRONI GABRIELE; IANNOTTI MATTEO"
+                    ]
+                },
+                {
+                    "data": "22/06/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "FIORANELLO OPEN SUMMER CUP SINGOLI E DOPPI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=27D5D663-8BB7-4967-9B4B-83956028856D",
+            "date": [
+                {
+                    "data": "21/06/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "21/06/2026; 10:00; Singolare Maschile Open; GENTILINI CRISTIAN; CASTRICHELLA SIMONE",
+                        "21/06/2026; 11:30; Singolare Maschile Open; CAROCCI LORENZO; ARMATI RICCARDO (G)",
+                        "21/06/2026; 15:00; Singolare Maschile Open; CIPRIANI ALFREDO; GRANITO FLAVIO"
+                    ]
+                },
+                {
+                    "data": "22/06/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "CENTRO SPORT MIRTENSE limitato 3.1 M/F doppio M",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=94EA5E7B-43A5-4EB8-9CD7-ED13AE4C9460",
+            "date": [
+                {
+                    "data": "21/06/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "21/06/2026; 17:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARUCCI SIMONE; BARTIROMO MARIO"
                     ]
                 },
                 {
