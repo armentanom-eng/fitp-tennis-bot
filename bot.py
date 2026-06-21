@@ -52,20 +52,25 @@ def get_pdf_info(pdf_path):
         print(f"    ! Errore lettura PDF: {e}", flush=True)
     return matches
 
-# --- FUNZIONE CORRETTA ---
+# --- AGGIUNTA: FUNZIONE ESTRAZIONE ISCRITTI (NON TOCCA L'ALTRO CODICE) ---
 async def estrai_iscritti(page):
     try:
-        # Attendiamo solo che la sezione sia presente, non clicchiamo nulla
-        if await page.locator(".cc-name").first.is_visible(timeout=3000):
+        print("    DEBUG: Cerco la sezione iscritti...", flush=True)
+        # Cerchiamo se esiste il contenitore degli iscritti
+        if await page.locator(".cc-name").first.is_visible(timeout=5000):
             nomi = await page.locator(".cc-name").all_text_contents()
             lista_pulita = [n.strip() for n in nomi if n.strip()]
+            print(f"    DEBUG: Trovati {len(lista_pulita)} iscritti.", flush=True)
             return list(set(lista_pulita))
+        else:
+            print("    DEBUG: Nessun nome trovato (.cc-name non presente).", flush=True)
     except Exception as e:
-        print(f"    ! Nessun iscritto trovato o errore: {e}", flush=True)
+        print(f"    DEBUG: Errore estrazione: {e}", flush=True)
     return None
 
 async def run_bot():
     print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
+    # Variabile per raccogliere iscritti
     iscritti_report = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
     
     async with async_playwright() as p:
@@ -116,16 +121,17 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
+                        # --- FIX TITOLO ---
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        # --- NUOVA INTEGRAZIONE SEMPLIFICATA ---
+                        # --- NUOVA RIGA: CHIAMATA FUNZIONE (INTEGRAZIONE PULITA) ---
                         if cat_id == "t_giovanili":
-                            iscritti = await estrai_iscritti(page)
-                            if iscritti:
-                                iscritti_report["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": iscritti})
+                            lista_iscritti = await estrai_iscritti(page)
+                            if lista_iscritti:
+                                iscritti_report["tornei"].append({"torneo": torneo_entry["nome"], "iscritti": lista_iscritti})
                         
                         print(f"    -> Analizzo: {torneo_entry['nome']}", flush=True)
 
@@ -170,6 +176,7 @@ async def run_bot():
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
                 print(f"--- [OK] File {filename} salvato. ---", flush=True)
         
+        # Salvataggio iscritti
         with open(ISCRITTI_FILE, "w", encoding="utf-8") as f:
             json.dump(iscritti_report, f, ensure_ascii=False, indent=4)
             
