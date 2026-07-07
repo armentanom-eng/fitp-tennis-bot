@@ -1,83 +1,81 @@
 import asyncio
+import os
 import json
-import logging
+from datetime import datetime
 from playwright.async_api import async_playwright
 
-# Configurazione logging per tracciare il percorso
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
-logger = logging.getLogger(__name__)
+BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
 async def run_bot():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
+        context = await browser.new_context()
+        page = await context.new_page()
         
-        # 1. Accesso iniziale
-        logger.info("Navigazione su portale tornei...")
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+        print("--- Navigazione portale tornei ---")
+        await page.goto(BASE_URL, wait_until="networkidle")
         
-        # 2. Impostazione Filtri con XPATH (più robusto per bootstrap-select)
-        logger.info("Impostazione filtri: Iscrizioni Aperte e Lazio...")
-        
+        # 1. Filtri (usando la logica che funziona nel tuo codice)
         await page.click('button[data-id="select_status"]')
         await asyncio.sleep(1)
-        await page.locator("//div[contains(@class, 'dropdown-menu')]//span[contains(text(), 'Iscrizioni Aperte')]").click()
+        await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
         
         await page.click('button[data-id="id_regioneSearch"]')
         await asyncio.sleep(1)
-        await page.locator("//div[contains(@class, 'dropdown-menu')]//span[contains(text(), 'Lazio')]").click()
+        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         
         await page.keyboard.press("Enter")
         await asyncio.sleep(3)
         
-        # 3. Raccolta Tornei
-        logger.info("Ricerca tornei nel Lazio...")
-        links = await page.locator("a[href*='Dettaglio-Competizione']").all()
-        urls = list(set([await loc.get_attribute("href") for loc in links]))
-        logger.info(f"Trovati {len(urls)} tornei.")
+        # 2. Caricamento tornei
+        while await page.locator("#btn-loadMore").is_visible():
+            await page.click("#btn-loadMore")
+            await asyncio.sleep(2)
+            
+        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+        urls = list(set([await loc.get_attribute("href") for loc in locators]))
+        print(f"--- Trovati {len(urls)} tornei ---")
         
         risultati = []
-
-        # 4. Ciclo Tornei
-        for i, url in enumerate(urls, 1):
+        
+        # 3. Analisi Dettaglio
+        for url in urls:
             full_url = f"https://www.fitp.it{url}"
-            logger.info(f"[{i}/{len(urls)}] ACCESSO TORNEO: {full_url}")
+            print(f"-> Analizzo: {full_url}")
             await page.goto(full_url, wait_until="networkidle")
             
-            # Ciclo Categorie (Tab)
+            # Tab categorie
             tabs = await page.locator("a[data-toggle='tab']").all()
             for tab in tabs:
-                tab_name = await tab.text_content()
-                logger.info(f"  -> Analisi Categoria: {tab_name.strip()}")
+                cat_name = await tab.text_content()
                 await tab.click()
-                await asyncio.sleep(2) # Attesa caricamento lista giocatori
+                await asyncio.sleep(1)
                 
-                # 5. Estrazione Giocatori tramite Scheda
+                # Estrazione Giocatori
                 giocatori = await page.locator("#players a[href*='Pagina-Giocatore']").all()
-                for j, g_link in enumerate(giocatori, 1):
-                    href = await g_link.get_attribute("href")
-                    g_url = f"https://www.fitp.it{href}"
+                for g_link in giocatori:
+                    g_url = await g_link.get_attribute("href")
                     
-                    try:
-                        await page.goto(g_url, wait_until="networkidle")
-                        nome = await page.locator("span#spn-tournament-description").text_content()
-                        logger.info(f"    -> Giocatore [{j}/{len(giocatori)}]: {nome.strip()}")
-                        risultati.append({
-                            "torneo": full_url, 
-                            "categoria": tab_name.strip(), 
-                            "nome": nome.strip()
-                        })
-                        await page.go_back()
-                    except Exception as e:
-                        logger.error(f"Errore su giocatore {g_url}: {e}")
-                        await page.go_back()
+                    # Vai alla scheda giocatore
+                    await page.goto(f"https://www.fitp.it{g_url}")
+                    nome = await page.locator("span#spn-tournament-description").text_content()
                     
-        # 6. Salvataggio
-        with open("Risultati_Iscrizioni.json", "w", encoding="utf-8") as f:
+                    risultati.append({
+                        "torneo": full_url,
+                        "categoria": cat_name.strip(),
+                        "nome": nome.strip()
+                    })
+                    print(f"   + Estratto: {nome.strip()}")
+                    await page.go_back()
+                    # Ritorna alla tab corretta se necessario
+                    await page.goto(full_url)
+                    await tab.click() 
+
+        with open("Iscrizioni_Finali.json", "w", encoding="utf-8") as f:
             json.dump(risultati, f, ensure_ascii=False, indent=4)
-            
-        logger.info("Estrazione completata. File salvato: Risultati_Iscrizioni.json")
+        
         await browser.close()
+        print("--- Estrazione completata ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
