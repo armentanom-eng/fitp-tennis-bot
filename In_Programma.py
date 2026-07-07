@@ -3,17 +3,16 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [LOG] START: Avvio bot In_Programma blindato ---")
+    print("--- [LOG] START: Avvio bot In_Programma ottimizzato ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/126.0.0.0")
         page = await context.new_page()
         
-        print("--- [LOG] Navigazione pagina iniziale ---")
+        print("--- [LOG] Navigazione a Ricerca-tornei ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
         # Filtri
-        print("--- [LOG] Applicazione filtri: In programma, Lazio, Roma ---")
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
@@ -25,7 +24,6 @@ async def run_bot():
         await asyncio.sleep(5)
         
         # Caricamento lista
-        print("--- [LOG] Caricamento tornei ---")
         while await page.locator("button#btn-loadMore").is_visible():
             await page.click("button#btn-loadMore")
             await asyncio.sleep(2)
@@ -39,33 +37,27 @@ async def run_bot():
         for url in urls:
             full_url = f"https://www.fitp.it{url}"
             print(f"--- [LOG] Analisi: {full_url} ---")
-            
-            # Conteggio bottoni "Dettaglio"
             await page.goto(full_url, wait_until="domcontentloaded")
-            count = await page.locator("span:has-text('Dettaglio >')").count()
+            
+            # Seleziona data una sola volta per torneo
+            select = page.locator("select#select-ordergame")
+            if await select.is_visible():
+                await select.select_option(index=-1)
+                await asyncio.sleep(1)
+            
+            # Recuperiamo i bottoni visibili
+            btns = page.locator("span:has-text('Dettaglio >')")
+            count = await btns.count()
             
             for i in range(count):
-                # Ricarica pagina per ogni categoria per evitare "Stale Element"
-                await page.goto(full_url, wait_until="domcontentloaded")
-                
-                # Seleziona ultima data
-                select = page.locator("select#select-ordergame")
-                if await select.is_visible():
-                    await select.select_option(index=-1)
-                
-                # Clicca solo se visibile
-                btn = page.locator("span:has-text('Dettaglio >')").nth(i)
+                btn = btns.nth(i)
                 if await btn.is_visible():
                     print(f"--- [LOG] Clicco bottone {i} ---")
                     await btn.click(force=True)
-                    await asyncio.sleep(3)
+                    await asyncio.sleep(2) # Pausa ridotta per velocità
                     
                     cat_name = await page.locator("h1.cc-title-main").first.text_content()
-                    
-                    # Estrazione nomi (punta alla classe specifica dei nomi nel widget)
                     nomi = await page.locator(".cc-content-value .cc-title").all_text_contents()
-                    
-                    # PDF
                     pdf_btn = page.locator("a#btnOrderGameDownload")
                     link_pdf = await pdf_btn.get_attribute("href") if await pdf_btn.count() > 0 else None
                     
@@ -78,10 +70,10 @@ async def run_bot():
                     else:
                         dati_iscritti_open["tornei"].append(entry_isc)
                         dati_partite_open["tornei"].append(entry_part)
-                else:
-                    print(f"--- [LOG] Bottone {i} non visibile, salto ---")
+                    
+                    await page.go_back(wait_until="domcontentloaded")
+                    await asyncio.sleep(1)
         
-        # Salvataggio
         print("--- [LOG] Salvataggio JSON ---")
         with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_iscritti_giov, f, ensure_ascii=False, indent=4)
@@ -93,7 +85,7 @@ async def run_bot():
             json.dump(dati_partite_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [LOG] FINE: Processo concluso ---")
+        print("--- [LOG] FINE: Processo concluso con successo ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
