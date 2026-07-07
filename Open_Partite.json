@@ -1,23 +1,22 @@
 {
-    "report_data": "07/07/2026 07:41",
+    "report_data": "07/07/2026 08:49",
     "tornei": [
+        {
+            "nome": "4' TORNEO \"POSTI PAOLO INGROSSO ORTOFRUTTICOLO\" 3' E 4' CATEGORIA SINGOLARE M e F, DOPPIO MASCHILE E MISTO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CA1080F1-4459-44C6-8AD5-7F0DC11DBBDC",
+            "iscritti": {},
+            "date": []
+        },
         {
             "nome": "TORNEO SING. M/F LIM. III CAT.",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4A32ECBF-8EF1-4F8A-8B72-25F84D97CCF9",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
+            "iscritti": {},
+            "date": []
         },
         {
             "nome": "TORNEO SERALE \"I SERALI MCDONALD'S\" - GARDEN VILLAGE",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=46DE6156-4C1A-405A-ADE1-487330D1FA04",
+            "iscritti": {},
             "date": [
                 {
                     "data": "07/07/2026",
@@ -32,86 +31,37 @@
                         "07/07/2026; 21:00; Singolare Maschile Open; LIM. 4.NC - 3.1; NERI GIANLUCA; DI NILLO FRANCESCO o NUZZI MATTEO o CAPRITA MARCO",
                         "07/07/2026; 21:00; Singolare Femminile Open; LIM. 4.NC - 3.1; MAGGIORE MARGHERITA; FURNO ERMELINDA"
                     ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "4' TORNEO \"POSTI PAOLO INGROSSO ORTOFRUTTICOLO\" 3' E 4' CATEGORIA SINGOLARE M e F, DOPPIO MASCHILE E MISTO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CA1080F1-4459-44C6-8AD5-7F0DC11DBBDC",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
                 }
             ]
         },
         {
             "nome": "1° TORNEO MEMORIOL TIZZONE GIUSEPPE",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "Zeppieri TT \" 15°Memorial Fernando Zeppieri\" € 1000",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C7B7AE3B-57FB-46FF-B53E-482FCDCC2F11",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
+            "iscritti": {},
+            "date": []
         },
         {
             "nome": "2° Memorial Franco Giordanella - Torneo IV categoria",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=82FCF1E1-6978-45FF-BB08-C34901A40560",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
+            "iscritti": {},
+            "date": []
+        },
+        {
+            "nome": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
+            "iscritti": {},
+            "date": []
+        },
+        {
+            "nome": "Zeppieri TT \" 15°Memorial Fernando Zeppieri\" € 1000",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C7B7AE3B-57FB-46FF-B53E-482FCDCC2F11",
+            "iscritti": {},
+            "date": []
         },
         {
             "nome": "3 TAPPA OPEN DECATHLON TENNIS CUP",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
+            "iscritti": {},
             "date": [
                 {
                     "data": "07/07/2026",
@@ -127,30 +77,13 @@
                         "07/07/2026; 18:30; Singolare Maschile Open; FABBRI ALESSANDRO; DI FEDERICO MATTIA o BERTELLI FEDERICO",
                         "07/07/2026; 18:30; Singolare Maschile Open; QUARTICELLI SIMONE; BARBARO ANTONINO"
                     ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
                 }
             ]
         },
         {
             "nome": "BT Pay - Torneo Serale - by Sporfie",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "iscritti": {},
             "date": [
                 {
                     "data": "07/07/2026",
@@ -159,10 +92,27 @@
                         "07/07/2026; 17:30; Singolare Maschile Open; JACOPO ROCCHI; SIMONE GUIDI",
                         "07/07/2026; 17:30; Singolare Maschile Open; MATTIA D'ANNIBALE; FABRIZIO FABRIZI"
                     ]
-                },
+                }
+            ]
+        },
+        {
+            "nome": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "iscritti": {},
+            "date": [
                 {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 14:30; Singolare Maschile Open; LIM. 4.NC - 3.1; ODDI; FABRIZI",
+                        "07/07/2026; 14:30; Singolare Maschile Open; LIM. 4.NC - 3.1; D'ATTINO; ROSATI",
+                        "07/07/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; CRISTOFANELLI; BELLOCCO",
+                        "07/07/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PIETRINI; VALLARENGHI",
+                        "07/07/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; FORATTINI; SALERNO",
+                        "07/07/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; CALI'; BALDASSARRE / MARINUCCI",
+                        "07/07/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MANFREDINI / CATANZANI; GALLI MANCIOCCHI",
+                        "07/07/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MARTINI; MELIS"
+                    ]
                 }
             ]
         }
