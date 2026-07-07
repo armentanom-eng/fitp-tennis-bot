@@ -20,7 +20,23 @@ async def run_bot():
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
-        urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
+        # --- CICLO CARICA ALTRI ---
+        print("--- Caricamento totale lista tornei ---")
+        while True:
+            btn_load_more = page.locator("button#btn-loadMore")
+            if await btn_load_more.is_visible():
+                print("    -> Trovato 'Carica altri', clicco...")
+                await btn_load_more.click()
+                await page.wait_for_load_state("networkidle")
+                await asyncio.sleep(2)
+            else:
+                print("    -> Lista completa caricata.")
+                break
+        
+        # Estrazione URL tornei dopo il caricamento completo
+        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+        urls = list(set([await loc.get_attribute("href") for loc in locators]))
+        print(f"--- Trovati {len(urls)} tornei totali. ---")
         
         dati_giovanili = {"tornei": []}
         dati_open = {"tornei": []}
@@ -34,10 +50,9 @@ async def run_bot():
             except:
                 pass
             
-            # Trova bottoni
+            # Trova bottoni Dettaglio
             dettagli = page.locator("text=Dettaglio >")
             count = await dettagli.count()
-            print(f"    -> Trovati {count} blocchi categoria nel torneo {url.split('Id=')[-1]}.")
             
             for i in range(count):
                 btn = page.locator("text=Dettaglio >").nth(i)
