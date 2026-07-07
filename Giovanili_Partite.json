@@ -1,26 +1,6 @@
 {
-    "report_data": "07/07/2026 15:27",
+    "report_data": "07/07/2026 15:39",
     "tornei": [
-        {
-            "nome": "AD CONSULTING JUNIOR TOUR - Torneo giovanile, Singolare M/F U12 - U14 - U18",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A7CB435F-FA1C-440E-BC28-572B67DEF837",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "07/07/2026; 10:00; Categoria non specificata; Singolare Femminile Under 14 Singolare Femminile Under 14 EMMA OLLIANA; SOFIA MANNALA'",
-                        "07/07/2026; 11:00; Categoria non specificata; Singolare Maschile Under 14 Singolare Maschile Under 14 GASPARE LONGO vs",
-                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 18 Singolare Maschile Under 18 JEREMY FERRETTI; PIER LORENZO VIOTTI",
-                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 12 Singolare Maschile Under 12 LUCA DEL GIUDICE vs"
-                    ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
         {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
@@ -36,40 +16,20 @@
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
             "date": [
                 {
                     "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                }
-            ]
-        },
-        {
-            "nome": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5721FD91-EB09-4165-BB4B-2EBF3482E252",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 00:00; Inizio ore 13:00 Doppio femminile under 13; GIACCHETTI NICOLE ROSSANO NICOLE; ONORI FRANCESCA RICCIO GIUSEPPINA",
+                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 13; PIETROPOLI FEDERICO VINCENZO; DI IORIO ALESSANDRO",
+                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 11; CORRERA GABRIELE; BOSCAINO SIMONE",
+                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 11; LANDI ANTONIO; DI BARTOLOMEO VINCENZO",
+                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 13; MAFFEI ACHILLE; BENNARDO FRANCESCO",
+                        "07/07/2026; 00:00; Inizio ore 18:30 Singolare femminile under 13; ONORI FRANCESCA; CENTRELLA LEONDINA"
+                    ]
                 },
                 {
                     "data": "08/07/2026",
@@ -102,6 +62,92 @@
             ]
         },
         {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SIBARI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Partite non trovate"
+                }
+            ]
+        },
+        {
+            "nome": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5721FD91-EB09-4165-BB4B-2EBF3482E252",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "AD CONSULTING JUNIOR TOUR - Torneo giovanile, Singolare M/F U12 - U14 - U18",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A7CB435F-FA1C-440E-BC28-572B67DEF837",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 10:00; Categoria non specificata; Singolare Femminile Under 14 Singolare Femminile Under 14 EMMA OLLIANA; SOFIA MANNALA'",
+                        "07/07/2026; 11:00; Categoria non specificata; Singolare Maschile Under 14 Singolare Maschile Under 14 GASPARE LONGO vs",
+                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 18 Singolare Maschile Under 18 JEREMY FERRETTI; PIER LORENZO VIOTTI",
+                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 12 Singolare Maschile Under 12 LUCA DEL GIUDICE vs"
+                    ]
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Partite non trovate"
+                }
+            ]
+        },
+        {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP BRALLO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=68EA1EB3-642A-4C6F-871F-8BB417B69F34",
             "date": [
@@ -128,52 +174,6 @@
                 {
                     "data": "08/07/2026",
                     "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "07/07/2026; 00:00; Inizio ore 13:00 Doppio femminile under 13; GIACCHETTI NICOLE ROSSANO NICOLE; ONORI FRANCESCA RICCIO GIUSEPPINA",
-                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 13; PIETROPOLI FEDERICO VINCENZO; DI IORIO ALESSANDRO",
-                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 11; CORRERA GABRIELE; BOSCAINO SIMONE",
-                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 11; LANDI ANTONIO; DI BARTOLOMEO VINCENZO",
-                        "07/07/2026; 00:00; Inizio ore 13:00 Singolare maschile under 13; MAFFEI ACHILLE; BENNARDO FRANCESCO",
-                        "07/07/2026; 00:00; Inizio ore 18:30 Singolare femminile under 13; ONORI FRANCESCA; CENTRELLA LEONDINA"
-                    ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SIBARI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
                 }
             ]
         }
