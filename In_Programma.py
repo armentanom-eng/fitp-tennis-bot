@@ -1,34 +1,16 @@
 import asyncio
-import os
-import pdfplumber
-import re
 import json
 from playwright.async_api import async_playwright
 
-def get_pdf_info(pdf_path):
-    matches = []
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for page in pdf.pages:
-                table = page.extract_table()
-                if table:
-                    for row in table:
-                        for cell in row:
-                            if cell and ("Inizio ore" in cell or "Non prima delle" in cell):
-                                matches.append(cell.replace("\n", " ").strip())
-    except: pass
-    return matches
-
 async def run_bot():
-    print("--- [START] Avvio Bot Debug Unificato ---")
+    print("--- [START] Avvio bot completo (4 file) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(accept_downloads=True)
+        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
         page = await context.new_page()
         
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
-        
-        # Filtri
+        # Navigazione e Filtri (Lazio, Roma, In Programma)
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
@@ -41,64 +23,66 @@ async def run_bot():
         
         while await page.locator("button#btn-loadMore").is_visible():
             await page.click("button#btn-loadMore")
+            await page.wait_for_load_state("networkidle")
             await asyncio.sleep(2)
-            
+        
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
         
-        results = {"giovanili": {"iscritti": [], "partite": []}, "open": {"iscritti": [], "partite": []}}
+        # Strutture dati separate
+        dati_iscritti_giov = {"tornei": []}
+        dati_iscritti_open = {"tornei": []}
+        dati_partite_giov = {"tornei": []}
+        dati_partite_open = {"tornei": []}
         
         for url in urls:
-            full_url = f"https://www.fitp.it{url}"
-            await page.goto(full_url, wait_until="domcontentloaded")
+            await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
             
-            # Recuperiamo i link di dettaglio
-            links = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            # Seleziona ultima data
+            select = page.locator("select#select-ordergame")
+            if await select.is_visible():
+                await select.select_option(index=-1)
+                await page.wait_for_load_state("networkidle")
             
-            for link in links:
+            dettagli_btn = page.locator("span:has-text('Dettaglio >')")
+            for i in range(await dettagli_btn.count()):
                 try:
-                    await link.click()
-                    await page.wait_for_load_state("domcontentloaded")
-                    await asyncio.sleep(2) # Pausa necessaria per il rendering
+                    btn = page.locator("span:has-text('Dettaglio >')").nth(i)
+                    await btn.click(force=True)
+                    await page.wait_for_load_state("networkidle")
                     
-                    cat = await page.locator("h1.cc-title-main").first.text_content()
-                    cat = cat.strip() if cat else "Senza Categoria"
+                    categoria = await page.locator("h1.cc-title-main").first.text_content()
                     
-                    # LOG DI DEBUG: Controlliamo cosa vede il bot
-                    gioc_locator = page.locator("a[href*='Pagina-Giocatore']")
-                    count_gioc = await gioc_locator.count()
-                    print(f"DEBUG: Categoria {cat} | Iscritti trovati: {count_gioc}")
+                    # Estrazione Iscritti (Nomi a video)
+                    nomi = await page.locator("div.cc-single-tournament span.cc-title").all_text_contents()
+                    # Estrazione link Partite (PDF)
+                    link_pdf = await page.locator("a#btnOrderGameDownload").get_attribute("href")
                     
-                    gioc = [await el.text_content() for el in await gioc_locator.all()]
+                    entry_isc = {"torneo": url, "categoria": categoria.strip(), "iscritti": [n.strip() for n in nomi if n.strip()]}
+                    entry_part = {"torneo": url, "categoria": categoria.strip(), "partita_pdf": link_pdf}
                     
-                    is_g = any(x in cat for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"])
-                    key = "giovanili" if is_g else "open"
-                    
-                    results[key]["iscritti"].append({"cat": cat, "iscritti": [g.strip() for g in gioc]})
-                    
-                    # PDF
-                    if await page.locator("#btnOrderGameDownload").is_visible(timeout=3000):
-                        async with page.expect_download() as dl_info:
-                            await page.click("#btnOrderGameDownload")
-                        path = "temp.pdf"
-                        await (await dl_info.value).save_as(path)
-                        matches = get_pdf_info(path)
-                        results[key]["partite"].append({"cat": cat, "partite": matches})
-                        if os.path.exists(path): os.remove(path)
+                    if any(x in categoria for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"]):
+                        dati_iscritti_giov["tornei"].append(entry_isc)
+                        dati_partite_giov["tornei"].append(entry_part)
+                    else:
+                        dati_iscritti_open["tornei"].append(entry_isc)
+                        dati_partite_open["tornei"].append(entry_part)
                     
                     await page.go_back()
-                    await page.wait_for_load_state("domcontentloaded")
-                    
-                except Exception as e:
-                    print(f"    ! Errore categoria: {e}")
-                    await page.goto(full_url)
+                    await page.wait_for_load_state("networkidle")
+                except:
+                    await page.goto(f"https://www.fitp.it{url}")
         
-        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["giovanili"]["iscritti"], f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["open"]["iscritti"], f, ensure_ascii=False, indent=4)
-        with open("Partite_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["giovanili"]["partite"], f, ensure_ascii=False, indent=4)
-        with open("Partite_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["open"]["partite"], f, ensure_ascii=False, indent=4)
+        # SALVATAGGIO 4 FILE DISTINTI
+        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_iscritti_giov, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_iscritti_open, f, ensure_ascii=False, indent=4)
+        with open("Partite_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_partite_giov, f, ensure_ascii=False, indent=4)
+        with open("Partite_Open_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_partite_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [END] Processo completato. ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
