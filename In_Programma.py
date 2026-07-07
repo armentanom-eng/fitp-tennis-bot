@@ -3,8 +3,9 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio del bot ---")
+    print("--- [START] Avvio del bot In_Programma ---")
     async with async_playwright() as p:
+        # Avvio browser
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
         page = await context.new_page()
@@ -12,7 +13,7 @@ async def run_bot():
         print("--- Navigazione portale ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # Filtri: Impostato su "In programma"
+        # Filtri: Impostato su "In programma" e "Lazio"
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         
@@ -46,6 +47,7 @@ async def run_bot():
         for url in urls:
             await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
             
+            # Gestione cookie
             try:
                 await page.get_by_role("button", name="Accetta").click(timeout=3000)
             except:
@@ -62,12 +64,11 @@ async def run_bot():
                     await page.wait_for_load_state("networkidle")
                     
                     categoria = await page.locator("h1.cc-title-main").first.text_content()
-                    # Nota: In pagina partite, il selettore dei giocatori potrebbe cambiare.
-                    # Se non trovi nulla, verifica il selettore CSS dei nomi nelle tabelle partite.
                     giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
                     
                     entry = {"torneo": url, "categoria": categoria.strip(), "dati": [g.strip() for g in giocatori]}
                     
+                    # Logica di separazione
                     if any(x in categoria for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"]):
                         dati_giovanili["tornei"].append(entry)
                     else:
@@ -79,10 +80,10 @@ async def run_bot():
                     print(f"    ! Errore su categoria {i}: {e}")
                     await page.goto(f"https://www.fitp.it{url}")
         
-        # Salvataggio
-        with open("Partite_Giovanili.json", "w", encoding="utf-8") as f:
+        # Salvataggio su file specifici
+        with open("Partite_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Partite_Open.json", "w", encoding="utf-8") as f:
+        with open("Partite_Open_In_Programa.json", "w", encoding="utf-8") as f:
             json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
