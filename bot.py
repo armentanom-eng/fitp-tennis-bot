@@ -12,7 +12,7 @@ CATEGORIES = {"t_giovanili": "Giovanili_Partite.json", "t_affiliati": "Open_Part
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
 def get_target_category():
-    # Ritorna la categoria corretta in base alla data
+    # Dal 01/01/2027 passa da Under 14 a Under 16
     if datetime.now() >= datetime(2027, 1, 1):
         return "Under 16"
     return "Under 14"
@@ -75,7 +75,7 @@ async def run_bot():
                 await page.keyboard.press("Enter")
                 await asyncio.sleep(5)
                 
-                # Caricamento infinito (Carica altri)
+                # Caricamento infinito
                 while await page.locator("button#btn-loadMore").is_visible():
                     print("    -> Caricamento altri tornei...")
                     await page.click("button#btn-loadMore")
@@ -93,26 +93,30 @@ async def run_bot():
                     nome = await page.locator("h1.cc-title-main").first.text_content()
                     print(f"        * Analizzo torneo: {nome.strip()}")
                     
-                    # Estrazione Giocatori (sezione categoria)
+                    # Estrazione Categorie con protezione timeout
                     dettagli = page.locator("text=Dettaglio >")
                     count = await dettagli.count()
                     for i in range(count):
-                        btn = dettagli.nth(i)
-                        await btn.click(force=True)
-                        await page.wait_for_load_state("networkidle")
-                        
-                        cat_name = await page.locator("h1.cc-title-main").first.text_content()
-                        # Logica di switch automatica
-                        if target_cat in cat_name:
-                            print(f"            + Trovata categoria target: {cat_name.strip()}")
-                        
-                        await page.go_back()
-                        await page.wait_for_load_state("networkidle")
+                        try:
+                            btn = dettagli.nth(i)
+                            if await btn.is_visible(timeout=2000):
+                                await btn.click(force=True)
+                                await page.wait_for_load_state("networkidle")
+                                
+                                cat_name = await page.locator("h1.cc-title-main").first.text_content()
+                                if target_cat in cat_name:
+                                    print(f"            + Trovata categoria target: {cat_name.strip()}")
+                                
+                                await page.go_back()
+                                await page.wait_for_load_state("networkidle")
+                        except Exception as e:
+                            print(f"            ! Errore su bottone {i}, proseguo...")
+                            await page.goto(full_url)
                     
                     # Elaborazione PDF
                     if await page.locator("#select-ordergame").is_visible(timeout=3000):
-                        print(f"            + Elaborazione PDF in corso...")
-                        # (Qui resta la tua logica PDF esistente)
+                        print(f"            + Elaborazione PDF disponibile.")
+                        # (Logica PDF esistente...)
                     
                     json_data["tornei"].append({"nome": nome.strip(), "url": full_url})
                 await page.close()
