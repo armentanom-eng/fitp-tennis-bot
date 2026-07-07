@@ -6,71 +6,66 @@ from playwright.async_api import async_playwright
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-
 async def run_bot():
-    logger.info("--- Avvio Bot: Estrazione Iscrizioni Aperte ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
         
-        logger.info(f"Navigazione su: {BASE_URL}")
-        await page.goto(BASE_URL, wait_until="networkidle")
+        # --- 1. Navigazione e Filtri ---
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # Filtri
+        logger.info("-> Impostazione Filtri...")
+        # Apri menu Stato e seleziona "Iscrizioni Aperte"
         await page.click('button[data-id="select_status"]')
         await page.locator('span.filter-option:has-text("Iscrizioni Aperte")').click()
-        logger.info("Filtro stato: 'Iscrizioni Aperte' applicato.")
         
+        # Apri menu Regione e seleziona "Lazio"
         await page.click('button[data-id="id_regioneSearch"]')
         await page.locator('span.filter-option:has-text("Lazio")').click()
-        logger.info("Filtro regione: 'Lazio' applicato.")
         
         await page.keyboard.press("Enter")
         await asyncio.sleep(3)
         
-        # Caricamento dinamico
-        while await page.locator("#btn-loadMore").is_visible():
-            logger.info("Caricamento altri tornei...")
-            await page.click("#btn-loadMore")
-            await asyncio.sleep(2)
-            
+        # --- 2. Raccolta Tornei ---
         links = await page.locator("a[href*='Dettaglio-Competizione']").all()
         urls = list(set([await loc.get_attribute("href") for loc in links]))
+        
         logger.info(f"Trovati {len(urls)} tornei.")
-        
         risultati = []
-        for i, url_path in enumerate(urls, 1):
-            full_url = f"https://www.fitp.it{url_path}"
+
+        for i, url in enumerate(urls, 1):
+            full_url = f"https://www.fitp.it{url}"
             logger.info(f"[{i}/{len(urls)}] ACCESSO TORNEO: {full_url}")
+            await page.goto(full_url, wait_until="networkidle")
             
-            try:
-                await page.goto(full_url, wait_until="networkidle")
-                nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").first.text_content()
+            # --- 3. Ciclo Categorie ---
+            # Clicchiamo su ogni tab disponibile (es. Singolare, Doppio, etc)
+            tabs = await page.locator("a[data-toggle='tab']").all()
+            for tab in tabs:
+                tab_name = await tab.text_content()
+                await tab.click()
+                await asyncio.sleep(1) # Attesa per caricamento tabella partecipanti
                 
-                giocatori_links = await page.locator("a[href*='Pagina-Giocatore']").all()
-                lista_nomi = []
-                
-                for j, link_giocatore in enumerate(giocatori_links, 1):
-                    url_g = await link_giocatore.get_attribute("href")
-                    full_url_g = f"https://www.fitp.it{url_g}"
-                    logger.info(f"  -> [{j}/{len(giocatori_links)}] VISITA GIOCATORE: {full_url_g}")
+                # --- 4. Estrazione Giocatori ---
+                # Trova tutti i link dentro la riga dei partecipanti (id="players")
+                giocatori = await page.locator("#players a[href*='Pagina-Giocatore']").all()
+                for j, g_link in enumerate(giocatori, 1):
+                    href = await g_link.get_attribute("href")
+                    g_url = f"https://www.fitp.it{href}"
                     
-                    await page.goto(full_url_g)
+                    # Entra nella scheda giocatore
+                    await page.goto(g_url, wait_until="networkidle")
+                    # Preleva il nome dallo span indicato
                     nome = await page.locator("span#spn-tournament-description").text_content()
-                    lista_nomi.append(nome.strip())
+                    logger.info(f"    -> Giocatore [{j}]: {nome.strip()} (Link: {g_url})")
+                    risultati.append({"torneo": full_url, "categoria": tab_name, "nome": nome.strip()})
                     await page.go_back()
-                
-                risultati.append({"torneo": nome_torneo.strip(), "iscritti": lista_nomi})
-                
-            except Exception as e:
-                logger.error(f"Errore durante analisi torneo {full_url}: {e}")
-        
-        with open("Iscrizioni_Aperte_Dettaglio.json", "w", encoding="utf-8") as f:
+                    
+        with open("Risultati_Finali.json", "w", encoding="utf-8") as f:
             json.dump(risultati, f, ensure_ascii=False, indent=4)
-        
-        logger.info("--- Salvataggio completato: Iscrizioni_Aperte_Dettaglio.json ---")
+            
         await browser.close()
+        logger.info("Estrazione completata con successo.")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
