@@ -25,13 +25,13 @@ jobs:
           pip install playwright pdfplumber
           playwright install chromium
           
-      - name: Esegui Bot Partite (PDF)
-        continue-on-error: true
-        run: python bot.py
-        
-      - name: Esegui Bot Iscrizioni
-        continue-on-error: true
-        run: python bot_iscrizioni.py
+      # - name: Esegui Bot Partite (PDF)
+      #   continue-on-error: true
+      #   run: python bot.py
+      #   
+      # - name: Esegui Bot Iscrizioni
+      #   continue-on-error: true
+      #   run: python bot_iscrizioni.py
         
       - name: Esegui Bot In Programma
         continue-on-error: true
