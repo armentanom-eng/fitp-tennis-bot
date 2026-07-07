@@ -1,6 +1,44 @@
 {
-    "report_data": "07/07/2026 15:41",
+    "report_data": "07/07/2026 16:01",
     "tornei": [
+        {
+            "nome": "TORNEO SERALE \"I SERALI MCDONALD'S\" - GARDEN VILLAGE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=46DE6156-4C1A-405A-ADE1-487330D1FA04",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; ALAMPI CARLO o RASORI RICCARDO o IACOANGELI VALERIO; MESSINA MASSIMILIANO o PASTORE MARCO o RONDINELLI DAVIDE",
+                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; DE LUCA PATRICK; GIARDULLI FABIO o COLANGELI MATTEO o GREGNANIN LUCA",
+                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; STIZZA VALERIO o VARAZZI GIANCARLO o DE STEFANI CARLO; GALLO ALESSANDRO o ERDI GIANLUCA o FABIANI FEDERICO",
+                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; GRAZIANI NICOLO' o ASCENZI ANDREA o DI BIASIO UMBERTO ANGELO; CASTELLUCCI PAOLO o SERANI GIORGIO o BELLI FABIO",
+                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; GALANTE RICCARDO; PASTORE MATTEO",
+                        "07/07/2026; 19:30; Singolare Femminile Open; LIM. 4.NC - 3.1; TEDOLDI SIMONA; ISTRATE SARA MARIA",
+                        "07/07/2026; 21:00; Singolare Maschile Open; LIM. 4.NC - 3.1; NERI GIANLUCA; DI NILLO FRANCESCO o NUZZI MATTEO o CAPRITA MARCO",
+                        "07/07/2026; 21:00; Singolare Femminile Open; LIM. 4.NC - 3.1; MAGGIORE MARGHERITA; FURNO ERMELINDA"
+                    ]
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
         {
             "nome": "4' TORNEO \"POSTI PAOLO INGROSSO ORTOFRUTTICOLO\" 3' E 4' CATEGORIA SINGOLARE M e F, DOPPIO MASCHILE E MISTO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CA1080F1-4459-44C6-8AD5-7F0DC11DBBDC",
@@ -16,8 +54,8 @@
             ]
         },
         {
-            "nome": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
+            "nome": "1° TORNEO MEMORIOL TIZZONE GIUSEPPE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
             "date": [
                 {
                     "data": "07/07/2026",
@@ -58,68 +96,12 @@
             ]
         },
         {
-            "nome": "TORNEO SERALE \"I SERALI MCDONALD'S\" - GARDEN VILLAGE",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=46DE6156-4C1A-405A-ADE1-487330D1FA04",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "07/07/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; ALAMPI CARLO o RASORI RICCARDO o IACOANGELI VALERIO; MESSINA MASSIMILIANO o PASTORE MARCO o RONDINELLI DAVIDE",
-                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; DE LUCA PATRICK; GIARDULLI FABIO o COLANGELI MATTEO o GREGNANIN LUCA",
-                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; STIZZA VALERIO o VARAZZI GIANCARLO o DE STEFANI CARLO; GALLO ALESSANDRO o ERDI GIANLUCA o FABIANI FEDERICO",
-                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; GRAZIANI NICOLO' o ASCENZI ANDREA o DI BIASIO UMBERTO ANGELO; CASTELLUCCI PAOLO o SERANI GIORGIO o BELLI FABIO",
-                        "07/07/2026; 19:30; Singolare Maschile Open; LIM. 4.NC - 3.1; GALANTE RICCARDO; PASTORE MATTEO",
-                        "07/07/2026; 19:30; Singolare Femminile Open; LIM. 4.NC - 3.1; TEDOLDI SIMONA; ISTRATE SARA MARIA",
-                        "07/07/2026; 21:00; Singolare Maschile Open; LIM. 4.NC - 3.1; NERI GIANLUCA; DI NILLO FRANCESCO o NUZZI MATTEO o CAPRITA MARCO",
-                        "07/07/2026; 21:00; Singolare Femminile Open; LIM. 4.NC - 3.1; MAGGIORE MARGHERITA; FURNO ERMELINDA"
-                    ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
             "nome": "2° Memorial Franco Giordanella - Torneo IV categoria",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=82FCF1E1-6978-45FF-BB08-C34901A40560",
             "date": [
                 {
                     "data": "07/07/2026",
                     "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "1° TORNEO MEMORIOL TIZZONE GIUSEPPE",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "BT Pay - Torneo Serale - by Sporfie",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "07/07/2026; 17:30; Singolare Maschile Open; JACOPO ROCCHI; SIMONE GUIDI",
-                        "07/07/2026; 17:30; Singolare Maschile Open; MATTIA D'ANNIBALE; FABRIZIO FABRIZI"
-                    ]
                 },
                 {
                     "data": "08/07/2026",
@@ -144,6 +126,24 @@
                         "07/07/2026; 17:00; Singolare Maschile Open; FERRETTI MASSIMILIANO (G); MONTESPERELLI FEDERICO o MARZI GUIZADO LEONARDO MICHELANGELO",
                         "07/07/2026; 18:30; Singolare Maschile Open; FABBRI ALESSANDRO; DI FEDERICO MATTIA o BERTELLI FEDERICO",
                         "07/07/2026; 18:30; Singolare Maschile Open; QUARTICELLI SIMONE; BARBARO ANTONINO"
+                    ]
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "BT Pay - Torneo Serale - by Sporfie",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 17:30; Singolare Maschile Open; JACOPO ROCCHI; SIMONE GUIDI",
+                        "07/07/2026; 17:30; Singolare Maschile Open; MATTIA D'ANNIBALE; FABRIZIO FABRIZI"
                     ]
                 },
                 {
