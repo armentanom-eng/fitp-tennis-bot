@@ -1,6 +1,40 @@
 {
-    "report_data": "07/07/2026 12:00",
+    "report_data": "07/07/2026 15:27",
     "tornei": [
+        {
+            "nome": "AD CONSULTING JUNIOR TOUR - Torneo giovanile, Singolare M/F U12 - U14 - U18",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A7CB435F-FA1C-440E-BC28-572B67DEF837",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 10:00; Categoria non specificata; Singolare Femminile Under 14 Singolare Femminile Under 14 EMMA OLLIANA; SOFIA MANNALA'",
+                        "07/07/2026; 11:00; Categoria non specificata; Singolare Maschile Under 14 Singolare Maschile Under 14 GASPARE LONGO vs",
+                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 18 Singolare Maschile Under 18 JEREMY FERRETTI; PIER LORENZO VIOTTI",
+                        "07/07/2026; 15:00; Categoria non specificata; Singolare Maschile Under 12 Singolare Maschile Under 12 LUCA DEL GIUDICE vs"
+                    ]
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
         {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
@@ -11,7 +45,7 @@
                 },
                 {
                     "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
+                    "stato": "Partite non trovate"
                 }
             ]
         },
@@ -25,7 +59,7 @@
                 },
                 {
                     "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
+                    "stato": "Partite non trovate"
                 }
             ]
         },
@@ -36,6 +70,30 @@
                 {
                     "data": "07/07/2026",
                     "stato": "Nessuna pianificazione disponibile"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "10^ Tappa XLVII Circuito del Tirreno \"GARDEN VILLAGE\"",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite trovate",
+                    "partite": [
+                        "07/07/2026; 16:30; Singolare Maschile Under 18; FURINA VALENTINO; CAPRITA MARCO",
+                        "07/07/2026; 16:30; Singolare Maschile Under 14; SCIAMANNA VALERIO o ANGELETTI THOMAS; CERQUOZZI MATTIA",
+                        "07/07/2026; 16:30; Singolare Femminile Under 14; ZAMPETTI GIORGIA; FILIPPOVA MAIIA",
+                        "07/07/2026; 16:30; Singolare Femminile Under 14; PROIA SVEVA; IACOBINI PENELOPE",
+                        "07/07/2026; 18:00; Singolare Maschile Under 14; CARAFFA ALESSIO AL o TINTI VITTORIO; PISAURO GIOVANNI",
+                        "07/07/2026; 18:00; Singolare Maschile Under 14; RAGNI ANDREA o VINCENTI DAVIDE; FIORAVANTI MATTEO",
+                        "07/07/2026; 18:00; Singolare Femminile Under 14; POMPEI ALLEGRA o PARISELLA VIOLA; SOLIMAN LUDOVICA",
+                        "07/07/2026; 18:00; Singolare Maschile Under 14; TABACCHIERA SAMUEL; PIZZO DANIELE o GRECO GIOVANNI"
+                    ]
                 },
                 {
                     "data": "08/07/2026",
@@ -74,34 +132,6 @@
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "AD CONSULTING JUNIOR TOUR - Torneo giovanile, Singolare M/F U12 - U14 - U18",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A7CB435F-FA1C-440E-BC28-572B67DEF837",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
             "date": [
@@ -124,40 +154,6 @@
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SIBARI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "10^ Tappa XLVII Circuito del Tirreno \"GARDEN VILLAGE\"",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "07/07/2026; 16:30; Singolare Maschile Under 18; FURINA VALENTINO; CAPRITA MARCO",
-                        "07/07/2026; 16:30; Singolare Maschile Under 14; SCIAMANNA VALERIO o ANGELETTI THOMAS; CERQUOZZI MATTIA",
-                        "07/07/2026; 16:30; Singolare Femminile Under 14; ZAMPETTI GIORGIA; FILIPPOVA MAIIA",
-                        "07/07/2026; 16:30; Singolare Femminile Under 14; PROIA SVEVA; IACOBINI PENELOPE",
-                        "07/07/2026; 18:00; Singolare Maschile Under 14; CARAFFA ALESSIO AL o TINTI VITTORIO; PISAURO GIOVANNI",
-                        "07/07/2026; 18:00; Singolare Maschile Under 14; RAGNI ANDREA o VINCENTI DAVIDE; FIORAVANTI MATTEO",
-                        "07/07/2026; 18:00; Singolare Femminile Under 14; POMPEI ALLEGRA o PARISELLA VIOLA; SOLIMAN LUDOVICA",
-                        "07/07/2026; 18:00; Singolare Maschile Under 14; TABACCHIERA SAMUEL; PIZZO DANIELE o GRECO GIOVANNI"
-                    ]
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
             "date": [
@@ -168,6 +164,16 @@
                 {
                     "data": "08/07/2026",
                     "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SIBARI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
+            "date": [
+                {
+                    "data": "Info",
+                    "stato": "Nessuna data disponibile"
                 }
             ]
         }

@@ -1,6 +1,86 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
+            "iscritti": [
+                "ELENA ODDI4.3",
+                "ALEXIA ROSSI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "categoria": "BT Pay - Torneo Serale - by Sporfie",
+            "iscritti": [
+                "SOFIJA ZARINA3.1",
+                "ANNA MAMMUCARI3.3",
+                "AMALIA DORMI3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
+            "iscritti": [
+                "LUCA SALERNO4.4",
+                "ANDREA MANFREDINI4.4",
+                "NICOLÒ FORATTINI4.3",
+                "ELIA GATTA4.1",
+                "MATTEO MARTINI4.4",
+                "CRISTIANO D'ATTINO4.3",
+                "DAMIANO VINCIGUERRA4.NC",
+                "FRANCESCO BALDASSARRE4.3",
+                "FEDERICO FABIANI4.2",
+                "DIEGO CONTESTABILE4.2",
+                "GABRIELE PELLEGRINI4.4",
+                "LORENZO CARBONE4.NC",
+                "FILIPPO RAPARELLI4.5",
+                "RICCARDO GALLI4.NC",
+                "LORENZO ZUCCHI4.4",
+                "FEDERICO MATTIONI4.6",
+                "EMANUELE ODDI4.3",
+                "GIORGIO BONVINI4.2",
+                "FLAVIO BELLOCCO4.3",
+                "ALESSANDRO TISBI4.NC",
+                "CRISTIAN GENTILINI4.4",
+                "RICCARDO TIBUZZI4.2",
+                "RAOUL BASSI4.5",
+                "FRANCESCO VALENTINI4.NC",
+                "LEONARDO MACCHI4.5",
+                "MATTEO LUCCI CORDISCO4.NC",
+                "GIORGIO MELIS4.3",
+                "DANIELE ROSA3.3",
+                "FILIPPO CRISTOFANELLI4.3",
+                "DAVIDE ARCIONI4.5",
+                "GIAN MARCO MARZOCCA4.NC",
+                "ALESSANDRO MUSOLINO4.4",
+                "MARCO CALI'4.3",
+                "FRANCESCO CALANDRINI3.2",
+                "GIOSUE' MANCIOCCHI4.3",
+                "STEFANO PERCIBALLI4.2",
+                "ROBERTO ORAZIETTI4.4",
+                "LORENZO INTEGLIA4.1",
+                "GIOVANNI CATANZANI4.3",
+                "RICCARDO ROSI4.NC",
+                "EDOARDO RUGGERI4.1",
+                "ROMAN BARBARULO3.5",
+                "ADRIANO SEMERANO4.NC",
+                "LUCA PASTORE4.NC",
+                "ANTONIO MATERA4.NC",
+                "FABRIZIO FABRIZI4.NC",
+                "ALESSIO PIETRINI4.3",
+                "LEONARDO RONZANI4.1",
+                "LORENZO ROSATI4.3",
+                "ERNESTO MARINUCCI4.5",
+                "MARCO CARAMANICA4.2",
+                "MASSIMILIANO DI CINTIO3.3",
+                "GINO PAGLIARULO3.5",
+                "DANIELE BOCA3.3",
+                "MARCO FARINA3.2",
+                "ALESSIO BALDI3.2",
+                "GIULIO TANDURELLA3.5"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
             "categoria": "3 TAPPA OPEN DECATHLON TENNIS CUP",
             "iscritti": [
@@ -35,94 +115,13 @@
                 "GINEVRA TERRACINA2.5",
                 "CRISTINA MONTAGNER3.3",
                 "LIVIA AVOLA2.6",
-                "GIORDANA LAURI3.1"
+                "GIORDANA LAURI3.1",
+                "ANITA FURI2.8",
+                "NICOLE POLANO2.8"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "categoria": "BT Pay - Torneo Serale - by Sporfie",
-            "iscritti": [
-                "SOFIJA ZARINA3.1",
-                "ANNA MAMMUCARI3.3",
-                "AMALIA DORMI3.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "categoria": "3 TAPPA OPEN DECATHLON TENNIS CUP",
-            "iscritti": [
-                "LEONARDO MICHELANGELO MARZI GUIZADO4.3",
-                "ANTONINO BARBARO4.2",
-                "FLAVIO AVENIA4.4",
-                "EDOARDO SAMELA4.3",
-                "BRUNO ZUDDAS3.5",
-                "ROMAN BARBARULO3.5",
-                "AKASH SAMARASINGHALAGE3.4",
-                "STEPHEN JOHN BURN-MURDOCH4.NC",
-                "MARCO TELERA4.4",
-                "EMILIANO ROSSI4.NC",
-                "CRISTIAN TOLÙ4.NC",
-                "DENIS GABRIEL ADAMUTA4.5",
-                "GABRIELE MULIERE4.5",
-                "PAOLO POMPEI4.6",
-                "SALVATORE LAURO4.NC",
-                "VALERIO POMPEO3.5",
-                "EMANUELE CERAULO3.2",
-                "FRANCESCO PAOLO INVIDIATA3.5",
-                "GABRIELE MINEO3.4",
-                "GIOVANNI BASSO4.3",
-                "FABIO CUPPITELLI3.5",
-                "MARCO CALI'4.3",
-                "ANTONIO AUGELLI2.8",
-                "FABIO CHIUCCHIUINI4.NC",
-                "LUCA GALASSO4.3",
-                "GABRIELE TIROCCHI4.2",
-                "FILIPPO PERFETTI3.2",
-                "RICCARDO NUCCETELLI3.5",
-                "GIANLUCA LODDI4.1",
-                "FEDERICO MONTESPERELLI4.3",
-                "MATTEO MASTROGIACOMO3.2",
-                "GIULIO TANDURELLA3.5",
-                "MATTIA DI FEDERICO4.2",
-                "GASPARE LONGO3.5",
-                "FEDERICO BERTELLI4.2",
-                "ANDREA BIASINI4.1",
-                "SIMONE QUARTICELLI4.2",
-                "SIMONE BARTUCCIO3.5",
-                "AUGUSTO LONGATTI3.4",
-                "UGO SAPONARO3.4",
-                "MATTEO GIACOMANTONIO3.4",
-                "LORENZO PENTURELLI3.5",
-                "FRANCESCO AMATO4.2",
-                "RICCARDO QUARTULLI4.1",
-                "FRANCESCO SPERATI3.5",
-                "MATTEO COSCIA3.1",
-                "MASSIMILIANO FERRETTI4.1",
-                "ANDREA ESPOSITO3.4",
-                "ALESSANDRO FABBRI4.1",
-                "FRANCESCO SALVATI3.4",
-                "PIETRO CAPORILLI2.8",
-                "GIULIO BALISTRIERI3.2",
-                "ANDREA CASTALDO3.3",
-                "ANDREA PERRI2.8",
-                "TOMMASO PERRI3.4",
-                "DAMIANO TORSELLA3.2",
-                "NICOLA RIPA2.8",
-                "ARTURO LONGO3.4",
-                "GIANPAOLO VANGI2.8",
-                "LORENZO CAVALLARI3.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
-            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
-            "iscritti": [
-                "ELENA ODDI4.3",
-                "ALEXIA ROSSI4.1"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
             "categoria": "BT Pay - Torneo Serale - by Sporfie",
             "iscritti": [
                 "GABRIELE DERIU2.7",
@@ -164,7 +163,8 @@
                 "GIORGIO D'ANDREA4.2",
                 "LEONARDO IANNOTTA3.5",
                 "DANIELE FAGIOLI3.2",
-                "MICHELE LUCADAMO2.7"
+                "MICHELE LUCADAMO2.7",
+                "MATTEO CONTI3.4"
             ]
         }
     ]
