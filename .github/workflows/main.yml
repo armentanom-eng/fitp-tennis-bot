@@ -18,7 +18,7 @@ jobs:
         
       - name: Install dependencies
         run: |
-          pip install playwright pdfplumber
+          pip install playwright
           playwright install chromium
           
       - name: Esegui Bot Partite (PDF)
@@ -28,6 +28,11 @@ jobs:
       - name: Esegui Bot Iscrizioni
         continue-on-error: true
         run: python bot_iscrizioni.py
+        
+      # NUOVO STEP AGGIUNTO QUI:
+      - name: Esegui Bot In Programma
+        continue-on-error: true
+        run: python In_Programma.py
         
       - name: Commit Risultati
         run: |
