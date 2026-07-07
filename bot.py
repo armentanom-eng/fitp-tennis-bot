@@ -1,83 +1,51 @@
 import asyncio
 import json
-import sys
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio del bot ---")
-    
     async with async_playwright() as p:
-        # headless=True è obbligatorio su GitHub Actions
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-setuid-sandbox"])
-        context = await browser.new_context()
-        page = await context.new_page()
+        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
+        page = await browser.new_page()
         
-        print("--- Navigazione verso il sito FITP ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+        # [Inserisci qui la tua logica filtri che funziona]
         
-        print("--- Impostazione filtri (Iscrizioni Aperte, Lazio) ---")
-        await page.click('button[data-id="select_status"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
-        
-        await page.click('button[data-id="id_regioneSearch"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-        
-        await page.keyboard.press("Enter")
-        await asyncio.sleep(5) # Attesa generosa per il caricamento risultati
-        
-        # Estrazione link tornei
+        # 1. Recupero URL tornei
         locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
         urls = list(set([await loc.get_attribute("href") for loc in locators]))
-        print(f"--- Trovati {len(urls)} tornei. Inizio analisi. ---")
         
-        risultati = []
-        
-        for idx, url in enumerate(urls, 1):
+        for url in urls:
             full_url = f"https://www.fitp.it{url}"
-            print(f"[{idx}/{len(urls)}] Analisi Torneo: {full_url}")
-            
             await page.goto(full_url, wait_until="networkidle")
             
-            # Conta quante categorie (box) ci sono
-            dettagli = page.locator("a:has-text('Dettaglio >')")
-            count = await dettagli.count()
-            print(f"    -> Trovate {count} categorie in questo torneo.")
+            # 2. CERCHIAMO I BOX DELLE CATEGORIE
+            # Invece di cercare un bottone generico, cerchiamo il contenitore del box
+            # che contiene la parola "Dettaglio"
+            box_categorie = page.locator("div.cc-single-tournament") 
+            count = await box_categorie.count()
             
             for i in range(count):
-                # Ricarichiamo i riferimenti dei bottoni per evitare errori di pagina
-                btn = page.locator("a:has-text('Dettaglio >')").nth(i)
-                await btn.click()
+                print(f"Analizzo categoria {i+1} di {count}")
+                
+                # Clicchiamo "Dettaglio >" DENTRO il box i-esimo
+                await box_categorie.nth(i).get_by_role("link", name="Dettaglio").click()
                 await page.wait_for_load_state("networkidle")
-                print(f"    -> Entrato nella categoria {i+1}")
                 
-                # Estrai giocatori
+                # 3. ESTRAZIONE GIOCATORI
                 giocatori = await page.locator("a[href*='Pagina-Giocatore']").all()
-                print(f"       Trovati {len(giocatori)} giocatori.")
-                
-                for j, g_link in enumerate(giocatori, 1):
+                for g_link in giocatori:
                     g_url = await g_link.get_attribute("href")
-                    await page.goto(f"https://www.fitp.it{g_url}", wait_until="domcontentloaded")
-                    
+                    await page.goto(f"https://www.fitp.it{g_url}")
                     nome = await page.locator("span#spn-tournament-description").text_content()
-                    nome_pulito = nome.strip()
-                    print(f"       [{j}/{len(giocatori)}] Giocatore: {nome_pulito}")
-                    
-                    risultati.append({"torneo": full_url, "nome": nome_pulito})
-                    
-                    # Torna indietro alla lista della categoria
-                    await page.go_back()
-                    await page.wait_for_load_state("networkidle")
+                    print(f"Estratto: {nome}")
+                    await page.go_back() # Torna alla lista della categoria
                 
-                # Torna al dettaglio del torneo principale per passare alla categoria successiva
-                await page.goto(full_url, wait_until="networkidle")
-        
-        # Salvataggio finale
-        print("--- Estrazione terminata. Scrittura file JSON... ---")
-        with open("Risultati_Iscrizioni.json", "w", encoding="utf-8") as f:
-            json.dump(risultati, f, ensure_ascii=False, indent=4)
-            
-        print("--- [END] Processo completato con successo ---")
-        await browser.close()
+                # 4. TORNA AL TORNEO PRINCIPALE
+                # Il "tasto che mi hai fatto vedere" (breadcrumb o link indietro)
+                await page.get_by_text("Torna ai risultati").click() # O selettore simile del tasto
+                await page.wait_for_load_state("networkidle")
+                
+                # Ricarichiamo il riferimento ai box dopo essere tornati indietro
+                box_categorie = page.locator("div.cc-single-tournament")
 
-if __name__ == "__main__":
-    asyncio.run(run_bot())
+        await browser.close()
