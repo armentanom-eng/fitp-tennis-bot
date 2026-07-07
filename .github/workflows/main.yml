@@ -21,13 +21,17 @@ jobs:
           pip install playwright pdfplumber
           playwright install chromium
           
-      - name: Esegui Bot
+      - name: Esegui Bot Partite (PDF)
+        continue-on-error: true
         run: python bot.py
+        
+      - name: Esegui Bot Iscrizioni
+        continue-on-error: true
+        run: python bot_iscrizioni.py
         
       - name: Commit Risultati
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git rm -f *.txt || true
           git add *.json
           git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento automatico JSON" && git push)
