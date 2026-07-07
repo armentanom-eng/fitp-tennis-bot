@@ -31,8 +31,7 @@ def format_line_for_swift(raw_text, date_target):
             if len(found_cat) > 50: found_cat = "Categoria non specificata"
             break
             
-    final_match_data = clean_text.replace(found_cat, "").strip()
-    final_match_data = final_match_data.lstrip(';').strip()
+    final_match_data = clean_text.replace(found_cat, "").strip().lstrip(';').strip()
     
     return f"{date_target}; {time}; {found_cat}; {final_match_data}"
 
@@ -81,17 +80,23 @@ async def run_bot():
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3) 
                 
-                while await page.locator("#btn-loadMore").is_visible():
-                    print("     Caricamento altri risultati...", flush=True)
-                    await page.click("#btn-loadMore")
-                    await asyncio.sleep(2)
+                # --- CARICAMENTO INFINITO ROBUSTO ---
+                while True:
+                    btn = page.locator("#btn-loadMore")
+                    if await btn.is_visible() and await btn.is_enabled():
+                        print("    Caricamento altri risultati...", flush=True)
+                        await btn.click()
+                        await asyncio.sleep(2)
+                    else:
+                        break
+                # -----------------------------------
                 
                 await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
                 await asyncio.sleep(1)
                 
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
-                print(f"     Trovati {len(links)} tornei.", flush=True)
+                print(f"    Trovati {len(links)} tornei.", flush=True)
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
@@ -101,14 +106,12 @@ async def run_bot():
                     try:
                         await page.goto(full_url, wait_until="networkidle")
                         
-                        # --- FIX TITOLO ---
-                        # Usa il selettore esatto preso dal tuo Screenshot
                         title_el = page.locator("h1.cc-title-main.spn-competition-description")
                         if await title_el.count() > 0:
                             nome = await title_el.text_content()
                             torneo_entry["nome"] = nome.strip()
                         
-                        print(f"     -> Analizzo: {torneo_entry['nome']}", flush=True)
+                        print(f"    -> Analizzo: {torneo_entry['nome']}", flush=True)
 
                         if not await page.locator("#select-ordergame").is_visible(timeout=3000): 
                             torneo_entry["date"].append({"data": "Info", "stato": "Nessuna data disponibile"})
