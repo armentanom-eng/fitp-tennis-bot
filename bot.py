@@ -38,9 +38,9 @@ async def run_bot():
             await asyncio.sleep(3) # Pausa di sicurezza per il rendering JS
             
             # Contiamo i tasti "Dettaglio"
-            tasti_dettaglio = page.locator("a:has-text('Dettaglio')")
+            tasti_dettaglio = page.locator("a:has-text('Dettagli')")
             count = await tasti_dettaglio.count()
-            print(f"    -> Trovati {count} bottoni 'Dettaglio'.")
+            print(f"    -> Trovati {count} bottoni 'Dettagli'.")
             
             if count == 0:
                 print("    ! DEBUG: Nessun bottone trovato. Stampo anteprima pagina...")
@@ -49,7 +49,7 @@ async def run_bot():
             
             for i in range(count):
                 # Ricarichiamo il riferimento al tasto i-esimo
-                btn = page.locator("a:has-text('Dettaglio')").nth(i)
+                btn = page.locator("a:has-text('Dettagli')").nth(i)
                 await btn.click()
                 await page.wait_for_load_state("networkidle")
                 
