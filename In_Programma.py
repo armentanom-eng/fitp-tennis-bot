@@ -5,7 +5,6 @@ import re
 import json
 from playwright.async_api import async_playwright
 
-# --- Funzioni Helper ---
 def get_pdf_info(pdf_path):
     matches = []
     try:
@@ -21,14 +20,15 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio Bot Unificato ---")
+    print("--- [START] Avvio Bot Debug Unificato ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(accept_downloads=True)
         page = await context.new_page()
         
-        # Navigazione e Filtri
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+        
+        # Filtri
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
@@ -39,7 +39,6 @@ async def run_bot():
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
-        # Caricamento completo
         while await page.locator("button#btn-loadMore").is_visible():
             await page.click("button#btn-loadMore")
             await asyncio.sleep(2)
@@ -52,24 +51,32 @@ async def run_bot():
             full_url = f"https://www.fitp.it{url}"
             await page.goto(full_url, wait_until="domcontentloaded")
             
-            dettagli_links = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            # Recuperiamo i link di dettaglio
+            links = await page.locator("a[href*='Dettaglio-Competizione']").all()
             
-            for link in dettagli_links:
+            for link in links:
                 try:
                     await link.click()
                     await page.wait_for_load_state("domcontentloaded")
+                    await asyncio.sleep(2) # Pausa necessaria per il rendering
                     
                     cat = await page.locator("h1.cc-title-main").first.text_content()
                     cat = cat.strip() if cat else "Senza Categoria"
+                    
+                    # LOG DI DEBUG: Controlliamo cosa vede il bot
+                    gioc_locator = page.locator("a[href*='Pagina-Giocatore']")
+                    count_gioc = await gioc_locator.count()
+                    print(f"DEBUG: Categoria {cat} | Iscritti trovati: {count_gioc}")
+                    
+                    gioc = [await el.text_content() for el in await gioc_locator.all()]
+                    
                     is_g = any(x in cat for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"])
                     key = "giovanili" if is_g else "open"
                     
-                    # 1. Iscritti (sempre)
-                    gioc = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
                     results[key]["iscritti"].append({"cat": cat, "iscritti": [g.strip() for g in gioc]})
                     
-                    # 2. PDF (solo se presente)
-                    if await page.locator("#btnOrderGameDownload").is_visible(timeout=2000):
+                    # PDF
+                    if await page.locator("#btnOrderGameDownload").is_visible(timeout=3000):
                         async with page.expect_download() as dl_info:
                             await page.click("#btnOrderGameDownload")
                         path = "temp.pdf"
@@ -85,14 +92,13 @@ async def run_bot():
                     print(f"    ! Errore categoria: {e}")
                     await page.goto(full_url)
         
-        # Salvataggio 4 file
         with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["giovanili"]["iscritti"], f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["open"]["iscritti"], f, ensure_ascii=False, indent=4)
         with open("Partite_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["giovanili"]["partite"], f, ensure_ascii=False, indent=4)
         with open("Partite_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(results["open"]["partite"], f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [END] Processo completato correttamente. ---")
+        print("--- [END] Processo completato. ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
