@@ -1,23 +1,9 @@
 {
-    "report_data": "07/07/2026 16:11",
+    "report_data": "07/07/2026 16:24",
     "tornei": [
         {
             "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5721FD91-EB09-4165-BB4B-2EBF3482E252",
             "date": [
                 {
                     "data": "07/07/2026",
@@ -80,20 +66,6 @@
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                }
-            ]
-        },
-        {
             "nome": "10^ Tappa XLVII Circuito del Tirreno \"GARDEN VILLAGE\"",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
             "date": [
@@ -110,6 +82,48 @@
                         "07/07/2026; 18:00; Singolare Femminile Under 14; POMPEI ALLEGRA o PARISELLA VIOLA; SOLIMAN LUDOVICA",
                         "07/07/2026; 18:00; Singolare Maschile Under 14; TABACCHIERA SAMUEL; PIZZO DANIELE o GRECO GIOVANNI"
                     ]
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Nessuna pianificazione disponibile"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Partite non trovate"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
+                },
+                {
+                    "data": "08/07/2026",
+                    "stato": "Partite non trovate"
+                }
+            ]
+        },
+        {
+            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
+            "date": [
+                {
+                    "data": "07/07/2026",
+                    "stato": "Partite non trovate"
                 },
                 {
                     "data": "08/07/2026",
@@ -140,26 +154,12 @@
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "nome": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5721FD91-EB09-4165-BB4B-2EBF3482E252",
             "date": [
                 {
                     "data": "07/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "date": [
-                {
-                    "data": "07/07/2026",
-                    "stato": "Partite non trovate"
+                    "stato": "Nessuna pianificazione disponibile"
                 },
                 {
                     "data": "08/07/2026",
