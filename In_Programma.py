@@ -2,17 +2,21 @@ import asyncio
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio Scraper Tornei FITP (Modalità Robusta) ---")
+    print("--- [START] Scraper Definitivo ---")
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(viewport={'width': 1920, 'height': 1080})
+        # Emuliamo un utente reale
+        context = await browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+            viewport={'width': 1920, 'height': 1080}
+        )
         page = await context.new_page()
         
-        # Navigazione
+        # 1. Navigazione
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # Filtri (stessa logica collaudata)
+        # Filtri
         for filter_btn, option_text in [
             ('button[data-id="select_status"]', "In programma"),
             ('button[data-id="id_regioneSearch"]', "Lazio"),
@@ -25,34 +29,37 @@ async def run_bot():
         await page.locator('#btn-search').click()
         await asyncio.sleep(5)
         
-        # Recupera URL
+        # Recupero URL
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
         
+        # 2. Ciclo Tornei
         for url in urls:
             try:
-                full_url = f"https://www.fitp.it{url}"
-                await page.goto(full_url, wait_until="domcontentloaded")
-                
-                # ESTRAZIONE DIRETTA (senza cliccare bottoni se non strettamente necessario)
-                # Aspettiamo che il contenitore dei partecipanti sia caricato
-                await page.wait_for_selector(".cc-section-participants", timeout=10000)
+                await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
+                await asyncio.sleep(3) # Pausa fissa per caricamento dati
                 
                 nome_torneo = await page.locator("h1.cc-title-main").first.text_content()
-                tutti_i_dati = await page.locator(".cc-content-value").all_text_contents()
                 
-                # Pulizia nomi
-                partecipanti = [d.strip() for d in tutti_i_dati if len(d.strip()) > 3 and "€" not in d and "pdf" not in d.lower()]
+                # Prendiamo TUTTO quello che c'è nelle celle dei partecipanti
+                raw_data = await page.locator(".cc-content-value").all_text_contents()
                 
-                print(f"TORNEO: {nome_torneo.strip()}")
+                # PULIZIA FEROCE: teniamo solo stringhe lunghe, niente date, niente euro, niente info tecniche
+                partecipanti = []
+                for item in raw_data:
+                    clean = item.strip()
+                    # Filtri per escludere date (xx/xx/xxxx), prezzi, info tecniche
+                    if len(clean) > 4 and "/" not in clean and "€" not in clean and "Si" != clean and "No" != clean:
+                        if clean not in partecipanti: # Evita duplicati
+                            partecipanti.append(clean)
+                
+                # Output pulito
+                print(f"\nTORNEO: {nome_torneo.strip()}")
                 print("PARTECIPANTI:")
                 for p in partecipanti:
-                    print(f"- {p.strip()}")
-                print("-" * 30)
+                    print(f"- {p}")
+                print("-" * 40)
                     
-            except Exception as e:
-                # Se fallisce, fa uno screenshot e lo salva nei log/artifacts
-                await page.screenshot(path=f"errore_{url.split('=')[-1]}.png")
-                print(f"--- [ERRORE] su {url}: {e} (Screenshot salvato) ---")
+            except Exception:
                 continue
                 
         await browser.close()
