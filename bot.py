@@ -15,32 +15,37 @@ CATEGORIES = {
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
 def format_line_for_swift(raw_text, date_target):
-    # Cerca l'orario nella riga estratta
+    # 1. Estrazione orario
     match_time = re.search(r"(\d{2}:\d{2})", raw_text)
     time = match_time.group(1) if match_time else "00:00"
     
-    # Pulisce il testo e prepara il formato
-    clean_text = raw_text.replace("\n", " ").strip()
+    # 2. Pulizia di base
+    text = raw_text.replace("\n", " ").strip()
     
-    # Ritorna la riga completa contenente nomi e orario
-    return f"{date_target}; {time}; {clean_text}"
+    # 3. Estrazione Categoria e Limiti (es. Open LIM. 4.NC - 3.1)
+    # Cerca il blocco della categoria e limiti (es. "Open LIM. 4.NC - 3.1")
+    cat_match = re.search(r"(Singolare|Doppio|Maschile|Femminile|Open|Under|Giovanile)?\s*(.*?[\d\.]+\s*[-]\s*[\d\.]+)", text, re.IGNORECASE)
+    categoria_limiti = cat_match.group(0).strip() if cat_match else "N/A"
+    
+    # 4. Estrazione Giocatori: rimuove orario e categoria, poi split sul VS
+    giocatori_part = re.sub(r".*?[\d\.]+\s*[-]\s*[\d\.]+\s*", "", text, flags=re.IGNORECASE)
+    giocatori_part = re.sub(r"\d{2}:\d{2}", "", giocatori_part)
+    giocatori_part = re.sub(r"\s+vs\s+", "; ", giocatori_part, flags=re.IGNORECASE)
+    
+    # Ritorna formato: Data; Ora; Categoria; Giocatore 1; Giocatore 2
+    return f"{date_target}; {time}; {categoria_limiti}; {giocatori_part.strip()}"
 
 def get_pdf_info(pdf_path):
     matches = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
-                # Estrarre le tabelle è il modo migliore per prendere i nomi dei giocatori
                 tables = page.extract_tables()
                 for table in tables:
                     for row in table:
-                        # Unisce le celle della riga in una stringa, ignorando i valori None
                         row_text = " ".join([str(cell) for cell in row if cell])
-                        # Filtriamo per righe che sembrano contenere orari o partite
                         if any(x in row_text for x in ["Inizio", "Non prima", ":"]):
                             matches.append(row_text)
-                
-                # Backup: se non trova tabelle, estrae tutto il testo
                 if not matches:
                     text = page.extract_text()
                     if text:
@@ -62,7 +67,6 @@ async def run_bot():
             for status in STATUSES:
                 print(f"--- Sessione: {filename} | Stato: {status} ---", flush=True)
                 await page.goto(BASE_URL, wait_until="networkidle")
-                
                 await page.click('button[data-id="select_status"]')
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await page.click('button[data-id="id_regioneSearch"]')
