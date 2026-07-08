@@ -41,7 +41,12 @@ async def run_bot():
         dati_open = {"tornei": []}
         
         for url in urls:
-            await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
+            try:
+                # Protezione: se la pagina non carica, saltiamo al prossimo torneo
+                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=30000)
+            except Exception as e:
+                print(f"    ! Timeout su {url}, salto al prossimo.", flush=True)
+                continue
             
             try:
                 await page.get_by_role("button", name="Accetta").click(timeout=3000)
@@ -54,7 +59,6 @@ async def run_bot():
             for i in range(count):
                 btn = page.locator("text=Dettaglio >").nth(i)
                 try:
-                    # Timeout breve per non restare bloccati
                     await btn.click(timeout=5000)
                     await page.wait_for_load_state("networkidle", timeout=5000)
                     
@@ -77,14 +81,14 @@ async def run_bot():
                 except Exception as e:
                     print(f"    ! Categoria {i} non disponibile, salto.", flush=True)
                 
-                # Ricarica pagina principale del torneo invece di tornare indietro
                 await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
+
+            # Salvataggio di sicurezza dopo ogni torneo
+            with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
+                json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+            with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
+                json.dump(dati_open, f, ensure_ascii=False, indent=4)
         
-        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
-            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
-            json.dump(dati_open, f, ensure_ascii=False, indent=4)
-            
         await browser.close()
         print("--- [END] Processo completato. ---", flush=True)
 
