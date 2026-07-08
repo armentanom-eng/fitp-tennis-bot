@@ -14,10 +14,10 @@ async def run_bot():
         
         # Filtri
         await page.click('button[data-id="select_status"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
-        await page.click('button[data-id="id_regioneSearch"]')
+        await page.locator('span:text-is("In programma")').last.click()
+		await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-	await page.locator('span:text-is("Roma")').last.click()
+		await page.locator('span:text-is("Roma")').last.click()		
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
@@ -79,11 +79,11 @@ async def run_bot():
                     await page.goto(f"https://www.fitp.it{url}")
         
         # Salvataggio
-        with open("Iscritti_Giovanili.json", "w", encoding="utf-8") as f: json.dump(dati_giov, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
-
-
-      
+        with open("Iscritti_Giovanili.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_Giovanili.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+            
         await browser.close()
         print("--- [END] Processo completato. File generati. ---")
 
