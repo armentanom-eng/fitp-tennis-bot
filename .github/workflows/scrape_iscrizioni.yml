@@ -19,7 +19,7 @@ jobs:
           pip install playwright
           playwright install chromium
       - name: Esegui Bot
-        run: python NOME_DEL_TUO_FILE.py # Metti qui il nome del file .py
+        run: python bot_iscrizioni.py
       - name: Commit Risultati
         run: |
           git config --global user.name 'github-actions[bot]'
