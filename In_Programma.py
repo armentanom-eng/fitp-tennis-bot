@@ -1,92 +1,66 @@
 import asyncio
 import json
-import random
+import sys
 from playwright.async_api import async_playwright
 
+# Forza l'output immediato nel log di GitHub
+def log(msg):
+    print(f"--- {msg} ---")
+    sys.stdout.flush()
+
 async def run_bot():
-    print("--- [LOG START] Avvio modalità diagnostica ---")
+    log("Inizio esecuzione")
     async with async_playwright() as p:
-        # Browser configurato per sembrare un utente reale
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
-        )
+        # Lancio minimale per evitare crash del server
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(user_agent="Mozilla/5.0")
         page = await context.new_page()
         
-        # Timeout corto per forzare l'uscita in caso di ban/blocco
-        page.set_default_navigation_timeout(20000)
-        page.set_default_timeout(20000)
-
-        async def human_pause():
-            await asyncio.sleep(random.uniform(3, 7))
-
-        print("--- Navigazione portale FITP ---")
+        log("Navigazione FITP")
         try:
-            # Qui vediamo subito se il sito ci risponde o ci blocca
-            response = await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei")
-            print(f"--- Status HTTP: {response.status} ---")
-            if response.status != 200:
-                print(f"--- [ERRORE] Il sito ha risposto con codice {response.status}. Possibile ban. ---")
-                return
+            # Timeout ridotto per vedere subito se il sito risponde
+            await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded", timeout=20000)
+            log("Pagina caricata")
         except Exception as e:
-            print(f"--- [ERRORE] Navigazione fallita: {e} ---")
+            log(f"Errore caricamento: {e}")
             return
 
-        await human_pause()
-
-        # Filtri con controlli
-        print("--- Impostazione Filtri ---")
+        # Filtri essenziali
+        log("Clicco filtri")
         try:
             await page.click('button[data-id="select_status"]')
             await page.locator('span:text-is("In programma")').last.click()
-            await human_pause()
-            
             await page.click('button[data-id="id_regioneSearch"]')
             await page.locator('span:text-is("Lazio")').last.click()
-            await human_pause()
-            
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.locator('span:text-is("Roma")').last.click()
-            await human_pause()
-            
             await page.click('#btn-search')
-            print("--- Ricerca avviata ---")
-            await asyncio.sleep(8)
+            await asyncio.sleep(5)
+            log("Ricerca eseguita")
         except Exception as e:
-            print(f"--- Errore durante filtri: {e} ---")
+            log(f"Errore filtri: {e}")
             return
 
-        # Caricamento lista
-        print("--- Caricamento tornei ---")
-        while True:
-            btn = page.locator("button#btn-loadMore")
-            if await btn.is_visible() and await btn.is_enabled():
-                await btn.click()
-                print("--- Cliccato 'Carica altri' ---")
-                await asyncio.sleep(4)
-            else:
-                break
-        
-        # Estrazione
+        # Estrazione rapida
+        log("Estrazione link")
         urls = await page.evaluate('Array.from(document.querySelectorAll("a[href*=\'Dettaglio-Competizione\']")).map(a => a.href)')
         urls = list(set(urls))
-        print(f"--- Trovati {len(urls)} tornei ---")
-        
+        log(f"Trovati {len(urls)} tornei")
+
         dati_giov, dati_open = [], []
         
         for url in urls:
             try:
-                await page.goto(url)
-                await human_pause()
+                log(f"Analizzo: {url[-10:]}")
+                await page.goto(url, wait_until="domcontentloaded")
                 
-                btn_dettagli = page.locator("text=Dettaglio >")
-                count = await btn_dettagli.count()
+                # Estrazione dati semplificata
+                dettagli = page.locator("text=Dettaglio >")
+                count = await dettagli.count()
                 
                 for i in range(count):
-                    btn = btn_dettagli.nth(i)
-                    await btn.click()
-                    await asyncio.sleep(2)
-                    
+                    await dettagli.nth(i).click()
+                    await asyncio.sleep(1)
                     cat = await page.locator("h1.cc-title-main").first.text_content()
                     nomi = await page.evaluate("() => Array.from(document.querySelectorAll('.cc-content-value')).map(el => el.innerText.trim())")
                     
@@ -95,17 +69,16 @@ async def run_bot():
                         dati_giov.append(entry)
                     else:
                         dati_open.append(entry)
-                    
                     await page.go_back()
-                    await asyncio.sleep(2)
-            except:
+            except Exception as e:
+                log(f"Errore su torneo: {e}")
                 continue
 
         with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_giov, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
         
         await browser.close()
-        print("--- [LOG END] Fine ---")
+        log("Finito")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
