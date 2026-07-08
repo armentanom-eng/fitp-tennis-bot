@@ -12,8 +12,16 @@ async def run_bot():
         page.set_default_timeout(60000) 
 
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei")
-        # [.. le tue selezioni filtri restano invariate ..]
-        await asyncio.sleep(3)
+        
+        # Filtri (Assicurati che i selettori siano corretti per il sito attuale)
+        await page.click('button[data-id="select_status"]')
+        await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
+        await page.click('button[data-id="id_regioneSearch"]')
+        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+        await page.click('button[data-id="id_provinciaSearch"]')
+        await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+        await page.keyboard.press("Enter")
+        await asyncio.sleep(5)
         
         # Caricamento lista
         while await page.locator("button#btn-loadMore").is_visible():
@@ -31,14 +39,17 @@ async def run_bot():
             try:
                 await page.goto(full_url, wait_until="domcontentloaded")
                 
+                # Usiamo il contatore dei bottoni "Dettaglio"
                 dettagli = page.locator("span:has-text('Dettaglio >')")
                 count = await dettagli.count()
                 
                 for i in range(count):
+                    # Ricarichiamo il riferimento al bottone specifico nell'iterazione
                     btn = page.locator("span:has-text('Dettaglio >')").nth(i)
                     await btn.click()
                     
-                    await page.locator("h1.cc-title-main").wait_for()
+                    # CORREZIONE: Usiamo .first per evitare la strict mode violation
+                    await page.locator("h1.cc-title-main").first.wait_for()
                     
                     categoria = await page.locator("h1.cc-title-main").first.text_content()
                     giocatori = await page.locator(".cc-content-value").all_text_contents()
@@ -53,7 +64,6 @@ async def run_bot():
                     
                     await page.go_back(wait_until="domcontentloaded")
                 
-                # Incremento contatore e log di avanzamento
                 count_analizzati += 1
                 if count_analizzati % 10 == 0 or count_analizzati == len(urls):
                     print(f"--- [PROGRESSO] Analizzati {count_analizzati}/{len(urls)} tornei ---")
@@ -62,7 +72,7 @@ async def run_bot():
                 print(f"--- [ERRORE] Errore su {full_url}: {e} ---")
                 continue
         
-        # 4. Salvataggio
+        # Salvataggio
         with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_giov, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
