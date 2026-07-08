@@ -3,7 +3,7 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione totale con Tabelloni ---")
+    print("--- [START] Avvio estrazione totale con Tabellone Corretto ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -48,13 +48,12 @@ async def run_bot():
                             await btn.click(force=True)
                             await page.wait_for_load_state("domcontentloaded")
                             
-                            # Estrazione dati
+                            # Estrazione Categoria Principale
                             categoria = await page.locator("h1.cc-title-main").first.text_content()
                             
-                            # Estrazione specifica del tipo di tabellone (es. Singolare Maschile)
-                            # Se l'h2 non è sufficiente, usiamo il primo elemento che contiene il nome del tabellone
-                            tabellone_element = page.locator("h2").first
-                            tabellone = await tabellone_element.text_content() if await tabellone_element.count() > 0 else "N/A"
+                            # Estrazione precisa del Tabellone (es. Singolare Maschile)
+                            tabellone_el = page.locator("span#spn-tournament-description")
+                            tabellone = await tabellone_el.text_content() if await tabellone_el.count() > 0 else "N/A"
                             
                             giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
                             
