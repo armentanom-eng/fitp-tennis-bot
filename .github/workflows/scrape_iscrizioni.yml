@@ -2,12 +2,14 @@ name: Bot Iscrizioni Aperte
 
 on:
   schedule:
-    - cron: '0 18 * * *' # Le 20:00 in Italia
+    - cron: '0 18 * * *' # Le 20:00 ora italiana
   workflow_dispatch:
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Questa riga risolve l'errore 403 Forbidden
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
