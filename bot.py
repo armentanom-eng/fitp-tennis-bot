@@ -45,6 +45,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
+    print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -54,6 +55,7 @@ async def run_bot():
             page = await context.new_page()
             
             for status in STATUSES:
+                print(f"--- Sessione: {filename} | Stato: {status} ---")
                 await page.goto(BASE_URL, wait_until="networkidle")
                 await page.click('button[data-id="select_status"]')
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
@@ -62,18 +64,21 @@ async def run_bot():
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(3)
                 
-                links = await page.locator("a[href*='Dettaglio-Competizione']").all_attribute_values("href")
+                # Correzione del selettore
+                locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+                links = list(set([await loc.get_attribute("href") for loc in locators]))
                 
-                for link in list(set(links)):
+                for link in links:
                     full_url = f"https://www.fitp.it{link}"
                     try:
                         await page.goto(full_url, wait_until="networkidle")
-                        if not await page.locator("#select-ordergame").is_visible(): continue
+                        if not await page.locator("#select-ordergame").is_visible(timeout=5000): 
+                            continue
                         
-                        for i in range(2): # Oggi e Domani
+                        # Loop per Oggi (0) e Domani (1)
+                        for i in range(2):
                             data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                             
-                            # Verifica se la data esiste nel dropdown
                             if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                                 await page.select_option("#select-ordergame", label=data_target)
                                 await asyncio.sleep(2)
@@ -99,7 +104,9 @@ async def run_bot():
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
+            
         await browser.close()
+        print("--- Bot completato ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
