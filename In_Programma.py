@@ -3,13 +3,13 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio del bot ---", flush=True)
+    print("--- [START] Diagnostica Bot ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+        context = await browser.new_context(user_agent="Mozilla/5.0")
         page = await context.new_page()
         
-        print("--- Navigazione portale ---", flush=True)
+        print("--- Navigazione portale ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
         # Filtri
@@ -22,90 +22,51 @@ async def run_bot():
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
-        print("--- Caricamento totale lista tornei ---", flush=True)
-        while True:
-            btn_load_more = page.locator("button#btn-loadMore")
-            if await btn_load_more.is_visible():
-                await btn_load_more.click()
-                await page.wait_for_load_state("networkidle")
-                await asyncio.sleep(2)
-            else:
-                break
-        
+        # Estrazione URL
         locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
         urls = list(set([await loc.get_attribute("href") for loc in locators]))
-        print(f"--- Trovati {len(urls)} tornei. ---", flush=True)
+        print(f"--- Trovati {len(urls)} tornei. Analizzo SOLO il primo: {urls[0]} ---")
         
-        dati_giovanili = {"tornei": []}
-        dati_open = {"tornei": []}
+        # ANALISI SOLO DEL PRIMO TORNEO
+        url = urls[0]
+        await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
         
-        for url in urls:
+        # Log del titolo per capire se siamo sulla pagina giusta o su quella di errore
+        print(f"Titolo pagina: {await page.title()}")
+        
+        # Vediamo se trova i bottoni
+        dettagli = page.locator("text=Dettaglio >")
+        count = await dettagli.count()
+        print(f"Bottoni 'Dettaglio >' trovati: {count}")
+        
+        for i in range(count):
+            print(f"--- Analisi Bottone {i} ---")
             try:
-                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=40000)
-            except Exception:
-                print(f"    ! Timeout critico su {url}, salto.", flush=True)
-                continue
-
-            try:
-                await page.get_by_role("button", name="Accetta").click(timeout=3000)
-            except:
-                pass
-            
-            dettagli = page.locator("text=Dettaglio >")
-            count = await dettagli.count()
-            errori_consecutivi = 0
-            
-            for i in range(count):
-                # Se il bot fallisce 2 categorie di fila, interrompiamo il ciclo per questo torneo
-                if errori_consecutivi >= 2:
-                    break
-                    
-                btn = page.locator("text=Dettaglio >").nth(i)
+                btn = dettagli.nth(i)
+                await btn.click(force=True)
+                await page.wait_for_load_state("networkidle")
                 
-                try:
-                    # Controlliamo visibilità prima di cliccare
-                    if not await btn.is_visible():
-                        continue
-                        
-                    await btn.click(timeout=5000)
-                    await page.wait_for_load_state("networkidle", timeout=5000)
-                    
-                    categoria = await page.locator("h1.cc-title-main").first.text_content()
-                    giocatori_locators = page.locator("a[href*='Pagina-Giocatore']")
-                    
-                    errori_consecutivi = 0 # Reset se il click ha successo
-                    
-                    if await giocatori_locatori.count() > 0:
-                        giocatori = [await el.text_content() for el in await giocatori_locatori.all()]
-                        iscritti = [g.strip() for g in giocatori]
-                    else:
-                        iscritti = ["Nessun giocatore trovato"]
-                    
-                    entry = {"torneo": url, "categoria": categoria.strip(), "iscritti": iscritti}
-                    
-                    if any(x in categoria for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"]):
-                        dati_giovanili["tornei"].append(entry)
-                    else:
-                        dati_open["tornei"].append(entry)
-                    
-                except Exception:
-                    errori_consecutivi += 1
-                    print(f"    ! Categoria {i} fallita (Errore {errori_consecutivi}), continuo...", flush=True)
+                # Debug: vediamo il titolo della categoria
+                cat = await page.locator("h1.cc-title-main").first.text_content()
+                print(f"Categoria trovata: {cat}")
                 
-                # Ritorno alla pagina principale del torneo
-                try:
-                    await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=30000)
-                except Exception:
-                    break 
-
-            # Salvataggio di sicurezza
-            with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
-                json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-            with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
-                json.dump(dati_open, f, ensure_ascii=False, indent=4)
+                # Debug: vediamo se ci sono link giocatori
+                giocatori = await page.locator("a[href*='Pagina-Giocatore']").all()
+                print(f"Link giocatori trovati: {len(giocatori)}")
+                
+                # Se non ne trova, stampiamo il testo visibile per capire cosa c'è
+                if len(giocatori) == 0:
+                    testo_pagina = await page.inner_text("body")
+                    print(f"Testo pagina estratto (primi 300 caratteri): {testo_pagina[:300]}")
+                
+                await page.go_back()
+                await page.wait_for_load_state("networkidle")
+                
+            except Exception as e:
+                print(f"Errore su bottone {i}: {e}")
         
         await browser.close()
-        print("--- [END] Processo completato. ---", flush=True)
+        print("--- [END] Diagnostica completata ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
