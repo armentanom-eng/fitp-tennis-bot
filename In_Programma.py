@@ -3,7 +3,6 @@ import json
 import sys
 from playwright.async_api import async_playwright
 
-# Forza l'output immediato nel log di GitHub
 def log(msg):
     print(f"--- {msg} ---")
     sys.stdout.flush()
@@ -11,21 +10,18 @@ def log(msg):
 async def run_bot():
     log("Inizio esecuzione")
     async with async_playwright() as p:
-        # Lancio minimale per evitare crash del server
         browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(user_agent="Mozilla/5.0")
+        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
         page = await context.new_page()
         
         log("Navigazione FITP")
         try:
-            # Timeout ridotto per vedere subito se il sito risponde
-            await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded", timeout=20000)
+            await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded", timeout=60000)
             log("Pagina caricata")
         except Exception as e:
             log(f"Errore caricamento: {e}")
             return
 
-        # Filtri essenziali
         log("Clicco filtri")
         try:
             await page.click('button[data-id="select_status"]')
@@ -41,7 +37,6 @@ async def run_bot():
             log(f"Errore filtri: {e}")
             return
 
-        # Estrazione rapida
         log("Estrazione link")
         urls = await page.evaluate('Array.from(document.querySelectorAll("a[href*=\'Dettaglio-Competizione\']")).map(a => a.href)')
         urls = list(set(urls))
@@ -54,22 +49,35 @@ async def run_bot():
                 log(f"Analizzo: {url[-10:]}")
                 await page.goto(url, wait_until="domcontentloaded")
                 
-                # Estrazione dati semplificata
+                # Attesa per il caricamento dei bottoni Dettaglio
+                await page.wait_for_selector("text=Dettaglio >", timeout=60000)
                 dettagli = page.locator("text=Dettaglio >")
                 count = await dettagli.count()
                 
                 for i in range(count):
-                    await dettagli.nth(i).click()
-                    await asyncio.sleep(1)
-                    cat = await page.locator("h1.cc-title-main").first.text_content()
-                    nomi = await page.evaluate("() => Array.from(document.querySelectorAll('.cc-content-value')).map(el => el.innerText.trim())")
+                    # Recuperiamo di nuovo il bottone per sicurezza
+                    btn = page.locator("text=Dettaglio >").nth(i)
                     
-                    entry = {"torneo": url, "categoria": cat.strip(), "iscritti": nomi}
+                    # Aspettiamo che sia cliccabile
+                    await btn.wait_for(state="visible", timeout=60000)
+                    await btn.click()
+                    
+                    # Aspettiamo il caricamento effettivo dei dati
+                    await page.wait_for_selector(".cc-content-value", timeout=60000)
+                    
+                    cat = await page.locator("h1.cc-title-main").first.text_content()
+                    nomi = await page.evaluate("""() => Array.from(document.querySelectorAll('.cc-content-value'))
+                        .map(el => el.innerText.trim())
+                        .filter(t => t.length > 3)""")
+                    
+                    entry = {"torneo": url, "categoria": cat.strip(), "iscritti": sorted(list(set(nomi)))}
                     if any(k in cat.lower() for k in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
                         dati_giov.append(entry)
                     else:
                         dati_open.append(entry)
-                    await page.go_back()
+                    
+                    # Torniamo alla pagina del torneo per la prossima categoria
+                    await page.goto(url, wait_until="domcontentloaded")
             except Exception as e:
                 log(f"Errore su torneo: {e}")
                 continue
