@@ -96,4 +96,7 @@ async def run_bot():
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [END] Processo complet
+        print("--- [END] Processo completato. ---")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
