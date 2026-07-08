@@ -3,7 +3,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Maschile Under 14",
             "iscritti": [
                 "MARCO LAPOLLA3.5",
                 "ELIA AMBROSINI4.2",
@@ -19,7 +19,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Maschile Under 12",
             "iscritti": [
                 "TOMMASO OLIVIERI3.5",
                 "ALESSANDRO FONTANA4.3",
@@ -36,7 +36,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Maschile Under 10",
             "iscritti": [
                 "GIUSEPPE LAUDONIA4.NC",
                 "MICHELANGELO BARTOLOMUCCI4.NC",
@@ -56,7 +56,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Maschile Under 18",
             "iscritti": [
                 "FRANCESCO IPPOLITI3.5",
                 "DARIO LAPOLLA3.2",
@@ -78,7 +78,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Femminile Under 10",
             "iscritti": [
                 "AURORA BIANCHI4.NC",
                 "ISABEL ALFANO4.NC",
@@ -90,7 +90,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Femminile Under 14",
             "iscritti": [
                 "ELENA QUAGLIOZZI4.4",
                 "NOEMI PAOLUCCI4.3",
@@ -103,7 +103,7 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Femminile Under 12",
             "iscritti": [
                 "LUCIA BRACAGLIA4.6",
                 "MARTINA QUAGLIOZZI4.5",
@@ -119,12 +119,11 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
             "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
-            "tabellone": "N/A",
+            "tabellone": "Singolare Femminile Under 18",
             "iscritti": [
                 "ALICE VELLUTI3.1",
                 "BENEDETTA SANTESARTI4.5",
                 "LAURA POCCIA4.5",
-                "CAMILLA FONZI3.5",
                 "SOFIA ROTONDI4.2",
                 "GIULIA MISSORI4.1"
             ]
