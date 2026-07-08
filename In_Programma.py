@@ -3,7 +3,7 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione totale ---")
+    print("--- [START] Avvio estrazione totale con Tabelloni ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -32,16 +32,14 @@ async def run_bot():
             try:
                 await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
                 
-                # Controllo pop-up errore
                 if await page.locator("text=non e' al momento disponibile").is_visible():
                     print("    -> Torneo non disponibile, salto.")
                     continue
                 
-                # Conta quanti bottoni 'Dettaglio' ci sono
                 count = await page.locator("text=Dettaglio >").count()
                 
                 for i in range(count):
-                    # Ricarichiamo la pagina principale del torneo ad ogni giro per resettare lo stato
+                    # Ricarica pagina principale del torneo
                     await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
                     
                     btn = page.locator("text=Dettaglio >").nth(i)
@@ -50,16 +48,29 @@ async def run_bot():
                             await btn.click(force=True)
                             await page.wait_for_load_state("domcontentloaded")
                             
+                            # Estrazione dati
                             categoria = await page.locator("h1.cc-title-main").first.text_content()
+                            
+                            # Estrazione specifica del tipo di tabellone (es. Singolare Maschile)
+                            # Se l'h2 non è sufficiente, usiamo il primo elemento che contiene il nome del tabellone
+                            tabellone_element = page.locator("h2").first
+                            tabellone = await tabellone_element.text_content() if await tabellone_element.count() > 0 else "N/A"
+                            
                             giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
                             
-                            entry = {"torneo": url, "categoria": categoria.strip(), "iscritti": [g.strip() for g in giocatori]}
+                            entry = {
+                                "torneo": url, 
+                                "categoria": categoria.strip(), 
+                                "tabellone": tabellone.strip(), 
+                                "iscritti": [g.strip() for g in giocatori]
+                            }
+                            
                             if any(x in categoria.lower() for x in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
                                 dati_giovanili["tornei"].append(entry)
                             else:
                                 dati_open["tornei"].append(entry)
                             
-                            print(f"    -> Estratti {len(giocatori)} iscritti da: {categoria.strip()}")
+                            print(f"    -> Estratto: {tabellone.strip()} - {len(giocatori)} iscritti.")
                         except Exception as e:
                             print(f"    ! Errore cliccando il dettaglio {i}: {e}")
                             
