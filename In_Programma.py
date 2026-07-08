@@ -53,17 +53,29 @@ async def run_bot():
             
             dettagli = page.locator("text=Dettaglio >")
             count = await dettagli.count()
+            errori_consecutivi = 0
             
             for i in range(count):
+                # Se il bot fallisce 2 categorie di fila, interrompiamo il ciclo per questo torneo
+                if errori_consecutivi >= 2:
+                    break
+                    
                 btn = page.locator("text=Dettaglio >").nth(i)
+                
                 try:
+                    # Controlliamo visibilità prima di cliccare
+                    if not await btn.is_visible():
+                        continue
+                        
                     await btn.click(timeout=5000)
                     await page.wait_for_load_state("networkidle", timeout=5000)
                     
                     categoria = await page.locator("h1.cc-title-main").first.text_content()
                     giocatori_locators = page.locator("a[href*='Pagina-Giocatore']")
                     
-                    if await giocatori_locators.count() > 0:
+                    errori_consecutivi = 0 # Reset se il click ha successo
+                    
+                    if await giocatori_locatori.count() > 0:
                         giocatori = [await el.text_content() for el in await giocatori_locatori.all()]
                         iscritti = [g.strip() for g in giocatori]
                     else:
@@ -77,9 +89,10 @@ async def run_bot():
                         dati_open["tornei"].append(entry)
                     
                 except Exception:
-                    print(f"    ! Categoria {i} fallita, continuo...", flush=True)
+                    errori_consecutivi += 1
+                    print(f"    ! Categoria {i} fallita (Errore {errori_consecutivi}), continuo...", flush=True)
                 
-                # Ritorno alla base protetto
+                # Ritorno alla pagina principale del torneo
                 try:
                     await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=30000)
                 except Exception:
