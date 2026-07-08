@@ -1,1 +1,21 @@
-[]
+[
+    {
+        "torneo": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+        "iscritti": []
+    },
+    {
+        "torneo": "QUALIFICAZIONE AI CAMPIONATI ITALIANI UNDER 15 MASCHILI - BY ITALGAS",
+        "iscritti": []
+    },
+    {
+        "torneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
+        "iscritti": []
+    },
+    {
+        "torneo": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+        "iscritti": [
+            "ARTURO FAGO",
+            "LUDOVICO FEDERICI"
+        ]
+    }
+]
