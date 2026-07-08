@@ -6,10 +6,9 @@ async def run_bot():
     print("--- [START] Avvio Bot Ottimizzato ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(user_agent="Mozilla/5.0...")
+        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
         page = await context.new_page()
         
-        # Timeout globale per evitare blocchi infiniti
         page.set_default_timeout(60000) 
 
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei")
@@ -22,40 +21,55 @@ async def run_bot():
             await asyncio.sleep(1)
         
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
+        print(f"--- [INFO] Trovati {len(urls)} tornei totali da analizzare ---")
         
         dati_giov, dati_open = {"tornei": []}, {"tornei": []}
+        count_analizzati = 0
         
         for url in urls:
             full_url = f"https://www.fitp.it{url}"
-            print(f"Analisi: {full_url}")
-            await page.goto(full_url, wait_until="domcontentloaded")
-            
-            # Recuperiamo tutti i bottoni una volta sola per pagina
-            dettagli = page.locator("span:has-text('Dettaglio >')")
-            count = await dettagli.count()
-            
-            for i in range(count):
-                # Usiamo locator dinamico per non perdere il riferimento
-                btn = page.locator("span:has-text('Dettaglio >')").nth(i)
-                await btn.click()
+            try:
+                await page.goto(full_url, wait_until="domcontentloaded")
                 
-                # Attesa specifica per il contenuto che ti serve invece di 'networkidle'
-                await page.locator("h1.cc-title-main").wait_for()
+                dettagli = page.locator("span:has-text('Dettaglio >')")
+                count = await dettagli.count()
                 
-                categoria = await page.locator("h1.cc-title-main").first.text_content()
-                giocatori = await page.locator(".cc-content-value").all_text_contents()
-                lista_nomi = [g.strip() for g in giocatori if g.strip()]
+                for i in range(count):
+                    btn = page.locator("span:has-text('Dettaglio >')").nth(i)
+                    await btn.click()
+                    
+                    await page.locator("h1.cc-title-main").wait_for()
+                    
+                    categoria = await page.locator("h1.cc-title-main").first.text_content()
+                    giocatori = await page.locator(".cc-content-value").all_text_contents()
+                    lista_nomi = [g.strip() for g in giocatori if g.strip()]
+                    
+                    entry = {"torneo": url, "categoria": categoria.strip(), "iscritti": lista_nomi}
+                    
+                    if any(x in categoria for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"]):
+                        dati_giov["tornei"].append(entry)
+                    else:
+                        dati_open["tornei"].append(entry)
+                    
+                    await page.go_back(wait_until="domcontentloaded")
                 
-                entry = {"torneo": url, "categoria": categoria.strip(), "iscritti": lista_nomi}
-                
-                if any(x in categoria for x in ["Under", "Giovanile", "U10", "U12", "U14", "U16"]):
-                    dati_giov["tornei"].append(entry)
-                else:
-                    dati_open["tornei"].append(entry)
-                
-                # Torniamo indietro nella pagina del torneo invece di ricaricare tutto
-                await page.go_back(wait_until="domcontentloaded")
+                # Incremento contatore e log di avanzamento
+                count_analizzati += 1
+                if count_analizzati % 10 == 0 or count_analizzati == len(urls):
+                    print(f"--- [PROGRESSO] Analizzati {count_analizzati}/{len(urls)} tornei ---")
+                    
+            except Exception as e:
+                print(f"--- [ERRORE] Errore su {full_url}: {e} ---")
+                continue
         
-        # Salvataggio.. (come da tuo codice)
+        # 4. Salvataggio
+        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giov, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+            
         await browser.close()
         print("--- [END] Processo completato ---")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
