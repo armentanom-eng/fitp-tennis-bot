@@ -81,7 +81,7 @@ async def run_bot():
         # Salvataggio
         with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_Giovanili.json", "w", encoding="utf-8") as f:
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
