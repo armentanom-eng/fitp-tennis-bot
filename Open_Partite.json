@@ -1,148 +1,6 @@
 {
-    "report_data": "08/07/2026 16:28",
+    "report_data": "08/07/2026 17:04",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 15:00; INIZIO 15:00 POMPEI o SOLIMAN vs NERI FLAMINIA PARZIALE GINEVRA vs ROCCHETI CARLOTTA vs vs vs vs",
-                "08/07/2026; 16:00; 16:00 BRIENZA LUDOVICA vs BACCHILEGA MARIA CLARA BARBARINO DIEGO vs TINTI VITTORIO DEZY DANNY vs SCIAMANNA o CERQUOZZI GIRONE vs UNDER 9 GIRONE vs UNDER 9 vs",
-                "08/07/2026; 17:30; 17:30 GREGNANIN MATTEO vs BLUMENTHAL LUDOVICO TINTI MATTEO vs GANDOLFO LEONARDO DE GENNARO SIMONE vs IRIONE FILIPPO TABACCHIERA o PIZZO vs VINCENTI DAVIDE MAGGIORE MARGHERITA vs PROIA o IACOBINI vs",
-                "08/07/2026; 19:00; 19:00 FILIPPOVA MAIIA vs RICCIONI LIVIA vs vs vs vs vs"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 13:00; Inizio ore: 13:00 Inizio ore: 13:00 Inizio ore: 13:00 Inizio ore: 13:00",
-                "08/07/2026; 17:00; MARTEDI 07 LUGLIO 2026 ORE 17:00 Di Berardino Elisabetta"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 13:00; Inizio ore: 13:00 Inizio ore: 13:00 Inizio ore: 13:00 Inizio ore: 13:00",
-                "09/07/2026; 16:30; MERCOLEDI 08 LUGLIO 2026 ORE 16:30 Di Berardino Elisabetta"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=46DE6156-4C1A-405A-ADE1-487330D1FA04",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 19:00; INIZIO 19:00 MAGI MATILDA vs BERTI SUSANNA UMASSI EDOARDO vs STIZZA MINISSALE ALESSANDRO vs GIACOMANTONIO MATTEO REPERTORIO SILVIA vs PALLADINO YLENIA vs vs",
-                "08/07/2026; 20:30; 20:30 FAMA' CHRISTIAN vs DE ANGELIS BENEDETTO PIETROSANTI vs ROCCO o RONDINELLI MAGGIORE o FURNO vs TEDOLDI DON FRANCESCO JACOPO vs PASTORE O GALANTE SIGNORETTA ALESSANDRO vs DE LUCA O GREGNANIN vs"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4A32ECBF-8EF1-4F8A-8B72-25F84D97CCF9",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 00:00; ORARIO DI GIOCO DI: MERCOLEDI' 8 LUGLIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4A32ECBF-8EF1-4F8A-8B72-25F84D97CCF9",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; ORARIO DI GIOCO DI: GIOVEDI' 9 LUGLIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 08:00; 08:00 BALESTRIERO vs (u11m) PELLEGRINI",
-                "08/07/2026; 13:00; 13:00 BARBALI MARCO vs (u11m) TORRESAN PIETRO BULSEI VITTORIA vs (u13f) ZANATTA SOFIA URSO ACHILLE vs (u11m) GUADAGNINI LIAM XOTTA-GRASSI vs (doppio u11m) ZANATTA-RINALDI GUIDOLIN FRANCESCO vs (u13m) GAMBA FILIPPO PASSARINI ENRICO vs (u13m) MOREGGIO EDOARDO",
-                "08/07/2026; 19:00; 19:00 GRASSI FILIPPO vs (u11m) BARBALI MARCO UBINI GREGORIO vs (u11m) CORSI LORENZO GUIDOLIN FRANCESCO vs (u13m) PASSARINI ENRICO ALTAVILLA ANDREA vs (u11m) BALESTRIERO RICCARDO XOTTA MATTEO vs (u11m) URSO ACHILLE CHARMITI YARA-CIVITA ERICA vs (u13f) BULSEI MATILDE-BULSEI VITTORIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 08:00; 08:00 CALVELLI PIETRO vs (u13m) GUIDOLIN o PASSARINI GRASSI-XOTTA vs (u11m) PELLEGRINI-ALTAVILLA URSO-CORSI vs (u11m) BARBALI-UBINI",
-                "09/07/2026; 13:30; 13:30 ALTAVILLA o BALESTRIERO vs (u11m) XOTTA o URSO DI DOMIZIO GIULIO vs (u13m) GUIDOLIN o PASSARINI o CAVELLI P. BARBALI o GRASSI vs (u11m) UBINI o CORSI",
-                "09/07/2026; 19:30; 19:30 CALVELLI - MESSORA vs (u13m) CASTIGLIONE - SPADONI GAMBA - MOREGGIO vs (u13m) DI DOMIZIO - PASSARINI"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 16:30; 1 Inizio ore: 16:30 Singolare Maschile Open LIM. 4.NC - 3.1 DEFONTE RICCARDO o MORETTI FLAVIO vs BOSINCIANU RAZVAN NECULAI",
-                "09/07/2026; 17:30; 2 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 MAGGI EDOARDO vs FATIGATI ALESSANDRO o BALDINI STEFANO",
-                "09/07/2026; 18:00; 3 Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 MOTTOLESE CHIARA vs GRIECO ROBERTA Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 DE MONTE ALESSANDRA vs GUERRINI MARZIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 18:00; 1 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 GRILLI ANTIMO vs PILO LUIGI",
-                "08/07/2026; 19:30; 2 Dopo riposo, non prima delle: 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 SANTILLI ANSELMO vs RANALLI SERGIO",
-                "08/07/2026; 21:00; 3 Dopo riposo, non prima delle: 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 COCCO FABIO vs DICHIARA FEDERICO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 18:00; 1 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 COLETTI MAURIZIO vs BARBIERI VALERIO",
-                "09/07/2026; 19:30; 2 Dopo riposo, non prima delle: 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 DIAMILLA PAOLO vs DE MARCO GIANLUCA",
-                "09/07/2026; 21:00; 3 Dopo riposo, non prima delle: 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 MENICHICCHI FABRIZIO vs ARCANGELI GIORGIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 09:00; 09:00 DIANDA DUCCIO vs LATINI GABRIELE BARTOLINI KIMMERLE LUCAS vs GAGGI MATTIA DIANA GIANMARCO vs MICHELI LORENZO vs vs vs",
-                "08/07/2026; 10:30; 10:30 STORCHI EDOARDO vs BRUZZI VALENTINO LEONARDI GINEVRA vs PAOLINI SIRIA LENZI OLIMPIA vs MORONI ANNA vs vs vs",
-                "08/07/2026; 12:30; 12:30 BRUNI GIULIO vs BONANNI JACOPO CATALANO MICHELE vs CELLESI ENIO BENVENUTI ALESSANDRO vs D’IAPICO EDOARDO DAVIES THOMAS vs MELLO GIACOMO BRUNI GUIDO vs BERTASI TOMMASO MARTINI GIULIO vs MOSCHINI TOMMASO",
-                "08/07/2026; 15:00; 15:00 MANGANO SOFIA vs NOVATI CARLOTTA BARTOLINI/LATINI vs MICHELI/BRUZZI o RIMBOTTI/PALAZZO AMULETI/COLOMBARINI vs DIANDA/ZOMPA vs vs vs",
-                "08/07/2026; 16:30; 16:30 VIVI VICTORIA vs PENNISI LINDA SERRA ZANETTI/TAGLIAFERRI vs PECORINI/PARAZZA o SPINELLI/GORGONI VINCENZI/CORSINI o BESUSSO/GAGGI vs DIANA/STORCHI vs vs vs",
-                "08/07/2026; 17:30; 17:30 SEGHI/NOVATI vs DI BEO/MANGANO ALIFREDI/SPINELLI vs MOSCHINI/BALLI o CANDOLFO/BERTASI CELLESI/BENVENUTI o BAGNOLI/LOMBARDI vs BONANNI/BARBANTI o FERRARI L./MARINELLI vs vs vs",
-                "08/07/2026; 17:00; 07/07/2026 H. 17:00 ARIANNA SARCHI"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 10:30; INIZIO 10:30 vs vs Ricciardello Lorenzo vs Ventimiglia Gabriele vs vs vs",
-                "08/07/2026; 13:00; 13:00 FAILLA IRENE vs MONCADA GAIA MINEO BENEDETTA vs PIVETTI GAGLIARDI LUDOVICA Romano Elia vs Pira Alessandro TERESA SVEVA vs MORMINNO ALESSANDRA Corazzato Giulio-Schiavo Samuele vs Di Noto Jacopo-GenuaGiuseppe vs",
-                "08/07/2026; 14:30; 14:30 vs vs Trovato Gabriele vs d'Arpa Flavio vs vs vs",
-                "08/07/2026; 16:50; Gli ultimi incontri possono essere spostati 07/07/2026 ore 16:50 Salvatore Palumbo"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 10:30; 1 Inizio ore: 10:30 Singolare Femminile Under 13 PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA",
-                "09/07/2026; 13:00; 3 Inizio ore: 13:00 Singolare Maschile Under 11 GENUA GIUSEPPE vs CORAZZATO GIULIO Inizio ore: 13:00 Singolare Maschile Under 13 BONTEMPO LORENZO vs D'ARPA FLAVIO Inizio ore: 13:00 Singolare Maschile Under 13 RICCIARDELLO LORENZO vs ROMANO ELIA Inizio ore: 13:00 Singolare Maschile Under 11 SCHIAVO SAMUELE vs DI NOTO JACOPO Inizio ore: 13:00 Singolare Femminile Under 11 BONOMO ADELE vs CERAOLO PENELOPE LUNA",
-                "09/07/2026; 14:30; 4 Inizio ore: 14:30 Doppio Femminile Under 13 MORMINO ALESSANDRA e MINEO BENEDETTA vs FAILLA IRENE e TERESA SVEVA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 15:00; 1 Inizio ore: 15:00 Singolare Maschile Open Singolare Maschile Open vs FABIO CUPPITELLI Inizio ore: 15:00 Singolare Maschile Open Singolare Maschile Open vs GIULIO TANDURELLA Inizio ore: 15:00 Singolare Femminile Open Singolare Femminile Open MARA ANGELINI vs ALESSANDRA VARVARA'",
-                "08/07/2026; 16:30; 2 Inizio ore: 16:30 Singolare Maschile Open Singolare Maschile Open vs FRANCESCO SPERATI Inizio ore: 16:30 Singolare Femminile Open Singolare Femminile Open ALESSANDRA DE MONTE vs BENEDETTA GAIA MICCICHE' Inizio ore: 16:30 Singolare Maschile Open Singolare Maschile Open LORENZO PENTURELLI vs VALERIO POMPEO",
-                "08/07/2026; 18:00; 3 Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open vs GASPARE LONGO Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open vs BRUNO ZUDDAS Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open AUGUSTO LONGATTI vs FRANCESCO SALVATI",
-                "08/07/2026; 19:30; 4 Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open vs RICCARDO NUCCETELLI Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open SIMONE BARTUCCIO vs ROMAN BARBARULO Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open vs FRANCESCO PAOLO INVIDIATA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "data": "08/07/2026",
-            "partite": [
-                "08/07/2026; 18:00; 1 Inizio ore: 18:00 Singolare Maschile Open JACOPO ROCCHI vs FEDERICO PETRELLA Inizio ore: 18:00 Singolare Maschile Open JACOPO CORSETTI vs FABRIZIO FABRIZI"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
             "data": "08/07/2026",
@@ -150,6 +8,13 @@
                 "08/07/2026; 16:00; 1 Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 PERCIBALLI vs CALI' / MARINUCCI Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 BELLOCCO vs FABIANI",
                 "08/07/2026; 17:30; 2 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 FORATTINI / SALERNO vs ODDI Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 TIBUZZI vs VALCARENGHI",
                 "08/07/2026; 19:00; 3 Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 D'ATTINO vs MARTINI / MELIS Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 MANCIOCCHI / MANFREDINI vs BONVINI"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 18:00; 1 Inizio ore: 18:00 Singolare Maschile Open JACOPO ROCCHI vs FEDERICO PETRELLA Inizio ore: 18:00 Singolare Maschile Open JACOPO CORSETTI vs FABRIZIO FABRIZI"
             ]
         },
         {
@@ -168,6 +33,34 @@
                 "09/07/2026; 19:30; INIZIO 19:30 LODICO/BURN MARDOCK vs MILONE ANGELO MOCCIA/DI PIRRO vs IANNINO MARIA NERVI/ONGARO vs NARDELLI ENRICO RINALDI/FANELLI vs CHERBIB SKANDER CENTIONI/MONTALBANO vs PALMA ROSITA LIPPIELLO/RICCI vs MILONE ANDREA vs vs vs",
                 "09/07/2026; 21:00; 21:00 LADKANI/DE PASTOR vs PASCIUCCO MICHELE PRESTANICOLA/LAMPUS vs BRUSADELLI LUCIANO BRUNI/SIRAGUSA vs LA SPINA LIVIO MATHUGAMA/CRETAIO vs SERVODIO GIUSEPPE EFFICACE/CARIDI vs BOCCINI LEONARDO PROIETTI/ARRIGHI vs TESTA VITTORIO CRETAIO/LUCIANO vs TAMBONE LUCREZIA GIOVAGNOLI/REGA vs DI FABIO NICOLA FORNARI/IRTI vs TAMILIA ALESSIO",
                 "09/07/2026; 22:30; 22:30 GRAZIANI/VELLONE VS COCCIA RICCARDO INGARDIA/GIARRUSSO vs MARCHESINI ANDREA ELETTI MARCO vs TROIANI DANIELE PLACIDI FABRIZIO vs MAGRINI DANIELE RIBELLI/ANTONELLI vs MAGAZZU MARIO DI CONSIGLIO/ANTONINI vs MAZZA GENNARO SCOTTI/MECHELLI vs COSTANZO LORENZO vs vs"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 15:00; 1 Inizio ore: 15:00 Singolare Maschile Open Singolare Maschile Open vs FABIO CUPPITELLI Inizio ore: 15:00 Singolare Maschile Open Singolare Maschile Open vs GIULIO TANDURELLA Inizio ore: 15:00 Singolare Femminile Open Singolare Femminile Open MARA ANGELINI vs ALESSANDRA VARVARA'",
+                "08/07/2026; 16:30; 2 Inizio ore: 16:30 Singolare Maschile Open Singolare Maschile Open vs FRANCESCO SPERATI Inizio ore: 16:30 Singolare Femminile Open Singolare Femminile Open ALESSANDRA DE MONTE vs BENEDETTA GAIA MICCICHE' Inizio ore: 16:30 Singolare Maschile Open Singolare Maschile Open LORENZO PENTURELLI vs VALERIO POMPEO",
+                "08/07/2026; 18:00; 3 Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open vs GASPARE LONGO Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open vs BRUNO ZUDDAS Inizio ore: 18:00 Singolare Maschile Open Singolare Maschile Open AUGUSTO LONGATTI vs FRANCESCO SALVATI",
+                "08/07/2026; 19:30; 4 Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open vs RICCARDO NUCCETELLI Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open SIMONE BARTUCCIO vs ROMAN BARBARULO Inizio ore: 19:30 Singolare Maschile Open Singolare Maschile Open vs FRANCESCO PAOLO INVIDIATA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 15:00; 1 Inizio ore: 15:00 Singolare Maschile Open DI FEDERICO MATTIA o INVIDIATA FRANCESCO PAOLO vs PERRI TOMMASO Inizio ore: 15:00 Singolare Maschile Open BARTUCCIO SIMONE o BARBARULO ROMAN vs SEGAR ABINATH Inizio ore: 15:00 Singolare Maschile Open AMATO FRANCESCO vs SAPONARO UGO Inizio ore: 15:00 Singolare Femminile Open VARVARA' ALESSANDRA vs ALBO MARGHERITA",
+                "09/07/2026; 16:30; 2 Inizio ore: 16:30 Singolare Maschile Open CUPPITELLI FABIO vs CAPRARO GIANLUCA Inizio ore: 16:30 Singolare Maschile Open LONGATTI AUGUSTO o SALVATI FRANCESCO vs PALMA MASSIMILIANO Inizio ore: 16:30 Singolare Maschile Open MINEO GABRIELE vs BATTAGLIA EMILIO",
+                "09/07/2026; 18:00; 3 Inizio ore: 18:00 Singolare Maschile Open SPERATI FRANCESCO vs ESPOSITO ANDREA Inizio ore: 18:00 Singolare Maschile Open PENTURELLI LORENZO o POMPEO VALERIO vs SAMARASINGHALAGE AKASH Inizio ore: 18:00 Singolare Maschile Open QUARTICELLI SIMONE o LONGO GASPARE vs GIACOMANTONIO MATTEO",
+                "09/07/2026; 19:30; 4 Inizio ore: 19:30 Singolare Maschile Open LODDI GIANLUCA o NUCCETELLI RICCARDO vs CASTALDO ANDREA Inizio ore: 19:30 Singolare Maschile Open MARZI GUIZADO LEONARDO MICHELANGELO o ZUDDAS BRUNO vs LONGO ARTURO Inizio ore: 19:30 Singolare Femminile Open MICCICHE' BENEDETTA GAIA vs GRAZIANI EMMA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 17:00; 1 Inizio ore: 17:00 Singolare Maschile Open TURRIZIANI COLONNA SAVERIO vs MASI MANUEL Inizio ore: 17:00 Singolare Maschile Open QUERQUI CARLO vs SANTODONATO GIORDANO",
+                "09/07/2026; 19:00; 2 Dopo riposo, non prima delle: 19:00 Singolare Maschile Open CERRONI STEFANO vs VECCHI LUCA"
             ]
         }
     ]
