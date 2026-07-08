@@ -1,19 +1,16 @@
 import asyncio
+import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Scraper Definitivo ---")
+    print("--- [START] Scraper Definitivo - Separazione Giovanili/Open ---")
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        # Emuliamo un utente reale
-        context = await browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
-            viewport={'width': 1920, 'height': 1080}
-        )
+        context = await browser.new_context(viewport={'width': 1920, 'height': 1080})
         page = await context.new_page()
         
-        # 1. Navigazione
+        # Navigazione
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
         # Filtri
@@ -29,40 +26,58 @@ async def run_bot():
         await page.locator('#btn-search').click()
         await asyncio.sleep(5)
         
-        # Recupero URL
+        # Recupera URL
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
         
-        # 2. Ciclo Tornei
+        data_giov = []
+        data_open = []
+        
         for url in urls:
             try:
-                await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
-                await asyncio.sleep(3) # Pausa fissa per caricamento dati
+                full_url = f"https://www.fitp.it{url}"
+                await page.goto(full_url, wait_until="domcontentloaded")
+                await page.wait_for_selector(".cc-section-participants", timeout=10000)
                 
                 nome_torneo = await page.locator("h1.cc-title-main").first.text_content()
                 
-                # Prendiamo TUTTO quello che c'è nelle celle dei partecipanti
+                # ESTRAZIONE E FILTRO
                 raw_data = await page.locator(".cc-content-value").all_text_contents()
-                
-                # PULIZIA FEROCE: teniamo solo stringhe lunghe, niente date, niente euro, niente info tecniche
                 partecipanti = []
                 for item in raw_data:
-                    clean = item.strip()
-                    # Filtri per escludere date (xx/xx/xxxx), prezzi, info tecniche
-                    if len(clean) > 4 and "/" not in clean and "€" not in clean and "Si" != clean and "No" != clean:
-                        if clean not in partecipanti: # Evita duplicati
-                            partecipanti.append(clean)
+                    testo = item.strip()
+                    if (len(testo) > 3 and 
+                        "pdf" not in testo.lower() and 
+                        "scarica" not in testo.lower() and 
+                        "documento" not in testo.lower() and 
+                        "disponibile" not in testo.lower() and 
+                        "€" not in testo and 
+                        "/" not in testo and
+                        "singolare" not in testo.lower()):
+                        partecipanti.append(testo)
                 
-                # Output pulito
-                print(f"\nTORNEO: {nome_torneo.strip()}")
-                print("PARTECIPANTI:")
-                for p in partecipanti:
-                    print(f"- {p}")
-                print("-" * 40)
+                entry = {
+                    "torneo": nome_torneo.strip(),
+                    "iscritti": sorted(list(set(partecipanti)))
+                }
+                
+                # Logica di separazione (Giovanile vs Open)
+                if any(kw in nome_torneo.lower() for kw in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
+                    data_giov.append(entry)
+                else:
+                    data_open.append(entry)
                     
-            except Exception:
+            except Exception as e:
+                print(f"--- [INFO] Saltato torneo {url}: {e} ---")
                 continue
+
+        # Salvataggio file
+        with open("Iscritti_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(data_giov, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(data_open, f, ensure_ascii=False, indent=4)
                 
         await browser.close()
+        print("--- [END] Processo completato: File JSON generati ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
