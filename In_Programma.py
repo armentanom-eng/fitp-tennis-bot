@@ -7,32 +7,24 @@ async def run_bot():
         browser = await p.chromium.launch(headless=True)
         page = await browser.new_page()
         
-        # Navigazione semplificata
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei")
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         await asyncio.sleep(5)
         
-        # Filtri base (usiamo JS puro per sicurezza)
-        await page.evaluate("""() => {
-            document.querySelectorAll('button[data-id="select_status"]')[0].click();
-        }""")
-        await asyncio.sleep(1)
-        await page.evaluate("""() => {
-            document.querySelectorAll('span:contains("In programma")')[0].click();
-        }""")
-        # (Aggiungi qui gli altri filtri se necessari, ma teniamolo semplice per ora)
+        # Filtri (usiamo la forza bruta di Playwright invece di JS fallibile)
+        # Clicca il tasto stato
+        await page.locator('button[data-id="select_status"]').click()
+        # Clicca l'opzione (cerca il testo specifico)
+        await page.locator('span', has_text="In programma").click()
+        await asyncio.sleep(2)
         
-        await page.evaluate('document.getElementById("btn-search").click()')
+        # Clicca tasto cerca
+        await page.locator('#btn-search').click()
         await asyncio.sleep(5)
         
-        # Estrazione URL senza complicazioni
-        links = await page.evaluate("""() => {
-            return Array.from(document.querySelectorAll('a[href*="Dettaglio-Competizione"]'))
-                        .map(a => a.href);
-        }""")
+        # Otteniamo gli URL
+        urls = await page.evaluate("() => Array.from(document.querySelectorAll('a[href*=\"Dettaglio-Competizione\"]')).map(a => a.href)")
+        unique_urls = list(set(urls))
         
-        unique_urls = list(set(links))
-        print(f"Trovati {len(unique_urls)} tornei")
-
         data_giov, data_open = [], []
 
         for url in unique_urls:
@@ -40,19 +32,17 @@ async def run_bot():
                 await page.goto(url)
                 await asyncio.sleep(3)
                 
-                # Estrazione testuale pura: ignoriamo bottoni e clic
-                # Prendiamo solo i nomi dei giocatori tramite i selettori CSS
-                nomi = await page.evaluate("""() => {
-                    return Array.from(document.querySelectorAll('.cc-content-value'))
-                                .map(el => el.innerText.trim())
-                                .filter(text => text.length > 3 && !text.includes('pdf') && !text.includes('€'));
+                # Estrazione dati in JavaScript nativo (compatibile)
+                risultato = await page.evaluate("""() => {
+                    const titoli = document.querySelectorAll('.cc-content-value');
+                    const nomi = Array.from(titoli).map(el => el.innerText.trim());
+                    const titoloTorneo = document.querySelector('h1')?.innerText || 'Sconosciuto';
+                    return { titolo: titoloTorneo, partecipanti: nomi.filter(n => n.length > 3 && !n.includes('pdf')) };
                 }""")
                 
-                nome_torneo = await page.evaluate('document.querySelector("h1")?.innerText || "Sconosciuto"')
+                entry = {"torneo": risultato['titolo'], "iscritti": list(set(risultato['partecipanti']))}
                 
-                entry = {"torneo": nome_torneo, "iscritti": list(set(nomi))}
-                
-                if "under" in nome_torneo.lower():
+                if "under" in risultato['titolo'].lower():
                     data_giov.append(entry)
                 else:
                     data_open.append(entry)
