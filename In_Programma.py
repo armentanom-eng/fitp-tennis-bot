@@ -3,84 +3,93 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [LOG: AVVIO] ---")
+    print("--- [START] Avvio bot con logica collaudata ---")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox", "--disable-blink-features=AutomationControlled"])
+        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
-        await context.add_init_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
         page = await context.new_page()
         
-        print("--- [LOG: Navigazione] ---")
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei")
-        await asyncio.sleep(8)
+        print("--- Navigazione portale FITP ---")
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # FILTRI (Uso di wait_for_load_state per stabilità)
-        print("--- [LOG: Applicazione Filtri] ---")
-        async def set_filter(btn_id, option_text):
-            await page.locator(f'button[data-id="{btn_id}"]').click()
-            await page.locator(f'span:text-is("{option_text}")').last.click()
-            await asyncio.sleep(1)
-
-        await set_filter("select_status", "In programma")
-        await set_filter("id_regioneSearch", "Lazio")
-        await set_filter("id_provinciaSearch", "Roma")
+        # FILTRI (Uso di selettori stabili come nel codice testato)
+        print("--- Impostazione Filtri ---")
+        await page.click('button[data-id="select_status"]')
+        await page.locator('span:text-is("In programma")').last.click()
         
-        await page.locator('#btn-search').click()
+        await page.click('button[data-id="id_regioneSearch"]')
+        await page.locator('span:text-is("Lazio")').last.click()
+        
+        await page.click('button[data-id="id_provinciaSearch"]')
+        await page.locator('span:text-is("Roma")').last.click()
+        
+        await page.click('#btn-search')
         await asyncio.sleep(5)
         
-        # Caricamento dinamico
-        print("--- [LOG: Caricamento lista tornei...] ---")
+        # CARICAMENTO LISTA
+        print("--- Caricamento totale lista tornei ---")
         while True:
-            btn = await page.query_selector('button#btn-loadMore')
-            if btn and await btn.is_visible():
+            btn = page.locator("button#btn-loadMore")
+            if await btn.is_visible():
+                print("    -> Trovato 'Carica altri', clicco...")
                 await btn.click()
+                await page.wait_for_load_state("networkidle")
                 await asyncio.sleep(3)
-            else: break
+            else:
+                print("    -> Lista completa caricata.")
+                break
         
-        urls = await page.evaluate('Array.from(document.querySelectorAll("a[href*=\'Dettaglio-Competizione\']")).map(a => a.href)')
-        unique_urls = list(set(urls))
-        print(f"--- [LOG: Trovati {len(unique_urls)} tornei] ---")
+        # ESTRAZIONE URL
+        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+        urls = list(set([await loc.get_attribute("href") for loc in locators]))
+        print(f"--- Trovati {len(urls)} tornei. Inizio estrazione dati. ---")
         
-        data_open, data_giov = [], []
+        dati_giov = {"tornei": []}
+        dati_open = {"tornei": []}
         
-        for url in unique_urls:
+        for url in urls:
+            full_url = f"https://www.fitp.it{url}" if url.startswith('/') else url
             try:
-                await page.goto(url)
-                await asyncio.sleep(3)
-                nome = await page.evaluate('document.querySelector(".cc-title-main")?.innerText.trim() || "Torneo"')
-                print(f"--- [LOG: Analisi: {nome[:25]}] ---")
+                await page.goto(full_url, wait_until="networkidle")
                 
-                # RE-SCANSIONE dei bottoni ad ogni giro per evitare errori di riferimento
-                cat_indices = range(len(await page.query_selector_all('text=Dettaglio >')))
-                dettagli = []
+                # Numero di bottoni Dettaglio presenti
+                dettagli = page.locator("text=Dettaglio >")
+                count = await dettagli.count()
+                print(f"--- Analisi: {full_url} ({count} categorie) ---")
                 
-                for i in cat_indices:
-                    # Recupera lista fresca dei bottoni
-                    btns = await page.query_selector_all('text=Dettaglio >')
-                    cat_nome = await btns[i].evaluate("el => el.parentElement.innerText.split('Dettaglio')[0].trim()")
+                for i in range(count):
+                    btn = page.locator("text=Dettaglio >").nth(i)
+                    cat_nome = await btn.evaluate("el => el.parentElement.innerText.split('Dettaglio')[0].trim()")
                     
-                    await btns[i].click()
-                    await asyncio.sleep(3)
+                    await btn.click()
+                    await page.wait_for_load_state("networkidle")
                     
-                    nomi = await page.evaluate("""() => Array.from(document.querySelectorAll('.cc-content-value')).map(el => el.innerText.trim()).filter(t => /^[A-Z\s'À-ÖØ-öø-ÿ]+$/.test(t) && t.length > 3)""")
-                    dettagli.append({"categoria": cat_nome, "partecipanti": sorted(list(set(nomi)))})
-                    print(f"    -> {cat_nome}: {len(nomi)} iscritti")
+                    # Estrazione nomi
+                    nomi = await page.evaluate("""() => Array.from(document.querySelectorAll('.cc-content-value'))
+                        .map(el => el.innerText.trim())
+                        .filter(t => /^[A-Z\s'À-ÖØ-öø-ÿ]+$/.test(t) && t.length > 3)""")
+                    
+                    entry = {"torneo": full_url, "categoria": cat_nome, "iscritti": sorted(list(set(nomi)))}
+                    
+                    if any(k in cat_nome.lower() for k in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
+                        dati_giov["tornei"].append(entry)
+                    else:
+                        dati_open["tornei"].append(entry)
                     
                     await page.go_back()
-                    await asyncio.sleep(3)
-                
-                entry = {"torneo": nome, "dettagli": dettagli}
-                if any(k in nome.lower() for k in ["under", "u10", "u12", "u14", "u16", "giovanile"]): data_giov.append(entry)
-                else: data_open.append(entry)
+                    await page.wait_for_load_state("networkidle")
             except Exception as e:
-                print(f"--- [LOG: ERRORE su {url}] ---")
+                print(f"    ! Errore su {full_url}: {e}")
                 continue
-
-        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(data_open, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(data_giov, f, ensure_ascii=False, indent=4)
         
-        print("--- [LOG: FINE] ---")
+        # SALVATAGGIO
+        with open("Iscritti_Giovanili.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giov, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+            
         await browser.close()
+        print("--- [END] Processo completato. File salvati. ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
