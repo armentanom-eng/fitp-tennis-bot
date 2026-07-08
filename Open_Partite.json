@@ -1,168 +1,76 @@
 {
-    "report_data": "08/07/2026 15:26",
+    "report_data": "08/07/2026 15:57",
     "tornei": [
         {
-            "nome": "1° TORNEO MEMORIOL TIZZONE GIUSEPPE",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "08/07/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; GRILLI ANTIMO; PILO LUIGI"
-                    ]
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "09/07/2026; 18:00; Singolare Maschile Open; LIM. 4.NC - 3.1; COLETTI MAURIZIO; BARBIERI VALERIO"
-                    ]
-                }
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 18:00; N/A; 1"
             ]
         },
         {
-            "nome": "TORNEO SING. M/F LIM. III CAT.",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4A32ECBF-8EF1-4F8A-8B72-25F84D97CCF9",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite non trovate"
-                }
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 18:00; N/A; 1"
             ]
         },
         {
-            "nome": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 13:00; N/A; "
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 13:00; N/A; "
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 10:30; N/A; 1",
+                "09/07/2026; 13:00; N/A; 3",
+                "09/07/2026; 14:30; N/A; 4"
+            ]
+        },
+        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "09/07/2026; 16:30; Singolare Maschile Open; LIM. 4.NC - 3.1; DEFONTE RICCARDO o MORETTI FLAVIO; BOSINCIANU RAZVAN NECULAI",
-                        "09/07/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; MAGGI EDOARDO; FATIGATI ALESSANDRO o BALDINI STEFANO",
-                        "09/07/2026; 18:00; Singolare Femminile Open; LIM. 4.NC - 3.1; MOTTOLESE CHIARA; GRIECO ROBERTA",
-                        "09/07/2026; 18:00; Singolare Femminile Open; LIM. 4.NC - 3.1; DE MONTE ALESSANDRA; GUERRINI MARZIA"
-                    ]
-                }
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 16:30; N/A; 1",
+                "09/07/2026; 17:30; N/A; 2",
+                "09/07/2026; 18:00; N/A; 3"
             ]
         },
         {
-            "nome": "Zeppieri TT \" 15°Memorial Fernando Zeppieri\" € 1000",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C7B7AE3B-57FB-46FF-B53E-482FCDCC2F11",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO SERALE \"I SERALI MCDONALD'S\" - GARDEN VILLAGE",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=46DE6156-4C1A-405A-ADE1-487330D1FA04",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "3 TAPPA OPEN DECATHLON TENNIS CUP",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "08/07/2026; 15:00; Singolare Maschile Open Singolare Maschile Open;; FABIO CUPPITELLI",
-                        "08/07/2026; 15:00; Singolare Maschile Open Singolare Maschile Open;; GIULIO TANDURELLA",
-                        "08/07/2026; 15:00; Singolare Femminile Open Singolare Femminile Open; MARA ANGELINI; ALESSANDRA VARVARA'",
-                        "08/07/2026; 16:30; Singolare Maschile Open Singolare Maschile Open;; FRANCESCO SPERATI",
-                        "08/07/2026; 16:30; Singolare Femminile Open Singolare Femminile Open; ALESSANDRA DE MONTE; BENEDETTA GAIA MICCICHE'",
-                        "08/07/2026; 16:30; Singolare Maschile Open Singolare Maschile Open; LORENZO PENTURELLI; VALERIO POMPEO",
-                        "08/07/2026; 18:00; Singolare Maschile Open Singolare Maschile Open;; GASPARE LONGO",
-                        "08/07/2026; 18:00; Singolare Maschile Open Singolare Maschile Open;; BRUNO ZUDDAS",
-                        "08/07/2026; 18:00; Singolare Maschile Open Singolare Maschile Open; AUGUSTO LONGATTI; FRANCESCO SALVATI",
-                        "08/07/2026; 19:30; Singolare Maschile Open Singolare Maschile Open;; RICCARDO NUCCETELLI",
-                        "08/07/2026; 19:30; Singolare Maschile Open Singolare Maschile Open; SIMONE BARTUCCIO; ROMAN BARBARULO",
-                        "08/07/2026; 19:30; Singolare Maschile Open Singolare Maschile Open;; FRANCESCO PAOLO INVIDIATA"
-                    ]
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 15:00; N/A; 1",
+                "08/07/2026; 16:30; N/A; 2",
+                "08/07/2026; 18:00; N/A; 3",
+                "08/07/2026; 19:30; N/A; 4"
             ]
         },
         {
-            "nome": "BT Pay - Torneo Serale - by Sporfie",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "08/07/2026; 18:00; Singolare Maschile Open; JACOPO ROCCHI; FEDERICO PETRELLA",
-                        "08/07/2026; 18:00; Singolare Maschile Open; JACOPO CORSETTI; FABRIZIO FABRIZI"
-                    ]
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 3^ Tappa",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "08/07/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; PERCIBALLI; CALI' / MARINUCCI",
-                        "08/07/2026; 16:00; Singolare Maschile Open; LIM. 4.NC - 3.1; BELLOCCO; FABIANI",
-                        "08/07/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; FORATTINI / SALERNO; ODDI",
-                        "08/07/2026; 17:30; Singolare Maschile Open; LIM. 4.NC - 3.1; TIBUZZI; VALCARENGHI",
-                        "08/07/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; D'ATTINO; MARTINI / MELIS",
-                        "08/07/2026; 19:00; Singolare Maschile Open; LIM. 4.NC - 3.1; MANCIOCCHI / MANFREDINI; BONVINI"
-                    ]
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 16:00; N/A; 1",
+                "08/07/2026; 17:30; N/A; 2",
+                "08/07/2026; 19:00; N/A; 3"
             ]
         },
         {
-            "nome": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite non trovate"
-                }
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 18:00; N/A; 1"
             ]
         }
     ]

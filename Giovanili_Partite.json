@@ -1,147 +1,50 @@
 {
-    "report_data": "08/07/2026 15:25",
+    "report_data": "08/07/2026 15:56",
     "tornei": [
         {
-            "nome": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5721FD91-EB09-4165-BB4B-2EBF3482E252",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 18:00; N/A; 1"
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SIBARI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
-            "date": [
-                {
-                    "data": "Info",
-                    "stato": "Nessuna data disponibile"
-                }
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 18:00; N/A; 1"
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP BRALLO",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=68EA1EB3-642A-4C6F-871F-8BB417B69F34",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SERRAMAZZONI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite non trovate"
-                }
-            ]
-        },
-        {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP CASTEL DI SANGRO",
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "08/07/2026; 13:00; N/A; ",
-                        "08/07/2026; 13:00; N/A; ",
-                        "08/07/2026; 13:00; N/A; ",
-                        "08/07/2026; 13:00; N/A; "
-                    ]
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "09/07/2026; 13:00; N/A; ",
-                        "09/07/2026; 13:00; N/A; ",
-                        "09/07/2026; 13:00; N/A; ",
-                        "09/07/2026; 13:00; N/A; "
-                    ]
-                }
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 13:00; N/A; "
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 13:00; N/A; "
+            ]
+        },
+        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Partite trovate",
-                    "partite": [
-                        "09/07/2026; 10:30; Singolare Femminile Under 13; PIVETTI GAGLIARDI LUDOVICA; MORMINO ALESSANDRA",
-                        "09/07/2026; 13:00; Singolare Maschile Under 11; GENUA GIUSEPPE; CORAZZATO GIULIO",
-                        "09/07/2026; 13:00; Singolare Maschile Under 13; BONTEMPO LORENZO; D'ARPA FLAVIO",
-                        "09/07/2026; 13:00; Singolare Maschile Under 13; RICCIARDELLO LORENZO; ROMANO ELIA",
-                        "09/07/2026; 13:00; Singolare Maschile Under 11; SCHIAVO SAMUELE; DI NOTO JACOPO",
-                        "09/07/2026; 13:00; Singolare Femminile Under 11; BONOMO ADELE; CERAOLO PENELOPE LUNA",
-                        "09/07/2026; 14:30; Doppio Femminile Under 13; MORMINO ALESSANDRA e MINEO BENEDETTA; FAILLA IRENE e TERESA SVEVA"
-                    ]
-                }
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 10:30; N/A; 1",
+                "09/07/2026; 13:00; N/A; 3",
+                "09/07/2026; 14:30; N/A; 4"
             ]
         },
         {
-            "nome": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
-            ]
-        },
-        {
-            "nome": "10^ Tappa XLVII Circuito del Tirreno \"GARDEN VILLAGE\"",
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "date": [
-                {
-                    "data": "08/07/2026",
-                    "stato": "Partite non trovate"
-                },
-                {
-                    "data": "09/07/2026",
-                    "stato": "Nessuna pianificazione disponibile"
-                }
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 16:30; N/A; 1",
+                "09/07/2026; 17:30; N/A; 2",
+                "09/07/2026; 18:00; N/A; 3"
             ]
         }
     ]
