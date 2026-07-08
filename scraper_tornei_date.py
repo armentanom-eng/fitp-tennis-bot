@@ -66,8 +66,8 @@ async def run_bot():
                 else:
                     dati_open["tornei"].append(entry)
         
-        with open("Tornei_Date_Giovanili.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Tornei_Date_Open.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
+        with open("Tornei_Date_Giovanili_In_Programma_PDF.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Tornei_Date_Open_In_Programa_Pdf.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
         
         await browser.close()
 
