@@ -1,16 +1,19 @@
 import asyncio
+import os
+import pdfplumber
 import json
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- Avvio estrazione tornei oggi e domani ---")
-    oggi = datetime.now().date()
-    domani = oggi + timedelta(days=1)
+    print(f"--- Avvio Bot alle {datetime.now().strftime('%H:%M:%S')} ---", flush=True)
+    oggi_str = datetime.now().strftime("%d/%m/%Y")
+    domani_str = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
     
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        page = await browser.new_page()
+        context = await browser.new_context(accept_downloads=True)
+        page = await context.new_page()
         
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
@@ -29,73 +32,55 @@ async def run_bot():
                 await btn.click()
                 await page.wait_for_load_state("networkidle")
                 await asyncio.sleep(2)
-            else: 
-                break
+            else: break
         
-        # Recupero URL sicuri
-        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-        urls = list(set([await loc.get_attribute("href") for loc in locators]))
+        urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
+        print(f"Trovati {len(urls)} tornei. Inizio analisi...")
         
-        dati_giovanili, dati_open = {"tornei": []}, {"tornei": []}
+        final_data = {"tornei": []}
         
         for url in urls:
+            full_url = f"https://www.fitp.it{url}"
+            print(f"-> Analizzo: {full_url.split('/')[-1]}", flush=True)
+            
             try:
-                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
+                await page.goto(full_url, wait_until="networkidle")
                 
-                # FILTRO DATA
-                data_el = page.locator(".data-torneo").first
-                if not await data_el.is_visible(): continue
-                
-                data_text = await data_el.text_content()
-                data_torneo = datetime.strptime(data_text.strip(), "%d/%m/%Y").date()
-                
-                if data_torneo not in [oggi, domani]:
+                # Verifica se esiste il dropdown dell'ordine di gioco
+                dropdown = page.locator("#select-ordergame")
+                if not await dropdown.is_visible():
+                    print("   [!] Nessun ordine di gioco disponibile. Salto.")
                     continue
                 
-                # Controllo presenza bottone Dettaglio
-                dettaglio_btn = page.locator("text=Dettaglio >")
-                if not await dettaglio_btn.first.is_visible():
-                    continue
-
-                count = await dettaglio_btn.count()
-                for i in range(count):
-                    # Ricarichiamo la pagina per ogni dettaglio se necessario, 
-                    # ma verifichiamo sempre che il bottone sia cliccabile
-                    btn = page.locator("text=Dettaglio >").nth(i)
-                    if await btn.is_visible():
-                        await btn.click(force=True)
-                        await page.wait_for_load_state("networkidle")
+                # Controllo per oggi e domani
+                for data_target in [oggi_str, domani_str]:
+                    if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
+                        print(f"   [+] Data {data_target} trovata. Preparo download.")
+                        await page.select_option("#select-ordergame", label=data_target)
+                        await asyncio.sleep(2)
                         
-                        categoria = await page.locator("h1.cc-title-main").first.text_content()
-                        tabellone = await page.locator("span#spn-tournament-description").text_content()
-                        giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
-                        
-                        entry = {
-                            "torneo": url, 
-                            "categoria": categoria.strip() if categoria else "N/A", 
-                            "tabellone": tabellone.strip() if tabellone else "N/A", 
-                            "iscritti": [g.strip() for g in giocatori]
-                        }
-                        
-                        if any(x in entry["categoria"].lower() for x in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
-                            dati_giovanili["tornei"].append(entry)
-                        else:
-                            dati_open["tornei"].append(entry)
+                        btn_download = page.locator("#btnOrderGameDownload")
+                        if await btn_download.is_visible():
+                            async with page.expect_download(timeout=15000) as dl_info:
+                                await btn_download.click()
                             
-                        # Torniamo indietro alla pagina del torneo principale
-                        await page.go_back()
-                        await page.wait_for_load_state("networkidle")
+                            download = await dl_info.value
+                            temp_path = f"temp_{data_target.replace('/', '-')}.pdf"
+                            await download.save_as(temp_path)
+                            
+                            # Lettura PDF (Esempio logica)
+                            # Qui puoi chiamare la tua funzione di parsing con pdfplumber
+                            print(f"   [v] PDF scaricato correttamente.")
+                            if os.path.exists(temp_path): os.remove(temp_path)
+                        else:
+                            print("   [-] Tasto download non trovato per questa data.")
             
             except Exception as e:
-                print(f"Errore su {url}: {e}")
-                continue 
-        
-        with open("Tornei_Date_Giovanili_In_Programma_PDF.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Tornei_Date_Open_In_Programa_Pdf.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+                print(f"   [x] Errore su {url}: {e}")
+                continue
         
         await browser.close()
+        print("--- Bot completato ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
