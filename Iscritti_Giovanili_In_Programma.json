@@ -1,3 +1,125 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "MARCO LAPOLLA3.5",
+                "ELIA AMBROSINI4.2",
+                "GIORDANO FRATARCANGELI4.4",
+                "STEFANO TURRIZIANI3.4",
+                "GIORGIO TURCHETTI4.6",
+                "MARCO CATERINA3.4",
+                "LORENZO GROSSI4.6",
+                "MATTIA AGNETELLI4.1",
+                "FEDERICO MAGGI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "TOMMASO OLIVIERI3.5",
+                "ALESSANDRO FONTANA4.3",
+                "SAMUELE BIANCHI4.1",
+                "TOMMASO LUCA'4.3",
+                "MARZIO VENTRE4.NC",
+                "LUCA GROSSI4.5",
+                "STEFANO  SOAVE4.NC",
+                "JACOPO COLLEPARDI4.5",
+                "MATTEO DI RUZZA4.3",
+                "LUCA MATRUNDOLA4.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "GIUSEPPE LAUDONIA4.NC",
+                "MICHELANGELO BARTOLOMUCCI4.NC",
+                "TOMMASO COLARULLO4.NC",
+                "STEFANO DELLA SMIRRA4.NC",
+                "LEONARDO SARDELLI4.NC",
+                "ALESSANDRO MARSOCCI4.NC",
+                "EMANUELE BIASIUCCI4.NC",
+                "MATTEO  FRABOTTA 4.NC",
+                "FEDERICO BALDI4.NC",
+                "GABRIEL DI SARRA4.NC",
+                "ALBERTO FAUSTINELLA4.NC",
+                "DIEGO DI RUZZA4.NC",
+                "ALESSANDRO QUATTROCIOCCHI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "FRANCESCO IPPOLITI3.5",
+                "DARIO LAPOLLA3.2",
+                "LEONARDO MIZZONI3.2",
+                "EMILIANO VALVANI3.3",
+                "FRANCESCO VENTURA4.2",
+                "DANIELE FONZI3.2",
+                "LUCA ARCESE4.2",
+                "EDOARDO IMPERIA3.4",
+                "STEFANO TURRIZIANI3.4",
+                "GIANMARCO DE BLASIS3.5",
+                "LEONARDO RONZANI4.1",
+                "MATTEO PARIS4.1",
+                "SAMUEL DAVID TESTA3.4",
+                "EDOARDO MONTINARO4.3",
+                "FILIPPO SERESINI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "AURORA BIANCHI4.NC",
+                "ISABEL ALFANO4.NC",
+                "SVEVA PRILI4.NC",
+                "CECILIA MASTROPIETRO4.NC",
+                "VITTORIA LOMBARDI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "ELENA QUAGLIOZZI4.4",
+                "NOEMI PAOLUCCI4.3",
+                "AZZURRA POMPEO4.5",
+                "DIANA LISI4.5",
+                "CAROLA FORTE4.4",
+                "GIULIA MISSORI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "LUCIA BRACAGLIA4.6",
+                "MARTINA QUAGLIOZZI4.5",
+                "EMMA BOSCARINI4.5",
+                "GRETA SIMEONI4.5",
+                "GIORGIA DE ANGELIS4.5",
+                "ALESSIA  POLSINELLI 4.NC",
+                "ALICE STRABIOLI4.NC",
+                "BEATRICE CITTARELLI4.4",
+                "LUDOVICA VILONNA4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B0E5B276-1ECD-4247-AE5C-62035B432B9E",
+            "categoria": "MASTER GIOVANILE 3^ CIRCUITO \"FEDERICI SPORT\"",
+            "iscritti": [
+                "ALICE VELLUTI3.1",
+                "BENEDETTA SANTESARTI4.5",
+                "LAURA POCCIA4.5",
+                "CAMILLA FONZI3.5",
+                "SOFIA ROTONDI4.2",
+                "GIULIA MISSORI4.1"
+            ]
+        }
+    ]
 }
