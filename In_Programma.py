@@ -3,14 +3,16 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione totale con Tabellone Corretto ---")
+    print("--- [START] Avvio estrazione totale con espansione lista ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
-        page.set_default_timeout(15000)
+        page.set_default_timeout(20000)
         
         # Navigazione iniziale
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+        
+        # Filtri
         await page.click('button[data-id="select_status"]')
         await page.locator('span:text-is("In programma")').last.click()
         await page.click('button[data-id="id_regioneSearch"]')
@@ -19,6 +21,19 @@ async def run_bot():
         await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
+        
+        # --- CICLO ESPANSIONE LISTA (CARICA ALTRI) ---
+        print("--- Caricamento totale lista tornei in corso... ---")
+        while True:
+            btn_load_more = page.locator("button#btn-loadMore")
+            if await btn_load_more.is_visible():
+                print("    -> Trovato 'Carica altri', espando...")
+                await btn_load_more.click()
+                await page.wait_for_load_state("domcontentloaded")
+                await asyncio.sleep(2) # Pausa di sicurezza
+            else:
+                print("    -> Lista completa caricata.")
+                break
         
         # Recupero lista URL tornei
         locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
@@ -81,7 +96,4 @@ async def run_bot():
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [END] Processo completato. ---")
-
-if __name__ == "__main__":
-    asyncio.run(run_bot())
+        print("--- [END] Processo complet
