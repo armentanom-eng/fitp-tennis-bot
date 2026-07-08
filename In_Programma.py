@@ -3,89 +3,63 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [LOG] START: Avvio bot In_Programma ottimizzato ---")
+    print("--- [LOG] START: Avvio bot In_Programma correzione selettori ---")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/126.0.0.0")
-        page = await context.new_page()
+        browser = await p.chromium.launch(headless=True)
+        page = await browser.new_page()
         
-        print("--- [LOG] Navigazione a Ricerca-tornei ---")
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # Filtri
+        # Filtri (confermato dai tuoi screen)
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-        await asyncio.sleep(2)
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
-        # Caricamento lista
+        # Caricamento
         while await page.locator("button#btn-loadMore").is_visible():
             await page.click("button#btn-loadMore")
             await asyncio.sleep(2)
         
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-        print(f"--- [LOG] Trovati {len(urls)} tornei ---")
         
-        dati_iscritti_giov, dati_iscritti_open = {"tornei": []}, {"tornei": []}
-        dati_partite_giov, dati_partite_open = {"tornei": []}, {"tornei": []}
+        dati_iscritti_open, dati_partite_open = {"tornei": []}, {"tornei": []}
         
         for url in urls:
             full_url = f"https://www.fitp.it{url}"
-            print(f"--- [LOG] Analisi: {full_url} ---")
-            await page.goto(full_url, wait_until="domcontentloaded")
+            await page.goto(full_url, wait_until="networkidle")
             
-            # Seleziona data una sola volta per torneo
-            select = page.locator("select#select-ordergame")
-            if await select.is_visible():
-                await select.select_option(index=-1)
-                await asyncio.sleep(1)
+            # --- CORREZIONE SELETTORI ---
+            # 1. Recupero Nomi (usiamo il container dei partecipanti che hai fotografato)
+            # Dallo screen 18.57.53, i nomi sono dentro elementi .cc-field o simili
+            nomi = await page.locator(".cc-content-value .cc-title, .cc-field span.cc-title").all_text_contents()
             
-            # Recuperiamo i bottoni visibili
-            btns = page.locator("span:has-text('Dettaglio >')")
-            count = await btns.count()
+            # 2. Recupero PDF (dallo screen 18.55.01 il bottone ha id="btnOrderGameDownload")
+            # Ma ora usiamo un selettore che intercetta meglio l'href
+            pdf_link = await page.locator("a#btnOrderGameDownload").get_attribute("href")
             
-            for i in range(count):
-                btn = btns.nth(i)
-                if await btn.is_visible():
-                    print(f"--- [LOG] Clicco bottone {i} ---")
-                    await btn.click(force=True)
-                    await asyncio.sleep(2) # Pausa ridotta per velocità
-                    
-                    cat_name = await page.locator("h1.cc-title-main").first.text_content()
-                    nomi = await page.locator(".cc-content-value .cc-title").all_text_contents()
-                    pdf_btn = page.locator("a#btnOrderGameDownload")
-                    link_pdf = await pdf_btn.get_attribute("href") if await pdf_btn.count() > 0 else None
-                    
-                    entry_isc = {"torneo": url, "categoria": cat_name.strip(), "iscritti": [n.strip() for n in nomi if n.strip()]}
-                    entry_part = {"torneo": url, "categoria": cat_name.strip(), "partita_pdf": link_pdf}
-                    
-                    if any(x in cat_name for x in ["Under", "Giovanile", "U10", "U11", "U12", "U14", "U16"]):
-                        dati_iscritti_giov["tornei"].append(entry_isc)
-                        dati_partite_giov["tornei"].append(entry_part)
-                    else:
-                        dati_iscritti_open["tornei"].append(entry_isc)
-                        dati_partite_open["tornei"].append(entry_part)
-                    
-                    await page.go_back(wait_until="domcontentloaded")
-                    await asyncio.sleep(1)
-        
-        print("--- [LOG] Salvataggio JSON ---")
-        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
-            json.dump(dati_iscritti_giov, f, ensure_ascii=False, indent=4)
+            # Recupero Titolo Categoria
+            cat_name = await page.locator("h1.cc-title-main").first.text_content()
+            
+            entry_isc = {"torneo": url, "categoria": cat_name.strip(), "iscritti": [n.strip() for n in nomi if n.strip()]}
+            entry_part = {"torneo": url, "categoria": cat_name.strip(), "partita_pdf": pdf_link}
+            
+            dati_iscritti_open["tornei"].append(entry_isc)
+            dati_partite_open["tornei"].append(entry_part)
+            print(f"--- [LOG] Estratti {len(nomi)} nomi per {cat_name.strip()} ---")
+
+        # Salvataggio
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_iscritti_open, f, ensure_ascii=False, indent=4)
-        with open("Partite_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
-            json.dump(dati_partite_giov, f, ensure_ascii=False, indent=4)
         with open("Partite_Open_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_partite_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
-        print("--- [LOG] FINE: Processo concluso con successo ---")
+        print("--- [LOG] FINE: Salvataggio completato ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
