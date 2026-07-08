@@ -1,3 +1,47 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=133CA9A5-CCC8-49DC-8D8B-7204D3799CF8",
+            "categoria": "TC KIPLING - CIRCUITO \"I SERALI DI ROMA\" - 7° TAPPA - IV e III CAT. Singoli e Doppi",
+            "iscritti": [
+                "SIMONA CARROZZA4.3",
+                "EMMA BLASI4.2",
+                "VALENTINA RISI4.NC",
+                "CRISTIANA MASTROPIETRO4.3",
+                "NICOLETTA LUISA CASTIGLIONE4.1",
+                "ELISABETTA BERDINI4.NC",
+                "GIULIA DE ANGELIS3.5",
+                "ARIANNA CECCARELLI4.NC",
+                "CAMILLA FANTINELLI4.5",
+                "LAURA INNOCENTE4.5",
+                "DANIELA MUSTAZZA4.NC",
+                "ELISA MARIA NEGURA4.4",
+                "SILVIA REPERTORIO4.2",
+                "DEBORA DI TOMA4.6",
+                "FRANCESCA ROMANA ALLA4.NC",
+                "VALENTINA MELICIANI4.2",
+                "ALICE DI MATTEO3.3",
+                "CRISTINA FURFARO4.1",
+                "LUDOVICA CERTELLI4.1",
+                "ELISABETTA DE FAZI4.4",
+                "LISA MICHELETTI4.3",
+                "GIULIA ROMANA PROIETTI4.2",
+                "LUCREZIA CARLA TAMBONE4.5",
+                "SOFIA ROMAGNOLI4.NC",
+                "ANNA ESPOSITO4.2",
+                "SIMONA GAIAS4.1",
+                "MADDALENA WAS4.NC",
+                "SARA POLI4.2",
+                "ALICE STOPPONI4.3",
+                "ANTONELLA COLARIETI4.2",
+                "LAURA BALLA4.3",
+                "MARIA LUISA LISPI4.5",
+                "SILVIA EGIDI4.4",
+                "SARA DONZELLI4.4",
+                "EMMA SORRENTI4.1",
+                "TIZIANA ZANUSO4.2",
+                "VIRGINIA CECERE3.2"
+            ]
+        }
+    ]
 }
