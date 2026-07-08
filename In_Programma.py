@@ -1,6 +1,5 @@
 import asyncio
 import json
-import sys
 from playwright.async_api import async_playwright
 
 async def run_bot():
@@ -42,12 +41,11 @@ async def run_bot():
         
         for url in urls:
             try:
-                # Protezione: se la pagina non carica, saltiamo al prossimo torneo
-                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=30000)
-            except Exception as e:
-                print(f"    ! Timeout su {url}, salto al prossimo.", flush=True)
+                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=40000)
+            except Exception:
+                print(f"    ! Timeout critico su {url}, salto.", flush=True)
                 continue
-            
+
             try:
                 await page.get_by_role("button", name="Accetta").click(timeout=3000)
             except:
@@ -66,7 +64,7 @@ async def run_bot():
                     giocatori_locators = page.locator("a[href*='Pagina-Giocatore']")
                     
                     if await giocatori_locators.count() > 0:
-                        giocatori = [await el.text_content() for el in await giocatori_locators.all()]
+                        giocatori = [await el.text_content() for el in await giocatori_locatori.all()]
                         iscritti = [g.strip() for g in giocatori]
                     else:
                         iscritti = ["Nessun giocatore trovato"]
@@ -78,12 +76,16 @@ async def run_bot():
                     else:
                         dati_open["tornei"].append(entry)
                     
-                except Exception as e:
-                    print(f"    ! Categoria {i} non disponibile, salto.", flush=True)
+                except Exception:
+                    print(f"    ! Categoria {i} fallita, continuo...", flush=True)
                 
-                await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
+                # Ritorno alla base protetto
+                try:
+                    await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle", timeout=30000)
+                except Exception:
+                    break 
 
-            # Salvataggio di sicurezza dopo ogni torneo
+            # Salvataggio di sicurezza
             with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
                 json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
             with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
