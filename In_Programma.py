@@ -14,7 +14,7 @@ async def run_bot():
         context = await browser.new_context(user_agent="Mozilla/5.0")
         page = await context.new_page()
         
-        # Navigazione
+        # Navigazione iniziale
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         await page.click('button[data-id="select_status"]')
         await page.locator('span:text-is("In programma")').last.click()
@@ -35,25 +35,30 @@ async def run_bot():
                 log(f"Analizzo: {url[-10:]}")
                 await page.goto(url, wait_until="domcontentloaded")
                 
-                # Prendiamo tutti i bottoni dettaglio
+                # Controllo immediato: se è la pagina di errore, scappa
+                if await page.locator("text=non e' al momento disponibile").count() > 0:
+                    continue
+
+                # Cerca i bottoni dettaglio
                 dettagli = page.locator("text=Dettaglio >")
                 count = await dettagli.count()
                 
                 for i in range(count):
+                    # Clicca il bottone
                     btn = page.locator("text=Dettaglio >").nth(i)
                     await btn.click()
-                    await asyncio.sleep(3) # Pausa fissa per vedere la schermata
+                    await asyncio.sleep(3) 
                     
-                    # --- LETTURA TOTALE ---
-                    # Invece di cercare tag, leggiamo il corpo della pagina
-                    testo_pagina = await page.evaluate("document.body.innerText")
+                    # Estrai il nome della categoria e i partecipanti
                     cat = await page.locator("h1.cc-title-main").first.text_content()
                     
-                    # Salviamo tutto il contenuto trovato
+                    # Legge i partecipanti direttamente dal testo della pagina
+                    testo = await page.evaluate("document.body.innerText")
+                    
                     entry = {
                         "torneo": url, 
-                        "categoria": cat.strip() if cat else "N/A", 
-                        "testo_grezzo": testo_pagina[:500] # Prendiamo un estratto per sicurezza
+                        "categoria": cat.strip() if cat else "N/A",
+                        "partecipanti": testo # Qui finisce tutto quello che vede
                     }
                     
                     if any(k in entry["categoria"].lower() for k in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
@@ -64,7 +69,7 @@ async def run_bot():
                     await page.go_back()
                     await asyncio.sleep(2)
             except Exception as e:
-                log(f"Errore su {url}: {e}")
+                log(f"Saltato torneo: {e}")
                 continue
 
         with open("Iscritti_Giovanili.json", "w", encoding="utf-8") as f: json.dump(dati_giov, f, ensure_ascii=False, indent=4)
