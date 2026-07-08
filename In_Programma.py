@@ -3,59 +3,81 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
+    print("--- [START] Scraper Definitivo - Nomi Puliti ---")
+    
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        page = await browser.new_page()
+        context = await browser.new_context(viewport={'width': 1920, 'height': 1080})
+        page = await context.new_page()
         
+        # 1. Navigazione e Filtri
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
-        await asyncio.sleep(5)
-        
-        # Filtri (usiamo la forza bruta di Playwright invece di JS fallibile)
-        # Clicca il tasto stato
-        await page.locator('button[data-id="select_status"]').click()
-        # Clicca l'opzione (cerca il testo specifico)
-        await page.locator('span', has_text="In programma").click()
-        await asyncio.sleep(2)
-        
-        # Clicca tasto cerca
+        for filter_btn, option_text in [
+            ('button[data-id="select_status"]', "In programma"),
+            ('button[data-id="id_regioneSearch"]', "Lazio"),
+            ('button[data-id="id_provinciaSearch"]', "Roma")
+        ]:
+            await page.locator(filter_btn).click()
+            await page.locator(f'span:text-is("{option_text}")').last.click()
+            await asyncio.sleep(1)
+            
         await page.locator('#btn-search').click()
         await asyncio.sleep(5)
         
-        # Otteniamo gli URL
-        urls = await page.evaluate("() => Array.from(document.querySelectorAll('a[href*=\"Dettaglio-Competizione\"]')).map(a => a.href)")
-        unique_urls = list(set(urls))
+        # Recupera URL tornei
+        urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
         
-        data_giov, data_open = [], []
-
-        for url in unique_urls:
+        data_giov = []
+        data_open = []
+        
+        # 2. Ciclo di estrazione
+        for url in urls:
             try:
-                await page.goto(url)
-                await asyncio.sleep(3)
+                full_url = f"https://www.fitp.it{url}"
+                await page.goto(full_url, wait_until="domcontentloaded")
+                await page.wait_for_selector(".cc-section-participants", timeout=15000)
                 
-                # Estrazione dati in JavaScript nativo (compatibile)
-                risultato = await page.evaluate("""() => {
-                    const titoli = document.querySelectorAll('.cc-content-value');
-                    const nomi = Array.from(titoli).map(el => el.innerText.trim());
-                    const titoloTorneo = document.querySelector('h1')?.innerText || 'Sconosciuto';
-                    return { titolo: titoloTorneo, partecipanti: nomi.filter(n => n.length > 3 && !n.includes('pdf')) };
+                # ESTRAZIONE TITOLO PRECISA
+                nome_torneo_element = await page.query_selector("h1.cc-title-main")
+                nome_torneo = await nome_torneo_element.inner_text() if nome_torneo_element else "Torneo Sconosciuto"
+                
+                # ESTRAZIONE AGGRESSIVA NOMI
+                # Prende solo stringhe tutte maiuscole (esclude date, prezzi, "Scarica pdf")
+                nomi = await page.evaluate("""() => {
+                    return Array.from(document.querySelectorAll('.cc-content-value'))
+                                .map(el => el.innerText.trim())
+                                .filter(text => text.length > 3 
+                                                && text === text.toUpperCase() 
+                                                && !text.includes('PDF') 
+                                                && !text.includes('€')
+                                                && !text.includes('/'));
                 }""")
                 
-                entry = {"torneo": risultato['titolo'], "iscritti": list(set(risultato['partecipanti']))}
+                entry = {
+                    "torneo": nome_torneo.strip(),
+                    "iscritti": sorted(list(set(nomi)))
+                }
                 
-                if "under" in risultato['titolo'].lower():
+                # Separazione Giovanili vs Open
+                if any(kw in nome_torneo.lower() for kw in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
                     data_giov.append(entry)
                 else:
                     data_open.append(entry)
                     
-            except Exception:
+                print(f"--- [OK] Analizzato: {nome_torneo.strip()} ---")
+                    
+            except Exception as e:
+                print(f"--- [INFO] Saltato torneo {url}: {e} ---")
                 continue
 
+        # 3. Salvataggio JSON
         with open("Iscritti_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(data_giov, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(data_open, f, ensure_ascii=False, indent=4)
-        
+                
         await browser.close()
+        print("--- [END] Processo completato: File JSON pronti ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
