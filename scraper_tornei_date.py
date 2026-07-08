@@ -10,6 +10,10 @@ async def run_bot():
     oggi_str = datetime.now().strftime("%d/%m/%Y")
     domani_str = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
     
+    # Inizializzazione dati
+    dati_giovanili = {"tornei": []}
+    dati_open = {"tornei": []}
+    
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(accept_downloads=True)
@@ -37,8 +41,6 @@ async def run_bot():
         urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
         print(f"Trovati {len(urls)} tornei. Inizio analisi...")
         
-        final_data = {"tornei": []}
-        
         for url in urls:
             full_url = f"https://www.fitp.it{url}"
             print(f"-> Analizzo: {full_url.split('/')[-1]}", flush=True)
@@ -46,13 +48,16 @@ async def run_bot():
             try:
                 await page.goto(full_url, wait_until="networkidle")
                 
-                # Verifica se esiste il dropdown dell'ordine di gioco
+                # Identifica se è giovanile per dividere i dati
+                titolo = await page.locator("h1.cc-title-main").first.text_content()
+                is_giovanile = any(kw in (titolo or "").lower() for kw in ["under", "u10", "u12", "u14", "u16"])
+                target_list = dati_giovanili if is_giovanile else dati_open
+                
                 dropdown = page.locator("#select-ordergame")
                 if not await dropdown.is_visible():
                     print("   [!] Nessun ordine di gioco disponibile. Salto.")
                     continue
                 
-                # Controllo per oggi e domani
                 for data_target in [oggi_str, domani_str]:
                     if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                         print(f"   [+] Data {data_target} trovata. Preparo download.")
@@ -65,11 +70,12 @@ async def run_bot():
                                 await btn_download.click()
                             
                             download = await dl_info.value
-                            temp_path = f"temp_{data_target.replace('/', '-')}.pdf"
+                            temp_path = "temp_file.pdf"
                             await download.save_as(temp_path)
                             
-                            # Lettura PDF (Esempio logica)
-                            # Qui puoi chiamare la tua funzione di parsing con pdfplumber
+                            # Logica di salvataggio nel file corretto
+                            target_list["tornei"].append({"url": full_url, "data": data_target, "info": "PDF scaricato"})
+                            
                             print(f"   [v] PDF scaricato correttamente.")
                             if os.path.exists(temp_path): os.remove(temp_path)
                         else:
@@ -78,6 +84,12 @@ async def run_bot():
             except Exception as e:
                 print(f"   [x] Errore su {url}: {e}")
                 continue
+        
+        # Scrittura finale nei file richiesti
+        with open("Tornei_Date_Giovanili_In_Programma_PDF.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Tornei_Date_Open_In_Programa_Pdf.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
         
         await browser.close()
         print("--- Bot completato ---")
