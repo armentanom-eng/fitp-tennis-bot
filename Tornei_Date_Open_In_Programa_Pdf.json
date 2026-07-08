@@ -1,3 +1,39 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "data": "08/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
+            "data": "08/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
+            "data": "09/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "data": "08/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "data": "08/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "data": "09/07/2026",
+            "info": "PDF scaricato"
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
+            "data": "09/07/2026",
+            "info": "PDF scaricato"
+        }
+    ]
 }
