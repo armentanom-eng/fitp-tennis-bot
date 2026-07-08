@@ -1,3 +1,280 @@
-{
-    "tornei": []
-}
+[
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "Nessun documento",
+            "05/07/2026\n06/07/2026\nScarica",
+            "05/07/2026",
+            "19/07/2026",
+            "1400 €",
+            "Domenico Alessandro Cassisi",
+            "PIETRO COTRUZZOLA'"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "STEFANO BOTTINO",
+            "04/07/2026",
+            "Nessun documento",
+            "07/07/2026\n08/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "19/07/2026",
+            "1450 €",
+            "Angelo Molinari"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "1500 €",
+            "Moreno Preziosi",
+            "DANIELE PIERO PAOLINI",
+            "01/07/2026\n02/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\n07/07/2026\nScarica",
+            "Nessun documento",
+            "01/07/2026",
+            "19/07/2026"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "04/07/2026",
+            "Nessun documento",
+            "1200 €",
+            "08/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\n07/07/2026\nScarica",
+            "19/07/2026",
+            "ALVISE ALESSANDRO SEGATO",
+            "ANDREA ZUCCHINI"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "04/07/2026",
+            "Nessun documento",
+            "ANNA CRISCUOLO",
+            "18/07/2026",
+            "08/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "Mario Adriani",
+            "03/07/2026",
+            "07/07/2026\n08/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "16/07/2026"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "GAETANO DITTA",
+            "Nessun documento",
+            "5500 €",
+            "Nicola Barraco",
+            "05/07/2026",
+            "19/07/2026",
+            "06/07/2026\nScarica"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "1580 €",
+            "07/07/2026\n08/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "05/07/2026",
+            "19/07/2026",
+            "ALESSIO BUSTONE",
+            "23.000 €"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "Nessun documento",
+            "NADIA LO SANTO",
+            "05/07/2026",
+            "19/07/2026",
+            "10/07/2026\n07/07/2026\nScarica",
+            "FABIO DI PASQUALE"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "MAURIZIO SPOSATO",
+            "VINCENZO GHIRARDO",
+            "18/07/2026",
+            "06/07/2026",
+            "4000 €",
+            "07/07/2026\n08/07/2026\n06/07/2026\nScarica"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "04/07/2026",
+            "Nessun documento",
+            "04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "1000 €",
+            "Filippo Roggero",
+            "19/07/2026",
+            "VALTER SECONDO ROGGERO"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "MARIA ELENA DE PASCALE",
+            "GIOVANNA PALADINI",
+            "450 €",
+            "01/07/2026",
+            "12/07/2026",
+            "08/07/2026\n01/07/2026\n02/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "AMEDEO DE SANTIS",
+            "08/07/2026\n01/07/2026\n02/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\n07/07/2026\nScarica",
+            "15/07/2026",
+            "01/07/2026"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "1499 €",
+            "07/07/2026\n08/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "05/07/2026",
+            "19/07/2026",
+            "GRAZIA BRANCIFORTI",
+            "PAOLA MIRIAM MELFA"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "1500 €",
+            "04/07/2026",
+            "07/07/2026\n08/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "12/07/2026",
+            "Alessandro Ercolani",
+            "CORNELIA GARTNER"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "Nessun documento",
+            "02/07/2026",
+            "19/07/2026",
+            "DANIELE VIRGOLINI",
+            "500 €",
+            "SERENA CAMBISE",
+            "02/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\nScarica"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "04/07/2026\n05/07/2026\n06/07/2026\n08/07/2026\nScarica",
+            "04/07/2026",
+            "Nessun documento",
+            "1000 €",
+            "18/07/2026",
+            "FRANCESCO PICCOLO",
+            "Michele Romano"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "1499 €",
+            "19/07/2026",
+            "08/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "FRANCO STRACCIALINI",
+            "03/07/2026",
+            "PIETRO CELLI"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "ELISA DELLA TOFFOLA",
+            "08/07/2026\n06/07/2026\n07/07/2026\nScarica",
+            "Nessun documento",
+            "05/07/2026",
+            "19/07/2026",
+            "Renzo Emanuelli",
+            "300 €",
+            "7700 €"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "07/07/2026\n08/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "04/07/2026",
+            "Nessun documento",
+            "18/07/2026"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "Nessun documento",
+            "3000 €",
+            "19/07/2026",
+            "ROCCO TILOTTA",
+            "06/07/2026",
+            "06/07/2026\nScarica",
+            "Gennaro Caselli"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "ANNA CRISCUOLO",
+            "Morena D'atri",
+            "05/07/2026",
+            "19/07/2026",
+            "2500 €",
+            "Non ancora disponibile."
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "07/07/2026\n08/07/2026\n03/07/2026\n04/07/2026\n05/07/2026\n06/07/2026\nScarica",
+            "2000 €",
+            "MARCO CIARROCCHI",
+            "19/07/2026",
+            "03/07/2026"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "04/07/2026",
+            "Nessun documento",
+            "Paola Benatelli",
+            "MAURO GRANZOTTO",
+            "19/07/2026",
+            "4000 €",
+            "08/07/2026\n09/07/2026\n07/07/2026\nScarica",
+            "600 €"
+        ]
+    },
+    {
+        "torneo": "TORNEI FITP",
+        "iscritti": [
+            "05/07/2026\n06/07/2026\n08/07/2026\nScarica",
+            "MARIANO GAROZZO",
+            "05/07/2026",
+            "19/07/2026"
+        ]
+    }
+]
