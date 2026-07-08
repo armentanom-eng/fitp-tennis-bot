@@ -15,14 +15,15 @@ CATEGORIES = {
 STATUSES = ["In corso", "Iscrizioni aperte"]
 
 def format_line_for_swift(raw_text, date_target):
-    # Cerca l'orario nella riga estratta
-    match_time = re.search(r"(\d{2}:\d{2})", raw_text)
-    time = match_time.group(1) if match_time else "00:00"
-    
-    # Pulisce il testo e prepara il formato
+    # Pulisce il testo
     clean_text = raw_text.replace("\n", " ").strip()
     
-    # Ritorna la riga completa contenente nomi e orario
+    # Cerca l'orario
+    match_time = re.search(r"(\d{2}:\d{2})", clean_text)
+    time = match_time.group(1) if match_time else "00:00"
+    
+    # FORMATO: Data; Ora; Testo intero (con i ; l'App può splittare i nomi)
+    # Esempio: 08/07/2026; 16:00; Inizio ore: 16:00 Singolare Maschile...
     return f"{date_target}; {time}; {clean_text}"
 
 def get_pdf_info(pdf_path):
@@ -30,17 +31,13 @@ def get_pdf_info(pdf_path):
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
-                # Estrarre le tabelle è il modo migliore per prendere i nomi dei giocatori
                 tables = page.extract_tables()
                 for table in tables:
                     for row in table:
-                        # Unisce le celle della riga in una stringa, ignorando i valori None
                         row_text = " ".join([str(cell) for cell in row if cell])
-                        # Filtriamo per righe che sembrano contenere orari o partite
                         if any(x in row_text for x in ["Inizio", "Non prima", ":"]):
                             matches.append(row_text)
                 
-                # Backup: se non trova tabelle, estrae tutto il testo
                 if not matches:
                     text = page.extract_text()
                     if text:
