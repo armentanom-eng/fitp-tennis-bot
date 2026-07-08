@@ -1,5 +1,5 @@
 {
-    "report_data": "08/07/2026 17:20",
+    "report_data": "08/07/2026 19:56",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
@@ -9,12 +9,18 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
-            "data": "08/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "data": "09/07/2026",
             "partite": [
-                "08/07/2026; 16:00; 1 Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 PERCIBALLI vs CALI' / MARINUCCI Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 BELLOCCO vs FABIANI",
-                "08/07/2026; 17:30; 2 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 FORATTINI / SALERNO vs ODDI Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 TIBUZZI vs VALCARENGHI",
-                "08/07/2026; 19:00; 3 Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 D'ATTINO vs MARTINI / MELIS Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 MANCIOCCHI / MANFREDINI vs BONVINI"
+                "09/07/2026; 18:00; 1 Inizio ore: 18:00 Singolare Maschile Open COZZI MARIO vs D'ANDREA GIORGIO Inizio ore: 18:00 Singolare Maschile Open CORSETTI JACOPO vs CERQUOZZI MATTIA Inizio ore: 17:00 Singolare Maschile Open PETRELLA FEDERICO vs ARCHETTI MATTEO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 17:00; 1 Inizio ore: 17:00 Singolare Maschile Open TURRIZIANI COLONNA SAVERIO vs MASI MANUEL Inizio ore: 17:00 Singolare Maschile Open QUERQUI CARLO vs SANTODONATO GIORDANO",
+                "09/07/2026; 19:00; 2 Dopo riposo, non prima delle: 19:00 Singolare Maschile Open CERRONI STEFANO vs VECCHI LUCA"
             ]
         },
         {
@@ -36,6 +42,24 @@
             ]
         },
         {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 16:00; 1 Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 PERCIBALLI vs CALI' / MARINUCCI Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 BELLOCCO vs FABIANI",
+                "08/07/2026; 17:30; 2 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 FORATTINI / SALERNO vs ODDI Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 TIBUZZI vs VALCARENGHI",
+                "08/07/2026; 19:00; 3 Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 D'ATTINO vs MARTINI / MELIS Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 MANCIOCCHI / MANFREDINI vs BONVINI"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 16:00; 1 Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 CONTESTABILE vs FORATTINII Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 3.1 FABRIZI vs VINCIGUERRA",
+                "09/07/2026; 17:30; 2 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 MARINUCCI vs TIBUZZI / VALCARENGHI Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 3.1 SEMERARO vs VALENTINI",
+                "09/07/2026; 19:00; 3 Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 BELLOCCO vs MANFREDINI / BONVINI Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 3.1 CERAMANICA vs D'ATTINO / MARITNI"
+            ]
+        },
+        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B13A0B86-3073-4455-9B4F-97B723398F9D",
             "data": "08/07/2026",
             "partite": [
@@ -53,14 +77,6 @@
                 "09/07/2026; 16:30; 2 Inizio ore: 16:30 Singolare Maschile Open CUPPITELLI FABIO vs CAPRARO GIANLUCA Inizio ore: 16:30 Singolare Maschile Open LONGATTI AUGUSTO o SALVATI FRANCESCO vs PALMA MASSIMILIANO Inizio ore: 16:30 Singolare Maschile Open MINEO GABRIELE vs BATTAGLIA EMILIO",
                 "09/07/2026; 18:00; 3 Inizio ore: 18:00 Singolare Maschile Open SPERATI FRANCESCO vs ESPOSITO ANDREA Inizio ore: 18:00 Singolare Maschile Open PENTURELLI LORENZO o POMPEO VALERIO vs SAMARASINGHALAGE AKASH Inizio ore: 18:00 Singolare Maschile Open QUARTICELLI SIMONE o LONGO GASPARE vs GIACOMANTONIO MATTEO",
                 "09/07/2026; 19:30; 4 Inizio ore: 19:30 Singolare Maschile Open LODDI GIANLUCA o NUCCETELLI RICCARDO vs CASTALDO ANDREA Inizio ore: 19:30 Singolare Maschile Open MARZI GUIZADO LEONARDO MICHELANGELO o ZUDDAS BRUNO vs LONGO ARTURO Inizio ore: 19:30 Singolare Femminile Open MICCICHE' BENEDETTA GAIA vs GRAZIANI EMMA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 17:00; 1 Inizio ore: 17:00 Singolare Maschile Open TURRIZIANI COLONNA SAVERIO vs MASI MANUEL Inizio ore: 17:00 Singolare Maschile Open QUERQUI CARLO vs SANTODONATO GIORDANO",
-                "09/07/2026; 19:00; 2 Dopo riposo, non prima delle: 19:00 Singolare Maschile Open CERRONI STEFANO vs VECCHI LUCA"
             ]
         }
     ]
