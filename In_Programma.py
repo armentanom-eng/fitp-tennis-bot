@@ -15,9 +15,10 @@ async def run_bot():
         # Filtri
         await page.click('button[data-id="select_status"]')
         await page.locator('span:text-is("In programma")').last.click()
-		await page.click('button[data-id="id_regioneSearch"]')
+        await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-		await page.locator('span:text-is("Roma")').last.click()		
+        await page.click('button[data-id="id_provinciaSearch"]')
+        await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
