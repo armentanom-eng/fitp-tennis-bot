@@ -9,8 +9,8 @@ from playwright.async_api import async_playwright
 # Configurazione
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 CATEGORIES = {
-    "t_giovanili": "Giovanili_Partite.json", 
-    "t_affiliati": "Open_Partite.json"
+    "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json" 
+    "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
 }
 
 def format_line_for_swift(raw_text, date_target):
