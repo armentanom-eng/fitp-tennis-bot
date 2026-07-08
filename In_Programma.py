@@ -16,7 +16,8 @@ async def run_bot():
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+        await page.get_by_role("listbox").get_by_role("option", name="Lazio")
+        await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
