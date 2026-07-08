@@ -81,3 +81,11 @@ async def run_bot():
         # Salvataggio
         with open("Iscritti_Giovanili.json", "w", encoding="utf-8") as f: json.dump(dati_giov, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
+
+
+      
+        await browser.close()
+        print("--- [END] Processo completato. File generati. ---")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
