@@ -12,11 +12,13 @@ async def run_bot():
         print("--- Navigazione portale ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # Filtri
+       # Filtri
+        print("--- [DEBUG] Impostazione filtri ---")
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
         await page.click('button[data-id="id_regioneSearch"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Lazio")
+        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+        await page.click('button[data-id="id_provinciaSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
@@ -78,7 +80,7 @@ async def run_bot():
                     print(f"    ! Errore su categoria {i}: {e}")
                     await page.goto(f"https://www.fitp.it{url}")
         
-        # Salvataggio
+       # Salvataggio
         with open("Iscritti_In_Programma.json", "w", encoding="utf-8") as f:
             json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
