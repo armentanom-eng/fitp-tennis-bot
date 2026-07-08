@@ -3,16 +3,13 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Diagnostica Bot ---")
+    print("--- [START] Analisi test su 1 Torneo ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(user_agent="Mozilla/5.0")
         page = await context.new_page()
         
-        print("--- Navigazione portale ---")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
-        
-        # Filtri
         await page.click('button[data-id="select_status"]')
         await page.locator('span:text-is("In programma")').last.click()
         await page.click('button[data-id="id_regioneSearch"]')
@@ -25,48 +22,58 @@ async def run_bot():
         # Estrazione URL
         locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
         urls = list(set([await loc.get_attribute("href") for loc in locators]))
-        print(f"--- Trovati {len(urls)} tornei. Analizzo SOLO il primo: {urls[0]} ---")
         
-        # ANALISI SOLO DEL PRIMO TORNEO
+        if not urls:
+            print("Nessun torneo trovato.")
+            return
+
+        # ANALIZZIAMO SOLO IL PRIMO
         url = urls[0]
+        print(f"--- ANALIZZO SOLO IL PRIMO TORNEO: {url[-10:]} ---")
         await page.goto(f"https://www.fitp.it{url}", wait_until="networkidle")
         
-        # Log del titolo per capire se siamo sulla pagina giusta o su quella di errore
-        print(f"Titolo pagina: {await page.title()}")
+        dati_giovanili = {"tornei": []}
+        dati_open = {"tornei": []}
         
-        # Vediamo se trova i bottoni
-        dettagli = page.locator("text=Dettaglio >")
-        count = await dettagli.count()
-        print(f"Bottoni 'Dettaglio >' trovati: {count}")
+        # Filtro bottoni visibili
+        tutti_i_bottoni = page.locator("text=Dettaglio >")
+        bottoni_visibili = []
+        for i in range(await tutti_i_bottoni.count()):
+            if await tutti_i_bottoni.nth(i).is_visible():
+                bottoni_visibili.append(tutti_i_bottoni.nth(i))
         
-        for i in range(count):
-            print(f"--- Analisi Bottone {i} ---")
+        print(f"Trovati {len(bottoni_visibili)} bottoni visibili.")
+        
+        for btn in bottoni_visibili:
             try:
-                btn = dettagli.nth(i)
                 await btn.click(force=True)
                 await page.wait_for_load_state("networkidle")
                 
-                # Debug: vediamo il titolo della categoria
-                cat = await page.locator("h1.cc-title-main").first.text_content()
-                print(f"Categoria trovata: {cat}")
+                categoria = await page.locator("h1.cc-title-main").first.text_content()
+                giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
                 
-                # Debug: vediamo se ci sono link giocatori
-                giocatori = await page.locator("a[href*='Pagina-Giocatore']").all()
-                print(f"Link giocatori trovati: {len(giocatori)}")
+                entry = {"torneo": url, "categoria": categoria.strip(), "iscritti": [g.strip() for g in giocatori]}
                 
-                # Se non ne trova, stampiamo il testo visibile per capire cosa c'è
-                if len(giocatori) == 0:
-                    testo_pagina = await page.inner_text("body")
-                    print(f"Testo pagina estratto (primi 300 caratteri): {testo_pagina[:300]}")
+                if any(x in categoria for x in ["Under", "Giovanile", "U10", "U12", "U14", "U16"]):
+                    dati_giovanili["tornei"].append(entry)
+                else:
+                    dati_open["tornei"].append(entry)
+                
+                print(f"Estratti {len(giocatori)} giocatori per {categoria.strip()}")
                 
                 await page.go_back()
                 await page.wait_for_load_state("networkidle")
-                
             except Exception as e:
-                print(f"Errore su bottone {i}: {e}")
+                print(f"Errore su bottone: {e}")
         
+        # Salvataggio di prova
+        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+            
         await browser.close()
-        print("--- [END] Diagnostica completata ---")
+        print("--- [END] Test completato. Controlla i JSON. ---")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
