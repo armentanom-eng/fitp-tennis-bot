@@ -14,7 +14,7 @@ async def run_bot():
         
         # Filtri
         await page.click('button[data-id="select_status"]')
-        await page.locator('span:text-is("In corso")').last.click()
+        await page.locator('span:text-is("In programma")').last.click()
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await page.click('button[data-id="id_provinciaSearch"]')
@@ -92,8 +92,8 @@ async def run_bot():
                 print(f"    ! Errore critico nel torneo {url[-10:]}: {e}")
         
         # Salvataggio finale
-        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Giovanili_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Programma.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
         print("--- [END] Processo completato. ---")
