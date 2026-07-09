@@ -20,12 +20,16 @@ async def run_bot():
             
             # Naviga e applica filtri
             await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+            
+            # Filtro Stato
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
+            
+            # Filtro Regione
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             
-            # Seleziona la categoria (Giovanili o Open)
+            # Categoria
             await page.locator(f'a[data-id="{cat_data_id}"]').first.click()
             await asyncio.sleep(5)
             
@@ -35,33 +39,48 @@ async def run_bot():
             
             for url in urls:
                 full_url = f"https://www.fitp.it{url}"
-                await page.goto(full_url, wait_until="domcontentloaded")
-                nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
-                print(f"  Analizzo: {nome_torneo.strip()}")
-                
-                # Clicca tutti i tasti 'Dettaglio'
-                count = await page.locator("text=Dettaglio >").count()
-                for i in range(count):
+                try:
                     await page.goto(full_url, wait_until="domcontentloaded")
-                    btn = page.locator("text=Dettaglio >").nth(i)
-                    if await btn.is_visible():
-                        await btn.click(force=True)
-                        await page.wait_for_selector("table", timeout=5000)
-                        
-                        tabellone = await page.locator("span#spn-tournament-description").text_content() or "N/A"
-                        
-                        # Legge la tabella a video (righe dei giocatori)
-                        rows = page.locator("table tbody tr")
-                        nomi = []
-                        for r in range(await rows.count()):
-                            riga_testo = await rows.nth(r).text_content()
-                            if riga_testo and len(riga_testo.strip()) > 3:
-                                nomi.append(riga_testo.strip())
-                        
-                        risultati["tornei"].append({
-                            "nome": f"{nome_torneo.strip()} - {tabellone.strip()}",
-                            "iscritti": list(set(nomi))
-                        })
+                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                    print(f"  Analizzo: {nome_torneo.strip()}")
+                    
+                    count = await page.locator("text=Dettaglio >").count()
+                    for i in range(count):
+                        try:
+                            # Ritorna alla pagina del torneo per ogni bottone
+                            await page.goto(full_url, wait_until="domcontentloaded")
+                            btn = page.locator("text=Dettaglio >").nth(i)
+                            
+                            if await btn.is_visible():
+                                await btn.click(force=True)
+                                
+                                # Attesa sicura della tabella
+                                try:
+                                    await page.wait_for_selector("table", timeout=10000)
+                                except:
+                                    print(f"    ! Tabella non trovata per tabellone {i+1}, salto...")
+                                    continue
+                                
+                                await asyncio.sleep(2)
+                                tabellone = await page.locator("span#spn-tournament-description").text_content() or "N/A"
+                                
+                                # Lettura righe iscritti
+                                rows = page.locator("table tbody tr")
+                                nomi = []
+                                for r in range(await rows.count()):
+                                    riga_testo = await rows.nth(r).text_content()
+                                    if riga_testo and len(riga_testo.strip()) > 3:
+                                        nomi.append(riga_testo.strip())
+                                
+                                risultati["tornei"].append({
+                                    "nome": f"{nome_torneo.strip()} - {tabellone.strip()}",
+                                    "iscritti": list(set(nomi))
+                                })
+                        except Exception as e:
+                            print(f"    ! Errore nel dettaglio {i+1}: {e}")
+                            continue
+                except Exception as e:
+                    print(f"  ! Errore critico sul torneo {url}: {e}")
             
             with open(nome_file, "w", encoding="utf-8") as f:
                 json.dump(risultati, f, ensure_ascii=False, indent=4)
