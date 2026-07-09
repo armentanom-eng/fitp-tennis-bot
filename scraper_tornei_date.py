@@ -14,24 +14,24 @@ CATEGORIES = {
 }
 
 def format_line_for_swift(raw_text, date_target):
-    # 1. Pulizia base
+    # 1. Pulisce la riga
     text = raw_text.replace("\n", " ").strip()
     
-    # 2. Estrazione orario (supporta HH:MM e HH.MM)
+    # 2. Estrazione orario (HH:MM o HH.MM)
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     
-    # 3. Rimuove scritte di sistema ridondanti
-    text = re.sub(r"(Inizio ore|Non prima di):?\s*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
+    # 3. Normalizzazione separatori in " vs "
+    # Sostituisce 'o', '/', '|', '-' con ' vs '
+    text = re.sub(r"\s+[o/|\-]\s+", " vs ", text, flags=re.IGNORECASE)
     
-    # 4. NORMALIZZAZIONE: trasforma ogni separatore ( / | - \ ) in " vs "
-    text = re.sub(r"\s*[/\-|\\]\s*", " vs ", text)
+    # 4. Rimuove orario ripetuto all'inizio se presente
+    text = re.sub(r"^\d{2}[:.]\d{2}\s*", "", text)
     
-    # 5. Pulizia finale: rimuove indici numerici iniziali e spazi doppi
-    text = re.sub(r"^\d+\s+", "", text)
+    # 5. Pulizia finale: rimuove spazi doppi
     text = re.sub(r"\s+", " ", text).strip()
     
-    # Formato obbligatorio: Data; Ora; Giocatore vs Giocatore
+    # Formato finale garantito: Data; Ora; Giocatore vs Giocatore
     return f"{date_target}; {time}; {text}"
 
 def get_pdf_info(pdf_path):
@@ -39,25 +39,15 @@ def get_pdf_info(pdf_path):
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
-                # Cerca prima nelle tabelle per maggiore precisione
-                tables = page.extract_tables()
-                for table in tables:
+                # Scansiona le tabelle cella per cella
+                for table in page.extract_tables():
                     for row in table:
-                        clean_row = [str(cell).strip() for cell in row if cell and str(cell).strip()]
-                        if len(clean_row) >= 2:
-                            row_text = " ".join(clean_row)
-                            if re.search(r"\d{2}[:.]\d{2}", row_text):
-                                matches.append(row_text)
-                
-                # Se non trova tabelle, estrae il testo riga per riga
-                if not matches:
-                    text = page.extract_text()
-                    if text:
-                        for line in text.split('\n'):
-                            if re.search(r"\d{2}[:.]\d{2}", line):
-                                matches.append(line.strip())
+                        # Filtra celle che contengono match o riferimenti di gioco
+                        cleaned_row = [str(c).strip() for c in row if c and ("vs" in str(c).lower() or " o " in str(c).lower())]
+                        if cleaned_row:
+                            matches.append(" ".join(cleaned_row))
     except Exception as e:
-        print(f"    ! Errore lettura PDF: {e}")
+        print(f"Errore lettura PDF: {e}")
     return matches
 
 async def run_bot():
@@ -70,7 +60,6 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
-            # Navigazione iniziale
             await page.goto(BASE_URL, wait_until="networkidle")
             await page.click('button[data-id="select_status"]')
             await page.locator('span:text-is("In programma")').last.click()
@@ -79,7 +68,6 @@ async def run_bot():
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5)
             
-            # Espansione lista
             while True:
                 btn = page.locator("button#btn-loadMore")
                 if await btn.is_visible(): 
