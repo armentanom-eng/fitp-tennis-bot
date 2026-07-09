@@ -15,13 +15,19 @@ def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     
-    # Normalizza tutto in vs
-    text = re.sub(r"\s+[o/|\-]\s+", " vs ", text, flags=re.IGNORECASE)
-    # Rimuove l'orario se duplicato all'inizio
-    text = re.sub(r"^\d{2}[:.]\d{2}\s*", "", text)
-    # Pulizia spazi
-    text = re.sub(r"\s+", " ", text).strip()
-    return f"{date_target}; {time}; {text}"
+    # Pulizia iniziale: rimuove INIZIO, ORE, ecc.
+    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
+    # Trasforma ' o ' in ' vs '
+    text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
+    
+    # Regex per trovare coppie "Giocatore1 vs Giocatore2"
+    # Accetta lettere, numeri, spazi e parentesi (es. u13m)
+    partite = re.findall(r"([A-Z\s\d\(\)]+?)\s+vs\s+([A-Z\s\d\(\)]+)", text)
+    
+    if partite:
+        clean = [f"{p[0].strip()} vs {p[1].strip()}" for p in partite]
+        return f"{date_target}; {time}; {'; '.join(clean)}"
+    return f"{date_target}; {time}; {text.strip()}"
 
 def get_pdf_info(pdf_path):
     matches = []
@@ -31,10 +37,8 @@ def get_pdf_info(pdf_path):
                 for table in page.extract_tables():
                     for row in table:
                         row_text = " ".join([str(cell).strip() for cell in row if cell])
-                        if any(x in row_text.lower() for x in ["vs", " o "]):
-                            matches.append(row_text)
-    except Exception as e:
-        print(f"Errore lettura PDF: {e}")
+                        if len(row_text) > 5: matches.append(row_text)
+    except: pass
     return matches
 
 async def run_bot():
