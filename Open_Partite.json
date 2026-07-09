@@ -1,120 +1,6 @@
 {
-    "report_data": "09/07/2026 07:04",
+    "report_data": "09/07/2026 07:52",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 CAMPO 5 CAMPO 4 CAMPO 2 CAMPO 3",
-                "09/07/2026; 10:30; 13 PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA",
-                "09/07/2026; 00:00; 13 FRENI AURORA vs FAILLA IRENE",
-                "09/07/2026; 13:00; 11 GENUA GIUSEPPE vs CORAZZATO GIULIO I; 13 BONTEMPO LORENZO vs D; 13 RICCIARDELLO LORENZO vs ROMANO ELIA I; 11 SCHIAVO SAMUELE vs DI NOTO JACOPO I; 11 BONOMO ADELE vs CERAOLO PENELOPE LUNA",
-                "09/07/2026; 14:30; MINEO BENEDETTA vs FAILLA IRENE",
-                "09/07/2026; 00:00; PIVETTI GAGLIARDI LUDOVICA vs CANTARELLA GIULIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; Ora 1 2 3 4 5 6",
-                "09/07/2026; 16:00; CURULLA PATRIZIO vs IADONNA MIRKO FURINA VALENTINO; MICOZZI LORENZO NUZZI MATTEO vs BIANCHI NICOLA PARTENIE DRAGOS CRISTIAN; SACCHETTI ALESSIO CARUSO DIEGO vs TORRISI SAMUELE",
-                "09/07/2026; 17:30; DE GENNARO SIMONE vs IRIONE FILIPPO CONI GIUSEPPE FLAVIO; BARABINO UGHI FRANCESCO vs VINCENTI; TABACCHIERA DEZY vs MEDAGLINI LEONARDO MAZZARELLA TOMMASO",
-                "09/07/2026; 19:00; GIORGI EDOARDO vs TAVAGLIONE TOMMASO SEGALA ALEANDRO",
-                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 00:00; Gli ultimi incontri possono essere spostati"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; CAMPO 5 CAMPO 6 CAMPO 7 CAMPO 8",
-                "09/07/2026; 13:00; Inizio  Inizio  Inizio  Inizio",
-                "09/07/2026; 00:00; SINGOLARE MASCHILE UNDER 13 DI IORIO ALESSANDRO vs SALIS MATTIA SINGOLARE MASCHILE UNDER 11 BASSIGNANA ALESSANDRO; LANDI ANTONIO SINGOLARE FEMMINILE UNDER 13 RICCIO GIUSEPPINA vs ROSSANO NICOLE SINGOLARE FEMMINILE UNDER 13 GIACCHETTI NICOLE",
-                "09/07/2026; 00:00; Ordine di Gioco pubblicato il Giudice Arbitro",
-                "09/07/2026; 16:30; MERCOLEDI 08 LUGLIO 2026  Di Berardino Elisabetta"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; Ora CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 7 CAMPO 8",
-                "09/07/2026; 00:00; INIZIO SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE",
-                "09/07/2026; 09:00; BAGNOLI SERGIO vs BRUNI GIULIO LOMBARDI LEONARDO; CATALANO MICHELE MARINELLI ALESSANDRO vs D",
-                "09/07/2026; 00:00; SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE",
-                "09/07/2026; 10:30; DAVIES THOMAS vs BALLI ZENO BRUNO BERTASI TOMMASO; FERRARI LORIS MOSCHINI TOMMASO vs SPINELLI PIETRO",
-                "09/07/2026; 00:00; SINGOLARE U13 FEMMINILE SINGOLARE U11 MASCHILE SINGOLARE U13 MASCHILE SINGOLARE U11 MASCHILE SINGOLARE U11 MASCHILE",
-                "09/07/2026; 12:30; MANGANO SOFIA vs DI BEO ARIANNA STORCHI EDOARDO; GAGGI MATTIA SEGHI ANITA vs VIVI VICTORIA DIANDA DUCCIO; SENA MATTIA DIANA GIANMARCO vs ZOMPA MATTIA",
-                "09/07/2026; 00:00; SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE SINGOLARE U13 MASCHILE",
-                "09/07/2026; 15:00; BALLI ZENO vs DAVIES THOMAS; FERRARI LORIS vs BERTASI TOMMASO SPINELLI PIETRO; MOSCHINI TOMMASO vs ALIFREDI MARCO MEINI JACOPO; BAGNOLI SERGIO vs BRUNI GIULIO",
-                "09/07/2026; 00:00; SINGOLARE U13 MASCHILE SINGOLARE U11 FEMMINILE SEMIFINALE SINGOLARE U11 FEMMINILE SEMIFINALE",
-                "09/07/2026; 16:30; LOMBARDI LEONARDO vs CATALANO MICHELE; MARINELLI ALESSANDRO vs D; IAPICO EDOARDO LENZI OLIMPIA vs MONCADA GIUDITTA FERRARI ANNA",
-                "09/07/2026; 00:00; non prima delle DOPPIO U11 MASCHILE DOPPIO U13 FEMMINILE FINALE DOPPIO U11 MASCHILE",
-                "09/07/2026; 17:30; SENA vs MICHELI; TAGLIAFERRI vs DI BEO; MANGANO vs SEGHI; STORCHI vs DIANDA",
-                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 18:45; 08/07/2026 H. ARIANNA SARCHI"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 COPERTO",
-                "09/07/2026; 18:00; 1 COLETTI MAURIZIO vs BARBIERI VALERIO",
-                "09/07/2026; 19:30; 1 DIAMILLA PAOLO vs DE MARCO GIANLUCA",
-                "09/07/2026; 21:00; 1 MENICHICCHI FABRIZIO vs ARCANGELI GIORGIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; Ora 1 2 3 4 5 6",
-                "09/07/2026; 08:00; CALVELLI PIETRO vs (; ) GUIDOLIN vs PASSARINI GRASSI; XOTTA vs (; CORSI vs (",
-                "09/07/2026; 13:30; ALTAVILLA vs BALESTRIERO; ) XOTTA vs URSO DI DOMIZIO GIULIO; ) GUIDOLIN vs PASSARINI; BARBALI vs GRASSI; ) UBINI vs CORSI",
-                "09/07/2026; 19:30; MESSORA vs (; MOREGGIO vs (",
-                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 15:15; ANTONINI VALENTINA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4A32ECBF-8EF1-4F8A-8B72-25F84D97CCF9",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; ORE COGNOME TAB. ORE COGNOME TAB. ORE COGNOME TAB. ORE COGNOME TAB. ORE COGNOME TAB.",
-                "09/07/2026; 00:00; TESSERATO GOLD",
-                "09/07/2026; 13:00; MILAZZO SONIA Sing. Femm. 3.5-3.3 PASSALACQUA MARCO TORRANI FRANCESCO Sing. Masch. FINALE ZAPPA GABRIELE PERROTTA GUIDO Sing. Masch. FINALE SEGRETO FEDERICO ZAPPALA GIACOMO Sing. Masch. FINALE",
-                "09/07/2026; 00:00; FARAONE IOLANDA",
-                "09/07/2026; 14:30; PASSERINI LEONARDO MAZZA VITTORIO Sing. Masch. FINALE INVIDIATA FRANCESCO PAOLO COLELLA A. VS PEZZOPANE V. Sing. Masch. FINALE CHERUBINI A. VS CIVITA F. BARBARULO ROMAN Sing. Masch. FINALE FAIS R. VS CASTELLI T. VAGNI ALESSIO Sing. Masch. FINALE",
-                "09/07/2026; 16:00; SACCO GIORGIO CLEMENTI V. VS QUINTO P. Sing. Masch. FINALE PALAMIDESSE ANDREA SALES J. VS CILENTI P. Sing. Masch. FINALE RICCI ALESSANDRO AMICI FABRIZIO Sing. Masch. FINALE DE SANCTIS V. VS DE FEO F. Sing. Masch. FINALE",
-                "09/07/2026; 00:00; ALESSANDRONI GIULIO",
-                "09/07/2026; 17:30; BELLACCI G. VS MITREA F.M. ROSATO CRISTINA Sing. Femm. 3.5-3.3 PEPTANARU RIHANNA PENCO SIMONA Sing. Femm. 3.5-3.3 DIANA EMILIO POZZESSERE A. VS MAGOZZI A. Sing. Masch. FINALE LAZZARETTI N. VS CAMPO L. CORSO GIUSEPPE Sing. Masch. FINALE ANTONELLI GIULIO FIORENTINI NICO Sing. Masch. FINALE",
-                "09/07/2026; 19:00; MURRI EMANUELE CITTADINI PAOLO Sing. Masch. FINALE CALDERAN MASSIMO BENTIVOGLIO E. VS CARCEL A. Sing. Masch. FINALE ZENARI A. VS CATALUDDI M. TANDURELLA GIULIO Sing. Masch. FINALE PAVAN MASSIMO CAIVANO G. VS BRIONI FILIPPO Sing. Masch. FINALE",
-                "09/07/2026; 15:00; Orario pubblicato mercoledì 8 luglio alle",
-                "09/07/2026; 00:00; Gabri ele Corsi"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "09/07/2026; 16:30; 1 DEFONTE RICCARDO vs MORETTI FLAVIO",
-                "09/07/2026; 17:30; 1 MAGGI EDOARDO vs FATIGATI ALESSANDRO",
-                "09/07/2026; 18:00; 1 MOTTOLESE CHIARA vs GRIECO ROBERTA I; 1 DE MONTE ALESSANDRA vs GUERRINI MARZIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. Campo 1 (principale) campo 2",
-                "09/07/2026; 17:00; TURRIZIANI COLONNA SAVERIO vs MASI MANUEL I; QUERQUI CARLO vs SANTODONATO GIORDANO",
-                "09/07/2026; 19:00; CERRONI STEFANO vs VECCHI LUCA"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
             "data": "09/07/2026",
@@ -128,13 +14,12 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
             "data": "09/07/2026",
             "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 (PRINCIPALE) CAMPO 2",
-                "09/07/2026; 16:00; 1 CONTESTABILE vs FORATTINII I; 1 FABRIZI vs VINCIGUERRA",
-                "09/07/2026; 17:30; 1 MARINUCCI vs TIBUZZI; 1 SEMERARO vs VALENTINI",
-                "09/07/2026; 19:00; 1 BELLOCCO vs MANFREDINI; 1 CERAMANICA vs D"
+                "09/07/2026; 00:00; No. Campo 1 (principale) campo 2",
+                "09/07/2026; 17:00; TURRIZIANI COLONNA SAVERIO vs MASI MANUEL I; QUERQUI CARLO vs SANTODONATO GIORDANO",
+                "09/07/2026; 19:00; CERRONI STEFANO vs VECCHI LUCA"
             ]
         },
         {
@@ -143,6 +28,16 @@
             "partite": [
                 "09/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
                 "09/07/2026; 18:00; COZZI MARIO vs D; CORSETTI JACOPO vs CERQUOZZI MATTIA I; PETRELLA FEDERICO vs ARCHETTI MATTEO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; No. CAMPO 1 (PRINCIPALE) CAMPO 2",
+                "09/07/2026; 16:00; 1 CONTESTABILE vs FORATTINII I; 1 FABRIZI vs VINCIGUERRA",
+                "09/07/2026; 17:30; 1 MARINUCCI vs TIBUZZI; 1 SEMERARO vs VALENTINI",
+                "09/07/2026; 19:00; 1 BELLOCCO vs MANFREDINI; 1 CERAMANICA vs D"
             ]
         }
     ]

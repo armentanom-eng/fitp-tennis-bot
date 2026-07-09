@@ -1,41 +1,6 @@
 {
-    "report_data": "09/07/2026 07:02",
+    "report_data": "09/07/2026 07:51",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 CAMPO 5 CAMPO 4 CAMPO 2 CAMPO 3",
-                "09/07/2026; 10:30; 13 PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA",
-                "09/07/2026; 00:00; 13 FRENI AURORA vs FAILLA IRENE",
-                "09/07/2026; 13:00; 11 GENUA GIUSEPPE vs CORAZZATO GIULIO I; 13 BONTEMPO LORENZO vs D; 13 RICCIARDELLO LORENZO vs ROMANO ELIA I; 11 SCHIAVO SAMUELE vs DI NOTO JACOPO I; 11 BONOMO ADELE vs CERAOLO PENELOPE LUNA",
-                "09/07/2026; 14:30; MINEO BENEDETTA vs FAILLA IRENE",
-                "09/07/2026; 00:00; PIVETTI GAGLIARDI LUDOVICA vs CANTARELLA GIULIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; Ora 1 2 3 4 5 6",
-                "09/07/2026; 16:00; CURULLA PATRIZIO vs IADONNA MIRKO FURINA VALENTINO; MICOZZI LORENZO NUZZI MATTEO vs BIANCHI NICOLA PARTENIE DRAGOS CRISTIAN; SACCHETTI ALESSIO CARUSO DIEGO vs TORRISI SAMUELE",
-                "09/07/2026; 17:30; DE GENNARO SIMONE vs IRIONE FILIPPO CONI GIUSEPPE FLAVIO; BARABINO UGHI FRANCESCO vs VINCENTI; TABACCHIERA DEZY vs MEDAGLINI LEONARDO MAZZARELLA TOMMASO",
-                "09/07/2026; 19:00; GIORGI EDOARDO vs TAVAGLIONE TOMMASO SEGALA ALEANDRO",
-                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 00:00; Gli ultimi incontri possono essere spostati"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; CAMPO 5 CAMPO 6 CAMPO 7 CAMPO 8",
-                "09/07/2026; 13:00; Inizio  Inizio  Inizio  Inizio",
-                "09/07/2026; 00:00; SINGOLARE MASCHILE UNDER 13 DI IORIO ALESSANDRO vs SALIS MATTIA SINGOLARE MASCHILE UNDER 11 BASSIGNANA ALESSANDRO; LANDI ANTONIO SINGOLARE FEMMINILE UNDER 13 RICCIO GIUSEPPINA vs ROSSANO NICOLE SINGOLARE FEMMINILE UNDER 13 GIACCHETTI NICOLE",
-                "09/07/2026; 00:00; Ordine di Gioco pubblicato il Giudice Arbitro",
-                "09/07/2026; 16:30; MERCOLEDI 08 LUGLIO 2026  Di Berardino Elisabetta"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A023FB55-2548-42A4-9B0C-22AC9ECE932F",
             "data": "09/07/2026",
@@ -58,6 +23,17 @@
             ]
         },
         {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3006B3EF-D89C-497F-A52B-90B8B1B31C4C",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; CAMPO 5 CAMPO 6 CAMPO 7 CAMPO 8",
+                "09/07/2026; 13:00; Inizio  Inizio  Inizio  Inizio",
+                "09/07/2026; 00:00; SINGOLARE MASCHILE UNDER 13 DI IORIO ALESSANDRO vs SALIS MATTIA SINGOLARE MASCHILE UNDER 11 BASSIGNANA ALESSANDRO; LANDI ANTONIO SINGOLARE FEMMINILE UNDER 13 RICCIO GIUSEPPINA vs ROSSANO NICOLE SINGOLARE FEMMINILE UNDER 13 GIACCHETTI NICOLE",
+                "09/07/2026; 00:00; Ordine di Gioco pubblicato il Giudice Arbitro",
+                "09/07/2026; 16:30; MERCOLEDI 08 LUGLIO 2026  Di Berardino Elisabetta"
+            ]
+        },
+        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=25B4AF0E-2162-4611-B7EA-E1DECCB8239B",
             "data": "09/07/2026",
             "partite": [
@@ -68,15 +44,15 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
             "data": "09/07/2026",
             "partite": [
                 "09/07/2026; 00:00; Ora 1 2 3 4 5 6",
-                "09/07/2026; 08:00; CALVELLI PIETRO vs (; ) GUIDOLIN vs PASSARINI GRASSI; XOTTA vs (; CORSI vs (",
-                "09/07/2026; 13:30; ALTAVILLA vs BALESTRIERO; ) XOTTA vs URSO DI DOMIZIO GIULIO; ) GUIDOLIN vs PASSARINI; BARBALI vs GRASSI; ) UBINI vs CORSI",
-                "09/07/2026; 19:30; MESSORA vs (; MOREGGIO vs (",
+                "09/07/2026; 16:00; CURULLA PATRIZIO vs IADONNA MIRKO FURINA VALENTINO; MICOZZI LORENZO NUZZI MATTEO vs BIANCHI NICOLA PARTENIE DRAGOS CRISTIAN; SACCHETTI ALESSIO CARUSO DIEGO vs TORRISI SAMUELE",
+                "09/07/2026; 17:30; DE GENNARO SIMONE vs IRIONE FILIPPO CONI GIUSEPPE FLAVIO; BARABINO UGHI FRANCESCO vs VINCENTI; TABACCHIERA DEZY vs MEDAGLINI LEONARDO MAZZARELLA TOMMASO",
+                "09/07/2026; 19:00; GIORGI EDOARDO vs TAVAGLIONE TOMMASO SEGALA ALEANDRO",
                 "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 15:15; ANTONINI VALENTINA"
+                "09/07/2026; 00:00; Gli ultimi incontri possono essere spostati"
             ]
         },
         {
@@ -97,6 +73,18 @@
             ]
         },
         {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; Ora 1 2 3 4 5 6",
+                "09/07/2026; 08:00; CALVELLI PIETRO vs (; ) GUIDOLIN vs PASSARINI GRASSI; XOTTA vs (; CORSI vs (",
+                "09/07/2026; 13:30; ALTAVILLA vs BALESTRIERO; ) XOTTA vs URSO DI DOMIZIO GIULIO; ) GUIDOLIN vs PASSARINI; BARBALI vs GRASSI; ) UBINI vs CORSI",
+                "09/07/2026; 19:30; MESSORA vs (; MOREGGIO vs (",
+                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
+                "09/07/2026; 15:15; ANTONINI VALENTINA"
+            ]
+        },
+        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
             "data": "09/07/2026",
             "partite": [
@@ -104,6 +92,18 @@
                 "09/07/2026; 16:30; 1 DEFONTE RICCARDO vs MORETTI FLAVIO",
                 "09/07/2026; 17:30; 1 MAGGI EDOARDO vs FATIGATI ALESSANDRO",
                 "09/07/2026; 18:00; 1 MOTTOLESE CHIARA vs GRIECO ROBERTA I; 1 DE MONTE ALESSANDRA vs GUERRINI MARZIA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; No. CAMPO 1 CAMPO 5 CAMPO 4 CAMPO 2 CAMPO 3",
+                "09/07/2026; 10:30; 13 PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA",
+                "09/07/2026; 00:00; 13 FRENI AURORA vs FAILLA IRENE",
+                "09/07/2026; 13:00; 11 GENUA GIUSEPPE vs CORAZZATO GIULIO I; 13 BONTEMPO LORENZO vs D; 13 RICCIARDELLO LORENZO vs ROMANO ELIA I; 11 SCHIAVO SAMUELE vs DI NOTO JACOPO I; 11 BONOMO ADELE vs CERAOLO PENELOPE LUNA",
+                "09/07/2026; 14:30; MINEO BENEDETTA vs FAILLA IRENE",
+                "09/07/2026; 00:00; PIVETTI GAGLIARDI LUDOVICA vs CANTARELLA GIULIA"
             ]
         }
     ]
