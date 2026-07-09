@@ -1,0 +1,33 @@
+name: Bot Iscritti In Corso
+on:
+  schedule:
+    - cron: '0 8,14,20 * * *' # Esegue alle 8, 14 e 20 ogni giorno
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium
+
+      - name: Run script
+        run: python bot_iscritti_in_corso.py
+
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add Iscritti_Giovanili_In_Corso.json Iscritti_Open_In_Corso.json
+          git commit -m "Aggiornamento Iscritti In Corso" || exit 0
+          git push
