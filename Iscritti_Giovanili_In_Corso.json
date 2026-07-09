@@ -127,179 +127,218 @@
             ]
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Femminile Under 10",
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Maschile Under 18",
             "iscritti": [
-                "CECILIA MASTROPIETRO4.NC",
-                "VICTORIA PAGLIAROLI4.NC",
-                "LAVINIA MAGNI4.NC",
-                "FRANCESCA POLLINA4.NC"
+                "GABRIELE MANNI4.2",
+                "LUCA ARCESE4.2",
+                "MICHELE FENT3.5",
+                "GIANMARCO DE BLASIS3.5",
+                "ALESSANDRO LUCCA4.1",
+                "ALBERTO BOCCIA3.5",
+                "MARCIANO MARGIOTTA4.2",
+                "CHRISTIAN FRIGHI4.6",
+                "ANTONIO RUSSILLO2.8",
+                "GIORGIO ZANARDI3.3",
+                "FILIPPO DESIATO3.5",
+                "ALESSIO CAPUANO3.5",
+                "ALESSIO DE SANTIS4.1",
+                "LUIGI PICCIALLI4.2",
+                "GABRIELE PILERI4.4",
+                "DAVID SPINELLI4.3",
+                "ELIA CORNI4.3",
+                "SIMONE TERRA3.1",
+                "LUCA BERARDI3.2",
+                "EMANUELE FRANCISCHELLI3.5",
+                "ALESSANDRO CANINI4.2",
+                "SAMUELE CENTOMO4.6",
+                "ANDREA FICHERA2.8",
+                "VALERIO CANNELLA4.2",
+                "LUCA LOMBARDI4.1",
+                "MATTEO PECCI3.3",
+                "VALERIO IANNI3.4",
+                "ANDREI NICOLA3.1",
+                "GIULIO BORGONUOVO2.8"
             ]
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Femminile Under 12",
-            "iscritti": [
-                "MARTINA LEGGE4.2",
-                "MARGOT LAURETTI4.NC"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Femminile Under 14",
-            "iscritti": [
-                "NOEMI PAOLUCCI4.3",
-                "MARTINA LEGGE4.2",
-                "MIA MONTEREALE4.NC",
-                "EMMA CASALVIERI4.5",
-                "ELETTRA DE SANCTIS4.NC"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Femminile Under 18",
-            "iscritti": [
-                "MARIOLINA LOLA SCARABELLO3.5",
-                "EMANUELA RIZZARO4.2"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Maschile Under 10",
-            "iscritti": [
-                "LORENZO MARRONE4.NC",
-                "LORIS MADECCIA4.NC",
-                "GABRIELE MARIA CIRELLI4.NC",
-                "NICOLO DE MARCHI4.NC",
-                "LEONARDO DOLATTI4.NC",
-                "FEDERICO BALDI4.NC",
-                "GILDO NARDACCI4.NC",
-                "ALBERTO FAUSTINELLA4.NC"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Singolare Maschile Under 14",
-            "iscritti": [
-                "GIOVANNI BATTISTA MAGNI4.4",
-                "ALESSANDRO INCERTI CANTIMORI4.4",
-                "GABRIELE PORCELLI4.2",
-                "MARCO ALDO BERTAGNOLLI4.3",
-                "ATTILIO CARINI4.NC",
-                "ADRIANO D'ONOFRIO4.6",
-                "MARCO FELICI4.NC"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
             "tabellone": "Singolare Maschile Under 12",
             "iscritti": [
                 "GIOELE MIRABILE4.2",
-                "JACOPO COLLEPARDI4.5",
-                "GIOVANNI BATTISTA MAGNI4.4",
-                "TOMMASO AMBROSONE4.NC",
-                "LORENZO SACCUCCI4.5",
                 "CHRISTIAN CAPPONI4.5",
-                "FEDERICO PAGLIAROLI4.5",
-                "EDOARDO DI LEO4.NC",
-                "MATTIA SANTE4.6",
-                "ALESSANDRO DEL MONTE4.NC",
-                "MATTIA ZOCCHI4.NC",
-                "MARZIO VENTRE4.NC",
-                "MATTIA PRESTA4.NC",
-                "JACOPO REFAEI4.6",
-                "GIULIO SOCCODATO4.NC",
-                "ALESSANDRO GIAROLA4.NC",
                 "GIANLUIGI CARNEVALE4.NC",
-                "GIULIO FALOVO 4.NC"
+                "RAFFAELE PIATTELLA4.NC",
+                "FEDERICO PAGLIAROLI4.5",
+                "GABRIELE BIANCHI4.5",
+                "LORENZO ANTONETTI4.5",
+                "ALESSANDRO DEL MONTE4.NC",
+                "MATTIA SANTE4.6",
+                "LEONARDO GRECO4.5",
+                "EDOARDO EGIDI4.NC",
+                "CRISTIAN BATTISTA4.NC",
+                "NICCOLO ZAPPIMBULSO4.2",
+                "ANTONIO NOTARIANNI4.NC",
+                "MATTEO ORLANDO4.NC",
+                "CLAUDIO GIULIANI4.4",
+                "VALERIO SCHEDA4.NC",
+                "EMANUELE MESTRINARO4.NC",
+                "TOMMASO AMBROSONE4.NC"
             ]
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Femminile Under 14",
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "GIORGIO ZANARDI3.3",
+                "ALESSANDRO INCERTI CANTIMORI4.4",
+                "GIOELE MIRABILE4.2",
+                "SIMONE PIERUCCI3.4",
+                "ALESSANDRO BUONANNO4.NC",
+                "LORENZO GEROTTO4.2",
+                "ADRIANO D'ONOFRIO4.6",
+                "PAOLO SANGUIGNI4.NC",
+                "VALERIO VARGAS4.5",
+                "ANDREA RAJA4.3",
+                "GIOVANNI PACILIO4.1",
+                "EDUARDO DE BELLIS4.3",
+                "GIUSEPPE GENTILE4.NC",
+                "ANDREA PILERI4.4",
+                "ALESSANDRO LOCCIA4.NC",
+                "ACHILLE SALVUCCI4.NC",
+                "LORENZO CIOTTI3.5",
+                "MARCO FELICI4.NC",
+                "NICCOLO ZAPPIMBULSO4.2",
+                "ANDREA ESPOSITO4.5",
+                "ALESSANDRO NASONI4.5",
+                "ALESSANDRO DONZELLI4.5",
+                "MATTEO BISCARO4.5",
+                "NICOLA DI GIORGI4.1",
+                "CHRISTIAN CAPPONI4.5",
+                "FRANCESCO BALLANTI4.NC",
+                "STEFANO PALUMBO4.3",
+                "ALBERTO COSTANTINI4.3"
+            ]
+        },
+        {
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Femminile Under 12",
             "iscritti": []
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Femminile Under 12",
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "LORENZO MIGLIORI4.NC",
+                "LORENZO MARRONE4.NC",
+                "LORIS MADECCIA4.NC",
+                "NICOLO DE MARCHI4.NC",
+                "FRANCESCO ANTONUCCI4.NC",
+                "GIULIO MARIA TOPPI4.NC",
+                "GABRIELE MARIA CIRELLI4.NC",
+                "LEONARDO IORIO4.NC",
+                "GABRIELE COSTANTINI4.NC",
+                "GILDO NARDACCI4.NC"
+            ]
+        },
+        {
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "VIOLA FANTINO4.NC",
+                "VICTORIA PAGLIAROLI4.NC",
+                "SILVIA MANCINI4.NC",
+                "GIADA BENANTI4.NC",
+                "CASSANDRA L'AURORA4.NC"
+            ]
+        },
+        {
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "NOEMI PAOLUCCI4.3",
+                "MATILDE ASTRI4.2",
+                "MARTINA LEGGE4.2",
+                "MIA MONTEREALE4.NC",
+                "MARTINA DOLCINI4.4",
+                "RACHELE LIPPI4.2",
+                "GEMMA BRIENZA4.3"
+            ]
+        },
+        {
+            "nomeTorneo": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "categoria": "CIRCUITO NAZ. GIOVANILE RIVIERA D'ULISSE 2026 TROFEO E. MAFFEI",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": [
+                "ASIA MASUOTTOLO4.4",
+                "FRANCESCA CIRILLI4.NC",
+                "RACHELE TARTAGLIA4.NC",
+                "MARTINA DOLCINI4.4",
+                "REBECCA CERVELLONI4.4",
+                "ELENA GALATÀ4.3"
+            ]
+        },
+        {
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Femminile Under 10",
             "iscritti": []
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Maschile Under 18",
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Femminile Under 12",
             "iscritti": []
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Femminile Under 10",
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Femminile Under 14",
             "iscritti": []
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": []
+        },
+        {
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": []
+        },
+        {
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": []
+        },
+        {
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": []
+        },
+        {
+            "nomeTorneo": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
+            "categoria": "XXV EDIZIONE DEL CIRCUITO GIOVANILE DELLA RIVIERA D'ULISSE 2026 TROFEO ERALDO MAFFEI - C.T. GAETA",
             "tabellone": "Singolare Maschile Under 18",
             "iscritti": [
-                "ALESSANDRO MASTROMATTEI4.1",
-                "EDOARDO LEGGE4.4",
-                "DAVIDE CIAMBECCHINI4.3",
-                "JACOPO BOTTI3.1",
-                "LEONE SCARABELLO4.4",
-                "CLAUDIO POMARETTI4.3",
-                "GIANMARCO DE BLASIS3.5",
-                "ANTONIO RUSSILLO2.8",
-                "GIACOMO PRODON4.3",
-                "BRUNO IKE LO IACONO3.2",
-                "FILIPPO DESIATO3.5",
-                "FEDERICO COLANDREA4.3",
-                "STEFANO MARIA GIULINI2.8",
-                "LUCA ARCESE4.2",
-                "ALESSANDRO CANINI4.2",
-                "NOAH CHRISTOPHER GELLER PAWLAK4.2",
-                "DIEGO DI STEFANO4.1",
-                "EMANUELE ITALIANO4.NC",
-                "MATTEO PASSACANTANDO3.5"
+                "LUCA LOMBARDI4.1",
+                "LUIGI PICCIALLI4.2",
+                "LORENZO SALVATORE DI MASCOLO4.5"
             ]
         },
         {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Maschile Under 12",
-            "iscritti": [
-                "MATTIA SANTE4.6",
-                "MATTIA ZOCCHI4.NC",
-                "ALESSANDRO DEL MONTE4.NC",
-                "JACOPO REFAEI4.6",
-                "MARZIO VENTRE4.NC",
-                "LORENZO  SACCUCCI4.5",
-                "GIOVANNI BATTISTA MAGNI4.4",
-                "GIANLUIGI  CARNEVALE 4.NC"
-            ]
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Maschile Under 14",
-            "iscritti": []
-        },
-        {
-            "nomeTorneo": "CIRCUITO NAZIONALE GIOVANILE DELLA RIVIERA D' ULISSE ERALDO MAFFEI",
-            "categoria": "circuito nazionale giovanile della riviera d' ulisse Eraldo Maffei",
-            "tabellone": "Doppio Maschile Under 18",
-            "iscritti": []
-        },
-        {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Femminile Under 14 LIM. 4.NC - 4.1",
             "iscritti": [
@@ -311,7 +350,7 @@
             ]
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Femminile Under 12 LIM. 4.NC - 4.1",
             "iscritti": [
@@ -320,13 +359,13 @@
             ]
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Maschile Under 12 LIM. 4.NC - 4.1",
             "iscritti": []
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Maschile Under 14 LIM. 4.NC - 4.1",
             "iscritti": [
@@ -342,19 +381,19 @@
             ]
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Femminile Under 18 LIM. 4.NC - 3.1",
             "iscritti": []
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Doppio Maschile Under 16 LIM. 4.NC - 3.1",
             "iscritti": []
         },
         {
-            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
+            "nomeTorneo": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M E F E DOPPIO UNDER 18 M",
             "categoria": "UNDER GAMES POGGIO MIRTETO UNDER 12/14/18 M e F e Doppio under 18 M",
             "tabellone": "Singolare Maschile Under 18 LIM. 4.NC - 3.1",
             "iscritti": []
