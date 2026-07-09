@@ -3,8 +3,9 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione ISCRITTI (Filtri: In corso, Lazio) ---")
+    print("--- [START] Avvio estrazione ISCRITTI (Tutti i tornei) ---")
     async with async_playwright() as p:
+        # headless=True per farlo girare in background, False per vedere cosa succede
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
         page.set_default_timeout(60000)
@@ -18,12 +19,7 @@ async def run_bot():
         await page.locator('div.dropdown-menu.open a:has-text("In corso")').first.click(force=True)
         await asyncio.sleep(3)
         
-        # 2. FILTRO REGIONE (Lazio)
-        print("-> Impostazione filtro REGIONE: 'Lazio'...")
-        await page.click('button[data-id="id_regioneSearch"]')
-        await page.locator('div.dropdown-menu.open').get_by_role("option", name="Lazio").first.click(force=True)
-        await asyncio.sleep(5)
-        
+        # Premi Invio per applicare
         await page.keyboard.press("Enter")
         print("-> Filtri applicati. Attesa caricamento risultati...")
         await asyncio.sleep(5)
@@ -56,22 +52,33 @@ async def run_bot():
                 
                 count = await page.locator("text=Dettaglio >").count()
                 for i in range(count):
-                    # Ricarico la pagina per ogni dettaglio per evitare problemi di clic
+                    # Ricarico per evitare conflitti tra i click
                     await page.goto(full_url, wait_until="domcontentloaded")
                     btn = page.locator("text=Dettaglio >").nth(i)
                     if await btn.is_visible():
                         await btn.click(force=True)
-                        await page.wait_for_load_state("domcontentloaded")
+                        
+                        # Aspettiamo che la tabella appaia a video
+                        await page.wait_for_selector("table", timeout=10000)
+                        await asyncio.sleep(2) 
                         
                         categoria = await page.locator("h1.cc-title-main").first.text_content()
                         tabellone = await page.locator("span#spn-tournament-description").text_content() or "N/A"
-                        giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
+                        
+                        # Lettura "a video" delle righe (tr)
+                        rows = page.locator("table tbody tr")
+                        count_rows = await rows.count()
+                        giocatori = []
+                        for r in range(count_rows):
+                            nome = await rows.nth(r).text_content()
+                            if nome and len(nome.strip()) > 3:
+                                giocatori.append(nome.strip())
                         
                         entry = {
-                            "nomeTorneo": nome_torneo.strip(),
+                            "nomeTorneo": f"{nome_torneo.strip()} - {tabellone.strip()}",
                             "categoria": categoria.strip(), 
                             "tabellone": tabellone.strip(), 
-                            "iscritti": [g.strip() for g in giocatori]
+                            "iscritti": list(set(giocatori))
                         }
                         
                         # LOGICA GIOVANILI
@@ -79,7 +86,7 @@ async def run_bot():
                             dati_giovanili["tornei"].append(entry)
                         else:
                             dati_open["tornei"].append(entry)
-                        print(f"    -> Estratto: {tabellone.strip()} con {len(giocatori)} giocatori.")
+                        print(f"    -> Estratto: {tabellone.strip()} con {len(list(set(giocatori)))} iscritti.")
             except Exception as e:
                 print(f"    ! Errore su {url[-10:]}: {e}")
         
