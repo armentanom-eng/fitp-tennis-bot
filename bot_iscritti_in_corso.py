@@ -7,21 +7,21 @@ async def run_bot():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
-        page.set_default_timeout(30000)
+        page.set_default_timeout(45000)
         
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # FILTRO: In Corso
+        # FILTRO: In Corso - Selettore mirato
         await page.click('button[data-id="select_status"]')
-        # Click più generico per intercettare meglio la voce
-        await page.locator('text="In corso"').last.click() 
+        await page.locator('span.filter-option:has-text("In corso")').click()
+        await asyncio.sleep(3) # Tempo per applicare il filtro
         
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
-        await asyncio.sleep(8) # Attesa per caricamento filtri
+        await asyncio.sleep(8)
         
         # Estrazione URL
         while True:
