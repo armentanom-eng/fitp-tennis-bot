@@ -4,33 +4,31 @@ on:
     - cron: '0 8,14,20 * * *'
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
-  build:
+  scrape:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Python
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.9'
-
+          python-version: '3.10'
+          
       - name: Install dependencies
         run: |
           pip install playwright
           playwright install chromium
-
-      - name: Run script
+          
+      - name: Esegui Bot
         run: python bot_iscritti_in_corso.py
-
-      - name: Commit files
+        
+      - name: Commit Risultati
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Iscritti_Giovanili_In_Corso.json Iscritti_Open_In_Corso.json
-          git commit -m "Aggiornamento Iscritti In Corso"
+          git commit -m "Aggiornamento iscritti in corso" || echo "Nessuna modifica"
           git push
