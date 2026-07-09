@@ -7,23 +7,25 @@ async def run_bot():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
-        page.set_default_timeout(45000)
+        page.set_default_timeout(60000) # Aumentato a 60s per sicurezza
         
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # FILTRO: In Corso - Selettore mirato
+        # FILTRO: In Corso (Approccio forzato)
         await page.click('button[data-id="select_status"]')
-        await page.locator('span.filter-option:has-text("In corso")').click()
-        await asyncio.sleep(3) # Tempo per applicare il filtro
+        # Cerchiamo l'elemento <a> che contiene esattamente "In corso" dentro il menu
+        await page.locator('div.dropdown-menu.open a:has-text("In corso")').click(force=True)
+        
+        await asyncio.sleep(3) # Tempo necessario al caricamento dati dinamici
         
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
-        await asyncio.sleep(8)
+        await asyncio.sleep(8) 
         
-        # Estrazione URL
+        # --- (Il resto del tuo codice rimane invariato) ---
         while True:
             btn_load_more = page.locator("button#btn-loadMore")
             if await btn_load_more.is_visible():
@@ -65,7 +67,7 @@ async def run_bot():
                             dati_giovanili["tornei"].append(entry)
                         else:
                             dati_open["tornei"].append(entry)
-            except Exception as e: print(f"Errore: {e}")
+            except Exception as e: print(f"Errore su {url}: {e}")
         
         with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
         with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
