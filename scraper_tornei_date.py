@@ -49,20 +49,16 @@ async def run_bot():
             
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # Filtro "In programma"
             await page.click('button[data-id="select_status"]')
             await page.locator('span:text-is("In programma")').last.click()
             
-            # Regione Lazio
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             
-            # CLICK SUL FILTRO CATEGORIA
             print(f"Clicco sul filtro: {cat_id}")
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5)
             
-            # Caricamento lista completa
             while True:
                 btn = page.locator("button#btn-loadMore")
                 if await btn.is_visible(): 
@@ -79,6 +75,11 @@ async def run_bot():
                 full_url = f"https://www.fitp.it{url}"
                 try:
                     await page.goto(full_url, wait_until="networkidle")
+                    
+                    # ESTRAZIONE NOME TORNEO
+                    nome_torneo = await page.title()
+                    nome_torneo = nome_torneo.replace(" - FITP", "").strip()
+                    
                     if not await page.locator("#select-ordergame").is_visible(): continue
                     
                     for i in range(2):
@@ -93,7 +94,12 @@ async def run_bot():
                                 await download.save_as("temp.pdf")
                                 matches = get_pdf_info("temp.pdf")
                                 if matches:
-                                    json_data["tornei"].append({"url": full_url, "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                                    json_data["tornei"].append({
+                                        "url": full_url,
+                                        "nomeTorneo": nome_torneo,
+                                        "data": data_target, 
+                                        "partite": [format_line_for_swift(m, data_target) for m in matches]
+                                    })
                 except Exception as e:
                     print(f"Errore su {full_url}: {e}")
             
