@@ -14,32 +14,48 @@ CATEGORIES = {
 }
 
 def format_line_for_swift(raw_text, date_target):
-    # Pulisce il testo
-    clean_text = raw_text.replace("\n", " ").strip()
+    # 1. Pulizia base
+    text = raw_text.replace("\n", " ").strip()
     
-    # Cerca l'orario
-    match_time = re.search(r"(\d{2}:\d{2})", clean_text)
-    time = match_time.group(1) if match_time else "00:00"
+    # 2. Estrazione orario (supporta HH:MM e HH.MM)
+    match_time = re.search(r"(\d{2})[:.](\d{2})", text)
+    time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     
-    # FORMATO: Data; Ora; Testo intero (con i ; l'App può splittare i nomi)
-    return f"{date_target}; {time}; {clean_text}"
+    # 3. Rimuove scritte di sistema ridondanti
+    text = re.sub(r"(Inizio ore|Non prima di):?\s*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
+    
+    # 4. NORMALIZZAZIONE: trasforma ogni separatore ( / | - \ ) in " vs "
+    text = re.sub(r"\s*[/\-|\\]\s*", " vs ", text)
+    
+    # 5. Pulizia finale: rimuove indici numerici iniziali e spazi doppi
+    text = re.sub(r"^\d+\s+", "", text)
+    text = re.sub(r"\s+", " ", text).strip()
+    
+    # Formato obbligatorio: Data; Ora; Giocatore vs Giocatore
+    return f"{date_target}; {time}; {text}"
 
 def get_pdf_info(pdf_path):
     matches = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
+                # Cerca prima nelle tabelle per maggiore precisione
                 tables = page.extract_tables()
                 for table in tables:
                     for row in table:
-                        row_text = " ".join([str(cell) for cell in row if cell])
-                        if any(x in row_text for x in ["Inizio", "Non prima", ":"]):
-                            matches.append(row_text)
+                        clean_row = [str(cell).strip() for cell in row if cell and str(cell).strip()]
+                        if len(clean_row) >= 2:
+                            row_text = " ".join(clean_row)
+                            if re.search(r"\d{2}[:.]\d{2}", row_text):
+                                matches.append(row_text)
                 
+                # Se non trova tabelle, estrae il testo riga per riga
                 if not matches:
                     text = page.extract_text()
                     if text:
-                        matches.extend([line.strip() for line in text.split('\n') if ":" in line])
+                        for line in text.split('\n'):
+                            if re.search(r"\d{2}[:.]\d{2}", line):
+                                matches.append(line.strip())
     except Exception as e:
         print(f"    ! Errore lettura PDF: {e}")
     return matches
