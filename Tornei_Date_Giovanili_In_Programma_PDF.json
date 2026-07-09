@@ -1,16 +1,9 @@
 {
-    "report_data": "09/07/2026 07:51",
+    "report_data": "09/07/2026 10:04",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
-                "09/07/2026; 18:00; COZZI MARIO vs D; CORSETTI JACOPO vs CERQUOZZI MATTIA I; PETRELLA FEDERICO vs ARCHETTI MATTEO"
-            ]
-        },
-        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "Federtennis",
             "data": "09/07/2026",
             "partite": [
                 "09/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
@@ -23,6 +16,7 @@
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
+            "nomeTorneo": "Federtennis",
             "data": "09/07/2026",
             "partite": [
                 "09/07/2026; 00:00; No. Campo 1 (principale) campo 2",
@@ -32,12 +26,22 @@
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "nomeTorneo": "Federtennis",
             "data": "09/07/2026",
             "partite": [
                 "09/07/2026; 00:00; No. CAMPO 1 (PRINCIPALE) CAMPO 2",
                 "09/07/2026; 16:00; 1 CONTESTABILE vs FORATTINII I; 1 FABRIZI vs VINCIGUERRA",
                 "09/07/2026; 17:30; 1 MARINUCCI vs TIBUZZI; 1 SEMERARO vs VALENTINI",
                 "09/07/2026; 19:00; 1 BELLOCCO vs MANFREDINI; 1 CERAMANICA vs D"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "Federtennis",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
+                "09/07/2026; 18:00; COZZI MARIO vs D; CORSETTI JACOPO vs CERQUOZZI MATTIA I; PETRELLA FEDERICO vs ARCHETTI MATTEO"
             ]
         }
     ]
