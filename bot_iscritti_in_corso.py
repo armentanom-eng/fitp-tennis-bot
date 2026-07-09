@@ -56,7 +56,7 @@ async def run_bot():
                 
                 count = await page.locator("text=Dettaglio >").count()
                 for i in range(count):
-                    # Ricarico per sicurezza pulsante
+                    # Ricarico la pagina per ogni dettaglio per evitare problemi di clic
                     await page.goto(full_url, wait_until="domcontentloaded")
                     btn = page.locator("text=Dettaglio >").nth(i)
                     if await btn.is_visible():
@@ -93,3 +93,4 @@ async def run_bot():
         print("--- [END] Processo completato. ---")
 
 if __name__ == "__main__":
+    asyncio.run(run_bot())
