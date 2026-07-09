@@ -1,44 +1,4 @@
 {
-    "report_data": "09/07/2026 06:45",
-    "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. Campo 1 (principale) campo 2",
-                "09/07/2026; 17:00; TURRIZIANI COLONNA SAVERIO vs MASI MANUEL I; QUERQUI CARLO vs SANTODONATO GIORDANO",
-                "09/07/2026; 19:00; CERRONI STEFANO vs VECCHI LUCA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 1 (PRINCIPALE) CAMPO 2",
-                "09/07/2026; 16:00; 1 CONTESTABILE vs FORATTINII I; 1 FABRIZI vs VINCIGUERRA",
-                "09/07/2026; 17:30; 1 MARINUCCI vs TIBUZZI; 1 SEMERARO vs VALENTINI",
-                "09/07/2026; 19:00; 1 BELLOCCO vs MANFREDINI; 1 CERAMANICA vs D"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
-                "09/07/2026; 19:30; BURN MARDOCK vs MILONE ANGELO MOCCIA; DI PIRRO vs IANNINO MARIA NERVI; ONGARO vs NARDELLI ENRICO RINALDI; FANELLI vs CHERBIB SKANDER CENTIONI; MONTALBANO vs PALMA ROSITA LIPPIELLO; RICCI vs MILONE ANDREA",
-                "09/07/2026; 21:00; DE PASTOR vs PASCIUCCO MICHELE PRESTANICOLA; LAMPUS vs BRUSADELLI LUCIANO BRUNI; SIRAGUSA vs LA SPINA LIVIO MATHUGAMA; CRETAIO vs SERVODIO GIUSEPPE EFFICACE; CARIDI vs BOCCINI LEONARDO PROIETTI; ARRIGHI vs TESTA VITTORIO CRETAIO; LUCIANO vs TAMBONE LUCREZIA GIOVAGNOLI; REGA vs DI FABIO NICOLA FORNARI; IRTI vs TAMILIA ALESSIO",
-                "09/07/2026; 22:30; GIARRUSSO vs MARCHESINI ANDREA ELETTI MARCO; TROIANI DANIELE PLACIDI FABRIZIO vs MAGRINI DANIELE RIBELLI; ANTONELLI vs MAGAZZU MARIO DI CONSIGLIO; ANTONINI vs MAZZA GENNARO SCOTTI; MECHELLI vs COSTANZO LORENZO",
-                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "09/07/2026; 00:00; POSSIBILI SPOSTAMENTI DI CAMPO CLARENS LUCA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "data": "09/07/2026",
-            "partite": [
-                "09/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
-                "09/07/2026; 18:00; COZZI MARIO vs D; CORSETTI JACOPO vs CERQUOZZI MATTIA I; PETRELLA FEDERICO vs ARCHETTI MATTEO"
-            ]
-        }
-    ]
+    "report_data": "09/07/2026 07:52",
+    "tornei": []
 }
