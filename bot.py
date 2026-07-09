@@ -7,7 +7,6 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Mappatura: la chiave è il data-id del sito, il valore è il nome del file JSON
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite.json", 
     "t_affiliati": "Open_Partite.json"
@@ -55,18 +54,15 @@ async def run_bot():
                 print(f"Analizzando stato: {status}...")
                 await page.goto(BASE_URL, wait_until="networkidle")
                 
-                # Selezione stato
                 await page.click('button[data-id="select_status"]')
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 
-                # Selezione Regione
                 await page.click('button[data-id="id_regioneSearch"]')
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 
-                # CLICK SUL FILTRO CATEGORIA (Giovanili o Open)
                 print(f"Clicco sul filtro: {cat_id}")
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
-                await asyncio.sleep(4) # Attesa per il caricamento dei risultati
+                await asyncio.sleep(4)
                 
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators]))
@@ -77,9 +73,13 @@ async def run_bot():
                     full_url = f"https://www.fitp.it{link}"
                     try:
                         await page.goto(full_url, wait_until="networkidle")
+                        
+                        # ESTRAZIONE NOME TORNEO DALLA PAGINA
+                        nome_torneo = await page.title()
+                        nome_torneo = nome_torneo.replace(" - FITP", "").strip()
+                        
                         if not await page.locator("#select-ordergame").is_visible(): continue
                         
-                        # Controllo per i prossimi 2 giorni
                         for i in range(2):
                             data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                             if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
@@ -92,7 +92,12 @@ async def run_bot():
                                     await download.save_as("temp.pdf")
                                     matches = get_pdf_info("temp.pdf")
                                     if matches:
-                                        json_data["tornei"].append({"url": full_url, "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                                        json_data["tornei"].append({
+                                            "url": full_url, 
+                                            "nomeTorneo": nome_torneo,
+                                            "data": data_target, 
+                                            "partite": [format_line_for_swift(m, data_target) for m in matches]
+                                        })
                     except Exception as e:
                         print(f"Errore su {full_url}: {e}")
                         
