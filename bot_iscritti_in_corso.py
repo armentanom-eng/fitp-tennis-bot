@@ -15,23 +15,26 @@ async def run_bot():
         # 1. FILTRO STATO
         print("-> Impostazione filtro STATO: 'In corso'...")
         await page.click('button[data-id="select_status"]')
-        await page.locator('div.dropdown-menu.open a:has-text("In corso")').click(force=True)
+        await page.locator('div.dropdown-menu.open a:has-text("In corso")').first.click(force=True)
         await asyncio.sleep(2)
         
         # 2. FILTRO REGIONE (Lazio)
         print("-> Impostazione filtro REGIONE: 'Lazio'...")
         await page.click('button[data-id="id_regioneSearch"]')
-        await page.locator('div.dropdown-menu.open a:has-text("Lazio")').click(force=True)
-        await asyncio.sleep(3) # Necessario per caricare le province
+        # Usiamo .first per evitare violazioni di strict mode
+        await page.locator('div.dropdown-menu.open').get_by_role("option", name="Lazio").first.click(force=True)
+        await asyncio.sleep(3) # Attesa necessaria per caricare le province
         
-        # 3. FILTRO PROVINCIA (Roma) - USIAMO IL SELETTORE ATTIVO
+        # 3. FILTRO PROVINCIA (Roma)
         print("-> Impostazione filtro PROVINCIA: 'Roma'...")
         await page.click('button[data-id="id_provinciaSearch"]')
-        # Usiamo il selettore specifico basato sulle tue ispezioni
+        # Attesa visibilità dell'opzione specifica
         roma_opt = page.locator('div.dropdown-menu.open li a:has-text("Roma")').last
         await roma_opt.wait_for(state="visible")
         await roma_opt.click(force=True)
         
+        # Conferma filtri
+        await page.keyboard.press("Enter")
         print("-> Filtri applicati. Attesa caricamento risultati...")
         await asyncio.sleep(5)
         
@@ -63,7 +66,7 @@ async def run_bot():
                 
                 count = await page.locator("text=Dettaglio >").count()
                 for i in range(count):
-                    # Ricarichiamo per evitare conflitti tra tabelloni
+                    # Ricarichiamo la pagina per resettare lo stato dei clic
                     await page.goto(full_url, wait_until="domcontentloaded")
                     btn = page.locator("text=Dettaglio >").nth(i)
                     
