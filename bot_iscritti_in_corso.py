@@ -3,7 +3,7 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione ISCRITTI (Filtri: In corso, TUTTO IL LAZIO) ---")
+    print("--- [START] Avvio estrazione ISCRITTI (Filtri: In corso, Lazio) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -22,12 +22,10 @@ async def run_bot():
         print("-> Impostazione filtro REGIONE: 'Lazio'...")
         await page.click('button[data-id="id_regioneSearch"]')
         await page.locator('div.dropdown-menu.open').get_by_role("option", name="Lazio").first.click(force=True)
-        await asyncio.sleep(5) # Attesa più lunga per caricare tutti i dati regionali
-        
-        # NOTA: Filtro Provincia rimosso come richiesto.
+        await asyncio.sleep(5)
         
         await page.keyboard.press("Enter")
-        print("-> Filtri applicati. Attesa caricamento risultati (Lazio intero)...")
+        print("-> Filtri applicati. Attesa caricamento risultati...")
         await asyncio.sleep(5)
         
         # ESPANSIONE LISTA
@@ -37,7 +35,7 @@ async def run_bot():
             if await btn_load_more.is_visible():
                 print("    -> Trovato 'Carica altri', espando...")
                 await btn_load_more.click()
-                await asyncio.sleep(3)
+                await asyncio.sleep(4)
             else:
                 print("    -> Lista completa caricata.")
                 break
@@ -51,13 +49,14 @@ async def run_bot():
         
         for index, url in enumerate(urls):
             full_url = f"https://www.fitp.it{url}"
-            print(f"[{index+1}/{len(urls)}] Analizzo torneo: {url[-10:]}")
             try:
                 await page.goto(full_url, wait_until="domcontentloaded")
                 nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                print(f"[{index+1}/{len(urls)}] Analizzo: {nome_torneo.strip()}")
                 
                 count = await page.locator("text=Dettaglio >").count()
                 for i in range(count):
+                    # Ricarico per sicurezza pulsante
                     await page.goto(full_url, wait_until="domcontentloaded")
                     btn = page.locator("text=Dettaglio >").nth(i)
                     if await btn.is_visible():
@@ -75,7 +74,8 @@ async def run_bot():
                             "iscritti": [g.strip() for g in giocatori]
                         }
                         
-                        if any(x in categoria.lower() for x in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
+                        # LOGICA GIOVANILI
+                        if any(x in categoria.lower() for x in ["under", "u10", "u12", "u14", "u16", "u18", "giovanile", "junior"]):
                             dati_giovanili["tornei"].append(entry)
                         else:
                             dati_open["tornei"].append(entry)
@@ -93,4 +93,3 @@ async def run_bot():
         print("--- [END] Processo completato. ---")
 
 if __name__ == "__main__":
-    asyncio.run(run_bot())
