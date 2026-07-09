@@ -1,7 +1,7 @@
 name: Bot Iscritti In Corso
 on:
   schedule:
-    - cron: '0 8,14,20 * * *' # Esegue alle 8, 14 e 20 ogni giorno
+    - cron: '0 8,14,20 * * *'
   workflow_dispatch:
 
 jobs:
@@ -29,5 +29,10 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add Iscritti_Giovanili_In_Corso.json Iscritti_Open_In_Corso.json
-          git commit -m "Aggiornamento Iscritti In Corso" || exit 0
-          git push
+          # Verifichiamo se ci sono modifiche prima di fare il commit
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "Nessuna modifica da salvare."
+          else
+            git commit -m "Aggiornamento Iscritti In Corso"
+            git push https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          fi
