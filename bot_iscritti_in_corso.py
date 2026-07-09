@@ -3,7 +3,7 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione ISCRITTI (Filtri: In corso, Lazio, Roma) ---")
+    print("--- [START] Avvio estrazione ISCRITTI (Filtri: In corso, TUTTO IL LAZIO) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -12,7 +12,7 @@ async def run_bot():
         print("-> Navigazione verso il portale FITP...")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
         
-        # 1. FILTRO STATO
+        # 1. FILTRO STATO (In corso)
         print("-> Impostazione filtro STATO: 'In corso'...")
         await page.click('button[data-id="select_status"]')
         await page.locator('div.dropdown-menu.open a:has-text("In corso")').first.click(force=True)
@@ -22,17 +22,12 @@ async def run_bot():
         print("-> Impostazione filtro REGIONE: 'Lazio'...")
         await page.click('button[data-id="id_regioneSearch"]')
         await page.locator('div.dropdown-menu.open').get_by_role("option", name="Lazio").first.click(force=True)
-        await asyncio.sleep(3)
+        await asyncio.sleep(5) # Attesa più lunga per caricare tutti i dati regionali
         
-        # 3. FILTRO PROVINCIA (Roma)
-        print("-> Impostazione filtro PROVINCIA: 'Roma'...")
-        await page.click('button[data-id="id_provinciaSearch"]')
-        roma_opt = page.locator('div.dropdown-menu.open li a:has-text("Roma")').last
-        await roma_opt.wait_for(state="visible")
-        await roma_opt.click(force=True)
+        # NOTA: Filtro Provincia rimosso come richiesto.
         
         await page.keyboard.press("Enter")
-        print("-> Filtri applicati. Attesa caricamento risultati...")
+        print("-> Filtri applicati. Attesa caricamento risultati (Lazio intero)...")
         await asyncio.sleep(5)
         
         # ESPANSIONE LISTA
