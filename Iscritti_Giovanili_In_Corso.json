@@ -66,6 +66,136 @@
                 "DINO ARCHINA'3.2",
                 "PAOLO CARROCCIO3.1"
             ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "NATALIA LIUZZI4.NC",
+                "LIVIA ROVELLI4.NC",
+                "MELISSA NARDI4.NC",
+                "GLORIA D'ANGELO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": [
+                "CAMILLA STORONI4.6",
+                "DENISE BERTACCINI4.NC",
+                "ALICE STRABIOLI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "FLAMINIA NERI4.1",
+                "NOEMI PAOLUZZI4.2",
+                "ANTONIA MARIA PAUNESCU4.1",
+                "EMMA VECCHI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": [
+                "CATERINA VETTORELLI4.6",
+                "EMMA BLASI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "TOMMASO CARNAZZA4.4",
+                "MATTIA CARNEVALE4.5",
+                "LORENZO VARÌ4.NC",
+                "ALESSANDRO PRIAMO4.5",
+                "ALESSANDRO MASINI4.5",
+                "RICCARDO SOLIMEI4.5",
+                "ALESSANDRO MACCHIUSI4.4",
+                "NICHOLAS GANGEMI4.4",
+                "RICCARDO RABBIA4.4",
+                "DIEGO MAGNIFICO4.4",
+                "GABRIELE BIANCHI4.5",
+                "LEONE ROVELLI4.6",
+                "ALESSANDRO PANICCI4.2",
+                "EDOARDO GAETANI4.2",
+                "RICCARDO GIUSEPPE MUSUMECI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "MARCOS ENRIQUE HERNANDEZ FALCONE4.NC",
+                "RICCARDO FLAMMIA4.NC",
+                "GABRIELE DI GIGLIO4.NC",
+                "BRANDO MAGNIFICO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": [
+                "DIEGO VERRILLO3.3",
+                "JACOPO ROSSI3.5",
+                "DANIELE MACERATESI4.1",
+                "VALERIO ROMA4.2",
+                "ALESSANDRO LUCI3.5",
+                "LORENZO MATTIA VISCONTI3.3",
+                "UGO SAPONARO3.4",
+                "MATTEO GIACOMANTONIO3.4",
+                "MATTIA ZAMBONI4.4",
+                "EDOARDO CELANI4.1",
+                "EDOARDO BELLI4.3",
+                "RARES ANDREI CARCEL4.2",
+                "EDOARDO NANNI3.3",
+                "LORENZO LUPETTI3.5",
+                "TOMMASO SALVONI3.4",
+                "EDOARDO RIZZITIELLO4.4",
+                "ALESSANDRO SACCHI4.4",
+                "LEOPOLDO D'ANGELO4.1",
+                "MARCO DI SANTO3.5",
+                "LEONARDO TERRINONI4.1",
+                "DANIELE GENTILINI4.2",
+                "NOAH CHRISTOPHER GELLER PAWLAK4.2",
+                "LEONARDO BAROLLO4.5",
+                "ANDREA SCOPPA3.2",
+                "MARCO CERVELLI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
+            "categoria": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "LEONARDO MELITO3.4",
+                "LORENZO DE BATTISTI4.2",
+                "GABRIELE MORRONI4.3",
+                "EDOARDO GABRIELE CAMILLI4.3",
+                "FRANCESCO CAMONI4.3",
+                "KIAN MAESTRI4.6",
+                "ANDREA ZUGARO3.5",
+                "FABRIZIO VALENTINI4.4",
+                "UMBERTO CAIRO4.2",
+                "TOMMASO SQUARCIA4.1",
+                "RAFFAELE COLANTUONI3.4",
+                "EDOARDO GINESI4.NC",
+                "ALESSIO SPAGNOLO4.3",
+                "FRANCESCO FERRARI3.5",
+                "JANNICK MATTIA ZAFFINO4.3",
+                "LEONARDO PANICO4.NC",
+                "JACOPO NICOLETTI4.5"
+            ]
         }
     ]
 }
