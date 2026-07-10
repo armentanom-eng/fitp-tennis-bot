@@ -1,10 +1,12 @@
 import asyncio
 import json
+import os
 from datetime import datetime
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
+# Nomi file definiti
 CATEGORIES = {
     "t_giovanili": "Iscrizioni_Aperte_Giovanili.json", 
     "t_affiliati": "Iscrizioni_Aperte_Open.json"
@@ -12,8 +14,10 @@ CATEGORIES = {
 
 async def run_bot():
     print("--- [START] Avvio estrazione ISCRIZIONI APERTE ---")
+    print(f"Directory di lavoro: {os.getcwd()}")
+    
     async with async_playwright() as p:
-        # Aggiunto 'args' per maggiore compatibilità in ambienti cloud/headless
+        # Configurazione browser per ambienti headless (GitHub Actions)
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(accept_downloads=True)
         
@@ -25,22 +29,23 @@ async def run_bot():
             try:
                 await page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
                 
-                # --- FILTRO STATO ---
+                # --- FILTRI ---
+                # Stato
                 await page.click('button[data-id="select_status"]')
-                # Usiamo un approccio di clic diretto basato sul testo, più affidabile
                 await page.get_by_role("option", name="Iscrizioni aperte").click()
                 await asyncio.sleep(2)
                 
-                # --- FILTRI GEOGRAFICI ---
+                # Regione
                 await page.click('button[data-id="id_regioneSearch"]')
                 await page.get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(2)
                 
+                # Provincia
                 await page.click('button[data-id="id_provinciaSearch"]')
                 await page.get_by_role("option", name="Roma").click()
                 await asyncio.sleep(2)
                 
-                # Selezione categoria
+                # Selezione categoria (es. t_giovanili)
                 await page.locator(f'a[data-id="{cat_id}"]').click()
                 await asyncio.sleep(5)
                 
@@ -54,7 +59,7 @@ async def run_bot():
                     else:
                         break
                 
-                # Recupero link tornei
+                # Recupero link
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
                 links = list(set([await loc.get_attribute("href") for loc in locators if await loc.get_attribute("href")]))
                 print(f"-> Trovati {len(links)} tornei.")
@@ -68,24 +73,28 @@ async def run_bot():
                     except:
                         nome = "Torneo senza nome"
                     
-                    # Verifica PDF
+                    # Verifica presenza PDF
                     download_btn = page.locator("#btnOrderGameDownload")
-                    if await download_btn.is_visible():
-                        # Non salviamo il PDF se non serve, verifichiamo solo la presenza
-                        json_data["tornei"].append({"url": full_url, "nomeTorneo": nome.strip(), "status": "PDF presente"})
-                    else:
-                        json_data["tornei"].append({"url": full_url, "nomeTorneo": nome.strip(), "status": "Nessun PDF"})
+                    status = "PDF presente" if await download_btn.is_visible() else "Nessun PDF"
+                    
+                    json_data["tornei"].append({"url": full_url, "nomeTorneo": nome.strip(), "status": status})
                 
-                with open(filename, "w", encoding="utf-8") as f: 
+                # --- SALVATAGGIO ROBUSTO ---
+                output_path = os.path.join(os.getcwd(), filename)
+                with open(output_path, "w", encoding="utf-8") as f: 
                     json.dump(json_data, f, ensure_ascii=False, indent=4)
+                    f.flush()
+                    os.fsync(f.fileno())
+                
+                print(f"-> File creato con successo: {output_path}")
                     
             except Exception as e:
-                print(f"Errore durante il processo: {e}")
+                print(f"Errore critico durante il processo di {cat_id}: {e}")
             finally:
                 await page.close()
             
         await browser.close()
-    print("--- [END] Processo completato correttamente ---")
+    print("--- [END] Processo completato ---")
 
 if __name__ == "__main__": 
     asyncio.run(run_bot())
