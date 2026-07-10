@@ -12,11 +12,13 @@ async def run_bot():
         # Navigazione iniziale
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # Filtri
+        # Filtri: Impostato "In corso"
         await page.click('button[data-id="select_status"]')
         await page.locator('span:text-is("In corso")').last.click()
+        
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+        
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
@@ -30,7 +32,7 @@ async def run_bot():
                 print("    -> Trovato 'Carica altri', espando...")
                 await btn_load_more.click()
                 await page.wait_for_load_state("domcontentloaded")
-                await asyncio.sleep(2) # Pausa di sicurezza
+                await asyncio.sleep(2)
             else:
                 print("    -> Lista completa caricata.")
                 break
@@ -66,7 +68,7 @@ async def run_bot():
                             # Estrazione Categoria Principale
                             categoria = await page.locator("h1.cc-title-main").first.text_content()
                             
-                            # Estrazione precisa del Tabellone (es. Singolare Maschile)
+                            # Estrazione precisa del Tabellone
                             tabellone_el = page.locator("span#spn-tournament-description")
                             tabellone = await tabellone_el.text_content() if await tabellone_el.count() > 0 else "N/A"
                             
@@ -91,9 +93,11 @@ async def run_bot():
             except Exception as e:
                 print(f"    ! Errore critico nel torneo {url[-10:]}: {e}")
         
-        # Salvataggio finale
-        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
+        # Salvataggio finale con nuovi nomi file
+        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: 
+            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: 
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
         print("--- [END] Processo completato. ---")
