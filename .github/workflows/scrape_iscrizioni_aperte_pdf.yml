@@ -1,28 +1,43 @@
 name: Scrape Iscrizioni Aperte
+
 on:
   schedule:
-    - cron: '0 8 * * *' # Esempio: ogni giorno alle 08:00
+    - cron: '0 8 * * *'
   workflow_dispatch:
+
+permissions:
+  contents: write  # <--- AGGIUNGI QUESTA SEZIONE
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }} # <--- AGGIUNGI IL TOKEN
+
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.10'
+          
       - name: Install dependencies
         run: |
           pip install playwright pdfplumber
           playwright install chromium
+          
       - name: Run script
         run: python bot_iscrizioni_aperte.py
+        
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add *.json
-          git commit -m "Aggiornamento dati Iscrizioni Aperte" || exit 0
-          git push
+          # Verifichiamo se ci sono modifiche prima di fare il commit
+          if git diff --staged --quiet; then
+            echo "Nessuna modifica da committare."
+          else
+            git commit -m "Aggiornamento dati Iscrizioni Aperte"
+            git push origin HEAD:main # Specifica esplicitamente il branch
+          fi
