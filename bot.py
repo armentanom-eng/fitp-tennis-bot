@@ -48,34 +48,34 @@ async def run_bot():
             page = await context.new_page()
             
             for status in STATUSES:
-                print(f"-> Navigazione e impostazione stato: {status}")
+                print(f"-> Navigazione: {status}")
                 await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
+                await asyncio.sleep(5) # Attesa generosa all'inizio
                 
-                # 1. Filtro Stato con attesa visibilità
-                await page.click('button[data-id="select_status"]')
-                menu_status = page.locator('div.dropdown-menu.open')
-                await menu_status.wait_for(state="visible")
-                await menu_status.locator('a:has-text("In corso")').first.click(force=True)
-                await asyncio.sleep(2)
+                # FILTRI: agganciati direttamente al pulsante genitore
                 
-                # 2. Filtro Regione
-                print("-> Impostazione Filtri: Lazio > Roma")
-                await page.click('button[data-id="id_regioneSearch"]')
-                menu_regione = page.locator('div.dropdown-menu.open')
-                await menu_regione.wait_for(state="visible")
-                await menu_regione.locator('a:has-text("Lazio")').first.click(force=True)
+                # 1. Stato
+                btn_status = page.locator('button[data-id="select_status"]')
+                await btn_status.click()
+                # Cerchiamo il menu solo dentro il contenitore del bottone
+                await btn_status.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("In corso")').click()
                 await asyncio.sleep(3)
                 
-                # 3. Filtro Provincia
-                await page.click('button[data-id="id_provinciaSearch"]')
-                menu_prov = page.locator('div.dropdown-menu.open')
-                await menu_prov.wait_for(state="visible")
-                await menu_prov.locator('a:has-text("Roma")').first.click(force=True)
+                # 2. Regione
+                btn_reg = page.locator('button[data-id="id_regioneSearch"]')
+                await btn_reg.click()
+                await btn_reg.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("Lazio")').click()
                 await asyncio.sleep(3)
+                
+                # 3. Provincia
+                btn_prov = page.locator('button[data-id="id_provinciaSearch"]')
+                await btn_prov.click()
+                await btn_prov.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("Roma")').click()
+                await asyncio.sleep(5)
                 
                 # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
-                await asyncio.sleep(5)
+                await asyncio.sleep(8) # Attesa lunga per caricamento lista tornei
                 
                 # Espansione lista
                 print("-> Espansione lista tornei...")
@@ -83,39 +83,35 @@ async def run_bot():
                     btn_load_more = page.locator("button#btn-loadMore")
                     if await btn_load_more.is_visible():
                         await btn_load_more.click()
-                        await asyncio.sleep(3)
+                        await asyncio.sleep(4)
                     else: break
                 
                 links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-                print(f"-> Trovati {len(links)} tornei. Inizio analisi (ultimi 7gg)...")
+                print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
                     await page.goto(full_url, timeout=60000, wait_until="networkidle")
+                    await asyncio.sleep(3) # Attesa pagina torneo
                     
                     nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
                     print(f"   [Analizzo]: {nome_torneo.strip()}")
                     
-                    if not await page.locator("#select-ordergame").is_visible(): continue
-                    
-                    for i in range(-7, 1):
-                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
-                        if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
-                            await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(5) # Attesa per ricarico dati AJAX
-                            
-                            download_btn = page.locator("#btnOrderGameDownload")
-                            if await download_btn.is_visible():
-                                print(f"      -> Scarico PDF ({data_target})")
-                                async with page.expect_download() as dl_info: 
-                                    await download_btn.click()
-                                download = await dl_info.value
-                                await download.save_as("temp.pdf")
-                                matches = get_pdf_info("temp.pdf")
-                                if matches:
-                                    json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
-                            else:
-                                print(f"      ! Bottone download non visibile per {data_target}")
+                    # Scarica direttamente il PDF corrente (default del sito)
+                    download_btn = page.locator("#btnOrderGameDownload")
+                    if await download_btn.is_visible():
+                        print(f"      -> Scarico PDF predefinito...")
+                        async with page.expect_download() as dl_info: 
+                            await download_btn.click()
+                        download = await dl_info.value
+                        await download.save_as("temp.pdf")
+                        matches = get_pdf_info("temp.pdf")
+                        if matches:
+                            # Data presa dal momento dell'esecuzione
+                            data_oggi = datetime.now().strftime("%d/%m/%Y")
+                            json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_oggi, "partite": [format_line_for_swift(m, data_oggi) for m in matches]})
+                    else:
+                        print(f"      ! Nessun PDF scaricabile trovato per questo torneo.")
             
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
