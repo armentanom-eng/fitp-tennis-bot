@@ -2,7 +2,7 @@ import asyncio
 import pdfplumber
 import re
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
@@ -50,32 +50,29 @@ async def run_bot():
             for status in STATUSES:
                 print(f"-> Navigazione: {status}")
                 await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
-                await asyncio.sleep(5) # Attesa generosa all'inizio
-                
-                # FILTRI: agganciati direttamente al pulsante genitore
+                await asyncio.sleep(5) 
                 
                 # 1. Stato
                 btn_status = page.locator('button[data-id="select_status"]')
                 await btn_status.click()
-                # Cerchiamo il menu solo dentro il contenitore del bottone
-                await btn_status.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("In corso")').click()
+                await page.locator('.dropdown-menu.open a').filter(has_text="In corso").first.click()
                 await asyncio.sleep(3)
                 
                 # 2. Regione
                 btn_reg = page.locator('button[data-id="id_regioneSearch"]')
                 await btn_reg.click()
-                await btn_reg.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("Lazio")').click()
+                await page.locator('.dropdown-menu.open a').filter(has_text="Lazio").first.click()
                 await asyncio.sleep(3)
                 
                 # 3. Provincia
                 btn_prov = page.locator('button[data-id="id_provinciaSearch"]')
                 await btn_prov.click()
-                await btn_prov.locator('xpath=following-sibling::div[contains(@class, "dropdown-menu")]//a:has-text("Roma")').click()
+                await page.locator('.dropdown-menu.open a').filter(has_text="Roma").first.click()
                 await asyncio.sleep(5)
                 
                 # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
-                await asyncio.sleep(8) # Attesa lunga per caricamento lista tornei
+                await asyncio.sleep(8) 
                 
                 # Espansione lista
                 print("-> Espansione lista tornei...")
@@ -92,12 +89,11 @@ async def run_bot():
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
                     await page.goto(full_url, timeout=60000, wait_until="networkidle")
-                    await asyncio.sleep(3) # Attesa pagina torneo
+                    await asyncio.sleep(3) 
                     
                     nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
                     print(f"   [Analizzo]: {nome_torneo.strip()}")
                     
-                    # Scarica direttamente il PDF corrente (default del sito)
                     download_btn = page.locator("#btnOrderGameDownload")
                     if await download_btn.is_visible():
                         print(f"      -> Scarico PDF predefinito...")
@@ -107,11 +103,10 @@ async def run_bot():
                         await download.save_as("temp.pdf")
                         matches = get_pdf_info("temp.pdf")
                         if matches:
-                            # Data presa dal momento dell'esecuzione
                             data_oggi = datetime.now().strftime("%d/%m/%Y")
                             json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_oggi, "partite": [format_line_for_swift(m, data_oggi) for m in matches]})
                     else:
-                        print(f"      ! Nessun PDF scaricabile trovato per questo torneo.")
+                        print(f"      ! Nessun PDF scaricabile trovato.")
             
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
