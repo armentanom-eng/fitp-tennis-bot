@@ -1,26 +1,42 @@
 {
-    "report_data": "10/07/2026 08:50",
+    "report_data": "10/07/2026 09:06",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
-            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C1993A24-7E86-417F-8301-F6611DE03812",
+            "nomeTorneo": "{{COMPETITION DESCRIPTION}}",
             "data": "10/07/2026",
             "partite": [
-                "10/07/2026; 00:00; Ora 1 2 3",
-                "10/07/2026; 13:00; CHARMITI YARA ZANATTA SOFIA UBINI XOTTA MESSORA LUCAS DI DOMIZIO",
-                "10/07/2026; 19:00; MESSORA vs CASTIGLIONE; MOREGGIO vs DI DOMIZIO",
-                "10/07/2026; 00:00; Ordine di gioco rilasciato"
+                "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "nomeTorneo": "10^ TAPPA XLVII CIRCUITO DEL TIRRENO \"GARDEN VILLAGE\"",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=68EA1EB3-642A-4C6F-871F-8BB417B69F34",
+            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP BRALLO",
             "data": "10/07/2026",
             "partite": [
-                "10/07/2026; 00:00; No. CAMPO 2 CAMPO 1 CAMPO 4 CAMPO 5 Campo 3",
-                "10/07/2026; 16:00; 18 PARTENIE DRAGOS CRISTIAN vs FALIVENE MATTIA I; 18 CURULLA PATRIZIO vs MICOZZI LORENZO I; 12 POMPEI ALLEGRA vs STRABIOLI ALICE I; 14 RIZZARO VITTORIA vs MAGGIORE MARGHERITA I; 18 NUZZI MATTEO vs BAIOCCO STEFANO",
-                "10/07/2026; 17:30; 12 BRANCOLI BUSDRAGHI SEBASTIANO vs GREGNANIN MATTEO I; 12 GIZZI PIETRO vs DE GENNARO SIMONE; 14 SOLIMAN LUDOVICA vs BASTIANELLI EMMA I; 14 FILIPPOVA MAIIA vs PAUNESCU ANTONIA MARIA I; 12 GANDOLFO LEONARDO vs MARIUZZO TOMMASO",
-                "10/07/2026; 19:00; 14 PACIUCCI ANDREA vs CONI GIUSEPPE FLAVIO I; 12 SEGALA ALEANDRO vs RIDOLFI MARCO; 14 FERRARI FRANCESCO vs CAPOZZI MICHELE I; 14 TABACCHIERA SAMUEL vs COLANTUONI RAFFAELE I; 14 DE LISA DAVIDE vs MEDAGLINI LEONARDO"
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
+            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
+                "10/07/2026; 11:30; 13 BONTEMPO LORENZO vs FINOCCHIARO CLAUDIO NINNI I; 13 ZUMBO ANTONINO vs ROMANO ELIA",
+                "10/07/2026; 13:00; 11 SCHIAVO SAMUELE vs CORAZZATO GIULIO I; 11 GENNARO GRETA vs CERAOLO PENELOPE LUNA I; 13 FRENI AURORA vs PIVETTI GAGLIARDI LUDOVICA",
+                "10/07/2026; 14:30; 13 ZUMBO ANTONINO vs ROMANO ELIA; BONTEMPO LORENZO vs FINOCCHIARO CLAUDIO NINNI",
+                "10/07/2026; 00:00; PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47D55075-34F2-4E8D-95B8-DD0BA5F0F14F",
+            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP FIUGGI",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. Campo 4 Campo 5 Campo 6 Campo 7",
+                "10/07/2026; 12:30; 11 ROVELLI LEONE vs PAOLILLO CHIANCARELLA DIEGO I; 11 GELFUSA RICCARDO vs CRAINZ FLAMINI GIORGIO ROMANO I; 11 DIVINCENZO SALVATORE vs POZZI VALERIO I; 13 ANIELLO ANDREA vs REYTANI GIOVANNI ALBERTO",
+                "10/07/2026; 19:00; 11 DE MARCO GABRIELE vs ROVELLI LEONE; 11 GELFUSA RICCARDO vs CRAINZ FLAMINI GIORGIO ROMANO; DIVINCENZO SALVATORE vs POZZI VALERIO I; 11 MEZZINA ANNALISA vs BINETTI ALESSIA ANNA I; 13 GORI LUDOVICA vs TOMEI ALYSSA"
             ]
         },
         {
@@ -58,15 +74,25 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2E7605F8-09D1-4C23-864B-ABA644C048AF",
-            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP SCIACCA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
+            "nomeTorneo": "10^ TAPPA XLVII CIRCUITO DEL TIRRENO \"GARDEN VILLAGE\"",
             "data": "10/07/2026",
             "partite": [
-                "10/07/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "10/07/2026; 11:30; 13 BONTEMPO LORENZO vs FINOCCHIARO CLAUDIO NINNI I; 13 ZUMBO ANTONINO vs ROMANO ELIA",
-                "10/07/2026; 13:00; 11 SCHIAVO SAMUELE vs CORAZZATO GIULIO I; 11 GENNARO GRETA vs CERAOLO PENELOPE LUNA I; 13 FRENI AURORA vs PIVETTI GAGLIARDI LUDOVICA",
-                "10/07/2026; 14:30; 13 ZUMBO ANTONINO vs ROMANO ELIA; BONTEMPO LORENZO vs FINOCCHIARO CLAUDIO NINNI",
-                "10/07/2026; 00:00; PIVETTI GAGLIARDI LUDOVICA vs MORMINO ALESSANDRA"
+                "10/07/2026; 00:00; No. CAMPO 2 CAMPO 1 CAMPO 4 CAMPO 5 Campo 3",
+                "10/07/2026; 16:00; 18 PARTENIE DRAGOS CRISTIAN vs FALIVENE MATTIA I; 18 CURULLA PATRIZIO vs MICOZZI LORENZO I; 12 POMPEI ALLEGRA vs STRABIOLI ALICE I; 14 RIZZARO VITTORIA vs MAGGIORE MARGHERITA I; 18 NUZZI MATTEO vs BAIOCCO STEFANO",
+                "10/07/2026; 17:30; 12 BRANCOLI BUSDRAGHI SEBASTIANO vs GREGNANIN MATTEO I; 12 GIZZI PIETRO vs DE GENNARO SIMONE; 14 SOLIMAN LUDOVICA vs BASTIANELLI EMMA I; 14 FILIPPOVA MAIIA vs PAUNESCU ANTONIA MARIA I; 12 GANDOLFO LEONARDO vs MARIUZZO TOMMASO",
+                "10/07/2026; 19:00; 14 PACIUCCI ANDREA vs CONI GIUSEPPE FLAVIO I; 12 SEGALA ALEANDRO vs RIDOLFI MARCO; 14 FERRARI FRANCESCO vs CAPOZZI MICHELE I; 14 TABACCHIERA SAMUEL vs COLANTUONI RAFFAELE I; 14 DE LISA DAVIDE vs MEDAGLINI LEONARDO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=80A94C49-BFB3-4BED-B4A3-A31F12DFB73C",
+            "nomeTorneo": "TORNEO ROAD TO BOLOGNA C/O CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; Ora 1 2 3",
+                "10/07/2026; 13:00; CHARMITI YARA ZANATTA SOFIA UBINI XOTTA MESSORA LUCAS DI DOMIZIO",
+                "10/07/2026; 19:00; MESSORA vs CASTIGLIONE; MOREGGIO vs DI DOMIZIO",
+                "10/07/2026; 00:00; Ordine di gioco rilasciato"
             ]
         }
     ]
