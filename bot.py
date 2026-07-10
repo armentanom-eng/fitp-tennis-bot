@@ -47,10 +47,9 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
-            # Navigazione
             await page.goto(BASE_URL, timeout=60000)
             
-            # Filtri (usa get_by_role per evitare errori di timeout su menu complessi)
+            # Filtri
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
             await asyncio.sleep(2)
@@ -76,7 +75,14 @@ async def run_bot():
                 else:
                     break
             
-            links = list(set(await page.locator("a[href*='Dettaglio-Competizione']").all_attribute_values("href")))
+            # Recupero link sicuro
+            locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            links = []
+            for loc in locators:
+                href = await loc.get_attribute("href")
+                if href: links.append(href)
+            links = list(set(links))
+            
             print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
             
             for link in links:
@@ -94,7 +100,6 @@ async def run_bot():
                 data_oggi = datetime.now().strftime("%d/%m/%Y")
                 
                 if await download_btn.is_visible():
-                    print(f"      -> Scarico PDF...")
                     async with page.expect_download() as dl_info: 
                         await download_btn.click()
                     download = await dl_info.value
@@ -105,7 +110,7 @@ async def run_bot():
                         "url": full_url, 
                         "nomeTorneo": nome_torneo.strip(), 
                         "data": data_oggi, 
-                        "partite": [format_line_for_swift(m, data_oggi) for m in matches] if matches else ["Nessuna partita nel file"]
+                        "partite": [format_line_for_swift(m, data_oggi) for m in matches] if matches else ["Nessuna partita trovata"]
                     })
                 else:
                     print(f"      ! Tabellone non disponibile.")
