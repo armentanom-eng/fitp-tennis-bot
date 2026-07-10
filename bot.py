@@ -10,8 +10,7 @@ CATEGORIES = {
     "t_giovanili": "Giovanili_Partite.json", 
     "t_affiliati": "Open_Partite.json"
 }
-# Rimosso "Iscrizioni aperte", analizza solo "In corso"
-STATUSES = ["In corso"] 
+STATUSES = ["In corso"]
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -38,7 +37,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (Solo 'In corso') ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Intervallo: -7gg / +0gg) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -48,34 +47,29 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
-            # Ora STATUSES contiene solo "In corso"
             for status in STATUSES:
                 print(f"-> Navigazione e impostazione stato: {status}")
                 await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
                 
-                # 1. Filtro Stato
+                # Filtri
                 await page.click('button[data-id="select_status"]')
                 await page.get_by_role("listbox").get_by_role("option", name=status).click()
                 await asyncio.sleep(2)
                 
-                # 2. Filtro Regione
-                print("-> Impostazione Regione: Lazio")
+                print("-> Impostazione Regione: Lazio e Provincia: Roma")
                 await page.click('button[data-id="id_regioneSearch"]')
                 await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
                 await asyncio.sleep(3)
                 
-                # 3. Filtro Provincia (Roma)
-                print("-> Impostazione Provincia: Roma")
                 await page.click('button[data-id="id_provinciaSearch"]')
                 await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
                 await asyncio.sleep(3)
                 
-                # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(5)
                 
                 links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-                print(f"-> Trovati {len(links)} tornei per {status}")
+                print(f"-> Trovati {len(links)} tornei. Inizio ciclo date (ultimi 7gg)...")
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
@@ -86,13 +80,15 @@ async def run_bot():
                     
                     if not await page.locator("#select-ordergame").is_visible(): continue
                     
-                    for i in range(2):
+                    # Ciclo per gli ultimi 7 giorni
+                    for i in range(-7, 1):
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        
                         if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                             await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(3)
-                            download_btn = page.locator("#btnOrderGameDownload")
+                            await asyncio.sleep(4) 
                             
+                            download_btn = page.locator("#btnOrderGameDownload")
                             if await download_btn.is_visible():
                                 print(f"      -> Scarico PDF per data: {data_target}")
                                 async with page.expect_download() as dl_info: await download_btn.click()
@@ -101,6 +97,8 @@ async def run_bot():
                                 matches = get_pdf_info("temp.pdf")
                                 if matches:
                                     json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                            else:
+                                print(f"      ! Bottone download non visibile per {data_target}")
             
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
