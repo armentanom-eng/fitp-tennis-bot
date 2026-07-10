@@ -1,1 +1,28 @@
+name: Scrape Iscrizioni Aperte
+on:
+  schedule:
+    - cron: '0 8 * * *' # Esempio: ogni giorno alle 08:00
+  workflow_dispatch:
 
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: |
+          pip install playwright pdfplumber
+          playwright install chromium
+      - name: Run script
+        run: python bot_iscrizioni.py
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add *.json
+          git commit -m "Aggiornamento dati Iscrizioni Aperte" || exit 0
+          git push
