@@ -15,7 +15,7 @@ async def run_bot():
     print("--- [START] Avvio estrazione ISCRIZIONI APERTE ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(accept_downloads=True)
+        context = await browser.new_context(user_agent="Mozilla/5.0")
         
         for cat_id, filename in CATEGORIES.items():
             print(f"\n>>> Processo categoria: {cat_id}")
@@ -23,71 +23,66 @@ async def run_bot():
             page = await context.new_page()
             
             try:
-                await page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
+                await page.goto(BASE_URL, timeout=60000)
                 
-                # --- FILTRO STATO (Bootstrap-Select) ---
-                await page.click('button[data-id="select_status"]')
-                await page.wait_for_selector('.dropdown-menu.show', state="visible")
-                await page.locator('.dropdown-menu.show li a:has-text("Iscrizioni aperte")').click()
+                # 1. Gestione Cookie: Chiudiamo il banner se esiste
+                try:
+                    await page.wait_for_selector('button:has-text("Accetto")', timeout=5000)
+                    await page.click('button:has-text("Accetto")')
+                except: pass
+
+                # 2. Filtri: usiamo l'esecuzione JS per forzare l'apertura dei menu
+                # Questo evita il timeout del .dropdown-menu.show
+                def force_select(btn_id, option_text):
+                    return f"""
+                    (async () => {{
+                        const btn = document.querySelector('button[data-id="{btn_id}"]');
+                        btn.click();
+                        await new Promise(r => setTimeout(r, 1000));
+                        const items = Array.from(document.querySelectorAll('.dropdown-menu.show li a'));
+                        const target = items.find(el => el.innerText.includes("{option_text}"));
+                        if (target) target.click();
+                    }})()
+                    """
+
+                await page.evaluate(force_select("select_status", "Iscrizioni aperte"))
+                await asyncio.sleep(2)
+                await page.evaluate(force_select("id_regioneSearch", "Lazio"))
+                await asyncio.sleep(2)
+                await page.evaluate(force_select("id_provinciaSearch", "Roma"))
                 await asyncio.sleep(2)
                 
-                # --- FILTRO REGIONE ---
-                await page.click('button[data-id="id_regioneSearch"]')
-                await page.wait_for_selector('.dropdown-menu.show', state="visible")
-                await page.locator('.dropdown-menu.show li a:has-text("Lazio")').click()
-                await asyncio.sleep(2)
-                
-                # --- FILTRO PROVINCIA ---
-                await page.click('button[data-id="id_provinciaSearch"]')
-                await page.wait_for_selector('.dropdown-menu.show', state="visible")
-                await page.locator('.dropdown-menu.show li a:has-text("Roma")').click()
-                await asyncio.sleep(2)
-                
-                # Selezione categoria
+                # Selezione categoria (link diretto)
                 await page.locator(f'a[data-id="{cat_id}"]').click()
                 await asyncio.sleep(5)
                 
                 # Espansione lista
-                print("-> Espansione lista tornei...")
                 while True:
                     btn = page.locator("#btn-loadMore")
                     if await btn.is_visible():
                         await btn.click()
                         await asyncio.sleep(3)
-                    else:
-                        break
+                    else: break
                 
-                # Recupero link
+                # Estrazione
                 locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-                links = list(set([await loc.get_attribute("href") for loc in locators if await loc.get_attribute("href")]))
-                print(f"-> Trovati {len(links)} tornei.")
+                links = list(set([await loc.get_attribute("href") for loc in locators]))
                 
                 for link in links:
-                    full_url = f"https://www.fitp.it{link}"
-                    await page.goto(full_url, timeout=60000)
-                    
+                    await page.goto(f"https://www.fitp.it{link}", timeout=60000)
                     try:
-                        nome = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
-                    except:
-                        nome = "Torneo senza nome"
-                    
-                    status = "PDF presente" if await page.locator("#btnOrderGameDownload").is_visible() else "Nessun PDF"
-                    json_data["tornei"].append({"url": full_url, "nomeTorneo": nome.strip(), "status": status})
+                        nome = await page.locator("h1.cc-title-main").inner_text()
+                        has_pdf = await page.locator("#btnOrderGameDownload").is_visible()
+                        json_data["tornei"].append({"url": f"https://www.fitp.it{link}", "nomeTorneo": nome.strip(), "status": "PDF presente" if has_pdf else "No PDF"})
+                    except: continue
                 
-                # Salvataggio
-                output_path = os.path.join(os.getcwd(), filename)
-                with open(output_path, "w", encoding="utf-8") as f: 
+                with open(filename, "w", encoding="utf-8") as f: 
                     json.dump(json_data, f, ensure_ascii=False, indent=4)
-                
-                print(f"-> Salvato: {output_path}")
                     
-            except Exception as e:
-                print(f"Errore critico durante {cat_id}: {e}")
-            finally:
-                await page.close()
+            except Exception as e: print(f"Errore {cat_id}: {e}")
+            finally: await page.close()
             
         await browser.close()
-    print("--- [END] Processo completato ---")
 
 if __name__ == "__main__": 
     asyncio.run(run_bot())
