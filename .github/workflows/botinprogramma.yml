@@ -1,4 +1,4 @@
-name: Bot Tornei FITP
+name: Bot Tornei in programma
 
 on:
   workflow_dispatch:
