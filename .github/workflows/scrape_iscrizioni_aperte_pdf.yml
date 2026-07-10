@@ -18,7 +18,7 @@ jobs:
           pip install playwright pdfplumber
           playwright install chromium
       - name: Run script
-        run: python bot_iscrizioni.py
+        run: python bot_iscrizioni_aperte.py
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
