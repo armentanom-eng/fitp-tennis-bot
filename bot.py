@@ -53,21 +53,21 @@ async def run_bot():
                 await asyncio.sleep(5) 
                 
                 # 1. Stato
-                btn_status = page.locator('button[data-id="select_status"]')
-                await btn_status.click()
-                await page.locator('.dropdown-menu.open a').filter(has_text="In corso").first.click()
+                await page.click('button[data-id="select_status"]')
+                await page.wait_for_selector('.dropdown-menu.open', state="visible", timeout=60000)
+                await page.locator('.dropdown-menu.open a').filter(has_text="In corso").first.click(force=True)
                 await asyncio.sleep(3)
                 
                 # 2. Regione
-                btn_reg = page.locator('button[data-id="id_regioneSearch"]')
-                await btn_reg.click()
-                await page.locator('.dropdown-menu.open a').filter(has_text="Lazio").first.click()
+                await page.click('button[data-id="id_regioneSearch"]')
+                await page.wait_for_selector('.dropdown-menu.open', state="visible", timeout=60000)
+                await page.locator('.dropdown-menu.open a').filter(has_text="Lazio").first.click(force=True)
                 await asyncio.sleep(3)
                 
                 # 3. Provincia
-                btn_prov = page.locator('button[data-id="id_provinciaSearch"]')
-                await btn_prov.click()
-                await page.locator('.dropdown-menu.open a').filter(has_text="Roma").first.click()
+                await page.click('button[data-id="id_provinciaSearch"]')
+                await page.wait_for_selector('.dropdown-menu.open', state="visible", timeout=60000)
+                await page.locator('.dropdown-menu.open a').filter(has_text="Roma").first.click(force=True)
                 await asyncio.sleep(5)
                 
                 # Categoria
