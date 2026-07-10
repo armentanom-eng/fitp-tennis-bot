@@ -1,88 +1,76 @@
 import asyncio
 import json
-import os
-from datetime import datetime
 from playwright.async_api import async_playwright
 
-BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
-
-CATEGORIES = {
-    "t_giovanili": "Iscrizioni_Aperte_Giovanili.json", 
-    "t_affiliati": "Iscrizioni_Aperte_Open.json"
-}
-
 async def run_bot():
-    print("--- [START] Avvio estrazione ISCRIZIONI APERTE ---")
+    print("--- [START] Avvio Bot Iscrizioni Aperte ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        context = await browser.new_context(user_agent="Mozilla/5.0")
+        context = await browser.new_context(user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36")
+        page = await context.new_page()
         
-        for cat_id, filename in CATEGORIES.items():
-            print(f"\n>>> Processo categoria: {cat_id}")
-            json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
-            page = await context.new_page()
+        # 1. Configurazione Filtri - IMPOSTATO SU "ISCRIZIONI APERTE"
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+        await page.click('button[data-id="select_status"]')
+        # Modificato filtro: ora punta a "Iscrizioni aperte"
+        await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
+        
+        await page.click('button[data-id="id_regioneSearch"]')
+        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+        await page.click('button[data-id="id_provinciaSearch"]')
+        await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+        await page.keyboard.press("Enter")
+        await asyncio.sleep(5)
+        
+        # 2. Caricamento lista
+        while await page.locator("button#btn-loadMore").is_visible():
+            await page.click("button#btn-loadMore")
+            await asyncio.sleep(2)
+        
+        urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
+        
+        dati_giov, dati_open = {"tornei": []}, {"tornei": []}
+        
+        # 3. Analisi Tornei
+        for url in urls:
+            full_url = f"https://www.fitp.it{url}"
+            await page.goto(full_url, wait_until="networkidle")
             
-            try:
-                await page.goto(BASE_URL, timeout=60000)
-                
-                # 1. Gestione Cookie: Chiudiamo il banner se esiste
+            dettagli = page.locator("span:has-text('Dettaglio >')")
+            count = await dettagli.count()
+            
+            for i in range(count):
                 try:
-                    await page.wait_for_selector('button:has-text("Accetto")', timeout=5000)
-                    await page.click('button:has-text("Accetto")')
-                except: pass
-
-                # 2. Filtri: usiamo l'esecuzione JS per forzare l'apertura dei menu
-                # Questo evita il timeout del .dropdown-menu.show
-                def force_select(btn_id, option_text):
-                    return f"""
-                    (async () => {{
-                        const btn = document.querySelector('button[data-id="{btn_id}"]');
-                        btn.click();
-                        await new Promise(r => setTimeout(r, 1000));
-                        const items = Array.from(document.querySelectorAll('.dropdown-menu.show li a'));
-                        const target = items.find(el => el.innerText.includes("{option_text}"));
-                        if (target) target.click();
-                    }})()
-                    """
-
-                await page.evaluate(force_select("select_status", "Iscrizioni aperte"))
-                await asyncio.sleep(2)
-                await page.evaluate(force_select("id_regioneSearch", "Lazio"))
-                await asyncio.sleep(2)
-                await page.evaluate(force_select("id_provinciaSearch", "Roma"))
-                await asyncio.sleep(2)
-                
-                # Selezione categoria (link diretto)
-                await page.locator(f'a[data-id="{cat_id}"]').click()
-                await asyncio.sleep(5)
-                
-                # Espansione lista
-                while True:
-                    btn = page.locator("#btn-loadMore")
-                    if await btn.is_visible():
-                        await btn.click()
-                        await asyncio.sleep(3)
-                    else: break
-                
-                # Estrazione
-                locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-                links = list(set([await loc.get_attribute("href") for loc in locators]))
-                
-                for link in links:
-                    await page.goto(f"https://www.fitp.it{link}", timeout=60000)
-                    try:
-                        nome = await page.locator("h1.cc-title-main").inner_text()
-                        has_pdf = await page.locator("#btnOrderGameDownload").is_visible()
-                        json_data["tornei"].append({"url": f"https://www.fitp.it{link}", "nomeTorneo": nome.strip(), "status": "PDF presente" if has_pdf else "No PDF"})
-                    except: continue
-                
-                with open(filename, "w", encoding="utf-8") as f: 
-                    json.dump(json_data, f, ensure_ascii=False, indent=4)
+                    await page.goto(full_url, wait_until="networkidle")
+                    btn = page.locator("span:has-text('Dettaglio >')").nth(i)
                     
-            except Exception as e: print(f"Errore {cat_id}: {e}")
-            finally: await page.close()
+                    if await btn.is_visible():
+                        await btn.click(force=True)
+                        await page.wait_for_load_state("networkidle")
+                        
+                        categoria = await page.locator("h1.cc-title-main").first.text_content()
+                        giocatori = await page.locator(".cc-content-value").all_text_contents()
+                        
+                        lista_nomi = [g.strip() for g in giocatori if g.strip()]
+                        entry = {"categoria": categoria.strip(), "iscritti": lista_nomi}
+                        
+                        if any(x in categoria.upper() for x in ["UNDER", "U10", "U11", "U12", "U14", "U16", "U18"]):
+                            dati_giov["tornei"].append(entry)
+                        else:
+                            dati_open["tornei"].append(entry)
+                            
+                except Exception as e:
+                    print(f"--- [ERRORE] su categoria {i}: {e} ---")
+                    continue
+        
+        # 4. Salvataggio - NOMI FILE CORRETTI PER ISCRIZIONI APERTE
+        with open("Iscritti_Giovanili_Aperte.json", "w", encoding="utf-8") as f:
+            json.dump(dati_giov, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_Aperte.json", "w", encoding="utf-8") as f:
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
+        print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     asyncio.run(run_bot())
