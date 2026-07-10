@@ -7,8 +7,8 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 CATEGORIES = {
-    "t_giovanili": "Giovanili_Partite.json", 
-    "t_affiliati": "Open_Partite.json"
+    "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
+    "t_affiliati": "Open_Partite_incorsopdf.json"
 }
 STATUSES = ["In corso"]
 
