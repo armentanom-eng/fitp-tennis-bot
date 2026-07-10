@@ -1,106 +1,122 @@
 import asyncio
+import pdfplumber
+import re
 import json
+from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
-async def run_bot():
-    print("--- [START] Avvio estrazione totale con espansione lista ---")
-    async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
-        page = await browser.new_page()
-        page.set_default_timeout(20000)
-        
-        # Navigazione iniziale
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
-        
-        # Filtri: Impostato "In corso"
-        await page.click('button[data-id="select_status"]')
-        await page.locator('span:text-is("In corso")').last.click()
-        
-        await page.click('button[data-id="id_regioneSearch"]')
-        await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-        
-        await page.click('button[data-id="id_provinciaSearch"]')
-        await page.locator('span:text-is("Roma")').last.click()      
-        await page.keyboard.press("Enter")
-        await asyncio.sleep(5)
-        
-        # --- CICLO ESPANSIONE LISTA (CARICA ALTRI) ---
-        print("--- Caricamento totale lista tornei in corso... ---")
-        while True:
-            btn_load_more = page.locator("button#btn-loadMore")
-            if await btn_load_more.is_visible():
-                print("    -> Trovato 'Carica altri', espando...")
-                await btn_load_more.click()
-                await page.wait_for_load_state("domcontentloaded")
-                await asyncio.sleep(2)
-            else:
-                print("    -> Lista completa caricata.")
-                break
-        
-        # Recupero lista URL tornei
-        locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-        urls = list(set([await loc.get_attribute("href") for loc in locators]))
-        print(f"--- Trovati {len(urls)} tornei. Inizio ciclo totale. ---")
-        
-        dati_giovanili, dati_open = {"tornei": []}, {"tornei": []}
-        
-        for url in urls:
-            print(f"--- Analizzo torneo: {url[-10:]} ---")
-            try:
-                await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
-                
-                if await page.locator("text=non e' al momento disponibile").is_visible():
-                    print("    -> Torneo non disponibile, salto.")
-                    continue
-                
-                count = await page.locator("text=Dettaglio >").count()
-                
-                for i in range(count):
-                    # Ricarica pagina principale del torneo
-                    await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
-                    
-                    btn = page.locator("text=Dettaglio >").nth(i)
-                    if await btn.is_visible():
-                        try:
-                            await btn.click(force=True)
-                            await page.wait_for_load_state("domcontentloaded")
-                            
-                            # Estrazione Categoria Principale
-                            categoria = await page.locator("h1.cc-title-main").first.text_content()
-                            
-                            # Estrazione precisa del Tabellone
-                            tabellone_el = page.locator("span#spn-tournament-description")
-                            tabellone = await tabellone_el.text_content() if await tabellone_el.count() > 0 else "N/A"
-                            
-                            giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
-                            
-                            entry = {
-                                "torneo": url, 
-                                "categoria": categoria.strip(), 
-                                "tabellone": tabellone.strip(), 
-                                "iscritti": [g.strip() for g in giocatori]
-                            }
-                            
-                            if any(x in categoria.lower() for x in ["under", "u10", "u12", "u14", "u16", "giovanile"]):
-                                dati_giovanili["tornei"].append(entry)
-                            else:
-                                dati_open["tornei"].append(entry)
-                            
-                            print(f"    -> Estratto: {tabellone.strip()} - {len(giocatori)} iscritti.")
-                        except Exception as e:
-                            print(f"    ! Errore cliccando il dettaglio {i}: {e}")
-                            
-            except Exception as e:
-                print(f"    ! Errore critico nel torneo {url[-10:]}: {e}")
-        
-        # Salvataggio finale con nuovi nomi file
-        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_open, f, ensure_ascii=False, indent=4)
-            
-        await browser.close()
-        print("--- [END] Processo completato. ---")
+BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-if __name__ == "__main__":
+# Nomi dei file modificati come richiesto
+CATEGORIES = {
+    "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
+    "t_affiliati": "Open_Partite_incorsopdf.json"
+}
+
+# Filtro impostato su "In corso"
+STATUSES = ["In corso"]
+
+def format_line_for_swift(raw_text, date_target):
+    text = raw_text.replace("\n", " ").strip()
+    match_time = re.search(r"(\d{2})[:.](\d{2})", text)
+    time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
+    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
+    partite = re.findall(r"([A-Z\s\d\(\)]+?)\s+vs\s+([A-Z\s\d\(\)]+)", text)
+    if partite:
+        clean = [f"{p[0].strip()} vs {p[1].strip()}" for p in partite]
+        return f"{date_target}; {time}; {'; '.join(clean)}"
+    return f"{date_target}; {time}; {text.strip()}"
+
+def get_pdf_info(pdf_path):
+    matches = []
+    try:
+        with pdfplumber.open(pdf_path) as pdf:
+            for page in pdf.pages:
+                for table in page.extract_tables():
+                    for row in table:
+                        row_text = " ".join([str(cell).strip() for cell in row if cell])
+                        if len(row_text) > 5: matches.append(row_text)
+    except: pass
+    return matches
+
+async def run_bot():
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Intervallo: -7gg / +0gg) ---")
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context(accept_downloads=True)
+        
+        for cat_id, filename in CATEGORIES.items():
+            print(f"\n>>> Processo categoria: {cat_id}")
+            json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
+            page = await context.new_page()
+            
+            for status in STATUSES:
+                print(f"-> Navigazione e impostazione stato: {status}")
+                await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
+                
+                # Filtri
+                await page.click('button[data-id="select_status"]')
+                await page.get_by_role("listbox").get_by_role("option", name=status).click()
+                await asyncio.sleep(2)
+                
+                print("-> Impostazione Regione: Lazio e Provincia: Roma")
+                await page.click('button[data-id="id_regioneSearch"]')
+                await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+                await asyncio.sleep(3)
+                
+                await page.click('button[data-id="id_provinciaSearch"]')
+                await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+                await asyncio.sleep(3)
+                
+                await page.locator(f'a[data-id="{cat_id}"]').first.click()
+                await asyncio.sleep(5)
+                
+                # GESTIONE CARICA ALTRI
+                print("-> Espansione lista tornei...")
+                while True:
+                    btn_load_more = page.locator("button#btn-loadMore")
+                    if await btn_load_more.is_visible():
+                        await btn_load_more.click()
+                        await asyncio.sleep(3)
+                    else:
+                        break
+                
+                links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
+                print(f"-> Trovati {len(links)} tornei. Inizio ciclo date (ultimi 7gg)...")
+                
+                for link in links:
+                    full_url = f"https://www.fitp.it{link}"
+                    await page.goto(full_url, timeout=60000, wait_until="networkidle")
+                    
+                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                    print(f"   [Analizzo]: {nome_torneo.strip()}")
+                    
+                    if not await page.locator("#select-ordergame").is_visible(): continue
+                    
+                    for i in range(-7, 1):
+                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        
+                        if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
+                            await page.select_option("#select-ordergame", label=data_target)
+                            await asyncio.sleep(4) 
+                            
+                            download_btn = page.locator("#btnOrderGameDownload")
+                            if await download_btn.is_visible():
+                                print(f"      -> Scarico PDF per data: {data_target}")
+                                async with page.expect_download() as dl_info: await download_btn.click()
+                                download = await dl_info.value
+                                await download.save_as("temp.pdf")
+                                matches = get_pdf_info("temp.pdf")
+                                if matches:
+                                    json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                            else:
+                                print(f"      ! Bottone download non visibile per {data_target}")
+            
+            with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
+            await page.close()
+        await browser.close()
+    print("--- [END] Processo completato correttamente ---")
+
+if __name__ == "__main__": 
     asyncio.run(run_bot())
