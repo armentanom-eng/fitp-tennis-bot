@@ -21,7 +21,7 @@ jobs:
           pip install playwright
           playwright install chromium
       - name: Esegui Bot
-        run: python bot_iscrizioni.py
+        run: python bot_iscrizionicorsopdf.py
       - name: Commit Risultati
         run: |
           git config --global user.name 'github-actions[bot]'
