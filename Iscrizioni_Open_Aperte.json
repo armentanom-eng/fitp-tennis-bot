@@ -1,0 +1,39 @@
+{
+    "report_data": "10/07/2026 09:35",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EF6D6F56-E0A0-477E-AB8B-EB89BFEA9401",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 3^ TAPPA",
+            "data": "10/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. CAMPO 3 CAMPO 2",
+                "10/07/2026; 18:00; CARAMANICA MARCO vs PERCIBALLI CLAUDIO I; PETRELLA FEDERICO vs CIANCHETTI ALESSANDRO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
+            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. Campo 1",
+                "10/07/2026; 19:00; CAVALLARO MARCO vs DE PASTOR MALO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "10/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        }
+    ]
+}
