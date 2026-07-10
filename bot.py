@@ -51,27 +51,33 @@ async def run_bot():
                 print(f"-> Navigazione e impostazione stato: {status}")
                 await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
                 
-                # 1. Filtro Stato
+                # 1. Filtro Stato con attesa visibilità
                 await page.click('button[data-id="select_status"]')
-                await page.locator('div.dropdown-menu.open a:has-text("In corso")').first.click()
+                menu_status = page.locator('div.dropdown-menu.open')
+                await menu_status.wait_for(state="visible")
+                await menu_status.locator('a:has-text("In corso")').first.click(force=True)
                 await asyncio.sleep(2)
                 
                 # 2. Filtro Regione
                 print("-> Impostazione Filtri: Lazio > Roma")
                 await page.click('button[data-id="id_regioneSearch"]')
-                await page.locator('div.dropdown-menu.open a:has-text("Lazio")').first.click()
+                menu_regione = page.locator('div.dropdown-menu.open')
+                await menu_regione.wait_for(state="visible")
+                await menu_regione.locator('a:has-text("Lazio")').first.click(force=True)
                 await asyncio.sleep(3)
                 
                 # 3. Filtro Provincia
                 await page.click('button[data-id="id_provinciaSearch"]')
-                await page.locator('div.dropdown-menu.open a:has-text("Roma")').first.click()
+                menu_prov = page.locator('div.dropdown-menu.open')
+                await menu_prov.wait_for(state="visible")
+                await menu_prov.locator('a:has-text("Roma")').first.click(force=True)
                 await asyncio.sleep(3)
                 
                 # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(5)
                 
-                # GESTIONE CARICA ALTRI
+                # Espansione lista
                 print("-> Espansione lista tornei...")
                 while True:
                     btn_load_more = page.locator("button#btn-loadMore")
@@ -96,13 +102,9 @@ async def run_bot():
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                         if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                             await page.select_option("#select-ordergame", label=data_target)
-                            
-                            # ATTESA CRITICA: il sito ha bisogno di tempo per aggiornare il contenuto dopo il cambio select
-                            await asyncio.sleep(5) 
+                            await asyncio.sleep(5) # Attesa per ricarico dati AJAX
                             
                             download_btn = page.locator("#btnOrderGameDownload")
-                            
-                            # Aspettiamo che il bottone diventi effettivamente cliccabile
                             if await download_btn.is_visible():
                                 print(f"      -> Scarico PDF ({data_target})")
                                 async with page.expect_download() as dl_info: 
@@ -120,5 +122,4 @@ async def run_bot():
         await browser.close()
     print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+if __name__ ==
