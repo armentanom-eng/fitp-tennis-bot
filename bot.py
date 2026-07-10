@@ -122,4 +122,5 @@ async def run_bot():
         await browser.close()
     print("--- [END] Processo completato ---")
 
-if __name__ ==
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
