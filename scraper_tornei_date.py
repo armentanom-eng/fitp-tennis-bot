@@ -2,14 +2,17 @@ import asyncio
 import pdfplumber
 import re
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
+
+# Nomi dei file aggiornati come richiesto
 CATEGORIES = {
     "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
     "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
 }
+STATUSES = ["In programma"]
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -36,52 +39,93 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (In Programma) ---")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
+        browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
+        
         for cat_id, filename in CATEGORIES.items():
+            print(f"\n>>> Processo categoria: {cat_id}")
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
-            await page.goto(BASE_URL, wait_until="networkidle")
+            
+            await page.goto(BASE_URL, timeout=60000)
+            
+            # Filtro Stato: "In programma"
             await page.click('button[data-id="select_status"]')
-            await page.locator('span:text-is("In programma")').last.click()
+            await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
+            await asyncio.sleep(2)
+            
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+            await asyncio.sleep(2)
+            
+            await page.click('button[data-id="id_provinciaSearch"]')
+            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+            await asyncio.sleep(2)
+            
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5)
-            # Carica tutta la lista
-            while True:
-                btn = page.locator("button#btn-loadMore")
-                if await btn.is_visible(): 
-                    await btn.click()
-                    await page.wait_for_load_state("networkidle")
-                    await asyncio.sleep(2)
-                else: break
             
-            urls = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-            for url in urls:
-                full_url = f"https://www.fitp.it{url}"
-                await page.goto(full_url, wait_until="networkidle")
-                # ESTRAZIONE PRECISA NOME TORNEO
-                nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
-                if not await page.locator("#select-ordergame").is_visible(): continue
+            # Espansione lista
+            print("-> Espansione lista tornei...")
+            while True:
+                btn_load_more = page.locator("#btn-loadMore")
+                if await btn_load_more.is_visible():
+                    await btn_load_more.click()
+                    await asyncio.sleep(4)
+                else:
+                    break
+            
+            locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            links = []
+            for loc in locators:
+                href = await loc.get_attribute("href")
+                if href: links.append(href)
+            links = list(set(links))
+            
+            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+            
+            for link in links:
+                full_url = f"https://www.fitp.it{link}"
+                await page.goto(full_url, timeout=60000)
                 
-                for i in range(2):
-                    data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
-                    if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
-                        await page.select_option("#select-ordergame", label=data_target)
-                        await asyncio.sleep(2)
-                        download_btn = page.locator("#btnOrderGameDownload")
-                        if await download_btn.is_visible():
-                            async with page.expect_download() as dl_info: await download_btn.click()
-                            download = await dl_info.value
-                            await download.save_as("temp.pdf")
-                            matches = get_pdf_info("temp.pdf")
-                            if matches:
-                                json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                try:
+                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                except:
+                    nome_torneo = "Torneo senza nome"
+                
+                print(f"   [Analizzo]: {nome_torneo.strip()}")
+                
+                download_btn = page.locator("#btnOrderGameDownload")
+                data_oggi = datetime.now().strftime("%d/%m/%Y")
+                
+                if await download_btn.is_visible():
+                    async with page.expect_download() as dl_info: 
+                        await download_btn.click()
+                    download = await dl_info.value
+                    await download.save_as("temp.pdf")
+                    matches = get_pdf_info("temp.pdf")
+                    
+                    json_data["tornei"].append({
+                        "url": full_url, 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": data_oggi, 
+                        "partite": [format_line_for_swift(m, data_oggi) for m in matches] if matches else ["Nessuna partita trovata"]
+                    })
+                else:
+                    print(f"      ! Tabellone non disponibile.")
+                    json_data["tornei"].append({
+                        "url": full_url, 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": data_oggi, 
+                        "partite": ["Tabellone non disponibile"]
+                    })
             
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
         await browser.close()
+    print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": asyncio.run(run_bot())
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
