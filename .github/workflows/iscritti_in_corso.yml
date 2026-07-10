@@ -1,4 +1,5 @@
 name: Bot Iscritti In Corso
+
 on:
   schedule:
     - cron: '0 8,14,20 * * *'
@@ -19,8 +20,11 @@ jobs:
           
       - name: Install dependencies
         run: |
-          pip install playwright
+          python -m pip install --upgrade pip
+          # Installazione di playwright, pdfplumber e relative dipendenze di sistema
+          pip install playwright pdfplumber
           playwright install chromium
+          playwright install-deps chromium
           
       - name: Esegui Bot
         run: python bot_iscritti_in_corso.py
@@ -30,5 +34,4 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add Iscritti_Giovanili_In_Corso.json Iscritti_Open_In_Corso.json
-          git commit -m "Aggiornamento iscritti in corso" || echo "Nessuna modifica"
-          git push
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento iscritti in corso" && git push)
