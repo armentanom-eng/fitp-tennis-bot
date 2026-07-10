@@ -12,7 +12,6 @@ CATEGORIES = {
 }
 STATUSES = ["In corso"]
 
-# ... [funzioni format_line_for_swift e get_pdf_info invariate] ...
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
@@ -38,7 +37,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione (Filtro Data Inizio: -7gg | Download: Oggi+Domani) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -49,33 +48,31 @@ async def run_bot():
             page = await context.new_page()
             
             for status in STATUSES:
+                print(f"-> Navigazione e impostazione stato: {status}")
                 await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
                 
                 # 1. Filtro Stato
                 await page.click('button[data-id="select_status"]')
-                await page.get_by_role("listbox").get_by_role("option", name=status).click()
-                
-                # 2. Imposta Data Inizio (-7 giorni)
-                data_sette_giorni_fa = (datetime.now() - timedelta(days=7)).strftime("%d/%m/%Y")
-                print(f"-> Impostazione Data Inizio: {data_sette_giorni_fa}")
-                # Il campo data di solito è un input testuale o datepicker
-                await page.fill('input[placeholder="gg/mm/aaaa"]', data_sette_giorni_fa)
-                await page.keyboard.press("Enter")
+                await page.locator('div.dropdown-menu.open a:has-text("In corso")').click()
                 await asyncio.sleep(2)
                 
-                # 3. Filtri Regione e Provincia
+                # 2. Filtro Regione
+                print("-> Impostazione Filtri: Lazio > Roma")
                 await page.click('button[data-id="id_regioneSearch"]')
-                await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-                await asyncio.sleep(2)
-                
-                await page.click('button[data-id="id_provinciaSearch"]')
-                await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+                await page.locator('div.dropdown-menu.open a:has-text("Lazio")').click()
                 await asyncio.sleep(3)
                 
+                # 3. Filtro Provincia
+                await page.click('button[data-id="id_provinciaSearch"]')
+                await page.locator('div.dropdown-menu.open a:has-text("Roma")').click()
+                await asyncio.sleep(3)
+                
+                # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(5)
                 
                 # Espansione lista
+                print("-> Espansione lista tornei...")
                 while True:
                     btn_load_more = page.locator("button#btn-loadMore")
                     if await btn_load_more.is_visible():
@@ -84,7 +81,7 @@ async def run_bot():
                     else: break
                 
                 links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-                print(f"-> Trovati {len(links)} tornei.")
+                print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
@@ -95,16 +92,15 @@ async def run_bot():
                     
                     if not await page.locator("#select-ordergame").is_visible(): continue
                     
-                    # CICLO DOWNLOAD: Solo oggi (i=0) e domani (i=1)
-                    for i in range(2):
+                    for i in range(-7, 1):
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                         if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                             await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(4) 
+                            await asyncio.sleep(4)
                             
                             download_btn = page.locator("#btnOrderGameDownload")
                             if await download_btn.is_visible():
-                                print(f"      -> Scarico PDF per data: {data_target}")
+                                print(f"      -> Scarico PDF ({data_target})")
                                 async with page.expect_download() as dl_info: await download_btn.click()
                                 download = await dl_info.value
                                 await download.save_as("temp.pdf")
@@ -117,5 +113,4 @@ async def run_bot():
         await browser.close()
     print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+if __name__ == "__main__": asyncio.run(run_bot())
