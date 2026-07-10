@@ -7,34 +7,26 @@ async def run_bot():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
-        page.set_default_timeout(30000)
+        page.set_default_timeout(45000) # Aumentato a 45 secondi
         
-        # 1. Navigazione con attesa di rete completata
-        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="networkidle")
+        await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # 2. Filtri (Logica derivata dal codice PDF funzionante)
         print("-> Impostazione Filtri: In corso, Lazio, Roma")
-        
-        # Stato: "In corso"
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
         await asyncio.sleep(2)
         
-        # Regione: "Lazio"
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await asyncio.sleep(2)
         
-        # Provincia: "Roma"
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await asyncio.sleep(2)
         
-        # Invio ricerca
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
-        # 3. Espansione lista tornei
         print("-> Espansione lista tornei...")
         while True:
             btn_load_more = page.locator("button#btn-loadMore")
@@ -52,9 +44,9 @@ async def run_bot():
         
         for url in urls:
             full_url = f"https://www.fitp.it{url}"
+            # Navigazione sicura
             await page.goto(full_url, wait_until="domcontentloaded")
             
-            # Controllo esistenza tabellone
             if await page.locator("text=non e' al momento disponibile").is_visible():
                 continue
             
@@ -64,7 +56,9 @@ async def run_bot():
                 btn = page.locator("text=Dettaglio >").nth(i)
                 if await btn.is_visible():
                     await btn.click(force=True)
-                    await page.wait_for_load_state("networkidle")
+                    # CAMBIATO: Non usare networkidle qui!
+                    await page.wait_for_load_state("domcontentloaded")
+                    await asyncio.sleep(3) # Pausa garantita per caricamento dati
                     
                     categoria = await page.locator("h1.cc-title-main").first.text_content()
                     tabellone_el = page.locator("span#spn-tournament-description")
