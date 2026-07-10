@@ -10,7 +10,8 @@ CATEGORIES = {
     "t_giovanili": "Giovanili_Partite.json", 
     "t_affiliati": "Open_Partite.json"
 }
-STATUSES = ["In corso", "Iscrizioni aperte"]
+# Rimosso "Iscrizioni aperte", analizza solo "In corso"
+STATUSES = ["In corso"] 
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -37,7 +38,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Solo 'In corso') ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -47,9 +48,10 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
+            # Ora STATUSES contiene solo "In corso"
             for status in STATUSES:
                 print(f"-> Navigazione e impostazione stato: {status}")
-                await page.goto(BASE_URL, wait_timeout=60000, wait_until="networkidle")
+                await page.goto(BASE_URL, timeout=60000, wait_until="networkidle")
                 
                 # 1. Filtro Stato
                 await page.click('button[data-id="select_status"]')
@@ -77,7 +79,7 @@ async def run_bot():
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
-                    await page.goto(full_url, wait_timeout=60000, wait_until="networkidle")
+                    await page.goto(full_url, timeout=60000, wait_until="networkidle")
                     
                     nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
                     print(f"   [Analizzo]: {nome_torneo.strip()}")
