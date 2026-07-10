@@ -53,25 +53,25 @@ async def run_bot():
                 
                 # 1. Filtro Stato
                 await page.click('button[data-id="select_status"]')
-                await page.locator('div.dropdown-menu.open a:has-text("In corso")').click()
+                await page.locator('div.dropdown-menu.open a:has-text("In corso")').first.click()
                 await asyncio.sleep(2)
                 
                 # 2. Filtro Regione
                 print("-> Impostazione Filtri: Lazio > Roma")
                 await page.click('button[data-id="id_regioneSearch"]')
-                await page.locator('div.dropdown-menu.open a:has-text("Lazio")').click()
+                await page.locator('div.dropdown-menu.open a:has-text("Lazio")').first.click()
                 await asyncio.sleep(3)
                 
                 # 3. Filtro Provincia
                 await page.click('button[data-id="id_provinciaSearch"]')
-                await page.locator('div.dropdown-menu.open a:has-text("Roma")').click()
+                await page.locator('div.dropdown-menu.open a:has-text("Roma")').first.click()
                 await asyncio.sleep(3)
                 
                 # Categoria
                 await page.locator(f'a[data-id="{cat_id}"]').first.click()
                 await asyncio.sleep(5)
                 
-                # Espansione lista
+                # GESTIONE CARICA ALTRI
                 print("-> Espansione lista tornei...")
                 while True:
                     btn_load_more = page.locator("button#btn-loadMore")
@@ -81,7 +81,7 @@ async def run_bot():
                     else: break
                 
                 links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
-                print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+                print(f"-> Trovati {len(links)} tornei. Inizio analisi (ultimi 7gg)...")
                 
                 for link in links:
                     full_url = f"https://www.fitp.it{link}"
@@ -96,21 +96,29 @@ async def run_bot():
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
                         if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                             await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(4)
+                            
+                            # ATTESA CRITICA: il sito ha bisogno di tempo per aggiornare il contenuto dopo il cambio select
+                            await asyncio.sleep(5) 
                             
                             download_btn = page.locator("#btnOrderGameDownload")
+                            
+                            # Aspettiamo che il bottone diventi effettivamente cliccabile
                             if await download_btn.is_visible():
                                 print(f"      -> Scarico PDF ({data_target})")
-                                async with page.expect_download() as dl_info: await download_btn.click()
+                                async with page.expect_download() as dl_info: 
+                                    await download_btn.click()
                                 download = await dl_info.value
                                 await download.save_as("temp.pdf")
                                 matches = get_pdf_info("temp.pdf")
                                 if matches:
                                     json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                            else:
+                                print(f"      ! Bottone download non visibile per {data_target}")
             
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
         await browser.close()
     print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": asyncio.run(run_bot())
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
