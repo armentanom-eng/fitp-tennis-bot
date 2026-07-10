@@ -6,7 +6,6 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi file definiti
 CATEGORIES = {
     "t_giovanili": "Iscrizioni_Aperte_Giovanili.json", 
     "t_affiliati": "Iscrizioni_Aperte_Open.json"
@@ -14,10 +13,7 @@ CATEGORIES = {
 
 async def run_bot():
     print("--- [START] Avvio estrazione ISCRIZIONI APERTE ---")
-    print(f"Directory di lavoro: {os.getcwd()}")
-    
     async with async_playwright() as p:
-        # Configurazione browser per ambienti headless (GitHub Actions)
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         context = await browser.new_context(accept_downloads=True)
         
@@ -29,23 +25,25 @@ async def run_bot():
             try:
                 await page.goto(BASE_URL, timeout=60000, wait_until="domcontentloaded")
                 
-                # --- FILTRI ---
-                # Stato
+                # --- FILTRO STATO (Bootstrap-Select) ---
                 await page.click('button[data-id="select_status"]')
-                await page.get_by_role("option", name="Iscrizioni aperte").click()
+                await page.wait_for_selector('.dropdown-menu.show', state="visible")
+                await page.locator('.dropdown-menu.show li a:has-text("Iscrizioni aperte")').click()
                 await asyncio.sleep(2)
                 
-                # Regione
+                # --- FILTRO REGIONE ---
                 await page.click('button[data-id="id_regioneSearch"]')
-                await page.get_by_role("option", name="Lazio").click()
+                await page.wait_for_selector('.dropdown-menu.show', state="visible")
+                await page.locator('.dropdown-menu.show li a:has-text("Lazio")').click()
                 await asyncio.sleep(2)
                 
-                # Provincia
+                # --- FILTRO PROVINCIA ---
                 await page.click('button[data-id="id_provinciaSearch"]')
-                await page.get_by_role("option", name="Roma").click()
+                await page.wait_for_selector('.dropdown-menu.show', state="visible")
+                await page.locator('.dropdown-menu.show li a:has-text("Roma")').click()
                 await asyncio.sleep(2)
                 
-                # Selezione categoria (es. t_giovanili)
+                # Selezione categoria
                 await page.locator(f'a[data-id="{cat_id}"]').click()
                 await asyncio.sleep(5)
                 
@@ -73,23 +71,18 @@ async def run_bot():
                     except:
                         nome = "Torneo senza nome"
                     
-                    # Verifica presenza PDF
-                    download_btn = page.locator("#btnOrderGameDownload")
-                    status = "PDF presente" if await download_btn.is_visible() else "Nessun PDF"
-                    
+                    status = "PDF presente" if await page.locator("#btnOrderGameDownload").is_visible() else "Nessun PDF"
                     json_data["tornei"].append({"url": full_url, "nomeTorneo": nome.strip(), "status": status})
                 
-                # --- SALVATAGGIO ROBUSTO ---
+                # Salvataggio
                 output_path = os.path.join(os.getcwd(), filename)
                 with open(output_path, "w", encoding="utf-8") as f: 
                     json.dump(json_data, f, ensure_ascii=False, indent=4)
-                    f.flush()
-                    os.fsync(f.fileno())
                 
-                print(f"-> File creato con successo: {output_path}")
+                print(f"-> Salvato: {output_path}")
                     
             except Exception as e:
-                print(f"Errore critico durante il processo di {cat_id}: {e}")
+                print(f"Errore critico durante {cat_id}: {e}")
             finally:
                 await page.close()
             
