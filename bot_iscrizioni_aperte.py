@@ -3,7 +3,7 @@ import json
 from playwright.async_api import async_playwright
 
 async def run_bot():
-    print("--- [START] Avvio estrazione Iscrizioni Aperte con espansione lista ---")
+    print("--- [START] Avvio estrazione totale con espansione lista ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -14,26 +14,25 @@ async def run_bot():
         
         # Filtri
         await page.click('button[data-id="select_status"]')
-        # Modificato filtro per Iscrizioni aperte
+        # MODIFICA FILTRO: da "In corso" a "Iscrizioni aperte"
         await page.locator('span:text-is("Iscrizioni aperte")').last.click()
         
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-        
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.locator('span:text-is("Roma")').last.click()      
         await page.keyboard.press("Enter")
         await asyncio.sleep(5)
         
         # --- CICLO ESPANSIONE LISTA (CARICA ALTRI) ---
-        print("--- Caricamento totale lista tornei in corso... ---")
+        print("--- Caricamento totale lista tornei iscrizioni aperte... ---")
         while True:
             btn_load_more = page.locator("button#btn-loadMore")
             if await btn_load_more.is_visible():
                 print("    -> Trovato 'Carica altri', espando...")
                 await btn_load_more.click()
                 await page.wait_for_load_state("domcontentloaded")
-                await asyncio.sleep(2) # Pausa di sicurezza
+                await asyncio.sleep(2)
             else:
                 print("    -> Lista completa caricata.")
                 break
@@ -94,9 +93,11 @@ async def run_bot():
             except Exception as e:
                 print(f"    ! Errore critico nel torneo {url[-10:]}: {e}")
         
-        # Salvataggio finale con nuovi nomi file
-        with open("Iscrizioni_Aperte_Giovanili.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscrizioni_Aperte_Open.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
+        # SALVATAGGIO FINALE - NOMI FILE AGGIORNATI
+        with open("Iscritti_Giovanili_Aperte.json", "w", encoding="utf-8") as f: 
+            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_Aperte.json", "w", encoding="utf-8") as f: 
+            json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
         print("--- [END] Processo completato. ---")
