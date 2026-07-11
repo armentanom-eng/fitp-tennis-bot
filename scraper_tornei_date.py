@@ -7,7 +7,7 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file aggiornati
+# Nomi dei file
 CATEGORIES = {
     "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
     "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
@@ -64,7 +64,11 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            # Selezione Categoria con attesa robusta
+            print(f"-> Attendendo categoria {cat_id}...")
+            cat_selector = f'a[data-id="{cat_id}"]'
+            await page.wait_for_selector(cat_selector, timeout=30000)
+            await page.locator(cat_selector).first.click()
             await asyncio.sleep(5)
             
             # Espansione lista
@@ -142,4 +146,4 @@ async def run_bot():
                         "url": full_url, 
                         "nomeTorneo": nome_torneo.strip(), 
                         "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite
+                        "partite": ["Tab
