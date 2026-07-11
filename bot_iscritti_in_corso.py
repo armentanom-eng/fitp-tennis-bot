@@ -12,25 +12,26 @@ async def run_bot():
         # Navigazione iniziale
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # --- FILTRI AGGIORNATI ---
+        # --- ARCHITETTURA FILTRI (TESTATA) ---
         print("-> Impostazione Filtri: In corso, Lazio, Roma")
         
-        # Stato: In corso
+        # 1. Stato: In corso
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
         await asyncio.sleep(2)
         
-        # Regione: Lazio
+        # 2. Regione: Lazio
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await asyncio.sleep(2)
         
-        # Provincia: Roma
+        # 3. Provincia: Roma
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await asyncio.sleep(2)
         
-        await page.keyboard.press("Enter")
+        # Pausa per permettere il caricamento dinamico dopo i filtri
+        print("-> Filtri applicati, attendo caricamento risultati...")
         await asyncio.sleep(5)
         
         # --- CICLO ESPANSIONE LISTA (CARICA ALTRI) ---
@@ -103,10 +104,8 @@ async def run_bot():
                 print(f"    ! Errore critico nel torneo {url[-10:]}: {e}")
         
         # Salvataggio finale (Nomi aggiornati a "In_Corso")
-        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
-        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: 
-            json.dump(dati_open, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Giovanili_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_giovanili, f, ensure_ascii=False, indent=4)
+        with open("Iscritti_Open_In_Corso.json", "w", encoding="utf-8") as f: json.dump(dati_open, f, ensure_ascii=False, indent=4)
             
         await browser.close()
         print("--- [END] Processo completato. ---")
