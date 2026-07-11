@@ -13,21 +13,25 @@ async def run_bot():
         print("-> Navigazione verso il sito FITP...")
         await page.goto("https://www.fitp.it/Tornei/Ricerca-tornei", wait_until="domcontentloaded")
         
-        # 2. Filtri
+        # 2. Filtri (Uniformati al codice funzionante)
         print("-> Impostazione Filtri: In corso, Lazio, Roma")
+        
+        # Stato
         await page.click('button[data-id="select_status"]')
         await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
         await asyncio.sleep(2)
         
+        # Regione
         await page.click('button[data-id="id_regioneSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
         await asyncio.sleep(2)
         
+        # Provincia
         await page.click('button[data-id="id_provinciaSearch"]')
         await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
         await asyncio.sleep(2)
         
-        await page.keyboard.press("Enter")
+        # Attesa per caricamento risultati filtrati
         await asyncio.sleep(5)
         
         # 3. Espansione lista
