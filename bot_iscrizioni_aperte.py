@@ -4,8 +4,8 @@ from playwright.async_api import async_playwright
 
 # Mappa delle categorie con i nuovi nomi file richiesti
 CATEGORIES = {
-    "t_giovanili": "Iscritti_Giovanili_In_Corso.json", 
-    "t_affiliati": "Iscritti_Open_In_Corso.json"
+    "t_giovanili": "Iscritti_Giovanili_Aperte.json", 
+    "t_affiliati": "Iscritti_Open_Aperte.json"
 }
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
