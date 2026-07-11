@@ -1,23 +1,12 @@
 {
-    "report_data": "11/07/2026 13:37",
+    "report_data": "11/07/2026 18:51",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
             "nomeTorneo": "10^ TAPPA XLVII CIRCUITO DEL TIRRENO \"GARDEN VILLAGE\"",
             "data": "11/07/2026",
             "partite": [
-                "11/07/2026; 00:00; No. CAMPO 2 CAMPO 1 CAMPO 4 CAMPO 5 Campo 3",
-                "11/07/2026; 16:30; 14 EGIZI AURORA vs MAGGIORE MARGHERITA I; 18 CALAMITA ELISA KAROL vs PARZIALE GINEVRA I; 18 BAIOCCO STEFANO vs FALIVENE MATTIA I; 14 TABACCHIERA SAMUEL vs BARABINO DIEGO I; 14 FERRARI FRANCESCO vs CAPOZZI MICHELE",
-                "11/07/2026; 18:00; 10 TORRISI SAMUELE vs GIORGI EDOARDO I; 10 ZAINEA DAVIDE CRISTIAN vs MAZZARELLA TOMMASO I; 18 SOARE BRIAN NEKTARIE vs MICOZZI LORENZO I; 12 GANDOLFO LEONARDO vs SANTORO FLAVIO",
-                "11/07/2026; 19:30; 14 PACIUCCI ANDREA vs DE LISA DAVIDE I; 14 PAUNESCU ANTONIA MARIA vs BASTIANELLI EMMA I; 12 GIZZI PIETRO vs BRANCOLI BUSDRAGHI SEBASTIANO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B1D7445F-1576-4B4D-8D88-A6E7B48A35DC",
-            "nomeTorneo": "10^ TAPPA XLVII CIRCUITO DEL TIRRENO \"GARDEN VILLAGE\"",
-            "data": "12/07/2026",
-            "partite": [
-                "Nessuna partita trovata"
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -25,17 +14,9 @@
             "nomeTorneo": "CIRCUITO DEL TIRRENO - UNDICESIMA TAPPA",
             "data": "11/07/2026",
             "partite": [
-                "11/07/2026; 00:00; No. Campo 1 Campo 2",
-                "11/07/2026; 09:30; 18 ASCENZI FEDERICO vs D; 12 BRANCOLI BUSDRAGHI SEBASTIANO vs GIANSANTI FRANCESCO",
-                "11/07/2026; 16:30; 18 NUZZI MATTEO vs GIBERTINI DAVIDE"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=9A123506-EB65-4C16-ABEE-3293B5A61F4E",
-            "nomeTorneo": "CIRCUITO DEL TIRRENO - UNDICESIMA TAPPA",
-            "data": "12/07/2026",
-            "partite": [
-                "Nessuna partita trovata"
+                "Oggi; 00:00; No. Campo 1 Campo 2",
+                "Oggi; 09:30; 18 ASCENZI FEDERICO vs D; 12 BRANCOLI BUSDRAGHI SEBASTIANO vs GIANSANTI FRANCESCO",
+                "Oggi; 16:30; 18 NUZZI MATTEO vs GIBERTINI DAVIDE"
             ]
         }
     ]

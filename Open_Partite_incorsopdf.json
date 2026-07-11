@@ -1,6 +1,14 @@
 {
-    "report_data": "11/07/2026 13:38",
+    "report_data": "11/07/2026 18:52",
     "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
+            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
+            "data": "11/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
             "nomeTorneo": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
@@ -16,25 +24,8 @@
             "nomeTorneo": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
             "data": "12/07/2026",
             "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
-            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
-            "data": "11/07/2026",
-            "partite": [
-                "11/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "11/07/2026; 15:00; MESSINEO DONATO vs MULIERE GABRIELE",
-                "11/07/2026; 17:30; GIORGIO vs CAPUTO FLAVIO I; GRIMALDI DAVIDE vs CAVALLARO MARCO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
-            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
-            "data": "12/07/2026",
-            "partite": [
-                "Nessuna partita trovata"
+                "12/07/2026; 00:00; No. CAMPO 1",
+                "12/07/2026; 18:00; 1 CICIVELLI ALESSIO vs PRINCIPIA ANDREA"
             ]
         }
     ]
