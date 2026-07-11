@@ -7,7 +7,7 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file aggiornati come richiesto
+# Nomi dei file aggiornati
 CATEGORIES = {
     "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
     "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
@@ -81,7 +81,6 @@ async def run_bot():
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
             
-            # 3. Analisi singoli tornei
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
                 await page.goto(full_url, timeout=60000)
@@ -96,7 +95,6 @@ async def run_bot():
                 dropdown_selector = "#select-ordergame"
                 download_btn = page.locator("#btnOrderGameDownload")
                 
-                # SEZIONE MODIFICATA: Loop 0 (Oggi) e 1 (Domani)
                 if await page.locator(dropdown_selector).is_visible():
                     for i in range(0, 2): 
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
@@ -117,9 +115,15 @@ async def run_bot():
                                     "data": data_target, 
                                     "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
                                 })
+                        else:
+                            json_data["tornei"].append({
+                                "url": full_url, 
+                                "nomeTorneo": nome_torneo.strip(), 
+                                "data": data_target, 
+                                "partite": ["Nessuna partita trovata"]
+                            })
                 
                 elif await download_btn.is_visible():
-                    # Download diretto se non c'è dropdown
                     async with page.expect_download() as dl_info: 
                         await download_btn.click()
                     download = await dl_info.value
@@ -134,13 +138,8 @@ async def run_bot():
                     })
                 else:
                     print(f"      ! Tabellone non disponibile.")
-            
-            with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            await page.close()
-        
-        await browser.close()
-    print("--- [END] Processo completato ---")
-
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+                    json_data["tornei"].append({
+                        "url": full_url, 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": datetime.now().strftime("%d/%m/%Y"), 
+                        "partite
