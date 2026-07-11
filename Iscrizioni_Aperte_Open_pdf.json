@@ -1,4 +1,130 @@
 {
-    "report_data": "10/07/2026 19:53",
-    "tornei": []
+    "report_data": "11/07/2026 10:04",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
+                "08/07/2026; 19:30; CENTONI GIULIA vs MONTALBANO PAOLA CECCARELLI ARIANNA; HINNA BARBARA ONGARO GIULIANO vs NERVI ANDREA PRESTANICOLA MARCO; LAMPUS DANIELE LODICO ANTONIO vs BURN MARDOCK MOCCIA EDOARDO",
+                "08/07/2026; 21:00; MUSTAZZA DANIELA vs WAS MADDALENA LADKANI NATHANK; DE PASTOR MALO RINALDI DOMENICO vs FANELLI GIOVANNI GRAZIANI SIMONE; VELLONE VALENTINO INGARDIA MATTEO vs GIARRUSSO DINO BRUNI CLAUDIO; SIRAGUSA ARMANDO MATHUGAMA MIKELI vs CRETAIO FABRIZIO RIBELLI RICCARDO; ANTONELLI FEDERICO DI CONSIGLIO ALBERTO vs ANTONINI EDOARDO",
+                "08/07/2026; 22:30; LUCIANO ELEONORA vs CRETAIO NIKOLE LIPPIELLO DARIO; RICCI OTTAVIO DUPAQUIER MARIA CARLOTTA vs RUSSILLO PAOLA GIOVAGNOLI ENRICO; REGA AMEDEO SCOTTI MARCO vs MECHELLI ALESSANDRO FORNARI MARCO; IRTI ANDREA PROIETTI ENRICO vs ARRIGHI GIULIANO EFFICACE LUCA",
+                "08/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
+                "08/07/2026; 00:00; POSSIBILI SPOSTAMENTI DI CAMPO GERARDO DI CARO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
+                "09/07/2026; 19:30; BURN MARDOCK vs MILONE ANGELO MOCCIA; DI PIRRO vs IANNINO MARIA NERVI; ONGARO vs NARDELLI ENRICO RINALDI; FANELLI vs CHERBIB SKANDER CENTIONI; MONTALBANO vs PALMA ROSITA LIPPIELLO; RICCI vs MILONE ANDREA",
+                "09/07/2026; 21:00; DE PASTOR vs PASCIUCCO MICHELE PRESTANICOLA; LAMPUS vs BRUSADELLI LUCIANO BRUNI; SIRAGUSA vs LA SPINA LIVIO MATHUGAMA; CRETAIO vs SERVODIO GIUSEPPE EFFICACE; CARIDI vs BOCCINI LEONARDO PROIETTI; ARRIGHI vs TESTA VITTORIO CRETAIO; LUCIANO vs TAMBONE LUCREZIA GIOVAGNOLI; REGA vs DI FABIO NICOLA FORNARI; IRTI vs TAMILIA ALESSIO",
+                "09/07/2026; 22:30; GIARRUSSO vs MARCHESINI ANDREA ELETTI MARCO; TROIANI DANIELE PLACIDI FABRIZIO vs MAGRINI DANIELE RIBELLI; ANTONELLI vs MAGAZZU MARIO DI CONSIGLIO; ANTONINI vs MAZZA GENNARO SCOTTI; MECHELLI vs COSTANZO LORENZO",
+                "09/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
+                "09/07/2026; 00:00; POSSIBILI SPOSTAMENTI DI CAMPO CLARENS LUCA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
+                "10/07/2026; 19:30; LODICO vs ARCANGELETTI GIORGIO ARRIGHI; TESTA vs MAZZIOTTA THOMAS MECHELLI; COSTANZO vs DI CARO SIMONE RICCI",
+                "10/07/2026; 21:00; GUIDI BUFFARINI GUIDO vs MONDINO GABRIEL SACCHI ALESSANDRO; MOCCIA vs DIGIESI GIUSEPPE PASCIUCCO; DE PASTOR vs MARINUCCI ERNESTO BRUSADELLI; PRESTANICOLA vs PALMERI TOMMASO LA SPINA; SIRAGUSA vs BORAGINE DANILO PALERMO ANTONIO; PALMA vs FIGLIUZZI VIRGINIA CECCARELLI; HINNA vs NAPOLIELLO MARIA",
+                "10/07/2026; 22:30; FANELLI vs MANCINELLI MARCO COCCIA; VELLONE vs PALERMO PIERPAOLO MARCHESINI; GIARRUSSO vs CORGINI MASSIMO MUSTAZZA; INNOCENTE LAURA RUSSILLO vs RICCITELLI ALEXIA RIBELLI; MAGAZZU vs PARISI SERGIO GIACALONE ANTONINO",
+                "10/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
+                "10/07/2026; 00:00; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE NE' EVENTUALI GIORNI IN CUI NON GIOCARE CLARENS LUCA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "11/07/2026",
+            "partite": [
+                "11/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8 9",
+                "11/07/2026; 18:00; ARCANGELETTI vs FREDIANI ALESSIO COCCIA; MECHELLI vs STEGHER MARCO",
+                "11/07/2026; 19:30; BORAGINE vs BRANDIMARTE PAOLO NARDELLI; PARTENIE vs TELERA MARCO MOCCIA; MARINUCCI vs MELI EMANUELE MAGRINI; RUSSILLO vs BORRACCINO FRANCESCA FIGLIUZZI; CENTIONI vs PETRASSI ALESSANDRA",
+                "11/07/2026; 21:00; CORGINI vs FUSARO FABRIZIO CARIDI; TASSIN CLAUDIO MAZZA vs MAZZOLI CRISTIANO CHERBIB; MANCINELLI vs PEZZOPANE ANTONELLO ELETTI; MORACCI LEONELLO BARBARO MICHELE vs COLABELLA VITTORIO CAPECE GIANCARLO; SACCHI vs TORTORELLA MARCO",
+                "11/07/2026; 22:30; CRETAIO VS NEGLIA MARCO DI FABIO vs MANDIC VLADIMIR IRTI",
+                "11/07/2026; 00:00; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "06/07/2026",
+            "partite": [
+                "06/07/2026; 00:00; No. CAMPO 2 CAMPO 3",
+                "06/07/2026; 17:00; FABRIZI FABRIZIO vs VITA DANIELE I; ROCCHI JACOPO vs ROMEI RICCARDO ROMEO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "07/07/2026",
+            "partite": [
+                "07/07/2026; 00:00; No. CAMPO 3 CAMPO 2",
+                "07/07/2026; 17:30; JACOPO ROCCHI vs SIMONE GUIDI I; ANNIBALE vs FABRIZIO FABRIZI"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "08/07/2026",
+            "partite": [
+                "08/07/2026; 00:00; No. CAMPO 3 CAMPO 2",
+                "08/07/2026; 18:00; JACOPO ROCCHI vs FEDERICO PETRELLA I; JACOPO CORSETTI vs FABRIZIO FABRIZI"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "09/07/2026",
+            "partite": [
+                "09/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
+                "09/07/2026; 18:00; COZZI MARIO vs D; CORSETTI JACOPO vs CERQUOZZI MATTIA I; PETRELLA FEDERICO vs ARCHETTI MATTEO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. CAMPO 3 CAMPO 2",
+                "10/07/2026; 18:00; CARAMANICA MARCO vs PERCIBALLI CLAUDIO I; PETRELLA FEDERICO vs CIANCHETTI ALESSANDRO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "data": "11/07/2026",
+            "partite": [
+                "11/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
+                "11/07/2026; 18:00; ANDREA GIORGIO vs PERCIBALLI CLAUDIO I; ANASTASI VALERIANO vs CORSETTI JACOPO I; CAPPILLI ALESSANDRO vs PETRELLA FEDERICO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
+            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
+            "data": "10/07/2026",
+            "partite": [
+                "10/07/2026; 00:00; No. Campo 1",
+                "10/07/2026; 19:00; CAVALLARO MARCO vs DE PASTOR MALO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
+            "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
+            "data": "11/07/2026",
+            "partite": [
+                "11/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "11/07/2026; 15:00; MESSINEO DONATO vs MULIERE GABRIELE",
+                "11/07/2026; 17:30; GIORGIO vs CAPUTO FLAVIO I; GRIMALDI DAVIDE vs CAVALLARO MARCO"
+            ]
+        }
+    ]
 }
