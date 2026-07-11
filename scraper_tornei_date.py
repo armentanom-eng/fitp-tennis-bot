@@ -146,4 +146,15 @@ async def run_bot():
                         "url": full_url, 
                         "nomeTorneo": nome_torneo.strip(), 
                         "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite": ["Tab
+                        "partite": ["Tabellone non disponibile"]
+                    })
+            
+            with open(filename, "w", encoding="utf-8") as f: 
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+            await page.close()
+        
+        await browser.close()
+    print("--- [END] Processo completato ---")
+
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
