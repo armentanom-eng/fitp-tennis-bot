@@ -7,11 +7,11 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file
 CATEGORIES = {
     "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
     "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
 }
+STATUSES = ["In programma"]
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -25,7 +25,11 @@ def format_line_for_swift(raw_text, date_target):
         return f"{date_target}; {time}; {'; '.join(clean)}"
     return f"{date_target}; {time}; {text.strip()}"
 
-def get_pdf_info(pdf_path):
+def get_pdf_info_filtered(pdf_path):
+    # Generiamo le stringhe per oggi e domani
+    oggi = datetime.now().strftime("%d/%m/%Y")
+    domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
+    
     matches = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
@@ -33,7 +37,10 @@ def get_pdf_info(pdf_path):
                 for table in page.extract_tables():
                     for row in table:
                         row_text = " ".join([str(cell).strip() for cell in row if cell])
-                        if len(row_text) > 5: matches.append(row_text)
+                        # Filtriamo le righe che contengono la data di oggi o domani
+                        if len(row_text) > 5:
+                            if oggi in row_text or domani in row_text:
+                                matches.append(row_text)
     except: pass
     return matches
 
@@ -50,7 +57,6 @@ async def run_bot():
             
             await page.goto(BASE_URL, timeout=60000)
             
-            # Filtri
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
             await asyncio.sleep(2)
@@ -66,17 +72,19 @@ async def run_bot():
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5)
             
-            # Espansione lista
+            print("-> Espansione lista tornei...")
             while True:
-                btn = page.locator("#btn-loadMore")
-                if await btn.is_visible():
-                    await btn.click()
+                btn_load_more = page.locator("#btn-loadMore")
+                if await btn_load_more.is_visible():
+                    await btn_load_more.click()
                     await asyncio.sleep(4)
                 else:
                     break
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
+            
+            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
@@ -89,32 +97,25 @@ async def run_bot():
                 
                 print(f"   [Analizzo]: {nome_torneo.strip()}")
                 
-                # Loop date: 0=Oggi, 1=Domani
-                for i in range(0, 2):
-                    data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                download_btn = page.locator("#btnOrderGameDownload")
+                if await download_btn.is_visible():
+                    async with page.expect_download() as dl_info: 
+                        await download_btn.click()
+                    download = await dl_info.value
+                    await download.save_as("temp.pdf")
                     
-                    # Selezione data se disponibile
-                    if await page.locator("#select-ordergame").is_visible():
-                        if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
-                            await page.select_option("#select-ordergame", label=data_target)
-                            await asyncio.sleep(3)
+                    # Usiamo la versione filtrata per date
+                    matches = get_pdf_info_filtered("temp.pdf")
                     
-                    download_btn = page.locator("#btnOrderGameDownload")
-                    if await download_btn.is_visible():
-                        async with page.expect_download() as dl_info: 
-                            await download_btn.click()
-                        download = await dl_info.value
-                        temp_name = f"temp_{i}.pdf"
-                        await download.save_as(temp_name)
-                        
-                        matches = get_pdf_info(temp_name)
-                        if matches:
-                            json_data["tornei"].append({
-                                "url": full_url, 
-                                "nomeTorneo": nome_torneo.strip(), 
-                                "data": data_target, 
-                                "partite": [format_line_for_swift(m, data_target) for m in matches]
-                            })
+                    if matches:
+                        json_data["tornei"].append({
+                            "url": full_url, 
+                            "nomeTorneo": nome_torneo.strip(), 
+                            "data": "Oggi e Domani", 
+                            "partite": [format_line_for_swift(m, "Oggi/Domani") for m in matches]
+                        })
+                else:
+                    print(f"      ! Tabellone non disponibile.")
             
             with open(filename, "w", encoding="utf-8") as f: 
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
