@@ -12,7 +12,7 @@ CATEGORIES = {
     "t_affiliati": "Iscrizioni_Aperte_Open_pdf.json"
 }
 
-# Funzione "blindata" che filtra solo oggi e domani
+# Funzione per filtrare solo i dati di oggi e domani
 def get_pdf_info_filtered(pdf_path):
     oggi = datetime.now().strftime("%d/%m/%Y")
     domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
@@ -41,7 +41,7 @@ def format_line_for_swift(raw_text, date_target):
     return f"{date_target}; {time}; {text.strip()}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione (Solo tornei con dati validi) ---")
+    print("--- [START] Avvio estrazione (Corretto con await .all()) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -51,7 +51,7 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, timeout=60000)
             
-            # Filtri
+            # Filtri base
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
             await asyncio.sleep(2)
@@ -67,12 +67,16 @@ async def run_bot():
             await page.locator(cat_selector).first.click()
             await asyncio.sleep(5)
             
+            # Espansione lista
             while True:
                 btn = page.locator("#btn-loadMore")
                 if await btn.is_visible(): await btn.click(); await asyncio.sleep(4)
                 else: break
             
-            links = list(set([await loc.get_attribute("href") for loc in page.locator("a[href*='Dettaglio-Competizione']").all()]))
+            # Correzione qui: attesa corretta dei locator
+            await page.wait_for_load_state("networkidle")
+            locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
+            links = list(set([await loc.get_attribute("href") for loc in locators]))
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
@@ -85,7 +89,6 @@ async def run_bot():
                 dropdown = page.locator("#select-ordergame")
                 download_btn = page.locator("#btnOrderGameDownload")
                 
-                # Logica: Se c'è la tendina, proviamo le date
                 if await dropdown.is_visible():
                     for i in range(0, 2):
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
@@ -98,7 +101,6 @@ async def run_bot():
                                 if matches:
                                     json_data["tornei"].append({"url": full_url, "nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
                 
-                # Se non c'è tendina ma c'è bottone download diretto
                 elif await download_btn.is_visible():
                     async with page.expect_download() as dl_info: await download_btn.click()
                     matches = get_pdf_info_filtered((await dl_info.value).path())
@@ -108,6 +110,6 @@ async def run_bot():
             with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
         await browser.close()
-    print("--- [END] Processo pulito completato ---")
+    print("--- [END] Processo completato correttamente ---")
 
 if __name__ == "__main__": asyncio.run(run_bot())
