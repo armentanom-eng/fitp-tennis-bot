@@ -1,38 +1,20 @@
 {
-    "report_data": "11/07/2026 19:32",
+    "report_data": "12/07/2026 05:19",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
-            "data": "11/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
-            "data": "11/07/2026",
-            "partite": [
-                "11/07/2026; 00:00; No. CAMPO 3 CAMPO 4 CAMPO 2",
-                "11/07/2026; 18:00; ANDREA GIORGIO vs PERCIBALLI CLAUDIO I; ANASTASI VALERIANO vs CORSETTI JACOPO I; CAPPILLI ALESSANDRO vs PETRELLA FEDERICO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
             "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
             "data": "12/07/2026",
             "partite": [
-                "12/07/2026; 00:00; Ora 1 2 3 4 5 6",
-                "12/07/2026; 18:00; IANNOTTA LEONARDO vs D; MARIA vs CAPPILLI ALESSANDRO LUCARINI FABRIZIO",
-                "12/07/2026; 00:00; GALANTE RICCARDO vs CORSETTI JACOPO MARINELLI GIULIO; APUZZO MANUEL ROCCO VINCENZO vs FILIPPI GIANLORENZO",
-                "12/07/2026; 00:00; hh.mm vs vs vs vs vs vs",
-                "12/07/2026; 00:00; hh.mm vs vs vs vs vs vs",
-                "12/07/2026; 00:00; e uir g e s a vs vs vs vs vs vs",
-                "12/07/2026; 00:00; e uir g e s a vs vs vs vs vs vs",
-                "12/07/2026; 00:00; non prima hh.mm vs vs vs vs vs vs",
-                "12/07/2026; 00:00; Ordine di gioco rilasciato Firma GA",
-                "12/07/2026; 00:00; Gli ultimi incontri possono essere spostati 11/07/2026 ORE Maria Antonietta Guidaldi"
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "data": "12/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         }
     ]
