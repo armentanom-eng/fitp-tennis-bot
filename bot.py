@@ -12,34 +12,27 @@ CATEGORIES = {
     "t_affiliati": "Iscrizioni_Aperte_Open_pdf.json"
 }
 
-def get_pdf_info_filtered(pdf_path):
-    oggi = datetime.now().strftime("%d/%m/%Y")
-    domani = (datetime.now() + timedelta(days=1)).strftime("%d/%m/%Y")
+def get_pdf_info(pdf_path):
+    """Estrae tutto il testo grezzo dalle tabelle del PDF senza filtri troppo rigidi."""
     matches = []
     try:
         with pdfplumber.open(pdf_path) as pdf:
             for page in pdf.pages:
                 for table in page.extract_tables():
                     for row in table:
-                        row_data = [str(cell).strip() for cell in row if cell and str(cell).strip() not in ["-", ""]]
-                        if row_data:
-                            row_text = " ".join(row_data)
-                            if (oggi in row_text or domani in row_text) or len(row_data) >= 2:
-                                matches.append(row_text)
-    except Exception as e:
-        print(f"Errore parsing PDF: {e}")
+                        # Uniamo le celle evitando valori nulli
+                        row_text = " ".join([str(cell).strip() for cell in row if cell and str(cell).strip()])
+                        if len(row_text) > 5: matches.append(row_text)
+    except: pass
     return matches
 
 def format_line_for_swift(raw_text, date_target):
-    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.]\d{2}", "", raw_text, flags=re.IGNORECASE)
-    text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
-    partite = re.findall(r"([A-Z\s\d\(\)\.\-]+?)\s+(?:vs|o|contro)\s+([A-Z\s\d\(\)\.\-]+)", text, re.IGNORECASE)
-    if partite:
-        return f"{date_target}; 00:00; {'; '.join([f'{p[0].strip()} vs {p[1].strip()}' for p in partite])}"
-    return f"{date_target}; 00:00; {text.strip()}"
+    """Mantiene il formato originale che funziona con la tua app."""
+    text = raw_text.replace("\n", " ").strip()
+    return f"{date_target}; {text}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione corretta ---")
+    print("--- [START] Avvio estrazione (Architettura Originale) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -54,48 +47,67 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
             await asyncio.sleep(2)
             
+            # Categoria
             await page.wait_for_selector(f'a[data-id="{cat_id}"]')
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5)
             
+            # Espansione lista
             while await page.locator("#btn-loadMore").is_visible():
                 await page.locator("#btn-loadMore").click()
-                await asyncio.sleep(3)
+                await asyncio.sleep(4)
             
-            await page.wait_for_load_state("networkidle")
             links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
             
             for link in links:
                 await page.goto(f"https://www.fitp.it{link}", timeout=60000)
-                await page.wait_for_load_state("networkidle")
                 
-                download_btn = page.locator("a:has-text('Scarica'), button:has-text('Scarica'), #btnOrderGameDownload")
+                # Recupero Nome Torneo
+                try:
+                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                except:
+                    nome_torneo = "Torneo senza nome"
                 
-                partite_trovate = []
-                if await download_btn.first.is_visible():
-                    try:
-                        async with page.expect_download(timeout=45000) as dl_info:
-                            await download_btn.first.click()
-                        
-                        download = await dl_info.value
-                        pdf_path = await download.path() # Corretto: Await aggiunto
-                        
-                        matches = get_pdf_info_filtered(pdf_path)
-                        partite_trovate = [format_line_for_swift(m, "Oggi") for m in matches]
-                    except Exception as e:
-                        print(f"   [Skip]: {link} - Errore download: {e}")
+                print(f"   [Analizzo]: {nome_torneo.strip()}")
                 
-                if partite_trovate:
+                # Architettura Originale: Ciclo su dropdown date (Oggi + Domani)
+                dropdown_selector = "#select-ordergame"
+                download_btn = page.locator("#btnOrderGameDownload")
+                
+                partite_totali = []
+                
+                if await page.locator(dropdown_selector).is_visible():
+                    for i in range(0, 2): 
+                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        # Se la data è presente nel menù
+                        if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
+                            await page.select_option(dropdown_selector, label=data_target)
+                            await asyncio.sleep(3)
+                            
+                            if await download_btn.is_visible():
+                                async with page.expect_download(timeout=30000) as dl_info: 
+                                    await download_btn.click()
+                                download = await dl_info.value
+                                path = await download.path()
+                                matches = get_pdf_info(path)
+                                for m in matches:
+                                    partite_totali.append(format_line_for_swift(m, data_target))
+                
+                # Se abbiamo trovato partite, salviamo il torneo
+                if partite_totali:
                     json_data["tornei"].append({
-                        "url": f"https://www.fitp.it{link}",
-                        "nomeTorneo": await page.locator("h1").first.inner_text(),
-                        "data": datetime.now().strftime("%d/%m/%Y"),
-                        "partite": partite_trovate
+                        "url": f"https://www.fitp.it{link}", 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": datetime.now().strftime("%d/%m/%Y"), 
+                        "partite": list(set(partite_totali)) # set per rimuovere duplicati
                     })
-
-            with open(filename, "w", encoding="utf-8") as f: json.dump(json_data, f, ensure_ascii=False, indent=4)
+            
+            with open(filename, "w", encoding="utf-8") as f: 
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
             await page.close()
+        
         await browser.close()
     print("--- [END] Processo completato ---")
 
-if __name__ == "__main__": asyncio.run(run_bot())
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
