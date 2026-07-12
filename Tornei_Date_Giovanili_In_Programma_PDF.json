@@ -1,42 +1,10 @@
 {
-    "report_data": "11/07/2026 19:31",
+    "report_data": "12/07/2026 05:23",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8B2DB26F-8C77-4A5A-B4EC-574CCF926A37",
-            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP FIUGGI",
-            "data": "11/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=94C7E886-EC99-40FF-90C4-82F8427AC0DD",
-            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP CASTEL DI SANGRO",
-            "data": "11/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FBC44DC9-348A-4005-B8F9-54721F7EFA03",
-            "nomeTorneo": "TENNIS TROPHY FITP KINDER JOY OF MOVING - MASTER FINALE - PRESSO VILLATTE SSD SRL (EX OASI DI PACE) E ASD NEW APPIO CLAUDIO TENNIS TEAM",
-            "data": "11/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D3F8BE2D-C5DD-4F8C-A681-8526468EAA6D",
-            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP SERRAMAZZONI",
-            "data": "11/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E872D3D-3E4E-4014-9606-ACADE6000B3F",
-            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP BRALLO",
-            "data": "11/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=9846EFA2-AA73-4E52-AF79-E6999ADDD6ED",
+            "nomeTorneo": "QUALIFICAZIONE AI CAMPIONATI ITALIANI UNDER 15 MASCHILI - BY ITALGAS",
+            "data": "12/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -44,7 +12,23 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
             "nomeTorneo": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
-            "data": "11/07/2026",
+            "data": "12/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8B2DB26F-8C77-4A5A-B4EC-574CCF926A37",
+            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP FIUGGI",
+            "data": "12/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E872D3D-3E4E-4014-9606-ACADE6000B3F",
+            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP BRALLO",
+            "data": "12/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -52,15 +36,23 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F3616CBC-273F-4534-95CA-CD4353060D92",
             "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP PADERNO DEL GRAPPA",
-            "data": "11/07/2026",
+            "data": "12/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=9846EFA2-AA73-4E52-AF79-E6999ADDD6ED",
-            "nomeTorneo": "QUALIFICAZIONE AI CAMPIONATI ITALIANI UNDER 15 MASCHILI - BY ITALGAS",
-            "data": "11/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=94C7E886-EC99-40FF-90C4-82F8427AC0DD",
+            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP CASTEL DI SANGRO",
+            "data": "12/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D3F8BE2D-C5DD-4F8C-A681-8526468EAA6D",
+            "nomeTorneo": "TORNEO JUNIOR NEXT GEN PRESSO CENTRO ESTIVO FITP SERRAMAZZONI",
+            "data": "12/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -68,7 +60,15 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E22386D-7D07-46F3-957E-4C2C6BDDEF47",
             "nomeTorneo": "12° TAPPA CIRCUITO DEL TIRRENO",
-            "data": "11/07/2026",
+            "data": "12/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FBC44DC9-348A-4005-B8F9-54721F7EFA03",
+            "nomeTorneo": "TENNIS TROPHY FITP KINDER JOY OF MOVING - MASTER FINALE - PRESSO VILLATTE SSD SRL (EX OASI DI PACE) E ASD NEW APPIO CLAUDIO TENNIS TEAM",
+            "data": "12/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
