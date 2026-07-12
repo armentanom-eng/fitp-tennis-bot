@@ -1,151 +1,17 @@
 {
-    "report_data": "12/07/2026 08:29",
+    "report_data": "12/07/2026 11:49",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E7991566-025C-4E63-A42C-A69DBA53A129",
-            "nomeTorneo": "1° TORNEO OPEN NICETO TENNIS ACADEMY",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
+            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
             "data": "12/07/2026",
             "partite": [
-                "12/07/2026; No. CAMPO N. 1 CAMPO N.2",
-                "12/07/2026; 2 Inizio ore: 20:30 Singolare Maschile Open MEZZATESTA ALBERTO vs GITTO GIUSEPPE Inizio ore: 20:30 Singolare Maschile Open GAZZOTTI ANTONIO vs ORLANDO ANTONIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=97FCE9E1-A2D5-4C9F-A2BB-F8EBCB40B991",
-            "nomeTorneo": "TORNEO OPEN \"5° TROFEO KLIMAITALIA\"",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 2 Inizio ore: 10:30 Singolare Maschile Open LIM. 4.3 - 1 BINETTI ANDREA vs BOOCOCK GIANLUIGI o CASTELLANA DAVIDE",
-                "12/07/2026; 3 Inizio ore: 16:00 Singolare Maschile Open LIM. 4.3 - 1 LOBASSO SAVERIO vs FASANO CARLO Inizio ore: 16:00 Singolare Femminile Open DI PALMA ANNAMARIA vs GRACCO LOUISE Inizio ore: 16:00 Singolare Maschile Open LIM. 4.3 - 1 DE PACE ANTONIO vs FACECCHIA ALESSANDRO",
-                "12/07/2026; 5 A seguire Singolare Maschile Open LIM. 4.3 - 1 vs LEGGIERI LORENZO Inizio ore: 19:00 Singolare Maschile Open LIM. 4.3 - 1 CERVELLERA MICHELE vs LOPINTO MICHELE Inizio ore: 19:00 Singolare Femminile Open VASTI IRENE GIUSY vs MARINO MARTINA",
-                "12/07/2026; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "12/07/2026; 1 Inizio ore: 09:00 Singolare Femminile Open ALBRIZIO REBECCA MARILIA vs MASTROVITO AURORA o D'IPPOLITO COSIMA Inizio ore: 09:00 Singolare Maschile Open LIM. 4.3 - 1 NARDELLI GABRIELE vs ASSENTE EMILIO JURY",
-                "12/07/2026; 6 Inizio ore: 20:30 Singolare Maschile Open LIM. 4.3 - 1 ALTAMURA COSIMO vs Inizio ore: 20:30 Singolare Maschile Open LIM. 4.3 - 1 vs SERIO PIETRO A seguire Singolare Maschile Open LIM. 4.3 - 1 SFORZA FRANCESCO vs",
-                "12/07/2026; 4 Inizio ore: 17:30 Singolare Maschile Open LIM. 4.3 - 1 DEL GAUDIO GABRIELE vs DE RUVO NICOLA Inizio ore: 17:30 Singolare Maschile Open LIM. 4.3 - 1 CARLUCCI SIMONE vs DE GIORGIO ALESSIO Inizio ore: 17:30 Singolare Femminile Open ROMAGNO CARMILIA o MATTIA BEATRICE vs ZIGRINO ROBERTA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=875EDAE0-836C-4E61-8CF4-9B46E7797BD1",
-            "nomeTorneo": "BALICE \"5° MEMORIAL ANDREA MORELLI\"",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 4 Inizio ore: 15:30 Singolare Maschile Open LIM. 4.NC - 1 PIERAZZOLI LUCA vs Inizio ore: 16:00 Singolare Maschile Open LIM. 4.NC - 1 URSINI ALFREDO vs MORGANTI MATTEO",
-                "12/07/2026; 6 Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 1 PAGNOTTA FABRIZIO vs RAGONE MAURO Inizio ore: 19:00 Singolare Maschile Open LIM. 4.NC - 1 SPINOSI VALERIO vs CLEMENTI DANIELE",
-                "12/07/2026; 3 Inizio ore: 12:30 Singolare Maschile Open LIM. 4.NC - 1 vs CITERONI ROBERTO Inizio ore: 11:00 Singolare Maschile Open LIM. 4.NC - 1 vs DIOMEDI FILIPPO",
-                "12/07/2026; 2 Inizio ore: 11:00 Singolare Maschile Open LIM. 4.NC - 1 vs CAMOZZI GIOVANNI Inizio ore: 12:00 Singolare Maschile Open LIM. 4.NC - 1 POPA IULIAN GABRIEL vs",
-                "12/07/2026; 5 Inizio ore: 17:00 Singolare Maschile Open LIM. 4.NC - 1 CARCHIA MARCO vs GABRIELLI CLAUDIO Inizio ore: 17:30 Singolare Maschile Open LIM. 4.NC - 1 SEGHETTI MATTEO vs MASCITTI EMANUELE",
-                "12/07/2026; 1 Inizio ore: 09:30 Singolare Maschile Open LIM. 4.NC - 1 TRAINI LORENZO vs Inizio ore: 09:00 Singolare Maschile Open LIM. 4.NC - 1 vs FORTI GIUSEPPE",
-                "12/07/2026; 7 Inizio ore: 20:00 Singolare Maschile Open LIM. 4.NC - 1 OFFIDANI AGA FRANCESCO vs BROZZI ALESSANDRO Inizio ore: 20:30 Singolare Maschile Open LIM. 4.NC - 1 CIOTTI IVANO vs MOCHI TOMMASO PEIXIN",
-                "12/07/2026; No. Campo 1 Larcher Campo 2"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; INIZIO 18:00 vs IANNOTTA LEONARDO vs D'ANDREA GIORGIO PAGLIARO NICCOLO' MARIA vs CAPPILLI ALESSANDRO LUCARINI FABRIZIO vs FORCINELLI EMANUELE vs vs",
-                "12/07/2026; e uir g e s a vs vs vs vs vs vs",
-                "12/07/2026; Ordine di gioco rilasciato Firma GA",
-                "12/07/2026; Gli ultimi incontri possono essere spostati 11/07/2026 ORE Maria Antonietta Guidaldi",
-                "12/07/2026; non prima hh.mm vs vs vs vs vs vs",
-                "12/07/2026; e uir g e s a vs GALANTE RICCARDO vs CORSETTI JACOPO MARINELLI GIULIO vs APUZZO MANUEL ROCCO VINCENZO vs FILIPPI GIANLORENZO vs vs",
-                "12/07/2026; Ora 1 2 3 4 5 6",
-                "12/07/2026; hh.mm vs vs vs vs vs vs"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D8C0DA5A-EEA6-4B99-9892-46F29B30D940",
-            "nomeTorneo": "TORNEO 3° CATEGORIA",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 2 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 MUSCO CARBONARO SALVATORE vs AGOSTA ALESSANDRO o CHIAJA DONATO",
-                "12/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open LIM. 4.NC - 3.1 AGOSTA ALESSANDRO vs CHIAJA DONATO",
-                "12/07/2026; No. Campo 4"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F75BA4D5-B037-4EB5-87B9-6A039545F358",
-            "nomeTorneo": "TORNEO “ CITTÀ DI COMUNANZA “ 3^ - 4^ CAT M/F",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 2 Inizio ore: 20:00 Singolare Maschile Open LIM. 4.NC - 3.1 TRAVANTI DARIO vs MIGNUCCI ANDREA",
-                "12/07/2026; No. Campo 1 Campo 2",
-                "12/07/2026; 1 Inizio ore: 09:30 Singolare Maschile Open LIM. 4.NC - 3.1 PALESTINI ARSEN vs SIMONETTI GIANLUCA Inizio ore: 10:00 Singolare Maschile Open LIM. 4.NC - 3.1 PACIONI LORENZO vs CORTELLUCCI LORENZO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7CAFF380-BDA7-40B7-A639-F47720E1BAF4",
-            "nomeTorneo": "TORNEO 3^+4^ CAT. MASCHILE TROFEO \"SORBATTI SRL\"",
-            "data": "12/07/2026",
-            "partite": [
-                "13/07/2026; No. Campo 1 Campo 2",
-                "12/07/2026; No. Campo 2",
-                "13/07/2026; 2 Inizio ore: 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 CASTRICA EMILIANO vs TOTÒ MIRCO Inizio ore: 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 BONFIGLI DAVID vs CARLACCHIANI PAOLO",
-                "13/07/2026; 1 Inizio ore: 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs SABBATINI DANIELE Inizio ore: 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs SANTONI ROCCO",
-                "12/07/2026; 2 Campo da definire Singolare Maschile Open LIM. 4.NC - 3.1 DEL DOTTO MATTEO vs PETRINI ALAN o BUCCIONI ERICK",
-                "12/07/2026; 1 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 DE PAOLIS CLAUDIO o LIBERATI SAVERIO vs MACARRI FRANCESCO MARIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=229C562F-00E7-4F23-8734-FC8EAE53C698",
-            "nomeTorneo": "BLUEMARE TORNEO OPEN DI ACQUEDOLCI",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 2 Inizio ore: 18:00 Singolare Maschile Open CALCAGNO CALOGERO LUCA vs MANUSÈ MATTEO Inizio ore: 18:00 Singolare Maschile Open PARATORE VINCENZO vs SCAFFIDI PIETRO",
-                "12/07/2026; No. Campo 1 Campo 2",
-                "12/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open RIGGIO MARCO vs LO MONACO FILIPPO",
-                "12/07/2026; 4 Non prima delle 20:30 Singolare Maschile Open ARTALE GIUSEPPE vs CALCAGNO CALOGERO LUCA o MANUSÈ MATTEO",
-                "12/07/2026; 3 Non prima delle 19:30 Singolare Maschile Open STARVAGGI GIUSEPPE vs RIGGIO MARCO o LO MONACO FILIPPO A seguire Singolare Maschile Open PALAZZI RICCARDO vs BARBUZZA DOMENICO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=DF9B3FD5-18F0-4FC6-B03E-5843D7B81AC2",
-            "nomeTorneo": "ABRUZZO - 25°TENNIS SUMMER 'CITTÀ DI SPOLTORE' TORNEO OPEN NAZIONALE SINGOLARE M/F",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 2 A seguire Singolare Maschile Open LIM. 4.NC - 2.1 RENZETTI SIMONE vs SALVIO NICOLA",
-                "12/07/2026; 4 A seguire Singolare Maschile Open LIM. 4.NC - 2.1 MORELLI WALTER vs BAGAGLI EDOARDO MARIO A seguire Singolare Maschile Open LIM. 4.NC - 2.1 CONTE DAVIDE vs BRISOTTI FABRIZIO A seguire Singolare Maschile Open LIM. 4.NC - 2.1 SCOPINO MARCO vs GROSSI CARLO",
-                "12/07/2026; No. Campo 1 Campo 2 Campo 3",
-                "12/07/2026; 3 Inizio ore: 15:00 Singolare Maschile Open LIM. 4.NC - 2.1 VERDECCHIA ANDREA vs GRUMI NICOLA Inizio ore: 15:00 Singolare Maschile Open LIM. 4.NC - 2.1 MASTRODICASA MATTIA vs DI TECCO DIEGO ANTONIO Inizio ore: 14:00 Singolare Maschile Open LIM. 4.NC - 2.1 MAGLIANI ANDREA vs DI NICOLANTONIO REMO",
-                "12/07/2026; 5 Non prima delle 18:00 Singolare Maschile Open LIM. 4.NC - 2.1 FENAROLI ANDREA vs D'EMIDIO FABIO Non prima delle 18:00 Singolare Maschile Open LIM. 4.NC - 2.1 RANALLI NICOLA vs PERFUMI FABRIZIO Non prima delle 17:00 Singolare Maschile Open LIM. 4.NC - 2.1 PIETRANGELO CAMILLO vs FLORIANO SIMONE",
-                "12/07/2026; 7 Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 2.1 LAMARUCCIOLA-FRIULI MASSIMO vs CALABRESE NINO Non prima delle 20:00 Singolare Femminile Open LIM. 4.NC - 2.1 PIERFELICE EMMA vs MASSACESI AMALIA",
-                "12/07/2026; 6 A seguire Singolare Maschile Open LIM. 4.NC - 2.1 ALTAMURA ANDREA vs GIZZI FRANCESCO A seguire Singolare Maschile Open LIM. 4.NC - 2.1 VERZULLI FABIO vs DI MECO GABRIELE A seguire Singolare Femminile Open LIM. 4.NC - 2.1 DI SIMONE ANTONELLA vs MURRI ROSANNA",
-                "12/07/2026; 1 Inizio ore: 10:00 Singolare Femminile Open LIM. 4.NC - 2.1 SALOMONE MARIAVITTORIA vs D'ETTORRE MARIA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=56AC7229-617D-45D5-819B-2667E5785ADF",
-            "nomeTorneo": "VENETO 322 - TORNEO 3^ CATEGORIA M/F - TENNISDANCE 2026",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; No. Campo 3 Campo 4 Campo 5",
-                "12/07/2026; 2 Inizio ore: 11:30 Singolare Maschile Open LIM. 4.NC - 3.1 SADOCCO MARINO vs BASSANI FILIPPO Inizio ore: 11:30 Singolare Maschile Open LIM. 4.NC - 3.1 COLUCCINI EMANUELE vs BERGO ALESSANDRO Inizio ore: 12:30 Singolare Maschile Open LIM. 4.NC - 3.1 DE MARCHI FRANCESCO vs CAMERAN LUCA",
-                "12/07/2026; 1 Inizio ore: 10:00 Singolare Femminile Open LIM. 4.NC - 3.1 COLATO CHIARA vs BELLAN MARGOT Inizio ore: 10:00 Singolare Femminile Open LIM. 4.NC - 3.1 BORDIN FRANCESCA vs SERBAN SORINA MARIA Inizio ore: 11:00 Singolare Femminile Open LIM. 4.NC - 3.1 LIVIERI ELENA vs SITAR SIMONA LENUTA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
-            "nomeTorneo": "VI OPEN CITTA' DI CECCANO",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 4 Non prima delle 19:00 Singolare Maschile Open CASALESE MASSIMO vs SANTUCCI ANDREA Non prima delle 19:00 Singolare Maschile Open GABRIELLI DIEGO vs RUGGERI DAVIDE",
-                "12/07/2026; 2 Non prima delle 11:30 Singolare Maschile Open DE LELLIS DANIELE vs MARINI FERNANDO Non prima delle 11:30 Singolare Maschile Open CIAVARDINI FABRIZIO vs GIOVANNETTI LUCA",
-                "12/07/2026; 1 Inizio ore: 10:00 Singolare Maschile Open ABBATE FILIPPO vs MASI MANUEL Inizio ore: 10:00 Singolare Femminile Open FIORINI GAIA vs LEPORE LAURA",
-                "12/07/2026; No. Campo 1 (principale) campo 2",
-                "12/07/2026; 3 Inizio ore: 17:30 Singolare Maschile Open FRIONI CRISTIAN vs EVANGELISTA LORENZO Inizio ore: 17:30 Singolare Maschile Open FIORINI ANGELO vs MARTINO SERGIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B2AC5130-A3DC-4A5A-AEFC-A42B4D061363",
-            "nomeTorneo": "2^ TAPPA OPEN LA BOLA - KING TOUR 2026 - PORTO POTENZA PICENA",
-            "data": "12/07/2026",
-            "partite": [
-                "12/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open LIM. 4.NC - 3.1 BALDONI SAMUELE vs TOMMASETTI DANIELE o DONATI DAVIDE Inizio ore: 09:00 Singolare Maschile Open LIM. 4.NC - 3.1 MORRESI GIUSEPPE vs ZUCCACCIA MATTEO Inizio ore: 09:00 Singolare Maschile Open LIM. 4.NC - 3.1 ROMA SALVATORE vs RUGIANO FRANCESCO",
-                "12/07/2026; No. Campo 1 Terra Campo 2 Terra Campo 3 Cemento",
-                "12/07/2026; 4 Inizio ore: 16:30 Singolare Maschile Open LIM. 4.NC - 3.1 GIACONI RENATO vs MORODER MATTIA Inizio ore: 16:30 Singolare Femminile Open LIM. 4.NC - 3.1 CANALINI MARIA CRISTINA vs GIAMMARIA MARZIA o ERCOLANI MARIA Inizio ore: 16:30 Singolare Femminile Open LIM. 4.NC - 3.1 ANDRISANI GIULIA vs CARDUCCI ALICE o PUCCI PAOLA",
-                "12/07/2026; 3 Inizio ore: 15:00 Singolare Maschile Open LIM. 4.NC - 3.1 CIRILLI FEDERICO vs DI BIASI NICO Inizio ore: 15:00 Singolare Maschile Open LIM. 4.NC - 3.1 FOGLIA PIERLUIGI o MARIANI MORENO vs BARELLI FEDERICO Inizio ore: 15:00 Singolare Maschile Open LIM. 4.NC - 3.1 RAPAGNANI DAVIDE vs RAFFAELI ALESSANDRO",
-                "12/07/2026; 2 Inizio ore: 10:30 Singolare Maschile Open LIM. 4.NC - 3.1 DOFFO LEONARDO o TOMMASETTI WALTER vs MURIEL ANDRES VITTORIO Inizio ore: 10:30 Singolare Maschile Open LIM. 4.NC - 3.1 FUMAROLA FABRIZIO vs RUFFINI MIRCO Inizio ore: 10:30 Singolare Maschile Open LIM. 4.NC - 3.1 ROGANI MATTIA vs GIANNONI PAOLO"
+                "12/07/2026; INIZIO 18:00 MAGAZZU MAURO vs CONCA PAOLO PIERETTI/PALERMO PI. vs PANNESE FULVIO CITTADINI ANNA GIULIA vs TOMASSINI SARA INNOCENTE vs EGIDI SILVIA STEGHER VS GIORDANO CARMINE PETRASSI/CENTIONI vs FALCONE IOLE BALLA LAURA vs MANKA MADDALENA vs vs",
+                "12/07/2026; 21:00 MAZZOLI/MAZZA VS MARMORATO FRANCESCO MANDIC/DI FABIO vs TANCREDI VIVIANO PERRELLI/IRTI vs BONA EUGENIO PEZZOPANE/MANCINELLI vs UMMARINO TIZIANO MELI/MARINUCCI vs LORA MAX PALMERI T./TRANZILLO vs STRAMACCI FRANCO FUSARO/GIARRUSSO vs TORMEN LUCA COLABELLA/BARBARO vs TASSI RENATO LONGO CATIA vs WISCHMEYER SABINE",
+                "12/07/2026; 22:30 NEGLIA/CRETAIO VS FORTUNA STEFANO TASSIN/CARIDI vs TELARICO GIORGIO CIPRIANO FILIPPO vs DE PALO FABIO BENADUSI LORENZO vs DAIDONE FREDERICK BATTILOCCHI LUCIO vs LO PRESTI LUCA COLIZZI RENATO vs MIANI MASSIMO vs vs vs",
+                "12/07/2026; Ora 1 2 3 4 5 6 7 8 9",
+                "12/07/2026; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE",
+                "12/07/2026; 19:30 FREDIANI/ARCANGELETTI vs CAPARROTTA ANTONIO GUIDI BUFFARINI vs DE LORENZO PIER CARLO NASO vs CATALINI ALESSIO CAMPAGNA/MAGRINI vs LUMIA RICCARDO MORACCI/ELETTI vs RANATI MARCO BRANDIMARTE/LA SPINA vs PALMERI ALESSANDRO RALLO/MOCCIA vs AGNES MASSIMO ROMAGNOLI/LUCIANO vs PROIETTI ALESSIA LIGUORI RAFFAELE vs BIANCHI FRANCESCO MAS."
             ]
         }
     ]
