@@ -1,51 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "categoria": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MARZIA GUERRINI4.3",
-                "FEDERICA DI MARCO4.6",
-                "ROBERTA GRIECO4.3",
-                "DEBORAH FOSCHI4.4",
-                "DUMITRINA VIRVARESCU4.4",
-                "SARA DONZELLI4.4",
-                "CHIARA MOTTOLESE4.NC",
-                "ALESSANDRA DE MONTE4.1"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3889B963-BCA0-4BF5-B5D9-0D095B9F9112",
-            "categoria": "SECONDO TORNEO3 CAT M/F HELIOS TENNIS ASD",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "NICCOLO GIULIANI3.5",
-                "MARCO MASTROMATTEO3.4",
-                "FEDERICO NERI4.NC",
-                "RICCARDO PERRUCCIO4.NC",
-                "LIVIO ANDRONICO4.NC",
-                "FABIO NICOLETTI4.2",
-                "JACOPO TEI3.4",
-                "RICCARDO MANCINI4.2",
-                "FLAVIO MORETTI4.3",
-                "ALESSANDRO CORDA DI CESIDIO4.2",
-                "RAFFAELE PEZONE4.NC",
-                "STEFANO BALDINI4.5",
-                "ALESSIO CICIVELLI3.5",
-                "RICCARDO DEFONTE4.NC",
-                "EDOARDO MAGGI4.3",
-                "GABRIELE CENTO4.6",
-                "ALESSANDRO FATIGATI4.4",
-                "RAZVAN NECULAI BOSINCIANU4.3",
-                "GIORGIO DI MAIO4.4",
-                "ANDREA PRINCIPIA4.1",
-                "RICCARDO PETRUCCI4.NC",
-                "MATTEO COSCIA3.1",
-                "STEFANO MARIA BRANCHESI4.2"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
             "categoria": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
             "tabellone": "Singolare Maschile Open",
@@ -99,7 +54,8 @@
                 "MATTEO PASTORE3.5",
                 "DANIELE CLEMENTE4.2",
                 "ALESSANDRO MASTROMARINO2.8",
-                "LORENZO PALCICH3.2"
+                "LORENZO PALCICH3.2",
+                "ALESSANDRO BAIA2.8"
             ]
         },
         {
