@@ -25,10 +25,12 @@ def get_pdf_info(pdf_path):
     return matches
 
 def format_line_for_swift(raw_text, date_target):
-    return f"{date_target}; {raw_text.replace('\n', ' ').strip()}"
+    # Correzione sintassi f-string
+    clean_text = raw_text.replace('\n', ' ').strip()
+    return f"{date_target}; {clean_text}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione con filtri stabili ---")
+    print("--- [START] Avvio estrazione con correzione SyntaxError ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -38,28 +40,23 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, timeout=60000)
             
-            # --- STRATEGIA FILTRI VINCENTE ---
-            # Stato
+            # Filtri
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
             await asyncio.sleep(2)
             
-            # Regione Lazio
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(3) 
             
-            # Provincia Roma
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(3)
             
-            # Categoria
             await page.wait_for_selector(f'a[data-id="{cat_id}"]')
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(5) 
             
-            # Espansione lista
             while await page.locator("#btn-loadMore").is_visible():
                 await page.locator("#btn-loadMore").click()
                 await asyncio.sleep(4)
