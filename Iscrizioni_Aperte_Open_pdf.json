@@ -1,20 +1,449 @@
 {
-    "report_data": "12/07/2026 05:19",
+    "report_data": "12/07/2026 08:11",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
-            "nomeTorneo": "BT PAY - TORNEO SERALE - BY SPORFIE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=47CE67D8-8B3B-495F-B361-833463619986",
+            "nomeTorneo": "TORNEI FITP",
             "data": "12/07/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1 € 1499",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1%%% 6.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1 Dunlop Australian Open 2 Cemento"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=97FCE9E1-A2D5-4C9F-A2BB-F8EBCB40B991",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Femminile Open € 2210",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.3 - 1 € 6940",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Femminile Open 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €1210 €600 €200 €0 €0 €0",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.3 - 1 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €3010 €1470 €630 €300 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 08/07/2026 3.4 2.8",
+                "Oggi; 00:00; 19/07/2026 2.7 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.3 3.5",
+                "Oggi; 00:00; 07/07/2026 3.4 2.8",
+                "Oggi; 00:00; 19/07/2026 2.7 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 3 Cemento",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.3 - 1 Dunlop Fort All Court Tournament Select 3 Cemento"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=56AC7229-617D-45D5-819B-2667E5785ADF",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 16/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 16/07/2026 4.NC 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Wilson US Open 3 Erba sintetica",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Wilson US Open 3 Erba sintetica",
+                "Oggi; 00:00; Doppio Maschile Open LIM. 4.NC - 3.1 Wilson US Open 3 Erba sintetica",
+                "Oggi; 00:00; Doppio Misto Open LIM. 4.NC - 3.1 Wilson US Open 3 Erba sintetica"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C4991FE7-4E10-4DE2-9BFC-801A429E182B",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 15000",
+                "Oggi; 00:00; Singolare Maschile Open € 85000",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open 1% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €15000 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; Singolare Maschile Open%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €76500 €8500 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.NC 4.3",
+                "Oggi; 00:00; 07/07/2026 4.2 3.5",
+                "Oggi; 00:00; 18/07/2026 3.4 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.NC 4.3",
+                "Oggi; 00:00; 07/07/2026 4.2 3.5",
+                "Oggi; 00:00; 18/07/2026 3.4 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 4 Terra rossa",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 4 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1EAD55B3-7CA8-47D2-A01F-D1707DB52FF8",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 10/07/2026 4.NC 3.5",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 10/07/2026 4.NC 3.5",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 2 Mateco",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 2 Mateco"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F75BA4D5-B037-4EB5-87B9-6A039545F358",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 3.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 3.1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 2 Terra sintetica",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 2 Terra sintetica"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=229C562F-00E7-4F23-8734-FC8EAE53C698",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 1200",
+                "Oggi; 00:00; Singolare Femminile Open € 299",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open%%% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; Singolare Femminile Open%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 17/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 10/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 10/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Doppio Misto Open Dunlop Fort All Court Tournament Select 2 Cemento",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 2 Cemento",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 2 Cemento"
             ]
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
+            "nomeTorneo": "TORNEI FITP",
             "data": "12/07/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 11/07/2026 4.NC 4.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 07/07/2026 4.NC 4.4",
+                "Oggi; 00:00; 08/07/2026 4.3 3.5",
+                "Oggi; 00:00; 09/07/2026 3.4 3.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 4.3",
+                "Oggi; 00:00; 08/07/2026 4.2 3.5",
+                "Oggi; 00:00; 09/07/2026 3.4 3.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 11/07/2026 4.NC 4.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 11/07/2026 4.NC 4.1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Doppio Femminile Open LIM. 4.NC - 3.1 Wilson US Open 6 Terra rossa",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Wilson US Open 6 Terra rossa",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Wilson US Open 6 Terra rossa",
+                "Oggi; 00:00; Doppio Maschile Open LIM. 4.NC - 3.1 Wilson US Open 6 Terra rossa",
+                "Oggi; 00:00; Doppio Misto Open LIM. 4.NC - 3.1 Wilson US Open 6 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=79E8F345-7D25-414E-8C39-415E4283D73C",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 2000",
+                "Oggi; 00:00; Singolare Femminile Open € 1000",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €720 €400 €200 €120 €0 €0",
+                "Oggi; 00:00; Singolare Femminile Open 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €360 €200 €100 €60 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 09/07/2026 3.4 2.8",
+                "Oggi; 00:00; 19/07/2026 2.7 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 04/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 09/07/2026 3.4 2.8",
+                "Oggi; 00:00; 19/07/2026 2.7 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 2 Terra rossa",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 2 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=64B85040-A3A4-426B-A9B8-AE51D4B6009A",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 399",
+                "Oggi; 00:00; Singolare Femminile Open € 100",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open%%% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; Singolare Femminile Open%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 07/07/2026 4.NC 4.3",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 07/07/2026 4.NC 4.3",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open Head Tour XT 2 Terra rossa",
+                "Oggi; 00:00; Singolare Femminile Open Head Tour XT 2 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F9A63818-810A-4479-A320-734BD6B2EE6A",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 1499",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open%%% 5.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 27/07/2026 3.4 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open Wilson Roland Garros All Court 5 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=875EDAE0-836C-4E61-8CF4-9B46E7797BD1",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 1 € 500",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 1%%% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 13/07/2026 3.4 2.8",
+                "Oggi; 00:00; 17/07/2026 2.7 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 1 Babolat Team Clay 2 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7CAFF380-BDA7-40B7-A639-F47720E1BAF4",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 18/07/2026 3.4 3.1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 2 Erba sintetica"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B2AC5130-A3DC-4A5A-AEFC-A42B4D061363",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 14/07/2026 3.4 2.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 14/07/2026 3.4 2.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 14/07/2026 3.4 2.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 14/07/2026 3.4 3.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 06/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 14/07/2026 3.4 3.1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Doppio Maschile Open LIM. 4.NC - 2.1 Head Tour XT 1 Sintetico - Altri materiali",
+                "Oggi; 00:00; Doppio Misto Open LIM. 4.NC - 2.1 Head Tour XT 1 Sintetico - Altri materiali",
+                "Oggi; 00:00; Doppio Femminile Open LIM. 4.NC - 2.1 Head Tour XT 1 Sintetico - Altri materiali",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Head Tour XT 2 Terra rossa",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Head Tour XT 2 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BCE63BDC-F70E-4E65-BBAC-9AB6CECEFF12",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 07/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 19/07/2026 3.4 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 12/07/2026 Per Tutti Per Tutti",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 07/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 19/07/2026 3.4 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 4 Terra rossa",
+                "Oggi; 00:00; Doppio Maschile Open Dunlop Fort All Court Tournament Select 4 Terra rossa",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 4 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1D78FF32-2468-4794-8AC3-4ACFE621BC66",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 15/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 15/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 15/07/2026 4.NC 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 4.1 Head Tour 3 Terra rossa",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 4.1 Head Tour 3 Terra rossa",
+                "Oggi; 00:00; Doppio Femminile Open LIM. 4.5 - 4.1 Head Tour 3 Terra rossa",
+                "Oggi; 00:00; Doppio Maschile Open LIM. 4.NC - 4.1 Head Tour 3 Terra rossa",
+                "Oggi; 00:00; Doppio Misto Open LIM. 4.NC - 4.1 Head Tour 3 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E7991566-025C-4E63-A42C-A69DBA53A129",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 400",
+                "Oggi; 00:00; Singolare Femminile Open € 1000",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open%%% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €180 €100 €60 €0 €0 €0",
+                "Oggi; 00:00; Singolare Femminile Open%%% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €450 €250 €150 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 03/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 08/07/2026 3.4 2.8",
+                "Oggi; 00:00; 13/07/2026 2.7 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 03/07/2026 4.NC 3.4",
+                "Oggi; 00:00; 08/07/2026 3.3 2.8",
+                "Oggi; 00:00; 13/07/2026 2.7 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open Wilson Roland Garros All Court 2 Sintetico - Play-it",
+                "Oggi; 00:00; Singolare Femminile Open Wilson Roland Garros All Court 2 Sintetico - Play-it"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2056B8AB-0370-4E5D-BB0A-27BB0BE7A775",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 16/07/2026 4.NC 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 3.1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 26/07/2026 3.4 3.1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Doppio Maschile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 1 Cemento",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 1 Cemento",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 3.1 Dunlop Fort All Court Tournament Select 1 Cemento"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=DF9B3FD5-18F0-4FC6-B03E-5843D7B81AC2",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 2.1 € 500",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1 € 900",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai\nquarti\n(cadauno) Perdenti agli\nottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC -\n2.1%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 4.NC 3.5",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open LIM. 4.NC - 2.1 Head Tour XT 3 Terra rossa",
+                "Oggi; 00:00; Singolare Maschile Open LIM. 4.NC - 2.1 Head Tour XT 3 Terra rossa"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=75254BDB-B900-4C0B-812E-87EA9BAEE40D",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Femminile Open € 1500",
+                "Oggi; 00:00; Singolare Maschile Open € 4000",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Femminile Open 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €600 €300 €150 €75 €0 €0",
+                "Oggi; 00:00; Singolare Maschile Open 0.00% 0.00% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €1200 €800 €500 €250 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 03/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 19/07/2026 3.4 1",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 03/07/2026 4.NC 3.5",
+                "Oggi; 00:00; 06/07/2026 3.4 2.8",
+                "Oggi; 00:00; 12/07/2026 2.7 1",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Femminile Open Dunlop Fort All Court Tournament Select 1 Cemento",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 1 Cemento"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=435BC474-8B81-42EB-BD0F-C172AF845875",
+            "nomeTorneo": "TORNEI FITP",
+            "data": "12/07/2026",
+            "partite": [
+                "Oggi; 00:00; Gara Montepremi",
+                "Oggi; 00:00; Singolare Maschile Open € 500",
+                "Oggi; 00:00; Vincitore Finalista Semifinalisti\n(cadauno) Perdenti ai quarti\n(cadauno) Perdenti agli ottavi\n(cadauno) Altri",
+                "Oggi; 00:00; Singolare Maschile Open%% 0.00% 0.00% 0.00% 0%",
+                "Oggi; 00:00; €0 €0 €0 €0 €0 €0",
+                "Oggi; 00:00; DATA ORA DA CATEGORIA A CATEGORIA",
+                "Oggi; 00:00; 09/07/2026 Per Tutti 3.5",
+                "Oggi; 00:00; Gara Palla N°Campi Superficie",
+                "Oggi; 00:00; Singolare Maschile Open Dunlop Fort All Court Tournament Select 2 Terra rossa"
             ]
         }
     ]
