@@ -44,20 +44,20 @@ async def run_bot():
     print("--- [START] Avvio estrazione dinamica ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(accept_downloads=True)
+        # Forza risoluzione desktop per evitare menu "hamburger"
+        context = await browser.new_context(accept_downloads=True, viewport={"width": 1920, "height": 1080})
         
         for cat_id, filename in CATEGORIES.items():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # FILTRI: XPath mirato per evitare ambiguità (Strict mode violation)
+            # FILTRI: Approccio Flat (diretto, senza navigare dom complessi)
             for sel_id, option in [('select_status', 'In corso'), ('id_regioneSearch', 'Lazio'), ('id_provinciaSearch', 'Roma')]:
                 await wait_and_click(page, f'button[data-id="{sel_id}"]')
-                # Selettore XPath: cerca solo elementi <a> dentro menu attivi
-                opt_selector = f"//div[contains(@class, 'show')]//a[contains(text(), '{option}')]"
-                opt = page.locator(opt_selector).first
-                await opt.wait_for(state="visible", timeout=15000)
-                await opt.click()
+                await asyncio.sleep(1) # Attesa per animazione menu
+                # Cerca il link contenente il testo, ovunque sia
+                opt = page.locator(f"a:has-text('{option}')").first
+                await opt.click(force=True)
                 await page.wait_for_load_state("networkidle")
             
             # Categoria
@@ -95,7 +95,6 @@ async def run_bot():
                         if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
                             await page.select_option("#select-ordergame", label=data_target)
                             await page.wait_for_load_state("networkidle")
-                            
                             if await download_btn.is_visible():
                                 async with page.expect_download() as dl_info:
                                     await download_btn.click()
