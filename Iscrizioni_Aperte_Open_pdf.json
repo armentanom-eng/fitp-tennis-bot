@@ -1,22 +1,36 @@
 {
-    "report_data": "13/07/2026 19:33",
+    "report_data": "13/07/2026 19:50",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
             "nomeTorneo": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\" - IV E III CAT. SINGOLI E DOPPI VIALE ROUSSEAU, 124, 00137 ROMA RM",
             "data": "13/07/2026",
             "partite": [
-                "13/07/2026; 21:00 MILONE AND. VS PINTA LEONARDO MAZZOLI/MARMORATO vs CARDENA' GIORGIO DI FABIO/ TANCREDI vs MONTI EMANULE NASO/CATALINI vs ARRIGHI CAMPAGNA/LUMIA vs MARINUCCI/LORA TOMASSINI/CITTADINI vs ZEVANO MARIA PALERMO P./PANNESE vs PALERMO A. NARDELLI vs BASSO GIOVANNI",
-                "14/07/2026; INIZIO BATTILOCCHI vs BENINCASA/MASALA DE LORENZO/PALMERI T. vs SCHIAVELLO VALERIO AGNES vs SANNINO GIANPAOLO TASSI vs PACIFICI LUIGI MICHELETTI/RUSSILLO vs LO BELLO ANNA NAPOLIELLO/NEGURA vs SASSUN ALESSANDRA vs ARCANGELETTI/CAPECE vs MODIANO DAVID vs",
-                "13/07/2026; INIZIO BENINCASA vs MASALA FABRIZIO BRANDIMARTE/PALMERI A. vs GIARRUSSO/TORMEN EGIDI/INNOCENTE vs PERETTA MARIA BENADUSI/DAIDONE vs STEGHER/GIORDANO vs vs vs vs",
-                "13/07/2026; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE",
-                "13/07/2026; CAPECE vs CAPARROTTA/ARCANGELETTI",
-                "14/07/2026; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE",
-                "14/07/2026; 21:00 COLIZZI VS MILONE AND./PINTA BIANCHI vs MARMORATO/CARDENA' CIPRIANO vs DI FABIO/MONTI CATALINI/ARRIGHI vs DE PALO LORENZO LORA/LUMIA vs PATERNOSTER ROBERTO CONCA vs MASI ALESSIO GIARRUSSO/BRANDIMARTE vs PECCI VALTER NARDELLI/BASSO vs PLESCIA ANTONIO",
+                "13/07/2026; Ora 1 2 3 4 5 6 7 8 9",
                 "13/07/2026; 22:30 IRTI/BONA VS MANCINELLI/UMMARINO PALMER T./STRAMACCI vs GUIDI/DE LORENZO MORACCI/RANATI vs MAGAZZU/CONCA RUSSILLO vs MICHELETTI LISA NAPOLIELLO vs NEGURA ELISA LUCIANO/PROIETTI vs SELLI GIULIA BALLA/MANKA vs FABBRIZI CRISTIANA NEGLIA/FORTUNA vs MARTA TOMMASO TASSIN/TELARICO vs D'ALESSANDRO GIANLUCA",
-                "14/07/2026; 22:30 IRTI/UMMARINO VS QUINTO PAOLO PALERMO/PALERMO vs CAPOLA CRISTIAN TELARICO/D'ALESSANDRO vs TODISCO PAOLO NEGLIA/MARTA vs GUAGNI CARLO FALCONE vs OLTEANU ALESSIA WISCHMEYER vs SALAMANCA MARIA P. PERETTI/EGIDI vs CERTELLI LUDOVICA FABBRIZI/MANCA vs INCITTI MARTA STEGHER/DAIDONE vs MORETTI DAMIANO",
                 "14/07/2026; Ora 1 2 3 4 5 6 7 8 9",
-                "13/07/2026; Ora 1 2 3 4 5 6 7 8 9"
+                "13/07/2026; CAPECE vs CAPARROTTA/ARCANGELETTI",
+                "14/07/2026; INIZIO BATTILOCCHI vs BENINCASA/MASALA DE LORENZO/PALMERI T. vs SCHIAVELLO VALERIO AGNES vs SANNINO GIANPAOLO TASSI vs PACIFICI LUIGI MICHELETTI/RUSSILLO vs LO BELLO ANNA NAPOLIELLO/NEGURA vs SASSUN ALESSANDRA vs ARCANGELETTI/CAPECE vs MODIANO DAVID vs",
+                "14/07/2026; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE",
+                "13/07/2026; INIZIO BENINCASA vs MASALA FABRIZIO BRANDIMARTE/PALMERI A. vs GIARRUSSO/TORMEN EGIDI/INNOCENTE vs PERETTA MARIA BENADUSI/DAIDONE vs STEGHER/GIORDANO vs vs vs vs",
+                "14/07/2026; 21:00 COLIZZI VS MILONE AND./PINTA BIANCHI vs MARMORATO/CARDENA' CIPRIANO vs DI FABIO/MONTI CATALINI/ARRIGHI vs DE PALO LORENZO LORA/LUMIA vs PATERNOSTER ROBERTO CONCA vs MASI ALESSIO GIARRUSSO/BRANDIMARTE vs PECCI VALTER NARDELLI/BASSO vs PLESCIA ANTONIO",
+                "13/07/2026; 21:00 MILONE AND. VS PINTA LEONARDO MAZZOLI/MARMORATO vs CARDENA' GIORGIO DI FABIO/ TANCREDI vs MONTI EMANULE NASO/CATALINI vs ARRIGHI CAMPAGNA/LUMIA vs MARINUCCI/LORA TOMASSINI/CITTADINI vs ZEVANO MARIA PALERMO P./PANNESE vs PALERMO A. NARDELLI vs BASSO GIOVANNI",
+                "13/07/2026; POSSIBILI SPOSTAMENTI DI CAMPO, VISTO L'ELEVATO NUMERO DI ISCRITTI NON SI GARANTISCE IL RISPETTO DELLE DESIDERATE ED EVENTUALI GIORNI DA SALTARE",
+                "14/07/2026; 22:30 IRTI/UMMARINO VS QUINTO PAOLO PALERMO/PALERMO vs CAPOLA CRISTIAN TELARICO/D'ALESSANDRO vs TODISCO PAOLO NEGLIA/MARTA vs GUAGNI CARLO FALCONE vs OLTEANU ALESSIA WISCHMEYER vs SALAMANCA MARIA P. PERETTI/EGIDI vs CERTELLI LUDOVICA FABBRIZI/MANCA vs INCITTI MARTA STEGHER/DAIDONE vs MORETTI DAMIANO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=133CA9A5-CCC8-49DC-8D8B-7204D3799CF8",
+            "nomeTorneo": "TC KIPLING - CIRCUITO \"I SERALI DI ROMA\" - 7° TAPPA - IV E III CAT. SINGOLI E DOPPI",
+            "data": "13/07/2026",
+            "partite": [
+                "13/07/2026; 2 Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 FRANCIOLI LEONARDO vs MANILI ALESSANDRO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 BERTACCINI ALESSANDRO vs BELLI MASSIMO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 ONGARO GIULIANO vs TIDEI PAOLO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 MARCONI GABRIELE vs GUGLIELMI CRISTIANO",
+                "13/07/2026; No. Campo Principale Campo 2 Campo 3 Campo 4",
+                "14/07/2026; 2 Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs BROCCHETTI GIANFRANCO Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 SANCHINI OLMO vs Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 MILONE ANDREA vs SOTTILE GIUSEPPE Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 TAMILIA ALESSIO vs Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 DIGIESI GIUSEPPE vs VERBO GIANMARCO Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 DEL CASTELLO FABIO vs Non prima delle 20:00 Singolare Maschile Open LIM. 4.NC - 3.1 vs RICCELLI MASSIMILIANO",
+                "14/07/2026; 1 Inizio ore: 18:30 Singolare Femminile Open LIM. 4.NC - 3.1 MUSTAZZA DANIELA vs RISI VALENTINA o BERDINI ELISABETTA Inizio ore: 18:30 Singolare Femminile Open LIM. 4.NC - 3.1 ALLA FRANCESCA ROMANA o CECCARELLI ARIANNA vs ROMAGNOLI SOFIA o RUBILOTTA VIRGINIA Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs NANIA SAMUELE Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs STARACE PAOLO Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs BOCCINI LEONARDO",
+                "13/07/2026; 1 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 MILONE ANGELO vs LEDDA FILIPPO Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 RISI VALENTINA vs BERDINI ELISABETTA Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 ALLA FRANCESCA ROMANA vs CECCARELLI ARIANNA Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 ROMAGNOLI SOFIA vs RUBILOTTA VIRGINIA",
+                "13/07/2026; 3 Dopo debito riposo non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 VINCI ROBERTO vs MILONE ANGELO o LEDDA FILIPPO Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 MORGANTI DANIELE vs PARATORE MATTIA Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 SILEO ALESSANDRO vs MACCIOCCHI RICCARDO Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 LAMPUS DANIELE JACOPO vs FARINA LEONARDO",
+                "14/07/2026; No. Campo Principale Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7"
             ]
         },
         {
@@ -26,26 +40,12 @@
             "partite": [
                 "13/07/2026; INIZIO 18:00 vs ROSCETTI RICCARDO vs FORCINELLI EMANUELE TAGLIONI VINCENZO vs GALANTE RICCARDO CAPRARO GIANLUCA vs CAPPILLI ALESSANDRO vs vs",
                 "13/07/2026; e r ui g e s a vs CONTI MATTEO vs ROCCO VINCENZO ZANARDI GIORGIO vs APUZZO MANUEL HADLEY ALEX vs IANNOTTA LEONARDO vs vs",
-                "13/07/2026; non prima hh.mm vs vs vs vs vs vs",
-                "13/07/2026; Ordine di gioco rilasciato Firma GA",
-                "13/07/2026; Gli ultimi incontri possono essere spostati 12/07/2026 ORE Maria Antonietta Guidaldi",
-                "13/07/2026; hh.mm vs vs vs vs vs vs",
                 "13/07/2026; Ora 1 2 3 4 5 6",
-                "13/07/2026; e r ui g e s a vs vs vs vs vs vs"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=133CA9A5-CCC8-49DC-8D8B-7204D3799CF8",
-            "nomeTorneo": "TC KIPLING - CIRCUITO \"I SERALI DI ROMA\" - 7° TAPPA - IV E III CAT. SINGOLI E DOPPI",
-            "data": "13/07/2026",
-            "partite": [
-                "14/07/2026; 2 Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs BROCCHETTI GIANFRANCO Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 SANCHINI OLMO vs Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 MILONE ANDREA vs SOTTILE GIUSEPPE Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 TAMILIA ALESSIO vs Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 DIGIESI GIUSEPPE vs VERBO GIANMARCO Non prima delle 20:30 Singolare Maschile Open LIM. 4.NC - 3.1 DEL CASTELLO FABIO vs Non prima delle 20:00 Singolare Maschile Open LIM. 4.NC - 3.1 vs RICCELLI MASSIMILIANO",
-                "14/07/2026; 1 Inizio ore: 18:30 Singolare Femminile Open LIM. 4.NC - 3.1 MUSTAZZA DANIELA vs RISI VALENTINA o BERDINI ELISABETTA Inizio ore: 18:30 Singolare Femminile Open LIM. 4.NC - 3.1 ALLA FRANCESCA ROMANA o CECCARELLI ARIANNA vs ROMAGNOLI SOFIA o RUBILOTTA VIRGINIA Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs NANIA SAMUELE Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs STARACE PAOLO Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 vs BOCCINI LEONARDO",
-                "14/07/2026; No. Campo Principale Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7",
-                "13/07/2026; 2 Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 FRANCIOLI LEONARDO vs MANILI ALESSANDRO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 BERTACCINI ALESSANDRO vs BELLI MASSIMO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 ONGARO GIULIANO vs TIDEI PAOLO Non prima delle 19:30 Singolare Maschile Open LIM. 4.NC - 3.1 MARCONI GABRIELE vs GUGLIELMI CRISTIANO",
-                "13/07/2026; No. Campo Principale Campo 2 Campo 3 Campo 4",
-                "13/07/2026; 1 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 MILONE ANGELO vs LEDDA FILIPPO Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 RISI VALENTINA vs BERDINI ELISABETTA Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 ALLA FRANCESCA ROMANA vs CECCARELLI ARIANNA Inizio ore: 18:00 Singolare Femminile Open LIM. 4.NC - 3.1 ROMAGNOLI SOFIA vs RUBILOTTA VIRGINIA",
-                "13/07/2026; 3 Dopo debito riposo non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 VINCI ROBERTO vs MILONE ANGELO o LEDDA FILIPPO Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 MORGANTI DANIELE vs PARATORE MATTIA Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 SILEO ALESSANDRO vs MACCIOCCHI RICCARDO Non prima delle 21:00 Singolare Maschile Open LIM. 4.NC - 3.1 LAMPUS DANIELE JACOPO vs FARINA LEONARDO"
+                "13/07/2026; e r ui g e s a vs vs vs vs vs vs",
+                "13/07/2026; non prima hh.mm vs vs vs vs vs vs",
+                "13/07/2026; hh.mm vs vs vs vs vs vs",
+                "13/07/2026; Ordine di gioco rilasciato Firma GA",
+                "13/07/2026; Gli ultimi incontri possono essere spostati 12/07/2026 ORE Maria Antonietta Guidaldi"
             ]
         }
     ]
