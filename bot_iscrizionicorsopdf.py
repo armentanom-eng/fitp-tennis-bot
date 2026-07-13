@@ -50,11 +50,13 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, wait_until="networkidle")
             
-            # Filtri dinamici
+            # FILTRI: XPath mirato per evitare ambiguità (Strict mode violation)
             for sel_id, option in [('select_status', 'In corso'), ('id_regioneSearch', 'Lazio'), ('id_provinciaSearch', 'Roma')]:
                 await wait_and_click(page, f'button[data-id="{sel_id}"]')
-                opt = page.get_by_role("option", name=option)
-                await opt.wait_for(state="attached")
+                # Selettore XPath: cerca solo elementi <a> dentro menu attivi
+                opt_selector = f"//div[contains(@class, 'show')]//a[contains(text(), '{option}')]"
+                opt = page.locator(opt_selector).first
+                await opt.wait_for(state="visible", timeout=15000)
                 await opt.click()
                 await page.wait_for_load_state("networkidle")
             
@@ -62,7 +64,7 @@ async def run_bot():
             await wait_and_click(page, f'a[data-id="{cat_id}"]')
             await page.wait_for_load_state("networkidle")
             
-            # Espansione lista (attesa finché il bottone scompare o non è più cliccabile)
+            # Espansione lista
             while True:
                 btn = page.locator("#btn-loadMore")
                 if await btn.count() > 0 and await btn.is_visible():
@@ -79,11 +81,14 @@ async def run_bot():
             for link in links:
                 await page.goto(f"https://www.fitp.it{link}", wait_until="networkidle")
                 
-                nome_torneo = await page.locator("h1.cc-title-main").inner_text(timeout=10000)
+                try:
+                    nome_torneo = await page.locator("h1.cc-title-main").inner_text(timeout=10000)
+                except:
+                    nome_torneo = "Torneo"
+                
                 download_btn = page.locator("#btnOrderGameDownload")
                 dropdown = page.locator("#select-ordergame")
                 
-                # Gestione dinamica date
                 if await dropdown.is_visible():
                     for i in range(0, 2):
                         data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
@@ -97,7 +102,7 @@ async def run_bot():
                                 download = await dl_info.value
                                 await download.save_as("temp.pdf")
                                 matches = get_pdf_info("temp.pdf")
-                                json_data["tornei"].append({"nomeTorneo": nome_torneo, "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
+                                json_data["tornei"].append({"nomeTorneo": nome_torneo.strip(), "data": data_target, "partite": [format_line_for_swift(m, data_target) for m in matches]})
                 
                 elif await download_btn.is_visible():
                     async with page.expect_download() as dl_info:
@@ -105,7 +110,7 @@ async def run_bot():
                     download = await dl_info.value
                     await download.save_as("temp.pdf")
                     matches = get_pdf_info("temp.pdf")
-                    json_data["tornei"].append({"nomeTorneo": nome_torneo, "data": "Oggi", "partite": [format_line_for_swift(m, "Oggi") for m in matches]})
+                    json_data["tornei"].append({"nomeTorneo": nome_torneo.strip(), "data": "Oggi", "partite": [format_line_for_swift(m, "Oggi") for m in matches]})
             
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, ensure_ascii=False, indent=4)
