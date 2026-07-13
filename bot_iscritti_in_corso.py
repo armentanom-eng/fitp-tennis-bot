@@ -7,6 +7,7 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
+# Nomi dei file ripristinati
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
@@ -29,7 +30,7 @@ def format_line_for_swift(raw_text, date_target):
     return f"{date_target}; {clean_text}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione completa e resistente ---")
+    print("--- [START] Avvio estrazione (Filtro: In corso) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -37,28 +38,34 @@ async def run_bot():
         for cat_id, filename in CATEGORIES.items():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
-            await page.goto(BASE_URL, wait_until="networkidle", timeout=60000)
             
-            # FILTRI: Selezione specifica per evitare link esterni
-            for filter_name, value in [('select_status', 'In corso'), ('id_regioneSearch', 'Lazio'), ('id_provinciaSearch', 'Roma')]:
-                await page.click(f'button[data-id="{filter_name}"]')
-                # Cerchiamo l'opzione solo dentro il menu a tendina aperto (.show)
-                opt = page.locator(f"div.dropdown-menu.show a:has-text('{value}')").first
-                await opt.wait_for(state="visible", timeout=10000)
-                await opt.click()
-                await page.wait_for_load_state("networkidle")
-            
-            # Selezione Categoria
-            await page.wait_for_selector(f'a[data-id="{cat_id}"]')
-            await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            # Aumento timeout navigazione
+            await page.goto(BASE_URL, timeout=90000)
             await page.wait_for_load_state("networkidle")
             
-            # ESPANSIONE
+            # --- FILTRI RIGIDI (Impostati su "In corso") ---
+            await page.click('button[data-id="select_status"]')
+            await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
+            await asyncio.sleep(12) # +10s rispetto ai 2s originali
+            
+            await page.click('button[data-id="id_regioneSearch"]')
+            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+            await asyncio.sleep(13) # +10s rispetto ai 3s originali
+            
+            await page.click('button[data-id="id_provinciaSearch"]')
+            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+            await asyncio.sleep(13) # +10s rispetto ai 3s originali
+            
+            await page.wait_for_selector(f'a[data-id="{cat_id}"]')
+            await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            await asyncio.sleep(15) # +10s rispetto ai 5s originali
+            
+            # --- ESPANSIONE AGGRESSIVA ---
             while True:
                 more_btn = page.locator("#btn-loadMore")
                 if await more_btn.is_visible():
                     await more_btn.click()
-                    await page.wait_for_load_state("networkidle")
+                    await asyncio.sleep(15) # +10s rispetto ai 5s originali
                 else:
                     break
             
@@ -67,21 +74,30 @@ async def run_bot():
             
             for link in links:
                 try:
-                    await page.goto(f"https://www.fitp.it{link}", wait_until="networkidle", timeout=60000)
-                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                    await page.goto(f"https://www.fitp.it{link}", timeout=90000)
+                    await page.wait_for_load_state("networkidle")
                     
-                    dropdown = page.locator("#select-ordergame")
+                    try:
+                        nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                    except:
+                        nome_torneo = "Torneo senza nome"
+                    
+                    print(f"   [Analizzo]: {nome_torneo.strip()}")
+                    
+                    dropdown_selector = "#select-ordergame"
                     download_btn = page.locator("#btnOrderGameDownload")
                     
                     partite_totali = []
-                    if await dropdown.is_visible():
+                    if await page.locator(dropdown_selector).is_visible():
                         for i in range(0, 2): 
                             data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
-                            if await page.locator(f"#select-ordergame option:has-text('{data_target}')").count() > 0:
-                                await page.select_option("#select-ordergame", label=data_target)
-                                await page.wait_for_load_state("networkidle")
+                            
+                            if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
+                                await page.select_option(dropdown_selector, label=data_target)
+                                await asyncio.sleep(13) # +10s attesa caricamento dropdown
+                                
                                 if await download_btn.is_visible():
-                                    async with page.expect_download(timeout=30000) as dl_info: 
+                                    async with page.expect_download(timeout=60000) as dl_info: 
                                         await download_btn.click()
                                     download = await dl_info.value
                                     path = await download.path()
@@ -97,7 +113,7 @@ async def run_bot():
                             "partite": list(set(partite_totali))
                         })
                 except Exception as e:
-                    print(f"   [Errore su torneo]: {e}")
+                    print(f"   [Errore su torneo]: {e}. Salto al prossimo.")
                     continue 
             
             with open(filename, "w", encoding="utf-8") as f: 
