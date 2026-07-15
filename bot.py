@@ -42,26 +42,26 @@ async def run_bot():
             # --- FILTRI RIGIDI ---
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3)
             
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(3) 
+            await asyncio.sleep(4) 
             
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(3)
+            await asyncio.sleep(4)
             
             await page.wait_for_selector(f'a[data-id="{cat_id}"]')
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
-            await asyncio.sleep(5) 
+            await asyncio.sleep(6) 
             
             # --- ESPANSIONE AGGRESSIVA ---
             while True:
                 more_btn = page.locator("#btn-loadMore")
                 if await more_btn.is_visible():
                     await more_btn.click()
-                    await asyncio.sleep(5)
+                    await asyncio.sleep(6)
                 else:
                     break
             
@@ -90,7 +90,7 @@ async def run_bot():
                             
                             if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                                 await page.select_option(dropdown_selector, label=data_target)
-                                await asyncio.sleep(3)
+                                await asyncio.sleep(5)
                                 
                                 if await download_btn.is_visible():
                                     async with page.expect_download(timeout=30000) as dl_info: 
