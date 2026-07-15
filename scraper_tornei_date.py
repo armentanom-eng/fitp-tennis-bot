@@ -54,22 +54,22 @@ async def run_bot():
             # Filtro Stato
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3)
             
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3)
             
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3)
             
             # Selezione Categoria con attesa robusta
             print(f"-> Attendendo categoria {cat_id}...")
             cat_selector = f'a[data-id="{cat_id}"]'
             await page.wait_for_selector(cat_selector, timeout=30000)
             await page.locator(cat_selector).first.click()
-            await asyncio.sleep(5)
+            await asyncio.sleep(6)
             
             # Espansione lista
             print("-> Espansione lista tornei...")
@@ -77,7 +77,7 @@ async def run_bot():
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
                     await btn_load_more.click()
-                    await asyncio.sleep(4)
+                    await asyncio.sleep(6)
                 else:
                     break
             
@@ -105,7 +105,7 @@ async def run_bot():
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(3)
+                            await asyncio.sleep(5)
                             
                             if await download_btn.is_visible():
                                 async with page.expect_download() as dl_info: 
