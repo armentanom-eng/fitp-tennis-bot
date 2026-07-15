@@ -7,14 +7,12 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file aggiornati come richiesto
+# Nomi dei file
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
 }
-
-# Filtro impostato su "In corso"
-TARGET_STATUS = "In corso"
+STATUSES = ["In corso"]
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -41,37 +39,37 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print(f"--- [START] Avvio estrazione PROGRAMMI GARE ({TARGET_STATUS}) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Oggi + Domani) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
         for cat_id, filename in CATEGORIES.items():
-            print(f"\n>>> Processo categoria: {cat_id} -> Salvataggio su: {filename}")
+            print(f"\n>>> Processo categoria: {cat_id}")
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
             await page.goto(BASE_URL, timeout=60000)
             
-            # Filtro Stato impostato su TARGET_STATUS
+            # Filtro Stato
             await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name=TARGET_STATUS).click()
-            await asyncio.sleep(2)
+            await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
+            await asyncio.sleep(3) # Aumentato a 3
             
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3) # Aumentato a 3
             
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(3) # Aumentato a 3
             
-            # Selezione Categoria
+            # Selezione Categoria con attesa robusta
             print(f"-> Attendendo categoria {cat_id}...")
             cat_selector = f'a[data-id="{cat_id}"]'
             await page.wait_for_selector(cat_selector, timeout=30000)
             await page.locator(cat_selector).first.click()
-            await asyncio.sleep(5)
+            await asyncio.sleep(6) # Aumentato a 6
             
             # Espansione lista
             print("-> Espansione lista tornei...")
@@ -79,7 +77,7 @@ async def run_bot():
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
                     await btn_load_more.click()
-                    await asyncio.sleep(4)
+                    await asyncio.sleep(6) # Aumentato a 6
                 else:
                     break
             
@@ -107,7 +105,7 @@ async def run_bot():
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(3)
+                            await asyncio.sleep(5) # Aumentato a 5
                             
                             if await download_btn.is_visible():
                                 async with page.expect_download() as dl_info: 
