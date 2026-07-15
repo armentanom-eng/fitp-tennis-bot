@@ -1,6 +1,25 @@
 {
-    "report_data": "15/07/2026 17:09",
+    "report_data": "15/07/2026 17:20",
     "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
+            "nomeTorneo": "YONEX OPEN CUP",
+            "data": "15/07/2026",
+            "partite": [
+                "15/07/2026; 00:00; No. Campo 1",
+                "15/07/2026; 14:00; LUCIANI GABRIELE vs CAROCCI LORENZO",
+                "15/07/2026; 18:00; FABRIZI FABRIZIO vs CHIUCCHIUINI FABIO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
+            "nomeTorneo": "YONEX OPEN CUP",
+            "data": "16/07/2026",
+            "partite": [
+                "16/07/2026; 00:00; No. Campo 1",
+                "16/07/2026; 16:30; SARACENO FABRIZIO vs CAROCCI LORENZO"
+            ]
+        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
             "nomeTorneo": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
@@ -19,14 +38,6 @@
             "data": "16/07/2026",
             "partite": [
                 "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "nomeTorneo": "YONEX OPEN CUP",
-            "data": "15/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
             ]
         }
     ]
