@@ -1,61 +1,33 @@
 import asyncio
-import pdfplumber
-import re
 import json
-from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
+
+# Mappa delle categorie con i nomi file aggiornati
+CATEGORIES = {
+    "t_giovanili": "Iscritti_Giovanili_In_Corso.json", 
+    "t_affiliati": "Iscritti_Open_In_Corso.json"
+}
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file aggiornati come richiesto
-CATEGORIES = {
-    "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
-    "t_affiliati": "Open_Partite_incorsopdf.json"
-}
-
-# Filtro impostato su "In corso"
-TARGET_STATUS = "In corso"
-
-def format_line_for_swift(raw_text, date_target):
-    text = raw_text.replace("\n", " ").strip()
-    match_time = re.search(r"(\d{2})[:.](\d{2})", text)
-    time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
-    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
-    partite = re.findall(r"([A-Z\s\d\(\)]+?)\s+vs\s+([A-Z\s\d\(\)]+)", text)
-    if partite:
-        clean = [f"{p[0].strip()} vs {p[1].strip()}" for p in partite]
-        return f"{date_target}; {time}; {'; '.join(clean)}"
-    return f"{date_target}; {time}; {text.strip()}"
-
-def get_pdf_info(pdf_path):
-    matches = []
-    try:
-        with pdfplumber.open(pdf_path) as pdf:
-            for page in pdf.pages:
-                for table in page.extract_tables():
-                    for row in table:
-                        row_text = " ".join([str(cell).strip() for cell in row if cell])
-                        if len(row_text) > 5: matches.append(row_text)
-    except: pass
-    return matches
-
 async def run_bot():
-    print(f"--- [START] Avvio estrazione PROGRAMMI GARE ({TARGET_STATUS}) ---")
+    print("--- [START] Avvio estrazione WEB (Tornei 'In Corso') ---")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
-        context = await browser.new_context(accept_downloads=True)
+        browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
+        page = await browser.new_page()
+        page.set_default_timeout(30000)
         
+        # Iteriamo sulle categorie
         for cat_id, filename in CATEGORIES.items():
-            print(f"\n>>> Processo categoria: {cat_id} -> Salvataggio su: {filename}")
-            json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
-            page = await context.new_page()
+            print(f"\n>>> Elaborazione categoria: {cat_id}")
+            dati_categoria = {"tornei": []}
             
-            await page.goto(BASE_URL, timeout=60000)
+            await page.goto(BASE_URL, wait_until="domcontentloaded")
             
-            # Filtro Stato impostato su TARGET_STATUS
+            # --- 1. FILTRI BASE ---
+            # Modificato da "In programma" a "In corso"
             await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name=TARGET_STATUS).click()
+            await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
             await asyncio.sleep(2)
             
             await page.click('button[data-id="id_regioneSearch"]')
@@ -66,97 +38,64 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # Selezione Categoria
-            print(f"-> Attendendo categoria {cat_id}...")
-            cat_selector = f'a[data-id="{cat_id}"]'
-            await page.wait_for_selector(cat_selector, timeout=30000)
-            await page.locator(cat_selector).first.click()
-            await asyncio.sleep(5)
+            # --- 2. FILTRO CATEGORIA ---
+            print(f"-> Clicco filtro categoria: {cat_id}")
+            await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            # Attendiamo il ricaricamento della lista
+            await asyncio.sleep(4) 
             
-            # Espansione lista
-            print("-> Espansione lista tornei...")
+            # --- 3. ESPANSIONE LISTA ---
             while True:
-                btn_load_more = page.locator("#btn-loadMore")
+                btn_load_more = page.locator("button#btn-loadMore")
                 if await btn_load_more.is_visible():
                     await btn_load_more.click()
-                    await asyncio.sleep(4)
+                    await page.wait_for_load_state("domcontentloaded")
+                    await asyncio.sleep(2)
                 else:
                     break
             
+            # --- 4. ESTRAZIONE ---
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
-            links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+            urls = list(set([await loc.get_attribute("href") for loc in locators]))
+            print(f"-> Trovati {len(urls)} tornei. Estrazione...")
             
-            for link in links:
-                full_url = f"https://www.fitp.it{link}"
-                await page.goto(full_url, timeout=60000)
-                
+            for url in urls:
                 try:
-                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
-                except:
-                    nome_torneo = "Torneo senza nome"
-                
-                print(f"   [Analizzo]: {nome_torneo.strip()}")
-                
-                dropdown_selector = "#select-ordergame"
-                download_btn = page.locator("#btnOrderGameDownload")
-                
-                if await page.locator(dropdown_selector).is_visible():
-                    for i in range(0, 2): 
-                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                    await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
+                    if await page.locator("text=non e' al momento disponibile").is_visible(): continue
+                    
+                    count = await page.locator("text=Dettaglio >").count()
+                    for i in range(count):
+                        # Torniamo alla pagina del torneo per ogni bottone
+                        await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
+                        btn = page.locator("text=Dettaglio >").nth(i)
                         
-                        if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
-                            await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(3)
+                        if await btn.is_visible():
+                            await btn.click(force=True)
+                            await page.wait_for_load_state("domcontentloaded")
                             
-                            if await download_btn.is_visible():
-                                async with page.expect_download() as dl_info: 
-                                    await download_btn.click()
-                                download = await dl_info.value
-                                await download.save_as("temp.pdf")
-                                matches = get_pdf_info("temp.pdf")
-                                json_data["tornei"].append({
-                                    "url": full_url, 
-                                    "nomeTorneo": nome_torneo.strip(), 
-                                    "data": data_target, 
-                                    "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
-                                })
-                        else:
-                            json_data["tornei"].append({
-                                "url": full_url, 
-                                "nomeTorneo": nome_torneo.strip(), 
-                                "data": data_target, 
-                                "partite": ["Nessuna partita trovata"]
+                            categoria = await page.locator("h1.cc-title-main").first.text_content()
+                            tabellone_el = page.locator("span#spn-tournament-description")
+                            tabellone = await tabellone_el.text_content() if await tabellone_el.count() > 0 else "N/A"
+                            giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
+                            
+                            dati_categoria["tornei"].append({
+                                "torneo": url, 
+                                "categoria": categoria.strip() if categoria else "", 
+                                "tabellone": tabellone.strip(), 
+                                "iscritti": [g.strip() for g in giocatori]
                             })
-                
-                elif await download_btn.is_visible():
-                    async with page.expect_download() as dl_info: 
-                        await download_btn.click()
-                    download = await dl_info.value
-                    await download.save_as("temp.pdf")
-                    matches = get_pdf_info("temp.pdf")
-                    data_oggi = datetime.now().strftime("%d/%m/%Y")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": data_oggi, 
-                        "partite": [format_line_for_swift(m, "Oggi") for m in matches] if matches else ["Nessuna partita trovata"]
-                    })
-                else:
-                    print(f"      ! Tabellone non disponibile.")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite": ["Tabellone non disponibile"]
-                    })
+                            print(f"    -> Estratto: {tabellone.strip()}")
+                except Exception as e:
+                    print(f"    ! Errore su {url[-10:]}: {e}")
             
+            # --- 5. SALVATAGGIO ---
             with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            await page.close()
-        
+                json.dump(dati_categoria, f, ensure_ascii=False, indent=4)
+            print(f"-> SALVATO: {filename}")
+            
         await browser.close()
-    print("--- [END] Processo completato ---")
+        print("--- [END] Processo completato. ---")
 
-if __name__ == "__main__": 
+if __name__ == "__main__":
     asyncio.run(run_bot())
