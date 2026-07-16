@@ -1,6 +1,29 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MASSIMILIANO MESSINA4.5",
+                "FRANCESCO DI NILLO4.5",
+                "CHRISTIAN GALLETTA4.5",
+                "OMAR EL ABASIRY3.5",
+                "FLAVIO MODICA4.2",
+                "VITTORIO CLEMENTI4.1",
+                "FRANCESCO FORNARA2.6",
+                "LUCA PERICA2.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ALESIA STEFANIA BUCIUMANU4.NC"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=BD2BFE3D-3293-4127-B58E-54EDDC268A81",
             "categoria": "CIRCUITO OPEN PARCO DEGLI ACQUEDOTTI 2026",
             "tabellone": "Singolare Maschile Open",
@@ -132,7 +155,6 @@
                 "FABIO ANGELLA3.4",
                 "FABIO GIOMBETTI4.2",
                 "NOAH CHRISTOPHER GELLER PAWLAK4.2",
-                "ANDREA MANGONI2.8",
                 "FABRIZIO FABRIZI4.NC",
                 "LORENZO ROSATI4.3",
                 "EDOARDO GALLUSI3.1",
@@ -181,29 +203,6 @@
                 "CHIARA FANUELE4.1",
                 "FLAVIA TOMASSO3.5",
                 "MARIA COSTANZA MATRANGA2.8"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MASSIMILIANO MESSINA4.5",
-                "FRANCESCO DI NILLO4.5",
-                "CHRISTIAN GALLETTA4.5",
-                "OMAR EL ABASIRY3.5",
-                "FLAVIO MODICA4.2",
-                "VITTORIO CLEMENTI4.1",
-                "FRANCESCO FORNARA2.6",
-                "LUCA PERICA2.6"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "ALESIA STEFANIA BUCIUMANU4.NC"
             ]
         },
         {
@@ -274,7 +273,8 @@
                 "FABIO BOTTI4.1",
                 "ORAZIO PICOZZI4.1",
                 "CRISTIANO CHIRUMBOLO4.3",
-                "RICCARDO GALANTE3.5"
+                "RICCARDO GALANTE3.5",
+                "MARIO AMICO3.3"
             ]
         }
     ]
