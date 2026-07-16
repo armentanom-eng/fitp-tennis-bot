@@ -38,7 +38,6 @@
                 "VIOLA STEFANI4.2",
                 "GIORGIA SABATO4.4",
                 "YVETTE MARLIS FULKER4.3",
-                "EVA MAZZA3.5",
                 "ROSAMARIA SBIROLI4.4",
                 "PAOLA BERNABEI4.2",
                 "ALEXANDRA FABBI LEVCHUK3.1",
@@ -62,7 +61,10 @@
                 "ALESSANDRA DE MONTE4.1",
                 "FLAVIA MARINO3.2",
                 "AMALIA DORMI3.2",
-                "CRISTINA CAPORALI3.4"
+                "CRISTINA CAPORALI3.4",
+                "FLAVIA VINCI3.5",
+                "FRANCESCA PAGLIACCIA3.4",
+                "ELISABETTA SCRIVA3.2"
             ]
         },
         {
@@ -148,7 +150,9 @@
                 "MELCHIORRE GIARRAPUTO4.2",
                 "ALBERTO MARIA FIORE4.3",
                 "EMANUELE TIBERI4.4",
-                "ALDO MARIA DI LERNIA4.3"
+                "ALDO MARIA DI LERNIA4.3",
+                "EDOARDO MISCHIANTI4.2",
+                "ALESSIO MISCHIANTI4.NC"
             ]
         },
         {
@@ -157,189 +161,9 @@
             "tabellone": "Doppio Misto Open LIM. 4.NC - 3.1",
             "iscritti": [
                 "LUIGI GABRIELE MARIA OMICCIOLI4.NC",
-                "BARBARA FASOLI BRACCINI4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "categoria": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "tabellone": "Doppio Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "GIULIA SELLI4.2",
-                "RAFFAELLA MARIA ROSAPEPE4.2",
-                "CECILIA EMMA GIANNINI4.1",
-                "DALIA MARIE ARMENTANO4.1",
-                "CONCETTINA CAVALLARO4.1",
-                "MARIA GRAZIA PERETTA4.2",
-                "RAFFAELLA SCARPELLI4.2",
-                "MARIA CRISTINA CANONICO4.1",
-                "ALESSIA PROIETTI4.3",
-                "SAMANTHA MARUZZELLA4.3",
-                "ANNA LO BELLO4.2",
-                "SAVINA GERSAK3.4",
-                "ALESSANDRA DE PERINI3.4",
-                "FRANCESCA ROMANA SCONCI3.1",
-                "MARIA LUISA FRASSICA3.3",
-                "FEDERICA MARTUFI3.3",
-                "LAURA INNOCENTE4.5",
-                "PAOLA MONTALBANO4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "categoria": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "CECILIA EMMA GIANNINI4.1",
-                "LAURA INNOCENTE4.5",
-                "SABINE WISCHMEYER4.3",
-                "BARBARA HINNA4.NC",
-                "LUDOVICA ROSANNA FICI4.1",
-                "ANNA MAMMUCARI3.3",
-                "SOFIA PINAT3.3",
-                "MADDALENA WAS4.NC",
-                "MARIA GRAZIA PERETTA4.2",
-                "NIKOLE CRETAIO4.6",
-                "CATERINA CIARCIA3.5",
-                "ALESSIA PROIETTI4.3",
-                "NICOLETTA LUISA CASTIGLIONE4.1",
-                "ROSITA PALMA4.NC",
-                "SILVIA EGIDI4.4",
-                "MARIAPAOLA SALAMANCA4.2",
-                "FRANCESCA BORRACCINO4.4",
-                "CHIARA TOMASSINI3.5",
-                "VIRGINIA CECERE3.2",
-                "PAOLA RUSSILLO4.NC",
-                "CRISTIANA FABBRIZI4.2",
-                "LINDA FORMICHETTI4.1",
-                "GIULIA CENTIONI4.NC",
-                "FEDERICA MARTUFI3.3",
-                "MARTA INCITTI4.1",
-                "ARIANNA CECCARELLI4.NC",
-                "LUDOVICA CERTELLI4.1",
-                "MARIA LUCIA NAPOLIELLO4.5",
-                "IOLE FALCONE4.3",
-                "PAOLA MONTALBANO4.NC",
-                "DANIELA MUSTAZZA4.NC",
-                "SARA TOMASSINI4.3",
-                "ELISA MARIA NEGURA4.4",
-                "LISA MICHELETTI4.3",
-                "LUCREZIA CARLA TAMBONE4.5",
-                "ALESSANDRA SASSUN4.2",
-                "ALEXANDRA FRANCESCA NISTOR3.3",
-                "DALIA MARIE ARMENTANO4.1",
-                "ALESSANDRA PETRASSI4.4",
-                "VALENTINA ROMAGNOLI4.4",
-                "ANNA LO BELLO4.2",
-                "MARIA CARLOTTA DUPAQUIER4.NC",
-                "MARIA CRISTINA ZEVANO4.2",
-                "ELEONORA LUCIANO4.6",
-                "ALEXIA RICCITELLI4.5",
-                "CATIA LONGO4.3",
-                "CLAUDIA RIVELLI3.5",
-                "VIRGINIA FIGLIUZZI4.5",
-                "ANNA GIULIA CITTADINI4.3",
-                "MARIA SCHININA'3.3",
-                "LAURA BALLA4.3",
-                "SAVINA GERSAK3.4",
-                "MAGDALENA MARIA MANKA4.3",
-                "GIULIA SELLI4.2",
-                "ALESSIA ANDREEA OLTEANU4.2",
-                "GIULIA BONAIUTI3.2",
-                "FIAMMA BONFIGLIO3.4",
-                "AMALIA DORMI3.2",
-                "ALEXANDRA DORMI3.1",
-                "MARTINA MARCHIORI3.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "categoria": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "VLADIMIR MANDIC4.4",
-                "GIORGIO TELARICO4.3",
-                "FRANCESCO CALANDRINI3.2",
-                "ALESSIO CLEMENTI3.1",
-                "ANDREA NERVI4.NC",
-                "STEFANO SERRA3.4",
-                "GIUSEPPE TRANZILLO4.4",
-                "ENRICO BENTIVOGLIO4.1",
-                "EDOARDO ANTONINI4.NC",
-                "NICOLA LUPO4.3",
-                "MASSIMO MIANI4.2",
-                "PIER CARLO DE LORENZO4.3",
-                "MATTEO ALOCCO3.4",
-                "PAOLO CORONGIU4.1",
-                "MAURO PANETTA3.4",
-                "MATTEO INGARDIA4.NC",
-                "LUCIANO BRUSADELLI4.NC",
-                "ENRICO GIOVAGNOLI4.NC",
-                "GIANCARLO CAPECE4.3",
-                "MAURO ANSELMO3.4",
-                "ANTONINO GIACALONE4.4",
-                "ALESSIO VAGNI3.5",
-                "GIOVANNI PARDO3.2",
-                "ALESSIO CATALINI4.3",
-                "ANTONELLO PEZZOPANE4.4",
-                "GIULIANO ARRIGHI4.NC",
-                "LORENZO COSTANZO4.6",
-                "LUCA TORMEN4.3",
-                "FRANCESCO LUCA MARMORATO4.3",
-                "MARCO RANATI4.3",
-                "FEDERICO ANTONELLI4.NC",
-                "ALESSANDRO PIERRO4.1",
-                "DANIELE TROIANI4.5",
-                "MAURO MAGAZZU'4.5",
-                "EDOARDO MANCINI3.5",
-                "GIOVANNI BASSO4.3",
-                "NICOLA DI FABIO4.6",
-                "DANIELE PICCIONE4.1",
-                "ANTONIO PALERMO4.4",
-                "FABRIZIO CRETAIO4.NC",
-                "MIKELI ANJALO MATHUGAMA LIYANAARACHCHIGE4.NC",
-                "DUCCIO BINI3.5",
-                "GENNARO FEDELE MAZZA4.6",
-                "CLAUDIO BRUNI4.NC",
-                "ANTONIO LODICO4.NC",
-                "PAOLO CONCA4.3",
-                "EUGENIO BONA4.3",
-                "RENATO TASSI4.3",
-                "STEPHEN JOHN BURN-MURDOCH4.NC",
-                "CRISTIAN CAPOLA4.2",
-                "FABRIZIO FUSARO4.4",
-                "DANIELE JACOPO LAMPUS4.NC",
-                "LEONELLO MORACCI4.4",
-                "GIUSEPPE DIGIESI4.5",
-                "ALESSIO TAMILIA4.5",
-                "DOMENICO RINALDI4.NC",
-                "JACOPO PERINI3.3",
-                "RENATO COLIZZI4.2",
-                "ANTONIO CAPARROTTA4.3",
-                "MICHELE FENT3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "categoria": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "tabellone": "Doppio Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=993C397C-10FB-4FF2-BAE6-1CB39E43BAA2",
-            "categoria": "CLUB NOMENTANO - CIRCUITO \"I SERALI DI ROMA\"  - IV e III CAT. Singoli e Doppi Viale Rousseau, 124, 00137 Roma RM",
-            "tabellone": "Doppio Misto Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "LUIGI GABRIELE MARIA OMICCIOLI4.NC",
                 "BARBARA FASOLI BRACCINI4.3",
-                "MASSIMILIANO PARINI3.1",
-                "ALESSIA PROIETTI4.3",
-                "ALESSANDRO NASO4.4",
-                "SILVIA PECORA4.NC",
-                "SILVIA EGIDI4.4",
-                "MARCO CARDANO4.NC",
-                "MARIA LUISA FRASSICA3.3",
-                "ANDREA ASCIONE4.5"
+                "VALERIA SIRABELLA3.3",
+                "GIORGIO ASCOLESE4.1"
             ]
         },
         {
@@ -379,14 +203,12 @@
                 "FABIO BELLI4.2",
                 "ALESSANDRO MINISSALE3.4",
                 "NICOLO' MONDERNA4.4",
-                "NICCOLO' NANNI3.5",
                 "DAVIDE RONDINELLI4.2",
                 "MARCO CARNOVALE4.4",
                 "PATRIZIO PICCIONI4.4",
                 "GIANLUCA LATINI4.4",
                 "LUCA GREGNANIN4.3",
                 "VIRGILIO PIRRI4.4",
-                "ADAMO PISTERZI4.1",
                 "MATTIA FALIVENE4.1",
                 "GUIDO LEI3.5",
                 "MATTEO PASTORE3.5",
@@ -412,6 +234,29 @@
                 "FABIO BOTTI4.1",
                 "ORAZIO PICOZZI4.1",
                 "CRISTIANO CHIRUMBOLO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MASSIMILIANO MESSINA4.5",
+                "FRANCESCO DI NILLO4.5",
+                "CHRISTIAN GALLETTA4.5",
+                "OMAR EL ABASIRY3.5",
+                "FLAVIO MODICA4.2",
+                "VITTORIO CLEMENTI4.1",
+                "FRANCESCO FORNARA2.6",
+                "LUCA PERICA2.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ALESIA STEFANIA BUCIUMANU4.NC"
             ]
         },
         {
@@ -534,28 +379,6 @@
             "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
             "tabellone": "Doppio Maschile Open LIM. 4.NC - 4.1",
             "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MASSIMILIANO MESSINA4.5",
-                "FRANCESCO DI NILLO4.5",
-                "CHRISTIAN GALLETTA4.5",
-                "OMAR EL ABASIRY3.5",
-                "FLAVIO MODICA4.2",
-                "VITTORIO CLEMENTI4.1",
-                "FRANCESCO FORNARA2.6"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "ALESIA STEFANIA BUCIUMANU4.NC"
-            ]
         }
     ]
 }
