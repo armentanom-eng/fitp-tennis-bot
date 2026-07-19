@@ -1,36 +1,30 @@
 {
-    "report_data": "18/07/2026 19:32",
+    "report_data": "19/07/2026 19:33",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
+            "data": "19/07/2026",
             "partite": [
-                "19/07/2026; No. Campo 1 Campo 2",
-                "18/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open DE DONATO GIULIO vs BONUSO ANDREA",
-                "18/07/2026; No. Campo 1",
-                "18/07/2026; 2 Non prima delle 10:30 Singolare Maschile Open BALVETTI DARIO vs PLACIDI LORENZO",
-                "19/07/2026; 2 Non prima delle 10:30 Singolare Maschile Open BELBELLO LUCA vs MARINELLI MATTEO",
-                "19/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open PENNACCHI ALESSANDRO vs PLACIDI LORENZO Inizio ore: 09:00 Singolare Maschile Open BONUSO ANDREA vs CAROTTI SAVERIO PAOLO MARIA"
+                "19/07/2026; 2 Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 CAMPAGNA MAURO vs PROIETTI ENRICO Inizio ore: 18:00 Singolare Maschile Open LIM. 4.NC - 3.1 SEMERANO ADRIANO vs SEVIERI RUDRA",
+                "20/07/2026; No. Campo 1 Campo 2",
+                "20/07/2026; 1 Inizio ore: 17:00 Singolare Maschile Open LIM. 4.NC - 3.1 ROSSETTI ALDO vs ZUCCHI LORENZO",
+                "20/07/2026; 2 Non prima delle 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 CAMILLI ALESSANDRO vs CAMPAGNA MAURO Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 SEMERANO ADRIANO o SEVIERI RUDRA vs ARMATI RICCARDO",
+                "19/07/2026; 1 Inizio ore: 16:30 Singolare Maschile Open LIM. 4.NC - 3.1 ROSSETTI ALDO vs GRECO ALESSANDRO",
+                "19/07/2026; No. Campo 1 Campo 2"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
+            "data": "19/07/2026",
             "partite": [
-                "18/07/2026; Ora 1 2 3 4 5 6",
-                "18/07/2026; Ordine di gioco rilasciato Firma GA",
-                "18/07/2026; vs vs vs vs vs vs",
-                "18/07/2026; Gli ultimi incontri possono essere spostati ALESSANDRA TANZINI",
-                "18/07/2026; INIZIO 18:00 TREVISI MATTEO vs LISI CLAUDIO DE SANTIS FABIO vs PELINI FABIO DI CONSIGLIO CESA vs BONFIGLIO ED. RE vs vs vs",
-                "19/07/2026; INIZIO 18:00 TREVISI MATTEO vs ROSI CLAUDIO DE SANTIS FABIO vs BOMBARDIERI MAURO IOVANNITTI LUCA vs LAMPUS DANIELE J. DUPAQUIER M. CARLOTTA vs DE PADOVA AURORA",
-                "19/07/2026; Gli ultimi incontri possono essere spostati",
-                "19/07/2026; Ordine di gioco rilasciato Firma GA",
-                "19/07/2026; Ora 1 2 3 4 CENTRALE 6",
-                "18/07/2026; 19:30 ROSI RICCARDO vs PAVONCELLO EM. MAGRINI VALERIO vs METELLI MARCO CIMINI ALESSANDRO vs MILONE ANDREA MAGNIFICO NUNZIO vs BRUNI ALESSIO IOVANNITTI LUCA vs BLASI TOCCACELI L. PETRUCCI RICCARDO vs ARMOCIDA LEON.",
-                "19/07/2026; 21:00 MARTINI MATTEO vs PIERETTI CLAUDIO MORETTI ALESSANDRO vs VALENTINI MARCO FARAGLIA MARCO vs FIORE CARLO",
-                "19/07/2026; 19:30 DI CONSIGLIO CESARE vs GIORGI DANIELE ROSI R. o PAVONCELLO E. vs PIANA ANDREA PETRUCCI R. o ARMOCIDA L. vs SCHININA' EUGENIO PELUSO MARCO vs MAGNIFICO N. o BRUNI A VARANO PAOLO vs CIMINI A. o MILONE A. PALERMO ANTONIO vs MAGRINI V.o METELLI M."
+                "19/07/2026; 1 Inizio ore: 09:00 Singolare Maschile Open PENNACCHI ALESSANDRO vs PLACIDI LORENZO Inizio ore: 09:00 Singolare Maschile Open BONUSO ANDREA vs CAROTTI SAVERIO PAOLO MARIA",
+                "20/07/2026; No. Campo 1",
+                "19/07/2026; 2 Non prima delle 10:30 Singolare Maschile Open BELBELLO LUCA vs MARINELLI MATTEO",
+                "20/07/2026; 2 Non prima delle 20:00 Singolare Maschile Open BELBELLO LUCA vs BONUSO ANDREA",
+                "20/07/2026; 1 Inizio ore: 18:30 Singolare Maschile Open MAGOZZI ALESSANDRO vs PLACIDI LORENZO",
+                "19/07/2026; No. Campo 1 Campo 2"
             ]
         }
     ]
