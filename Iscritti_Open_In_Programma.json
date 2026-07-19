@@ -1,181 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "categoria": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MARCO GIUSEPPONI4.3",
-                "DANIELE JACOPO LAMPUS4.5",
-                "LUCA TORMEN4.3",
-                "ANDREA MILONE4.5",
-                "LUCA IOVANNITTI4.NC",
-                "EMANUELE FIORE4.2",
-                "GIUSEPPE MANFREDI4.NC",
-                "RICCARDO ROSI4.NC",
-                "EDOARDO CELANI4.1",
-                "FRANCESCO LATTES4.1",
-                "DANIELE CAMPAGNA4.4",
-                "RICCARDO BOSCARINO4.3",
-                "ALESSANDRO MORETTI4.4",
-                "MARCO CAVALLARO4.NC",
-                "GIANMARCO VERACHI4.3",
-                "ANTONIO PALERMO4.4",
-                "ALESSANDRO FABBRI4.1",
-                "MARCO VIARO4.4",
-                "NUNZIO MAGNIFICO4.NC",
-                "MASSIMILIANO SCARABOTTI4.1",
-                "FERNANDO BOCCHINI4.3",
-                "ALESSANDRO GULLO4.4",
-                "MATTEO MARINO4.2",
-                "MARCO METELLI4.5",
-                "GABRIELE ROSSI4.3",
-                "MARCO FARAGLIA4.4",
-                "LIVIO ANDRONICO4.NC",
-                "VALERIO MAGRINI4.5",
-                "DAVIDE GALIERO4.1",
-                "FABIO PELINI4.6",
-                "ANDREA DI CONSIGLIO3.4",
-                "ALBERTO  DI CONSIGLIO 4.NC",
-                "ALFONSO CALVITTI4.2",
-                "STEFANO MARTONE4.1",
-                "PAOLO CORONGIU4.1",
-                "EDOARDO BONFIGLIO4.6",
-                "LUCIO PIERRO4.4",
-                "DANIELE GUARALDI4.2",
-                "MARCO CESAREO4.1",
-                "PIERLUIGI BARBARO3.5",
-                "MASSIMILIANO CASTELLETTI4.NC",
-                "LORENZO BONOMI4.2",
-                "MATTEO TREVISI4.NC",
-                "FEDERICO CHIARELLI4.2",
-                "DANIELE ARMOCIDA3.5",
-                "DANIELE GIORGI4.5",
-                "ANDREA PIANA4.5",
-                "FABIO MILLESIMI4.2",
-                "LEONARDO FARINA4.3",
-                "LUCA MOLINAS4.2",
-                "SALVATORE BARDINO3.3",
-                "CLAUDIO ROSI4.5",
-                "VITTORIO COLABELLA4.4",
-                "ALEX MUSARRA4.NC",
-                "FABIO MASALA4.3",
-                "RICCARDO NUCCETELLI3.4",
-                "ANDREA CORARETTI4.2",
-                "LEONARDO VALCARENGHI4.3",
-                "PAOLO VARANO4.4",
-                "MATTIA  DI FEDERICO4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "categoria": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "ALESSIA SIRAGUSA4.1",
-                "LAURA MAGGIORANI3.5",
-                "MICHELA TORNARI4.1",
-                "LUDOVICA TOTARO3.2",
-                "LIVIA STORTINI3.5",
-                "BENEDETTA CIASCHI4.1",
-                "FRANCESCA TORTI3.4",
-                "MARTA CRISPINO4.2",
-                "FRANCESCA PAGLIACCIA3.4",
-                "AURORA DE PADOVA4.NC",
-                "BENEDETTA MARIA GRECA PIZZATO3.4",
-                "MARTA PARAGONA4.4",
-                "DANIELA D'ANGELICA3.5",
-                "GIULIA DE PAOLA3.3",
-                "EMMA VECCHI3.5",
-                "FILOMENA TRIPODI3.5",
-                "MARTINA BLASI4.2",
-                "ANNA ESPOSITO4.2",
-                "MARGHERITA MAGGIORE4.2",
-                "ARIANNA PELLUMBI3.1",
-                "MARIA ANTONIETTA PACIFICI3.5",
-                "SIMONA PENCO3.4",
-                "MARIA LUCIA NAPOLIELLO4.5",
-                "MARTA MARIA AMODIO4.6",
-                "ELISABETTA BAUCO4.4",
-                "AMALIA DORMI3.2",
-                "ALESSANDRA FRANETTI3.5",
-                "CLAUDIA PETRANGELI3.5",
-                "ASIA ELEUTERI3.2",
-                "PAOLA RUSSILLO4.5",
-                "SOFIA PINAT3.3",
-                "THI LAN CHIURAZZI3.2",
-                "MARIA CARLOTTA DUPAQUIER4.NC",
-                "ALEXANDRA FRANCESCA NISTOR3.3",
-                "ALESSIA ANDREEA OLTEANU4.2",
-                "ALESSANDRA SASSUN4.2",
-                "RIHANNA PEPTANARU3.3",
-                "CINTHIA PLACIDI4.2",
-                "VALERIA IRNO CONSALVO4.2",
-                "CRISTINA MONTAGNER3.3",
-                "CHIARA FANUELE4.1",
-                "GIOVANNA GIARDINELLI3.5",
-                "MATILDA  MAGI3.5",
-                "ANNA LO BELLO4.2",
-                "CHIARA ABBATE SIDOTI3.2",
-                "EMMA RAPINESI4.1",
-                "LIVIA MORICONI3.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
-            "categoria": "9000€ - TERRACINA OPEN SANDRO MARI by ORIZZONTE -  TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "FEDERICO LAMBERTO CAMPANA2.2",
-                "NICOLAS BIANCHI2.2",
-                "LUCIANO CARRARO2.1",
-                "SIMONE MACCHIONE2.4",
-                "GIANLUCA DI SARRA3.4",
-                "ENRICO BENTIVOGLIO4.1",
-                "ALESSANDRO LEGGERI2.6",
-                "DANYLO SILCHUK3.1",
-                "ANTONIO ANTIGNANI3.5",
-                "DAMIANO DE MAIO2.6",
-                "LEONARDO TOTARO2.5",
-                "GIACOMO DE ANGELIS3.5",
-                "JACOPO BORSOI2.3",
-                "GIOVANNI CALVANO2.3",
-                "EMANUELE ESPOSITO2.6",
-                "GABRIELE ABBAMONDI2.8",
-                "ALEX ROSELLI2.7",
-                "BRUNO IKE LO IACONO3.2",
-                "LEONARDO SANTONOCITO3.1",
-                "UMBERTO GIUSEPPE CAPITANIO2.7",
-                "CLAUDIO BASTIANELLI2.7",
-                "MARCO MOSCHELLA3.5",
-                "MANUEL MATTIA MILAZZO2.8",
-                "JACOPO BOTTI2.8",
-                "SAMUELE BORSOI3.2",
-                "ALESSIO MASSA3.4",
-                "MATTEO MASSIMI2.8",
-                "JORGE ROBINSON SOLIS2.6",
-                "RICCARDO TERZOLI2.4",
-                "VALENTINO SCHIAVELLA2.8",
-                "ENRICO CERRONI2.7",
-                "MASSIMILIANO PARINI3.1",
-                "DAVIDE PALOMBI2.7",
-                "VITTORIO IERVOLINO3.1",
-                "FILIPPO LANCIERI2.7",
-                "FABRIZIO KAROL PIO OSTI2.1",
-                "STEFANO PERUZZI3.1",
-                "ALESSANDRO BUZZACCONI2.8",
-                "GIULIO VITTORINI2.8",
-                "FILIPPO CATALANO2.4",
-                "EDOARDO LEONI3.1",
-                "ALESSANDRO BAIA2.8",
-                "SIMONE MIRIELLO2.8",
-                "GIOELE CERELLI2.3",
-                "ANTONIO RUSSILLO2.8",
-                "RICCARDO IGNOTO2.4",
-                "LEONARDO LETI MESSINA2.4"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A77405F1-6322-4E39-B06C-9C66A5D54D07",
             "categoria": "6 TORNEO SERALE M e F",
             "tabellone": "Singolare Femminile Open",
@@ -187,28 +12,10 @@
             "tabellone": "Singolare Maschile Open",
             "iscritti": [
                 "ANDREA PROIETTI4.5",
-                "FRANCESCO PALANDRA4.5"
+                "FRANCESCO PALANDRA4.5",
+                "LORENZO FORNAI4.3",
+                "NICOLA FUSI4.3"
             ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
-            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "SALVATORE VASTA4.6"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
-            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
-            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
-            "tabellone": "Singolare Misto Open",
-            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=04BEC7CD-0348-4388-A7DB-AF26B8BD4897",
@@ -217,7 +24,6 @@
             "iscritti": [
                 "EMMA BLASI4.2",
                 "LUCIANA AMATO4.2",
-                "MADDALENA WAS4.5",
                 "GIORGIA PARISI4.1",
                 "PAOLA CARLUCCI4.6",
                 "GIOVANNA ANGELA RITA CASCIO4.6",
@@ -279,7 +85,12 @@
                 "ENRICO NARDELLI4.6",
                 "UMBERTO MASSAFRA4.2",
                 "NICOLO' MONDERNA4.4",
-                "GIUSEPPE SALAMANNA4.NC"
+                "GIUSEPPE SALAMANNA4.NC",
+                "VITTORIO CLEMENTI4.1",
+                "MARCO TELERA4.4",
+                "MASSIMILIANO CASTELLETTI4.NC",
+                "FABRIZIO SARACENO4.NC",
+                "FABIO SPAZIANI4.3"
             ]
         },
         {
@@ -298,19 +109,356 @@
             "iscritti": []
         },
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "GIULIA PETRINI4.5",
+                "RAFFAELLA CECCACCI4.NC",
+                "ARIANNA CECCARELLI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
+            "tabellone": "Doppio Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "FABRIZIO MASALA4.2",
+                "EDOARDO CELANI4.1",
+                "MASSIMILIANO CASTELLETTI4.NC",
+                "GIANLUCA LODDI4.1",
+                "LORENZO CAROCCI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
+            "tabellone": "Doppio Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
+            "categoria": "Tyrsenia Summer Rodeo 1",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 4.1",
+            "iscritti": [
+                "MARIA LETIZIA NUSCA4.5",
+                "PAOLA MONTALBANO4.NC",
+                "ANTONELLA COLARIETI4.2",
+                "PAOLA CARLUCCI4.6",
+                "LAURALISA LORENZANO4.3",
+                "AURORA COCCHI4.NC",
+                "SIMONA GABRIELLI4.NC",
+                "EMMA RADICHINI4.NC",
+                "ANTONIETTA DE ANGELIS4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
+            "categoria": "Tyrsenia Summer Rodeo 1",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 4.1",
+            "iscritti": [
+                "GABRIELE PAGANO4.NC",
+                "LEONARDO TRAVAGLIATI4.NC",
+                "LEONARDO D'AMBROGI4.NC",
+                "LEOPOLDO SCIULLO4.5",
+                "THOMAS NAVARRA4.NC",
+                "ALESSANDRO PAOLONI4.3",
+                "PAOLO MARCELLO GENNARI4.NC",
+                "GIUSEPPE PAGANO4.NC",
+                "ANTONIO ALESSIO DE CICCO 4.6",
+                "ALESSANDRO VIRGILI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
+            "categoria": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "LEONARDO TOTARO2.5",
+                "GABRIELE DERIU2.7",
+                "SIMONE GUIDI4.5",
+                "MATTIA D'ANNIBALE4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
+            "categoria": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LUDOVICA TOTARO3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "AMALIA DORMI3.2",
+                "MICHELA PELONE4.2",
+                "ALEXANDRA DORMI3.1",
+                "ALEXIA ROSSI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "MATTEO CONTI3.4",
+                "ALDO ROSSETTI4.NC",
+                "GABRIELE SILVESTRI3.5",
+                "RICCARDO ROSCETTI3.4",
+                "ANDREA CHIATRONI4.3",
+                "LEONARDO VALCARENGHI4.3",
+                "MAURO CAMPAGNA4.NC",
+                "CRISTIAN  GENTILINI4.4",
+                "ENRICO PROIETTI4.NC",
+                "FEDERICO FABIANI4.2",
+                "NICOLÒ BIANCHI4.2",
+                "ADRIANO SEMERANO4.6",
+                "FABIO CUPPITELLI3.5",
+                "LEONARDO RONZANI4.1",
+                "MAURIZIO MASSA4.2",
+                "FABRIZIO LUCARINI3.5",
+                "LUCA SEVIERI3.5",
+                "MASSIMILIANO DI CINTIO3.3",
+                "DAVIDE DERIU3.1",
+                "ALESSANDRO GRECO4.NC",
+                "LORENZO  ZUCCHI4.4",
+                "ALESSANDRO CAMILLI4.5",
+                "LORENZO ROSATI4.3",
+                "MAURIZIO BARUZZI4.2",
+                "VALERIO FRATARCANGELI4.3",
+                "RUDRA SEVIERI4.5",
+                "RICCARDO ARMATI4.4",
+                "GIOSUE' MANCIOCCHI4.2",
+                "ALESSANDRO SIGNORETTA3.5",
+                "LUCA PISANI3.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
+            "categoria": "9000€ - TERRACINA OPEN SANDRO MARI by ORIZZONTE -  TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "FEDERICO LAMBERTO CAMPANA2.2",
+                "NICOLAS BIANCHI2.2",
+                "LUCIANO CARRARO2.1",
+                "SIMONE MACCHIONE2.4",
+                "GIANLUCA DI SARRA3.4",
+                "ENRICO BENTIVOGLIO4.1",
+                "ALESSANDRO LEGGERI2.6",
+                "ANTONIO ANTIGNANI3.5",
+                "DAMIANO DE MAIO2.6",
+                "LEONARDO TOTARO2.5",
+                "GIACOMO DE ANGELIS3.5",
+                "JACOPO BORSOI2.3",
+                "GIOVANNI CALVANO2.3",
+                "EMANUELE ESPOSITO2.6",
+                "GABRIELE ABBAMONDI2.8",
+                "ALEX ROSELLI2.7",
+                "BRUNO IKE LO IACONO3.2",
+                "LEONARDO SANTONOCITO3.1",
+                "UMBERTO GIUSEPPE CAPITANIO2.7",
+                "CLAUDIO BASTIANELLI2.7",
+                "MARCO MOSCHELLA3.5",
+                "MANUEL MATTIA MILAZZO2.8",
+                "JACOPO BOTTI2.8",
+                "SAMUELE BORSOI3.2",
+                "ALESSIO MASSA3.4",
+                "MATTEO MASSIMI2.8",
+                "JORGE ROBINSON SOLIS2.6",
+                "RICCARDO TERZOLI2.4",
+                "VALENTINO SCHIAVELLA2.8",
+                "ENRICO CERRONI2.7",
+                "MASSIMILIANO PARINI3.1",
+                "DAVIDE PALOMBI2.7",
+                "VITTORIO IERVOLINO3.1",
+                "FILIPPO LANCIERI2.7",
+                "FABRIZIO KAROL PIO OSTI2.1",
+                "STEFANO PERUZZI3.1",
+                "ALESSANDRO BUZZACCONI2.8",
+                "GIULIO VITTORINI2.8",
+                "FILIPPO CATALANO2.4",
+                "EDOARDO LEONI3.1",
+                "ALESSANDRO BAIA2.8",
+                "SIMONE MIRIELLO2.8",
+                "GIOELE CERELLI2.3",
+                "ANTONIO RUSSILLO2.8",
+                "RICCARDO IGNOTO2.4",
+                "LEONARDO LETI MESSINA2.4",
+                "FRANCESCO FORNARA2.6",
+                "ANTONIO AUGELLI2.8",
+                "ANDREA FICHERA2.8",
+                "FRANCESCO MONTANARO2.8"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
+            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "MARCO TELERA4.4",
+                "IACOPO MEZZANOTTE4.2",
+                "ENRICO BENTIVOGLIO4.1",
+                "MARCO GIUFFRIDA4.4",
+                "LORENZO UVA3.5",
+                "FABIO FRANZELLETTI4.5",
+                "EMILIANO PANIERI4.3",
+                "MARCO VIARO4.4",
+                "ALESSIO DA PONTE4.5",
+                "EDOARDO BELLI3.5",
+                "MARCO CUCCUI4.4",
+                "DANIELE PACIONI4.3",
+                "WILLIAM DE VITIS4.1",
+                "LUCA MENDOLIA4.4",
+                "GIORGIO DONATO4.1",
+                "GIANLUCA STEFANO ZANINI4.3",
+                "MASSIMILIANO PESCI4.1",
+                "ANDREA PAGANO4.5",
+                "GABRIELE TREVISANI4.3",
+                "ANDREA NERVI4.NC",
+                "TIZIANO UMMARINO4.3",
+                "FEDERICO ROBERTO3.5",
+                "LORENZO GALIZIA4.2",
+                "LUCA BELLUSCIO4.3",
+                "PAOLO CAREDDU4.3",
+                "MARCO GUIDETTI4.4",
+                "ALESSIO VERDECCHIA4.1",
+                "GIOVANNI FIDERIO4.2",
+                "CRISTIANO QUINZI3.5",
+                "FILIPPO LEDDA4.NC",
+                "MARCO DI STEFANO4.4",
+                "FLAVIO FIORAVANTI4.4",
+                "STEFANO DEL PICCOLO4.2",
+                "GIOVANNI BETTO4.3",
+                "LEONARDO BETTO3.5",
+                "ANGELO CONDURSO4.5",
+                "ELIO POSSIDENTE4.NC",
+                "FRANCESCO ZAMBIGLI4.1",
+                "FEDERICO MELCARNE4.NC",
+                "MASSIMILIANO RICCELLI4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
+            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
+            "tabellone": "Doppio Misto Open LIM. 4.NC - 3.1",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
+            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "SIMONA GAIAS4.1",
+                "VALENTINA RISI4.5",
+                "CAMILLA FANTINELLI4.5",
+                "AMBRA PANZIRONI4.NC",
+                "ANTONIETTA DE ANGELIS4.4",
+                "RAFFAELLA CECCACCI4.NC",
+                "MONICA BALDUCCI4.5",
+                "EMMA BLASI4.2",
+                "LAURA CARAMANNA4.5",
+                "TERESA PROIETTI4.1",
+                "SILVIA REPERTORIO4.2",
+                "VIOLA COTTINI4.2",
+                "VIOLA STEFANI3.5",
+                "CRISTINA ROSATO3.5",
+                "EMMA RANIERI3.5",
+                "SARA DONZELLI4.4",
+                "ANNA MIELE4.6",
+                "DEBORA DI TOMA4.6",
+                "ROSAMARIA SBIROLI4.4",
+                "RUGIADA TENTONI4.1",
+                "ALESSIA ANDREEA OLTEANU4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
+            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
+            "tabellone": "Doppio Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "MATTIA FORNARI3.5",
+                "SIMONE FORNARI3.2",
+                "EDOARDO BELLI3.5",
+                "MASSIMO BELLI4.NC",
+                "FEDERICO ROBERTO3.5",
+                "LORENZO GALIZIA4.2",
+                "RICCARDO CIPOLLA4.NC",
+                "MATTEO CIPOLLA4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
+            "categoria": "Summer IV Roma",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "SIMONE LAI4.5",
+                "ANDREA MASSARI4.1",
+                "CRISTIANO LOIOLI4.2",
+                "ALESSANDRO GIANNESSI4.1",
+                "ENRICO ARZARETTI4.4",
+                "STEFANO BORRUSO4.2",
+                "DAVID CALDARELLI4.NC",
+                "TIZIANO DE GIOVANNI4.2",
+                "VALENTINO BELTRAMI4.3",
+                "MASSIMO CASACCIA4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
+            "categoria": "Summer IV Roma",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LAURA DOMINIK4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
+            "categoria": "Summer IV Roma",
+            "tabellone": "Doppio Femminile Open",
+            "iscritti": [
+                "SIMONA GABRIELLI4.NC",
+                "LAURA DOMINIK4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
+            "categoria": "Summer IV Roma",
+            "tabellone": "Doppio Misto Open",
+            "iscritti": [
+                "SIMONE LAI4.5",
+                "SIMONA GABRIELLI4.NC"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
             "categoria": "9° TORNEO SERALE 3/4 CAT. M/F",
             "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
             "iscritti": [
                 "VALERIO FICARI4.3",
-                "ANGELO MILONE4.NC"
+                "ANGELO MILONE4.NC",
+                "MASSIMO BELLI4.NC",
+                "EDOARDO BELLI3.5",
+                "MATTEO CIPOLLA4.5",
+                "ANDREA PROIETTI4.5",
+                "GABRIELE MARCONI4.NC"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
             "categoria": "9° TORNEO SERALE 3/4 CAT. M/F",
             "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": []
+            "iscritti": [
+                "STEFANIA IANNELLA4.6"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
@@ -331,7 +479,6 @@
             "iscritti": [
                 "RAFFAELLA CECCACCI4.NC",
                 "VALENTINA RISI4.5",
-                "MADDALENA WAS4.5",
                 "FRANCESCA PIZZO4.NC",
                 "CLEMENTINA ACCIARI4.NC",
                 "MARIA LUISA FRASSICA3.3",
@@ -350,7 +497,8 @@
                 "DANIELA MUSTAZZA4.5",
                 "ALESSANDRA SASSUN4.2",
                 "BARBARA RUGGIERO4.1",
-                "FIAMMA BONFIGLIO3.4"
+                "FIAMMA BONFIGLIO3.4",
+                "ALESSANDRA SALVINI4.3"
             ]
         },
         {
@@ -359,7 +507,6 @@
             "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
             "iscritti": [
                 "VLADIMIR MANDIC4.4",
-                "ALESSIO CLEMENTI3.1",
                 "ANDREA NERVI4.NC",
                 "EDOARDO ASTA4.2",
                 "EMANUELE TIRIBELLI4.3",
@@ -417,7 +564,8 @@
                 "LORENZO NARDUZZI3.5",
                 "FEDERICO SINI4.1",
                 "STEFANO SINI3.5",
-                "LEONARDO DENTE3.5"
+                "LEONARDO DENTE3.5",
+                "MARCO ROSSI3.2"
             ]
         },
         {
@@ -455,284 +603,125 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
+            "tabellone": "Singolare Femminile Open",
             "iscritti": [
-                "GIULIA PETRINI4.5",
-                "MADDALENA WAS4.5",
-                "RAFFAELLA CECCACCI4.NC",
-                "ARIANNA CECCARELLI4.NC"
+                "CLAUDIA BIELLI2.8",
+                "SOFIJA ZARINA2.7",
+                "ANGELICA LODI2.7",
+                "MICHELA URSINI4.5",
+                "GIOVANNA ANGELA RITA CASCIO4.6",
+                "SOFIA FARSETTI2.8",
+                "MICHELA CARRANI4.2",
+                "GIULIA LA PORTA2.5",
+                "MARTINA TOZZI2.6",
+                "LUCREZIA OLIVETI2.7",
+                "MARIA COSTANZA MATRANGA2.8",
+                "SOFIA GERMANI2.8",
+                "CHIARA MASSI2.7",
+                "FLAVIA MONTEVERDE2.5",
+                "ROBERTA GRIECO4.3",
+                "MICHELA PENTENE'2.7",
+                "ALEXANDRA IVAN2.8",
+                "SOFIA RIELA2.7",
+                "SABRINA ROCCHI2.8",
+                "CHIARA PESCETELLI2.6",
+                "ALICE VELLUTI3.1",
+                "MARTA BOLOGNESI3.3",
+                "GIULIA BELLACCI4.1",
+                "NICOLE PERRONE3.1",
+                "NOEMI SOFIA MENTO2.5",
+                "ILARIA UGHI2.6"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "tabellone": "Doppio Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "FABRIZIO MASALA4.2",
-                "EDOARDO CELANI4.1",
-                "NICOLA FUSI4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "categoria": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "tabellone": "Doppio Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F4A9DADD-9EB1-48A5-BD53-DAD1365E745F",
-            "categoria": "Tyrsenia Summer Rodeo 2",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "PAOLA CARLUCCI4.6",
-                "SIMONA GABRIELLI4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F4A9DADD-9EB1-48A5-BD53-DAD1365E745F",
-            "categoria": "Tyrsenia Summer Rodeo 2",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "CRISTIANO LOIOLI4.2",
-                "LEOPOLDO SCIULLO4.5",
-                "ANTONIO ALESSIO DE CICCO 4.6",
-                "MASSIMO CASACCIA4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "categoria": "Summer IV Roma",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
             "tabellone": "Singolare Maschile Open",
             "iscritti": [
-                "SIMONE LAI4.5",
-                "ANDREA MASSARI4.1",
-                "CRISTIANO LOIOLI4.2",
-                "ALESSANDRO GIANNESSI4.1",
-                "ENRICO ARZARETTI4.4",
-                "STEFANO BORRUSO4.2",
-                "DAVID CALDARELLI4.NC",
-                "TIZIANO DE GIOVANNI4.2",
-                "VALENTINO BELTRAMI4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "categoria": "Summer IV Roma",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "categoria": "Summer IV Roma",
-            "tabellone": "Doppio Maschile Open",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "categoria": "Summer IV Roma",
-            "tabellone": "Doppio Femminile Open",
-            "iscritti": [
-                "SIMONA GABRIELLI4.NC",
-                "LAURA DOMINIK4.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "categoria": "Summer IV Roma",
-            "tabellone": "Doppio Misto Open",
-            "iscritti": [
-                "SIMONE LAI4.5",
-                "SIMONA GABRIELLI4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MARCO TELERA4.4",
-                "IACOPO MEZZANOTTE4.2",
+                "EDOARDO FUSARI3.1",
+                "LORENZO PLACIDI4.NC",
+                "SIMONE MIRIELLO2.8",
+                "CRISTIAN GAROFALO3.5",
+                "FRANCESCO FORTUNATO3.1",
+                "LUCA LA ROSA3.5",
+                "EMANUELE MURRI3.5",
+                "GIULIO ANTONELLI3.5",
+                "ANDREA PERRIA4.2",
+                "DANYLO SILCHUK3.1",
+                "LORIS MENCARELLI2.7",
+                "VINCENZO GRIMALDI3.4",
+                "SAVERIO PAOLO MARIA CAROTTI4.4",
+                "LEONARDO BETTO3.5",
+                "GIAN MARCO CIACCIA4.3",
+                "ALESSANDRO PENNACCHI 4.5",
+                "DARIO BALVETTI 4.NC",
+                "ASCANIO BALBO DI VINADIO3.3",
+                "DANIELE BIANCO4.1",
+                "DAIGO MAUGLIANI2.8",
+                "EDOARDO CERASUOLO2.8",
+                "GIULIO DE DONATO4.NC",
+                "CRISTIAN GORLA3.2",
+                "ANDREA MACCARONE2.8",
+                "EDOARDO GALLUSI3.1",
                 "ENRICO BENTIVOGLIO4.1",
-                "MARCO GIUFFRIDA4.4",
-                "LORENZO UVA3.5",
-                "FABIO FRANZELLETTI4.5",
-                "EMILIANO PANIERI4.3",
-                "MARCO VIARO4.4",
-                "ALESSIO DA PONTE4.5",
-                "EDOARDO BELLI3.5",
-                "MARCO CUCCUI4.4",
-                "DANIELE PACIONI4.3",
-                "WILLIAM DE VITIS4.1",
-                "LUCA MENDOLIA4.4",
-                "GIORGIO DONATO4.1",
-                "GIANLUCA STEFANO ZANINI4.3",
-                "MASSIMILIANO PESCI4.1",
-                "ANDREA PAGANO4.5",
-                "GABRIELE TREVISANI4.3",
-                "ANDREA NERVI4.NC",
-                "TIZIANO UMMARINO4.3",
-                "FEDERICO ROBERTO3.5",
-                "LORENZO GALIZIA4.2",
-                "LUCA BELLUSCIO4.3",
+                "RUBEN RUSCIO2.6",
+                "ANDREA BONUSO4.5",
+                "GIANPAOLO VANGI2.8",
+                "DANIELE CAPOROSSI3.1",
+                "ALESSANDRO BAIA2.8",
+                "MASSIMO AGNES4.3",
+                "PATRIZIO FRANGI3.5",
+                "MATTIA DINI3.2",
+                "LUCIO FERRARO2.8",
+                "EDOARDO ORLANDI2.7",
+                "LUCA TORRANI3.5",
+                "FABRIZIO CANIGLIA4.1",
+                "CIRO ACQUAVIVA4.1",
+                "RICCARDO MARCON2.8",
+                "FEDERICO SEGRETO4.1",
+                "EMANUELE CERAULO3.2",
+                "FEDERICO ALBERTO CIVITA4.1",
+                "LUCA BELBELLO4.4",
+                "ALESSANDRO SALVATORI4.3",
+                "RUGGERO FAIS4.1",
+                "ALESSANDRO MAGOZZI4.4",
+                "MATTEO PRINCIPATO2.7",
+                "MATTEO COSCIA3.1",
+                "MATTEO MARINELLI4.4",
                 "PAOLO CAREDDU4.3",
-                "MARCO GUIDETTI4.4",
-                "ALESSIO VERDECCHIA4.1",
-                "GIOVANNI FIDERIO4.2",
-                "CRISTIANO QUINZI3.5",
-                "FILIPPO LEDDA4.NC",
-                "MARCO DI STEFANO4.4",
-                "FLAVIO FIORAVANTI4.4",
-                "STEFANO DEL PICCOLO4.2",
-                "GIOVANNI BETTO4.3",
-                "LEONARDO BETTO3.5"
+                "PAOLO SORRENTINO4.2",
+                "RICCARDO RAMBERTI2.8",
+                "MATTEO MARINI4.2",
+                "EMANUELE MONTELEONE3.5",
+                "MASSIMO CURCIO3.4",
+                "ANDREA ZUCCARINI3.5",
+                "FABIO GERLINI4.2",
+                "GABRIELE  TIROCCHI4.2",
+                "RARES ANDREI CARCEL4.1"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
-            "tabellone": "Doppio Misto Open LIM. 4.NC - 3.1",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "CLAUDIA RUFINI4.5",
-                "SIMONA GAIAS4.1",
-                "VALENTINA RISI4.5",
-                "CAMILLA FANTINELLI4.5",
-                "AMBRA PANZIRONI4.NC",
-                "ANTONIETTA DE ANGELIS4.4",
-                "RAFFAELLA CECCACCI4.NC",
-                "MONICA BALDUCCI4.5",
-                "EMMA BLASI4.2",
-                "MADDALENA WAS4.5",
-                "LAURA CARAMANNA4.5",
-                "TERESA PROIETTI4.1",
-                "SILVIA REPERTORIO4.2",
-                "VIOLA COTTINI4.2",
-                "VIOLA STEFANI3.5",
-                "CRISTINA ROSATO3.5",
-                "EMMA RANIERI3.5",
-                "SARA DONZELLI4.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "categoria": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
-            "tabellone": "Doppio Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MATTIA FORNARI3.5",
-                "SIMONE FORNARI3.2",
-                "EDOARDO BELLI3.5",
-                "MASSIMO BELLI4.NC",
-                "FEDERICO ROBERTO3.5",
-                "LORENZO GALIZIA4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
-            "categoria": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
+            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
             "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "SALVATORE VASTA4.6",
+                "SALVATORE COLLEMI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
+            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
+            "tabellone": "Singolare Femminile Open",
             "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
-            "categoria": "BT PAY RODEO LUGLIO BY SPORFIE",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "LUDOVICA TOTARO3.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "AMALIA DORMI3.2",
-                "MICHELA PELONE4.2",
-                "ALEXANDRA DORMI3.1",
-                "ALEXIA ROSSI4.1"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MATTEO CONTI3.4",
-                "ALDO ROSSETTI4.NC",
-                "GABRIELE SILVESTRI3.5",
-                "RICCARDO ROSCETTI3.4",
-                "ANDREA CHIATRONI4.3",
-                "LEONARDO VALCARENGHI4.3",
-                "MAURO CAMPAGNA4.NC",
-                "CRISTIAN  GENTILINI4.4",
-                "ENRICO PROIETTI4.NC",
-                "FEDERICO FABIANI4.2",
-                "NICOLÒ BIANCHI4.2",
-                "ADRIANO SEMERANO4.6",
-                "FABIO CUPPITELLI3.5",
-                "LEONARDO RONZANI4.1",
-                "MAURIZIO MASSA4.2",
-                "FABRIZIO LUCARINI3.5",
-                "LUCA SEVIERI3.5",
-                "MASSIMILIANO DI CINTIO3.3",
-                "DAVIDE DERIU3.1",
-                "ALESSANDRO GRECO4.NC",
-                "LORENZO  ZUCCHI4.4",
-                "ALESSANDRO CAMILLI4.5",
-                "LORENZO ROSATI4.3",
-                "MAURIZIO BARUZZI4.2",
-                "VALERIO FRATARCANGELI4.3",
-                "RUDRA SEVIERI4.5",
-                "RICCARDO ARMATI4.4",
-                "GIOSUE' MANCIOCCHI4.2",
-                "ALESSANDRO SIGNORETTA3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
-            "categoria": "Tyrsenia Summer Rodeo 1",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "MARIA LETIZIA NUSCA4.5",
-                "PAOLA MONTALBANO4.NC",
-                "ANTONELLA COLARIETI4.2",
-                "PAOLA CARLUCCI4.6",
-                "LAURALISA LORENZANO4.3",
-                "AURORA COCCHI4.NC",
-                "SIMONA GABRIELLI4.NC",
-                "EMMA RADICHINI4.NC",
-                "ANTONIETTA DE ANGELIS4.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
-            "categoria": "Tyrsenia Summer Rodeo 1",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "GABRIELE PAGANO4.NC",
-                "LEONARDO TRAVAGLIATI4.NC",
-                "CRISTIANO LOIOLI4.2",
-                "LEONARDO D'AMBROGI4.NC",
-                "LEOPOLDO SCIULLO4.5",
-                "THOMAS NAVARRA4.NC",
-                "ALESSANDRO PAOLONI4.3",
-                "PAOLO MARCELLO GENNARI4.NC",
-                "GIUSEPPE PAGANO4.NC",
-                "ANTONIO ALESSIO DE CICCO 4.6",
-                "ALESSANDRO VIRGILI4.2"
-            ]
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
+            "categoria": "Torneo nazionale wheelchair a girone - Volcano Sportabilia",
+            "tabellone": "Singolare Misto Open",
+            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=580BB429-EC53-4736-8BD4-5C6E59E4EA7E",
@@ -749,7 +738,8 @@
                 "SOFIJA ZARINA2.7",
                 "FABIANA DE ANGELIS4.NC",
                 "NICOLE DI BISCEGLIA2.7",
-                "CECILIA EMMA GIANNINI3.5"
+                "CECILIA EMMA GIANNINI3.5",
+                "ALICE VELLUTI3.1"
             ]
         },
         {
@@ -820,99 +810,27 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "tabellone": "Singolare Femminile Open",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
+            "categoria": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
             "iscritti": [
-                "CLAUDIA BIELLI2.8",
-                "VALENTINA VECCIARELLI2.8",
-                "SOFIJA ZARINA2.7",
-                "ANGELICA LODI2.7",
-                "MICHELA URSINI4.5",
-                "GIOVANNA ANGELA RITA CASCIO4.6",
-                "SOFIA FARSETTI2.8",
-                "MICHELA CARRANI4.2",
-                "GIULIA LA PORTA2.5",
-                "MARTINA TOZZI2.6",
-                "LUCREZIA OLIVETI2.7",
-                "MARIA COSTANZA MATRANGA2.8",
-                "SOFIA GERMANI2.8",
-                "CHIARA MASSI2.7",
-                "FLAVIA MONTEVERDE2.5",
-                "ROBERTA GRIECO4.3",
-                "MICHELA PENTENE'2.7",
-                "ALEXANDRA IVAN2.8",
-                "SOFIA RIELA2.7",
-                "SABRINA ROCCHI2.8",
-                "CHIARA PESCETELLI2.6",
-                "ALICE VELLUTI3.1"
+                "CLAUDIA RUFINI4.5"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "tabellone": "Singolare Maschile Open",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
+            "categoria": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
             "iscritti": [
-                "EDOARDO FUSARI3.1",
-                "LORENZO PLACIDI4.NC",
-                "SIMONE MIRIELLO2.8",
-                "CRISTIAN GAROFALO3.5",
-                "FRANCESCO FORTUNATO3.1",
-                "LUCA LA ROSA3.5",
-                "EMANUELE MURRI3.5",
-                "GIULIO ANTONELLI3.5",
-                "ANDREA PERRIA4.2",
-                "DANYLO SILCHUK3.1",
-                "LORIS MENCARELLI2.7",
-                "VINCENZO GRIMALDI3.4",
-                "SAVERIO PAOLO MARIA CAROTTI4.4",
-                "LEONARDO BETTO3.5",
-                "GIAN MARCO CIACCIA4.3",
-                "ALESSANDRO PENNACCHI 4.5",
-                "DARIO BALVETTI 4.NC",
-                "ASCANIO BALBO DI VINADIO3.3",
-                "DANIELE BIANCO4.1",
-                "DAIGO MAUGLIANI2.8",
-                "EDOARDO CERASUOLO2.8",
-                "GIULIO DE DONATO4.NC",
-                "CRISTIAN GORLA3.2",
-                "ANDREA MACCARONE2.8",
-                "EDOARDO GALLUSI3.1",
-                "ENRICO BENTIVOGLIO4.1",
-                "RUBEN RUSCIO2.6",
-                "ANDREA BONUSO4.5",
-                "GIANPAOLO VANGI2.8",
-                "DANIELE CAPOROSSI3.1",
-                "ALESSANDRO BAIA2.8",
-                "MASSIMO AGNES4.3",
-                "PATRIZIO FRANGI3.5",
-                "MATTIA DINI3.2",
-                "LUCIO FERRARO2.8",
-                "EDOARDO ORLANDI2.7",
-                "FLAVIO CARRANI4.1",
-                "LUCA TORRANI3.5",
-                "FABRIZIO CANIGLIA4.1",
-                "CIRO ACQUAVIVA4.1",
-                "RICCARDO MARCON2.8",
-                "FEDERICO SEGRETO4.1",
-                "EMANUELE CERAULO3.2",
-                "FEDERICO ALBERTO CIVITA4.1",
-                "LUCA BELBELLO4.4",
-                "ALESSANDRO SALVATORI4.3",
-                "RUGGERO FAIS4.1",
-                "ALESSANDRO MAGOZZI4.4",
-                "MATTEO PRINCIPATO2.7",
-                "MATTEO COSCIA3.1",
-                "MATTEO MARINELLI4.4",
-                "PAOLO CAREDDU4.3",
-                "MICHELE CATALUDDI4.1",
-                "PAOLO SORRENTINO4.2",
-                "RICCARDO RAMBERTI2.8",
-                "MATTEO MARINI4.2",
-                "EMANUELE MONTELEONE3.5",
-                "MASSIMO CURCIO3.4",
-                "ANDREA ZUCCARINI3.5",
-                "FABIO GERLINI4.2"
+                "FABIO SACCO4.NC",
+                "DANIELE MORGANTI4.NC",
+                "FLAVIO CIMINI3.2",
+                "MASSIMILIANO MESSINA4.5",
+                "VIRGILIO PIRRI4.4",
+                "LEONARDO BRUSCHINI3.4",
+                "RAIMONDO GROSSI3.5",
+                "ALESSANDRO MANILI4.NC",
+                "ROMAN BARBARULO3.5"
             ]
         },
         {
@@ -938,7 +856,10 @@
                 "PIERO MICCOLIS4.3",
                 "VIRGILIO PIRRI4.4",
                 "ALESSIO VERDECCHIA4.1",
-                "ALESSANDRO ALOISI4.NC"
+                "ALESSANDRO ALOISI4.NC",
+                "ANDREA ASCENZI4.3",
+                "FABIO FONTANA4.NC",
+                "ROCCO PASSARETTI4.3"
             ]
         },
         {
