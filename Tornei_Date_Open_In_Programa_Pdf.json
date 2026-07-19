@@ -1,18 +1,18 @@
 {
-    "report_data": "18/07/2026 19:31",
+    "report_data": "19/07/2026 19:32",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
-            "nomeTorneo": "9000€ - TERRACINA OPEN SANDRO MARI BY ORIZZONTE - TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
+            "nomeTorneo": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=143EF5AE-732D-4548-A7F9-DC6D67DDC6CE",
-            "nomeTorneo": "CIRCOLO CANOTTIERI ROMA - CIRCUITO \"I SERALI DI ROMA\" - MEMORIAL PINO ORECCHIO - IV E III CAT. SINGOLI E DOPPI - LUNGOTEVERE FLAMINIO 39, 00196 ROMA RM - ABBIGLIAMENTO BIANCO",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F4A9DADD-9EB1-48A5-BD53-DAD1365E745F",
+            "nomeTorneo": "TYRSENIA SUMMER RODEO 2",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -20,7 +20,7 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A77405F1-6322-4E39-B06C-9C66A5D54D07",
             "nomeTorneo": "6 TORNEO SERALE M E F",
-            "data": "18/07/2026",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -28,15 +28,55 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=04BEC7CD-0348-4388-A7DB-AF26B8BD4897",
             "nomeTorneo": "VI° TAPPA \"SUMMER IV ROMA\" (LIM 4.1 M/F) - SINGOLI E DOPPI - SERALE",
-            "data": "18/07/2026",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
-            "nomeTorneo": "TYRSENIA SUMMER RODEO 1",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
+            "nomeTorneo": "9° TORNEO SERALE 3/4 CAT. M/F",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "nomeTorneo": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=143EF5AE-732D-4548-A7F9-DC6D67DDC6CE",
+            "nomeTorneo": "CIRCOLO CANOTTIERI ROMA - CIRCUITO \"I SERALI DI ROMA\" - MEMORIAL PINO ORECCHIO - IV E III CAT. SINGOLI E DOPPI - LUNGOTEVERE FLAMINIO 39, 00196 ROMA RM - ABBIGLIAMENTO BIANCO",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
+            "nomeTorneo": "9000€ - TERRACINA OPEN SANDRO MARI BY ORIZZONTE - TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
+            "nomeTorneo": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -44,17 +84,25 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
             "nomeTorneo": "TORNEO NAZIONALE WHEELCHAIR A GIRONE - VOLCANO SPORTABILIA",
-            "data": "18/07/2026",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=73097254-E9BE-4906-95EE-27DFBD5E8AE2",
+            "nomeTorneo": "9^ TAPPA I SERALI DI ROMA",
+            "data": "19/07/2026",
             "partite": [
-                "Nessuna partita trovata"
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
+            "nomeTorneo": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "data": "19/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -68,9 +116,19 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
-            "nomeTorneo": "BT PAY RODEO LUGLIO BY SPORFIE",
-            "data": "18/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
+            "data": "20/07/2026",
+            "partite": [
+                "20/07/2026; 00:00; No. Campo 1 Campo 2",
+                "20/07/2026; 17:00; 1 ROSSETTI ALDO vs ZUCCHI LORENZO",
+                "20/07/2026; 18:30; 1 CAMILLI ALESSANDRO vs CAMPAGNA MAURO I; 1 SEMERANO ADRIANO vs SEVIERI RUDRA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
+            "nomeTorneo": "TYRSENIA SUMMER RODEO 1",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -78,43 +136,7 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=580BB429-EC53-4736-8BD4-5C6E59E4EA7E",
             "nomeTorneo": "8° TROFEO CANOTTIERI LAZIO €5000",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "data": "18/07/2026",
-            "partite": [
-                "18/07/2026; 00:00; No. Campo 1",
-                "18/07/2026; 09:00; DE DONATO GIULIO vs BONUSO ANDREA",
-                "18/07/2026; 10:30; BALVETTI DARIO vs PLACIDI LORENZO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
             "data": "19/07/2026",
-            "partite": [
-                "19/07/2026; 00:00; No. Campo 1 Campo 2",
-                "19/07/2026; 09:00; PENNACCHI ALESSANDRO vs PLACIDI LORENZO I; BONUSO ANDREA vs CAROTTI SAVERIO PAOLO MARIA",
-                "19/07/2026; 10:30; BELBELLO LUCA vs MARINELLI MATTEO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "nomeTorneo": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "data": "18/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -122,47 +144,7 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
             "nomeTorneo": "SUMMER IV ROMA",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=73097254-E9BE-4906-95EE-27DFBD5E8AE2",
-            "nomeTorneo": "9^ TAPPA I SERALI DI ROMA",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F4A9DADD-9EB1-48A5-BD53-DAD1365E745F",
-            "nomeTorneo": "TYRSENIA SUMMER RODEO 2",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
-            "nomeTorneo": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "nomeTorneo": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO",
-            "data": "18/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
-            "nomeTorneo": "9° TORNEO SERALE 3/4 CAT. M/F",
-            "data": "18/07/2026",
+            "data": "19/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
