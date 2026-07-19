@@ -1,130 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "LAURA BOZZA4.1",
-                "LUANA PALLARIA4.4",
-                "GIULIA ROMANA PROIETTI4.2",
-                "CLAUDIA RUFINI4.NC",
-                "MADDALENA WAS4.NC",
-                "VIRGINIA FIGLIUZZI4.5",
-                "SARA DONZELLI4.4",
-                "SIMONA MARSELLA4.3",
-                "VALENTINA MELICIANI4.2",
-                "ILENIA BENEDETTI4.4",
-                "CLEMENTINA ACCIARI4.NC",
-                "ARIANNA CECCARELLI4.NC",
-                "TERESA PROIETTI4.1",
-                "ELENA MURGIANO4.1",
-                "GIULIA CENTIONI4.NC",
-                "ALESSANDRA SASSUN4.2",
-                "CHIARA DE STEFANI4.4",
-                "MARTINA ALBANESE4.2",
-                "FEDERICA PERUGINI4.3",
-                "LINDA SCIARRINO4.6",
-                "LUCREZIA CARLA TAMBONE4.5",
-                "BENEDETTA SATALIA4.2",
-                "BARBARA FASOLI BRACCINI4.3",
-                "MARIA CRISTINA ZEVANO4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
-            "tabellone": "Doppio Misto Open LIM. 4.NC - 4.1",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "MARCO VIARO4.4",
-                "MAURIZIO VELLUCCI4.3",
-                "ANDREA NERVI4.NC",
-                "LORENZO D'ISIDORO4.4",
-                "ELIO POSSIDENTE4.NC",
-                "TOMMASO PAGANO4.5",
-                "MARCO LO RUSSO4.4",
-                "GIOVANBATTISTA COCHI4.NC",
-                "FEDERICO LIVI4.NC",
-                "ALESSIO CARDARELLI4.5",
-                "ENRICO BENTIVOGLIO4.1",
-                "VALERIO VENERANDO4.4",
-                "FABRIZIO DI MEO4.4",
-                "DAVIDE RONGIONE4.2",
-                "LUIGI SELLITTO4.1",
-                "GIOVANNI LICARI4.NC",
-                "FRANCESCO BONDANINI4.4",
-                "DANILO GALOTTI4.NC",
-                "PATRIZIO ASTOLFI4.NC",
-                "CLAUDIO MARTINANGELI4.NC",
-                "MIRKO MAURIZI4.NC",
-                "MATTEO EUSEPI4.2",
-                "GIAN MARCO CIACCIA4.3",
-                "GABRIELE CHIANESE4.6",
-                "ANDREA PES4.1",
-                "GUIDO MARIA CATITTI4.NC",
-                "ANDREA PROIETTI4.5",
-                "ALESSIO AL CARAFFA4.NC",
-                "FABRIZIO CAVA4.1",
-                "GIOVANNI  GRECO 4.5",
-                "PAOLO INVERNIZZI4.NC",
-                "MARCO CERVELLI4.1",
-                "RICCARDO GIUSEPPE MUSUMECI4.4",
-                "MICHELE CATALUDDI4.2",
-                "LUCA TORMEN4.3",
-                "MATTIA ORFEI4.4",
-                "GIULIO VILLA4.2",
-                "GABRIEL BISCEGLIE4.2",
-                "GIUSEPPE TRANZILLO4.4",
-                "SALVATORE RAGGIO4.5",
-                "DANIELE GENTILINI4.2",
-                "GIACOMO TORTORELLA4.2",
-                "EMANUELE DE IOANNON4.6",
-                "GIOVANNI BONVINO4.3",
-                "EDOARDO MANGANO4.5",
-                "LORENZO CENACCHI4.NC",
-                "ALESSANDRO SALVATORI4.3",
-                "ANTONIO CHERUBINI4.1",
-                "GIOVANNI GHIRLANDA4.4",
-                "CRISTIAN CAPOLA4.2",
-                "ALESSIO TAMILIA4.5",
-                "SALVATORE LAURO4.NC",
-                "DANIELE LIPPI4.2",
-                "LUIGI DE BERNARDIS4.6",
-                "MASSIMILIANO PESCI4.1",
-                "IACOPO TESTI4.2",
-                "ADRIANO BOZZO4.1",
-                "GIULIO PELLICONE4.3",
-                "EMANUELE VESPAZIANI4.NC",
-                "DOMENICO FABIO FUCILE4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
-            "tabellone": "Doppio Femminile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "ILENIA BENEDETTI4.4",
-                "LUANA PALLARIA4.4",
-                "LAURALISA LORENZANO4.3",
-                "PATRIZIA PERUZZO4.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "categoria": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - Via dei Bevilacqua, 41, 00165 Roma RM",
-            "tabellone": "Doppio Maschile Open LIM. 4.NC - 4.1",
-            "iscritti": [
-                "ANDREA CANDINO4.2",
-                "MELCHIORRE GIARRAPUTO4.2"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
             "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
             "tabellone": "Singolare Femminile Open",
@@ -139,7 +15,6 @@
                 "MICHELA CARRANI4.2",
                 "GIULIA LA PORTA2.5",
                 "MARTINA TOZZI2.6",
-                "GIULIA SELLI4.2",
                 "LUCREZIA OLIVETI2.7",
                 "MARIA COSTANZA MATRANGA2.8",
                 "SOFIA GERMANI2.8",
@@ -151,7 +26,10 @@
                 "SOFIA RIELA2.7",
                 "SABRINA ROCCHI2.8",
                 "CHIARA PESCETELLI2.6",
-                "ALICE VELLUTI3.1"
+                "ALICE VELLUTI3.1",
+                "MARTA BOLOGNESI3.3",
+                "GIULIA BELLACCI4.1",
+                "NICOLE PERRONE3.1"
             ]
         },
         {
@@ -195,7 +73,6 @@
                 "MATTIA DINI3.2",
                 "LUCIO FERRARO2.8",
                 "EDOARDO ORLANDI2.7",
-                "FLAVIO CARRANI4.1",
                 "LUCA TORRANI3.5",
                 "FABRIZIO CANIGLIA4.1",
                 "CIRO ACQUAVIVA4.1",
@@ -211,14 +88,63 @@
                 "MATTEO COSCIA3.1",
                 "MATTEO MARINELLI4.4",
                 "PAOLO CAREDDU4.3",
-                "MICHELE CATALUDDI4.1",
                 "PAOLO SORRENTINO4.2",
                 "RICCARDO RAMBERTI2.8",
                 "MATTEO MARINI4.2",
                 "EMANUELE MONTELEONE3.5",
                 "MASSIMO CURCIO3.4",
                 "ANDREA ZUCCARINI3.5",
-                "FABIO GERLINI4.2"
+                "FABIO GERLINI4.2",
+                "GABRIELE  TIROCCHI4.2",
+                "RARES ANDREI CARCEL4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "AMALIA DORMI3.2",
+                "MICHELA PELONE4.2",
+                "ALEXANDRA DORMI3.1",
+                "ALEXIA ROSSI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "MATTEO CONTI3.4",
+                "ALDO ROSSETTI4.NC",
+                "GABRIELE SILVESTRI3.5",
+                "RICCARDO ROSCETTI3.4",
+                "ANDREA CHIATRONI4.3",
+                "LEONARDO VALCARENGHI4.3",
+                "MAURO CAMPAGNA4.NC",
+                "CRISTIAN  GENTILINI4.4",
+                "ENRICO PROIETTI4.NC",
+                "FEDERICO FABIANI4.2",
+                "NICOLÒ BIANCHI4.2",
+                "ADRIANO SEMERANO4.6",
+                "FABIO CUPPITELLI3.5",
+                "LEONARDO RONZANI4.1",
+                "MAURIZIO MASSA4.2",
+                "FABRIZIO LUCARINI3.5",
+                "LUCA SEVIERI3.5",
+                "MASSIMILIANO DI CINTIO3.3",
+                "DAVIDE DERIU3.1",
+                "ALESSANDRO GRECO4.NC",
+                "LORENZO  ZUCCHI4.4",
+                "ALESSANDRO CAMILLI4.5",
+                "LORENZO ROSATI4.3",
+                "MAURIZIO BARUZZI4.2",
+                "VALERIO FRATARCANGELI4.3",
+                "RUDRA SEVIERI4.5",
+                "RICCARDO ARMATI4.4",
+                "GIOSUE' MANCIOCCHI4.2",
+                "ALESSANDRO SIGNORETTA3.5",
+                "LUCA PISANI3.3"
             ]
         },
         {
@@ -244,7 +170,6 @@
                 "ANTONIO PALERMO4.4",
                 "ALESSANDRO FABBRI4.1",
                 "MARCO VIARO4.4",
-                "ALESSANDRO GABRIELE3.4",
                 "NUNZIO MAGNIFICO4.NC",
                 "MASSIMILIANO SCARABOTTI4.1",
                 "FERNANDO BOCCHINI4.3",
@@ -285,7 +210,8 @@
                 "RICCARDO NUCCETELLI3.4",
                 "ANDREA CORARETTI4.2",
                 "LEONARDO VALCARENGHI4.3",
-                "PAOLO VARANO4.4"
+                "PAOLO VARANO4.4",
+                "MATTIA  DI FEDERICO4.2"
             ]
         },
         {
@@ -319,7 +245,6 @@
                 "MARTA MARIA AMODIO4.6",
                 "ELISABETTA BAUCO4.4",
                 "AMALIA DORMI3.2",
-                "ALESSANDRA FRANETTI3.5",
                 "CLAUDIA PETRANGELI3.5",
                 "ASIA ELEUTERI3.2",
                 "PAOLA RUSSILLO4.5",
@@ -338,7 +263,12 @@
                 "MATILDA  MAGI3.5",
                 "ANNA LO BELLO4.2",
                 "CHIARA ABBATE SIDOTI3.2",
-                "EMMA RAPINESI4.1"
+                "EMMA RAPINESI4.1",
+                "LIVIA MORICONI3.3",
+                "FRANCESCA COLACECI3.2",
+                "EMANUELA BESTETTI3.5",
+                "SIBILLA MARINELLI3.4",
+                "FLAMINIA MATTEOTTI3.5"
             ]
         }
     ]
