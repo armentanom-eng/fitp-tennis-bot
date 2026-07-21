@@ -1,28 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MASSIMILIANO MESSINA4.5",
-                "FRANCESCO DI NILLO4.5",
-                "CHRISTIAN GALLETTA4.5",
-                "OMAR EL ABASIRY3.5",
-                "FLAVIO MODICA4.2",
-                "FRANCESCO FORNARA2.6",
-                "LUCA PERICA2.6"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "categoria": "12° ED TORVAIANICA OPEN",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "ALESIA STEFANIA BUCIUMANU4.NC"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
             "categoria": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
             "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
@@ -144,6 +122,86 @@
                 "EMANUELA BESTETTI3.5",
                 "SIBILLA MARINELLI3.4",
                 "FLAMINIA MATTEOTTI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
+            "categoria": "YONEX OPEN CUP",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ADRIANO PETRIGNANI4.3",
+                "GABRIELE LUCIANI4.NC",
+                "ROMAN BARBARULO3.5",
+                "GABRIELE MULIERE4.4",
+                "GERO MORREALE4.1",
+                "STEFANO PIETRONIRO4.4",
+                "FILIPPO TOPPI4.2",
+                "MAURO CAPUTI4.4",
+                "FEDERICO RUFO NAPOLI3.1",
+                "RAFFAELE LIGUORI4.2",
+                "JACOPO FORTUNATI4.2",
+                "GIORGIO MELIS4.3",
+                "PAOLO CHIARELLI4.5",
+                "MIRKO LO CUOCO4.1",
+                "FABIO CHIUCCHIUINI4.NC",
+                "MAURIZIO MAGGIO4.1",
+                "ALESSANDRO FABBRI4.1",
+                "FRANCESCO BALDASSARRE4.3",
+                "CRISTIAN  GENTILINI4.4",
+                "FABIO ANGELLA3.4",
+                "FABIO GIOMBETTI4.2",
+                "NOAH CHRISTOPHER GELLER PAWLAK4.2",
+                "FABRIZIO FABRIZI4.NC",
+                "LORENZO ROSATI4.3",
+                "EDOARDO GALLUSI3.1",
+                "FRANCESCO VEZZANI3.5",
+                "FLAVIO RECCHINI4.4",
+                "FEDERICO CHIARELLI4.2",
+                "SIMONE NAPOLITANO3.5",
+                "LEONARDO MACCHI4.5",
+                "LORENZO CAROCCI4.NC",
+                "LUCIO FERRARO2.8",
+                "NICCOLÒ MARIA PAGLIARO3.5",
+                "LUCIANO SOLDATI4.2",
+                "GIULIO MARINELLI3.4",
+                "LUIGI MARCIANO3.3",
+                "MASSIMILIANO TROIANI3.2",
+                "FRANCESCO SPERATI3.5",
+                "MASSIMO CALDERAN3.5",
+                "RUBEN RUSCIO2.6",
+                "SERGIO PARISI4.4",
+                "FABRIZIO SARACENO4.NC",
+                "ERNESTO MARINUCCI4.5",
+                "MARCO MINELLI3.5",
+                "ARTURO LONGO3.4",
+                "ALESSANDRO MORESCHINI4.2",
+                "GIANLUCA PERLA4.2",
+                "FABRIZIO MASALA4.2",
+                "FEDERICO SCIPIONI3.3",
+                "FEDERICO MASCI4.1",
+                "MATTIA SELLI2.6",
+                "JACOPO DONFRANCESCO3.3",
+                "GABRIELE DERIU2.7",
+                "MICHELE LUZIATELLI2.6",
+                "GIANPAOLO VANGI2.8"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
+            "categoria": "YONEX OPEN CUP",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "EMILIA DI GIOVANNI3.4",
+                "GIULIA PETRINI4.5",
+                "CHIARA RUETTA4.5",
+                "MARTINA AUGELLO2.5",
+                "SOFIJA ZARINA2.7",
+                "MADDALENA WAS4.5",
+                "RAFFAELLA FRANCESCHELLI3.4",
+                "CHIARA FANUELE4.1",
+                "FLAVIA TOMASSO3.5",
+                "MARIA COSTANZA MATRANGA2.8",
+                "ALEXANDRA IVAN2.8"
             ]
         },
         {
@@ -271,86 +329,6 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "categoria": "YONEX OPEN CUP",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ADRIANO PETRIGNANI4.3",
-                "GABRIELE LUCIANI4.NC",
-                "ROMAN BARBARULO3.5",
-                "GABRIELE MULIERE4.4",
-                "GERO MORREALE4.1",
-                "STEFANO PIETRONIRO4.4",
-                "FILIPPO TOPPI4.2",
-                "MAURO CAPUTI4.4",
-                "FEDERICO RUFO NAPOLI3.1",
-                "RAFFAELE LIGUORI4.2",
-                "JACOPO FORTUNATI4.2",
-                "GIORGIO MELIS4.3",
-                "PAOLO CHIARELLI4.5",
-                "MIRKO LO CUOCO4.1",
-                "FABIO CHIUCCHIUINI4.NC",
-                "MAURIZIO MAGGIO4.1",
-                "ALESSANDRO FABBRI4.1",
-                "FRANCESCO BALDASSARRE4.3",
-                "CRISTIAN  GENTILINI4.4",
-                "FABIO ANGELLA3.4",
-                "FABIO GIOMBETTI4.2",
-                "NOAH CHRISTOPHER GELLER PAWLAK4.2",
-                "FABRIZIO FABRIZI4.NC",
-                "LORENZO ROSATI4.3",
-                "EDOARDO GALLUSI3.1",
-                "FRANCESCO VEZZANI3.5",
-                "FLAVIO RECCHINI4.4",
-                "FEDERICO CHIARELLI4.2",
-                "SIMONE NAPOLITANO3.5",
-                "LEONARDO MACCHI4.5",
-                "LORENZO CAROCCI4.NC",
-                "LUCIO FERRARO2.8",
-                "NICCOLÒ MARIA PAGLIARO3.5",
-                "LUCIANO SOLDATI4.2",
-                "GIULIO MARINELLI3.4",
-                "LUIGI MARCIANO3.3",
-                "MASSIMILIANO TROIANI3.2",
-                "FRANCESCO SPERATI3.5",
-                "MASSIMO CALDERAN3.5",
-                "RUBEN RUSCIO2.6",
-                "SERGIO PARISI4.4",
-                "FABRIZIO SARACENO4.NC",
-                "ERNESTO MARINUCCI4.5",
-                "MARCO MINELLI3.5",
-                "ARTURO LONGO3.4",
-                "ALESSANDRO MORESCHINI4.2",
-                "GIANLUCA PERLA4.2",
-                "FABRIZIO MASALA4.2",
-                "FEDERICO SCIPIONI3.3",
-                "FEDERICO MASCI4.1",
-                "MATTIA SELLI2.6",
-                "JACOPO DONFRANCESCO3.3",
-                "GABRIELE DERIU2.7",
-                "MICHELE LUZIATELLI2.6",
-                "GIANPAOLO VANGI2.8"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "categoria": "YONEX OPEN CUP",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "EMILIA DI GIOVANNI3.4",
-                "GIULIA PETRINI4.5",
-                "CHIARA RUETTA4.5",
-                "MARTINA AUGELLO2.5",
-                "SOFIJA ZARINA2.7",
-                "MADDALENA WAS4.5",
-                "RAFFAELLA FRANCESCHELLI3.4",
-                "CHIARA FANUELE4.1",
-                "FLAVIA TOMASSO3.5",
-                "MARIA COSTANZA MATRANGA2.8",
-                "ALEXANDRA IVAN2.8"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
             "categoria": "4 ° tappa McDonald\"s serale",
             "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
@@ -421,6 +399,28 @@
                 "RICCARDO GALANTE3.5",
                 "MARIO AMICO3.3",
                 "LORENZO SERGIO3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MASSIMILIANO MESSINA4.5",
+                "FRANCESCO DI NILLO4.5",
+                "CHRISTIAN GALLETTA4.5",
+                "OMAR EL ABASIRY3.5",
+                "FLAVIO MODICA4.2",
+                "FRANCESCO FORNARA2.6",
+                "LUCA PERICA2.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "categoria": "12° ED TORVAIANICA OPEN",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ALESIA STEFANIA BUCIUMANU4.NC"
             ]
         }
     ]
