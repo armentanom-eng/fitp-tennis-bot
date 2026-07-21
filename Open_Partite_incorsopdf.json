@@ -1,38 +1,41 @@
 {
-    "report_data": "20/07/2026 19:30",
+    "report_data": "21/07/2026 19:09",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
-            "nomeTorneo": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - VIA DEI BEVILACQUA, 41, 00165 ROMA RM",
-            "data": "20/07/2026",
-            "partite": [
-                "20/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8",
-                "20/07/2026; 00:00; INIZIO",
-                "20/07/2026; 20:00; TREVISANI GABRIELE vs LIPPI DANIELE CENTIONI; PALLARIA LUANA FASOLI vs ALBANESE MARTINA SALVATORI; DE DONATO vs SELLITTO LUIGI GIORDANO; DI LUZIO vs CATALUDDI ASTOLFI",
-                "20/07/2026; 21:00; BISCEGLIE vs BOZZO ADRIANO LIVI; VIARO vs CHERUBINI ANTONIO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ACBFA39E-64F9-4F8F-B10D-CF3660282453",
             "nomeTorneo": "SUMMER IV - VILLA AURELIA SPORTING CLUB - IV CATEGORIA SINGOLI E DOPPI - VIA DEI BEVILACQUA, 41, 00165 ROMA RM",
             "data": "21/07/2026",
             "partite": [
-                "21/07/2026; 00:00; Ora 1 2 3 4 5 6 7 8",
-                "21/07/2026; 00:00; INIZIO SING FEMMINILE SING FEMMINILE SING MASCHILE SING MASCHILE SING MASCHILE SING MASCHILE SING MASCHILE",
-                "21/07/2026; 20:00; DE STEFANI vs PROIETTI GIULIA PALLARIA; CENTIONI vs SASSUN ALESSANDRA GENTILINI; CERVELLI MARCO CAPOLA vs BENTIVOGLIO ENRICO D; ISIDORO vs D",
-                "21/07/2026; 00:00; SING MASCHILE SING MASCHILE SING MASCHILE",
-                "21/07/2026; 21:00; COCHI vs PESCI MASSIMILIANO GHIRLANDA; VILLA GIULIO PELLICONE vs PES ANDREA"
+                "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "nomeTorneo": "YONEX OPEN CUP",
-            "data": "20/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
+            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
+            "data": "21/07/2026",
             "partite": [
-                "20/07/2026; 00:00; No. Campo 1 CAMPO 2",
-                "20/07/2026; 14:00; RECCHINI FLAVIO vs PERLA GIANLUCA",
-                "20/07/2026; 17:00; MARINUCCI ERNESTO vs FORTUNATI JACOPO I; PETRIGNANI ADRIANO vs MASALA FABRIZIO",
-                "20/07/2026; 18:30; CHIARELLI FEDERICO vs LIGUORI RAFFAELE I; BALDASSARRE FRANCESCO vs SOLDATI LUCIANO"
+                "21/07/2026; 00:00; No. Campo 2 campo3 campo 4",
+                "21/07/2026; 18:30; 1 DI MAGGIO ANDREA vs ALAMPI CARLO; 1 FALIVENE MATTIA vs GRAZIANI NICOLO",
+                "21/07/2026; 20:00; 1 NUZZI MATTEO vs ANASTASI VALERIANO; 1 DE LUCA PATRICK vs BELLI FABIO",
+                "21/07/2026; 21:00; 3 Inizio  Singolare Femminile Open LIM. 4.NC - 3.1 q vs SOLIMAN LUDOVICA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
+            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
+            "data": "22/07/2026",
+            "partite": [
+                "22/07/2026; 00:00; No. Campo 2 campo3 campo 4",
+                "22/07/2026; 19:00; 1 PIETROSANTI ANTONIO vs UMASSI EDOARDO I",
+                "22/07/2026; 20:30; 2 Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs GALANTE RICCARDO Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 LEI GUIDO vs q Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs PASTORE MATTEO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
+            "nomeTorneo": "12° ED TORVAIANICA OPEN",
+            "data": "21/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -48,73 +51,23 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "nomeTorneo": "12° ED TORVAIANICA OPEN",
-            "data": "20/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
+            "nomeTorneo": "YONEX OPEN CUP",
+            "data": "22/07/2026",
+            "partite": [
+                "22/07/2026; 00:00; No. Campo 1 CAMPO 2 CAMPO 3",
+                "22/07/2026; 14:30; MINELLI MARCO vs PERLA GIANLUCA",
+                "22/07/2026; 16:00; CALDERAN MASSIMO vs FORTUNATI JACOPO I; GIOMBETTI FABIO vs SPERATI FRANCESCO I; RUETTA CHIARA vs PETRINI GIULIA",
+                "22/07/2026; 17:30; NAPOLITANO SIMONE vs LO CUOCO MIRKO I; BARBARULO ROMAN vs MASCI FEDERICO",
+                "22/07/2026; 19:00; TOPPI FILIPPO vs VEZZANI FRANCESCO I; MORREALE GERO vs PAGLIARO NICCOL"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
+            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
+            "data": "21/07/2026",
             "partite": [
                 "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "data": "20/07/2026",
-            "partite": [
-                "20/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Centrale",
-                "20/07/2026; 18:00; 1 AMODIO MARTA MARIA vs DE PADOVA AURORA I; 1 NAPOLIELLO MARIA LUCIA vs RUSSILLO PAOLA I; 1 STACCHI ROBERTO vs DI CONSIGLIO CESARE; 1 VIARO MARCO vs DE SANTIS FABIO I; 1 PIERRO LUCIO vs ROSI CLAUDIO",
-                "20/07/2026; 19:30; 1 MORETTI ALESSANDRO vs VALENTINI MARCO I; 1 GULLO ALESSANDRO vs IOVANNITTI LUCA I; 1 COLABELLA VITTORIO vs PIANA ANDREA I; 1 CAMPAGNA DANIELE vs ARMOCIDA LEONARDO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "data": "21/07/2026",
-            "partite": [
-                "21/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Centrale Campo 5",
-                "21/07/2026; 18:00; 1 TORTORELLA MARCO GIUSEPPE vs VALCARENGHI LEONARDO I; 1 PETRUCCI RICCARDO vs DI CONSIGLIO CESARE",
-                "21/07/2026; 19:30; 1 BAUCO ELISABETTA vs DE PADOVA AURORA I; 1 NAPOLIELLO MARIA LUCIA vs PARAGONA MARTA I; 1 ZANACCHI LUCA vs ROSSI GABRIELE",
-                "21/07/2026; 21:00; 1 DE SANTIS FABIO vs ROSI RICCARDO I; 1 MASALA FABIO vs CALI",
-                "21/07/2026; 22:00; 4 Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 ANELLI ALESSIO vs q"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
-            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
-            "data": "20/07/2026",
-            "partite": [
-                "20/07/2026; 00:00; No. Campo 2 campo3 campo 4",
-                "20/07/2026; 18:00; 1 FRATARCANGELI VALERIO vs NUZZI MATTEO; 1 DI MAGGIO ANDREA vs GREGNANIN LUCA; 1 NERI GIANLUCA vs GRAZIANI NICOLO; STIZZA VALERIO vs RONDINELLI DAVIDE",
-                "20/07/2026; 19:30; 1 BELLI FABIO vs RAUCO PAOLO; FORCINA FABRIZIO vs PASQUINI FRANCO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
-            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
-            "data": "21/07/2026",
-            "partite": [
-                "21/07/2026; 00:00; No. Campo 2 campo3 campo 4",
-                "21/07/2026; 18:30; 1 DI MAGGIO ANDREA vs ALAMPI CARLO; 1 FALIVENE MATTIA vs GRAZIANI NICOLO",
-                "21/07/2026; 20:00; 1 NUZZI MATTEO vs ANASTASI VALERIANO; 1 DE LUCA PATRICK vs BELLI FABIO",
-                "21/07/2026; 21:00; 3 Inizio  Singolare Femminile Open LIM. 4.NC - 3.1 q vs SOLIMAN LUDOVICA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=133CA9A5-CCC8-49DC-8D8B-7204D3799CF8",
-            "nomeTorneo": "TC KIPLING - CIRCUITO \"I SERALI DI ROMA\" - 7° TAPPA - IV E III CAT. SINGOLI E DOPPI",
-            "data": "20/07/2026",
-            "partite": [
-                "20/07/2026; 00:00; No. Campo Principale Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7 Campo 8",
-                "20/07/2026; 18:00; 1 BARNI ALESSANDRO vs SIGNORILE CLAUDIO I; 1 BENTIVOGLIO ENRICO vs GIUFFRIDA MARCO I; 1 CANIGLIA FABRIZIO vs PRISCO CESARE I; 1 DE PAOLIS DAVID vs ARDESI MICHELE I; 1 FURFARO CRISTINA vs SORRENTI EMMA I; 1 SALES JACOPO vs DAIDONE FREDERICK GERHARD",
-                "20/07/2026; 19:30; 1 GAIAS SIMONA vs DE MONTE ALESSANDRA N; 1 GENTILE EMMA vs ESPOSITO ANNA N; 1 PROIETTI RICCARDO vs CAPITANI VALERIO N; 1 BETTO LEONARDO vs CALABRO; 1 CUPINI FRANCESCO vs DI FEDERICO MATTIA N; 1 SEGRETO FEDERICO vs FORNARA GIANLUCA N; 1 BAIOCCO STEFANO vs PARDINI MAURIZIO N; 1 NEBBIA LORENZO vs CALLINI ANDREA",
-                "20/07/2026; 21:30; 1 PARDINI MATTEO vs DI LORENZO FRANCESCO N; 1 CASTIGLIONE NICOLETTA LUISA vs MORELLI VALENTINA N; 1 DI GIOVANNI LEO vs CAPOLLA ALESSANDRO N; 1 MONTALTI ANDREA vs CAVAGNERO PIERPAOLO N; 1 LUNARDI MARCO vs SANNINO GIANPAOLO N; 1 CIANFANELLI GIULIO vs MISSIMI MAURO N; 1 LODDI GIANLUCA vs FOIS ALESSANDRO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=133CA9A5-CCC8-49DC-8D8B-7204D3799CF8",
-            "nomeTorneo": "TC KIPLING - CIRCUITO \"I SERALI DI ROMA\" - 7° TAPPA - IV E III CAT. SINGOLI E DOPPI",
-            "data": "21/07/2026",
-            "partite": [
-                "Nessuna partita trovata"
             ]
         }
     ]
