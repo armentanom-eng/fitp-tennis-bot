@@ -1,31 +1,4 @@
 {
-    "report_data": "20/07/2026 19:57",
-    "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "data": "20/07/2026",
-            "partite": [
-                "21/07/2026; 1 Inizio ore: 17:00 Singolare Maschile Open q vs AGNES MASSIMO Inizio ore: 17:00 Singolare Maschile Open SALVATORI ALESSANDRO vs CAREDDU PAOLO",
-                "21/07/2026; 2 Non prima delle 18:30 Singolare Maschile Open CIACCIA GIAN MARCO vs q Non prima delle 18:30 Singolare Maschile Open PACIFICI LUIGI vs LIGUORI RAFFAELE",
-                "20/07/2026; No. Campo 1",
-                "21/07/2026; 3 Non prima delle 20:00 Singolare Maschile Open GERLINI FABIO vs MASALA FABRIZIO Non prima delle 20:00 Singolare Maschile Open PERRI FRANCESCO vs SORRENTINO PAOLO",
-                "21/07/2026; No. Campo 1 Campo 2",
-                "20/07/2026; 1 Inizio ore: 18:30 Singolare Maschile Open MAGOZZI ALESSANDRO vs PLACIDI LORENZO",
-                "20/07/2026; 2 Non prima delle 20:00 Singolare Maschile Open BELBELLO LUCA vs BONUSO ANDREA"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
-            "data": "20/07/2026",
-            "partite": [
-                "20/07/2026; 2 Non prima delle 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 CAMILLI ALESSANDRO vs CAMPAGNA MAURO Inizio ore: 18:30 Singolare Maschile Open LIM. 4.NC - 3.1 SEMERANO ADRIANO o SEVIERI RUDRA vs ARMATI RICCARDO",
-                "21/07/2026; 1 Inizio ore: 14:30 Singolare Maschile Open LIM. 4.NC - 3.1 GENTILINI CRISTIAN vs CAMILLI ALESSANDRO Inizio ore: 14:30 Singolare Maschile Open LIM. 4.NC - 3.1 SEMERANO ADRIANO vs ZUCCHI LORENZO",
-                "20/07/2026; 1 Inizio ore: 17:00 Singolare Maschile Open LIM. 4.NC - 3.1 ROSSETTI ALDO vs ZUCCHI LORENZO",
-                "21/07/2026; No. Campo 1 Campo 2",
-                "20/07/2026; No. Campo 1 Campo 2"
-            ]
-        }
-    ]
+    "report_data": "21/07/2026 19:52",
+    "tornei": []
 }
