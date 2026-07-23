@@ -1,27 +1,6 @@
 {
-    "report_data": "22/07/2026 19:03",
+    "report_data": "23/07/2026 19:05",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=37AEC59A-3E92-4356-B27E-B56AC8C05007",
-            "nomeTorneo": "12° ED TORVAIANICA OPEN",
-            "data": "22/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
-            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
-            "data": "22/07/2026",
-            "partite": [
-                "22/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Centrale Campo 6",
-                "22/07/2026; 18:00; 1 SCAGNOLI SANDRO vs IOVANNITTI LUCA I; 1 LUCIANI ANDREA vs MARTINI MATTEO I; 1 MODICA FLAVIO vs FORATTINI NICOL; 1 ZANACCHI LUCA vs MOLINAS LUCA I; 1 FARINA LEONARDO vs BOCCHINI FERNANDO I; 1 DI CONSIGLIO CESARE vs ROSI RICCARDO",
-                "22/07/2026; 19:30; 1 BONOMI LORENZO vs FIORE CARLO I; 1 ERREDE PHILIPPE LEON vs MORGANTI MARCO I; 1 CARCIONE ROBERTO vs ANELLI ALESSIO I; 1 GIOMBETTI FABIO vs VARANO PAOLO I; 1 MARIANI SALVATORE vs CAMPAGNA DANIELE I; 1 VALCARENGHI LEONARDO vs CLEMENTE DANIELE",
-                "22/07/2026; 21:00; 1 BARTOLONI GABRIELE vs MELIS GIORGIO I; 1 GUARALDI DANIELE vs PIANA ANDREA I; 1 CALVITTI ALFONSO vs GALIZIA LORENZO I; 1 NICOLETTI FABIO vs COLONNA ADRIANO I; 1 PACIUCCI ALESSANDRO vs METELLI MARCO I; 1 FIDERIO GIOVANNI vs CALI",
-                "22/07/2026; 22:00; ORAZIO STEFANO vs CORARETTI ANDREA A; 1 DI FEDERICO MATTIA vs LO PRESTI LUCA I; 1 FARACI FLAVIO vs CHIARELLI FEDERICO I; 1 NAPOLIELLO MARIA LUCIA vs ESPOSITO ANNA I; 1 MUSILLI ANDREA vs AMATO FRANCESCO I; 1 MILLESIMI FABIO vs MAGNIFICO NUNZIO",
-                "22/07/2026; 00:00; 1 PINTA LEONARDO vs FIORE EMANUELE"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
             "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
@@ -35,47 +14,82 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "nomeTorneo": "YONEX OPEN CUP",
-            "data": "22/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=92D541B4-49D2-4E52-90BE-7D8E003F0E75",
+            "nomeTorneo": "VIII° TAPPA ATP LAZIO TOUR 2026 - SERALE - SINGOLARE M/F LIM. 3.1",
+            "data": "24/07/2026",
             "partite": [
-                "22/07/2026; 00:00; No. Campo 1 CAMPO 2 CAMPO 3",
-                "22/07/2026; 14:30; MINELLI MARCO vs PERLA GIANLUCA",
-                "22/07/2026; 16:00; CALDERAN MASSIMO vs FORTUNATI JACOPO I; GIOMBETTI FABIO vs SPERATI FRANCESCO I; RUETTA CHIARA vs PETRINI GIULIA",
-                "22/07/2026; 17:30; NAPOLITANO SIMONE vs LO CUOCO MIRKO I; BARBARULO ROMAN vs MASCI FEDERICO",
-                "22/07/2026; 19:00; TOPPI FILIPPO vs VEZZANI FRANCESCO I; MORREALE GERO vs PAGLIARO NICCOL"
+                "24/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Centrale Campo 6",
+                "24/07/2026; 18:00; 1 CORDARO MASSIMO vs FIDERIO GIOVANNI; VALCARENGHI LEONARDO vs BATTAGLIA EDOARDO I; ORAZIO FRANCESCO vs GUARALDI DANIELE; LO PRESTI LUCA vs GALIERO DAVIDE I; 1 CAMERA RICCARDO vs CARCIONE ROBERTO; 1 SASSUN ALESSANDRA vs CRISPINO MARTA I; 1 ESPOSITO ANNA vs MAGGIORE MARGHERITA I; 1 BLASI MARTINA vs LO BELLO ANNA",
+                "24/07/2026; 19:30; 1 CESAREO MARCO vs ERREDE PHILIPPE LEON; POGGINI GABRIELE vs BIANCHI LORENZO I; 1 SCARABOTTI MASSIMILIANO vs METELLI MARCO; MARINO MATTEO vs BARUZZI MAURIZIO I; 1 FIORELLI STEFANO vs BONOMI LORENZO; LIGUORI RAFFAELE vs PERIFANO SALVATORE I; 1 DE PADOVA AURORA vs OLTEANU ALESSIA ANDREEA I; 1 OREFICI MARCO vs GIOMBETTI FABIO; FIORE EMANUELE vs DI FABIO DANILO I; 1 IRNO CONSALVO VALERIA vs PLACIDI CINTHIA",
+                "24/07/2026; 21:00; 1 MARTONE STEFANO vs COLONNA ADRIANO; 1 CORONGIU PAOLO vs MARIANI SALVATORE; ZANACCHI LUCA vs MASSARA MATTEO I; 1 SCHIAVONI ALESSANDRO vs BARTOLONI GABRIELE; 1 GUAGNI CARLO vs MAGNIFICO NUNZIO; GALIZIA LORENZO vs POLI ALESSANDRO I; 1 MONTIRONI GABRIELE vs MARTINI MATTEO; FARINA LEONARDO vs LATTES FRANCESCO I; 1 FABBRI ALESSANDRO vs IOVANNITTI LUCA; ORAZIO STEFANO vs CELANI EDOARDO"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=36AD17AA-7642-40F3-9883-769A9246F9D4",
-            "nomeTorneo": "YONEX OPEN CUP",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
             "data": "23/07/2026",
             "partite": [
-                "23/07/2026; 00:00; No. Campo 1 CAMPO 2 CAMPO 3",
-                "23/07/2026; 15:00; MARIA vs ANGELLA FABIO I; PERLA GIANLUCA vs CALDERAN MASSIMO I",
-                "23/07/2026; 17:00; MARINELLI GIULIO vs LONGO ARTURO",
-                "23/07/2026; 19:00; FANUELE CHIARA vs PETRINI GIULIA I; VEZZANI FRANCESCO vs SPERATI FRANCESCO"
+                "23/07/2026; 00:00; No. Campo 1 Campo 2",
+                "23/07/2026; 17:00; 1 ROSATI LORENZO vs CHIATRONI ANDREA",
+                "23/07/2026; 18:30; 1 SEMERANO ADRIANO vs MASSA MAURIZIO"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
-            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
-            "data": "22/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
+            "data": "24/07/2026",
             "partite": [
-                "22/07/2026; 00:00; No. Campo 2 campo3 campo 4",
-                "22/07/2026; 19:00; 1 PIETROSANTI ANTONIO vs UMASSI EDOARDO I",
-                "22/07/2026; 20:30; 2 Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs GALANTE RICCARDO Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 LEI GUIDO vs q Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs PASTORE MATTEO"
+                "24/07/2026; 00:00; No. Campo 1 Campo 2",
+                "24/07/2026; 15:00; 1 FABIANI FEDERICO vs BARUZZI MAURIZIO I; 1 MILAZZO SONIA vs PELONE MICHELA",
+                "24/07/2026; 16:30; 1 RONZANI LEONARDO vs CAMILLI ALESSANDRO N; 1 CHIATRONI ANDREA vs MANCIOCCHI GIOSUE",
+                "24/07/2026; 18:00; 1 MASSA MAURIZIO vs D"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3ACC351C-43DD-4BC0-8906-11FCF55388F8",
-            "nomeTorneo": "4 ° TAPPA MCDONALD\"S SERALE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
             "data": "23/07/2026",
             "partite": [
-                "23/07/2026; 00:00; No. Campo 2 campo3 campo 4",
-                "23/07/2026; 18:00; 1 PIETROSANTI ANTONIO vs UMASSI EDOARDO; GALANTE RICCARDO vs MINISSALE ALESSANDRO",
-                "23/07/2026; 19:30; 1 FURNO ERMELINDA vs MANCUSO SIMONA I; 1 TOSCANO MANUELA vs SAVELLI FRANCESCA I; PASTORE MATTEO vs AMICO MARIO",
-                "23/07/2026; 21:00; 1 SERGIO LORENZO vs LEI GUIDO"
+                "23/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "23/07/2026; 17:00; GRIECO ROBERTA vs CARRANI MICHELA I; BENTIVOGLIO ENRICO vs PERRIA ANDREA; SALVATORI ALESSANDRO vs ACQUAVIVA CIRO",
+                "23/07/2026; 18:30; SORRENTINO PAOLO vs FAIS RUGGERO N; MARINI MATTEO vs CANIGLIA FABRIZIO N; BELLACCI GIULIA vs CASCIO GIOVANNA ANGELA RITA",
+                "23/07/2026; 20:00; DI GIOVANNI LEO vs GERLINI FABIO N; GIULIANI FABIO vs CANCIANI GIANLUCA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
+            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
+            "data": "24/07/2026",
+            "partite": [
+                "24/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "24/07/2026; 16:00; MONTELEONE EMANUELE vs ZUCCARINI ANDREA I",
+                "24/07/2026; 17:30; 2 Non prima delle Singolare Maschile Open q vs LA ROSA LUCA Non prima delle Singolare Maschile Open q vs ANTONELLI GIULIO Non prima delle Singolare Maschile Open q vs APPOLLONI DAMIANO",
+                "24/07/2026; 19:00; 3 Non prima delle Singolare Maschile Open q vs CANNELLA ROBERTO Non prima delle Singolare Maschile Open q vs GAROFALO CRISTIAN Non prima delle Singolare Maschile Open q vs FRANGI PATRIZIO",
+                "24/07/2026; 20:30; BETTO LEONARDO vs MURRI EMANUELE N"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
+            "nomeTorneo": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "data": "23/07/2026",
+            "partite": [
+                "23/07/2026; 00:00; No. Campo 1 (Principale) Campo 2",
+                "23/07/2026; 18:00; SAVINI DAVIDE vs FABRIZI FABRIZIO I; MORALES LOPEZ LORENZO TOMAS vs PERFETTO DAVIDE MARIA",
+                "23/07/2026; 19:00; ANNIBALE MATTIA vs SAVINI DAVIDE; MORALES LOPEZ LORENZO TOMAS vs PERFETTO DAVIDE MARIA",
+                "23/07/2026; 20:00; GUIDI SIMONE vs D; ANNIBALE MATTIA vs SAVINI DAVIDE; MORALES LOPEZ LORENZO TOMAS vs PERFETTO DAVIDE MARIA; COCCO GABRIEL vs PETRELLA FEDERICO",
+                "23/07/2026; 21:00; CERQUOZZI MATTIA vs GUIDI SIMONE; ANNIBALE MATTIA vs SAVINI DAVIDE"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B4F64F94-7C3E-49F1-9C25-55743A039E15",
+            "nomeTorneo": "BT PAY RODEO LUGLIO BY SPORFIE",
+            "data": "24/07/2026",
+            "partite": [
+                "24/07/2026; 00:00; No. Campo 1 (Principale) Campo 2",
+                "24/07/2026; 18:00; 1 Inizio  Singolare Maschile Open IMPERIA EDOARDO vs q Inizio  Singolare Maschile Open q vs FAVALE CORRADO",
+                "24/07/2026; 19:00; FAVALE CORRADO vs FONZI DANIELE",
+                "24/07/2026; 20:00; DERIU DAVIDE vs M32NOR E; FAVALE CORRADO vs FONZI DANIELE",
+                "24/07/2026; 21:00; 4 Dopo debito riposo non prima delle Singolare Maschile Open q vs CRUCIANI FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Open ABBAMONDI GABRIELE vs q"
             ]
         }
     ]
