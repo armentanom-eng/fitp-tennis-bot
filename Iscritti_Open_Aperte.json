@@ -1,6 +1,61 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "AMALIA DORMI3.2",
+                "MICHELA PELONE4.2",
+                "ALEXANDRA DORMI3.1",
+                "ALEXIA ROSSI4.1",
+                "GIORGIA TAGLIA3.3",
+                "SONIA MILAZZO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
+            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
+            "iscritti": [
+                "MATTEO CONTI3.4",
+                "ALDO ROSSETTI4.NC",
+                "GABRIELE SILVESTRI3.5",
+                "RICCARDO ROSCETTI3.4",
+                "ANDREA CHIATRONI4.3",
+                "LEONARDO VALCARENGHI4.3",
+                "MAURO CAMPAGNA4.NC",
+                "CRISTIAN  GENTILINI4.4",
+                "ENRICO PROIETTI4.NC",
+                "FEDERICO FABIANI4.2",
+                "NICOLÒ BIANCHI4.2",
+                "ADRIANO SEMERANO4.6",
+                "FABIO CUPPITELLI3.5",
+                "LEONARDO RONZANI4.1",
+                "MAURIZIO MASSA4.2",
+                "FABRIZIO LUCARINI3.5",
+                "LUCA SEVIERI3.5",
+                "MASSIMILIANO DI CINTIO3.3",
+                "DAVIDE DERIU3.1",
+                "ALESSANDRO GRECO4.NC",
+                "LORENZO  ZUCCHI4.4",
+                "ALESSANDRO CAMILLI4.5",
+                "LORENZO ROSATI4.3",
+                "MAURIZIO BARUZZI4.2",
+                "VALERIO FRATARCANGELI4.3",
+                "RUDRA SEVIERI4.5",
+                "RICCARDO ARMATI4.4",
+                "GIOSUE' MANCIOCCHI4.2",
+                "ALESSANDRO SIGNORETTA3.5",
+                "LUCA PISANI3.3",
+                "GINO PAGLIARULO3.5",
+                "GIORGIO D'ANDREA4.1",
+                "JOSEPH CELLI3.2",
+                "CARLO TERRANOVA3.2",
+                "LUCA CIAFFI3.4"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
             "categoria": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
             "tabellone": "Singolare Femminile Open",
@@ -107,60 +162,6 @@
                 "GABRIELE  TIROCCHI4.2",
                 "RARES ANDREI CARCEL4.1",
                 "ANDREA SOROKATYY2.8"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "AMALIA DORMI3.2",
-                "MICHELA PELONE4.2",
-                "ALEXANDRA DORMI3.1",
-                "ALEXIA ROSSI4.1",
-                "GIORGIA TAGLIA3.3",
-                "SONIA MILAZZO4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "categoria": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ Cat. M/F - 4^ Tappa",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "MATTEO CONTI3.4",
-                "ALDO ROSSETTI4.NC",
-                "GABRIELE SILVESTRI3.5",
-                "RICCARDO ROSCETTI3.4",
-                "ANDREA CHIATRONI4.3",
-                "LEONARDO VALCARENGHI4.3",
-                "MAURO CAMPAGNA4.NC",
-                "CRISTIAN  GENTILINI4.4",
-                "ENRICO PROIETTI4.NC",
-                "FEDERICO FABIANI4.2",
-                "NICOLÒ BIANCHI4.2",
-                "ADRIANO SEMERANO4.6",
-                "FABIO CUPPITELLI3.5",
-                "LEONARDO RONZANI4.1",
-                "MAURIZIO MASSA4.2",
-                "FABRIZIO LUCARINI3.5",
-                "LUCA SEVIERI3.5",
-                "MASSIMILIANO DI CINTIO3.3",
-                "DAVIDE DERIU3.1",
-                "ALESSANDRO GRECO4.NC",
-                "LORENZO  ZUCCHI4.4",
-                "ALESSANDRO CAMILLI4.5",
-                "LORENZO ROSATI4.3",
-                "MAURIZIO BARUZZI4.2",
-                "VALERIO FRATARCANGELI4.3",
-                "RUDRA SEVIERI4.5",
-                "RICCARDO ARMATI4.4",
-                "GIOSUE' MANCIOCCHI4.2",
-                "ALESSANDRO SIGNORETTA3.5",
-                "LUCA PISANI3.3",
-                "GINO PAGLIARULO3.5",
-                "GIORGIO D'ANDREA4.1",
-                "JOSEPH CELLI3.2",
-                "CARLO TERRANOVA3.2"
             ]
         }
     ]
