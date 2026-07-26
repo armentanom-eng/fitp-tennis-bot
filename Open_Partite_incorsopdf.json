@@ -1,25 +1,6 @@
 {
-    "report_data": "25/07/2026 18:58",
+    "report_data": "26/07/2026 19:02",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=501DCC43-5FF4-482D-A635-1A6A54C511DC",
-            "nomeTorneo": "4^ TAPPA OPEN DECATHLON TENNIS CUP",
-            "data": "25/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
-            "data": "25/07/2026",
-            "partite": [
-                "25/07/2026; 00:00; No. Campo 1 Campo 2",
-                "25/07/2026; 10:30; 1 ROSSI ALEXIA vs MILAZZO SONIA I; 1 SIGNORETTA ALESSANDRO vs CAMILLI ALESSANDRO",
-                "25/07/2026; 16:00; 1 MASSA MAURIZIO vs PAGLIARULO GINO N; 1 SEVIERI LUCA vs CUPPITELLI FABIO",
-                "25/07/2026; 17:30; 1 SILVESTRI GABRIELE vs CHIATRONI ANDREA N; 1 FABIANI FEDERICO vs LUCARINI FABRIZIO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
             "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
@@ -32,6 +13,25 @@
                 "26/07/2026; 15:00; 1 MILAZZO SONIA vs TAGLIA GIORGIA",
                 "26/07/2026; 16:30; 1 DI CINTIO MASSIMILIANO vs CAMILLI ALESSANDRO; PISANI LUCA vs SEVIERI LUCA D; 1 PAGLIARULO GINO vs CONTI MATTEO",
                 "26/07/2026; 18:00; 1 DERIU DAVIDE vs CIAFFI LUCA; 1 LUCARINI FABRIZIO vs ROSCETTI RICCARDO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
+            "data": "27/07/2026",
+            "partite": [
+                "27/07/2026; 00:00; No. Campo 1 Campo 2",
+                "27/07/2026; 16:00; 1 TAGLIA GIORGIA vs DORMI AMALIA I; 1 FABIANI FEDERICO vs CAMILLI ALESSANDRO",
+                "27/07/2026; 17:30; 1 DERIU DAVIDE vs PISANI LUCA N; 1 CHIATRONI ANDREA vs MASSA MAURIZIO",
+                "27/07/2026; 19:00; 1 TERRANOVA CARLO vs ROSCETTI RICCARDO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
+            "nomeTorneo": "9000€ - TERRACINA OPEN SANDRO MARI BY ORIZZONTE - TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
+            "data": "26/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         }
     ]
