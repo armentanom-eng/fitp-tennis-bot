@@ -1,37 +1,28 @@
 {
-    "report_data": "26/07/2026 19:02",
+    "report_data": "27/07/2026 19:18",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
-            "data": "26/07/2026",
-            "partite": [
-                "26/07/2026; 00:00; No. Campo 1 Campo 2",
-                "26/07/2026; 09:00; 1 DI CINTIO MASSIMILIANO vs CAMILLI ALESSANDRO I; 1 PAGLIARULO GINO vs CONTI MATTEO",
-                "26/07/2026; 10:30; 1 PISANI LUCA vs SEVIERI LUCA N; 1 LUCARINI FABRIZIO vs ROSCETTI RICCARDO",
-                "26/07/2026; 12:00; 1 CIAFFI LUCA vs SILVESTRI GABRIELE",
-                "26/07/2026; 15:00; 1 MILAZZO SONIA vs TAGLIA GIORGIA",
-                "26/07/2026; 16:30; 1 DI CINTIO MASSIMILIANO vs CAMILLI ALESSANDRO; PISANI LUCA vs SEVIERI LUCA D; 1 PAGLIARULO GINO vs CONTI MATTEO",
-                "26/07/2026; 18:00; 1 DERIU DAVIDE vs CIAFFI LUCA; 1 LUCARINI FABRIZIO vs ROSCETTI RICCARDO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5E2CB1A7-3935-4477-A7AF-DAC31F81A27D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 4^ TAPPA",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
+            "nomeTorneo": "9000€ - TERRACINA OPEN SANDRO MARI BY ORIZZONTE - TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
             "data": "27/07/2026",
             "partite": [
-                "27/07/2026; 00:00; No. Campo 1 Campo 2",
-                "27/07/2026; 16:00; 1 TAGLIA GIORGIA vs DORMI AMALIA I; 1 FABIANI FEDERICO vs CAMILLI ALESSANDRO",
-                "27/07/2026; 17:30; 1 DERIU DAVIDE vs PISANI LUCA N; 1 CHIATRONI ANDREA vs MASSA MAURIZIO",
-                "27/07/2026; 19:00; 1 TERRANOVA CARLO vs ROSCETTI RICCARDO"
+                "27/07/2026; 00:00; No. Campo Centrale Sandro Mari Campi 1 Orizzonte",
+                "27/07/2026; 17:00; PALOMBI DAVIDE vs MITELLI GIACOMO; DE ROSA ATTILIO vs MONTANARO FRANCESCO",
+                "27/07/2026; 18:30; ROSELLI ALEX vs CERRONI ENRICO; BRUNI STEFANO vs CAPITANIO UMBERTO GIUSEPPE",
+                "27/07/2026; 20:00; MACCHIONE SIMONE vs DE MAIO DAMIANO N; LEGGERI ALESSANDRO vs RUSSILLO ANTONIO",
+                "27/07/2026; 21:30; ROBINSON SOLIS JORGE vs BAIA ALESSANDRO N; AUGELLI ANTONIO vs FICHERA ANDREA"
             ]
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
             "nomeTorneo": "9000€ - TERRACINA OPEN SANDRO MARI BY ORIZZONTE - TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
-            "data": "26/07/2026",
+            "data": "28/07/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "28/07/2026; 00:00; No. Campo Centrale Sandro Mari Campi 1 Orizzonte",
+                "28/07/2026; 17:00; CERRONI ENRICO vs DEL GIUDICE ANDREA; FICHERA ANDREA vs TOTARO LEONARDO",
+                "28/07/2026; 18:30; TERZOLI RICCARDO vs DE ROSA ATTILIO N; PALOMBI DAVIDE vs BARBIERI ALESSANDRO",
+                "28/07/2026; 20:00; CERELLI GIOELE vs MACCHIONE SIMONE; BORSOI JACOPO vs BRUNI STEFANO",
+                "28/07/2026; 21:30; LEGGERI ALESSANDRO vs D; INTINI LORENZO vs MENCAGLIA SILVIO N; LETI MESSINA LEONARDO vs ROBINSON SOLIS JORGE"
             ]
         }
     ]
