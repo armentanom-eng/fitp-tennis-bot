@@ -1,54 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
-            "categoria": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
-            "tabellone": "Singolare Femminile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "CLAUDIA RUFINI4.5",
-                "CAMILLA STORONI4.6",
-                "SOFIA ROMAGNOLI4.NC",
-                "RACHELE DEGRASSI3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
-            "categoria": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
-            "tabellone": "Singolare Maschile Open LIM. 4.NC - 3.1",
-            "iscritti": [
-                "FABIO SACCO4.NC",
-                "DANIELE MORGANTI4.NC",
-                "MASSIMILIANO MESSINA4.5",
-                "VIRGILIO PIRRI4.4",
-                "LEONARDO BRUSCHINI3.4",
-                "RAIMONDO GROSSI3.5",
-                "ALESSANDRO MANILI4.NC",
-                "MARCO MOSCHELLA3.5",
-                "ALESSIO VAGNI3.5",
-                "ALESSANDRO BIANCO4.6",
-                "MATTEO NUZZI4.3",
-                "GIANLUCA BATTISTI4.NC",
-                "LEONARDO SPINA4.1",
-                "RICCARDO GALANTE3.5",
-                "VALERIO STIZZA4.2",
-                "MASSIMILIANO DI CINTIO3.3",
-                "FABIO GIARDULLI4.5",
-                "GIANCARLO CACCIOTTI4.4",
-                "SAMUEL FRANCESCO SAKHER DEVE4.NC",
-                "ALESSIO PASSALACQUA3.2",
-                "FABIO DEL CASTELLO4.5",
-                "FRANCO PASQUINI4.3",
-                "ROMAN BARBARULO3.5",
-                "MASSIMILIANO BLASINI4.1",
-                "FEDERICO COSMI3.5",
-                "VITTORIO CLEMENTI4.1",
-                "ALESSANDRO MINISSALE3.4",
-                "MARCO MASTROMATTEO3.4",
-                "JACOPO MARZELLA3.2",
-                "PATRICK DE LUCA4.1"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=FA92DCE1-E29D-4E21-A449-D12BBBCD32C5",
             "categoria": "9000€ - TERRACINA OPEN SANDRO MARI by ORIZZONTE -  TAB 40 SINGOLARE MASCHILE - SPORTING QUADRIFOGLIO - VIALE EUROPA, 214, 04019 TERRACINA LT",
             "tabellone": "Singolare Maschile Open",
