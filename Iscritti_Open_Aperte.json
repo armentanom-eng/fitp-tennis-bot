@@ -19,7 +19,6 @@
                 "SOFIA PINAT3.3",
                 "ALESSANDRA SASSUN4.2",
                 "FIAMMA BONFIGLIO3.4",
-                "MATILDE MAGI3.2",
                 "FEDERICA PERUGINI4.3",
                 "CRISTIANA PAOLI4.4",
                 "GIULIA SELLI4.2",
@@ -39,7 +38,9 @@
                 "CLAUDIA NAPOLI3.5",
                 "MARIAPAOLA SALAMANCA4.2",
                 "SOFIA RICCI3.4",
-                "BENEDETTA SATALIA4.2"
+                "BENEDETTA SATALIA4.2",
+                "SAVINA GERSAK3.4",
+                "CATERINA CIARCIA3.5"
             ]
         },
         {
@@ -96,7 +97,6 @@
                 "ALESSANDRO GABRIELE3.4",
                 "VITTORIO MAZZA4.2",
                 "EDOARDO FUSARI3.1",
-                "GIANCARLO FIORI3.4",
                 "LORENZO NARDUZZI3.5",
                 "FEDERICO SINI4.1",
                 "STEFANO SINI3.5",
@@ -106,7 +106,8 @@
                 "GIACOMO ZAPPALA3.5",
                 "ANDREA ASCIONE4.3",
                 "FABIO MASALA4.3",
-                "MARCO LIUNI4.3"
+                "MARCO LIUNI4.3",
+                "ALESSANDRO NASCHI3.3"
             ]
         },
         {
@@ -126,10 +127,6 @@
                 "DAVIDE FONTANA4.1",
                 "MATTEO CAPUANO3.4",
                 "GIANMARCO MERINGOLO4.2",
-                "DIEGO DELI3.5",
-                "GIULIO DE SANTIS4.3",
-                "FRANCESCO CALANDRINI3.2",
-                "PAOLO PETRUCCI3.4",
                 "MASSIMILIANO PARINI3.1",
                 "GIOVANNI FIOCCHETTI3.3",
                 "MARCO FUSARI4.NC",
@@ -141,7 +138,11 @@
                 "LORENZO SERGIO3.2",
                 "TOMMASO FORCELLA4.NC",
                 "FRANCESCO MARIA SURACE3.5",
-                "MICHELANGELO GRESSANI4.3"
+                "MICHELANGELO GRESSANI4.3",
+                "EMANUELE TIBERI4.4",
+                "ALDO MARIA DI LERNIA4.3",
+                "GIULIO DE SANTIS4.3",
+                "BRUNO SCAZZOCCHIO4.5"
             ]
         },
         {
@@ -164,7 +165,6 @@
                 "IACOPO MEZZANOTTE4.2",
                 "ENRICO BENTIVOGLIO4.1",
                 "MARCO GIUFFRIDA4.4",
-                "LORENZO UVA3.5",
                 "FABIO FRANZELLETTI4.5",
                 "EMILIANO PANIERI4.3",
                 "MARCO VIARO4.4",
@@ -214,12 +214,13 @@
                 "FEDERICO MATRONE3.3",
                 "SALVATORE CIRAFICI4.5",
                 "ALESSIO BRUNI4.6",
-                "GIACOMO TORTORELLA4.2",
                 "CRISTIANO LUIGI MAZZOLI4.3",
                 "CRISTIAN CAPOLA4.2",
                 "STEFANO MURA4.5",
                 "LORENZO LUPETTI3.5",
-                "ALFREDO DI PANGRAZIO4.2"
+                "ALFREDO DI PANGRAZIO4.2",
+                "PASQUALE SORGENTONE4.3",
+                "RAFFAELE LIGUORI4.2"
             ]
         },
         {
@@ -266,12 +267,14 @@
                 "MARTINA ALBANESE4.2",
                 "FRANCESCA CORICELLI4.4",
                 "ANNA REPERTORIO4.5",
-                "ANTONELLA COLARIETI4.2",
                 "ISABELLA MUNDULA4.2",
                 "ANTONIA MARIA PAUNESCU3.5",
                 "LUDOVICA CERTELLI3.5",
                 "VALENTINA MELICIANI4.2",
-                "NATALIA LAZZARIN4.2"
+                "NATALIA LAZZARIN4.2",
+                "SIMONA CARROZZA4.3",
+                "LAURA BALLA4.3",
+                "MARTA INCITTI4.1"
             ]
         },
         {
@@ -296,7 +299,9 @@
                 "EMANUELE TIBERI4.4",
                 "ALDO MARIA DI LERNIA4.3",
                 "GIANLUCA MURRI3.5",
-                "ALESSANDRO MIGLIORE4.2"
+                "ALESSANDRO MIGLIORE4.2",
+                "MATTIA PLACIDI4.1",
+                "JACOPO ROSSI3.5"
             ]
         }
     ]
