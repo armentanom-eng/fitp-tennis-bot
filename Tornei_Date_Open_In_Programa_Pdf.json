@@ -1,61 +1,26 @@
 {
-    "report_data": "27/07/2026 19:54",
+    "report_data": "28/07/2026 19:52",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=33DC3B5C-8BEC-46BE-8A82-04D89A7D8FE4",
-            "nomeTorneo": "SUMMER CUP 4 E 3 CAT MASCHILE E FEMMINILE",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D635E1E6-6393-4295-A07F-F6E257AA213A",
-            "nomeTorneo": "IX TAPPA ATP LAZIO TOUR SERALE LIM 3.1 M/F GARDEN VILLAGE \"SELVA DEI PINI\"",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7094B406-EE38-499F-91A6-D462AE37FAB2",
             "nomeTorneo": "LIFE CLUB M/F",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=04BEC7CD-0348-4388-A7DB-AF26B8BD4897",
-            "nomeTorneo": "VI° TAPPA \"SUMMER IV ROMA\" (LIM 4.1 M/F) - SINGOLI E DOPPI - SERALE",
-            "data": "27/07/2026",
-            "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=04BEC7CD-0348-4388-A7DB-AF26B8BD4897",
-            "nomeTorneo": "VI° TAPPA \"SUMMER IV ROMA\" (LIM 4.1 M/F) - SINGOLI E DOPPI - SERALE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B3F0499C-63C2-464F-8CDB-00892996436D",
+            "nomeTorneo": "END SUMMER 26 VILLAYORK GIAANICOLO/MONTEVERDE SINGOLI E DOPPI LIM. 3 CAT",
             "data": "28/07/2026",
             "partite": [
-                "28/07/2026; 00:00; No. Campo 1 Campo 2",
-                "28/07/2026; 19:30; 1 CHIUCCHIUINI FABIO vs BRUNI CLAUDIO",
-                "28/07/2026; 21:00; 1 MILONE ANGELO vs PETRUCCI RICCARDO I; 1 ANTINORI ALESSANDRO vs CAMPETI VINCENZO",
-                "28/07/2026; 22:00; 1 DI CHIARA TOMMASO vs DEVE SAMUEL FRANCESCO SAKHER I; 1 MAROLDA FRANCESCO vs CARDARELLI GABRIELE"
+                "Tabellone non disponibile"
             ]
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=F4A9DADD-9EB1-48A5-BD53-DAD1365E745F",
             "nomeTorneo": "TYRSENIA SUMMER RODEO 2",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D29A4D12-5085-46C5-85FE-BB537AB7BEC9",
-            "nomeTorneo": "MEMORIAL \"GIANVITTORIO MARTINO\" TORNEO OPEN CAT M & F CON MONTEPREMI 4500 €",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -63,23 +28,7 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1D7F33EC-36FA-4DC2-B555-7B3D7653B3EA",
             "nomeTorneo": "TYRSENIA SUMMER RODEO 1",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=19C25C57-BFD1-45BA-B96C-B7EBCCBEE16C",
-            "nomeTorneo": "MASTER FINALE CIRCUITO OPEN 2026 CRLAZIO/PARCO DEGLI ACQUEDOTTI",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
-            "nomeTorneo": "SUMMER IV ROMA",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -87,7 +36,25 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A77405F1-6322-4E39-B06C-9C66A5D54D07",
             "nomeTorneo": "6 TORNEO SERALE M E F",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
+            "partite": [
+                "Nessuna partita trovata"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A77405F1-6322-4E39-B06C-9C66A5D54D07",
+            "nomeTorneo": "6 TORNEO SERALE M E F",
+            "data": "29/07/2026",
+            "partite": [
+                "29/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "29/07/2026; 18:00; IANNUCCI PIETRO vs GIARRUSSO DINO RICCARDO MARIA I; RAMUNDI TOMMASO vs DI RUZZA SIMONE I; PALANDRA FRANCESCO vs PROIETTI ANDREA",
+                "29/07/2026; 19:30; CIRAFICI SALVATORE vs CHIOSTRO DANIELE N; IMPECIATI MASSIMO vs FUMAGALLI VALERIO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7398A47-6A3D-46B5-B27C-3B2242691E7D",
+            "nomeTorneo": "15.000€+H (DAI QUARTI) - FONDI OPEN PETROL GAMMA - TAB 40 SINGOLARE MASCHILE - TENNIS CLUB FONDI - VIA PONTE TAVOLATO 49, 04022 FONDI LT - OSPITALITA' VEDI NOTE",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -95,62 +62,25 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=580BB429-EC53-4736-8BD4-5C6E59E4EA7E",
             "nomeTorneo": "8° TROFEO CANOTTIERI LAZIO €5000",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=143EF5AE-732D-4548-A7F9-DC6D67DDC6CE",
-            "nomeTorneo": "CIRCOLO CANOTTIERI ROMA - CIRCUITO \"I SERALI DI ROMA\" - MEMORIAL PINO ORECCHIO - IV E III CAT. SINGOLI E DOPPI - LUNGOTEVERE FLAMINIO 39, 00196 ROMA RM - ABBIGLIAMENTO BIANCO",
-            "data": "27/07/2026",
-            "partite": [
-                "27/07/2026; 00:00; No. Campo A Campo B Campo C Campo D Campo E Campo F",
-                "27/07/2026; 19:00; 1 PERUGINI FEDERICA vs PAOLI CRISTIANA I; 1 TIRIBELLI EMANUELE vs PALERMO PIERPAOLO I; 1 BAUCO ELISABETTA vs MOSCINI TANIA; 1 ZANACCHI LUCA vs TRANI LORENZO I; 1 BOCCAFOGLI FLAVIO FRANCO vs FIORE STEFANO I; 1 ASCIONE ANDREA vs CARAMANTE AMERIGO",
-                "27/07/2026; 20:30; 1 MARMORATO FRANCESCO LUCA vs MECHELLI ALESSANDRO N; 1 MALDERA ROBERTA vs VETTORELLI GIULIA; 1 SILVESTRI GIANMARCO vs QUINTO MATTEO N; 1 GIANSANTE ANDREA vs LOFFREDO GIAMPAOLO N",
-                "27/07/2026; 22:00; 1 FRANZA LORENZO vs QUINTO PAOLO N; 1 PILLA LUCA vs MIANI MASSIMO N"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=143EF5AE-732D-4548-A7F9-DC6D67DDC6CE",
-            "nomeTorneo": "CIRCOLO CANOTTIERI ROMA - CIRCUITO \"I SERALI DI ROMA\" - MEMORIAL PINO ORECCHIO - IV E III CAT. SINGOLI E DOPPI - LUNGOTEVERE FLAMINIO 39, 00196 ROMA RM - ABBIGLIAMENTO BIANCO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
+            "nomeTorneo": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
             "data": "28/07/2026",
             "partite": [
-                "28/07/2026; 00:00; No. Campo A Campo B Campo C Campo D Campo E Campo F",
-                "28/07/2026; 19:00; 1 Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs FIORE EMANUELE Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs CARDI MAURIZIO Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs RIGAMONTI CLAUDIO Inizio  Singolare Maschile Open LIM. 4.NC - 3.1 q vs DE PALO FABIO Non prima delle Singolare Maschile Open LIM. 4.NC - 3.1 q vs PICCA DANTE Inizio  Singolare Femminile Open LIM. 4.NC - 3.1 q vs SATALIA BENEDETTA",
-                "28/07/2026; 20:30; 1 VOLPI JACOPO vs BRUZZICHELLI MATTEO N",
-                "28/07/2026; 22:00; 1 MONTI EMANUELE vs MINUTOLO GIANLUCA N"
+                "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "nomeTorneo": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO LIM. 3.1",
-            "data": "27/07/2026",
-            "partite": [
-                "27/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5",
-                "27/07/2026; 18:00; 1 DI TOMA DEBORA vs MIELE ANNA I; 1 MELCARNE FEDERICO vs BRUNI ALESSIO I; 1 RICCELLI MASSIMILIANO vs DELLE ROSE MELCHIORRE MASSIMO I; 1 POSSIDENTE ELIO vs MARRONE PIETRO I; 1 CARAMANNA LAURA vs BALDUCCI MONICA",
-                "27/07/2026; 19:30; 1 MURA STEFANO vs CIRAFICI SALVATORE N; 1 DEL CASTELLO FABIO vs DA PONTE ALESSIO N; 1 FRANZELLETTI FABIO vs CONDURSO ANGELO N; 1 PAGANO ANDREA vs BALDINI STEFANO",
-                "27/07/2026; 20:30; 1 PRIORI FEDERICO vs MANIERI DAVIDE N; 1 PEZZOPANE ANTONELLO vs BUSETTI FABIO N; 1 COLABELLA VITTORIO vs CASTELLI FRANCESCO PAOLO ROSARIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=CD3A69DA-4600-4E10-BDC7-69CF7AAB6715",
-            "nomeTorneo": "SERALE SINGOLI E DOPPI SUMMER 26 VILLAYORK GIANICOLO LIM. 3.1",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
+            "nomeTorneo": "9° TORNEO SERALE 3/4 CAT. M/F",
             "data": "28/07/2026",
             "partite": [
-                "28/07/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5",
-                "28/07/2026; 18:00; 1 BUCHETTI MONICA vs REPERTORIO ANNA I; 1 GIUFFRIDA MARCO vs PRIORI FEDERICO; 1 DI TOMA DEBORA vs RISI VALENTINA I; 1 GUIDI BUFFARINI GUIDO vs RICCELLI MASSIMILIANO",
-                "28/07/2026; 19:30; 1 FANTINELLI CAMILLA vs CECCACCI RAFFAELLA N; 1 FIORAVANTI FLAVIO vs BRUNI ALESSIO N; 1 TELERA MARCO vs MURA STEFANO",
-                "28/07/2026; 21:00; 1 MENDOLIA LUCA vs DEL CASTELLO FABIO; 1 VIARO MARCO vs FRANZELLETTI FABIO N; 1 DI STEFANO MARCO vs PAGANO ANDREA; 1 PARAGONA MARTA vs CARAMANNA LAURA N; 1 PEZZOPANE ANTONELLO vs BUSETTI FABIO; COLABELLA VITTORIO vs CASTELLI FRANCESCO PAOLO ROSARIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
-            "nomeTorneo": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
-            "data": "27/07/2026",
-            "partite": [
-                "27/07/2026; 00:00; No. Campo 1 (principale)",
-                "27/07/2026; 18:00; 1 MANILI ALESSANDRO vs SACCO FABIO"
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -163,57 +93,42 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=29746284-AA74-4122-8F0E-A1E737B73C3D",
-            "nomeTorneo": "CT EUR - CIRCUITO \"I SERALI DI ROMA\" - 10° TAPPA - IV E III CAT. SINGOLI E DOPPI",
-            "data": "27/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8D6C0C28-4C72-4716-8B08-175B1AAEE5B5",
+            "nomeTorneo": "9° ED FERRAGOSTO OPEN \" I SERALI MC DONALD'S\"",
+            "data": "29/07/2026",
+            "partite": [
+                "29/07/2026; 00:00; No. Campo 1 (principale) Campo 2",
+                "29/07/2026; 18:00; 1 BIANCO ALESSANDRO vs DEVE SAMUEL FRANCESCO SAKHER I; 1 BATTISTI GIANLUCA vs DEL CASTELLO FABIO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D29A4D12-5085-46C5-85FE-BB537AB7BEC9",
+            "nomeTorneo": "MEMORIAL \"GIANVITTORIO MARTINO\" TORNEO OPEN CAT M & F CON MONTEPREMI 4500 €",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=27F20872-E5B8-4D14-8D35-C8C45635A33B",
-            "nomeTorneo": "XI TORNEO MONTECITORIO OPEN",
-            "data": "27/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D635E1E6-6393-4295-A07F-F6E257AA213A",
+            "nomeTorneo": "IX TAPPA ATP LAZIO TOUR SERALE LIM 3.1 M/F GARDEN VILLAGE \"SELVA DEI PINI\"",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=06BD92BE-2D88-4F70-A1C9-B333EC2AB32C",
-            "nomeTorneo": "9° TORNEO SERALE 3/4 CAT. M/F",
-            "data": "27/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A600C002-7DCF-42F1-A6E8-45C23469C2EF",
+            "nomeTorneo": "SUMMER IV ROMA",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=ABDCE6BF-5EEE-43E5-B698-7B96526DD94A",
-            "nomeTorneo": "TORNEO SERALE 3 E 4 CAT SINGOLI E DOPPI",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3DE8347A-8501-4DB3-A4C6-4AA955C2151B",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 5^ TAPPA",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
-            "nomeTorneo": "TORNEO NAZIONALE WHEELCHAIR A GIRONE - VOLCANO SPORTABILIA",
-            "data": "27/07/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=B3F0499C-63C2-464F-8CDB-00892996436D",
-            "nomeTorneo": "END SUMMER 26 VILLAYORK GIAANICOLO/MONTEVERDE SINGOLI E DOPPI LIM. 3 CAT",
-            "data": "27/07/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=33DC3B5C-8BEC-46BE-8A82-04D89A7D8FE4",
+            "nomeTorneo": "SUMMER CUP 4 E 3 CAT MASCHILE E FEMMINILE",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -221,7 +136,55 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=73097254-E9BE-4906-95EE-27DFBD5E8AE2",
             "nomeTorneo": "9^ TAPPA I SERALI DI ROMA",
-            "data": "27/07/2026",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=2CC18EC4-784A-4E26-8D66-8975417E3267",
+            "nomeTorneo": "TORNEO NAZIONALE WHEELCHAIR A GIRONE - VOLCANO SPORTABILIA",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=27F20872-E5B8-4D14-8D35-C8C45635A33B",
+            "nomeTorneo": "XI TORNEO MONTECITORIO OPEN",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=04BEC7CD-0348-4388-A7DB-AF26B8BD4897",
+            "nomeTorneo": "VI° TAPPA \"SUMMER IV ROMA\" (LIM 4.1 M/F) - SINGOLI E DOPPI - SERALE",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=19C25C57-BFD1-45BA-B96C-B7EBCCBEE16C",
+            "nomeTorneo": "MASTER FINALE CIRCUITO OPEN 2026 CRLAZIO/PARCO DEGLI ACQUEDOTTI",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3DE8347A-8501-4DB3-A4C6-4AA955C2151B",
+            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^/4^ CAT. M/F - 5^ TAPPA",
+            "data": "28/07/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=29746284-AA74-4122-8F0E-A1E737B73C3D",
+            "nomeTorneo": "CT EUR - CIRCUITO \"I SERALI DI ROMA\" - 10° TAPPA - IV E III CAT. SINGOLI E DOPPI",
+            "data": "28/07/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
