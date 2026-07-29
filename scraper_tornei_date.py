@@ -57,11 +57,11 @@ async def run_bot():
             await asyncio.sleep(3)
             
             await page.click('button[data-id="id_regioneSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
+            await page.get_by_role("listbox").get_by_role("option", name="Puglia").click()
             await asyncio.sleep(3)
             
             await page.click('button[data-id="id_provinciaSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
+            await page.get_by_role("listbox").get_by_role("option", name="Brindisi").click()
             await asyncio.sleep(3)
             
             # Selezione Categoria con attesa robusta
