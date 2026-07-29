@@ -1,47 +1,4 @@
 {
-    "report_data": "29/07/2026 19:03",
-    "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
-            "nomeTorneo": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
-            "data": "29/07/2026",
-            "partite": [
-                "29/07/2026; 00:00; No. Campo principale Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7 Campo 8",
-                "29/07/2026; 15:00; 18 BREGA FRANCESCO vs ACQUAVIVA CIRO I; 18 MACERATESI DANIELE vs LOGIUDICE DAVIDE I; 18 VERDECCHIA ALESSIO vs PARIS MATTEO I; 18 CURULLA PATRIZIO vs CELANI EDOARDO I; 18 FUSO JACOPO vs GELLER PAWLAK NOAH CHRISTOPHER; 14 GIACOPELLO FRANCESCO vs SPAGNOLO ALESSIO I; 14 MORALES LOPEZ LORENZO TOMAS vs NICOLETTI JACOPO; 14 VALENTINI FABRIZIO vs CAPONETTI GABRIELE",
-                "29/07/2026; 17:00; 18 DOMINGUEZ ALESSANDRO vs IERVOLINO ARMANDO; 14 MANCINI CHRISTIAN vs CAMONI FRANCESCO; 14 MARRONI FRANCESCO vs ANTONELLI LORENZO I; 10 COSCHIGNANO SOLINAS MATTIA vs HERNANDEZ FALCONE MARCOS ENRIQUE",
-                "29/07/2026; 18:30; 18 FORLONI GIORGIO vs ROMA VALERIO; 18 COLASANTI TOMMASO vs CERVELLI MARCO I; 12 ORLANDO MATTEO vs CIMMINO EDOARDO; 10 DI GIGLIO GABRIELE vs FRENDO SEBASTIAN"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7E4C0F1-27AF-45FA-B46C-6BC1E691B4A9",
-            "nomeTorneo": "SUMMER YOUNG \"OASI DI PACE\" U10/12/14/18 M/F",
-            "data": "30/07/2026",
-            "partite": [
-                "30/07/2026; 00:00; No. Campo principale Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7",
-                "30/07/2026; 15:00; 14 TIBUZZI RICCARDO vs CAPONETTI GABRIELE I; 14 CAIRO UMBERTO vs MORALES LOPEZ LORENZO TOMAS",
-                "30/07/2026; 17:00; 14 ANTONELLI LORENZO vs CISI RICCARDO I; 14 GALLIANI LORENZO vs SPAGNOLO ALESSIO I; 14 SPADONI EDOARDO MARIA vs MANCINI CHRISTIAN; 12 GAMBARARA FRANCESCO vs PRIAMO ALESSANDRO",
-                "30/07/2026; 18:30; 12 CARAMELLI PIERGIORGIO vs BIANCHI GABRIELE I; 12 GAETANI EDOARDO vs RABBIA RICCARDO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5636C3F7-C0C3-4829-B0CF-AE298F1FD326",
-            "nomeTorneo": "13^ TAPPA XLVII CIRCUITO DEL TIRRENO GARDEN VILLAGE \"ARDEA\"",
-            "data": "29/07/2026",
-            "partite": [
-                "29/07/2026; 00:00; No. Campo 2 Campo 3 Campo 4",
-                "29/07/2026; 17:00; AMICO VALERIO vs ROSSI FRANCESCO I; 12 POZZI VALERIO vs DE ANGELIS MARIO I; 14 PARISELLA VIOLA vs ZAMPETTI GIORGIA",
-                "29/07/2026; 18:30; 12 MAZZALI TOMMASO vs TEATINI AMEDEO I; 12 ZAZO COTRONEO OLIVER vs LICITRA LUCA I; 14 BLASINI LEONARDO vs ALBARELLO GABRIELE"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=5636C3F7-C0C3-4829-B0CF-AE298F1FD326",
-            "nomeTorneo": "13^ TAPPA XLVII CIRCUITO DEL TIRRENO GARDEN VILLAGE \"ARDEA\"",
-            "data": "30/07/2026",
-            "partite": [
-                "30/07/2026; 00:00; No. Campo 2 Campo 3 Campo 4",
-                "30/07/2026; 17:00; 10 GIORGI EDOARDO vs CARUSO DIEGO I; 10 MARONI CLAUDIO vs ZAINEA DAVIDE CRISTIAN I; 14 STRABIOLI ALICE vs PARISELLA VIOLA",
-                "30/07/2026; 18:30; 18 IADONNA MIRKO vs FURINA VALENTINO I; 18 SALVATORI GABRIELE vs D; AMICO VALERIO vs ROSSI FRANCESCO I; 18 PETRELLA FEDERICO vs ASCENZI FEDERICO"
-            ]
-        }
-    ]
+    "report_data": "29/07/2026 21:23",
+    "tornei": []
 }
