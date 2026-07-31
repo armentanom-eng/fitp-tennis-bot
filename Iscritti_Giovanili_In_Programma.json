@@ -4,9 +4,7 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
             "categoria": "3° Torneo Under \"TERRAROSSA\" 10/12/14/16 M e F - Brindisi",
             "tabellone": "Singolare Femminile Under 10",
-            "iscritti": [
-                "MARTINA BROGNA4.NC"
-            ]
+            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
@@ -24,7 +22,8 @@
                 "ALICE SERINELLI4.2",
                 "VITTORIA GORGONI4.5",
                 "CARLOTTA NOZZI4.1",
-                "ERIKA MASSARO4.2"
+                "ERIKA MASSARO4.2",
+                "ALESSIA MARIA MILANI4.1"
             ]
         },
         {
@@ -59,7 +58,8 @@
                 "GIACOMO FAVARON4.NC",
                 "EDOARDO DIGIESI4.5",
                 "ANTONIO MASTROMAURO 4.NC",
-                "GREGORIO UBERTO MARIA GIANOLI4.4"
+                "GREGORIO UBERTO MARIA GIANOLI4.4",
+                "GIANLUCA SPINOLA DI GIOVE4.4"
             ]
         },
         {
@@ -84,7 +84,8 @@
                 "GIANMARCO VINCI4.6",
                 "TIZIANO PECCARISI3.4",
                 "FRANCESCO SPORTELLI4.6",
-                "LORENZO GIANNOCCARO4.5"
+                "LORENZO GIANNOCCARO4.5",
+                "GIANMARCO CRESCINI4.1"
             ]
         },
         {
@@ -98,7 +99,9 @@
                 "ALESSANDRO ARGENTIERO4.2",
                 "FRANCESCO ANGLANI4.4",
                 "MARCO ZUCCARO3.4",
-                "ALESSIO LACALAMITA 4.1"
+                "ALESSIO LACALAMITA 4.1",
+                "DANIELE DI GIORGIO3.4",
+                "VITTORIO PASQUALE4.4"
             ]
         }
     ]
