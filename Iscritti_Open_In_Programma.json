@@ -26,8 +26,29 @@
                 "ALDO DIGIESI4.1",
                 "FRANCESCO CAZZOLLA4.4",
                 "PIERFEDELE TAURO4.4",
-                "ANGELO ANTONIO RAPANA'4.2"
+                "ANGELO ANTONIO RAPANA'4.2",
+                "DAVIDE CIANI2.8",
+                "VINCENZO MOLENDINI4.1",
+                "LUCIANO SEMERARO4.3",
+                "PIERPAOLO NODARI4.5"
             ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "GIULIO DE DONATO4.NC",
+                "ANGELO CIACCIA4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D55F2F7F-57F7-495F-81DA-BE9F1136AD89",
@@ -118,31 +139,16 @@
                 "LUCREZIA CARLA TAMBONE4.5",
                 "ILDE LALLI2.8",
                 "CHIARA CAPURSO2.6",
-                "EMMA ROSE MUOLO3.4",
                 "MARIA CRISTINA ZEVANO4.2",
                 "GRETA VALENTE4.NC",
                 "ELENA MARIA BONADIES3.4",
                 "BIANCA MITROTTI3.1",
                 "LOUISE GRACCO3.4",
                 "ALESSANDRA DE MONTE4.1",
-                "GRETA ANIBALDI3.3"
+                "GRETA ANIBALDI3.3",
+                "VALERIA VENTURA3.2",
+                "VIRGINIA RITA SCHIAVONE3.2"
             ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MATTIA CIARLONI3.3",
-                "ANDREA GIUSEPPE MARRA4.5",
-                "GIULIO DE DONATO4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
         }
     ]
 }
