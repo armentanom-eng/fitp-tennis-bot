@@ -36,8 +36,7 @@
             "categoria": "3° Torneo Under \"TERRAROSSA\" 10/12/14/16 M e F - Brindisi",
             "tabellone": "Singolare Maschile Under 10",
             "iscritti": [
-                "ALESSANDRO MONTANARO4.NC",
-                "TIZIANO GISONNA4.NC"
+                "ALESSANDRO MONTANARO4.NC"
             ]
         },
         {
@@ -51,7 +50,6 @@
                 "NICOLA MANGHISI4.4",
                 "GIACOMO MARTUCCI4.4",
                 "LUDOVICO PERES4.4",
-                "PARIDE TRITTO4.5",
                 "LUIGI CAVALIERE4.5",
                 "VICTOR FRANCISCO LABBATE4.2",
                 "DIEGO PICCIUOLO4.5",
@@ -62,7 +60,12 @@
                 "GIANLUCA SPINOLA DI GIOVE4.4",
                 "FRANCESCO SIRSI4.NC",
                 "ALESSANDRO LOPARCO4.4",
-                "DAVIDE LATTARULO3.3"
+                "DAVIDE LATTARULO3.3",
+                "MATTIA TOLA4.NC",
+                "GIORDANO MARCO GIOFFREDI4.5",
+                "ADRIANO ANTEZZA4.1",
+                "ALESSANDRO BALDACCI4.1",
+                "ALEX FABIANO4.1"
             ]
         },
         {
@@ -88,7 +91,17 @@
                 "LORENZO GIANNOCCARO4.5",
                 "GIANMARCO CRESCINI4.1",
                 "RICCARDO SAPONARO3.4",
-                "ALESSANDRO LATTARULO4.2"
+                "ALESSANDRO LATTARULO4.2",
+                "LORENZO COLELLA3.3",
+                "OTTAVIO ALESSANDRO D'AMICO3.4",
+                "LEONARDO BARNABA4.1",
+                "ADRIANO ANTEZZA4.1",
+                "NICOLO' PAGLIARA4.1",
+                "ALESSANDRO BALDACCI4.1",
+                "GIULIO FRANCESCO BONADIES3.3",
+                "LEONARDO BIANCO4.3",
+                "MARCO BRONZINO3.4",
+                "CHRISTIAN VITO ADAMI4.3"
             ]
         },
         {
@@ -102,9 +115,9 @@
                 "ALESSANDRO ARGENTIERO4.2",
                 "FRANCESCO ANGLANI4.4",
                 "MARCO ZUCCARO3.4",
-                "ALESSIO LACALAMITA 4.1",
                 "DANIELE DI GIORGIO3.4",
-                "EDOARDO LUCARELLI3.3"
+                "EDOARDO LUCARELLI3.3",
+                "MARCO RIZZI3.5"
             ]
         }
     ]
