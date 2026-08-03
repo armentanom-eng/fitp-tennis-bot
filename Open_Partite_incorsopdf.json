@@ -1,18 +1,6 @@
 {
-    "report_data": "02/08/2026 19:00",
+    "report_data": "03/08/2026 19:23",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=0DFC9FF1-9394-4530-9CD2-E8B6B3C4C327",
-            "nomeTorneo": "TORNEO TERZA CATEGORIA MESAGNE",
-            "data": "02/08/2026",
-            "partite": [
-                "02/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "02/08/2026; 10:00; DE GIUSEPPE RICCARDO vs MICELLI PIERO I; DENITTO EDOARDO vs LAVENEZIANA ANDREA",
-                "02/08/2026; 16:00; IUNCO MIRKO vs GIUDICE JACOPO MARIA I; ORLANDINI PIERLUIGI vs CAPRIGLIA FRANCESCO",
-                "02/08/2026; 17:30; FERRETTI COSIMO vs SEMERANO MATTIA BENITO FEDELE I; MARCHIONNA FABIO vs MASSAFRA RODOLFO",
-                "02/08/2026; 19:00; RIZZO ANGELO vs IGNONE COSIMO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=0DFC9FF1-9394-4530-9CD2-E8B6B3C4C327",
             "nomeTorneo": "TORNEO TERZA CATEGORIA MESAGNE",
@@ -20,8 +8,19 @@
             "partite": [
                 "03/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
                 "03/08/2026; 16:30; LA GATTA VINCENZO vs MASSAFRA RODOLFO I; TENORE FRANCESCO LUIGI vs PAGLIARA NICOLO",
-                "03/08/2026; 18:00; DENITTO EDOARDO vs PERRINO ANTONIO I; FERRETTI COSIMO vs SEMERANO MATTIA BENITO FEDELE",
-                "03/08/2026; 19:30; RIZZO ANGELO vs IGNONE COSIMO; ORLANDINI PIERLUIGI vs TAFURO RAFFAELE I; FIUME ANTONIO vs IUNCO MIRKO"
+                "03/08/2026; 18:00; DENITTO EDOARDO vs PERRINO ANTONIO I; SEMERANO MATTIA BENITO FEDELE vs CAVALIERE ANTONIO",
+                "03/08/2026; 19:30; IGNONE COSIMO vs FAZZINA ALESSANDRO GIOVANNI I; ORLANDINI PIERLUIGI vs TAFURO RAFFAELE I; FIUME ANTONIO vs GIUDICE JACOPO MARIA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=0DFC9FF1-9394-4530-9CD2-E8B6B3C4C327",
+            "nomeTorneo": "TORNEO TERZA CATEGORIA MESAGNE",
+            "data": "04/08/2026",
+            "partite": [
+                "04/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "04/08/2026; 16:30; LA GATTA VINCENZO vs MASSAFRA RODOLFO I; TENORE FRANCESCO LUIGI vs PAGLIARA NICOLO; MATTIA BEATRICE vs SAMPIETRO ROBERTA",
+                "04/08/2026; 18:00; DENITTO EDOARDO vs PERRINO ANTONIO I; SEMERANO MATTIA BENITO FEDELE vs CAVALIERE ANTONIO",
+                "04/08/2026; 19:30; ORLANDINI PIERLUIGI vs TAFURO RAFFAELE I; IGNONE COSIMO vs FAZZINA ALESSANDRO GIOVANNI I; FIUME ANTONIO vs GIUDICE JACOPO MARIA"
             ]
         }
     ]
