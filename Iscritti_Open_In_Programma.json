@@ -1,3 +1,75 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "categoria": "43° torneo nazionale Selva di Fasano",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "DANIEL BALESTRA3.5",
+                "GABRIELE DEL GAUDIO3.1",
+                "FRANCESCO LOMBARDI4.3",
+                "ROBERTO BIANCHI4.2",
+                "DOMENICO CARBOTTI4.4",
+                "MATTEO MIEGGE4.3",
+                "NICOLO' CASTELLANA3.4",
+                "VALENTINO ROTONDO3.5",
+                "LUIGI SANTI4.1",
+                "LEOLUCA RUBINO3.5",
+                "LEONARDO BARBERO2.6",
+                "EMANUELE PANZA4.3",
+                "FEDERICO PANZA4.3",
+                "MATTIA CIARLONI3.3",
+                "ANTONIO FANIGLIULO4.2",
+                "MATTIA BASILICO4.3",
+                "VITO NARDELLI3.5",
+                "TOMMASO MATTEO LANEVE3.3",
+                "ALDO DIGIESI4.1",
+                "FRANCESCO CAZZOLLA4.4",
+                "PIERFEDELE TAURO4.4",
+                "ANGELO ANTONIO RAPANA'4.2",
+                "DAVIDE CIANI2.8",
+                "VINCENZO MOLENDINI4.1",
+                "LUCIANO SEMERARO4.3",
+                "PIERPAOLO NODARI4.5",
+                "FRANCESCO DE MARIA 4.NC",
+                "DAVIDE CAFAGNA4.6",
+                "ANDREA FERRARA4.6",
+                "VALENTINO POZZI2.6",
+                "VITANTONIO MARASCIULO4.4",
+                "GIANLUIGI NOTARNICOLA4.3",
+                "PIERPAOLO MASTROMARINI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        }
+    ]
 }

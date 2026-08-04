@@ -11,7 +11,8 @@
             "categoria": "3° Torneo Under \"TERRAROSSA\" 10/12/14/16 M e F - Brindisi",
             "tabellone": "Singolare Femminile Under 12",
             "iscritti": [
-                "FRANCESCA ROMANA ANGLANI4.NC"
+                "FRANCESCA ROMANA ANGLANI4.NC",
+                "DENISE MELEDI4.6"
             ]
         },
         {
@@ -22,14 +23,19 @@
                 "ALICE SERINELLI4.2",
                 "CARLOTTA NOZZI4.1",
                 "ERIKA MASSARO4.2",
-                "ALESSIA MARIA MILANI4.1"
+                "ALESSIA MARIA MILANI4.1",
+                "GIULIA CALO'4.3",
+                "GIULIA RENNA4.2"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
             "categoria": "3° Torneo Under \"TERRAROSSA\" 10/12/14/16 M e F - Brindisi",
             "tabellone": "Singolare Femminile Under 16",
-            "iscritti": []
+            "iscritti": [
+                "MARTINA TORRES4.2",
+                "GIULIA CALO'4.3"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
@@ -52,7 +58,6 @@
                 "LUDOVICO PERES4.4",
                 "LUIGI CAVALIERE4.5",
                 "VICTOR FRANCISCO LABBATE4.2",
-                "DIEGO PICCIUOLO4.5",
                 "GIACOMO FAVARON4.NC",
                 "EDOARDO DIGIESI4.5",
                 "ANTONIO MASTROMAURO 4.NC",
@@ -65,7 +70,11 @@
                 "GIORDANO MARCO GIOFFREDI4.5",
                 "ADRIANO ANTEZZA4.1",
                 "ALESSANDRO BALDACCI4.1",
-                "ALEX FABIANO4.1"
+                "ALEX FABIANO4.1",
+                "GABRIELE PELLEGRINI4.NC",
+                "LUCIO ARBORE3.5",
+                "CARLO MALAGNINO4.3",
+                "MARIO LATINO4.2"
             ]
         },
         {
@@ -101,7 +110,12 @@
                 "GIULIO FRANCESCO BONADIES3.3",
                 "LEONARDO BIANCO4.3",
                 "MARCO BRONZINO3.4",
-                "CHRISTIAN VITO ADAMI4.3"
+                "CHRISTIAN VITO ADAMI4.3",
+                "ANTONIO D'AGNANO4.2",
+                "ETTORE SAPONARO4.4",
+                "LUIGI FILIPPO4.NC",
+                "LUIGI MARIA LAMARINA3.1",
+                "MARIO LATINO4.2"
             ]
         },
         {
@@ -114,10 +128,12 @@
                 "CLAUDIO CAPONE4.1",
                 "ALESSANDRO ARGENTIERO4.2",
                 "FRANCESCO ANGLANI4.4",
-                "MARCO ZUCCARO3.4",
                 "DANIELE DI GIORGIO3.4",
                 "EDOARDO LUCARELLI3.3",
-                "MARCO RIZZI3.5"
+                "MARCO RIZZI3.5",
+                "GABRIELE TARÌ4.4",
+                "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.5",
+                "MATTEO GIORDANO3.3"
             ]
         }
     ]
