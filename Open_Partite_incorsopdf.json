@@ -1,23 +1,12 @@
 {
-    "report_data": "04/08/2026 19:22",
+    "report_data": "05/08/2026 19:20",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D55F2F7F-57F7-495F-81DA-BE9F1136AD89",
             "nomeTorneo": "19° MEMORIAL FRANCESCHINI - 42° TROFEO CITTA' DI OSTUNI",
-            "data": "04/08/2026",
+            "data": "05/08/2026",
             "partite": [
                 "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=0DFC9FF1-9394-4530-9CD2-E8B6B3C4C327",
-            "nomeTorneo": "TORNEO TERZA CATEGORIA MESAGNE",
-            "data": "04/08/2026",
-            "partite": [
-                "04/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "04/08/2026; 16:30; LA GATTA VINCENZO vs MASSAFRA RODOLFO I; TENORE FRANCESCO LUIGI vs PAGLIARA NICOLO; MATTIA BEATRICE vs SAMPIETRO ROBERTA",
-                "04/08/2026; 18:00; DENITTO EDOARDO vs PERRINO ANTONIO I; SEMERANO MATTIA BENITO FEDELE vs CAVALIERE ANTONIO",
-                "04/08/2026; 19:30; ORLANDINI PIERLUIGI vs TAFURO RAFFAELE I; IGNONE COSIMO vs FAZZINA ALESSANDRO GIOVANNI I; FIUME ANTONIO vs GIUDICE JACOPO MARIA"
             ]
         },
         {
@@ -26,10 +15,24 @@
             "data": "05/08/2026",
             "partite": [
                 "05/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "05/08/2026; 16:00; 1 Inizio  Singolare Maschile Open q vs MANCA GIOVANNI Inizio  Singolare Maschile Open SGURA STEFANO vs q Inizio  Singolare Maschile Open CERVELLERA NICOLA vs q",
-                "05/08/2026; 17:30; DE MONTE ALESSANDRA vs SEGRETO MADDALENA",
-                "05/08/2026; 19:00; MUOLO EMMA ROSE vs LIGORIO MAYRA RITA I",
-                "05/08/2026; 20:30; CAFORIO ARMANDO vs GIUDICE JACOPO MARIA; CHISENA CHRISTIAN ANTONIO vs MARCHIONNA STEFANO"
+                "05/08/2026; 16:00; PERRINO ANTONIO vs MANCA GIOVANNI I; SGURA STEFANO vs PAGLIARA NICOLO; CERVELLERA NICOLA vs FIUME ANTONIO",
+                "05/08/2026; 17:30; SUMA COSIMO vs CAVALIERE ANTONIO I; LUPO VINCENZO vs LA GATTA VINCENZO I; DE MONTE ALESSANDRA vs SEGRETO MADDALENA",
+                "05/08/2026; 19:00; FAZZINA ALESSANDRO GIOVANNI vs LECCI GIUSEPPE JUNIOR I; MUOLO EMMA ROSE vs LIGORIO MAYRA RITA I; MARCHIONNA STEFANO vs NATALI SIMONE",
+                "05/08/2026; 20:30; ORLANDINI PIERLUIGI vs D; CAFORIO ARMANDO vs GIUDICE JACOPO MARIA; CHISENA CHRISTIAN ANTONIO vs MARCHIONNA STEFANO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=0DFC9FF1-9394-4530-9CD2-E8B6B3C4C327",
+            "nomeTorneo": "TORNEO TERZA CATEGORIA MESAGNE",
+            "data": "06/08/2026",
+            "partite": [
+                "06/08/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "06/08/2026; 11:00; MARCHIONNA STEFANO vs ZUCCARO MARCO I; CAFORIO ARMANDO vs GIUDICE JACOPO MARIA",
+                "06/08/2026; 15:00; GRECO GIORGIO vs FIUME ANTONIO I; GALIANO LUIGI vs SUMA COSIMO",
+                "06/08/2026; 16:30; MANCA GIOVANNI vs MARGHERITA ROBERTO I; TALDONE GIUSEPPE vs PAGLIARA NICOLO; CHISENA CHRISTIAN ANTONIO vs ROSATO ALESSIO",
+                "06/08/2026; 18:00; GRECO GIORGIO vs FIUME ANTONIO; GALIANO LUIGI vs SUMA COSIMO; LIGUORI LUCA vs LUPO VINCENZO I",
+                "06/08/2026; 19:30; MANCA GIOVANNI vs MARGHERITA ROBERTO; LECITO MATTEO vs LIGUORI LUCA; PICANO ANGELO MARIA vs TALDONE GIUSEPPE",
+                "06/08/2026; 21:00; MARCHIONNA STEFANO vs ZUCCARO MARCO; CARAMIA ANTONIO vs PAIANO GABRIELE"
             ]
         }
     ]
