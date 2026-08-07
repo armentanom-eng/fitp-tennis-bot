@@ -1,24 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MATTIA CIARLONI3.3",
-                "ANDREA GIUSEPPE MARRA4.5",
-                "ANGELO CIACCIA4.NC",
-                "ALESSIO ANTONIO FURONE4.2",
-                "LUCA DI FRANCESCO4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "categoria": "43° torneo nazionale Selva di Fasano",
             "tabellone": "Singolare Maschile Open",
@@ -37,7 +19,6 @@
                 "EMANUELE PANZA4.3",
                 "FEDERICO PANZA4.3",
                 "ANTONIO FANIGLIULO4.2",
-                "MATTIA BASILICO4.3",
                 "VITO NARDELLI3.5",
                 "TOMMASO MATTEO LANEVE3.3",
                 "ALDO DIGIESI4.1",
@@ -62,8 +43,28 @@
                 "MICHELE PONTE4.1",
                 "VITO FRANCESCO SQUEO4.5",
                 "ALESSANDRO ANDRIANI3.2",
-                "UMBERTO GIUSEPPE CAPITANIO2.7"
+                "UMBERTO GIUSEPPE CAPITANIO2.7",
+                "CARLO MARIA ARGENTO4.1",
+                "MAURO MAGGI4.5"
             ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUCA DI FRANCESCO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
@@ -83,7 +84,14 @@
                 "ROBERTO PICHERO 4.4",
                 "DAMIANO CRAVIOLATTI3.5",
                 "ALESSANDRO ARGENTIERO4.2",
-                "MARCO ZUCCARO3.4"
+                "MARCO ZUCCARO3.4",
+                "LEONARDO BIANCO3.2",
+                "SALVATORE BALDARI4.2",
+                "ANTONIO MALAGNINO4.3",
+                "ANTONIO PERRINO4.1",
+                "MATTEO ROSATO3.2",
+                "ANGELO CIACCIA4.NC",
+                "MIRKO IUNCO4.2"
             ]
         },
         {
