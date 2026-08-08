@@ -1,24 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MATTIA CIARLONI3.3",
-                "ANDREA GIUSEPPE MARRA4.5",
-                "ANGELO CIACCIA4.NC",
-                "ALESSIO ANTONIO FURONE4.2",
-                "LUCA DI FRANCESCO4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
             "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
             "tabellone": "Singolare Maschile Open",
@@ -36,23 +18,43 @@
                 "ROBERTO PICHERO 4.4",
                 "DAMIANO CRAVIOLATTI3.5",
                 "ALESSANDRO ARGENTIERO4.2",
-                "MARCO ZUCCARO3.4",
                 "LEONARDO BIANCO3.2",
-                "SALVATORE BALDARI4.2",
                 "ANTONIO MALAGNINO4.3",
-                "ANTONIO PERRINO4.1",
                 "MATTEO ROSATO3.2",
                 "ANGELO CIACCIA4.NC",
                 "MIRKO IUNCO4.2",
                 "MICHELE SIGNORILE4.1",
                 "NICOLO' PAGLIARA4.1",
                 "JACOPO ZACCARIA4.1",
-                "ROBERTO MARGHERITA3.4"
+                "ROBERTO MARGHERITA3.4",
+                "FULVIO GALLONE4.2",
+                "EUGENIO BARBERA4.1"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
             "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "SABRINA VEGETTI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUCA DI FRANCESCO4.2",
+                "LUIGI MARIA LAMARINA3.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
             "tabellone": "Singolare Femminile Open",
             "iscritti": []
         },
@@ -67,7 +69,6 @@
                 "ROBERTO BIANCHI4.2",
                 "DOMENICO CARBOTTI4.4",
                 "MATTEO MIEGGE4.3",
-                "NICOLO' CASTELLANA3.4",
                 "VALENTINO ROTONDO3.5",
                 "LUIGI SANTI4.1",
                 "LEOLUCA RUBINO3.5",
@@ -104,7 +105,13 @@
                 "MAURO MAGGI4.5",
                 "SERGIO DE RINALDIS3.5",
                 "SIMONE FIORE4.3",
-                "FRANCESCO PIAZZOLLA3.2"
+                "FRANCESCO PIAZZOLLA3.2",
+                "MICHELE LOPINTO3.3",
+                "ANTONIO DE PACE3.2",
+                "MARIO CALO'4.4",
+                "PIERO MICCOLIS4.3",
+                "LUCA SPACCIANTE4.6",
+                "GIUSEPPE SPACCIANTE4.4"
             ]
         }
     ]
