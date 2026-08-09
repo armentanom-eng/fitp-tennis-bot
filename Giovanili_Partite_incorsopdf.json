@@ -1,17 +1,6 @@
 {
-    "report_data": "08/08/2026 18:26",
+    "report_data": "09/08/2026 18:29",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
-            "nomeTorneo": "3° TORNEO UNDER \"TERRAROSSA\" 10/12/14/16 M E F - BRINDISI",
-            "data": "08/08/2026",
-            "partite": [
-                "08/08/2026; 00:00; No. Campo 2 Campo 3 Campo 4",
-                "08/08/2026; 09:30; 14 SAPONARO ETTORE vs GUIDO SAMUELE I; 14 CAVALLO PIETRO vs SPORTELLI FRANCESCO; 14 SPACCIANTE GIUSEPPE vs GIANNOCCARO LORENZO",
-                "08/08/2026; 11:00; 16 ARGENTIERO ALESSANDRO vs TAR",
-                "08/08/2026; 18:00; 12 TOLA MATTIA vs MASTROMAURO ANTONIO I; 12 GIOFFREDI GIORDANO MARCO vs PELLEGRINI GABRIELE; 12 DIGIESI EDOARDO vs SIRSI FRANCESCO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
             "nomeTorneo": "3° TORNEO UNDER \"TERRAROSSA\" 10/12/14/16 M E F - BRINDISI",
@@ -22,6 +11,17 @@
                 "09/08/2026; 11:00; 14 SAPONARO ETTORE vs GERARDI MARIO ORSO N; 14 ADAMI CHRISTIAN VITO vs SPACCIANTE GIUSEPPE",
                 "09/08/2026; 17:00; 14 SPORTELLI FRANCESCO vs BIANCO LEONARDO",
                 "09/08/2026; 18:00; 12 SPINOLA DI GIOVE GIANLUCA vs LOPARCO ALESSANDRO N; 12 TOLA MATTIA vs MASTROMAURO ANTONIO; 12 DIGIESI EDOARDO vs PELLEGRINI GABRIELE"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4381D49B-626E-487F-A724-DF8E210CB750",
+            "nomeTorneo": "3° TORNEO UNDER \"TERRAROSSA\" 10/12/14/16 M E F - BRINDISI",
+            "data": "10/08/2026",
+            "partite": [
+                "10/08/2026; 00:00; No. Campo 2 Campo 3 Campo 4",
+                "10/08/2026; 17:00; 14 LATTARULO ALESSANDRO vs ADAMI CHRISTIAN VITO I; 14 DELLO IACOVO GIORGIO vs ANTEZZA ADRIANO I; 14 CAVALLO EDOARDO vs BALDACCI ALESSANDRO",
+                "10/08/2026; 18:30; BIANCO LEONARDO vs LATINO MARIO N; GERARDI MARIO ORSO vs D; 12 MARTUCCI GIACOMO vs DIGIESI EDOARDO",
+                "10/08/2026; 20:00; 12 MANGHISI NICOLA vs PERES LUDOVICO N; 12 MALAGNINO CARLO vs SPINOLA DI GIOVE GIANLUCA; 12 MASTROMAURO ANTONIO vs CAVALIERE LUIGI"
             ]
         }
     ]
