@@ -1,3 +1,70 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "DANIELE DI BRINDISI4.2",
+                "LUIGI GALIANO3.4",
+                "GIUSEPPE JUNIOR LECCI3.5",
+                "MATTIA CIARLONI3.3",
+                "LEONARDO PIERGIOVANNI3.3",
+                "VINCENZO LO RE3.4",
+                "MARCO SALONNE3.3",
+                "CARLO MALAGNINO4.3",
+                "ROBERTO PICHERO 4.4",
+                "DAMIANO CRAVIOLATTI3.5",
+                "ALESSANDRO ARGENTIERO4.2",
+                "LEONARDO BIANCO3.2",
+                "ANTONIO MALAGNINO4.3",
+                "MATTEO ROSATO3.2",
+                "ANGELO CIACCIA4.NC",
+                "MIRKO IUNCO4.2",
+                "MICHELE SIGNORILE4.1",
+                "NICOLO' PAGLIARA4.1",
+                "JACOPO ZACCARIA4.1",
+                "ROBERTO MARGHERITA3.4",
+                "FULVIO GALLONE4.2",
+                "EUGENIO BARBERA4.1",
+                "ALESSANDRO MAFFEI4.5",
+                "GIUSEPPE ZURLO3.3",
+                "GABRIELE TARÌ4.4",
+                "FRANCESCO BIANCO4.3",
+                "GIUSEPPE CANNARILE3.4",
+                "STEFANO SGURA3.5",
+                "CRISTIANO TRABACCA3.3",
+                "LORENZO CARLA'4.4",
+                "FRANCESCO NICOLA CAPUTO4.1",
+                "GIUSEPPE LECCI4.4",
+                "ANTONIO PERRINO4.1",
+                "GAETANO DI BRINDISI4.1",
+                "EMILIO JURY ASSENTE3.1",
+                "ALESSIO ANTONIO FURONE4.2",
+                "ANDREA ALESSANDRO LIGORIO4.3",
+                "MICHELE CERVELLERA3.1",
+                "GIUSEPPE GALLONE3.1",
+                "ANTONIO D'AGNANO4.2",
+                "MARCO ZIGRINO3.3",
+                "NICOLA CERVELLERA3.5",
+                "ANTONIO COLELLA4.3",
+                "ANTONIO URSO4.1",
+                "ALBERTO RUGGIERO4.1",
+                "VINCENZO LUPO3.5",
+                "ANTONIO MIGLIETTA3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "categoria": "Torneo III Categoria ASD Circolo Tennis Latiano 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "SABRINA VEGETTI4.1",
+                "GRETA ANIBALDI3.3",
+                "MELANIA LAMENDOLA4.4",
+                "GIORGIA MARGHERITA3.3"
+            ]
+        }
+    ]
 }
