@@ -1,10 +1,18 @@
 {
-    "report_data": "11/08/2026 19:19",
+    "report_data": "12/08/2026 19:19",
     "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "12/08/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "11/08/2026",
+            "data": "12/08/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -12,17 +20,23 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
             "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
-            "data": "11/08/2026",
+            "data": "12/08/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "12/08/2026; 00:00; No. Campo 1 Campo 2",
+                "12/08/2026; 18:00; LIGORIO ANDREA ALESSANDRO vs BIANCO FRANCESCO I; GABRIELE vs LECCI GIUSEPPE",
+                "12/08/2026; 19:00; MAFFEI ALESSANDRO vs CIACCIA ANGELO I; PICHERO ROBERTO vs CARLA",
+                "12/08/2026; 20:30; MARRA ANDREA GIUSEPPE vs MAFFEI ALESSANDRO"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "11/08/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
+            "data": "13/08/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "13/08/2026; 00:00; No. Campo 1 Campo 2",
+                "13/08/2026; 17:30; GALLONE FULVIO vs DI BRINDISI DANIELE I; ARGENTIERO ALESSANDRO vs FURONE ALESSIO ANTONIO",
+                "13/08/2026; 19:00; COLELLA ANTONIO vs MARRA ANDREA GIUSEPPE; MAFFEI ALESSANDRO vs CIACCIA ANGELO I; PICHERO ROBERTO vs CARLA; LORENZO vs MALAGNINO CARLO",
+                "13/08/2026; 20:30; GABRIELE vs LECCI GIUSEPPE; IUNCO MIRKO vs D"
             ]
         }
     ]
