@@ -52,7 +52,8 @@
                 "ANTONIO URSO4.1",
                 "ALBERTO RUGGIERO4.1",
                 "VINCENZO LUPO3.5",
-                "ANTONIO MIGLIETTA3.5"
+                "ANTONIO MIGLIETTA3.5",
+                "MAURO DE TOMMASO3.3"
             ]
         },
         {
@@ -62,31 +63,8 @@
             "iscritti": [
                 "SABRINA VEGETTI4.1",
                 "GRETA ANIBALDI3.3",
-                "MELANIA LAMENDOLA4.4",
-                "GIORGIA MARGHERITA3.3"
+                "MELANIA LAMENDOLA4.4"
             ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MATTIA CIARLONI3.3",
-                "ANDREA GIUSEPPE MARRA4.5",
-                "ANGELO CIACCIA4.NC",
-                "ALESSIO ANTONIO FURONE4.2",
-                "LUCA DI FRANCESCO4.2",
-                "LUIGI MARIA LAMARINA3.1",
-                "ANTONINO  SIRSI4.3",
-                "GIACOMO URGESE4.3",
-                "LUIGI GALIANO3.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
@@ -123,8 +101,6 @@
                 "VITANTONIO MARASCIULO4.4",
                 "GIANLUIGI NOTARNICOLA4.3",
                 "PIERPAOLO MASTROMARINI4.2",
-                "CARLO MICHELE GIACOVAZZO4.5",
-                "NICOLÒ CASTELLANA4.3",
                 "LUIGI GALIANO3.4",
                 "DAVIDE CASTELLANA3.2",
                 "MICHELE PONTE4.1",
@@ -152,8 +128,32 @@
                 "FRANCESCO PALAZZO4.6",
                 "GIORGIO DIMARCO4.NC",
                 "LUIGI WALTER CARDONE4.3",
-                "ANDREA POTENZA4.4"
+                "ANDREA POTENZA4.4",
+                "FRANCESCO ANGLANI4.4",
+                "GIORGIO COLUCCI4.3"
             ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUCA DI FRANCESCO4.2",
+                "LUIGI MARIA LAMARINA3.1",
+                "ANTONINO  SIRSI4.3",
+                "GIACOMO URGESE4.3",
+                "LUIGI GALIANO3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
         }
     ]
 }
