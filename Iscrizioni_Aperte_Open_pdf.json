@@ -1,4 +1,17 @@
 {
-    "report_data": "13/08/2026 19:21",
-    "tornei": []
+    "report_data": "14/08/2026 19:14",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
+            "data": "14/08/2026",
+            "partite": [
+                "14/08/2026; 1 Inizio ore: 15:00 Singolare Maschile Open IUNCO MIRKO o D'AGNANO ANTONIO vs SIGNORILE MICHELE Inizio ore: 15:00 Singolare Maschile Open CARLA' LORENZO o MALAGNINO CARLO vs URSO ANTONIO",
+                "14/08/2026; 3 Inizio ore: 18:00 Singolare Maschile Open RUGGIERO ALBERTO vs ARGENTIERO ALESSANDRO Inizio ore: 18:00 Singolare Maschile Open GALLONE FULVIO o DI BRINDISI DANIELE vs PAGLIARA NICOLO'",
+                "14/08/2026; 2 Inizio ore: 16:30 Singolare Maschile Open ZACCARIA JACOPO vs BIANCO FRANCESCO Inizio ore: 16:30 Singolare Maschile Open BARBERA EUGENIO vs PERRINO ANTONIO",
+                "14/08/2026; No. Campo 1 Campo 2",
+                "14/08/2026; 4 Inizio ore: 19:30 Singolare Maschile Open DI BRINDISI GAETANO vs COLELLA ANTONIO o CIACCIA ANGELO Inizio ore: 19:30 Singolare Maschile Open LECCI GIUSEPPE o MALAGNINO ANTONIO vs CAPUTO FRANCESCO NICOLA"
+            ]
+        }
+    ]
 }
