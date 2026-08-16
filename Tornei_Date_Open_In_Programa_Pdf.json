@@ -1,10 +1,10 @@
 {
-    "report_data": "15/08/2026 18:46",
+    "report_data": "16/08/2026 18:46",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "15/08/2026",
+            "data": "16/08/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -12,9 +12,22 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "15/08/2026",
+            "data": "16/08/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "Nessuna partita trovata"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "17/08/2026",
+            "partite": [
+                "17/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
+                "17/08/2026; 15:30; CIACCIA ANGELO vs DE MARIA FRANCESCO I; SABATELLI ORONZO vs DEL VECCHIO WILLIAM",
+                "17/08/2026; 16:30; LIUZZI GIUSEPPE vs SPACCIANTE LUCA I; CARRIERI ALESSANDRO vs FALCIONI ROSSANO I; PENTASSUGLIA GIOVANNI vs DIMARCO GIORGIO",
+                "17/08/2026; 18:00; 3 Inizio  Singolare Maschile Open q vs SCHENA ANDREA A seguire Singolare Maschile Open q vs CAFAGNA DAVIDE",
+                "17/08/2026; 19:00; MAGGI MAURO vs SQUEO VITO FRANCESCO I",
+                "17/08/2026; 19:00; 5 Inizio  Singolare Maschile Open q vs FERRARA ANDREA"
             ]
         }
     ]
