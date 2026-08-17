@@ -1,4 +1,18 @@
 {
-    "report_data": "16/08/2026 18:47",
-    "tornei": []
+    "report_data": "17/08/2026 18:58",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "17/08/2026",
+            "partite": [
+                "17/08/2026; 5 Inizio ore: 20:30 Singolare Maschile Open q vs FERRARA ANDREA Inizio ore: 20:30 Singolare Maschile Open q vs SCHENA ANDREA",
+                "17/08/2026; 1 Inizio ore: 15:30 Singolare Maschile Open CIACCIA ANGELO vs DE MARIA FRANCESCO",
+                "17/08/2026; 3 Inizio ore: 18:00 Singolare Maschile Open CARRIERI ALESSANDRO vs FALCIONI ROSSANO",
+                "17/08/2026; 4 Inizio ore: 19:30 Singolare Maschile Open MAGGI MAURO vs SQUEO VITO FRANCESCO Inizio ore: 19:00 Singolare Maschile Open SABATELLI ORONZO vs DEL VECCHIO WILLIAM Inizio ore: 19:30 Singolare Maschile Open q vs STELLA EDOARDO",
+                "17/08/2026; No. CAMPO 1 CAMPO 2 CAMPO 3",
+                "17/08/2026; 2 Inizio ore: 16:30 Singolare Maschile Open LIUZZI GIUSEPPE vs SPACCIANTE LUCA Inizio ore: 19:00 Singolare Maschile Open PENTASSUGLIA GIOVANNI vs DIMARCO GIORGIO"
+            ]
+        }
+    ]
 }
