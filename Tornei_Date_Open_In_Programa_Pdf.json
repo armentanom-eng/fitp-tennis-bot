@@ -1,20 +1,41 @@
 {
-    "report_data": "17/08/2026 18:57",
+    "report_data": "18/08/2026 18:55",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
-            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "17/08/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "18/08/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "17/08/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "18/08/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "18/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
+                "18/08/2026; 11:00; CAPOCHIANI GIOVANNI vs LAPADULA MATTEO PIO",
+                "18/08/2026; 15:00; FERRARA ANDREA vs CARRIERI DAVIDE I; DEL VECCHIO WILLIAM vs CAFAGNA DAVIDE I; SPACCIANTE GIUSEPPE vs POTENZA ANDREA",
+                "18/08/2026; 16:00; LIUZZI GIUSEPPE vs CALO; CAPOCHIANI GIOVANNI vs LAPADULA MATTEO PIO; STELLA EDOARDO vs PASTORE GIANLUCA",
+                "18/08/2026; 17:30; FASULO ROBERTO vs DE PACE DONATO I; CAFAGNA DAVIDE vs DITANO DOMENICO I; TAURO PIERFEDELE vs COCCIOLI ANTONIO",
+                "18/08/2026; 18:30; SQUEO VITO FRANCESCO vs MARASCIULO VITANTONIO I; DE BIASE DAVIDE MARIA vs LATARTARA GIANMARIA",
+                "18/08/2026; 20:00; GENTILE GIANFRANCO vs CARBOTTI DOMENICO I; SCHENA ANDREA vs FRAGNELLI OSVALDO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "19/08/2026",
+            "partite": [
+                "19/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
+                "19/08/2026; 11:30; GENTILE GIANFRANCO vs CARRIERI ALESSANDRO",
+                "19/08/2026; 13:30; RAGUSO FULVIO vs FIORE SIMONE",
+                "19/08/2026; 15:00; DE PACE DONATO vs LIUZZI GIUSEPPE I; LOMBARDI FRANCESCO vs PANZA FEDERICO",
+                "19/08/2026; 16:00; COLUCCI GIORGIO vs MUOLO GIANDONATO I; PASTORE GIANLUCA vs ORLANDI MATTEO I; SCHENA ANDREA vs FRAGNELLI OSVALDO",
+                "19/08/2026; 17:30; CAFAGNA DAVIDE vs MICCOLIS PIERO I; SPACCIANTE GIUSEPPE vs SQUEO VITO FRANCESCO",
+                "19/08/2026; 18:30; TANZARELLA VINCENZO vs DE GIOVANNI GIAMBATTISTA I; MIEGGE MATTEO vs SEMERARO LUCIANO",
+                "19/08/2026; 20:00; DE BIASE DAVIDE MARIA vs LATARTARA GIANMARIA; TAURO PIERFEDELE vs COCCIOLI ANTONIO"
             ]
         }
     ]
