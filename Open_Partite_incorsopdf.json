@@ -1,18 +1,6 @@
 {
-    "report_data": "18/08/2026 18:28",
+    "report_data": "19/08/2026 18:23",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
-            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
-            "data": "18/08/2026",
-            "partite": [
-                "18/08/2026; 00:00; No. Campo 1 Campo 2",
-                "18/08/2026; 15:00; MASCIALINO FRANCESCO vs PAGLIARA PIERPAOLO I; MIGLIETTA ANTONIO vs MARGHERITA ROBERTO",
-                "18/08/2026; 16:30; TRABACCA CRISTIANO vs LECCI GIUSEPPE JUNIOR I; ZURLO GIUSEPPE vs ZIGRINO MARCO",
-                "18/08/2026; 18:00; CANNARILE GIUSEPPE vs LUPO VINCENZO I; CRAVIOLATTI DAMIANO vs PIERGIOVANNI LEONARDO",
-                "18/08/2026; 19:30; CIARLONI MATTIA vs CERVELLERA NICOLA"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
             "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
@@ -23,6 +11,18 @@
                 "19/08/2026; 18:00; ZURLO GIUSEPPE vs ZIGRINO MARCO; CRAVIOLATTI DAMIANO vs PIERGIOVANNI LEONARDO",
                 "19/08/2026; 19:30; MIGLIETTA ANTONIO vs BIANCO LEONARDO",
                 "19/08/2026; 21:00; SALONNE MARCO vs CANNARILE GIUSEPPE"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
+            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
+            "data": "20/08/2026",
+            "partite": [
+                "20/08/2026; 00:00; No. Campo 1",
+                "20/08/2026; 15:30; GALLONE GIUSEPPE vs TRABACCA CRISTIANO",
+                "20/08/2026; 18:30; ZURLO GIUSEPPE vs PIERGIOVANNI LEONARDO",
+                "20/08/2026; 19:30; PAGLIARA PIERPAOLO vs MIGLIETTA ANTONIO",
+                "20/08/2026; 21:00; DELLO IACOVO ANDREA vs SALONNE MARCO"
             ]
         }
     ]
