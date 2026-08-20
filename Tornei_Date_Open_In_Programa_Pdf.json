@@ -1,19 +1,12 @@
 {
-    "report_data": "19/08/2026 18:52",
+    "report_data": "20/08/2026 18:58",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
-            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "19/08/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "20/08/2026",
             "partite": [
-                "19/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "19/08/2026; 11:30; GENTILE GIANFRANCO vs CARRIERI ALESSANDRO",
-                "19/08/2026; 13:30; RAGUSO FULVIO vs FIORE SIMONE",
-                "19/08/2026; 15:00; DE PACE DONATO vs LIUZZI GIUSEPPE I; LOMBARDI FRANCESCO vs PANZA FEDERICO",
-                "19/08/2026; 16:00; COLUCCI GIORGIO vs MUOLO GIANDONATO I; PASTORE GIANLUCA vs ORLANDI MATTEO I; SCHENA ANDREA vs FRAGNELLI OSVALDO",
-                "19/08/2026; 17:30; TANZARELLA VINCENZO vs DE GIOVANNI GIAMBATTISTA I; SPACCIANTE GIUSEPPE vs MARASCIULO VITANTONIO",
-                "19/08/2026; 18:30; CAFAGNA DAVIDE vs MICCOLIS PIERO I; MIEGGE MATTEO vs SEMERARO LUCIANO",
-                "19/08/2026; 20:00; LATARTARA GIANMARIA vs CARDONE LUIGI WALTER I; TAURO PIERFEDELE vs CAZZOLLA FRANCESCO"
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -22,18 +15,18 @@
             "data": "20/08/2026",
             "partite": [
                 "20/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "20/08/2026; 16:00; DI BRINDISI GAETANO vs DE PACE DONATO I; LATARTARA GIANMARIA vs CARDONE LUIGI WALTER; PANZA FEDERICO vs PASTORE GIANLUCA",
-                "20/08/2026; 17:30; TANZARELLA VINCENZO vs CAFAGNA DAVIDE; ANGELO ANTONIO vs MIEGGE MATTEO",
-                "20/08/2026; 18:30; MUOLO GIANDONATO vs MASTROMARINI PIERPAOLO I; TAURO PIERFEDELE vs CAZZOLLA FRANCESCO; SPACCIANTE GIUSEPPE vs MARASCIULO VITANTONIO",
-                "20/08/2026; 20:00; FIORE SIMONE vs SCHENA ANDREA; GENTILE GIANFRANCO vs FANIGLIULO ANTONIO"
+                "20/08/2026; 16:00; DI BRINDISI GAETANO vs DE PACE DONATO I; CARDONE LUIGI WALTER vs MARASCIULO MARCO FELICE I; PANZA FEDERICO vs PASTORE GIANLUCA",
+                "20/08/2026; 17:30; TANZARELLA VINCENZO vs MICCOLIS PIERO I; ANGELO ANTONIO vs MIEGGE MATTEO",
+                "20/08/2026; 18:30; MUOLO GIANDONATO vs MASTROMARINI PIERPAOLO I; CAZZOLLA FRANCESCO vs PEDOTE PASQUALE I; MARASCIULO VITANTONIO vs BIANCHI ROBERTO",
+                "20/08/2026; 20:00; FIORE SIMONE vs SCHENA ANDREA I; GENTILE GIANFRANCO vs FANIGLIULO ANTONIO"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "19/08/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "21/08/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "Nessuna partita trovata"
             ]
         }
     ]
