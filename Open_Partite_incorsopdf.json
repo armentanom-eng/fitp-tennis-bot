@@ -1,29 +1,4 @@
 {
-    "report_data": "19/08/2026 18:23",
-    "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
-            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
-            "data": "19/08/2026",
-            "partite": [
-                "19/08/2026; 00:00; No. Campo 1",
-                "19/08/2026; 15:30; TRABACCA CRISTIANO vs CIARLONI MATTIA",
-                "19/08/2026; 18:00; ZURLO GIUSEPPE vs ZIGRINO MARCO; CRAVIOLATTI DAMIANO vs PIERGIOVANNI LEONARDO",
-                "19/08/2026; 19:30; MIGLIETTA ANTONIO vs BIANCO LEONARDO",
-                "19/08/2026; 21:00; SALONNE MARCO vs CANNARILE GIUSEPPE"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D6AE92F7-8D7B-4D5D-886F-EF11A4820468",
-            "nomeTorneo": "TORNEO III CATEGORIA ASD CIRCOLO TENNIS LATIANO 2026",
-            "data": "20/08/2026",
-            "partite": [
-                "20/08/2026; 00:00; No. Campo 1",
-                "20/08/2026; 15:30; GALLONE GIUSEPPE vs TRABACCA CRISTIANO",
-                "20/08/2026; 18:30; ZURLO GIUSEPPE vs PIERGIOVANNI LEONARDO",
-                "20/08/2026; 19:30; PAGLIARA PIERPAOLO vs MIGLIETTA ANTONIO",
-                "20/08/2026; 21:00; DELLO IACOVO ANDREA vs SALONNE MARCO"
-            ]
-        }
-    ]
+    "report_data": "20/08/2026 18:29",
+    "tornei": []
 }
