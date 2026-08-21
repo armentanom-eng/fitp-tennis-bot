@@ -1,10 +1,10 @@
 {
-    "report_data": "20/08/2026 18:58",
+    "report_data": "21/08/2026 18:55",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "20/08/2026",
+            "data": "21/08/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -12,19 +12,21 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "20/08/2026",
+            "data": "21/08/2026",
             "partite": [
-                "20/08/2026; 00:00; No. CAMPO 1 CAMPO 2 CAMPO 3",
-                "20/08/2026; 16:00; DI BRINDISI GAETANO vs DE PACE DONATO I; CARDONE LUIGI WALTER vs MARASCIULO MARCO FELICE I; PANZA FEDERICO vs PASTORE GIANLUCA",
-                "20/08/2026; 17:30; TANZARELLA VINCENZO vs MICCOLIS PIERO I; ANGELO ANTONIO vs MIEGGE MATTEO",
-                "20/08/2026; 18:30; MUOLO GIANDONATO vs MASTROMARINI PIERPAOLO I; CAZZOLLA FRANCESCO vs PEDOTE PASQUALE I; MARASCIULO VITANTONIO vs BIANCHI ROBERTO",
-                "20/08/2026; 20:00; FIORE SIMONE vs SCHENA ANDREA I; GENTILE GIANFRANCO vs FANIGLIULO ANTONIO"
+                "21/08/2026; 00:00; No. CAMPO 1 CAMPO 3",
+                "21/08/2026; 11:30; SIGNORILE MICHELE vs MARASCIULO MARCO FELICE",
+                "21/08/2026; 16:00; DIGIESI ALDO vs SCHENA ANDREA I; BOOCOCK GIANLUIGI vs MICCOLIS PIERO",
+                "21/08/2026; 17:00; LOCOROTONDO ACHILLE vs CAZZOLLA FRANCESCO I; PONTE MICHELE vs FANIGLIULO ANTONIO",
+                "21/08/2026; 18:30; MIEGGE MATTEO vs MUOLO GIANDONATO I; CAMPANELLA TOMMASO vs BIANCHI ROBERTO",
+                "21/08/2026; 19:30; ARGENTO CARLO MARIA vs PASTORE GIANLUCA",
+                "21/08/2026; 00:00; 6 A seguire Singolare Maschile Open q vs TITTOZZI FABIO"
             ]
         },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "21/08/2026",
+            "data": "22/08/2026",
             "partite": [
                 "Nessuna partita trovata"
             ]
