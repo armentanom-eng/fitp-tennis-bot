@@ -1,34 +1,34 @@
 {
-    "report_data": "21/08/2026 18:55",
+    "report_data": "22/08/2026 18:48",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "21/08/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
-            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
-            "data": "21/08/2026",
-            "partite": [
-                "21/08/2026; 00:00; No. CAMPO 1 CAMPO 3",
-                "21/08/2026; 11:30; SIGNORILE MICHELE vs MARASCIULO MARCO FELICE",
-                "21/08/2026; 16:00; DIGIESI ALDO vs SCHENA ANDREA I; BOOCOCK GIANLUIGI vs MICCOLIS PIERO",
-                "21/08/2026; 17:00; LOCOROTONDO ACHILLE vs CAZZOLLA FRANCESCO I; PONTE MICHELE vs FANIGLIULO ANTONIO",
-                "21/08/2026; 18:30; MIEGGE MATTEO vs MUOLO GIANDONATO I; CAMPANELLA TOMMASO vs BIANCHI ROBERTO",
-                "21/08/2026; 19:30; ARGENTO CARLO MARIA vs PASTORE GIANLUCA",
-                "21/08/2026; 00:00; 6 A seguire Singolare Maschile Open q vs TITTOZZI FABIO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
             "data": "22/08/2026",
             "partite": [
+                "22/08/2026; 00:00; No. CAMPO 1 CAMPO 3",
+                "22/08/2026; 11:30; CAMPANELLA TOMMASO vs CISTERNINO FABIANO",
+                "22/08/2026; 14:30; PONTE MICHELE vs ROTONDO VALENTINO",
+                "22/08/2026; 16:00; CAZZOLLA FRANCESCO vs NARDELLI VITO I; MUOLO GIANDONATO vs PECCARISI TIZIANO",
+                "22/08/2026; 17:00; MICCOLIS PIERO vs RUBINO LEOLUCA I; SCHENA ANDREA vs DE RINALDIS SERGIO",
+                "22/08/2026; 18:30; ARGENTO CARLO MARIA vs BALESTRA DANIEL I; SIGNORILE MICHELE vs TODARO ANTONIO",
+                "22/08/2026; 00:00; TITTOZZI FABIO vs MURRI LUCA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "23/08/2026",
+            "partite": [
                 "Nessuna partita trovata"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "22/08/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         }
     ]
