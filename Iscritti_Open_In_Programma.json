@@ -1,6 +1,34 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUCA DI FRANCESCO4.2",
+                "LUIGI MARIA LAMARINA3.1",
+                "ANTONINO  SIRSI4.3",
+                "GIACOMO URGESE4.3",
+                "LUIGI GALIANO3.4",
+                "VINCENZO LANZILOTTI4.NC",
+                "ANDREA DELLO IACOVO3.2",
+                "MARCO ZUCCARO3.4",
+                "LUCA LIGUORI3.4",
+                "DAMIANO CRAVIOLATTI3.5",
+                "AGOSTINO FARINA4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
             "categoria": "43° torneo nazionale Selva di Fasano",
             "tabellone": "Singolare Maschile Open",
@@ -13,7 +41,6 @@
                 "MATTEO MIEGGE4.3",
                 "VALENTINO ROTONDO3.5",
                 "LEOLUCA RUBINO3.5",
-                "LEONARDO BARBERO2.6",
                 "FEDERICO PANZA4.3",
                 "ANTONIO FANIGLIULO4.2",
                 "VITO NARDELLI3.5",
@@ -64,35 +91,9 @@
                 "FABIO TITTOZZI3.5",
                 "OSVALDO FRAGNELLI4.5",
                 "MARCO FELICE MARASCIULO4.2",
-                "MATTEO PIO LAPADULA4.5"
+                "MATTEO PIO LAPADULA4.5",
+                "FABIANO CISTERNINO3.5"
             ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "MATTIA CIARLONI3.3",
-                "ANDREA GIUSEPPE MARRA4.5",
-                "ANGELO CIACCIA4.NC",
-                "ALESSIO ANTONIO FURONE4.2",
-                "LUCA DI FRANCESCO4.2",
-                "LUIGI MARIA LAMARINA3.1",
-                "ANTONINO  SIRSI4.3",
-                "GIACOMO URGESE4.3",
-                "LUIGI GALIANO3.4",
-                "VINCENZO LANZILOTTI4.NC",
-                "ANDREA DELLO IACOVO3.2",
-                "MARCO ZUCCARO3.4",
-                "LUCA LIGUORI3.4",
-                "DAMIANO CRAVIOLATTI3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
         }
     ]
 }
