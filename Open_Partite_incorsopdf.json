@@ -1,4 +1,13 @@
 {
-    "report_data": "22/08/2026 18:19",
-    "tornei": []
+    "report_data": "23/08/2026 18:19",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D7338365-B95B-4494-907F-1E40EC681CF7",
+            "nomeTorneo": "43° TORNEO NAZIONALE SELVA DI FASANO",
+            "data": "23/08/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        }
+    ]
 }
