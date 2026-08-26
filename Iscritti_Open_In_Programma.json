@@ -1,3 +1,42 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUCA DI FRANCESCO4.2",
+                "LUIGI MARIA LAMARINA3.1",
+                "ANTONINO  SIRSI4.3",
+                "GIACOMO URGESE4.3",
+                "LUIGI GALIANO3.4",
+                "VINCENZO LANZILOTTI4.NC",
+                "ANDREA DELLO IACOVO3.2",
+                "MARCO ZUCCARO3.4",
+                "LUCA LIGUORI3.4",
+                "DAMIANO CRAVIOLATTI3.5",
+                "AGOSTINO FARINA4.3",
+                "LORENZO COLELLA3.3",
+                "MARCO LOVECCHIO3.4",
+                "LEONARDO PIERGIOVANNI3.3",
+                "GIANLUCA GIANNONE4.1",
+                "GIUSEPPE MONTANARO4.2",
+                "ALBERTO RUGGIERO4.1",
+                "STEFANO MARCHIONNA4.1",
+                "MATTEO LOVECCHIO3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ALESSIA MINNITI4.1"
+            ]
+        }
+    ]
 }
