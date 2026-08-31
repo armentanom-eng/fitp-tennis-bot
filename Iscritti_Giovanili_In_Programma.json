@@ -4,7 +4,9 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Singolare Femminile Under 10",
-            "iscritti": []
+            "iscritti": [
+                "CARLOTTA CAPUTO4.NC"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
@@ -36,7 +38,8 @@
             "tabellone": "Singolare Maschile Under 13",
             "iscritti": [
                 "ETTORE D'AGOSTO3.5",
-                "GIANMARCO CRESCINI4.1"
+                "GIANMARCO CRESCINI4.1",
+                "GIORGIO DELLO IACOVO4.1"
             ]
         },
         {
