@@ -39,7 +39,8 @@
             "iscritti": [
                 "ETTORE D'AGOSTO3.5",
                 "GIANMARCO CRESCINI4.1",
-                "GIORGIO DELLO IACOVO4.1"
+                "GIORGIO DELLO IACOVO4.1",
+                "PIERGIORGIO PEPE4.1"
             ]
         },
         {
@@ -52,7 +53,10 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Doppio Femminile Under 11",
-            "iscritti": []
+            "iscritti": [
+                "DENISE MELEDI4.6",
+                "FAUSTINE MARIA PAIANO4.5"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
