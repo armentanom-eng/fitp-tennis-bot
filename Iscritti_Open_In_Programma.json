@@ -1,6 +1,33 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "CARLO MARIA ARGENTO4.1",
+                "LEONARDO CARDONE4.3",
+                "GIANDONATO MUOLO4.3",
+                "ROSSANO FALCIONI4.NC",
+                "ANTONIO FANIGLIULO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Doppio Maschile Open",
+            "iscritti": [
+                "ANTONIO FANIGLIULO4.2",
+                "FRANCESCO SICILIA4.2"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
             "tabellone": "Singolare Maschile Open",
