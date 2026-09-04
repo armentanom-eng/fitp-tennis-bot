@@ -1,6 +1,45 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "CARLO MARIA ARGENTO4.1",
+                "LEONARDO CARDONE4.3",
+                "GIANDONATO MUOLO4.3",
+                "ROSSANO FALCIONI4.NC",
+                "ANTONIO FANIGLIULO4.2",
+                "LUIGI WALTER CARDONE4.3",
+                "GIANMARIA LATARTARA4.5",
+                "ALEXANDER FROLOV4.2",
+                "GIANLUCA PASTORE4.5",
+                "GIOVANNI CAPOCHIANI4.5",
+                "ANGELO ANTONIO RAPANA'4.2",
+                "VINCENZO MOLENDINI4.1",
+                "OTELLO STEFANO GIARDINO4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ANTONIA MICCOLIS4.2",
+                "VALENTINA BARNABA4.3",
+                "VITTORIA CAROLI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Doppio Maschile Open",
+            "iscritti": [
+                "ANTONIO FANIGLIULO4.2",
+                "FRANCESCO SICILIA4.2"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
             "tabellone": "Singolare Maschile Open",
@@ -11,7 +50,6 @@
                 "ALESSIO ANTONIO FURONE4.2",
                 "LUIGI MARIA LAMARINA3.1",
                 "LUIGI GALIANO3.4",
-                "VINCENZO LANZILOTTI4.NC",
                 "ANDREA DELLO IACOVO3.2",
                 "MARCO ZUCCARO3.4",
                 "LUCA LIGUORI3.4",
@@ -37,7 +75,9 @@
                 "PIETRO LIBARDO4.NC",
                 "STEFANO SGURA3.5",
                 "MATTEO MARIA MORLEO3.5",
-                "NICOLO' PAGLIARA4.1"
+                "NICOLO' PAGLIARA4.1",
+                "ANTONIO FIUME4.1",
+                "DANIELE DI BRINDISI4.2"
             ]
         },
         {
@@ -46,43 +86,6 @@
             "tabellone": "Singolare Femminile Open",
             "iscritti": [
                 "ALESSIA MINNITI4.1"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "CARLO MARIA ARGENTO4.1",
-                "LEONARDO CARDONE4.3",
-                "GIANDONATO MUOLO4.3",
-                "ROSSANO FALCIONI4.NC",
-                "ANTONIO FANIGLIULO4.2",
-                "LUIGI WALTER CARDONE4.3",
-                "GIANMARIA LATARTARA4.5",
-                "ALEXANDER FROLOV4.2",
-                "VINCENZO MOLENDINI4.1",
-                "GIANLUCA PASTORE4.5",
-                "GIOVANNI CAPOCHIANI4.5",
-                "ANGELO ANTONIO RAPANA'4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "ANTONIA MICCOLIS4.2",
-                "VALENTINA BARNABA4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "tabellone": "Doppio Maschile Open",
-            "iscritti": [
-                "ANTONIO FANIGLIULO4.2",
-                "FRANCESCO SICILIA4.2"
             ]
         }
     ]

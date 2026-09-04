@@ -5,7 +5,9 @@
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Singolare Femminile Under 10",
             "iscritti": [
-                "CARLOTTA CAPUTO4.NC"
+                "CARLOTTA CAPUTO4.NC",
+                "GABRIELLA GIANNOCCARO4.NC",
+                "FRANCESCA BONO4.NC"
             ]
         },
         {
@@ -25,7 +27,10 @@
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Singolare Maschile Under 10",
             "iscritti": [
-                "MATTIA RINELLA4.NC"
+                "MATTIA RINELLA4.NC",
+                "KEVIN GIANCOLA4.NC",
+                "LEONARDO ZAPPACOSTA4.NC",
+                "LORENZO RIZZO4.NC"
             ]
         },
         {
@@ -33,7 +38,9 @@
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Singolare Maschile Under 11",
             "iscritti": [
-                "MATTIA ALDO GAMBINO4.5"
+                "MATTIA ALDO GAMBINO4.5",
+                "DEMETRIO LE ROSE4.4",
+                "LUDOVICO PERES4.4"
             ]
         },
         {
@@ -45,14 +52,19 @@
                 "GIANMARCO CRESCINI4.1",
                 "GIORGIO DELLO IACOVO4.1",
                 "PIERGIORGIO PEPE4.1",
-                "GABRIELE LONGO3.5"
+                "GABRIELE LONGO3.5",
+                "MARCO LOVECCHIO3.4",
+                "ALESSANDRO RIZZU4.1"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Doppio Femminile Under 10",
-            "iscritti": []
+            "iscritti": [
+                "GABRIELLA GIANNOCCARO4.NC",
+                "FRANCESCA BONO4.NC"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
@@ -73,7 +85,10 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Doppio Maschile Under 10",
-            "iscritti": []
+            "iscritti": [
+                "LORENZO RIZZO4.NC",
+                "LEONARDO ZAPPACOSTA4.NC"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
