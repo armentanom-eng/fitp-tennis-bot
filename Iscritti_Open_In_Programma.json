@@ -29,7 +29,9 @@
                 "WILLIAM DEL VECCHIO 4.NC",
                 "TOMMASO CAMPANELLA4.1",
                 "CHRISTIAN VITO ADAMI4.3",
-                "MATTEO FRANCESCO IVONE4.NC"
+                "MATTEO FRANCESCO IVONE4.NC",
+                "ALESSANDRO CALELLA4.4",
+                "ANTONIO CAMPANELLA4.6"
             ]
         },
         {
@@ -57,7 +59,9 @@
                 "VINCENZO MOLENDINI4.1",
                 "GIOELE MASTROMARINI4.1",
                 "CARLO MARIA ARGENTO4.1",
-                "TOMMASO BAGORDA4.1"
+                "TOMMASO BAGORDA4.1",
+                "GIOVANNI CAPOCHIANI4.5",
+                "ALESSANDRO LOPARCO4.4"
             ]
         },
         {
@@ -99,7 +103,9 @@
                 "ANGELO RIZZO4.5",
                 "CRISTIANO TRABACCA3.3",
                 "RICCARDO SCHIRINZI4.4",
-                "ANTONIO CAVALIERE4.1"
+                "ANTONIO CAVALIERE4.1",
+                "ANTONIO D'AGNANO4.2",
+                "JACOPO MARIA GIUDICE4.3"
             ]
         },
         {
@@ -107,14 +113,18 @@
             "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
             "tabellone": "Singolare Femminile Open",
             "iscritti": [
-                "SARAH ORSINO3.4"
+                "SARAH ORSINO3.4",
+                "BEATRICE MATTIA3.5",
+                "MADDALENA SEGRETO3.4"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
             "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
             "tabellone": "Singolare Maschile Open",
-            "iscritti": []
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
