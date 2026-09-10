@@ -1,20 +1,20 @@
 {
-    "report_data": "09/09/2026 20:55",
+    "report_data": "10/09/2026 20:51",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "data": "09/09/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "10/09/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "09/09/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "data": "10/09/2026",
             "partite": [
-                "Nessuna partita trovata"
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -27,11 +27,13 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "data": "09/09/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "11/09/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "11/09/2026; 00:00; No. Campo 2 Campo 3",
+                "11/09/2026; 17:30; RIZZO ANGELO vs LEONE EMANUELE; BIANCO LUIGI vs GIARDINO OTELLO STEFANO",
+                "11/09/2026; 18:30; CIACCIA ANGELO vs MARRA ANDREA GIUSEPPE"
             ]
         }
     ]
