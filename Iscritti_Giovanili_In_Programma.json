@@ -1,3 +1,129 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "CARLOTTA CAPUTO4.NC",
+                "GABRIELLA GIANNOCCARO4.NC",
+                "FRANCESCA BONO4.NC",
+                "LIVIA CANNOLETTA4.NC",
+                "GIORGIA PARATA4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Femminile Under 11",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Femminile Under 13",
+            "iscritti": [
+                "GIULIA CALO'4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "MATTIA RINELLA4.NC",
+                "KEVIN GIANCOLA4.NC",
+                "LEONARDO ZAPPACOSTA4.NC",
+                "LORENZO RIZZO4.NC",
+                "DAVIDE MAURO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Maschile Under 11",
+            "iscritti": [
+                "MATTIA ALDO GAMBINO4.5",
+                "DEMETRIO LE ROSE4.4",
+                "LUDOVICO PERES4.4",
+                "STEFANO FORLEO4.NC",
+                "FRANCESCO MARIA PUGLIESE4.3",
+                "FRANCESCO SIRSI4.NC",
+                "DAVIDE BATISTI4.2",
+                "GABRIELE SPEDICATO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Singolare Maschile Under 13",
+            "iscritti": [
+                "ETTORE D'AGOSTO3.5",
+                "GIANMARCO CRESCINI4.1",
+                "GIORGIO DELLO IACOVO4.1",
+                "PIERGIORGIO PEPE4.1",
+                "GABRIELE LONGO3.5",
+                "MARCO LOVECCHIO3.4",
+                "ALESSANDRO RIZZU4.1",
+                "GIACOMO INDRIZZI4.1",
+                "LEONARDO BIANCO4.3",
+                "CARLO MALAGNINO4.3",
+                "GIORGIO VITANTONIO ERIK CASTRIOTA SCANDERBEG3.5",
+                "ALESSANDRO DESIATO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Femminile Under 10",
+            "iscritti": [
+                "GABRIELLA GIANNOCCARO4.NC",
+                "FRANCESCA BONO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Femminile Under 11",
+            "iscritti": [
+                "DENISE MELEDI4.6",
+                "FAUSTINE MARIA PAIANO4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Femminile Under 13",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Maschile Under 10",
+            "iscritti": [
+                "LORENZO RIZZO4.NC",
+                "LEONARDO ZAPPACOSTA4.NC",
+                "MATTIA RINELLA4.NC",
+                "DAVIDE MAURO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Maschile Under 11",
+            "iscritti": [
+                "FRANCESCO MARIA PUGLIESE4.3",
+                "DAVIDE BATISTI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B245FC4-1ED7-450F-AFBA-5C55981B8CA0",
+            "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
+            "tabellone": "Doppio Maschile Under 13",
+            "iscritti": [
+                "GIORGIO VITANTONIO ERIK CASTRIOTA SCANDERBEG3.5",
+                "PIETRO BRUNO3.4"
+            ]
+        }
+    ]
 }

@@ -1,3 +1,157 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "CARLO MARIA ARGENTO4.1",
+                "LEONARDO CARDONE4.3",
+                "GIANDONATO MUOLO4.3",
+                "ROSSANO FALCIONI4.NC",
+                "ANTONIO FANIGLIULO4.2",
+                "LUIGI WALTER CARDONE4.3",
+                "GIANMARIA LATARTARA4.5",
+                "ALEXANDER FROLOV4.2",
+                "GIANLUCA PASTORE4.5",
+                "GIOVANNI CAPOCHIANI4.5",
+                "ANGELO ANTONIO RAPANA'4.2",
+                "VINCENZO MOLENDINI4.1",
+                "OTELLO STEFANO GIARDINO4.5",
+                "GIOELE MASTROMARINI4.1",
+                "FRANCESCO LOMBARDI4.3",
+                "ROBERTO BIANCHI4.2",
+                "ROBERTO COFANO4.4",
+                "TOMMASO BAGORDA4.1",
+                "ALBANO MARIO VENEZIANO4.1",
+                "GIORGIO COLUCCI4.3",
+                "ANDREA FERRARA4.6",
+                "WILLIAM DEL VECCHIO 4.NC",
+                "TOMMASO CAMPANELLA4.1",
+                "CHRISTIAN VITO ADAMI4.3",
+                "MATTEO FRANCESCO IVONE4.NC",
+                "ALESSANDRO CALELLA4.4",
+                "ANTONIO CAMPANELLA4.6",
+                "ANTONIO PERRINO4.1",
+                "MATTIA TOLA4.NC",
+                "FRANCESCO DE MARIA 4.NC",
+                "DOMENICO DITANO4.5",
+                "SIMONE FIORE4.3",
+                "ANDREA POTENZA4.4",
+                "GIUSEPPE LIUZZI4.6",
+                "MATTIA BASILICO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ANTONIA MICCOLIS4.2",
+                "VALENTINA BARNABA4.3",
+                "VITTORIA CAROLI4.4",
+                "LUDOVICA SEMERARO4.4",
+                "FLORA BAGORDA4.4",
+                "SERENA LACERIGNOLA4.4",
+                "ANTONIA MANSUETO4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "tabellone": "Doppio Maschile Open",
+            "iscritti": [
+                "ANTONIO FANIGLIULO4.2",
+                "FRANCESCO SICILIA4.2",
+                "VINCENZO MOLENDINI4.1",
+                "GIOELE MASTROMARINI4.1",
+                "CARLO MARIA ARGENTO4.1",
+                "TOMMASO BAGORDA4.1",
+                "GIOVANNI CAPOCHIANI4.5",
+                "ALESSANDRO LOPARCO4.4",
+                "TOMMASO CAMPANELLA4.1",
+                "DONATELLO OLIVIERI4.5",
+                "ANDREA POTENZA4.4",
+                "DOMENICO DITANO4.5",
+                "SIMONE FIORE4.3",
+                "DAVIDE MARIA DE BIASE4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTIA CIARLONI3.3",
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "ALESSIO ANTONIO FURONE4.2",
+                "LUIGI GALIANO3.4",
+                "ANDREA DELLO IACOVO3.2",
+                "LUCA LIGUORI3.4",
+                "DAMIANO CRAVIOLATTI3.5",
+                "AGOSTINO FARINA4.3",
+                "LORENZO COLELLA3.3",
+                "LEONARDO PIERGIOVANNI3.3",
+                "ALBERTO RUGGIERO4.1",
+                "STEFANO MARCHIONNA4.1",
+                "MATTEO LOVECCHIO3.2",
+                "SILVIO PILIEGO3.4",
+                "VINCENZO LUPO3.5",
+                "LUIGI BIANCO4.5",
+                "EMANUELE LEONE4.NC",
+                "FRANCESCO FIACCONE3.1",
+                "FEDERICO  SABATINO4.3",
+                "ROBERTO MARGHERITA3.4",
+                "OTELLO STEFANO GIARDINO4.5",
+                "PIETRO LIBARDO4.NC",
+                "STEFANO SGURA3.5",
+                "MATTEO MARIA MORLEO3.5",
+                "ANTONIO FIUME4.1",
+                "DANIELE DI BRINDISI4.2",
+                "LUCIANO SEMERARO4.3",
+                "FRANCESCO CALABRESE4.2",
+                "GRAZIANO CAZZATO4.3",
+                "MATTEO GIORDANO3.3",
+                "ANGELO RIZZO4.5",
+                "CRISTIANO TRABACCA3.3",
+                "RICCARDO SCHIRINZI4.4",
+                "ANTONIO CAVALIERE4.1",
+                "ANTONIO D'AGNANO4.2",
+                "JACOPO MARIA GIUDICE4.3",
+                "UGO CERVO3.4",
+                "MARCO MINOIA3.5",
+                "MARCO ZUCCARO3.4",
+                "EMILIO JURY ASSENTE3.1",
+                "LEONARDO BIANCO3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "categoria": "2° Torneo III Categoria TERRAROSSA 2026",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "SARAH ORSINO3.4",
+                "BEATRICE MATTIA3.5",
+                "MADDALENA SEGRETO3.4",
+                "GIORGIA MARGHERITA3.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "ANGELO CIACCIA4.NC",
+                "DAVIDE BELLO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        }
+    ]
 }
