@@ -1,18 +1,19 @@
 {
-    "report_data": "11/09/2026 20:58",
+    "report_data": "12/09/2026 20:34",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "11/09/2026",
+            "data": "12/09/2026",
             "partite": [
-                "12/09/2026; No. Campo 2 Campo 3",
-                "12/09/2026; 2 Inizio ore: 17:30 Singolare Maschile Open FARINA AGOSTINO vs LIBARDO PIETRO Inizio ore: 17:30 Singolare Maschile Open CIACCIA ANGELO o SCHIRINZI RICCARDO vs SABATINO FEDERICO",
-                "11/09/2026; 2 Non prima delle 18:30 Singolare Maschile Open CIACCIA ANGELO o MARRA ANDREA GIUSEPPE vs SCHIRINZI RICCARDO",
-                "11/09/2026; No. Campo 2 Campo 3",
-                "12/09/2026; 3 Non prima delle 18:30 Singolare Maschile Open GIARDINO OTELLO STEFANO vs GIUDICE JACOPO MARIA",
                 "12/09/2026; 1 Inizio ore: 10:00 Singolare Maschile Open CAZZATO GRAZIANO vs SEMERARO LUCIANO",
-                "11/09/2026; 1 Inizio ore: 17:30 Singolare Maschile Open RIZZO ANGELO vs LEONE EMANUELE o LIBARDO PIETRO Inizio ore: 17:00 Singolare Maschile Open BIANCO LUIGI vs GIARDINO OTELLO STEFANO"
+                "13/09/2026; 2 Non prima delle 18:30 Singolare Maschile Open D'AGNANO ANTONIO vs CAZZATO GRAZIANO",
+                "12/09/2026; 2 Inizio ore: 17:30 Singolare Maschile Open FARINA AGOSTINO vs LIBARDO PIETRO Inizio ore: 17:30 Singolare Maschile Open CIACCIA ANGELO o SCHIRINZI RICCARDO vs SABATINO FEDERICO",
+                "12/09/2026; No. Campo 2 Campo 3",
+                "13/09/2026; 3 Non prima delle 20:00 Singolare Maschile Open CIACCIA ANGELO vs CALABRESE FRANCESCO",
+                "13/09/2026; No. Campo 2 Campo 3",
+                "13/09/2026; 1 Inizio ore: 17:00 Singolare Maschile Open GIARDINO OTELLO STEFANO o GIUDICE JACOPO MARIA vs DI BRINDISI DANIELE Inizio ore: 17:00 Singolare Maschile Open FURONE ALESSIO ANTONIO vs FARINA AGOSTINO o LIBARDO PIETRO",
+                "12/09/2026; 3 Non prima delle 18:30 Singolare Maschile Open GIARDINO OTELLO STEFANO vs GIUDICE JACOPO MARIA"
             ]
         }
     ]
