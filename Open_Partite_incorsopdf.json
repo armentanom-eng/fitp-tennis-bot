@@ -1,16 +1,6 @@
 {
-    "report_data": "14/09/2026 21:16",
+    "report_data": "15/09/2026 20:45",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
-            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "14/09/2026",
-            "partite": [
-                "14/09/2026; 00:00; No. Campo 2 Campo 3",
-                "14/09/2026; 16:00; DI BRINDISI DANIELE vs MARCHIONNA STEFANO I; FIUME ANTONIO vs LIBARDO PIETRO",
-                "14/09/2026; 17:30; CIACCIA ANGELO vs CALABRESE FRANCESCO; RUGGIERO ALBERTO vs D; AGNANO ANTONIO vs CAZZATO GRAZIANO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
@@ -21,6 +11,18 @@
                 "15/09/2026; 17:00; AGNANO ANTONIO vs CRAVIOLATTI DAMIANO I; LIBARDO PIETRO vs LUPO VINCENZO",
                 "15/09/2026; 18:30; MORLEO MATTEO MARIA vs CAVALIERE ANTONIO",
                 "15/09/2026; 21:00; PILIEGO SILVIO vs GALIANO LUIGI I; LIGUORI LUCA vs MARGHERITA ROBERTO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "16/09/2026",
+            "partite": [
+                "16/09/2026; 00:00; No. Campo 2 Campo 3",
+                "16/09/2026; 15:00; CERVO UGO vs SGURA STEFANO",
+                "16/09/2026; 17:00; ZURLO GIUSEPPE vs MORLEO MATTEO MARIA I; LIBARDO PIETRO vs ZUCCARO MARCO",
+                "16/09/2026; 18:30; MARGHERITA ROBERTO vs TRABACCA CRISTIANO N; CRAVIOLATTI DAMIANO vs PIERGIOVANNI LEONARDO",
+                "16/09/2026; 20:00; GIORDANO MATTEO vs PILIEGO SILVIO"
             ]
         }
     ]
