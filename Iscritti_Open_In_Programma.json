@@ -95,8 +95,6 @@
             "categoria": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
             "tabellone": "Doppio Maschile Open",
             "iscritti": [
-                "ANTONIO FANIGLIULO4.1",
-                "FRANCESCO SICILIA4.2",
                 "VINCENZO MOLENDINI4.1",
                 "GIOELE MASTROMARINI4.1",
                 "CARLO MARIA ARGENTO4.1",
@@ -118,7 +116,11 @@
                 "GIOVANNI ADAMI4.3",
                 "CHRISTIAN VITO ADAMI4.3",
                 "GIANDONATO MUOLO4.3",
-                "ALESSANDRO CARRIERI4.5"
+                "ALESSANDRO CARRIERI4.5",
+                "ANTONIO FANIGLIULO4.1",
+                "GIACOMO MARTUCCI4.2",
+                "ANTONIO CARDONE4.4",
+                "GIOVANNI CHIALA'4.3"
             ]
         },
         {
@@ -132,7 +134,10 @@
                 "VINCENZO LANZILOTTI4.NC",
                 "CARLO MALAGNINO4.3",
                 "ANTONIO FISCHETTO4.NC",
-                "ANGELO CIACCIA4.4"
+                "ANGELO CIACCIA4.4",
+                "LUCA DI FRANCESCO4.2",
+                "ETTORE PAPADIA4.3",
+                "ANDREA ARGENTIERO 4.NC"
             ]
         },
         {
@@ -140,6 +145,26 @@
             "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
             "tabellone": "Singolare Femminile Open",
             "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
+            "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "GIORGIA MARGHERITA3.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
+            "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ALESSIO ANTONIO FURONE4.2",
+                "EDOARDO DENITTO4.1",
+                "SAMUELE GUIDO4.4",
+                "LUIGI GALIANO3.4",
+                "NICOLO' PAGLIARA3.5"
+            ]
         }
     ]
 }
