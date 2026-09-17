@@ -1,4 +1,19 @@
 {
-    "report_data": "16/09/2026 21:19",
-    "tornei": []
+    "report_data": "17/09/2026 21:23",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "17/09/2026",
+            "partite": [
+                "18/09/2026; 1 Inizio ore: 18:00 Singolare Maschile Open TOLA MATTIA vs FERRARA ANDREA Inizio ore: 18:00 Singolare Maschile Open TRIPOLO MASSIMILIANO vs CONVERTINI DONALDO",
+                "18/09/2026; No. Campo 1 CAMP 3",
+                "17/09/2026; 1 Inizio ore: 16:00 Singolare Maschile Open DEL VECCHIO WILLIAM vs GRECO MARCELLO",
+                "17/09/2026; 3 Inizio ore: 20:00 Singolare Maschile Open SABATELLI ORONZO vs IVONE MATTEO FRANCESCO Inizio ore: 20:00 Singolare Maschile Open PELLEGRINI GUSEPPE FRANCESCO vs TOLA MATTIA",
+                "18/09/2026; 2 Inizio ore: 19:30 Singolare Maschile Open GRECO MARCELLO vs CAMPANELLA ANTONIO Inizio ore: 19:30 Singolare Maschile Open VALENTINI ANDREA vs SABATELLI ORONZO",
+                "17/09/2026; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
+                "17/09/2026; 2 Inizio ore: 18:30 Singolare Maschile Open FALCIONI ROSSANO vs CONVERTINI DONALDO"
+            ]
+        }
+    ]
 }
