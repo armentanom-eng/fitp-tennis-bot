@@ -1,12 +1,27 @@
 {
-    "report_data": "16/09/2026 20:44",
+    "report_data": "17/09/2026 20:49",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
             "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
-            "data": "16/09/2026",
+            "data": "17/09/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "17/09/2026; 00:00; No. Campo 2 Campo 3",
+                "17/09/2026; 15:00; COLELLA LORENZO vs SGURA STEFANO I; CRAVIOLATTI DAMIANO vs PAGLIARA PIERPAOLO",
+                "17/09/2026; 17:00; DELLO IACOVO ANDREA vs MORLEO MATTEO MARIA I; BIANCO LEONARDO vs GIORDANO MATTEO",
+                "17/09/2026; 18:30; TRABACCA CRISTIANO vs LOVECCHIO MATTEO N; ZUCCARO MARCO vs CIARLONI MATTIA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=48414A8A-1883-4D57-A837-310AABD3394E",
+            "nomeTorneo": "2° TORNEO III CATEGORIA TERRAROSSA 2026",
+            "data": "18/09/2026",
+            "partite": [
+                "18/09/2026; 00:00; No. Campo 2 Campo 3",
+                "18/09/2026; 15:00; FIACCONE FRANCESCO vs COLELLA LORENZO I; MARCHIONNA STEFANO vs LIBARDO PIETRO",
+                "18/09/2026; 16:30; ORSINO SARAH vs MATTIA BEATRICE N; SEGRETO MADDALENA vs EPIFANI MINA",
+                "18/09/2026; 18:00; ZUCCARO MARCO vs CIARLONI MATTIA; TRABACCA CRISTIANO vs LOVECCHIO MATTEO",
+                "18/09/2026; 19:30; DELLO IACOVO ANDREA vs BIANCO LEONARDO N; AGNANO ANTONIO vs CAVALIERE ANTONIO"
             ]
         }
     ]
