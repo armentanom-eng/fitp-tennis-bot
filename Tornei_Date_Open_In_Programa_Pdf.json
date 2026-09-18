@@ -1,10 +1,10 @@
 {
-    "report_data": "17/09/2026 21:21",
+    "report_data": "18/09/2026 20:53",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
-            "data": "17/09/2026",
+            "data": "18/09/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
@@ -12,20 +12,9 @@
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
             "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "data": "17/09/2026",
+            "data": "18/09/2026",
             "partite": [
                 "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "data": "17/09/2026",
-            "partite": [
-                "17/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
-                "17/09/2026; 16:00; DEL VECCHIO WILLIAM vs GRECO MARCELLO",
-                "17/09/2026; 18:30; FALCIONI ROSSANO vs CONVERTINI DONALDO",
-                "17/09/2026; 20:00; SABATELLI ORONZO vs IVONE MATTEO FRANCESCO I; PELLEGRINI GUSEPPE FRANCESCO vs TOLA MATTIA"
             ]
         },
         {
@@ -36,6 +25,21 @@
                 "18/09/2026; 00:00; No. Campo 1 CAMP 3",
                 "18/09/2026; 18:00; TOLA MATTIA vs FERRARA ANDREA I; TRIPOLO MASSIMILIANO vs CONVERTINI DONALDO",
                 "18/09/2026; 19:30; GRECO MARCELLO vs CAMPANELLA ANTONIO I; VALENTINI ANDREA vs SABATELLI ORONZO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "19/09/2026",
+            "partite": [
+                "19/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
+                "19/09/2026; 11:00; LATARTARA GIANMARIA vs TRIPOLO MASSIMILIANO",
+                "19/09/2026; 12:00; BAGORDA FLORA vs D",
+                "19/09/2026; 14:00; CAMPANELLA ANTONIO vs CUCCIOLLA RAIMONDO",
+                "19/09/2026; 15:00; TANZARELLA VINCENZO vs GRANALDI ALESSANDRO",
+                "19/09/2026; 15:30; LIUZZI GIUSEPPE vs VALENTINI ANDREA; CALELLA ALESSANDRO vs GENTILE GIANFRANCO",
+                "19/09/2026; 17:00; CARRIERI ALESSANDRO vs DITANO DOMENICO I; MAGGI MAURO vs GIARDINO OTELLO STEFANO",
+                "19/09/2026; 18:30; CAPOCHIANI GIOVANNI vs LATORRACA RICCARDO I; SPACCIANTE LUCA vs MARTUCCI LUCA I; TOLA MATTIA vs POTENZA ANDREA"
             ]
         }
     ]
