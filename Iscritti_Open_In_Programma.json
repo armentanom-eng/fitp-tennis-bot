@@ -14,21 +14,25 @@
                 "ANGELO CIACCIA4.4",
                 "ETTORE PAPADIA4.3",
                 "ANDREA ARGENTIERO 4.NC",
-                "DIEGO CAIANIELLO4.NC"
+                "DIEGO CAIANIELLO4.NC",
+                "LORENZO GIANNOCCARO4.5"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
             "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
             "tabellone": "Singolare Femminile Open",
-            "iscritti": []
+            "iscritti": [
+                "LUCIA CUOMO4.4"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
             "tabellone": "Singolare Femminile Open",
             "iscritti": [
-                "GIORGIA MARGHERITA3.1"
+                "GIORGIA MARGHERITA3.1",
+                "LUCIA CUOMO4.4"
             ]
         },
         {
@@ -49,7 +53,12 @@
                 "JACOPO MARIA GIUDICE4.3",
                 "ANTONIO SARDELLI4.3",
                 "MARCO ZUCCARO3.4",
-                "ALESSANDRO DE VINCENTI2.6"
+                "ALESSANDRO DE VINCENTI2.6",
+                "OTELLO STEFANO GIARDINO4.5",
+                "ROBERTO MARGHERITA3.4",
+                "ANTONIO CARAMIA3.5",
+                "ALESSIO BARDARO3.2",
+                "GIOVANNI MANCA3.5"
             ]
         },
         {
@@ -172,7 +181,9 @@
                 "ANTONIO FANIGLIULO4.1",
                 "GIACOMO MARTUCCI4.2",
                 "ANTONIO CARDONE4.4",
-                "GIOVANNI CHIALA'4.3"
+                "GIOVANNI CHIALA'4.3",
+                "ANGELO ANTONIO RAPANA'4.2",
+                "MAURO MAGGI4.5"
             ]
         }
     ]

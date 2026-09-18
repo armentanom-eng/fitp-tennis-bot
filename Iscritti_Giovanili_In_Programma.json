@@ -21,7 +21,9 @@
                 "FAUSTINE MARIA PAIANO4.5",
                 "DENISE MELEDI4.5",
                 "GINEVRA TODARO4.NC",
-                "EMMA CONTE4.5"
+                "EMMA CONTE4.5",
+                "MELISSA MANCINO3.5",
+                "ELENA MARIE LIPPOLIS4.NC"
             ]
         },
         {
@@ -33,7 +35,8 @@
                 "STEFANIA FORNARO4.2",
                 "BEATRICE FRANCO4.1",
                 "BENEDETTA FRANCO4.2",
-                "SONIA GORGA4.2"
+                "SONIA GORGA4.2",
+                "SARA SCILLIERI4.1"
             ]
         },
         {
@@ -45,7 +48,11 @@
                 "KEVIN GIANCOLA4.NC",
                 "LEONARDO ZAPPACOSTA4.NC",
                 "LORENZO RIZZO4.NC",
-                "ANDREA LACIRIGNOLA4.NC"
+                "ANDREA LACIRIGNOLA4.NC",
+                "TOMMASO DAMASCO4.NC",
+                "MATTEO BUONO KOSSUTH4.NC",
+                "GIANNICOLA VERGINE4.NC",
+                "GIULIO VINCENZO IAIA4.NC"
             ]
         },
         {
@@ -72,7 +79,9 @@
                 "ANDREA ARGENTIERO 4.NC",
                 "MICHELANGELO CARDASCIA3.4",
                 "LUCA MATACCHIERA4.NC",
-                "ENEA SANTORO 4.NC"
+                "ENEA SANTORO 4.NC",
+                "DAVIDE BELLO4.6",
+                "ETTORE LUIGI TARANTINI4.4"
             ]
         },
         {
@@ -106,7 +115,10 @@
                 "FRANCESCO DI BENEDETTO3.3",
                 "ALBERTO SILVESTRIS3.5",
                 "GIUSEPPE PIO PISTILLO3.3",
-                "FRANCESCO CALABRESE4.1"
+                "FRANCESCO CALABRESE4.1",
+                "RICCARDO PIO DI GIULIO4.5",
+                "ALEX FABIANO3.5",
+                "MARIO LATINO4.1"
             ]
         },
         {
@@ -124,7 +136,9 @@
             "tabellone": "Doppio Femminile Under 11",
             "iscritti": [
                 "DENISE MELEDI4.5",
-                "FAUSTINE MARIA PAIANO4.5"
+                "FAUSTINE MARIA PAIANO4.5",
+                "MELISSA MANCINO3.5",
+                "EMMA CONTE4.5"
             ]
         },
         {
@@ -137,7 +151,11 @@
                 "BEATRICE FRANCO4.1",
                 "GIULIA CALO'4.1",
                 "BENEDETTA FRANCO4.2",
-                "ANGELA BIDETTI4.5"
+                "ANGELA BIDETTI4.5",
+                "SONIA GORGA4.2",
+                "ARIANNA DE PAOLIS4.2",
+                "VIOLA MARTALO'3.2",
+                "GRAZIA CARMELA TRAMACERA3.3"
             ]
         },
         {
@@ -156,8 +174,6 @@
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Doppio Maschile Under 11",
             "iscritti": [
-                "FRANCESCO MARIA PUGLIESE4.3",
-                "DAVIDE BATISTI4.2",
                 "ROBERTO ROTONDO4.2",
                 "VICTOR FRANCISCO LABBATE4.2",
                 "FILIPPO QUARTA3.4",
@@ -165,7 +181,9 @@
                 "MICHELANGELO CARDASCIA3.4",
                 "ANDREA BRUNO3.4",
                 "NICOLA MANGHISI4.4",
-                "ANDREA ALESSANDRO LIGORIO4.2"
+                "ANDREA ALESSANDRO LIGORIO4.2",
+                "MATTIA LOMBARDI3.5",
+                "DAVIDE BATISTI4.2"
             ]
         },
         {
