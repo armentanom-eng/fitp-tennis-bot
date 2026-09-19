@@ -5,12 +5,9 @@
             "categoria": "Circuito Giovanile Junior Master ROAD TO BOLOGNA di Tennis",
             "tabellone": "Singolare Femminile Under 10",
             "iscritti": [
-                "CARLOTTA CAPUTO4.NC",
                 "GABRIELLA GIANNOCCARO4.NC",
                 "FRANCESCA BONO4.NC",
-                "LIVIA CANNOLETTA4.NC",
-                "GIORGIA PARATA4.NC",
-                "MIA PIA MASULLI4.NC"
+                "LIVIA CANNOLETTA4.NC"
             ]
         },
         {
@@ -23,7 +20,8 @@
                 "GINEVRA TODARO4.NC",
                 "EMMA CONTE4.5",
                 "MELISSA MANCINO3.5",
-                "ELENA MARIE LIPPOLIS4.NC"
+                "ELENA MARIE LIPPOLIS4.NC",
+                "MATILDE MELLONE4.4"
             ]
         },
         {
@@ -36,7 +34,11 @@
                 "BEATRICE FRANCO4.1",
                 "BENEDETTA FRANCO4.2",
                 "SONIA GORGA4.2",
-                "SARA SCILLIERI4.1"
+                "SARA SCILLIERI4.1",
+                "RAFFAELLA AZZOLLINI3.2",
+                "GIORGIA GADALETA3.1",
+                "VIOLA MARTALO'3.2",
+                "GRAZIA CARMELA TRAMACERA3.3"
             ]
         },
         {
@@ -45,13 +47,11 @@
             "tabellone": "Singolare Maschile Under 10",
             "iscritti": [
                 "MATTIA RINELLA4.NC",
-                "KEVIN GIANCOLA4.NC",
                 "LEONARDO ZAPPACOSTA4.NC",
                 "LORENZO RIZZO4.NC",
                 "ANDREA LACIRIGNOLA4.NC",
                 "TOMMASO DAMASCO4.NC",
                 "MATTEO BUONO KOSSUTH4.NC",
-                "GIANNICOLA VERGINE4.NC",
                 "GIULIO VINCENZO IAIA4.NC"
             ]
         },
@@ -118,7 +118,8 @@
                 "FRANCESCO CALABRESE4.1",
                 "RICCARDO PIO DI GIULIO4.5",
                 "ALEX FABIANO3.5",
-                "MARIO LATINO4.1"
+                "MARIO LATINO4.1",
+                "PASQUALE SACCOMANNO4.2"
             ]
         },
         {
@@ -155,7 +156,9 @@
                 "SONIA GORGA4.2",
                 "ARIANNA DE PAOLIS4.2",
                 "VIOLA MARTALO'3.2",
-                "GRAZIA CARMELA TRAMACERA3.3"
+                "GRAZIA CARMELA TRAMACERA3.3",
+                "RAFFAELLA AZZOLLINI3.2",
+                "GIORGIA GADALETA3.1"
             ]
         },
         {
@@ -208,7 +211,9 @@
                 "RUGGIERO NAPOLETANO3.4",
                 "GIUSEPPE PIO PISTILLO3.3",
                 "MARCO LOVECCHIO3.4",
-                "GIORGIO DELLO IACOVO4.1"
+                "GIORGIO DELLO IACOVO4.1",
+                "LORENZO COSIMO D'ERRICO4.1",
+                "GIACOMO INDRIZZI4.1"
             ]
         }
     ]

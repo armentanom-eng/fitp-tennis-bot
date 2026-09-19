@@ -1,32 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA GIUSEPPE MARRA4.5",
-                "DAVIDE BELLO4.6",
-                "OTELLO STEFANO GIARDINO4.5",
-                "VINCENZO LANZILOTTI4.NC",
-                "CARLO MALAGNINO4.3",
-                "ANTONIO FISCHETTO4.NC",
-                "ANGELO CIACCIA4.4",
-                "ETTORE PAPADIA4.3",
-                "ANDREA ARGENTIERO 4.NC",
-                "DIEGO CAIANIELLO4.NC",
-                "LORENZO GIANNOCCARO4.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "LUCIA CUOMO4.4"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
             "tabellone": "Singolare Femminile Open",
@@ -58,7 +32,39 @@
                 "ROBERTO MARGHERITA3.4",
                 "ANTONIO CARAMIA3.5",
                 "ALESSIO BARDARO3.2",
-                "GIOVANNI MANCA3.5"
+                "GIOVANNI MANCA3.5",
+                "GIUSEPPE TALDONE3.4",
+                "DANIELE DI GIORGIO3.4",
+                "LEONARDO BIANCO2.8",
+                "CORRADO LIGUORI4.1",
+                "ALESSIO ROSATO3.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "DAVIDE BELLO4.6",
+                "OTELLO STEFANO GIARDINO4.5",
+                "VINCENZO LANZILOTTI4.NC",
+                "CARLO MALAGNINO4.3",
+                "ANTONIO FISCHETTO4.NC",
+                "ANGELO CIACCIA4.4",
+                "ETTORE PAPADIA4.3",
+                "ANDREA ARGENTIERO 4.NC",
+                "DIEGO CAIANIELLO4.NC",
+                "LORENZO GIANNOCCARO4.5",
+                "LEONARDO BIANCO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LUCIA CUOMO4.4"
             ]
         },
         {
@@ -160,8 +166,6 @@
                 "GIOELE MASTROMARINI4.1",
                 "CARLO MARIA ARGENTO4.1",
                 "TOMMASO BAGORDA4.1",
-                "GIOVANNI CAPOCHIANI4.4",
-                "ALESSANDRO LOPARCO4.4",
                 "TOMMASO CAMPANELLA4.1",
                 "DONATELLO OLIVIERI4.5",
                 "ANDREA POTENZA4.4",
