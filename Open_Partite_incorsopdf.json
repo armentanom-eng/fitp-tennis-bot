@@ -1,4 +1,30 @@
 {
-    "report_data": "19/09/2026 19:52",
-    "tornei": []
+    "report_data": "20/09/2026 20:07",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "20/09/2026",
+            "partite": [
+                "20/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
+                "20/09/2026; 10:00; LOMBARDI FRANCESCO vs GENTILE GIANFRANCO",
+                "20/09/2026; 11:30; TANZARELLA VINCENZO vs GRANALDI ALESSANDRO I; TOLA MATTIA vs POTENZA ANDREA",
+                "20/09/2026; 16:30; LENOCI DARIO vs LIUZZI GIUSEPPE I; SPACCIANTE LUCA vs COFANO ROBERTO",
+                "20/09/2026; 18:00; CARRIERI ALESSANDRO vs DITANO DOMENICO I; CAPOCHIANI GIOVANNI vs LATORRACA RICCARDO I; SPACCIANTE GIUSEPPE vs CHIALA",
+                "20/09/2026; 19:30; CARRIERI DAVIDE vs MAGGI MAURO I; LIPPOLIS PAOLA vs MANSUETO ANTONIA I; TAURO PIERFEDELE vs TRIPOLO MASSIMILIANO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "21/09/2026",
+            "partite": [
+                "21/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
+                "21/09/2026; 15:00; LIUZZI GIUSEPPE vs TANZARELLA VINCENZO",
+                "21/09/2026; 17:00; CARRIERI ALESSANDRO vs GARRET DARIO I; MUOLO GIANDONATO vs TRIPOLO MASSIMILIANO",
+                "21/09/2026; 18:30; CAMPANELLA ANTONIO vs PASTORE GIANLUCA I; COFANO ROBERTO vs ADAMI CHRISTIAN VITO I; COLUCCI GIORGIO vs FIORE SIMONE",
+                "21/09/2026; 20:00; CARDONE LEONARDO vs MAGGI MAURO I; POTENZA ANDREA vs AIELLO MATTEO GIUSEPPE I; BASILICO MATTIA vs LATORRACA RICCARDO"
+            ]
+        }
+    ]
 }
