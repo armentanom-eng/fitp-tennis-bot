@@ -1,6 +1,36 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "DAVIDE BELLO4.6",
+                "OTELLO STEFANO GIARDINO4.5",
+                "VINCENZO LANZILOTTI4.NC",
+                "CARLO MALAGNINO4.3",
+                "ANTONIO FISCHETTO4.NC",
+                "ANGELO CIACCIA4.4",
+                "ETTORE PAPADIA4.3",
+                "ANDREA ARGENTIERO 4.NC",
+                "DIEGO CAIANIELLO4.NC",
+                "LORENZO GIANNOCCARO4.5",
+                "LEONARDO BIANCO4.2",
+                "LUIGI FILIPPO4.NC",
+                "GABRIELE NARDELLI 4.6",
+                "FRANCESCO ANGLANI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LUCIA CUOMO4.4"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
             "tabellone": "Singolare Femminile Open",
@@ -36,39 +66,16 @@
                 "GIUSEPPE TALDONE3.4",
                 "DANIELE DI GIORGIO3.4",
                 "LEONARDO BIANCO2.8",
-                "CORRADO LIGUORI4.1",
                 "ALESSIO ROSATO3.1",
                 "CHRISTIAN ANTONIO CHISENA4.3",
                 "FRANCESCO PARLANTE2.7",
-                "DIEGO CAIANIELLO4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA GIUSEPPE MARRA4.5",
-                "DAVIDE BELLO4.6",
-                "OTELLO STEFANO GIARDINO4.5",
-                "VINCENZO LANZILOTTI4.NC",
-                "CARLO MALAGNINO4.3",
-                "ANTONIO FISCHETTO4.NC",
-                "ANGELO CIACCIA4.4",
-                "ETTORE PAPADIA4.3",
-                "ANDREA ARGENTIERO 4.NC",
                 "DIEGO CAIANIELLO4.NC",
-                "LORENZO GIANNOCCARO4.5",
-                "LEONARDO BIANCO4.2",
-                "LUIGI FILIPPO4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "LUCIA CUOMO4.4"
+                "STEFANO MARCHIONNA4.1",
+                "ANDREA DELLO IACOVO3.2",
+                "ANGELO CIACCIA4.4",
+                "LUCA CRAMAROSSA2.8",
+                "VINCENZO LO RE3.3",
+                "FRANCESCO ANGLANI4.4"
             ]
         }
     ]
