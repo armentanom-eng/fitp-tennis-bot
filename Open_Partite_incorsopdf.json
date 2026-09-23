@@ -1,18 +1,6 @@
 {
-    "report_data": "22/09/2026 20:44",
+    "report_data": "23/09/2026 20:57",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
-            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
-            "data": "22/09/2026",
-            "partite": [
-                "22/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
-                "22/09/2026; 15:30; COFANO ROBERTO vs SPORTELLI GIUSEPPE DAVIDE I; CAROLI VITTORIA vs BAGORDA FLORA",
-                "22/09/2026; 17:00; CARRIERI ALESSANDRO vs MARASCIULO VITANTONIO I; CURRI TOMMASO vs CARDONE LEONARDO",
-                "22/09/2026; 18:30; SPACCIANTE GIUSEPPE vs CAMPANELLA ANTONIO I; COLUCCI GIORGIO vs POTENZA ANDREA",
-                "22/09/2026; 20:00; SEMERARO LUCIANO vs GENTILE GIANFRANCO I; CISTERNINO NOEMI vs CESARIO VITTORIA I; MARTUCCI GIACOMO vs BASILICO MATTIA"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
             "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
@@ -24,6 +12,19 @@
                 "23/09/2026; 18:00; MARASCIULO VITANTONIO vs RAPANA; MARTUCCI GIACOMO vs POTENZA ANDREA",
                 "23/09/2026; 19:30; CAMPANELLA ANTONIO vs FROLOV ALEXANDER I; FRAGNELLI FRANCESCO PIO vs MUOLO GIANDONATO I; LACERIGNOLA SERENA vs SEMERARO LUDOVICA",
                 "23/09/2026; 20:30; COFANO ROBERTO vs BIANCHI ROBERTO I; BOLOGNINI MATTIA vs MARTUCCI GIACOMO I; MAGGI MAURO vs ADAMI CHRISTIAN VITO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1F395364-4E1C-4111-A6DB-1418E81B130C",
+            "nomeTorneo": "TORNEO IV CATEGORIA \"SELVA DI FASANO\"",
+            "data": "24/09/2026",
+            "partite": [
+                "24/09/2026; 00:00; No. Campo 1 CAMPO 2 (COPERTO) CAMP 3",
+                "24/09/2026; 15:00; MARASCIULO VITANTONIO vs MASTROMARINI GIOELE I; AIELLO MATTEO GIUSEPPE vs VENEZIANO ALBANO MARIO",
+                "24/09/2026; 16:30; BAGORDA TOMMASO vs FRAGNELLI FRANCESCO PIO; PERRINI FEDERICA vs CAROLI VITTORIA",
+                "24/09/2026; 18:00; FROLOV ALEXANDER vs ARGENTO CARLO MARIA I; BIANCO LUIGI vs DI BITONTO MASSIMO",
+                "24/09/2026; 19:30; MOLENDINI VINCENZO vs FRAGNELLI OSVALDO I; FIORE SIMONE vs CARRIERI ALESSANDRO; FANIGLIULO ANTONIO vs BOLOGNINI MATTIA",
+                "24/09/2026; 20:30; COMUNE ALESSANDRO vs CHIALA; LIPPOLIS PAOLA vs MICCOLIS ANTONIA I; MAGGI MAURO vs ADAMI CHRISTIAN VITO"
             ]
         }
     ]
