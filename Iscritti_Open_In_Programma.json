@@ -1,44 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA GIUSEPPE MARRA4.5",
-                "DAVIDE BELLO4.6",
-                "OTELLO STEFANO GIARDINO4.5",
-                "VINCENZO LANZILOTTI4.NC",
-                "CARLO MALAGNINO4.3",
-                "ANTONIO FISCHETTO4.NC",
-                "ANGELO CIACCIA4.4",
-                "ETTORE PAPADIA4.3",
-                "ANDREA ARGENTIERO 4.NC",
-                "DIEGO CAIANIELLO4.NC",
-                "LORENZO GIANNOCCARO4.5",
-                "LEONARDO BIANCO4.2",
-                "LUIGI FILIPPO4.NC",
-                "GABRIELE NARDELLI 4.6",
-                "FRANCESCO ANGLANI4.4",
-                "STEFANO MARCHIONNA4.1",
-                "ALESSANDRO DESIATO4.3",
-                "ANTONIO MALAGNINO4.3",
-                "ANDREA MIELE4.2",
-                "CORRADO LIGUORI4.1",
-                "DANIELE DI BRINDISI4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "LUCIA CUOMO4.4",
-                "CLARA DERINALDIS4.1",
-                "GIULIA GORGONI4.NC"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
             "tabellone": "Singolare Femminile Open",
@@ -87,9 +49,7 @@
                 "ANGELO CIACCIA4.4",
                 "VINCENZO LO RE3.3",
                 "FRANCESCO ANGLANI4.4",
-                "FRANCESCO NIGRO3.3",
                 "VINCENZO LUPO3.5",
-                "EMANUELE DE LEO3.2",
                 "ANTONIO FIUME4.1",
                 "ANTONIO DE PACE2.8",
                 "FABIO MARCHIONNA4.2",
@@ -109,7 +69,48 @@
                 "ANTONIO PERRINO4.1",
                 "RICCARDO FRANCIOSO3.1",
                 "MARCO SANTORO3.1",
-                "GIORGIO DELLO IACOVO4.1"
+                "GIORGIO DELLO IACOVO4.1",
+                "AGOSTINO ANTONIO FILOTICO4.1",
+                "ALESSANDRO ANDRIANI3.2",
+                "ALESSIO CALIOLO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "DAVIDE BELLO4.6",
+                "OTELLO STEFANO GIARDINO4.5",
+                "VINCENZO LANZILOTTI4.NC",
+                "CARLO MALAGNINO4.3",
+                "ANTONIO FISCHETTO4.NC",
+                "ANGELO CIACCIA4.4",
+                "ETTORE PAPADIA4.3",
+                "ANDREA ARGENTIERO 4.NC",
+                "DIEGO CAIANIELLO4.NC",
+                "LORENZO GIANNOCCARO4.5",
+                "LEONARDO BIANCO4.2",
+                "LUIGI FILIPPO4.NC",
+                "GABRIELE NARDELLI 4.6",
+                "FRANCESCO ANGLANI4.4",
+                "STEFANO MARCHIONNA4.1",
+                "ALESSANDRO DESIATO4.3",
+                "ANTONIO MALAGNINO4.3",
+                "ANDREA MIELE4.2",
+                "CORRADO LIGUORI4.1",
+                "DANIELE DI BRINDISI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LUCIA CUOMO4.4",
+                "CLARA DERINALDIS4.1",
+                "GIULIA GORGONI4.NC"
             ]
         }
     ]
