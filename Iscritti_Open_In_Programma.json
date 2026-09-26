@@ -1,6 +1,49 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA GIUSEPPE MARRA4.5",
+                "DAVIDE BELLO4.6",
+                "OTELLO STEFANO GIARDINO4.5",
+                "VINCENZO LANZILOTTI4.NC",
+                "CARLO MALAGNINO4.3",
+                "ANTONIO FISCHETTO4.NC",
+                "ANGELO CIACCIA4.4",
+                "ETTORE PAPADIA4.3",
+                "ANDREA ARGENTIERO 4.NC",
+                "DIEGO CAIANIELLO4.NC",
+                "LORENZO GIANNOCCARO4.5",
+                "LEONARDO BIANCO4.2",
+                "LUIGI FILIPPO4.NC",
+                "GABRIELE NARDELLI 4.6",
+                "FRANCESCO ANGLANI4.4",
+                "STEFANO MARCHIONNA4.1",
+                "ALESSANDRO DESIATO4.3",
+                "ANTONIO MALAGNINO4.3",
+                "ANDREA MIELE4.2",
+                "CORRADO LIGUORI4.1",
+                "DANIELE DI BRINDISI4.2",
+                "PIETRO DE PADOVA4.6",
+                "ANDREA CAFORIO4.3",
+                "GIANLUCA GIANNONE4.1",
+                "FLAVIO TINELLA4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LUCIA CUOMO4.4",
+                "CLARA DERINALDIS4.1",
+                "GIULIA GORGONI4.NC",
+                "GRETA LILLO4.2"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "categoria": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
             "tabellone": "Singolare Femminile Open",
@@ -10,7 +53,9 @@
                 "ALESSIA MINNITI3.5",
                 "BEATRICE MATTIA3.4",
                 "ALICE LUPO2.8",
-                "MAYRA RITA LIGORIO3.4"
+                "MAYRA RITA LIGORIO3.4",
+                "ALESSANDRA LIGUORI3.1",
+                "MARINA BELFIORE3.4"
             ]
         },
         {
@@ -57,7 +102,6 @@
                 "GUIDO ANDREA GIOFFREDI3.4",
                 "COSIMO IGNONE4.1",
                 "CARLO MALAGNINO4.3",
-                "LUCA LIGUORI3.2",
                 "CORRADO LIGUORI4.1",
                 "CRISTIANO TRABACCA3.2",
                 "LEONARDO MARSEGLIA4.5",
@@ -72,45 +116,13 @@
                 "GIORGIO DELLO IACOVO4.1",
                 "AGOSTINO ANTONIO FILOTICO4.1",
                 "ALESSANDRO ANDRIANI3.2",
-                "ALESSIO CALIOLO4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA GIUSEPPE MARRA4.5",
-                "DAVIDE BELLO4.6",
-                "OTELLO STEFANO GIARDINO4.5",
-                "VINCENZO LANZILOTTI4.NC",
-                "CARLO MALAGNINO4.3",
-                "ANTONIO FISCHETTO4.NC",
-                "ANGELO CIACCIA4.4",
-                "ETTORE PAPADIA4.3",
-                "ANDREA ARGENTIERO 4.NC",
-                "DIEGO CAIANIELLO4.NC",
-                "LORENZO GIANNOCCARO4.5",
-                "LEONARDO BIANCO4.2",
-                "LUIGI FILIPPO4.NC",
-                "GABRIELE NARDELLI 4.6",
-                "FRANCESCO ANGLANI4.4",
-                "STEFANO MARCHIONNA4.1",
-                "ALESSANDRO DESIATO4.3",
-                "ANTONIO MALAGNINO4.3",
-                "ANDREA MIELE4.2",
-                "CORRADO LIGUORI4.1",
-                "DANIELE DI BRINDISI4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "categoria": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "LUCIA CUOMO4.4",
-                "CLARA DERINALDIS4.1",
-                "GIULIA GORGONI4.NC"
+                "ALESSIO CALIOLO4.2",
+                "GIOVANNI MAZZOTTA4.1",
+                "ANGELO RIZZO4.3",
+                "PIETRO QUINTO2.8",
+                "FRANCESCO CALABRESE4.1",
+                "PIERPAOLO PAGLIARA3.2",
+                "ALESSANDRO GIOVANNI FAZZINA3.5"
             ]
         }
     ]
