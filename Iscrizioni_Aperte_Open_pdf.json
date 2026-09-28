@@ -1,4 +1,19 @@
 {
-    "report_data": "27/09/2026 21:22",
-    "tornei": []
+    "report_data": "28/09/2026 23:17",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
+            "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
+            "data": "28/09/2026",
+            "partite": [
+                "29/09/2026; 2 Inizio ore: 16:30 Singolare Maschile Open CIACCIA ANGELO vs RIZZO ANGELO Inizio ore: 16:30 Singolare Maschile Open CHISENA CHRISTIAN ANTONIO vs MARCHIONNA FABIO",
+                "29/09/2026; 3 Inizio ore: 18:00 Singolare Maschile Open CAIANIELLO DIEGO vs ANGLANI FRANCESCO Inizio ore: 18:00 Singolare Maschile Open IGNONE COSIMO vs CALABRESE FRANCESCO",
+                "28/09/2026; 2 Inizio ore: 18:00 Singolare Maschile Open MALAGNINO CARLO vs CHISENA CHRISTIAN ANTONIO Inizio ore: 18:00 Singolare Maschile Open GUIDO SAMUELE vs CIACCIA ANGELO",
+                "28/09/2026; No. Campo 1 Campo 2",
+                "29/09/2026; No. Campo 1 Campo 2",
+                "28/09/2026; 1 Inizio ore: 16:30 Singolare Maschile Open CAIANIELLO DIEGO vs GIARDINO OTELLO STEFANO Inizio ore: 16:30 Singolare Maschile Open MARSEGLIA LEONARDO vs MARRA ANDREA GIUSEPPE",
+                "29/09/2026; 1 Inizio ore: 15:00 Singolare Maschile Open FIUME ANTONIO vs FILOTICO AGOSTINO ANTONIO Inizio ore: 15:00 Singolare Maschile Open RUGGIERO ALBERTO vs MARCHIONNA STEFANO"
+            ]
+        }
+    ]
 }
