@@ -1,24 +1,6 @@
 {
-    "report_data": "28/09/2026 23:15",
+    "report_data": "29/09/2026 22:14",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "data": "28/09/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
-            "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
-            "data": "28/09/2026",
-            "partite": [
-                "28/09/2026; 00:00; No. Campo 1 Campo 2",
-                "28/09/2026; 16:30; CAIANIELLO DIEGO vs GIARDINO OTELLO STEFANO I; MARSEGLIA LEONARDO vs MARRA ANDREA GIUSEPPE",
-                "28/09/2026; 18:00; MALAGNINO CARLO vs CHISENA CHRISTIAN ANTONIO I; GUIDO SAMUELE vs CIACCIA ANGELO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
@@ -28,6 +10,26 @@
                 "29/09/2026; 15:00; FIUME ANTONIO vs FILOTICO AGOSTINO ANTONIO I; RUGGIERO ALBERTO vs MARCHIONNA STEFANO",
                 "29/09/2026; 16:30; CIACCIA ANGELO vs RIZZO ANGELO I; CHISENA CHRISTIAN ANTONIO vs MARCHIONNA FABIO",
                 "29/09/2026; 18:00; CAIANIELLO DIEGO vs ANGLANI FRANCESCO I; IGNONE COSIMO vs CALABRESE FRANCESCO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
+            "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
+            "data": "30/09/2026",
+            "partite": [
+                "30/09/2026; 00:00; No. Campo 1 Campo 2",
+                "30/09/2026; 15:00; FURONE ALESSIO ANTONIO vs CALIOLO ALESSIO",
+                "30/09/2026; 16:30; ANGLANI FRANCESCO vs GIUDICE JACOPO MARIA",
+                "30/09/2026; 18:00; LIGUORI CORRADO vs RIZZO ANGELO I; MARSEGLIA LEONARDO vs SARDELLI ANTONIO",
+                "30/09/2026; 19:30; DELLO IACOVO GIORGIO vs MAZZOTTA GIOVANNI"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "data": "29/09/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         }
     ]
