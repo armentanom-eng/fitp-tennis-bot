@@ -1,18 +1,6 @@
 {
-    "report_data": "04/10/2026 20:45",
+    "report_data": "05/10/2026 23:34",
     "tornei": [
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
-            "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
-            "data": "04/10/2026",
-            "partite": [
-                "04/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
-                "04/10/2026; 09:00; RAIMONDO ANTONIO vs LO RE VINCENZO",
-                "04/10/2026; 10:00; ZUCCARO MARCO vs BARDARO ALESSIO I; CIARLONI MATTIA vs DE LEO EMANUELE I; PIERGIOVANNI LEONARDO vs FAZZINA ALESSANDRO GIOVANNI",
-                "04/10/2026; 16:30; LIGUORI LUCA vs GALIANO LUIGI I; NIGRO FRANCESCO vs CARAMIA ANTONIO I; DELLO IACOVO ANDREA vs MARGHERITA ROBERTO",
-                "04/10/2026; 18:00; DI GIORGIO DANIELE vs ANDRIANI ALESSANDRO I; LUCARELLI EDOARDO vs PAGLIARA PIERPAOLO"
-            ]
-        },
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
             "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
@@ -26,12 +14,15 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
-            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "data": "04/10/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=3EA27956-5813-4D8B-993D-6EB7B23C8EE3",
+            "nomeTorneo": "TORNEO OPEN 44° TROFEO \"DINO DE GUIDO\" MESAGNE",
+            "data": "06/10/2026",
             "partite": [
-                "04/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
-                "04/10/2026; 17:00; FISCHETTO ANTONIO vs ELIA LORENZO I; CAIANIELLO DIEGO vs MEO CIRO I; MALAGNINO ANTONIO vs LANZILOTTI VINCENZO I; CAFORIO ANDREA vs MALAGNINO CARLO"
+                "06/10/2026; 00:00; No. Campo 1 Campo 2 Campo 5",
+                "06/10/2026; 15:00; MENGOLI FEDERICO vs PACCIOLLA SIMONE I; ROSATO ALESSIO vs DE PACE ANTONIO I; QUINTO PIETRO vs PAGLIARA PIERPAOLO",
+                "06/10/2026; 16:30; SANTORO MARCO vs FARINATO VITO LORENZO I; FRANCIOSO RICCARDO vs PAIANO GABRIELE",
+                "06/10/2026; 18:00; GUADALUPI CHRISTIAN NICOLA vs DE LEO EMANUELE",
+                "06/10/2026; 19:30; LIGUORI LUCA vs MONOPOLI GIAMMARIA I; LEGGIERI LORENZO vs FIACCONE FRANCESCO"
             ]
         },
         {
@@ -44,6 +35,17 @@
                 "05/10/2026; 18:00; CAPODIECI GIANCARLO vs GIARDINO OTELLO STEFANO",
                 "05/10/2026; 19:30; CIACCIA ANGELO vs PRUDENZANO ALESSANDRO",
                 "05/10/2026; 21:00; ANGLANI FRANCESCO vs PICHERO ROBERTO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "data": "06/10/2026",
+            "partite": [
+                "06/10/2026; 00:00; No. Campo 1 Campo 2",
+                "06/10/2026; 18:00; FISCHETTO ANTONIO vs FARINA AGOSTINO I; MAZZA DILETTA vs GORGONI GIULIA",
+                "06/10/2026; 19:30; CAFORIO ANDREA vs DI BRINDISI DANIELE I; MEO CIRO vs D",
+                "06/10/2026; 21:00; MIELE ANDREA vs MALAGNINO ANTONIO"
             ]
         }
     ]
