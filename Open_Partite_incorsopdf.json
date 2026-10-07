@@ -1,12 +1,27 @@
 {
-    "report_data": "06/10/2026 22:07",
+    "report_data": "07/10/2026 22:31",
     "tornei": [
         {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
             "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
-            "data": "06/10/2026",
+            "data": "07/10/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "07/10/2026; 00:00; No. Campo 1 Campo 2",
+                "07/10/2026; 17:00; CIACCIA ANGELO vs DESIATO ALESSANDRO I; CUOMO LUCIA vs MAZZA DILETTA",
+                "07/10/2026; 18:30; PAPADIA ETTORE vs CAPODIECI GIANCARLO I; GIANNOTTO MARIA vs PASTORE SARA",
+                "07/10/2026; 20:00; BIANCO LEONARDO vs ANGLANI FRANCESCO I; LAVENEZIANA ANDREA vs POMPILIO MICHELE ALESSANDRO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=D0483C45-98F7-400F-A875-9163A32894E3",
+            "nomeTorneo": "TORNEO IV CATEGORIA M/F ASD CIRCOLO TENNIS LATIANO",
+            "data": "08/10/2026",
+            "partite": [
+                "08/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "08/10/2026; 15:00; FARINA AGOSTINO vs GIANNONE GIANLUCA I; DE FLORIO DALIAH vs MICCOLI GABRIELLA",
+                "08/10/2026; 17:30; CIACCIA ANGELO vs FILOTICO AGOSTINO ANTONIO I; MARCHIONNA STEFANO vs CAPODIECI GIANCARLO",
+                "08/10/2026; 19:00; DI BRINDISI DANIELE vs D; GIANNOTTO MARIA vs LILLO CLAUDIA",
+                "08/10/2026; 20:30; DI BRINDISI GAETANO vs LAVENEZIANA ANDREA; LILLO GRETA vs CUOMO LUCIA I; MALAGNINO ANTONIO vs BIANCO LEONARDO"
             ]
         }
     ]
