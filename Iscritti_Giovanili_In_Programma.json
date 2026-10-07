@@ -11,7 +11,9 @@
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Femminile Under 14",
             "iscritti": [
-                "GIORGIA  RECCHIA4.3"
+                "GIORGIA  RECCHIA4.3",
+                "CLAUDIA MARTINELLI4.5",
+                "DENISE TAMBURRANO4.4"
             ]
         },
         {
@@ -31,8 +33,7 @@
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Maschile Under 12",
             "iscritti": [
-                "DAVIDE BELLO4.6",
-                "CARLO DE BELLIS4.3"
+                "DAVIDE BELLO4.6"
             ]
         },
         {
@@ -43,20 +44,27 @@
                 "GIORGIO VITANTONIO ERIK CASTRIOTA SCANDERBEG3.5",
                 "FRANCESCO LOMBARDI4.3",
                 "NICOLO' PAGLIARA3.5",
-                "MARIO ORSO GERARDI4.3"
+                "MARIO ORSO GERARDI4.3",
+                "RICCARDO DE GIUSEPPE4.3",
+                "ANTONIO TURE3.5"
             ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=876DE6F1-D567-4DD1-85C6-D44A300B5452",
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Maschile Under 16",
-            "iscritti": []
+            "iscritti": [
+                "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4",
+                "ANTONIO TURE3.5"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=876DE6F1-D567-4DD1-85C6-D44A300B5452",
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Maschile Under 18",
-            "iscritti": []
+            "iscritti": [
+                "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4"
+            ]
         }
     ]
 }
