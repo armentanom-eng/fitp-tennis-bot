@@ -20,7 +20,9 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=876DE6F1-D567-4DD1-85C6-D44A300B5452",
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Femminile Under 16",
-            "iscritti": []
+            "iscritti": [
+                "ALESSIA MINNITI3.5"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=876DE6F1-D567-4DD1-85C6-D44A300B5452",
@@ -46,7 +48,8 @@
                 "NICOLO' PAGLIARA3.5",
                 "MARIO ORSO GERARDI4.3",
                 "RICCARDO DE GIUSEPPE4.3",
-                "ANTONIO TURE3.5"
+                "ANTONIO TURE3.5",
+                "GIORGIO DELLO IACOVO4.1"
             ]
         },
         {
