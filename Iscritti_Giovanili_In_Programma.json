@@ -16,7 +16,8 @@
                 "DENISE TAMBURRANO4.4",
                 "AURORA SIMEONE4.2",
                 "VITTORIA GORGONI4.4",
-                "GIULIA CALO'4.1"
+                "GIULIA CALO'4.1",
+                "CRISTINA RUGGIERO4.2"
             ]
         },
         {
@@ -41,7 +42,8 @@
             "iscritti": [
                 "DAVIDE BELLO4.6",
                 "ANDREA ARGENTIERO 4.NC",
-                "ANTONIO BRUNETTI4.3"
+                "ANTONIO BRUNETTI4.3",
+                "LUDOVICO PERES4.4"
             ]
         },
         {
@@ -56,7 +58,8 @@
                 "ANTONIO TURE3.5",
                 "GIORGIO DELLO IACOVO4.1",
                 "SAMUELE MAFFIONE4.NC",
-                "SAMUELE GUIDO4.4"
+                "SAMUELE GUIDO4.4",
+                "ALESSANDRO DESIATO4.3"
             ]
         },
         {
@@ -66,7 +69,8 @@
             "iscritti": [
                 "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4",
                 "ANTONIO TURE3.5",
-                "ANDREA DELLO IACOVO3.2"
+                "ANDREA DELLO IACOVO3.2",
+                "EDOARDO DENITTO4.1"
             ]
         },
         {
@@ -88,14 +92,17 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
             "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
             "tabellone": "Singolare Femminile Under 10",
-            "iscritti": []
+            "iscritti": [
+                "GIORGIA PARATA4.NC"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
             "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
             "tabellone": "Singolare Maschile Under 12",
             "iscritti": [
-                "DAVIDE BELLO4.6"
+                "DAVIDE BELLO4.6",
+                "ANDREA ARGENTIERO 4.NC"
             ]
         },
         {
