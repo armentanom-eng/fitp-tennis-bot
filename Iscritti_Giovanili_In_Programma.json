@@ -1,6 +1,65 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "GIORGIA PARATA4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "DAVIDE BELLO4.6",
+                "ANDREA ARGENTIERO 4.NC",
+                "CARLO MALAGNINO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "MATHIAS TIBERIO DEL PICCO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Maschile Under 16",
+            "iscritti": [
+                "FRANCESCO ANGLANI4.4",
+                "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
+            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
+            "tabellone": "Singolare Femminile Under 16",
+            "iscritti": []
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=876DE6F1-D567-4DD1-85C6-D44A300B5452",
             "categoria": "TORNEO GIOVANILE UNDER 12-14-16",
             "tabellone": "Singolare Femminile Under 12",
@@ -43,7 +102,8 @@
                 "DAVIDE BELLO4.6",
                 "ANDREA ARGENTIERO 4.NC",
                 "ANTONIO BRUNETTI4.3",
-                "LUDOVICO PERES4.4"
+                "LUDOVICO PERES4.4",
+                "CARLO MALAGNINO4.3"
             ]
         },
         {
@@ -59,7 +119,9 @@
                 "GIORGIO DELLO IACOVO4.1",
                 "SAMUELE MAFFIONE4.NC",
                 "SAMUELE GUIDO4.4",
-                "ALESSANDRO DESIATO4.3"
+                "ALESSANDRO DESIATO4.3",
+                "MATHIAS TIBERIO DEL PICCO4.2",
+                "OTTAVIO ALESSANDRO D'AMICO3.4"
             ]
         },
         {
@@ -70,7 +132,9 @@
                 "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4",
                 "ANTONIO TURE3.5",
                 "ANDREA DELLO IACOVO3.2",
-                "EDOARDO DENITTO4.1"
+                "EDOARDO DENITTO4.1",
+                "MATTEO PAGLIARA4.6",
+                "CHRISTIAN ANTONIO CHISENA4.3"
             ]
         },
         {
@@ -81,62 +145,6 @@
                 "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4",
                 "PIETRO QUINTO2.8"
             ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Under 10",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Under 10",
-            "iscritti": [
-                "GIORGIA PARATA4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Under 12",
-            "iscritti": [
-                "DAVIDE BELLO4.6",
-                "ANDREA ARGENTIERO 4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Under 12",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Under 14",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Under 14",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Maschile Under 16",
-            "iscritti": [
-                "FRANCESCO ANGLANI4.4",
-                "DANIEL MACEDO CARNELOS FERREIRA ONOFR3.4"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E2C418FE-9E81-47A8-9E9D-AAEE0AE7FCEE",
-            "categoria": "TORNEO GIOVANILE UNDER 10 - 12 - 14 - 16 MASCHILE E FEMMINILE ASD CIRCOLO TENNIS LATIANO",
-            "tabellone": "Singolare Femminile Under 16",
-            "iscritti": []
         }
     ]
 }
