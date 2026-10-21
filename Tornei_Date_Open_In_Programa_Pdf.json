@@ -1,4 +1,133 @@
 {
-    "report_data": "20/10/2026 21:36",
-    "tornei": []
+    "report_data": "21/10/2026 16:13",
+    "tornei": [
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=91329583-6161-4689-BE20-4D78F70090E6",
+            "nomeTorneo": "RODEO III E II CAT. (3.5-2.1) - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 64 MASCHILE E TAB A 32 FEMMINILE",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
+            "nomeTorneo": "TORNEO RODEO MONTEVERDE CLUB",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "nomeTorneo": "I TAPPA WINTER 34",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "nomeTorneo": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
+            "nomeTorneo": "3^ E 4^ CATEGORIA M & F",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
+            "nomeTorneo": "4° RODEO LIM 3.1",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E3CDA65-B7CC-4F32-A5C3-57977473EAF9",
+            "nomeTorneo": "SUPER CIRCUITO RODEO VILLAYORK ROMA LIM. 3.3 - 3° TAPPA (CON AL MONTEPREMII MASTER FINALE) VIA FORTE BRAVETTA219 -",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
+            "nomeTorneo": "5° RODEO LIM 3.1",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
+            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
+            "data": "21/10/2026",
+            "partite": [
+                "21/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
+                "21/10/2026; 19:00; LEONARDI EDOARDO vs AGOSTINI GIOVANNI I; CALORIO MARCO vs SACCHI FRANCESCO N; ROSSI PAOLO vs COLUSSI ANDREA N; COPPOLA FABIO vs BEATINO ANDREA N; DI VAIA DANIELE vs BORSELLI FABIO I; CHIOCCHIO DANIELE vs DEVE SAMUEL FRANCESCO SAKHER I; FIORE ALBERTO MARIA vs CHIOSTRO DANIELE I; CAPRI CHRISTIAN vs GRECHI PIETRO I; BETTO GIOVANNI vs BASCO GIANLUIGI I; CAREDDU PAOLO vs ALBERTINI DOMENICO",
+                "21/10/2026; 20:30; MORETTI FLAVIO vs TRINCHIERI CESARE N; ROMANO ANDREA vs TILLI GIACOMO N; PRIOLO PIERANDREA vs TORTORELLA MARCO GIUSEPPE D; ASTOLFI PATRIZIO vs LEONARDI EDOARDO; BONA EUGENIO vs CALORIO MARCO; BONIFACINO GIULIO vs ROSSI PAOLO; DI LERNIA ALDO MARIA vs COPPOLA FABIO; GUGLIELMI CRISTIANO vs DI VAIA DANIELE",
+                "21/10/2026; 22:00; 3 Non prima delle Singolare Maschile Open q vs FRANCESCONI STEFANO Non prima delle Singolare Maschile Open q vs PICONE PIETRO Non prima delle Singolare Maschile Open q vs TRIVELLI SIMONE Non prima delle Singolare Maschile Open q vs DI TOMMASO LORENZO Non prima delle Singolare Maschile Open q vs GIARRAPUTO MELCHIORRE Non prima delle Singolare Maschile Open q vs MIGLIORE ALESSANDRO Non prima delle Singolare Maschile Open q vs TESTI IACOPO",
+                "21/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC(VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493)",
+                "21/10/2026; 20:30; CONTI JACOPO vs MANOZZI GABRIELE I; SABATO GIORGIA vs FALCONE IOLE I; SOLDI SIMONE vs PRODON GIACOMO I; MARTINICO FILIPPO vs FEDERICI MARIO I; KOIROUCHKI IVO VESSELINOV vs TIBERI EMANUELE I; BALLA LAURA vs DALLA TORRE PAOLA I; AVANZO GIOVANNI vs IMPECIATI MASSIMO I; CRISTIANI ALESSANDRA vs ALESSANDRO FLAVIA I; POLIZZI DI SORRENTINO GIULIA vs POLI SARA I; SALERNO CLARA vs FABBRIZI CRISTIANA",
+                "21/10/2026; 21:30; MORELLI MARCO VALERIO vs QUINTO PAOLO N; CAMPANELLA ANDREA vs FOIS ALESSANDRO N; PARDINI MAURIZIO vs MELUZIO CRISTIAN N; RACO ANDREA vs MAZZOLI CRISTIANO LUIGI",
+                "21/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493)",
+                "21/10/2026; 21:00; LAZZARI FULVIO vs GIUSTINIANI ANDREA"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
+            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
+            "data": "22/10/2026",
+            "partite": [
+                "Nessuna partita trovata"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8903618D-2B4F-4C29-A9EC-5839A1F08058",
+            "nomeTorneo": "RODEI LAST CHANCE - ROMA NORD - VILLA AURELIA SC - ULTIMI PUNTI PER CLASSIFICHE 2026",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BE10A3D1-2B6D-46BA-9759-C6F7E4AAE632",
+            "nomeTorneo": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=060A9BC8-3E7C-4D72-B6C0-88500101DFFD",
+            "nomeTorneo": "1° RODEO \"LAST POINT\" LIM 2.7 OASI DI PACE",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=16531F5A-30E9-4CB7-B602-7286CCB644B1",
+            "nomeTorneo": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BA31D1FB-47B9-4A2B-82F3-9206AFADFA0A",
+            "nomeTorneo": "TORNEO RODEO MARCOPOLO 3ª E 4ª CAT.",
+            "data": "21/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        }
+    ]
 }
