@@ -1,3 +1,245 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Femminile Under 9 (2017)",
+            "iscritti": [
+                "AZZURRA FIOCCHETTI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Femminile Under 11 (2015)",
+            "iscritti": [
+                "THEA COCCIANTE4.3",
+                "ANGIE CIMARELLI4.4",
+                "ALESSIA DE RISIO4.1",
+                "ALICE PIRRONE4.2",
+                "MARGHERITA PELLEGRINO LISE3.5",
+                "SOFIA MARCUCCI3.5",
+                "CAMILLA CORREALE4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Femminile Under 13 (2013 e 2014)",
+            "iscritti": [
+                "NICOLE ROSSANO3.2",
+                "OLIVIA CORSI3.5",
+                "CAROLINA VAGLIO4.4",
+                "TARA MARONGIU 4.4",
+                "ELEONORA TORTORELLA3.5",
+                "OLIVIA DI IORIO4.2",
+                "ANTONIA MARIA PAUNESCU3.5",
+                "RACHELE LIPPI4.2",
+                "LUDOVICA PETRONE4.1",
+                "CARLOTTA VALERI3.3",
+                "MARIA BEATRICE TOCCACELO4.4",
+                "IRENE POLIDORI3.3",
+                "ALICE CACIOPPO3.5",
+                "MICOL SILVI4.3",
+                "LUDOVICA SGARIGLIA3.5",
+                "NICOLE GIACCHETTI3.2",
+                "SARA FASCIOLI4.5",
+                "BEATRICE ROMEO4.4",
+                "EMMA VECCHI3.5",
+                "MARTINA LOGIUDICE3.4",
+                "SOFIA DESIATO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Maschile Under 9 (20217)",
+            "iscritti": [
+                "ENEA ANNECCHIARICO 4.NC",
+                "LEONARDO MARIA CONTUCCI4.NC",
+                "LEANDRO  CONI4.NC",
+                "MATTIA COSCHIGNANO SOLINAS4.NC",
+                "MARZIO NARDACCHIONE4.NC",
+                "ROBERTO LEONE RIVERUZZI4.NC",
+                "ALESSANDRO ROSATO4.NC",
+                "ANDREA CAPRILE4.NC",
+                "MARIO FERAZZOLI4.NC",
+                "NICOLO CORREALE4.NC",
+                "VALERIO PETRUCCI4.NC",
+                "LEONARDO BUZZETTI4.NC",
+                "GIULIO MARIA  TOPPI 4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Maschile Under 11 (2015)",
+            "iscritti": [
+                "TOMMASO BACCHETTA4.1",
+                "CRISTIAN  SILVESTRI4.1",
+                "EDOARDO  DI GIGLIO 4.1",
+                "JAIME PERCONTI BROTONS3.4",
+                "CHRISTIAN TUCCI3.4",
+                "FILIPPO IRIONE4.2",
+                "FEDERICO CESARANO4.4",
+                "PIETRO  BASSANO 4.NC",
+                "ALESSANDRO SCIASCIA4.NC",
+                "THOMAS GIOVANNINI3.4",
+                "GIORGIO BOCCANERA3.4",
+                "TOMMASO CIPRIAN3.5",
+                "ANDREA GUIDA3.4",
+                "MATTEO GABRIELLI4.1",
+                "LUIGI SPARAGNA4.3",
+                "SEBASTIANO RUGGIERO4.2",
+                "RICCARDO RABBIA4.3",
+                "LEONARDO GRECO4.4",
+                "LORENZO MITELLI3.5",
+                "VALERIO  POZZI4.3",
+                "DAVIDE GABRIELLI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Singolare Maschile Under 13 (2013 e 2014)",
+            "iscritti": [
+                "MATTEO RANALDI4.5",
+                "PIETRO RUSSU4.3",
+                "FRANCESCO PAFFI4.3",
+                "FRANCESCO PIETROSANTO3.5",
+                "JULIUS ALEXANDER HENTSCHEL4.3",
+                "TOMMASO SIGNORINI3.3",
+                "EDOARDO CANOVA4.3",
+                "LEONE SCOLOZZI4.1",
+                "ETTORE SCOLOZZI3.5",
+                "SAMUELE SISTO4.5",
+                "GIUSEPPE FLAVIO CONI3.5",
+                "TOMMASO SCOTTI4.1",
+                "LEONARDO CANTONETTI4.NC",
+                "RICCARDO D'AZZEO3.5",
+                "DANIELE SIMONE3.5",
+                "GABRIELE FODAYBA  SAMURA 4.3",
+                "NICCOLÒ GALLI4.4",
+                "PIETRO SCHIAVINO3.5",
+                "DARIO CIMAROLI4.4",
+                "GIULIO GERARD FLOOD3.4",
+                "EDOARDO GINESI4.NC",
+                "ADRIANO DI CREDICO3.5",
+                "RAFFAELE LUPO COSTA3.3",
+                "ANDREA CARMINUCCI4.1",
+                "TOMMASO PAGANO4.5",
+                "LORENZO GALLIANI4.1",
+                "ALESSANDRO ROMANI3.3",
+                "MATTEO MARIA TORDI4.2",
+                "SIMONE CAPPELLI4.1",
+                "LEONARDO VELLOTTI4.2",
+                "CESARE MATTIACCI3.5",
+                "THOMAS ANGELETTI4.4",
+                "PIETRO SCOLOZZI4.1",
+                "DAVIDE DICECCA4.2",
+                "ANDREA BIASINI3.5",
+                "MATTEO TATA NARDINI4.5",
+                "GABRIELE CAPPOTTO4.5",
+                "LUCA GIACOPELLO3.2",
+                "MATTEO ORLANDI4.3",
+                "FLAVIO SANTORO4.2",
+                "NICOLO TROIANI4.3",
+                "IACOPO PAMPALONI4.4",
+                "MICHELE CAPOZZI3.5",
+                "GENARO ALESSANDRO OCCHIPINTI BRAVO3.2",
+                "LEONARDO ZAPPITELLI3.3",
+                "ETTORE BRUNO4.4",
+                "ANDREA ANIELLO4.5",
+                "LEONARDO MOSCO3.5",
+                "FABRIZIO ACCARDI4.5",
+                "GIORGIO ZANARDI3.3",
+                "FLAVIO DE FILIPPIS4.2",
+                "RICCARDO RAITI4.4",
+                "GIORGIO ARPAIA4.1",
+                "ALESSIO CAPORELLO3.3",
+                "LUCA BERTONE3.2",
+                "ALESSANDRO PORCELLI4.5",
+                "CHRISTIAN  CAPPONI4.2",
+                "ANTONIO RUGGIERO3.4",
+                "EDOARDO NEGRO3.5",
+                "MARCO CATERINA3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Femminile Under 9 (2017)",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Femminile Under 11 (2015)",
+            "iscritti": [
+                "MARGHERITA PELLEGRINO LISE3.5",
+                "SOFIA MARCUCCI3.5",
+                "CAMILLA CORREALE4.3",
+                "ALICE PIRRONE4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Femminile Under 13 (2013 e 2014)",
+            "iscritti": [
+                "NICOLE GIACCHETTI3.2",
+                "NICOLE ROSSANO3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Maschile Under 9 (2017)",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Maschile Under 11 (2015)",
+            "iscritti": [
+                "JAIME PERCONTI BROTONS3.4",
+                "CHRISTIAN TUCCI3.4",
+                "THOMAS GIOVANNINI3.4",
+                "GIORGIO BOCCANERA3.4",
+                "TOMMASO CIPRIAN3.5",
+                "FEDERICO CROCITTO3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
+            "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
+            "tabellone": "Doppio Maschile Under 13 (2013 e 2014)",
+            "iscritti": [
+                "GABRIELE FODAYBA  SAMURA 4.3",
+                "LEONARDO CANTONETTI4.NC",
+                "LEONARDO CALA'4.5",
+                "ETTORE LORA4.5",
+                "ALESSANDRO ROMANI3.3",
+                "LUCA BERTONE3.2",
+                "SIMONE CAPPELLI4.1",
+                "DANIELE SIMONE3.5",
+                "ANDREA CARMINUCCI4.1",
+                "IACOPO PAMPALONI4.4",
+                "GENARO ALESSANDRO OCCHIPINTI BRAVO3.2",
+                "TOMMASO DESIDERI3.1",
+                "ALESSIO CAPORELLO3.3",
+                "LEONARDO ZAPPITELLI3.3",
+                "FRANCESCO PIETROSANTO3.5",
+                "GIULIO GERARD FLOOD3.4",
+                "LEONARDO RONDINI3.3",
+                "GIORGIO ZANARDI3.3",
+                "LIAM CORRADINI3.5",
+                "EDOARDO NEGRO3.5",
+                "DIEGO BARABINO 3.5",
+                "LORENZO POMPEI4.1",
+                "NICHOLAS CODRE4.3",
+                "MATTEO GARUTI4.NC"
+            ]
+        }
+    ]
 }
