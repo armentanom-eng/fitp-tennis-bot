@@ -1,6 +1,132 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "ISABEL ALFANO4.NC",
+                "FRANCESCA POLLINA4.NC",
+                "VIOLA FANTINO4.NC",
+                "AURORA BIANCHI4.NC",
+                "NATALIA LIUZZI4.NC",
+                "MARTINA CESARONI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": [
+                "ALYSSA TOMEI4.4",
+                "NICOL BOLLA3.5",
+                "GEMMA BRIENZA4.1",
+                "LUDOVICA  SOLIMAN4.3",
+                "EMMA BOSCARINI4.4",
+                "GRETA SIMEONI4.3",
+                "IRENE POLIDORI3.3",
+                "GRETA ANIBALDI3.3",
+                "MINA MARIA CENTARO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "SVEVA PROIA4.3",
+                "MATILDE ASTRI4.1",
+                "BEATRICE MASSACCESI4.3",
+                "ELENA PARRA MANCERA3.3",
+                "NOEMI PAOLUCCI4.2",
+                "EMMA CASALVIERI4.3",
+                "LAURA VACCARO3.5",
+                "ELENA QUAGLIOZZI4.4",
+                "MARIAELENA SENIA3.3",
+                "LIVIA ROZZI4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": [
+                "CAMILLA STORONI4.4",
+                "KSENIA VITAGLIANO3.4",
+                "CHIARA CAPODACQUA3.1",
+                "ALEXANDRA DORMI3.1",
+                "GIULIA MISSORI3.5",
+                "REBECCA IABONI3.5",
+                "GINEVRA IABONI3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "LEONARDO  SARDELLI 4.NC",
+                "CLAUDIO MARONI4.NC",
+                "ANDREA CORRADI 4.NC",
+                "DAVIDE CRISTIAN ZAINEA4.NC",
+                "MATTIA BENVEDUTI4.NC",
+                "DIEGO DI RUZZA4.NC",
+                "LORIS MADECCIA4.NC",
+                "NICOLO DE MARCHI4.NC",
+                "GIULIO VENDITTO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "SEBASTIANO BRANCOLI BUSDRAGHI4.2",
+                "SIMONE DE GENNARO4.4",
+                "GIOELE MIRABILE4.1",
+                "TOMMASO MAZZALI3.5",
+                "ALESSANDRO FONTANA4.1",
+                "MATTEO GABRIELLI4.1",
+                "ANDREA GUIDA3.4",
+                "FEDERICO CROCITTO3.5",
+                "PIETRO GIZZI3.5",
+                "FRANCESCO D'ACUNTO3.4",
+                "DAVIDE  BROCCOLETTI 4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "MATTEO FIORAVANTI4.1",
+                "STEFANO TURRIZIANI3.3",
+                "VALERIO DE SANTIS3.3",
+                "LORENZO CIOTTI3.5",
+                "SAMUEL TABACCHIERA 3.5",
+                "MATTEO BONGARZONE4.3",
+                "GABRIELE CARULLI3.3",
+                "LUCA TRECASTAGNI3.5",
+                "GIUSEPPE D'ACUNTO3.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=9D636696-ED4A-418E-87C6-B6B9D95D6614",
+            "categoria": "SUPER MASTER GIOVANILE DEL CIRCUITO REGIONALE LAZIO 2026 - RISERVATO AI QUALIFICATI",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": [
+                "VALENTINO  FURINA4.2",
+                "LUCA LOMBARDI3.5",
+                "MATTIA FALIVENE4.1",
+                "STEFANO SINDONI3.4",
+                "VALERIO TOLFA3.3",
+                "DANIELE ANTONINI4.4",
+                "MATTEO SCUCCHIA4.5",
+                "VALERIO SILVESTRE3.1",
+                "LEONARDO RINALDUZZI3.5"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=8CDF58AD-4357-4904-A409-3BF91418DB06",
             "categoria": "3^ TAPPA JUNIOR MASTERS ROAD TO BOLOGNA 2026 U9 (2017) U11 (2015) U13 (2013 e 2014) SINGOLI E DOPPI M/F",
             "tabellone": "Singolare Femminile Under 9 (2017)",
