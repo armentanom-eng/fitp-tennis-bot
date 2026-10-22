@@ -1,51 +1,125 @@
 {
-    "report_data": "21/10/2026 21:42",
+    "report_data": "22/10/2026 21:34",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
-            "nomeTorneo": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
-            "data": "21/10/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "nomeTorneo": "I TAPPA WINTER 34",
+            "data": "22/10/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "nomeTorneo": "3^ E 4^ CATEGORIA M & F",
-            "data": "21/10/2026",
-            "partite": [
-                "21/10/2026; 00:00; No. Campo 1 campo 2",
-                "21/10/2026; 15:30; CAPOLLA ALESSANDRO vs ANTINORI ALESSANDRO I; PETRONE ALBIO vs BANI DANIELE",
-                "21/10/2026; 17:00; BERTELLI FEDERICO vs PUZZILLI FRANCESCO I; FIORELLO MIRKO vs TASSI RENATO",
-                "21/10/2026; 18:30; CALDARONE LORENZO vs BENINCASA MAURIZIO I; DI COSIMO MASSIMILIANO vs MANTOVANI MIRKO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "nomeTorneo": "3^ E 4^ CATEGORIA M & F",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=060A9BC8-3E7C-4D72-B6C0-88500101DFFD",
+            "nomeTorneo": "1° RODEO \"LAST POINT\" LIM 2.7 OASI DI PACE",
             "data": "22/10/2026",
             "partite": [
-                "22/10/2026; 00:00; No. Campo 1 campo 2 campo 3",
-                "22/10/2026; 15:30; BANI DANIELE vs ACQUAVIVA CIRO",
-                "22/10/2026; 17:00; DE SANTIS ANDREA vs RISPOLI ALESSANDRO I; PUZZILLI FRANCESCO vs CALDARONE LORENZO",
-                "22/10/2026; 18:00; CAPOZZA CLAUDIO vs ZANNETTI DAMIANO I; MANTOVANI MIRKO vs BOZZO ADRIANO I; TASSI RENATO vs PICCIONE DANIELE",
-                "22/10/2026; 20:00; VIGO ALESSIO vs ANTINORI ALESSANDRO"
+                "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
-            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
-            "data": "21/10/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
+            "nomeTorneo": "5° RODEO LIM 3.1",
+            "data": "22/10/2026",
             "partite": [
-                "21/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
-                "21/10/2026; 19:00; LEONARDI EDOARDO vs AGOSTINI GIOVANNI I; CALORIO MARCO vs SACCHI FRANCESCO N; ROSSI PAOLO vs COLUSSI ANDREA N; COPPOLA FABIO vs BEATINO ANDREA N; DI VAIA DANIELE vs BORSELLI FABIO I; CHIOCCHIO DANIELE vs DEVE SAMUEL FRANCESCO SAKHER I; FIORE ALBERTO MARIA vs CHIOSTRO DANIELE I; CAPRI CHRISTIAN vs GRECHI PIETRO I; BETTO GIOVANNI vs BASCO GIANLUIGI I; CAREDDU PAOLO vs ALBERTINI DOMENICO",
-                "21/10/2026; 20:30; MORETTI FLAVIO vs TRINCHIERI CESARE N; ROMANO ANDREA vs TILLI GIACOMO N; PRIOLO PIERANDREA vs TORTORELLA MARCO GIUSEPPE D; ASTOLFI PATRIZIO vs LEONARDI EDOARDO; BONA EUGENIO vs CALORIO MARCO; BONIFACINO GIULIO vs ROSSI PAOLO; DI LERNIA ALDO MARIA vs COPPOLA FABIO; GUGLIELMI CRISTIANO vs DI VAIA DANIELE",
-                "21/10/2026; 22:00; 3 Non prima delle Singolare Maschile Open q vs FRANCESCONI STEFANO Non prima delle Singolare Maschile Open q vs PICONE PIETRO Non prima delle Singolare Maschile Open q vs TRIVELLI SIMONE Non prima delle Singolare Maschile Open q vs DI TOMMASO LORENZO Non prima delle Singolare Maschile Open q vs GIARRAPUTO MELCHIORRE Non prima delle Singolare Maschile Open q vs MIGLIORE ALESSANDRO Non prima delle Singolare Maschile Open q vs TESTI IACOPO",
-                "21/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC(VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493)",
-                "21/10/2026; 20:30; CONTI JACOPO vs MANOZZI GABRIELE I; SABATO GIORGIA vs FALCONE IOLE I; SOLDI SIMONE vs PRODON GIACOMO I; MARTINICO FILIPPO vs FEDERICI MARIO I; KOIROUCHKI IVO VESSELINOV vs TIBERI EMANUELE I; BALLA LAURA vs DALLA TORRE PAOLA I; AVANZO GIOVANNI vs IMPECIATI MASSIMO I; CRISTIANI ALESSANDRA vs ALESSANDRO FLAVIA I; POLIZZI DI SORRENTINO GIULIA vs POLI SARA I; SALERNO CLARA vs FABBRIZI CRISTIANA",
-                "21/10/2026; 21:30; MORELLI MARCO VALERIO vs QUINTO PAOLO N; CAMPANELLA ANDREA vs FOIS ALESSANDRO N; PARDINI MAURIZIO vs MELUZIO CRISTIAN N; RACO ANDREA vs MAZZOLI CRISTIANO LUIGI",
-                "21/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493)",
-                "21/10/2026; 21:00; LAZZARI FULVIO vs GIUSTINIANI ANDREA"
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
+            "nomeTorneo": "4° RODEO LIM 3.1",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E3CDA65-B7CC-4F32-A5C3-57977473EAF9",
+            "nomeTorneo": "SUPER CIRCUITO RODEO VILLAYORK ROMA LIM. 3.3 - 3° TAPPA (CON AL MONTEPREMII MASTER FINALE) VIA FORTE BRAVETTA219 -",
+            "data": "22/10/2026",
+            "partite": [
+                "Nessuna partita trovata"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E3CDA65-B7CC-4F32-A5C3-57977473EAF9",
+            "nomeTorneo": "SUPER CIRCUITO RODEO VILLAYORK ROMA LIM. 3.3 - 3° TAPPA (CON AL MONTEPREMII MASTER FINALE) VIA FORTE BRAVETTA219 -",
+            "data": "23/10/2026",
+            "partite": [
+                "23/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6",
+                "23/10/2026; 13:00; ASCIUTTO GIOVANNI vs TAN MICHELANGELO ABAYA I; DI MOLFETTA LUCA vs MARENGO MATTEO I; ZAMMARANO LUIGI vs ANGIOLI STEFANO I; ALBERTO vs ANGELUCCI MATTEO I; MAZZIOTTA THOMAS vs LUNGU NICOLAS ANDREI I; DE MAGISTRIS FILIPPO vs DE CESARIS MASSIMILIANO",
+                "23/10/2026; 14:00; DEL CASTELLO FABIO vs RUGGIERO PICCI GIORGIO N; GATTO DANIELE vs TRESA ALESSANDRO N; DE MEIS FRANCO vs GATTO FLAVIO N; RIZZARO EMANUELA vs SELLI GIULIA N; FIGLIUZZI VIRGINIA vs SANSONETTI BEATRICE N; PERLA GIANLUCA vs FOIS ALESSANDRO",
+                "23/10/2026; 15:00; ROMAGNOLI SOFIA vs RANIERI CLAUDIA N; ASCIUTTO GIOVANNI vs TAN MICHELANGELO ABAYA",
+                "23/10/2026; 16:00; DI MOLFETTA LUCA vs MARENGO MATTEO; ZAMMARANO LUIGI vs ANGIOLI STEFANO",
+                "23/10/2026; 17:00; BIAGGI MORGANA vs ROMAGNOLI SOFIA; ASCIUTTO GIOVANNI vs TAN MICHELANGELO ABAYA; PALMIERI GIUSEPPE FEDERICO vs COSTANTINI MELCHIORRI STEFANO",
+                "23/10/2026; 18:00; DI MOLFETTA LUCA vs MARENGO MATTEO; MILAN FABRIZIO vs SCIULLO LEOPOLDO N; ALBERTO vs ANGELUCCI MATTEO",
+                "23/10/2026; 19:00; ZAMMARANO LUIGI vs ANGIOLI STEFANO; GUCCIARDI MARCO vs SERRAO SEBASTIANO N; PETRASSI FABRIZIO vs DE MAGISTRIS FILIPPO",
+                "23/10/2026; 20:00; 8 Non prima delle Non prima delle Non prima delle Non prima delle Non prima delle Non prima delle",
+                "23/10/2026; 20:00; DEL CASTELLO FABIO vs RUGGIERO PICCI GIORGIO; DE MEIS FRANCO vs GATTO FLAVIO; MAZZIOTTA THOMAS vs LUNGU NICOLAS ANDREI; ZAMMARANO LUIGI vs ANGIOLI STEFANO; GUCCIARDI MARCO vs SERRAO SEBASTIANO; GATTO DANIELE vs TRESA ALESSANDRO; ALBERTO vs ANGELUCCI MATTEO; GIORGIO vs BELTRANI SERGIO"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "nomeTorneo": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=45F60F39-6BE1-4148-AF5F-5C0BE2AD519B",
+            "nomeTorneo": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BE10A3D1-2B6D-46BA-9759-C6F7E4AAE632",
+            "nomeTorneo": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BA31D1FB-47B9-4A2B-82F3-9206AFADFA0A",
+            "nomeTorneo": "TORNEO RODEO MARCOPOLO 3ª E 4ª CAT.",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
+            "nomeTorneo": "TORNEO RODEO MONTEVERDE CLUB",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=91329583-6161-4689-BE20-4D78F70090E6",
+            "nomeTorneo": "RODEO III E II CAT. (3.5-2.1) - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 64 MASCHILE E TAB A 32 FEMMINILE",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=16531F5A-30E9-4CB7-B602-7286CCB644B1",
+            "nomeTorneo": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8903618D-2B4F-4C29-A9EC-5839A1F08058",
+            "nomeTorneo": "RODEI LAST CHANCE - ROMA NORD - VILLA AURELIA SC - ULTIMI PUNTI PER CLASSIFICHE 2026",
+            "data": "22/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
             ]
         },
         {
@@ -54,102 +128,30 @@
             "data": "22/10/2026",
             "partite": [
                 "22/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
-                "22/10/2026; 19:00; DE FEO FABIO vs FIORE EMANUELE I; MASTROLORENZI ANDREA vs PINTA LEONARDO I; BENINCASA MAURIZIO vs CAIANIELLO MARCO I",
-                "22/10/2026; 20:30; BONDANINI FRANCESCO vs COLAROSSI GIANLUCA I",
-                "22/10/2026; 22:00; SORRENTINO PAOLO vs FOIS ALESSANDRO N; BATTILOCCHI LUCIO vs QUINTO PAOLO N; ZAMBIGLI FRANCESCO vs PARDINI MAURIZIO; CASTIGLIONE NICOLETTA LUISA vs POLI SARA",
+                "22/10/2026; 19:00; DE FEO FABIO vs FIORE EMANUELE I; MASTROLORENZI ANDREA vs PINTA LEONARDO I; BENINCASA MAURIZIO vs CAIANIELLO MARCO I; CAPRI CHRISTIAN vs IMPARATO SAVERIO I; DEVE SAMUEL FRANCESCO SAKHER vs CILENTI PAOLO I; BASCO GIANLUIGI vs MARINO MATTEO I; PRODON GIACOMO vs D; ALBERTINI DOMENICO vs INCAGNOLA STEFANO I; COPPOLA FABIO vs CARRELLA ANDREA I; GUGLIELMI CRISTIANO vs BUSETTI FABIO",
+                "22/10/2026; 20:30; PRIOLO PIERANDREA vs PALOMBINI MANUEL N; CONTI JACOPO vs DE GIOVANNI TIZIANO N; BONIFACINO GIULIO vs MAESTOSI DAVIDE N; FIORE ALBERTO MARIA vs DI STEFANO MARCO N; FEDERICI MARIO vs PAOLINI FABRIZIO N; AVANZO GIOVANNI vs MISSIMI MAURO N; BONDANINI FRANCESCO vs COLAROSSI GIANLUCA I; ASTOLFI PATRIZIO vs ROSSI RICCARDO I; TIBERI EMANUELE vs VOLPE GABRIELE I; CALORIO MARCO vs PINTO LORENZO",
+                "22/10/2026; 22:00; SORRENTINO PAOLO vs FOIS ALESSANDRO N; BATTILOCCHI LUCIO vs QUINTO PAOLO N; ZAMBIGLI FRANCESCO vs MELUZIO CRISTIAN N; CASTIGLIONE NICOLETTA LUISA vs POLI SARA",
                 "22/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC(VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493)",
-                "22/10/2026; 20:30; LIGUORI RAFFAELE vs PALERMO CHRISTIAN I; TORTORELLA GIACOMO vs FAZIOLI PIETRO I; DALLA TORRE PAOLA vs SELLI GIULIA I; FISCHIONE FABIOLA vs CECCHINI MICHELA I; SABATO GIORGIA vs IRNO CONSALVO VALERIA I; PIERONI GIORGIA vs FUSCO OLIVIA I; CRISTIANI ALESSANDRA vs COTTINI VIOLA I; BELLUCCI LAURA vs RIZZARO EMANUELA I; ANGELILLI ARIANNA vs FABBRIZI CRISTIANA I",
-                "22/10/2026; 22:00; GIUFFRIDA MARCO vs PENNACCHI FLAVIO N",
+                "22/10/2026; 20:30; LIGUORI RAFFAELE vs PALERMO CHRISTIAN I; TORTORELLA GIACOMO vs FAZIOLI PIETRO I; DALLA TORRE PAOLA vs SELLI GIULIA I; FISCHIONE FABIOLA vs CECCHINI MICHELA I; SABATO GIORGIA vs IRNO CONSALVO VALERIA I; PIERONI GIORGIA vs FUSCO OLIVIA I; CRISTIANI ALESSANDRA vs COTTINI VIOLA I; BELLUCCI LAURA vs RIZZARO EMANUELA I; ANGELILLI ARIANNA vs FABBRIZI CRISTIANA I; ROMANO ANDREA vs GALOTTI GIORGIO",
+                "22/10/2026; 22:00; GIUFFRIDA MARCO vs PENNACCHI FLAVIO N; CATALUDDI MICHELE vs DI TOMMASO LORENZO N; DI FABIO DANILO vs TESTI IACOPO N",
                 "22/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493)",
-                "22/10/2026; 21:00; 1 Inizio  Singolare Maschile Open q vs BIGGIO MASSIMO"
+                "22/10/2026; 21:00; TRINCHIERI CESARE vs BIGGIO MASSIMO"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
-            "nomeTorneo": "5° RODEO LIM 3.1",
-            "data": "21/10/2026",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
+            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
+            "data": "23/10/2026",
             "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BA31D1FB-47B9-4A2B-82F3-9206AFADFA0A",
-            "nomeTorneo": "TORNEO RODEO MARCOPOLO 3ª E 4ª CAT.",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
-            "nomeTorneo": "4° RODEO LIM 3.1",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
-            "nomeTorneo": "I TAPPA WINTER 34",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=91329583-6161-4689-BE20-4D78F70090E6",
-            "nomeTorneo": "RODEO III E II CAT. (3.5-2.1) - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 64 MASCHILE E TAB A 32 FEMMINILE",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
-            "nomeTorneo": "TORNEO RODEO MONTEVERDE CLUB",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=16531F5A-30E9-4CB7-B602-7286CCB644B1",
-            "nomeTorneo": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=060A9BC8-3E7C-4D72-B6C0-88500101DFFD",
-            "nomeTorneo": "1° RODEO \"LAST POINT\" LIM 2.7 OASI DI PACE",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BE10A3D1-2B6D-46BA-9759-C6F7E4AAE632",
-            "nomeTorneo": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8903618D-2B4F-4C29-A9EC-5839A1F08058",
-            "nomeTorneo": "RODEI LAST CHANCE - ROMA NORD - VILLA AURELIA SC - ULTIMI PUNTI PER CLASSIFICHE 2026",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8E3CDA65-B7CC-4F32-A5C3-57977473EAF9",
-            "nomeTorneo": "SUPER CIRCUITO RODEO VILLAYORK ROMA LIM. 3.3 - 3° TAPPA (CON AL MONTEPREMII MASTER FINALE) VIA FORTE BRAVETTA219 -",
-            "data": "21/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
+                "23/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
+                "23/10/2026; 19:00; CAIANIELLO MARCO vs MASTROLORENZI ANDREA; SALA MARIA ADELE vs ZEVANO MARIA CRISTINA I; BANI DANIELE vs DE FEO FABIO; SCHIAVELLO VALERIO vs GIUFFRIDA MARCO; VILLA GIULIO vs TORTORELLA GIACOMO",
+                "23/10/2026; 20:30; CASELLA ALESSANDRO vs PLACIDI LORENZO N; TOSONI RICCARDO vs RACO ANDREA N",
+                "23/10/2026; 22:00; CERULLO DAVIDE vs MAZZONNA MARCO N; SALVATORI ALESSANDRO vs BONDANINI FRANCESCO",
+                "23/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC(VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493)",
+                "23/10/2026; 20:30; STEGHER MARCO vs LIGUORI RAFFAELE; BUONFIGLIO GABRIELLA vs URSINI MICHELA I",
+                "23/10/2026; 21:30; BARBUTO FABIO vs GATTO DANIELE N; TOWNSHEND ORLANDO vs GIUSTINIANI ANDREA",
+                "23/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493)",
+                "23/10/2026; 21:00; 1 Inizio  Singolare Maschile Open DADONE FRANCESCO vs q vs INCAGNOLA STEFANO"
             ]
         }
     ]
