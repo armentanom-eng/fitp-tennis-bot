@@ -1,62 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA NERVI4.NC",
-                "ALESSANDRO ANTINORI4.NC",
-                "MAURIZIO BENINCASA4.2",
-                "FERNANDO BOCCHINI4.3",
-                "GIANLUCA PROIETTI4.4",
-                "DAMIANO ZANNETTI4.1",
-                "RENATO TASSI4.2",
-                "FRANCESCO FERRARI3.4",
-                "DANIELE PICCIONE4.1",
-                "MARCO FINARELLI4.NC",
-                "FEDERICO BERTELLI4.2",
-                "ALESSANDRO BERNARDI4.3",
-                "ALESSANDRO RISPOLI4.1",
-                "ANDREA PUPPO4.NC",
-                "ALBIO PETRONE4.3",
-                "MIRCEA TCACIUC3.5",
-                "MIRKO MANTOVANI4.2",
-                "LEONELLO MORACCI4.4",
-                "SERGIO COSCIONE4.6",
-                "MASSIMILIANO DI COSIMO4.3",
-                "ADRIANO BOZZO4.1",
-                "CLAUDIO CAPOZZA4.1",
-                "ALESSANDRO MIGLIORINI4.NC",
-                "FRANCESCO PUZZILLI4.NC",
-                "GIORGIO MARCELLI4.NC",
-                "LIVIO ANDRONICO4.NC",
-                "CIRO ACQUAVIVA4.1",
-                "MASSIMILIANO DI CINTIO3.3",
-                "MATTIA FERRARI4.1",
-                "LORENZO CALDARONE4.2",
-                "DANIELE BANI4.2",
-                "ALESSANDRO CAPOLLA4.2",
-                "FRANCESCO IANNINI3.2",
-                "MATTIA SCARCIGLIA3.5",
-                "ARTURO LONGO3.4",
-                "MIRKO FIORELLO4.2",
-                "ANDREA DE SANTIS4.1",
-                "ALESSIO VIGO4.1",
-                "SEBASTIANO GIUCASTRO3.5",
-                "SIMONE NAPOLITANO3.5",
-                "MATTEO PIACITELLI3.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "BENEDETTA SIMONELLI4.3"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
             "categoria": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
             "tabellone": "Singolare Maschile Open",
@@ -229,12 +173,12 @@
                 "MAURIZIO LORI4.5",
                 "GASPARE PALERMO4.NC",
                 "DAMIANO SPINELLI4.NC",
-                "GABRIELE SAMMARTINO4.6",
-                "NICOLA SAMMARTINO4.NC",
                 "BERNARDO CELENTANO3.1",
                 "RICCARDO CASAVOLA PRATI2.7",
                 "ANDREA PELLEGRINI PERRONE3.1",
-                "ALESSANDRO PROIETTO2.7"
+                "ALESSANDRO PROIETTO2.7",
+                "FABRIZIO DI MEO4.4",
+                "PAOLO DI PRINZIO3.4"
             ]
         },
         {
