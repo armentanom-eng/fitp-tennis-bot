@@ -95,20 +95,6 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
-            "categoria": "4° Rodeo Lim 3.1",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "JAHRIYA OMEYA SHARIFF JONES4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
-            "categoria": "4° Rodeo Lim 3.1",
-            "tabellone": "Doppio Maschile Open",
-            "iscritti": []
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=7B2A8709-BA9F-4A3A-8A8F-07190251DAF4",
             "categoria": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
             "tabellone": "Singolare Femminile Open",
@@ -364,61 +350,6 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "ANDREA NERVI4.NC",
-                "ALESSANDRO ANTINORI4.NC",
-                "MAURIZIO BENINCASA4.2",
-                "FERNANDO BOCCHINI4.3",
-                "GIANLUCA PROIETTI4.4",
-                "DAMIANO ZANNETTI4.1",
-                "RENATO TASSI4.2",
-                "FRANCESCO FERRARI3.4",
-                "DANIELE PICCIONE4.1",
-                "MARCO FINARELLI4.NC",
-                "FEDERICO BERTELLI4.2",
-                "ALESSANDRO BERNARDI4.3",
-                "ALESSANDRO RISPOLI4.1",
-                "ANDREA PUPPO4.NC",
-                "ALBIO PETRONE4.3",
-                "MIRCEA TCACIUC3.5",
-                "MIRKO MANTOVANI4.2",
-                "LEONELLO MORACCI4.4",
-                "SERGIO COSCIONE4.6",
-                "MASSIMILIANO DI COSIMO4.3",
-                "ADRIANO BOZZO4.1",
-                "CLAUDIO CAPOZZA4.1",
-                "ALESSANDRO MIGLIORINI4.NC",
-                "FRANCESCO PUZZILLI4.NC",
-                "GIORGIO MARCELLI4.NC",
-                "LIVIO ANDRONICO4.NC",
-                "CIRO ACQUAVIVA4.1",
-                "MASSIMILIANO DI CINTIO3.3",
-                "MATTIA FERRARI4.1",
-                "LORENZO CALDARONE4.2",
-                "DANIELE BANI4.2",
-                "ALESSANDRO CAPOLLA4.2",
-                "FRANCESCO IANNINI3.2",
-                "MATTIA SCARCIGLIA3.5",
-                "ARTURO LONGO3.4",
-                "MIRKO FIORELLO4.2",
-                "ANDREA DE SANTIS4.1",
-                "ALESSIO VIGO4.1",
-                "SEBASTIANO GIUCASTRO3.5",
-                "SIMONE NAPOLITANO3.5",
-                "MATTEO PIACITELLI3.3",
-                "SALVATORE BARDINO3.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": []
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=176505BA-0058-46F6-9FC3-70A9C75B9923",
             "categoria": "\"LAST POINT FITP\" 2^ EDIZIONE   LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
             "tabellone": "Singolare Femminile Open",
@@ -582,6 +513,75 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=4FCA41AE-5D34-4F22-86F0-8DB054175264",
             "categoria": "Torneo di fine stagione",
             "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA NERVI4.NC",
+                "ALESSANDRO ANTINORI4.NC",
+                "MAURIZIO BENINCASA4.2",
+                "FERNANDO BOCCHINI4.3",
+                "GIANLUCA PROIETTI4.4",
+                "DAMIANO ZANNETTI4.1",
+                "RENATO TASSI4.2",
+                "FRANCESCO FERRARI3.4",
+                "DANIELE PICCIONE4.1",
+                "MARCO FINARELLI4.NC",
+                "FEDERICO BERTELLI4.2",
+                "ALESSANDRO BERNARDI4.3",
+                "ALESSANDRO RISPOLI4.1",
+                "ANDREA PUPPO4.NC",
+                "ALBIO PETRONE4.3",
+                "MIRCEA TCACIUC3.5",
+                "MIRKO MANTOVANI4.2",
+                "LEONELLO MORACCI4.4",
+                "SERGIO COSCIONE4.6",
+                "MASSIMILIANO DI COSIMO4.3",
+                "ADRIANO BOZZO4.1",
+                "CLAUDIO CAPOZZA4.1",
+                "ALESSANDRO MIGLIORINI4.NC",
+                "FRANCESCO PUZZILLI4.NC",
+                "GIORGIO MARCELLI4.NC",
+                "LIVIO ANDRONICO4.NC",
+                "CIRO ACQUAVIVA4.1",
+                "MASSIMILIANO DI CINTIO3.3",
+                "MATTIA FERRARI4.1",
+                "LORENZO CALDARONE4.2",
+                "DANIELE BANI4.2",
+                "ALESSANDRO CAPOLLA4.2",
+                "FRANCESCO IANNINI3.2",
+                "MATTIA SCARCIGLIA3.5",
+                "ARTURO LONGO3.4",
+                "MIRKO FIORELLO4.2",
+                "ANDREA DE SANTIS4.1",
+                "ALESSIO VIGO4.1",
+                "SEBASTIANO GIUCASTRO3.5",
+                "SIMONE NAPOLITANO3.5",
+                "MATTEO PIACITELLI3.3",
+                "SALVATORE BARDINO3.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
+            "categoria": "4° Rodeo Lim 3.1",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "JAHRIYA OMEYA SHARIFF JONES4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E4669397-349F-4A82-8EFA-6F056895EC19",
+            "categoria": "4° Rodeo Lim 3.1",
+            "tabellone": "Doppio Maschile Open",
             "iscritti": []
         },
         {
