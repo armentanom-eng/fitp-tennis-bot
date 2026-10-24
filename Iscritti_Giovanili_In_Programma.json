@@ -32,7 +32,9 @@
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB880FB4-B01E-4F85-A8EA-001A56DE853E",
             "categoria": "16° Rodeo Giovanile \"NUII\"",
             "tabellone": "Singolare Maschile Under 14",
-            "iscritti": []
+            "iscritti": [
+                "SALVATORE LORENZO MORRONE4.4"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB880FB4-B01E-4F85-A8EA-001A56DE853E",
@@ -41,187 +43,49 @@
             "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Maschile Under 10",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Maschile Under 10 (nati nel 2016)",
             "iscritti": [
-                "ROBERTO PERALI4.NC",
-                "ALESSANDRO ROSAPEPE4.NC",
-                "SAMUELE TORRISI4.NC",
-                "MATTEO TORRISI4.NC",
-                "NICOLO CORREALE4.NC",
-                "THOMAS ZHAN4.NC",
-                "DAVID GRIGA4.NC",
-                "MATTEO MAZZANTI 4.NC",
-                "ASCANIO PETRUCCI4.NC",
-                "FILIPPO VECCHIONE4.NC",
-                "DIEGO CARUSO4.NC",
-                "TOMMASO  LEONARDI 4.NC",
-                "FEDERICO ACQUAVIVA4.NC",
-                "ANDREA RESTA4.NC",
-                "MATTIA STOLFI4.NC",
-                "ROMEO PIROSO SARTORI4.NC",
-                "OSCAR LIBERATORE4.NC",
-                "RANIERI MONACO SORGE4.NC",
-                "GABRIELE MARIA CIRELLI4.NC",
-                "GIORGIO MARIA GIAMBUSSO4.NC",
-                "TOMMASO CASALOTTI4.NC"
+                "GIUSEPPE LAUDONIA4.NC",
+                "ALESSANDRO MONTANARO4.NC",
+                "MICHELANGELO BARTOLOMUCCI4.NC",
+                "YAN MIRIC4.NC",
+                "JACOPO BOCHICCHIO4.NC"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Maschile Under 12",
-            "iscritti": [
-                "MATTEO MANNUCCI4.NC",
-                "LEONARDO GUIDETTI4.4",
-                "GABRIELE BIANCHI4.3",
-                "TANCREDI MONACO SORGE4.NC",
-                "MICHELE BALLINI4.2",
-                "EDOARDO BARBARIA4.5",
-                "RAFFAELE MARIA MAMMONE4.4",
-                "PIETRO RUSSU4.3",
-                "FRANCESCO JAVIER QUEZADA4.NC",
-                "PIETRO  BASSANO 4.NC",
-                "GIULIO INTENDENTE4.4",
-                "RICCARDO RAITI4.4",
-                "GABRIELE CANCEIL4.5",
-                "MATTEO ORLANDI4.3",
-                "VALERIO  POZZI4.3",
-                "FRANCESCO GAMBARARA4.2",
-                "MARIO GIULI4.NC",
-                "PIETRO ROBERTO GIOVANNINI4.5",
-                "RAFFAELE PALMIERI4.6",
-                "LORENZO VARÌ4.NC",
-                "TOMMASO CARNAZZA4.3",
-                "LEONARDO VOLPINI4.5",
-                "NICCOLO' MANCINI4.NC",
-                "LEONARDO MOSCO3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Maschile Under 14",
-            "iscritti": [
-                "VALENTINO BELTRAMI4.2",
-                "GIORGIO ZANARDI3.3",
-                "FRANCESCO CAMONI4.3",
-                "LEONE MONACO SORGE4.5",
-                "FRANCESCO ORIANI4.NC",
-                "MATTEO EUSEPI4.2",
-                "MATTEO DI GIAMBERARDINO4.NC",
-                "EDOARDO CRISTOFANILLI4.6",
-                "VALERIO CELLETTI4.3",
-                "TOMMASO CUCCA4.3",
-                "LUDOVICO MEZZETTI4.1",
-                "RICCARDO CISI4.1",
-                "GABRIEL BISCEGLIE4.1",
-                "MATTEO PUPILLO4.3",
-                "ANDREA MONTAGNER3.4",
-                "DIEGO SILVESTRI4.5",
-                "MARK PETROSYAN3.4",
-                "GABRIELE ALTIERI3.5",
-                "LEONARDO MELITO3.3",
-                "FILIPPO GHELFI 3.4",
-                "FRANCESCO SANTINI4.NC",
-                "ALESSANDRO ALTARELLI4.NC",
-                "GIACOMO MARCHETTI4.5",
-                "EDOARDO MANGANO4.5",
-                "FILIPPO MARIA IPPOLITI4.6",
-                "FRANCESCO FERRARI3.4",
-                "GUGLIELMO LANDOLFI3.3",
-                "EMANUELE FABBI4.NC",
-                "GABRIELE BONI4.4",
-                "LEONARDO MOSCO3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Maschile Under 16/18",
-            "iscritti": [
-                "DANIELE GATTO4.4",
-                "DAMIANO APPOLLONI3.5",
-                "DIEGO VERRILLO3.3",
-                "LUDOVICO LAMI3.5",
-                "GABRIELE CAVALLO3.4",
-                "GIANMARCO MAURO3.5",
-                "ALESSANDRO GABRIELE3.4",
-                "CHRISTIAN DEL MASTRO4.NC",
-                "TOMMASO MONTANINI4.6",
-                "ANDREA BREGA DE FILIPPI3.3",
-                "MATTEO GIURANNA3.2",
-                "SIMONE GIRARDI4.NC",
-                "EDOARDO CARNEVALI4.4",
-                "EDOARDO ORSO4.1",
-                "FLAVIO FIORAVANTI4.4",
-                "RICCARDO GRASSO4.1",
-                "LORENZO RUGGERO MACAGNINO4.NC",
-                "GABRIEL CORDONE3.4",
-                "TOMMASO DE JULIIS3.5",
-                "PIERLUIGI PETRUCCI3.5",
-                "MATTEO CATALANO4.2",
-                "PIETRO PICONE4.2",
-                "EMANUELE BUONO4.NC",
-                "MATTEO MOUALLEM4.NC"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Femminile Under 10",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Femminile Under 10 (nate nel 2016)",
             "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Femminile Under 12",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Femminile Under 9 (nate nel 2017)",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Maschile Under 9 (nati nel 2017)",
             "iscritti": [
-                "ALICE CERRONE4.2",
-                "OLIVIA DI IORIO4.2",
-                "ANGIE CIMARELLI4.4",
-                "SOFIA CECCHINI4.2",
-                "MARIA RACHELE TOCCACELO4.5",
-                "MARIA BEATRICE TOCCACELO4.4",
-                "BIANCA PECCERILLO4.5",
-                "VIRGINIA SCALETTA4.3",
-                "GAIA MADONNA4.5",
-                "ALICE PIRRONE4.2",
-                "CAMILLA CORREALE4.3",
-                "LIVIA ALLEGRITTI4.3",
-                "BEATRICE RE4.3",
-                "JAMIRA FONTE4.NC",
-                "CARLOTTA DI PAOLO4.NC",
-                "MARIA LUNA MENCARELLI4.2"
+                "NICOLÓ EVIANI4.NC",
+                "ENEA FABRIZIO GIANGARE'4.NC"
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Femminile Under 14",
-            "iscritti": [
-                "DALIA MARIE ARMENTANO4.1",
-                "ELEONORA TORTORELLA3.5",
-                "CHIARA TIPA'4.5",
-                "LUDOVICA PETRONE4.1",
-                "LUCREZIA BONANNO4.5",
-                "MARIA VITTORIA DI GIANNANTONIO4.3",
-                "MARTINA LEGGE3.5",
-                "SHANA CAMPISI4.NC",
-                "OLIVIA CORSI3.5"
-            ]
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Femminile Under 08 (nate nel 2018)",
+            "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
-            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
-            "tabellone": "Singolare Femminile Under 16/18",
-            "iscritti": [
-                "GIULIA TIPÀ4.2",
-                "CATERINA VETTORELLI4.5",
-                "LUDOVICA CERTELLI3.5",
-                "RACHELE DEGRASSI3.5"
-            ]
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=0CD78AE9-8582-4867-9C67-9472ED999CC5",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under10 M/F (Giocatori nati negli anni 2016-2017-2018)",
+            "tabellone": "Singolare Maschile Under 08 (nati nel 2018)",
+            "iscritti": []
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=DEE1C841-D6B7-46B3-A93B-D8684DB1B595",
@@ -237,7 +101,8 @@
             "tabellone": "Singolare Femminile Under 10",
             "iscritti": [
                 "LAVINIA  MAGNI4.NC",
-                "SOFIA LOMBARDO4.NC"
+                "SOFIA LOMBARDO4.NC",
+                "NATALIA LIUZZI4.NC"
             ]
         },
         {
@@ -287,7 +152,8 @@
                 "NICHOLAS GANGEMI4.3",
                 "FEDERICO BISCIONE4.5",
                 "CHRISTIAN THIAGO FRATARCANGELI4.NC",
-                "CARLO CASTRONOVO4.3"
+                "CARLO CASTRONOVO4.3",
+                "TOMMASO ARIZZI4.NC"
             ]
         },
         {
@@ -320,7 +186,8 @@
                 "FILIPPO BASSANELLI4.1",
                 "RICCARDO CHIEPPA4.NC",
                 "LORENZO DE BATTISTI4.1",
-                "BRUNO LENTSCHIG4.4"
+                "BRUNO LENTSCHIG4.4",
+                "GABRIELE ARIZZI4.NC"
             ]
         },
         {
@@ -337,7 +204,9 @@
                 "MATTEO PROSPERI4.NC",
                 "LEONE ANTONIOZZI4.3",
                 "MATTEO  CHIUSURI 4.3",
-                "FLAVIO PALCONI PETTINA'4.1"
+                "FLAVIO PALCONI PETTINA'4.1",
+                "FEDERICO PETRELLA4.3",
+                "ANDREA RAFFI4.4"
             ]
         },
         {
@@ -364,12 +233,211 @@
             "iscritti": []
         },
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "ROBERTO PERALI4.NC",
+                "ALESSANDRO ROSAPEPE4.NC",
+                "SAMUELE TORRISI4.NC",
+                "MATTEO TORRISI4.NC",
+                "NICOLO CORREALE4.NC",
+                "THOMAS ZHAN4.NC",
+                "DAVID GRIGA4.NC",
+                "MATTEO MAZZANTI 4.NC",
+                "ASCANIO PETRUCCI4.NC",
+                "FILIPPO VECCHIONE4.NC",
+                "DIEGO CARUSO4.NC",
+                "TOMMASO  LEONARDI 4.NC",
+                "FEDERICO ACQUAVIVA4.NC",
+                "ANDREA RESTA4.NC",
+                "MATTIA STOLFI4.NC",
+                "ROMEO PIROSO SARTORI4.NC",
+                "OSCAR LIBERATORE4.NC",
+                "RANIERI MONACO SORGE4.NC",
+                "GABRIELE MARIA CIRELLI4.NC",
+                "GIORGIO MARIA GIAMBUSSO4.NC",
+                "TOMMASO CASALOTTI4.NC",
+                "RUFINO TRIMELITI4.NC",
+                "SEBASTIANO CONCINA4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "MATTEO MANNUCCI4.NC",
+                "LEONARDO GUIDETTI4.4",
+                "GABRIELE BIANCHI4.3",
+                "TANCREDI MONACO SORGE4.NC",
+                "MICHELE BALLINI4.2",
+                "EDOARDO BARBARIA4.5",
+                "RAFFAELE MARIA MAMMONE4.4",
+                "PIETRO RUSSU4.3",
+                "FRANCESCO JAVIER QUEZADA4.NC",
+                "PIETRO  BASSANO 4.NC",
+                "GIULIO INTENDENTE4.4",
+                "RICCARDO RAITI4.4",
+                "GABRIELE CANCEIL4.5",
+                "MATTEO ORLANDI4.3",
+                "VALERIO  POZZI4.3",
+                "FRANCESCO GAMBARARA4.2",
+                "MARIO GIULI4.NC",
+                "PIETRO ROBERTO GIOVANNINI4.5",
+                "RAFFAELE PALMIERI4.6",
+                "LORENZO VARÌ4.NC",
+                "TOMMASO CARNAZZA4.3",
+                "LEONARDO VOLPINI4.5",
+                "NICCOLO' MANCINI4.NC",
+                "LEONARDO MOSCO3.5",
+                "LEONE CASIMIRO4.NC",
+                "GREGORIO MARIA ANTICHI4.5",
+                "LEONE CONCINA4.6",
+                "PIETRO  CONTALDI LA GROTTERIA 4.3",
+                "MARZIO DI GIACOMO4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "VALENTINO BELTRAMI4.2",
+                "GIORGIO ZANARDI3.3",
+                "FRANCESCO CAMONI4.3",
+                "LEONE MONACO SORGE4.5",
+                "FRANCESCO ORIANI4.NC",
+                "MATTEO EUSEPI4.2",
+                "MATTEO DI GIAMBERARDINO4.NC",
+                "EDOARDO CRISTOFANILLI4.6",
+                "VALERIO CELLETTI4.3",
+                "TOMMASO CUCCA4.3",
+                "LUDOVICO MEZZETTI4.1",
+                "RICCARDO CISI4.1",
+                "GABRIEL BISCEGLIE4.1",
+                "MATTEO PUPILLO4.3",
+                "ANDREA MONTAGNER3.4",
+                "DIEGO SILVESTRI4.5",
+                "MARK PETROSYAN3.4",
+                "GABRIELE ALTIERI3.5",
+                "LEONARDO MELITO3.3",
+                "FILIPPO GHELFI 3.4",
+                "FRANCESCO SANTINI4.NC",
+                "ALESSANDRO ALTARELLI4.NC",
+                "GIACOMO MARCHETTI4.5",
+                "EDOARDO MANGANO4.5",
+                "FILIPPO MARIA IPPOLITI4.6",
+                "FRANCESCO FERRARI3.4",
+                "GUGLIELMO LANDOLFI3.3",
+                "EMANUELE FABBI4.NC",
+                "GABRIELE BONI4.4",
+                "LEONARDO MOSCO3.5",
+                "MATTIA TODDE4.5",
+                "LEONARDO BUCCHERI4.NC",
+                "LEONARDO GONNINI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Maschile Under 16/18",
+            "iscritti": [
+                "DANIELE GATTO4.4",
+                "DAMIANO APPOLLONI3.5",
+                "DIEGO VERRILLO3.3",
+                "LUDOVICO LAMI3.5",
+                "GABRIELE CAVALLO3.4",
+                "GIANMARCO MAURO3.5",
+                "ALESSANDRO GABRIELE3.4",
+                "CHRISTIAN DEL MASTRO4.NC",
+                "TOMMASO MONTANINI4.6",
+                "ANDREA BREGA DE FILIPPI3.3",
+                "MATTEO GIURANNA3.2",
+                "SIMONE GIRARDI4.NC",
+                "EDOARDO CARNEVALI4.4",
+                "EDOARDO ORSO4.1",
+                "FLAVIO FIORAVANTI4.4",
+                "RICCARDO GRASSO4.1",
+                "LORENZO RUGGERO MACAGNINO4.NC",
+                "GABRIEL CORDONE3.4",
+                "TOMMASO DE JULIIS3.5",
+                "PIERLUIGI PETRUCCI3.5",
+                "MATTEO CATALANO4.2",
+                "PIETRO PICONE4.2",
+                "EMANUELE BUONO4.NC",
+                "MATTEO MOUALLEM4.NC",
+                "MATTEO TEDESCO3.3",
+                "VALERIO FONTANELLA3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": [
+                "NATALIA LIUZZI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": [
+                "ALICE CERRONE4.2",
+                "OLIVIA DI IORIO4.2",
+                "ANGIE CIMARELLI4.4",
+                "SOFIA CECCHINI4.2",
+                "MARIA RACHELE TOCCACELO4.5",
+                "MARIA BEATRICE TOCCACELO4.4",
+                "BIANCA PECCERILLO4.5",
+                "VIRGINIA SCALETTA4.3",
+                "GAIA MADONNA4.5",
+                "ALICE PIRRONE4.2",
+                "CAMILLA CORREALE4.3",
+                "LIVIA ALLEGRITTI4.3",
+                "BEATRICE RE4.3",
+                "JAMIRA FONTE4.NC",
+                "CARLOTTA DI PAOLO4.NC",
+                "MARIA LUNA MENCARELLI4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "DALIA MARIE ARMENTANO4.1",
+                "ELEONORA TORTORELLA3.5",
+                "CHIARA TIPA'4.5",
+                "LUDOVICA PETRONE4.1",
+                "LUCREZIA BONANNO4.5",
+                "MARIA VITTORIA DI GIANNANTONIO4.3",
+                "MARTINA LEGGE3.5",
+                "SHANA CAMPISI4.NC",
+                "OLIVIA CORSI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C2343901-739B-4BC8-90B8-B1D509CD475C",
+            "categoria": "TORNEO RODEO GIOVANILE DUE PONTI SPORTING CLUB NOVEMBRE 2026 TORNEO A NUMERO LIMITATO DI PARTECIPANTI",
+            "tabellone": "Singolare Femminile Under 16/18",
+            "iscritti": [
+                "GIULIA TIPÀ4.2",
+                "CATERINA VETTORELLI4.5",
+                "LUDOVICA CERTELLI3.5",
+                "RACHELE DEGRASSI3.5",
+                "GINEVRA TORRE4.1"
+            ]
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=63612E93-9D84-4558-B083-1CFEC1CC3158",
             "categoria": "JUNIOR TENNIS CUP VII EDITION U10-12-14-16/18  M/F",
             "tabellone": "Singolare Femminile Under 10",
             "iscritti": [
                 "SOFIA LOMBARDO4.NC",
-                "ALESSIA D'ANGELO4.NC"
+                "ALESSIA D'ANGELO4.NC",
+                "NATALIA LIUZZI4.NC"
             ]
         },
         {
@@ -429,7 +497,8 @@
                 "GIUSEPPE LAUDONIA4.NC",
                 "GABRIEL DI SARRA4.NC",
                 "GABRIELE SILANI4.NC",
-                "VALERIO MATTIA4.NC"
+                "VALERIO MATTIA4.NC",
+                "ANDREA CORRADI 4.NC"
             ]
         },
         {
@@ -437,7 +506,6 @@
             "categoria": "JUNIOR TENNIS CUP VII EDITION U10-12-14-16/18  M/F",
             "tabellone": "Singolare Maschile Under 12",
             "iscritti": [
-                "DAVIDE GABRIELLI3.5",
                 "LUCA MASCAGNA4.3",
                 "LORENZO VARÌ4.NC",
                 "GIORGIO GALLINA4.5",
@@ -466,7 +534,10 @@
                 "ALESSANDRO DI BIAGIO4.NC",
                 "GIORDANO PETRETTO4.4",
                 "LEONARDO VAJDI4.3",
-                "FRANCESCO MATTIA4.2"
+                "FRANCESCO MATTIA4.2",
+                "EDOARDO  DI GIGLIO 4.1",
+                "DIEGO SPARACCA4.NC",
+                "CHRISTIAN LOLLI4.5"
             ]
         },
         {
@@ -486,7 +557,6 @@
                 "LUDOVICO MEZZETTI4.1",
                 "MICHELE MARIA MINI4.1",
                 "GIORGIO ZANARDI3.3",
-                "PAOLO PENNATI4.4",
                 "ALBERTO SPANO'4.6",
                 "LUCA CABAN4.3",
                 "FEDERICO DE SANTIS3.5",
@@ -533,156 +603,8 @@
                 "GABRIELE AGOSTINELLI4.5",
                 "FEDERICO PETRELLA4.3",
                 "ACHILLE MARIA MARCHETTI3.1",
-                "PASQUALE FUSCO4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Femminile Under 12",
-            "iscritti": [
-                "VERONICA                       RICCITELLI                              4.4",
-                "ALICE STRABIOLI4.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Femminile Under 14",
-            "iscritti": [
-                "ELENA GAUDIO4.3",
-                "GIORGIA ALTOSINNO4.NC",
-                "AURORA ANTONUCCI4.NC",
-                "GIULIA CALDERISI4.1",
-                "ALICE STRABIOLI4.5",
-                "MARIA VITTORIA  TRIOLO4.1"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Femminile Under 18",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Maschile Under 12",
-            "iscritti": [
-                "GABRIELE BIANCHI4.3",
-                "FRANCESCO RICCIARDELLI4.5",
-                "MATTEO MANNUCCI4.NC",
-                "LORENZO VARÌ4.NC",
-                "CHRISTIAN THIAGO FRATARCANGELI4.NC",
-                "VALERIO SCHEDA4.5",
-                "ALESSANDRO PORCELLI4.5",
-                "DANIEL TESTA4.3",
-                "CARLO CASTRONOVO4.3",
-                "NICCOLO' DE AMICIS4.5",
-                "LORENZO PIZZUTI4.2",
-                "FRANCESCO PROIETTI BARTOLUCCI4.5",
-                "PIETRO  CONTALDI LA GROTTERIA 4.3",
-                "PIETRO  BASSANO 4.NC",
-                "ALESSANDRO DE FEO4.5",
-                "ANDREA TANSINI4.NC",
-                "SEBASTIANO BRANCOLI BUSDRAGHI4.2",
-                "FLAVIO SANTORO4.2",
-                "GIULIO INTENDENTE4.4",
-                "TOMMASO ARIZZI4.NC",
-                "ALESSANDRO PANICCI4.2",
-                "VALERIO BENEDETTI4.3",
-                "CHRISTIAN LOLLI4.5",
-                "MATTEO SCARINCI4.5",
-                "CRISTIAN BONO4.NC",
-                "ENRICO                         DEL GIUDICE                             4.NC",
-                "STEFANO ALBANO4.5",
-                "LEONARDO SACCONI4.4",
-                "ANDREA BIASINI3.5",
-                "TOMMASO GISONI4.5",
-                "GIULIO FUSACCHIA3.5",
-                "CHRISTIAN  CAPPONI4.2",
-                "LORENZO  MILITTO4.2",
-                "NICHOLAS MINGARELLI 4.4",
-                "LEONARDO MOSCO3.5",
-                "GREGORIO MARIA ANTICHI4.5",
-                "FILIPPO  BORATTO4.5",
-                "CARLOS BRUNO IMPROTA4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Maschile Under 14",
-            "iscritti": [
-                "VALENTINO BELTRAMI4.2",
-                "EDOARDO GINESI4.NC",
-                "MATTIA CORIDDI4.4",
-                "GIACOMO FERRUZZI4.3",
-                "CHRISTIAN FALCIONE4.2",
-                "MATTIA PANVINI ROSATI4.4",
-                "RICCARDO PULCI4.5",
-                "JOSEPH URBANI4.3",
-                "SALVATORE LORENZO MORRONE4.4",
-                "GIACOMO PEROTTI4.NC",
-                "ALESSANDRO  INCERTI CANTIMORI 4.3",
-                "ALESSANDRO TISMA4.6",
-                "RICCARDO CISI4.1",
-                "VALERIO CELLETTI4.3",
-                "LUDOVICO MEZZETTI4.1",
-                "GABRIELE MULIERE4.4",
-                "ALBERTO SPANO'4.6",
-                "PAOLO PENNATI4.4",
-                "JACOPO MONTANARO4.3",
-                "GABRIELE ARIZZI4.NC",
-                "FILIPPO MARZI4.4",
-                "EMANUELE SCHIAPPACASSE4.NC",
-                "DAVIDE LISSANDRELLI4.4",
-                "EDOARDO MANGIONE4.NC",
-                "FLAVIO BELLOCCO4.3",
-                "LEONARDO MATTIA4.1",
-                "DIEGO LEON VISCOMI4.NC",
-                "GIULIO MERLI3.5",
-                "RICCARDO RISTALLO4.4",
-                "GIOVANNI  GRECO 4.4",
-                "FRANCESCO  TOSI4.3",
-                "LEONARDO MOSCO3.5",
-                "MATTEO DOGANI3.5"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=338E7BB2-EB44-45B9-BF4A-50AC4A3A1C0D",
-            "categoria": "15°  Rodeo Giovanile \"NUII\"",
-            "tabellone": "Singolare Maschile Under 18",
-            "iscritti": [
-                "VASCO GAUDIO4.3",
-                "VALENTINO  FURINA4.2",
-                "FLAVIO AVENIA4.2",
-                "EDOARDO CELANI3.5",
-                "GIANMARCO MAURO3.5",
-                "NICCOLÒ MARIA PAGLIARO3.5",
-                "LORENZO MEDA4.3",
-                "MATTIA NAPOLI4.2",
-                "RICCARDO CORRENTE4.NC",
-                "LUCA ARCESE4.2",
-                "SAMUEL LOIOLA DE ABREU4.1",
-                "SIMONE  GIANNATTASIO 4.NC",
-                "ALESSANDRO LUCIANI4.5",
-                "FRANCESCO BALDASSARRE4.3",
-                "ADRIANO ANTINORI4.4",
-                "ANTONIO BIONDO4.1",
-                "DANIELE SALMERI4.5",
-                "RICCARDO PETRUCCI 4.6",
-                "LORENZO PASTORELLI4.2",
-                "MATTEO IANNOTTI4.3",
-                "MATTEO PIACITELLI3.3",
-                "STEFANO BAIOCCO3.5",
-                "CONRAD RICCARDO WERNER4.NC",
-                "MATTEO CAMPETI3.4",
-                "TIMUR YAKUBOV4.NC",
-                "GIOVANNI ASCIUTTI3.5",
-                "FILIPPO RAPARELLI4.5",
-                "FRANCESCO VASER4.3",
-                "JULIAN MARUSIC LOZZI4.2"
+                "PASQUALE FUSCO4.3",
+                "VALERIO TOLFA3.3"
             ]
         },
         {
@@ -720,7 +642,9 @@
             "tabellone": "Singolare Maschile Under 14",
             "iscritti": [
                 "LEONARDO MEDAGLINI4.1",
-                "LORENZO DE BATTISTI4.1"
+                "LORENZO DE BATTISTI4.1",
+                "ANDY JIN4.NC",
+                "FRANCESCO ILLUMINATI4.NC"
             ]
         },
         {
@@ -730,6 +654,106 @@
             "iscritti": [
                 "FEDERICO LUPERI3.5",
                 "GIANMARCO MAURO3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F95FA871-82B3-4EED-BB3B-343B40EE6132",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under12 e Under14 - M/F - (Giocatori nati negli anni 2015-2014-2013)",
+            "tabellone": "Singolare Maschile Under 12 riservato ai giocatori nati nel 2015",
+            "iscritti": [
+                "ACHILLE URSO4.1",
+                "LEONARDO GUIDETTI4.4",
+                "VALERIO BASILE4.5",
+                "EDOARDO  BATTISTA4.6",
+                "CARLO SIMONETTI 4.4",
+                "CRISTIAN TRECASTAGNI4.1",
+                "GABRIELE BIANCHI4.3",
+                "SIMONE D'ALESSANDRO4.4",
+                "EMILIANO FRESE4.5",
+                "ALESSANDRO GRAZIOSI4.5",
+                "LIAM GUADAGNINI4.2",
+                "GIORDANO PETRETTO4.4",
+                "MANUELE PROSPERI4.5",
+                "FRANCESCO RICCIARDELLI4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F95FA871-82B3-4EED-BB3B-343B40EE6132",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under12 e Under14 - M/F - (Giocatori nati negli anni 2015-2014-2013)",
+            "tabellone": "Singolare Femminile Under 12  riservato alle giocatrici nate nel 2015",
+            "iscritti": [
+                "MARTINA MARIA CERA4.2",
+                "VIRGINIA SCALETTA4.3",
+                "CAMILLA BENVENUTI4.4",
+                "MARTINA QUARTI4.2",
+                "MINA MARIA CENTARO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F95FA871-82B3-4EED-BB3B-343B40EE6132",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under12 e Under14 - M/F - (Giocatori nati negli anni 2015-2014-2013)",
+            "tabellone": "Singolare Maschile Under 14 riservato ai giocatori nati nel 2014-2013",
+            "iscritti": [
+                "IACOPO PAMPALONI4.4",
+                "LEONARDO CANTONETTI4.NC",
+                "RICCARDO SOLIMEI4.5",
+                "NICOLO' TUSI3.5",
+                "GIULIO MASSAI4.1",
+                "RICCARDO GIUSEPPE MUSUMECI4.3",
+                "LEONARDO MATTIA4.1",
+                "ANTONIO PEDICINI3.4",
+                "MARK PETROSYAN3.4",
+                "DEVID PINNA4.5",
+                "ALESSANDRO ALEK ROSSI3.4",
+                "PIETRO RUSSU4.3",
+                "GABRIELE FODAYBA  SAMURA 4.3",
+                "TOMMASO SIGNORINI3.3",
+                "DIEGO SILVESTRI4.5",
+                "ANDREA CARMINUCCI4.1",
+                "LEONARDO  SILVESTRI 4.5",
+                "SAMUEL SONNINO4.3",
+                "DIEGO SPARACCA4.NC",
+                "NICOLO TROIANI4.3",
+                "LORENZO CIOTTI3.5",
+                "GIUSEPPE FLAVIO CONI3.5",
+                "RICCARDO D'AZZEO3.5",
+                "MICHAEL DE BIASE4.3",
+                "FRANCESCO FATTORE4.1",
+                "EMANUELE FULLI4.2",
+                "ALESSANDRO MACCARONI3.5",
+                "ANDREA BIASINI3.5",
+                "UMBERTO CAIRO4.1",
+                "TOMMASO MARIUZZO4.1",
+                "DAVIDE  BROCCOLETTI 4.2",
+                "LORIS BIANCHI4.3",
+                "LEONARDO GONNINI3.5",
+                "LORENZO EMANUEL BURATO2.8",
+                "GIUSEPPE DI DIO3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F95FA871-82B3-4EED-BB3B-343B40EE6132",
+            "categoria": "LEMON BOWL 2027 - 43° EDIZIONE - Under12 e Under14 - M/F - (Giocatori nati negli anni 2015-2014-2013)",
+            "tabellone": "Singolare Femminile Under 14 riservato alle giocatrici nate nel 2014-2013",
+            "iscritti": [
+                "ALICE CERRONE4.2",
+                "ISABEL MARIA SODANO3.5",
+                "SOFIA CECCHINI4.2",
+                "MARGHERITA BERNABEI4.5",
+                "AURORA BRUSCA4.6",
+                "CAMILLA STORONI4.4",
+                "SOFIA TURCANU3.2",
+                "EMMA VERONESI3.2",
+                "SARA FASCIOLI4.5",
+                "ILARIA KERCIKU3.1",
+                "VIVIANA MARINO3.3",
+                "MARIA LUNA MENCARELLI4.2",
+                "ALESSANDRA MORMINO3.1",
+                "SARA RESTUCCI3.3",
+                "SERENA SIRBU2.8",
+                "GIULIA SPAZIANI4.4",
+                "ELEONORA TORTORELLA3.5",
+                "JOANNA MARIA BERNAS3.3"
             ]
         }
     ]
