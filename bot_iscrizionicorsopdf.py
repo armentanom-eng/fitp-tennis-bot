@@ -39,7 +39,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (da 30 giorni fa fino a domani) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -50,6 +50,26 @@ async def run_bot():
             page = await context.new_page()
             
             await page.goto(BASE_URL, timeout=60000)
+            
+            # --- 1. RICERCA TORNEI: da 30 giorni fa al giorno dopo di oggi ---
+            oggi = datetime.now()
+            data_inizio_ricerca = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            data_fine_ricerca = (oggi + timedelta(days=1)).strftime("%d/%m/%Y")
+            
+            print(f"-> Impostazione ricerca tornei dal {data_inizio_ricerca} al {data_fine_ricerca}...")
+            
+            try:
+                for selector in ['input[name*="Inizio"]', '#DataInizio', '#txtDataInizio', 'input[id*="Inizio"]']:
+                    if await page.locator(selector).count() > 0:
+                        await page.fill(selector, data_inizio_ricerca)
+                        break
+                for selector in ['input[name*="Fine"]', '#DataFine', '#txtDataFine', 'input[id*="Fine"]']:
+                    if await page.locator(selector).count() > 0:
+                        await page.fill(selector, data_fine_ricerca)
+                        break
+                await asyncio.sleep(2)
+            except Exception as e:
+                print(f"   (Campi data ricerca: {e})")
             
             # Filtro Stato
             await page.click('button[data-id="select_status"]')
@@ -100,13 +120,9 @@ async def run_bot():
                 download_btn = page.locator("#btnOrderGameDownload")
                 
                 if await page.locator(dropdown_selector).is_visible():
-                    # Intervallo: da 30 giorni fa fino a domani (rispetto ad oggi)
-                    oggi = datetime.now()
-                    data_corrente = oggi - timedelta(days=30)
-                    data_fine = oggi + timedelta(days=1)  # Domani
-                    
-                    while data_corrente <= data_fine:
-                        data_target = data_corrente.strftime("%d/%m/%Y")
+                    # --- 2. DOWNLOAD PDF: solo per OGGI e DOMANI ---
+                    for i in range(0, 2): 
+                        data_target = (oggi + timedelta(days=i)).strftime("%d/%m/%Y")
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             await page.select_option(dropdown_selector, label=data_target)
@@ -131,8 +147,6 @@ async def run_bot():
                                 "data": data_target, 
                                 "partite": ["Nessuna partita trovata"]
                             })
-                        
-                        data_corrente += timedelta(days=1)
                 
                 elif await download_btn.is_visible():
                     async with page.expect_download() as dl_info: 
