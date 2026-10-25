@@ -18,7 +18,7 @@ def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
-    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.]\d{2}", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.](\d{2})", "", text, flags=re.IGNORECASE)
     text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
     partite = re.findall(r"([A-Z\s\d\(\)]+?)\s+vs\s+([A-Z\s\d\(\)]+)", text)
     if partite:
@@ -39,7 +39,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (Oggi + Domani) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (da 30 giorni prima di domani fino a dopodomani) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -54,22 +54,22 @@ async def run_bot():
             # Filtro Stato
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
-            await asyncio.sleep(3) # Aumentato a 3
+            await asyncio.sleep(3)
             
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(3) # Aumentato a 3
+            await asyncio.sleep(3)
             
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(3) # Aumentato a 3
+            await asyncio.sleep(3)
             
             # Selezione Categoria con attesa robusta
             print(f"-> Attendendo categoria {cat_id}...")
             cat_selector = f'a[data-id="{cat_id}"]'
             await page.wait_for_selector(cat_selector, timeout=30000)
             await page.locator(cat_selector).first.click()
-            await asyncio.sleep(6) # Aumentato a 6
+            await asyncio.sleep(6)
             
             # Espansione lista
             print("-> Espansione lista tornei...")
@@ -77,7 +77,7 @@ async def run_bot():
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
                     await btn_load_more.click()
-                    await asyncio.sleep(6) # Aumentato a 6
+                    await asyncio.sleep(6)
                 else:
                     break
             
@@ -100,61 +100,5 @@ async def run_bot():
                 download_btn = page.locator("#btnOrderGameDownload")
                 
                 if await page.locator(dropdown_selector).is_visible():
-                    for i in range(0, 2): 
-                        data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
-                        
-                        if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
-                            await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(5) # Aumentato a 5
-                            
-                            if await download_btn.is_visible():
-                                async with page.expect_download() as dl_info: 
-                                    await download_btn.click()
-                                download = await dl_info.value
-                                await download.save_as("temp.pdf")
-                                matches = get_pdf_info("temp.pdf")
-                                json_data["tornei"].append({
-                                    "url": full_url, 
-                                    "nomeTorneo": nome_torneo.strip(), 
-                                    "data": data_target, 
-                                    "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
-                                })
-                        else:
-                            json_data["tornei"].append({
-                                "url": full_url, 
-                                "nomeTorneo": nome_torneo.strip(), 
-                                "data": data_target, 
-                                "partite": ["Nessuna partita trovata"]
-                            })
-                
-                elif await download_btn.is_visible():
-                    async with page.expect_download() as dl_info: 
-                        await download_btn.click()
-                    download = await dl_info.value
-                    await download.save_as("temp.pdf")
-                    matches = get_pdf_info("temp.pdf")
-                    data_oggi = datetime.now().strftime("%d/%m/%Y")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": data_oggi, 
-                        "partite": [format_line_for_swift(m, "Oggi") for m in matches] if matches else ["Nessuna partita trovata"]
-                    })
-                else:
-                    print(f"      ! Tabellone non disponibile.")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite": ["Tabellone non disponibile"]
-                    })
-            
-            with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            await page.close()
-        
-        await browser.close()
-    print("--- [END] Processo completato ---")
-
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+                    # Riferimenti temporali: da 30 giorni prima di domani fino a dopodomani
+                    oggi = datetime.now()
