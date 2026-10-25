@@ -47,7 +47,27 @@ async def run_bot():
             page = await context.new_page()
             await page.goto(BASE_URL, timeout=60000)
             
-            # --- FILTRI RIGIDI ---
+            # --- 1. IMPOSTAZIONE DATE DI RICERCA (da 30 giorni fa a domani) ---
+            oggi = datetime.now()
+            data_inizio_ricerca = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            data_fine_ricerca = (oggi + timedelta(days=1)).strftime("%d/%m/%Y")
+            
+            print(f"-> Impostazione filtri data ricerca: da {data_inizio_ricerca} a {data_fine_ricerca}")
+            
+            try:
+                for sel in ['#DataInizio', 'input[name*="Inizio"]', 'input[id*="Inizio"]']:
+                    if await page.locator(sel).count() > 0:
+                        await page.fill(sel, data_inizio_ricerca)
+                        break
+                for sel in ['#DataFine', 'input[name*="Fine"]', 'input[id*="Fine"]']:
+                    if await page.locator(sel).count() > 0:
+                        await page.fill(sel, data_fine_ricerca)
+                        break
+                await asyncio.sleep(2)
+            except Exception as e:
+                print(f"   (Campi data ricerca: {e})")
+
+            # --- 2. FILTRI STATO, REGIONE, PROVINCIA ---
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
             await asyncio.sleep(3)
@@ -94,8 +114,9 @@ async def run_bot():
                     
                     partite_totali = []
                     if await page.locator(dropdown_selector).is_visible():
-                        for i in range(0, 2):  # Oggi e Domani
-                            data_target = (datetime.now() + timedelta(days=i)).strftime("%d/%m/%Y")
+                        # --- 3. DOWNLOAD PDF: solo per OGGI e DOMANI ---
+                        for i in range(0, 2):  
+                            data_target = (oggi + timedelta(days=i)).strftime("%d/%m/%Y")
                             
                             if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                                 await page.select_option(dropdown_selector, label=data_target)
