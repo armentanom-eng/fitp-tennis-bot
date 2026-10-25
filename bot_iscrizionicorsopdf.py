@@ -52,6 +52,7 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             
             # Filtro Stato
+            print("-> Impostazione filtri (In corso, Lazio, Roma)...")
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
             await asyncio.sleep(3)
@@ -83,9 +84,9 @@ async def run_bot():
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+            print(f"-> Trovati {len(links)} tornei. Inizio analisi delle date...")
             
-            for link in links:
+            for index, link in enumerate(links, 1):
                 full_url = f"https://www.fitp.it{link}"
                 await page.goto(full_url, timeout=60000)
                 
@@ -94,7 +95,7 @@ async def run_bot():
                 except:
                     nome_torneo = "Torneo senza nome"
                 
-                print(f"   [Analizzo]: {nome_torneo.strip()}")
+                print(f"   [{index}/{len(links)}] Analizzo torneo: {nome_torneo.strip()}")
                 
                 dropdown_selector = "#select-ordergame"
                 download_btn = page.locator("#btnOrderGameDownload")
@@ -102,3 +103,66 @@ async def run_bot():
                 if await page.locator(dropdown_selector).is_visible():
                     # Riferimenti temporali: da 30 giorni prima di domani fino a dopodomani
                     oggi = datetime.now()
+                    domani = oggi + timedelta(days=1)
+                    data_corrente = domani - timedelta(days=30)
+                    data_fine = domani + timedelta(days=1) # Dopodomani
+                    
+                    # Cicliamo giorno per giorno nell'intervallo stabilito
+                    while data_corrente <= data_fine:
+                        data_target = data_corrente.strftime("%d/%m/%Y")
+                        
+                        # Verifica se la data esiste nel menu a tendina
+                        count_opt = await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count()
+                        if count_opt > 0:
+                            print(f"      -> Data trovata nel menu: {data_target}. Download in corso...")
+                            await page.select_option(dropdown_selector, label=data_target)
+                            await asyncio.sleep(5)
+                            
+                            if await download_btn.is_visible():
+                                async with page.expect_download() as dl_info: 
+                                    await download_btn.click()
+                                download = await dl_info.value
+                                await download.save_as("temp.pdf")
+                                matches = get_pdf_info("temp.pdf")
+                                json_data["tornei"].append({
+                                    "url": full_url, 
+                                    "nomeTorneo": nome_torneo.strip(), 
+                                    "data": data_target, 
+                                    "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
+                                })
+                        data_corrente += timedelta(days=1)
+                
+                elif await download_btn.is_visible():
+                    print(f"      -> Menu a tendina non visibile, ma pulsante download presente per oggi.")
+                    async with page.expect_download() as dl_info: 
+                        await download_btn.click()
+                    download = await dl_info.value
+                    await download.save_as("temp.pdf")
+                    matches = get_pdf_info("temp.pdf")
+                    data_oggi = datetime.now().strftime("%d/%m/%Y")
+                    json_data["tornei"].append({
+                        "url": full_url, 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": data_oggi, 
+                        "partite": [format_line_for_swift(m, "Oggi") for m in matches] if matches else ["Nessuna partita trovata"]
+                    })
+                else:
+                    print(f"      ! Tabellone non disponibile per questo torneo.")
+                    json_data["tornei"].append({
+                        "url": full_url, 
+                        "nomeTorneo": nome_torneo.strip(), 
+                        "data": datetime.now().strftime("%d/%m/%Y"), 
+                        "partite": ["Tabellone non disponibile"]
+                    })
+            
+            print(f"-> Salvataggio file {filename} in corso...")
+            with open(filename, "w", encoding="utf-8") as f: 
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+            print(f"-> Categoria {cat_id} completata e salvata!")
+            await page.close()
+        
+        await browser.close()
+    print("--- [END] Processo completato ---")
+
+if __name__ == "__main__": 
+    asyncio.run(run_bot())
