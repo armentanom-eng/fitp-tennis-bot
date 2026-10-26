@@ -44,14 +44,21 @@ def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
     registro = carica_registro()
     
     if id_univoco in registro:
-        print(f"-> [Email] Notifica già inviata in precedenza per questa partita.")
+        print("-> [Email] Notifica già inviata in precedenza per questa partita.")
         return
 
     oggetto = "tornei fit"
-    testo = f"Il giocatore Armentano è stato trovato nel torneo '{nome_torneo}' in data {data_target}.\nDettagli: {riga_partita}"
+    
+    # Testo strutturato con data, torneo e orario/dettagli della partita
+    testo = f"""È stata trovata una partita per il giocatore Armentano!
+
+📅 Data: {data_target}
+🏆 Torneo: {nome_torneo}
+⏰ Orario e Dettagli: {riga_partita}
+"""
 
     invio_riuscito = True
-    for destinatario in destinatari:
+    for destinatario in destinataires if 'destinataires' in locals() else destinatari:
         msg = MIMEMultipart()
         msg['From'] = mittente
         msg['To'] = destinatario
@@ -191,59 +198,4 @@ async def run_bot():
                     await page.wait_for_load_state("networkidle")
                     
                     try:
-                        nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
-                    except:
-                        nome_torneo = "Torneo senza nome"
-                    
-                    print(f"   [Torneo]: {nome_torneo.strip()}")
-                    
-                    dropdown_selector = "#select-ordergame"
-                    download_btn = page.locator("#btnOrderGameDownload")
-                    
-                    partite_totali = []
-                    if await page.locator(dropdown_selector).is_visible():
-                        oggi_ciclo = datetime.now()
-                        for i in range(0, 2): 
-                            data_target = (oggi_ciclo + timedelta(days=i)).strftime("%d/%m/%Y")
-                            
-                            if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
-                                await page.select_option(dropdown_selector, label=data_target)
-                                await asyncio.sleep(5)
-                                
-                                if await download_btn.is_visible():
-                                    async xd = page.expect_download(timeout=30000) # syntax fallback check
-                                    async with page.expect_download(timeout=30000) as dl_info: 
-                                        await download_btn.click()
-                                    download = await dl_info.value
-                                    path = await download.path()
-                                    matches = get_pdf_info(path)
-                                    for m in matches:
-                                        formatted_line = format_line_for_swift(m, data_target)
-                                        partite_totali.append(formatted_line)
-                                        
-                                        # Controllo se il cognome "armentano" è presente nella riga (case-insensitive)
-                                        if "armentano" in formatted_line.lower():
-                                            print(f"-> Trovato match per Armentano! Invio notifiche email...")
-                                            invia_notifiche_giocatore(formatted_line, nome_torneo.strip(), data_target)
-                    
-                    if partite_totali:
-                        json_data["tornei"].append({
-                            "url": full_url, 
-                            "nomeTorneo": nome_torneo.strip(), 
-                            "data": datetime.now().strftime("%d/%m/%Y"), 
-                            "partite": list(set(partite_totali))
-                        })
-                except Exception as e:
-                    print(f"   [Errore su torneo]: {e}. Salto al prossimo.")
-                    continue 
-            
-            with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            print(f"-> File {filename} salvato correttamente.")
-            await page.close()
-        
-        await browser.close()
-    print("--- [END] Processo completato correttamente ---")
-
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+                        nome_torneo =
