@@ -39,7 +39,6 @@ def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
         print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
         return
 
-    # ID univoco per evitare invii multipli della stessa partita
     id_univoco = f"{nome_torneo}_{data_target}_{riga_partita}".replace(" ", "_")
     registro = carica_registro()
     
@@ -49,7 +48,6 @@ def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
 
     oggetto = "tornei fit"
     
-    # Testo strutturato con data, torneo e orario/dettagli della partita
     testo = f"""È stata trovata una partita per il giocatore Armentano!
 
 📅 Data: {data_target}
@@ -58,7 +56,7 @@ def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
 """
 
     invio_riuscito = True
-    for destinatario in destinataires if 'destinataires' in locals() else destinatari:
+    for destinatario in destinatari:
         msg = MIMEMultipart()
         msg['From'] = mittente
         msg['To'] = destinatario
@@ -198,4 +196,30 @@ async def run_bot():
                     await page.wait_for_load_state("networkidle")
                     
                     try:
-                        nome_torneo =
+                        nome_torneo = await page.locator("h1").first.inner_text()
+                        nome_torneo = nome_torneo.strip() if nome_torneo else "Torneo FITP"
+                    except:
+                        nome_torneo = "Torneo FITP"
+
+                    pdf_links = await page.locator("a[href$='.pdf']").all()
+                    for pdf_link in pdf_links:
+                        href_pdf = await pdf_link.get_attribute("href")
+                        if href_pdf:
+                            if not href_pdf.startswith("http"):
+                                href_pdf = f"https://www.fitp.it{href_pdf}"
+                            
+                            async with page.expect_download() as download_info:
+                                await pdf_link.click()
+                            download = await download_info.value
+                            path_pdf = await download.path()
+                            
+                            righe_pdf = get_pdf_info(path_pdf)
+                            for riga in righe_pdf:
+                                if "armentano" in riga.lower():
+                                    print(f"Trovato Armentano in {nome_torneo}: {riga}")
+                                    invia_notifiche_giocatore(riga, nome_torneo, datetime.now().strftime("%d/%m/%Y"))
+                except Exception as e:
+                    print(f"-> [Errore Torneo {index}]: {e}")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
