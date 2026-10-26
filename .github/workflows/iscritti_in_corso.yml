@@ -21,10 +21,17 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          # Installazione delle dipendenze necessarie
           pip install playwright
-          playwright install chromium
+          
+          # Attende che eventuali aggiornamenti automatici di background rilascino il blocco APT
+          echo "Verifica blocchi apt in corso..."
+          while sudo fuser /var/lib/dpkg/lock-frontend >/dev/null 2>&1; do
+            echo "Attendere lo sblocco di apt..."
+            sleep 3
+          done
+          
           playwright install-deps chromium
+          playwright install chromium
           
       - name: Esegui Bot
         run: python bot_iscritti_in_corso.py
@@ -37,5 +44,5 @@ jobs:
           # Aggiunge solo i file corretti generati dallo script
           git add Iscritti_Giovanili_In_Corso.json Iscritti_Open_In_Corso.json
           
-          # Esegue commit e push solo se ci sono modifiche reali
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Aggiornamento iscritti in corso" && git push)
+          # Sincronizza con il remote ed esegue commit e push solo se ci sono modifiche reali
+          git diff --quiet && git diff --staged --quiet || (git pull --rebase --autostash origin main && git commit -m "Aggiornamento iscritti in corso" && git push)
