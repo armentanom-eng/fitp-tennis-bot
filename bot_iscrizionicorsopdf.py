@@ -39,9 +39,8 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (Scrittura diretta date con fill) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Digitazione reale date) ---")
     async with async_playwright() as p:
-        # Lasciato a False per monitorare visivamente il comportamento sul browser
         browser = await p.chromium.launch(headless=False)
         context = await browser.new_context(accept_downloads=True)
         
@@ -53,15 +52,25 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # --- 1. SCRITTURA DIRETTA DELLE DATE NEI CAMPI ---
+            # --- 1. DIGITAZIONE REALE DELLE DATE ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> Scrivo nei campi data: da {data_inizio} a {data_fine}")
+            print(f"-> Digito date nei campi: da {data_inizio} a {data_fine}")
             
-            await page.fill("#dpk_start_date", data_inizio)
-            await page.fill("#dpk_end_date", data_fine)
+            # Data Inizio
+            await page.locator("#dpk_start_date").click()
+            await page.locator("#dpk_start_date").fill("")
+            await page.type("#dpk_start_date", data_inizio, delay=100)
+            await page.locator("#dpk_start_date").press("Tab")
+            
+            # Data Fine
+            await page.locator("#dpk_end_date").click()
+            await page.locator("#dpk_end_date").fill("")
+            await page.type("#dpk_end_date", data_fine, delay=100)
+            await page.locator("#dpk_end_date").press("Tab")
+            
             await asyncio.sleep(2)
             
             # --- 2. APPLICAZIONE DEI FILTRI ---
@@ -83,10 +92,10 @@ async def run_bot():
             # --- 3. CLIC SUL PULSANTE "CERCA" ---
             print("-> Clic sul pulsante Cerca del portale...")
             try:
-                btn_cerca = page.locator("button:has-text('Cerca')")
-                if await btn_cerca.count() > 0:
-                    await btn_cerca.first.click()
-                    await asyncio.sleep(5) # Attende il caricamento dei risultati filtrati
+                # Cerca il bottone Cerca e ci clicca sopra
+                await page.locator("button:has-text('Cerca')").first.click()
+                print("-> Attendendo il caricamento dei risultati della ricerca...")
+                await asyncio.sleep(6) # Attesa generosa per l'aggiornamento della tabella via AJAX
             except Exception as e:
                 print(f"   (Errore click cerca: {e})")
 
@@ -109,7 +118,7 @@ async def run_bot():
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+            print(f"   [Tornei trovati]: {len(links)}")
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
