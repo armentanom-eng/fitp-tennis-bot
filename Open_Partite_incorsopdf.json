@@ -1,9 +1,45 @@
 {
-    "report_data": "26/10/2026 10:33",
+    "report_data": "26/10/2026 14:40",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
-            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
+            "nome": "TORNEO DI FINE STAGIONE",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. Campo 1",
+                "26/10/2026; 17:30; 1 Inizio  Singolare Maschile Open q o CAPUANO ALESSIO vs MINISSALE ALESSANDRO",
+                "26/10/2026; 00:00; 2 A seguire Singolare Maschile Open APUZZO MANUEL vs DE PETRIS ROBERTO"
+            ]
+        },
+        {
+            "nome": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
+                "26/10/2026; 14:00; 6 TROIANI MASSIMILIANO vs ALOISIO MICHELE Inizio  Singolare Maschile Open; 3 FABBRI ALESSANDRO vs MORESCHINI ALESSANDRO Inizio  Singolare Maschile Open; 3 NINFADORO ENRICO vs GRASSETTI FEDERICO Inizio  Singolare Maschile Open; 6 CERRAI NICOLA vs ERCOLANI EMANUELE",
+                "26/10/2026; 16:00; 6 TAMBONE FABIO vs ARMOCIDA DANIELE Non prima delle Singolare Femminile Open; 6 PEPTANARU RIHANNA vs BONAIUTI GIULIA Non prima delle Singolare Femminile Open; 6 DELLATTE AURORA vs TOTARO LUDOVICA Non prima delle Singolare Femminile Open; 6 DORMI AMALIA vs MAGI MATILDA",
+                "26/10/2026; 17:30; 3 LIGUORI RAFFAELE vs GUARALDI DANIELE Non prima delle Singolare Maschile Open; 6 SEGAR ABINATH vs BATTOCCHIO FRANCESCO Non prima delle Singolare Maschile Open; 3 LUNARDI MARCO vs DE PEDIS GIANLUCA Non prima delle Singolare Maschile Open; 3 RAUCO PAOLO vs ROCCA GUIDO",
+                "26/10/2026; 19:00; 6 CESCHIN LEONARDO vs AMICO MARIO Non prima delle Singolare Maschile Open; 3 CHIARELLI FEDERICO vs MARCHETTI FABRIZIO"
+            ]
+        },
+        {
+            "nome": "LAST POINT III EDIZIONE",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. Campo 2 Campo 3",
+                "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open BUONGIORNO RICCARDO vs TEI JACOPO Inizio  Singolare Maschile Open CALDERAN MASSIMO vs GORLA CRISTIAN"
+            ]
+        },
+        {
+            "nome": "3^ E 4^ CATEGORIA M & F",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. Campo 1 campo 2",
+                "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open IANNINI FRANCESCO vs FERRARI FRANCESCO Inizio  Singolare Maschile Open PIACITELLI MATTEO vs NAPOLITANO SIMONE",
+                "26/10/2026; 17:00; 2 Inizio  Singolare Maschile Open BOZZO ADRIANO vs DI CINTIO MASSIMILIANO Inizio  Singolare Maschile Open SCARCIGLIA MATTIA vs BARDINO SALVATORE"
+            ]
+        },
+        {
+            "nome": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
             "data": "26/10/2026",
             "partite": [
                 "26/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
@@ -18,77 +54,7 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=77E96AA8-41A2-4B00-9467-B31AA4DFF85B",
-            "nomeTorneo": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
-            "data": "27/10/2026",
-            "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=7B2A8709-BA9F-4A3A-8A8F-07190251DAF4",
-            "nomeTorneo": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BE10A3D1-2B6D-46BA-9759-C6F7E4AAE632",
-            "nomeTorneo": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
-            "data": "26/10/2026",
-            "partite": [
-                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
-                "26/10/2026; 14:00; 6 TROIANI MASSIMILIANO vs ALOISIO MICHELE Inizio  Singolare Maschile Open; 3 FABBRI ALESSANDRO vs MORESCHINI ALESSANDRO Inizio  Singolare Maschile Open; 3 NINFADORO ENRICO vs GRASSETTI FEDERICO Inizio  Singolare Maschile Open; 6 CERRAI NICOLA vs ERCOLANI EMANUELE",
-                "26/10/2026; 16:00; 6 TAMBONE FABIO vs ARMOCIDA DANIELE Non prima delle Singolare Femminile Open; 6 PEPTANARU RIHANNA vs BONAIUTI GIULIA Non prima delle Singolare Femminile Open; 6 DELLATTE AURORA vs TOTARO LUDOVICA Non prima delle Singolare Femminile Open; 6 DORMI AMALIA vs MAGI MATILDA",
-                "26/10/2026; 17:30; 3 LIGUORI RAFFAELE vs GUARALDI DANIELE Non prima delle Singolare Maschile Open; 6 SEGAR ABINATH vs BATTOCCHIO FRANCESCO Non prima delle Singolare Maschile Open; 3 LUNARDI MARCO vs DE PEDIS GIANLUCA Non prima delle Singolare Maschile Open; 3 RAUCO PAOLO vs ROCCA GUIDO",
-                "26/10/2026; 19:00; 6 CESCHIN LEONARDO vs AMICO MARIO Non prima delle Singolare Maschile Open; 3 CHIARELLI FEDERICO vs MARCHETTI FABRIZIO"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BE10A3D1-2B6D-46BA-9759-C6F7E4AAE632",
-            "nomeTorneo": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
-            "data": "27/10/2026",
-            "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=4FCA41AE-5D34-4F22-86F0-8DB054175264",
-            "nomeTorneo": "TORNEO DI FINE STAGIONE",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=9E22B14A-848E-481E-AE9A-044D887CB750",
-            "nomeTorneo": "LAST POINT III EDIZIONE",
-            "data": "26/10/2026",
-            "partite": [
-                "26/10/2026; 00:00; No. Campo 2 Campo 3",
-                "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open BUONGIORNO RICCARDO vs TEI JACOPO Inizio  Singolare Maschile Open CALDERAN MASSIMO vs GORLA CRISTIAN"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=9E22B14A-848E-481E-AE9A-044D887CB750",
-            "nomeTorneo": "LAST POINT III EDIZIONE",
-            "data": "27/10/2026",
-            "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=176505BA-0058-46F6-9FC3-70A9C75B9923",
-            "nomeTorneo": "\"LAST POINT FITP\" 2^ EDIZIONE LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EE9E3535-F89F-423F-A961-503899E9119D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^4^CAT. M/F \"ULTIMA TAPPA\"",
+            "nome": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^4^CAT. M/F \"ULTIMA TAPPA\"",
             "data": "26/10/2026",
             "partite": [
                 "26/10/2026; 00:00; No. Campo 1 Campo 2",
@@ -99,19 +65,16 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=EE9E3535-F89F-423F-A961-503899E9119D",
-            "nomeTorneo": "17° CIRCUITO DEI CASTELLI ROMANI E DEI MONTI LEPINI 3^4^CAT. M/F \"ULTIMA TAPPA\"",
-            "data": "27/10/2026",
-            "partite": [
-                "Nessuna partita trovata"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=01590BB5-2681-428B-B664-1C34706747F1",
-            "nomeTorneo": "3^ E 4^ CATEGORIA M & F",
+            "nome": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
             "data": "26/10/2026",
             "partite": [
-                "Tabellone non disponibile"
+                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6",
+                "26/10/2026; 11:00; 1 Inizio  Singolare Maschile Open FIANO ANDREA vs DE FILIPPO GIAN ROCCO Inizio  Singolare Maschile Open TOTARO LEONARDO vs BARBIERI ALESSANDRO Inizio  Singolare Maschile Open BABUDRI MATTEO vs TROCCA VASCO Inizio  Singolare Femminile Open AMENDOLA ALICE vs CEPARU ISABELLA",
+                "26/10/2026; 12:30; 2 Non prima delle Singolare Maschile Open LA PIANA EDOARDO vs LUZIATELLI MICHELE Non prima delle Singolare Femminile Open GURGHEAN REBECCA vs NATALI MARIANNA Non prima delle Singolare Maschile Open SAGONE PIETRO vs TAGLIAFERRI EMILIO Non prima delle Singolare Maschile Open DE MAIO DAMIANO vs MONTANI NICOLA",
+                "26/10/2026; 14:30; 3 Non prima delle Singolare Femminile Open RATTI MARTINA vs LUPO SOFIA Non prima delle Singolare Femminile Open INZEO SOFIA vs LA PORTA GIULIA Non prima delle Singolare Femminile Open AVOLA LIVIA vs VIGGIANI DIANA Non prima delle Singolare Femminile Open APRILE ISOTTA vs PESCETELLI CHIARA Non prima delle Singolare Maschile Open MARENA KELVIN vs GIORDANO LUCA Non prima delle Doppio Maschile Open DERIU DAVIDE; SCHIAVELLA VALENTINO vs ROSATI ANDREA",
+                "26/10/2026; 16:30; 4 Non prima delle Singolare Femminile Open LAURIA SARA vs MATRIGIANI ANGELICA Non prima delle Singolare Femminile Open CHIAVACCI GRETA vs CASCIA BIANCA Non prima delle Singolare Femminile Open BRESCINI SARA vs MENTO NOEMI SOFIA Non prima delle Singolare Femminile Open FIORENZA GIULIA vs GARAVELLI MARIA VITTORIA Non prima delle Doppio Maschile Open SCUDERI SIMONE; MENESCHINCHERI ANDREA vs ARAGONA JACOPO; CERASI ALESSANDRO Non prima delle Singolare Maschile Open MASERA DIEGO vs D",
+                "26/10/2026; 18:00; 5 Non prima delle Singolare Femminile Open TERZOLI BENEDETTA vs CONCETTI BIANCA MARIA Non prima delle Doppio Maschile Open BOTTI JACOPO; MONTANARO FRANCESCO vs CARUSO CECI JOUHANES; COLARELLI PERSIO PENNESI FRANCESCA vs MARCHIANI FEDERICA",
+                "26/10/2026; 20:00; BIELLI CLAUDIA vs NANNERINI MARIA GRAZIA; FARSETTI SOFIA vs VALERIANI GAIA; MARAVIGLIA GABRIELE vs DE ANGELIS CAROLINA"
             ]
         }
     ]
