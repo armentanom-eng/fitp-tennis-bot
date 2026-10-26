@@ -1,4 +1,4 @@
-name: Bot Estrazione PDF Tornei in programa
+name: Bot Estrazione PDF Tornei in programma
 
 on:
   schedule:
@@ -25,12 +25,15 @@ jobs:
           
       - name: Esegui Bot Estrazione
         run: python scraper_tornei_date.py
-        
+        env:
+          EMAIL_USER: ${{ secrets.EMAIL_USER }}
+          EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+          
       - name: Commit Risultati
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add *.json
-          git commit -m "Aggiornamento totale tornei PDF" || echo "Nessuna modifica"
+          git add notifiche_inviate.json *.json
+          git commit -m "Aggiornamento totale tornei PDF e registro notifiche" || echo "Nessuna modifica"
           git pull --rebase origin main
           git push
