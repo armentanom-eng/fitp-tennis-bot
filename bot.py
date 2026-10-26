@@ -48,7 +48,7 @@ def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
 
     oggetto = "tornei fit"
     
-    testo = f"""È stata trovata una partita per il giocatore Armentano!
+    testo = f"""È stata trovata una partita/riscontro per il giocatore (Armentano / Dalia / Marie)!
 
 📅 Data: {data_target}
 🏆 Torneo: {nome_torneo}
@@ -95,7 +95,7 @@ def format_line_for_swift(raw_text, date_target):
     return f"{date_target}; {clean_text}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione completa e resistente (Iscrizioni aperte) ---")
+    print("--- [START] Avvio estrazione completa e resistente (Iscrizioni aperte PDF) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -214,12 +214,33 @@ async def run_bot():
                             path_pdf = await download.path()
                             
                             righe_pdf = get_pdf_info(path_pdf)
+                            
+                            partite_trovate = []
+                            data_corrente = datetime.now().strftime("%d/%m/%Y")
+                            
                             for riga in righe_pdf:
-                                if "armentano" in riga.lower():
-                                    print(f"Trovato Armentano in {nome_torneo}: {riga}")
-                                    invia_notifiche_giocatore(riga, nome_torneo, datetime.now().strftime("%d/%m/%Y"))
+                                fmt_line = format_line_for_swift(riga, data_corrente)
+                                partite_trovate.append(fmt_line)
+                                
+                                # Controllo su tutte le parole chiave
+                                parole_chiave = ["armentano", "dalia", "marie"]
+                                if any(chiave in riga.lower() for chiave in parole_chiave):
+                                    print(f"Trovato match in {nome_torneo}: {riga}")
+                                    invia_notifiche_giocatore(fmt_line, nome_torneo, data_corrente)
+                            
+                            if righe_pdf:
+                                json_data["tornei"].append({
+                                    "nome": nome_torneo,
+                                    "data": data_corrente,
+                                    "partite": partite_trovate
+                                })
                 except Exception as e:
                     print(f"-> [Errore Torneo {index}]: {e}")
+            
+            # Salvataggio finale del JSON richiesto
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, indent=4, ensure_ascii=False)
+            print(f"-> Dati salvati con successo su {filename}")
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
