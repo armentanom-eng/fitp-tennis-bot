@@ -49,7 +49,7 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
         return
 
     oggetto = "tornei fit"
-    testo = f"""È stata trovata una partita per il giocatore Armentano!
+    testo = f"""È stata trovata una partita per il giocatore (Armentano / Dalia / Marie)!
 
 📅 Data: {data_target}
 🏆 Torneo: {nome_torneo}
@@ -256,8 +256,11 @@ async def run_bot():
                                 for m in matches:
                                     fmt_line = format_line_for_swift(m, data_target)
                                     formatted_matches.append(fmt_line)
-                                    if "armentano" in m.lower():
-                                        print(f"Trovato Armentano in {nome_torneo}: {m}")
+                                    
+                                    # Controllo presenza di almeno una delle parole chiave (case-insensitive)
+                                    parole_chiave = ["armentano", "dalia", "marie"]
+                                    if any(chiave in m.lower() for chiave in parole_chiave):
+                                        print(f"Trovato match in {nome_torneo}: {m}")
                                         invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
                                 
                                 if formatted_matches:
