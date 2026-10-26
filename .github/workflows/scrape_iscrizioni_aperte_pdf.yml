@@ -33,6 +33,7 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          touch notifiche_inviate.json
           git add notifiche_inviate.json *.json
           git commit -m "Aggiornamento totale tornei PDF e registro notifiche" || echo "Nessuna modifica"
           git pull --rebase origin main
