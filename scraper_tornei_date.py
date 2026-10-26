@@ -12,10 +12,10 @@ from playwright.async_api import async_playwright
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 FILE_REGISTRO = "notifiche_inviate.json"
 
-# Nomi dei file di output
+# Nomi dei file di output per i tornei In Programma
 CATEGORIES = {
-    "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
-    "t_affiliati": "Open_Partite_incorsopdf.json"
+    "t_giovanili": "Iscritti_Giovanili_In_Programma.json", 
+    "t_affiliati": "Iscritti_Open_In_Programma.json"
 }
 
 def carica_registro():
@@ -104,7 +104,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V8] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V8] Avvio script bot (In Programma) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -122,9 +122,9 @@ async def run_bot():
             await page.wait_for_load_state("networkidle")
             
             # --- 1. APPLICAZIONE FILTRI A TENDINA ---
-            print("-> [Filtro 1/3] Seleziono Stato: In corso...")
+            print("-> [Filtro 1/3] Seleziono Stato: In programma...")
             await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click()
+            await page.get_by_role("listbox").get_by_role("option", name=re.compile("in programma", re.IGNORECASE)).click()
             await asyncio.sleep(2)
             
             print("-> [Filtro 2/3] Seleziono Regione: Lazio...")
