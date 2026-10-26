@@ -2,7 +2,9 @@ name: Bot Iscritti In Corso
 
 on:
   schedule:
-    - cron: '0 8, 14, 17 * * *'
+    - cron: '30 6 * * *'
+    - cron: '0 15 * * *'
+    - cron: '30 17 * * *'
   workflow_dispatch:
 
 jobs:
