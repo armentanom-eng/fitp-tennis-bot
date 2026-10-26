@@ -274,9 +274,10 @@ async def run_bot():
                                     formatted_matches.append(fmt_line)
                                     
                                     # Controllo presenza Armentano (case-insensitive)
-                                    if "armentano" in fmt_line.lower():
-                                        print(f"-> [MATCH] Trovato match per Armentano in {nome_torneo}! Avvio invio notifiche...")
-                                        invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
+                                    parole_chiave = ["armentano", "dalia", "marie"]
+                                    if any(chiave in fmt_line.lower() for chiave in parole_chiave):
+                                    print(f"-> [MATCH] Trovato match per una delle parole chiave in {nome_torneo}! Avvio invio notifiche...")
+                                    invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
                                 
                                 if formatted_matches:
                                     json_data["tornei"].append({
