@@ -2,15 +2,76 @@ import asyncio
 import pdfplumber
 import re
 import json
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
+FILE_REGISTRO = "notifiche_inviate.json"
 
 CATEGORIES = {
     "t_giovanili": "Iscrizioni_Aperte_Giovanili_pdf.json", 
     "t_affiliati": "Iscrizioni_Aperte_Open_pdf.json"
 }
+
+def carica_registro():
+    if os.path.exists(FILE_REGISTRO):
+        try:
+            with open(FILE_REGISTRO, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return []
+    return []
+
+def salva_registro(registro):
+    with open(FILE_REGISTRO, "w", encoding="utf-8") as f:
+        json.dump(registro, f, indent=4, ensure_ascii=False)
+
+def invia_notifiche_giocatore(riga_partita, nome_torneo, data_target):
+    mittente = os.environ.get("EMAIL_USER")
+    password = os.environ.get("EMAIL_PASSWORD")
+    destinatari = ["armentano.m@gmail.com", "Marcella.dellanna@gmail.com"]
+    
+    if not mittente or not password:
+        print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
+        return
+
+    # ID univoco per evitare invii multipli della stessa partita
+    id_univoco = f"{nome_torneo}_{data_target}_{riga_partita}".replace(" ", "_")
+    registro = carica_registro()
+    
+    if id_univoco in registro:
+        print(f"-> [Email] Notifica già inviata in precedenza per questa partita.")
+        return
+
+    oggetto = "tornei fit"
+    testo = f"Il giocatore Armentano è stato trovato nel torneo '{nome_torneo}' in data {data_target}.\nDettagli: {riga_partita}"
+
+    invio_riuscito = True
+    for destinatario in destinatari:
+        msg = MIMEMultipart()
+        msg['From'] = mittente
+        msg['To'] = destinatario
+        msg['Subject'] = oggetto
+        msg.attach(MIMEText(testo, 'plain'))
+
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(mittente, password)
+            server.sendmail(mittente, destinatario, msg.as_string())
+            server.quit()
+            print(f"-> [Email] Inviata con successo a {destinatario}!")
+        except Exception as e:
+            print(f"-> [Email Errore] Impossibile inviare a {destinatario}: {e}")
+            invio_riuscito = False
+
+    if invio_riuscito:
+        registro.append(id_univoco)
+        salva_registro(registro)
 
 def get_pdf_info(pdf_path):
     matches = []
@@ -41,7 +102,6 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # --- FILTRI RIGIDI ---
             print("-> Seleziono Stato: Iscrizioni aperte...")
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
@@ -57,7 +117,6 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             
@@ -92,7 +151,6 @@ async def run_bot():
             }}""")
             await asyncio.sleep(2)
             
-            # --- ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
                 await page.evaluate("""() => {
@@ -113,7 +171,6 @@ async def run_bot():
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             await asyncio.sleep(6) 
             
-            # --- ESPANSIONE AGGRESSIVA ---
             print("-> Espansione lista tornei...")
             while True:
                 more_btn = page.locator("#btn-loadMore")
@@ -154,13 +211,20 @@ async def run_bot():
                                 await asyncio.sleep(5)
                                 
                                 if await download_btn.is_visible():
+                                    async xd = page.expect_download(timeout=30000) # syntax fallback check
                                     async with page.expect_download(timeout=30000) as dl_info: 
                                         await download_btn.click()
                                     download = await dl_info.value
                                     path = await download.path()
                                     matches = get_pdf_info(path)
                                     for m in matches:
-                                        partite_totali.append(format_line_for_swift(m, data_target))
+                                        formatted_line = format_line_for_swift(m, data_target)
+                                        partite_totali.append(formatted_line)
+                                        
+                                        # Controllo se il cognome "armentano" è presente nella riga (case-insensitive)
+                                        if "armentano" in formatted_line.lower():
+                                            print(f"-> Trovato match per Armentano! Invio notifiche email...")
+                                            invia_notifiche_giocatore(formatted_line, nome_torneo.strip(), data_target)
                     
                     if partite_totali:
                         json_data["tornei"].append({
