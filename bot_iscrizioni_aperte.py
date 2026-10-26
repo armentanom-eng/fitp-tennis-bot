@@ -1,5 +1,6 @@
 import asyncio
 import json
+from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 # Mappa delle categorie con i nuovi nomi file richiesti
@@ -23,20 +24,74 @@ async def run_bot():
             dati_categoria = {"tornei": []}
             
             await page.goto(BASE_URL, wait_until="domcontentloaded")
+            await page.wait_for_load_state("networkidle")
             
             # --- 1. FILTRI BASE ---
-            # Modificato filtro stato in "Iscrizioni aperte"
+            print("-> Seleziono Stato: Iscrizioni aperte...")
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
             await asyncio.sleep(2)
             
+            print("-> Seleziono Regione: Lazio...")
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(2)
             
+            print("-> Seleziono Provincia: Roma...")
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
+            
+            # --- IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
+            oggi = datetime.now()
+            data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            
+            print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
+            
+            await page.evaluate(f"""() => {{
+                const start = document.querySelector('#dpk_start_date');
+                const end = document.querySelector('#dpk_end_date');
+                
+                if(start) {{
+                    start.removeAttribute('min');
+                    start.removeAttribute('max');
+                    start.value = "{data_inizio}";
+                    if (window.jQuery && jQuery(start).data('datepicker')) {{
+                        jQuery(start).datepicker('setStartDate', null);
+                        jQuery(start).datepicker('setDate', '{data_inizio}');
+                    }}
+                    start.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    start.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                }}
+                
+                if(end) {{
+                    end.removeAttribute('min');
+                    end.removeAttribute('max');
+                    end.value = ""; 
+                    if (window.jQuery && jQuery(end).data('datepicker')) {{
+                        jQuery(end).datepicker('setDate', null);
+                    }}
+                    end.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    end.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                }}
+            }}""")
+            await asyncio.sleep(2)
+            
+            # --- ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
+            print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
+            try:
+                await page.evaluate("""() => {
+                    if(typeof sendPostRequest === 'function') {
+                        sendPostRequest();
+                    } else {
+                        const btn = document.querySelector('button[onclick*="sendPostRequest"]');
+                        if(btn) btn.click();
+                    }
+                }""")
+                print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
+                await asyncio.sleep(6)
+            except Exception as e:
+                print(f"-> [ERRORE Cerca]: {e}")
             
             # --- 2. FILTRO CATEGORIA ---
             print(f"-> Clicco filtro categoria: {cat_id}")
