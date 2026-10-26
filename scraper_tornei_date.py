@@ -254,4 +254,22 @@ async def run_bot():
                                 
                                 formatted_matches = []
                                 for m in matches:
-                                    fmt_line = format_line
+                                    fmt_line = format_line_for_swift(m, data_target)
+                                    formatted_matches.append(fmt_line)
+                                    if "armentano" in m.lower():
+                                        print(f"Trovato Armentano in {nome_torneo}: {m}")
+                                        invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
+                                
+                                if formatted_matches:
+                                    json_data["tornei"].append({
+                                        "nome": nome_torneo.strip(),
+                                        "data": data_target,
+                                        "partite": formatted_matches
+                                    })
+            
+            with open(filename, "w", encoding="utf-8") as f:
+                json.dump(json_data, f, indent=4, ensure_ascii=False)
+            print(f"-> Dati salvati con successo su {filename}")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
