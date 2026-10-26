@@ -1,9 +1,9 @@
 import asyncio
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 from playwright.async_api import async_playwright
 
-# Mappa delle categorie con i nuovi nomi file
+# Mappa delle categorie con i file di output dedicati per l'app
 CATEGORIES = {
     "t_giovanili": "Iscritti_Giovanili_In_Programma.json", 
     "t_affiliati": "Iscritti_Open_In_Programma.json"
@@ -42,9 +42,9 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
+            # --- IMPOSTAZIONE DATA INIZIO (OGGI) E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
-            data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            data_inizio = oggi.strftime("%d/%m/%Y") # Parte da oggi per i tornei futuri/in programma
             
             print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
             
@@ -96,7 +96,6 @@ async def run_bot():
             # --- 2. FILTRO CATEGORIA ---
             print(f"-> Clicco filtro categoria: {cat_id}")
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
-            # Attendiamo il ricaricamento della lista
             await asyncio.sleep(4) 
             
             # --- 3. ESPANSIONE LISTA ---
@@ -121,7 +120,6 @@ async def run_bot():
                     
                     count = await page.locator("text=Dettaglio >").count()
                     for i in range(count):
-                        # Torniamo alla pagina del torneo per ogni bottone
                         await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
                         btn = page.locator("text=Dettaglio >").nth(i)
                         
