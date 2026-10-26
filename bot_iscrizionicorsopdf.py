@@ -38,9 +38,8 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione Tornei In Corso ---")
+    print("--- [DEBUG DATE V3] Avvio script con log di inserimento date ---")
     async with async_playwright() as p:
-        # headless=True è obbligatorio per l'esecuzione su GitHub Actions
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
@@ -72,36 +71,50 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATE (30 giorni fa -> Oggi) ---
+            # --- 2. IMPOSTAZIONE DATE E LOG DI VERIFICA ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> Scrivo le date nei campi -> Inizio: {data_inizio} | Fine: {data_fine}")
+            print(f"-> [STEP DATA] Preparazione date -> Inizio: {data_inizio} | Fine: {data_fine}")
             
+            print("-> [STEP DATA] Scrivo nel campo #dpk_start_date...")
             await page.click("#dpk_start_date")
-            await page.fill("#dpk_start_date", "")
-            await page.type("#dpk_start_date", data_inizio, delay=50)
-            await page.press("#dpk_start_date", "Tab")
+            await page.fill("#dpk_start_date", data_inizio)
             
+            print("-> [STEP DATA] Scrivo nel campo #dpk_end_date...")
             await page.click("#dpk_end_date")
-            await page.fill("#dpk_end_date", "")
-            await page.type("#dpk_end_date", data_fine, delay=50)
-            await page.press("#dpk_end_date", "Tab")
+            await page.fill("#dpk_end_date", data_fine)
+            
+            # Forziamo gli eventi JavaScript per far digerire le date al datepicker
+            await page.evaluate("""() => {
+                const start = document.querySelector('#dpk_start_date');
+                const end = document.querySelector('#dpk_end_date');
+                if(start) {
+                    start.dispatchEvent(new Event('input', { bubbles: true }));
+                    start.dispatchEvent(new Event('change', { bubbles: true }));
+                    start.dispatchEvent(new Event('blur', { bubbles: true }));
+                }
+                if(end) {
+                    end.dispatchEvent(new Event('input', { bubbles: true }));
+                    end.dispatchEvent(new Event('change', { bubbles: true }));
+                    end.dispatchEvent(new Event('blur', { bubbles: true }));
+                }
+            }""")
             await asyncio.sleep(2)
             
-            # Verifica valore effettivo nel DOM
+            # VERIFICA CRUCIALE DAL DOM
             val_start = await page.locator("#dpk_start_date").evaluate("el => el.value")
             val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
-            print(f"-> [DEBUG DOM] Valore letto dal campo Start: '{val_start}' | End: '{val_end}'")
+            print(f"-> [VERIFICA DOM] Il sito ha accettato e mantenuto -> Start: '{val_start}' | End: '{val_end}'")
             
             # --- 3. CLIC SUL PULSANTE "CERCA" ---
-            print("-> Clic sul pulsante Cerca...")
+            print("-> [STEP CERCA] Clic sul pulsante Cerca del portale...")
             try:
                 btn_cerca = page.locator("button:has-text('Cerca')").first
                 if await btn_cerca.count() > 0:
                     await btn_cerca.click(force=True)
-                    print("-> Cerca cliccato con successo. Attendo aggiornamento risultati...")
+                    print("-> [STEP CERCA] Clic eseguito con successo. Attendo aggiornamento...")
                     await asyncio.sleep(6)
                 else:
                     print("-> [ATTENZIONE] Pulsante Cerca non trovato!")
@@ -136,7 +149,7 @@ async def run_bot():
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"-> [RISULTATO] Tornei trovati per {cat_id}: {len(links)}")
+            print(f"-> [RISULTATO FINALE] Tornei trovati per {cat_id}: {len(links)}")
             
             for index, link in enumerate(links, start=1):
                 full_url = f"https://www.fitp.it{link}"
