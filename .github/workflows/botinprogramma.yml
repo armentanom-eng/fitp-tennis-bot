@@ -2,8 +2,10 @@ name: Bot Tornei in programma
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '15 17, 0 6 * * *'
+    schedule:
+    - cron: '30 6 * * *'   # Alle 07:30 in Italia
+    - cron: '0 15 * * *'   # Alle 16:00 in Italia
+    - cron: '30 17 * * *'  # Alle 18:30 in Italia
 
 permissions:
   contents: write
