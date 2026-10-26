@@ -38,7 +38,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V4] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V5] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -71,28 +71,29 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATE (30 giorni fa -> Oggi) ---
+            # --- 2. IMPOSTAZIONE DATE IN SEQUENZA (Inizio -> Fine) ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> [STEP DATA] Preparazione date -> Inizio: {data_inizio} | Fine: {data_fine}")
-            
+            print(f"-> [STEP DATA] 1. Imposto Data Inizio: {data_inizio}")
             await page.click("#dpk_start_date")
             await page.fill("#dpk_start_date", data_inizio)
-            
-            await page.click("#dpk_end_date")
-            await page.fill("#dpk_end_date", data_fine)
-            
-            # Forziamo gli eventi JavaScript per aggiornare il datepicker
             await page.evaluate("""() => {
                 const start = document.querySelector('#dpk_start_date');
-                const end = document.querySelector('#dpk_end_date');
                 if(start) {
                     start.dispatchEvent(new Event('input', { bubbles: true }));
                     start.dispatchEvent(new Event('change', { bubbles: true }));
                     start.dispatchEvent(new Event('blur', { bubbles: true }));
                 }
+            }""")
+            await asyncio.sleep(1)
+            
+            print(f"-> [STEP DATA] 2. Imposto Data Fine: {data_fine}")
+            await page.click("#dpk_end_date")
+            await page.fill("#dpk_end_date", data_fine)
+            await page.evaluate("""() => {
+                const end = document.querySelector('#dpk_end_date');
                 if(end) {
                     end.dispatchEvent(new Event('input', { bubbles: true }));
                     end.dispatchEvent(new Event('change', { bubbles: true }));
@@ -104,7 +105,7 @@ async def run_bot():
             # VERIFICA DAL DOM
             val_start = await page.locator("#dpk_start_date").evaluate("el => el.value")
             val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
-            print(f"-> [VERIFICA DOM] Il sito ha accettato -> Start: '{val_start}' | End: '{val_end}'")
+            print(f"-> [VERIFICA DOM] Stato finale date -> Start: '{val_start}' | End: '{val_end}'")
             
             # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
