@@ -2,7 +2,7 @@ name: Bot Estrazione PDF Tornei
 
 on:
   schedule:
-    - cron: '15 18 * * *' # Alle 20:15 italiane
+    - cron: '0 7, 0 14 * * *' # Alle 20:15 italiane
   workflow_dispatch:
 
 jobs:
