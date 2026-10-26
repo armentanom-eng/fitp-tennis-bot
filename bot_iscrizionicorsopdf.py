@@ -38,9 +38,8 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V3] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V4] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
-        # headless=True è obbligatorio per GitHub Actions
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
@@ -107,16 +106,19 @@ async def run_bot():
             val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
             print(f"-> [VERIFICA DOM] Il sito ha accettato -> Start: '{val_start}' | End: '{val_end}'")
             
-            # --- 3. CLIC SUL PULSANTE "CERCA" ---
-            print("-> [STEP CERCA] Clic sul pulsante Cerca del portale...")
+            # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
+            print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
-                btn_cerca = page.locator("button:has-text('Cerca')").first
-                if await btn_cerca.count() > 0:
-                    await btn_cerca.click(force=True)
-                    print("-> [STEP CERCA] Clic eseguito. Attendo aggiornamento...")
-                    await asyncio.sleep(6)
-                else:
-                    print("-> [ATTENZIONE] Pulsante Cerca non trovato!")
+                await page.evaluate("""() => {
+                    if(typeof sendPostRequest === 'function') {
+                        sendPostRequest();
+                    } else {
+                        const btn = document.querySelector('button[onclick*="sendPostRequest"]');
+                        if(btn) btn.click();
+                    }
+                }""")
+                print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
+                await asyncio.sleep(6)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
 
