@@ -12,7 +12,6 @@ CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
 }
-STATUSES = ["In corso"]
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -39,8 +38,9 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (Digitazione reale date) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Tornei In Corso) ---")
     async with async_playwright() as p:
+        # headless=False ti permette di monitorare visivamente il browser
         browser = await p.chromium.launch(headless=False)
         context = await browser.new_context(accept_downloads=True)
         
@@ -52,28 +52,8 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # --- 1. DIGITAZIONE REALE DELLE DATE ---
-            oggi = datetime.now()
-            data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
-            data_fine = oggi.strftime("%d/%m/%Y")
-            
-            print(f"-> Digito date nei campi: da {data_inizio} a {data_fine}")
-            
-            # Data Inizio
-            await page.locator("#dpk_start_date").click()
-            await page.locator("#dpk_start_date").fill("")
-            await page.type("#dpk_start_date", data_inizio, delay=100)
-            await page.locator("#dpk_start_date").press("Tab")
-            
-            # Data Fine
-            await page.locator("#dpk_end_date").click()
-            await page.locator("#dpk_end_date").fill("")
-            await page.type("#dpk_end_date", data_fine, delay=100)
-            await page.locator("#dpk_end_date").press("Tab")
-            
-            await asyncio.sleep(2)
-            
-            # --- 2. APPLICAZIONE DEI FILTRI ---
+            # --- 1. APPLICAZIONE FILTRI A TENDINA ---
+            print("-> Applicazione filtri (Stato, Regione, Provincia)...")
             # Stato: In corso
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click()
@@ -89,13 +69,32 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
+            # --- 2. IMPOSTAZIONE DATE (30 giorni fa -> Oggi) ---
+            oggi = datetime.now()
+            data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            data_fine = oggi.strftime("%d/%m/%Y")
+            
+            print(f"-> Impostazione date: da {data_inizio} a {data_fine}")
+            
+            # Scrittura nei campi del calendario
+            await page.click("#dpk_start_date")
+            await page.fill("#dpk_start_date", "")
+            await page.type("#dpk_start_date", data_inizio, delay=50)
+            await page.press("#dpk_start_date", "Tab")
+            
+            await page.click("#dpk_end_date")
+            await page.fill("#dpk_end_date", "")
+            await page.type("#dpk_end_date", data_fine, delay=50)
+            await page.press("#dpk_end_date", "Tab")
+            
+            await asyncio.sleep(2)
+            
             # --- 3. CLIC SUL PULSANTE "CERCA" ---
             print("-> Clic sul pulsante Cerca del portale...")
             try:
-                # Cerca il bottone Cerca e ci clicca sopra
                 await page.locator("button:has-text('Cerca')").first.click()
-                print("-> Attendendo il caricamento dei risultati della ricerca...")
-                await asyncio.sleep(6) # Attesa generosa per l'aggiornamento della tabella via AJAX
+                print("-> Attendendo il caricamento dei risultati filtrati...")
+                await asyncio.sleep(6)
             except Exception as e:
                 print(f"   (Errore click cerca: {e})")
 
@@ -118,7 +117,7 @@ async def run_bot():
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"   [Tornei trovati]: {len(links)}")
+            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
             
             for link in links:
                 full_url = f"https://www.fitp.it{link}"
@@ -135,7 +134,8 @@ async def run_bot():
                 download_btn = page.locator("#btnOrderGameDownload")
                 
                 if await page.locator(dropdown_selector).is_visible():
-                    for i in range(0, 2):  # Oggi e Domani per i PDF
+                    # --- 6. DOWNLOAD PDF: solo per OGGI e DOMANI ---
+                    for i in range(0, 2):  
                         data_target = (oggi + timedelta(days=i)).strftime("%d/%m/%Y")
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
