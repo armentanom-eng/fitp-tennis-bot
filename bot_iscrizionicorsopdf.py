@@ -38,7 +38,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V6] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V7] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -71,12 +71,11 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATE (Bypass forzato del plugin calendario) ---
+            # --- 2. IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
-            data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> [STEP DATA] Forzatura date senza filtri plugin -> Inizio: {data_inizio} | Fine: {data_fine}")
+            print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
             
             await page.evaluate(f"""() => {{
                 const start = document.querySelector('#dpk_start_date');
@@ -97,10 +96,9 @@ async def run_bot():
                 if(end) {{
                     end.removeAttribute('min');
                     end.removeAttribute('max');
-                    end.value = "{data_fine}";
+                    end.value = ""; // Lasciamo vuota la data fine come richiesto
                     if (window.jQuery && jQuery(end).data('datepicker')) {{
-                        jQuery(end).datepicker('setEndDate', null);
-                        jQuery(end).datepicker('setDate', '{data_fine}');
+                        jQuery(end).datepicker('setDate', null);
                     }}
                     end.dispatchEvent(new Event('input', {{ bubbles: true }}));
                     end.dispatchEvent(new Event('change', {{ bubbles: true }}));
@@ -111,7 +109,7 @@ async def run_bot():
             # VERIFICA DAL DOM
             val_start = await page.locator("#dpk_start_date").evaluate("el => el.value")
             val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
-            print(f"-> [VERIFICA DOM] Stato finale date -> Start: '{val_start}' | End: '{val_end}'")
+            print(f"-> [VERIFICA DOM] Stato finale date -> Start: '{val_start}' | End: '{val_end}' (deve essere vuota)")
             
             # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
@@ -175,8 +173,9 @@ async def run_bot():
                 download_btn = page.locator("#btnOrderGameDownload")
                 
                 if await page.locator(dropdown_selector).is_visible():
+                    oggi_ciclo = datetime.now()
                     for i in range(0, 2):  # Oggi e Domani per i PDF
-                        data_target = (oggi + timedelta(days=i)).strftime("%d/%m/%Y")
+                        data_target = (oggi_ciclo + timedelta(days=i)).strftime("%d/%m/%Y")
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             print(f"      -> Seleziono data {data_target} dal menu tendina...")
