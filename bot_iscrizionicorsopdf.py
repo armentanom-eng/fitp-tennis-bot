@@ -18,8 +18,10 @@ def format_line_for_swift(raw_text, date_target):
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.](\d{2})", "", text, flags=re.IGNORECASE)
-    text = re.sub(r"\s+o\s+", " vs ", text, flags=re.IGNORECASE)
-    partite = re.findall(r"([A-Z\s\d\(\)]+?)\s+vs\s+([A-Z\s\d\(\)]+)", text)
+    
+    # RIMOSSA la sostituzione errata di 'o' in 'vs' per preservare "Nome1 o Nome2 vs Nome3"
+    
+    partite = re.findall(r"([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+?)\s+vs\s+([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+)", text, flags=re.IGNORECASE)
     if partite:
         clean = [f"{p[0].strip()} vs {p[1].strip()}" for p in partite]
         return f"{date_target}; {time}; {'; '.join(clean)}"
@@ -38,7 +40,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V7] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V8] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -96,7 +98,7 @@ async def run_bot():
                 if(end) {{
                     end.removeAttribute('min');
                     end.removeAttribute('max');
-                    end.value = ""; // Lasciamo vuota la data fine come richiesto
+                    end.value = ""; 
                     if (window.jQuery && jQuery(end).data('datepicker')) {{
                         jQuery(end).datepicker('setDate', null);
                     }}
@@ -105,11 +107,6 @@ async def run_bot():
                 }}
             }}""")
             await asyncio.sleep(2)
-            
-            # VERIFICA DAL DOM
-            val_start = await page.locator("#dpk_start_date").evaluate("el => el.value")
-            val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
-            print(f"-> [VERIFICA DOM] Stato finale date -> Start: '{val_start}' | End: '{val_end}' (deve essere vuota)")
             
             # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
