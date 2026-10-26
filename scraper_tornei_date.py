@@ -2,16 +2,82 @@ import asyncio
 import pdfplumber
 import re
 import json
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
+FILE_REGISTRO = "notifiche_inviate.json"
 
-# Nomi dei file
+# Nomi dei file di output
 CATEGORIES = {
-    "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
-    "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
+    "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
+    "t_affiliati": "Open_Partite_incorsopdf.json"
 }
+
+def carica_registro():
+    if os.path.exists(FILE_REGISTRO):
+        try:
+            with open(FILE_REGISTRO, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return []
+    return []
+
+def salva_registro(registro):
+    with open(FILE_REGISTRO, "w", encoding="utf-8") as f:
+        json.dump(registro, f, indent=4, ensure_ascii=False)
+
+def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
+    mittente = os.environ.get("EMAIL_USER")
+    password = os.environ.get("EMAIL_PASSWORD")
+    destinatari = ["armentano.m@gmail.com", "Marcella.dellanna@gmail.com"]
+    
+    if not mittente or not password:
+        print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
+        return
+
+    # ID univoco per evitare invii multipli della stessa partita
+    id_univoco = f"{nome_torneo}_{data_target}_{riga_formattata}".replace(" ", "_")
+    registro = carica_registro()
+    
+    if id_univoco in registro:
+        print("-> [Email] Notifica già inviata in precedenza per questa partita.")
+        return
+
+    oggetto = "tornei fit"
+    testo = f"""È stata trovata una partita per il giocatore Armentano!
+
+📅 Data: {data_target}
+🏆 Torneo: {nome_torneo}
+⏰ Dettagli: {riga_formattata}
+"""
+
+    invio_riuscito = True
+    for destinatario in destinatari:
+        msg = MIMEMultipart()
+        msg['From'] = mittente
+        msg['To'] = destinatario
+        msg['Subject'] = oggetto
+        msg.attach(MIMEText(testo, 'plain'))
+
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(mittente, password)
+            server.sendmail(mittente, destinatario, msg.as_string())
+            server.quit()
+            print(f"-> [Email] Inviata con successo a {destinatario}!")
+        except Exception as e:
+            print(f"-> [Email Errore] Impossibile inviare a {destinatario}: {e}")
+            invio_riuscito = False
+
+    if invio_riuscito:
+        registro.append(id_univoco)
+        salva_registro(registro)
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -19,7 +85,6 @@ def format_line_for_swift(raw_text, date_target):
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.](\d{2})", "", text, flags=re.IGNORECASE)
     
-    # Preserviamo la 'o' senza trasformarla in 'vs'
     partite = re.findall(r"([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+?)\s+vs\s+([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+)", text, flags=re.IGNORECASE)
     if partite:
         clean = [f"{p[0].strip()} vs {p[1].strip()}" for p in partite]
@@ -39,36 +104,40 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (In programma) ---")
+    print("--- [DEBUG DATE V8] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
         for cat_id, filename in CATEGORIES.items():
-            print(f"\n>>> Processo categoria: {cat_id}")
+            print(f"\n========================================")
+            print(f">> [CATEGORY START] Processo categoria: {cat_id}")
+            print(f"========================================")
+            
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
+            print(f"-> Apro la pagina: {BASE_URL}")
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # Filtro Stato
-            print("-> Seleziono Stato: In programma...")
+            # --- 1. APPLICAZIONE FILTRI A TENDINA ---
+            print("-> [Filtro 1/3] Seleziono Stato: In corso...")
             await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name="In programma").click()
+            await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click()
             await asyncio.sleep(2)
             
-            print("-> Seleziono Regione: Lazio...")
+            print("-> [Filtro 2/3] Seleziono Regione: Lazio...")
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
             await asyncio.sleep(2)
             
-            print("-> Seleziono Provincia: Roma...")
+            print("-> [Filtro 3/3] Seleziono Provincia: Roma...")
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
+            # --- 2. IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             
@@ -103,7 +172,7 @@ async def run_bot():
             }}""")
             await asyncio.sleep(2)
             
-            # --- ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
+            # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
                 await page.evaluate("""() => {
@@ -119,26 +188,35 @@ async def run_bot():
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
 
-            # Selezione Categoria con attesa robusta
+            # --- 4. SELEZIONE CATEGORIA ---
             print(f"-> Clicco sulla scheda categoria: {cat_id}")
             cat_selector = f'a[data-id="{cat_id}"]'
-            await page.wait_for_selector(cat_selector, timeout=30000)
-            await page.locator(cat_selector).first.click()
+            try:
+                await page.wait_for_selector(cat_selector, timeout=30000)
+                await page.locator(cat_selector).first.click()
+                print("-> Categoria selezionata con successo.")
+            except Exception as e:
+                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
+            
             await asyncio.sleep(6)
             
-            # Espansione lista
-            print("-> Espansione lista tornei...")
+            # --- 5. ESPANSIONE LISTA ---
+            print("-> Controllo presenza pulsante 'Carica altri' (#btn-loadMore)...")
+            load_count = 0
             while True:
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
+                    load_count += 1
+                    print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
                     await btn_load_more.click()
                     await asyncio.sleep(6)
                 else:
+                    print("-> Nessun altro 'Carica altri' disponibile.")
                     break
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
-            print(f"-> Trovati {len(links)} tornei. Inizio analisi...")
+            print(f"-> [RISULTATO FINALE] Tornei trovati per {cat_id}: {len(links)}")
             
             for index, link in enumerate(links, start=1):
                 full_url = f"https://www.fitp.it{link}"
@@ -157,62 +235,23 @@ async def run_bot():
                 
                 if await page.locator(dropdown_selector).is_visible():
                     oggi_ciclo = datetime.now()
-                    for i in range(0, 2): 
+                    for i in range(0, 2):  # Oggi e Domani per i PDF
                         data_target = (oggi_ciclo + timedelta(days=i)).strftime("%d/%m/%Y")
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
+                            print(f"      -> Seleziono data {data_target} dal menu tendina...")
                             await page.select_option(dropdown_selector, label=data_target)
                             await asyncio.sleep(5)
                             
                             if await download_btn.is_visible():
+                                print(f"      -> Scarico PDF per il {data_target}...")
                                 async with page.expect_download() as dl_info: 
                                     await download_btn.click()
                                 download = await dl_info.value
                                 await download.save_as("temp.pdf")
                                 matches = get_pdf_info("temp.pdf")
-                                json_data["tornei"].append({
-                                    "url": full_url, 
-                                    "nomeTorneo": nome_torneo.strip(), 
-                                    "data": data_target, 
-                                    "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
-                                })
-                        else:
-                            json_data["tornei"].append({
-                                "url": full_url, 
-                                "nomeTorneo": nome_torneo.strip(), 
-                                "data": data_target, 
-                                "partite": ["Nessuna partita trovata"]
-                            })
-                
-                elif await download_btn.is_visible():
-                    async with page.expect_download() as dl_info: 
-                        await download_btn.click()
-                    download = await dl_info.value
-                    await download.save_as("temp.pdf")
-                    matches = get_pdf_info("temp.pdf")
-                    data_oggi = datetime.now().strftime("%d/%m/%Y")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": data_oggi, 
-                        "partite": [format_line_for_swift(m, "Oggi") for m in matches] if matches else ["Nessuna partita trovata"]
-                    })
-                else:
-                    print(f"      ! Tabellone non disponibile.")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite": ["Tabellone non disponibile"]
-                    })
-            
-            with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            print(f"-> File {filename} salvato correttamente.")
-            await page.close()
-        
-        await browser.close()
-    print("--- [END] Processo completato ---")
-
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+                                print(f"      -> Trovate {len(matches)} righe nel PDF.")
+                                
+                                formatted_matches = []
+                                for m in matches:
+                                    fmt_line = format_line
