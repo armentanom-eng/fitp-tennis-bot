@@ -2,7 +2,9 @@ name: Bot In Corso Pdf
 
 on:
   schedule:
-    - cron: '45 17, 0 4, 50 18 * * *' # Alle 20:15 italiane (o 18:00 UTC)
+    - cron: '0 4 * * *'
+    - cron: '0 10 * * *'
+    - cron: '30 18 * * *'
   workflow_dispatch:
 
 jobs:
