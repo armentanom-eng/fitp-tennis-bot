@@ -2,7 +2,9 @@ name: Scrape Iscrizioni Aperte
 
 on:
   schedule:
-    - cron: '30 6,15,30 17 * * *'
+    - cron: '30 6 * * *'   # Alle 07:30 in Italia (06:30 UTC)
+    - cron: '0 15 * * *'   # Alle 16:00 in Italia (15:00 UTC)
+    - cron: '30 17 * * *'  # Alle 18:30 in Italia (17:30 UTC)
   workflow_dispatch:
 
 permissions:
