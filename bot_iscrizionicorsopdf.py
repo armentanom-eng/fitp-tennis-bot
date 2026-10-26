@@ -39,9 +39,9 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio estrazione PROGRAMMI GARE (In corso: 30 giorni fa -> Oggi) ---")
+    print("--- [START] Avvio estrazione PROGRAMMI GARE (Scrittura diretta date con fill) ---")
     async with async_playwright() as p:
-        # Lasciato a False per vedere a schermo che compaiono i tornei giusti
+        # Lasciato a False per monitorare visivamente il comportamento sul browser
         browser = await p.chromium.launch(headless=False)
         context = await browser.new_context(accept_downloads=True)
         
@@ -53,16 +53,15 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # --- 1. IMPOSTAZIONE DATE DI RICERCA (30 giorni fa -> Oggi) ---
+            # --- 1. SCRITTURA DIRETTA DELLE DATE NEI CAMPI ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> Impostazione date nei campi: da {data_inizio} a {data_fine}")
+            print(f"-> Scrivo nei campi data: da {data_inizio} a {data_fine}")
             
-            # Compilazione sicura dei campi data con eventi JS
-            await page.locator("#dpk_start_date").evaluate(f"(el) => {{ el.value = '{data_inizio}'; el.dispatchEvent(new Event('input', {{ bubbles: true }})); el.dispatchEvent(new Event('change', {{ bubbles: true }})); el.dispatchEvent(new Event('blur', {{ bubbles: true }})); }}")
-            await page.locator("#dpk_end_date").evaluate(f"(el) => {{ el.value = '{data_fine}'; el.dispatchEvent(new Event('input', {{ bubbles: true }})); el.dispatchEvent(new Event('change', {{ bubbles: true }})); el.dispatchEvent(new Event('blur', {{ bubbles: true }})); }}")
+            await page.fill("#dpk_start_date", data_inizio)
+            await page.fill("#dpk_end_date", data_fine)
             await asyncio.sleep(2)
             
             # --- 2. APPLICAZIONE DEI FILTRI ---
@@ -84,7 +83,7 @@ async def run_bot():
             # --- 3. CLIC SUL PULSANTE "CERCA" ---
             print("-> Clic sul pulsante Cerca del portale...")
             try:
-                btn_cerca = page.locator("button.btn.btn-primary:has-text('Cerca'), button:has-text('Cerca')")
+                btn_cerca = page.locator("button:has-text('Cerca')")
                 if await btn_cerca.count() > 0:
                     await btn_cerca.first.click()
                     await asyncio.sleep(5) # Attende il caricamento dei risultati filtrati
