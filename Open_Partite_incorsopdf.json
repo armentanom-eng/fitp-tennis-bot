@@ -1,17 +1,25 @@
 {
-    "report_data": "26/10/2026 14:48",
+    "report_data": "26/10/2026 14:56",
     "tornei": [
         {
-            "nome": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
+            "nome": "TORNEO DI FINE STAGIONE",
             "data": "26/10/2026",
             "partite": [
-                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6",
-                "26/10/2026; 11:00; 1 Inizio  Singolare Maschile Open FIANO ANDREA vs DE FILIPPO GIAN ROCCO Inizio  Singolare Maschile Open TOTARO LEONARDO vs BARBIERI ALESSANDRO Inizio  Singolare Maschile Open BABUDRI MATTEO vs TROCCA VASCO Inizio  Singolare Femminile Open AMENDOLA ALICE vs CEPARU ISABELLA",
-                "26/10/2026; 12:30; 2 Non prima delle Singolare Maschile Open LA PIANA EDOARDO vs LUZIATELLI MICHELE Non prima delle Singolare Femminile Open GURGHEAN REBECCA vs NATALI MARIANNA Non prima delle Singolare Maschile Open SAGONE PIETRO vs TAGLIAFERRI EMILIO Non prima delle Singolare Maschile Open DE MAIO DAMIANO vs MONTANI NICOLA",
-                "26/10/2026; 14:30; 3 Non prima delle Singolare Femminile Open RATTI MARTINA vs LUPO SOFIA Non prima delle Singolare Femminile Open INZEO SOFIA vs LA PORTA GIULIA Non prima delle Singolare Femminile Open AVOLA LIVIA vs VIGGIANI DIANA Non prima delle Singolare Femminile Open APRILE ISOTTA vs PESCETELLI CHIARA Non prima delle Singolare Maschile Open MARENA KELVIN vs GIORDANO LUCA Non prima delle Doppio Maschile Open DERIU DAVIDE; SCHIAVELLA VALENTINO vs ROSATI ANDREA",
-                "26/10/2026; 16:30; 4 Non prima delle Singolare Femminile Open LAURIA SARA vs MATRIGIANI ANGELICA Non prima delle Singolare Femminile Open CHIAVACCI GRETA vs CASCIA BIANCA Non prima delle Singolare Femminile Open BRESCINI SARA vs MENTO NOEMI SOFIA Non prima delle Singolare Femminile Open FIORENZA GIULIA vs GARAVELLI MARIA VITTORIA Non prima delle Doppio Maschile Open SCUDERI SIMONE; MENESCHINCHERI ANDREA vs ARAGONA JACOPO; CERASI ALESSANDRO Non prima delle Singolare Maschile Open MASERA DIEGO vs D",
-                "26/10/2026; 18:00; 5 Non prima delle Singolare Femminile Open TERZOLI BENEDETTA vs CONCETTI BIANCA MARIA Non prima delle Doppio Maschile Open BOTTI JACOPO; MONTANARO FRANCESCO vs CARUSO CECI JOUHANES; COLARELLI PERSIO PENNESI FRANCESCA vs MARCHIANI FEDERICA",
-                "26/10/2026; 20:00; BIELLI CLAUDIA vs NANNERINI MARIA GRAZIA; FARSETTI SOFIA vs VALERIANI GAIA; MARAVIGLIA GABRIELE vs DE ANGELIS CAROLINA"
+                "26/10/2026; 00:00; No. Campo 1",
+                "26/10/2026; 17:30; 1 Inizio  Singolare Maschile Open q o CAPUANO ALESSIO vs MINISSALE ALESSANDRO",
+                "26/10/2026; 00:00; 2 A seguire Singolare Maschile Open APUZZO MANUEL vs DE PETRIS ROBERTO"
+            ]
+        },
+        {
+            "nome": "\"LAST POINT FITP\" 2^ EDIZIONE LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. CAMPO PRINCIPALE CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 4",
+                "26/10/2026; 13:00; 1 Inizio  Singolare Femminile Open SODANI GIORGIA vs TOPINO FRANCESCA Inizio  Singolare Maschile Open PINAT MARCO vs SIMONI STEFANO",
+                "26/10/2026; 14:30; 2 Inizio  Singolare Maschile Open COCCIANTE JULIAN vs ZUDDAS BRUNO Inizio  Singolare Maschile Open PANVINI LUCA vs NEBBIA LORENZO Inizio  Singolare Maschile Open FIORELLI STEFANO vs TEATINI DAMIANO Inizio  Singolare Femminile Open FARAONE IOLANDA vs GRIMALDI ANASTASIA Inizio  Singolare Femminile Open PIERETTI ALESSANDRA vs GIANNINI CECILIA EMMA",
+                "26/10/2026; 16:00; 3 Inizio  Singolare Maschile Open DI FEDERICO MATTIA vs MASTRACCI MARCO Inizio  Singolare Femminile Open MARINELLI SIBILLA vs FRANCESCHELLI RAFFAELLA Inizio  Singolare Femminile Open PELLEGRINI QUARANTOTTI GINEVRA vs PALAZZO AURELIA Inizio  Singolare Femminile Open TRIPODI FILOMENA vs COLETTA LAURA Inizio  Singolare Maschile Open CARULLI ROBERTO vs COLELLA ALESSANDRO",
+                "26/10/2026; 17:30; 4 Inizio  Singolare Maschile Open RISPOLI ALESSANDRO vs SCARABOTTI MASSIMILIANO Inizio  Singolare Femminile Open TOMASSO FLAVIA vs POLITO MANUELA Inizio  Singolare Femminile Open CHIRICO LAVINIA vs BRACAGLIA ELENA Inizio  Singolare Maschile Open PASSACANTANDO MATTEO vs TUCCERI CIMINI VITTORIO",
+                "26/10/2026; 19:00; 5 Inizio  Singolare Femminile Open BESTETTI EMANUELA vs FANUELE CHIARA Inizio  Singolare Femminile Open FUSANI CLAUDIA vs DELLA FOLGORE SARA Inizio  Singolare Maschile Open ZUBILE ANDREA MARIA vs GRIECO ALESSANDRO DOMENICO Inizio  Singolare Maschile Open DONATI FRANCESCO vs MACERATESI DANIELE"
             ]
         },
         {
@@ -30,32 +38,23 @@
             ]
         },
         {
+            "nome": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
+            "data": "26/10/2026",
+            "partite": [
+                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
+                "26/10/2026; 14:00; 6 TROIANI MASSIMILIANO vs ALOISIO MICHELE Inizio  Singolare Maschile Open; 3 FABBRI ALESSANDRO vs MORESCHINI ALESSANDRO Inizio  Singolare Maschile Open; 3 NINFADORO ENRICO vs GRASSETTI FEDERICO Inizio  Singolare Maschile Open; 6 CERRAI NICOLA vs ERCOLANI EMANUELE",
+                "26/10/2026; 16:00; 6 TAMBONE FABIO vs ARMOCIDA DANIELE Non prima delle Singolare Femminile Open; 6 PEPTANARU RIHANNA vs BONAIUTI GIULIA Non prima delle Singolare Femminile Open; 6 DELLATTE AURORA vs TOTARO LUDOVICA Non prima delle Singolare Femminile Open; 6 DORMI AMALIA vs MAGI MATILDA",
+                "26/10/2026; 17:30; 3 LIGUORI RAFFAELE vs GUARALDI DANIELE Non prima delle Singolare Maschile Open; 6 SEGAR ABINATH vs BATTOCCHIO FRANCESCO Non prima delle Singolare Maschile Open; 3 LUNARDI MARCO vs DE PEDIS GIANLUCA Non prima delle Singolare Maschile Open; 3 RAUCO PAOLO vs ROCCA GUIDO",
+                "26/10/2026; 19:00; 6 CESCHIN LEONARDO vs AMICO MARIO Non prima delle Singolare Maschile Open; 3 CHIARELLI FEDERICO vs MARCHETTI FABRIZIO"
+            ]
+        },
+        {
             "nome": "3^ E 4^ CATEGORIA M & F",
             "data": "26/10/2026",
             "partite": [
                 "26/10/2026; 00:00; No. Campo 1 campo 2",
                 "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open IANNINI FRANCESCO vs FERRARI FRANCESCO Inizio  Singolare Maschile Open PIACITELLI MATTEO vs NAPOLITANO SIMONE",
                 "26/10/2026; 17:00; 2 Inizio  Singolare Maschile Open BOZZO ADRIANO vs DI CINTIO MASSIMILIANO Inizio  Singolare Maschile Open SCARCIGLIA MATTIA vs BARDINO SALVATORE"
-            ]
-        },
-        {
-            "nome": "\"LAST POINT FITP\" 2^ EDIZIONE LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
-            "data": "26/10/2026",
-            "partite": [
-                "26/10/2026; 00:00; No. CAMPO PRINCIPALE CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 4",
-                "26/10/2026; 13:00; 1 Inizio  Singolare Femminile Open SODANI GIORGIA vs TOPINO FRANCESCA Inizio  Singolare Maschile Open PINAT MARCO vs SIMONI STEFANO",
-                "26/10/2026; 14:30; 2 Inizio  Singolare Maschile Open COCCIANTE JULIAN vs ZUDDAS BRUNO Inizio  Singolare Maschile Open PANVINI LUCA vs NEBBIA LORENZO Inizio  Singolare Maschile Open FIORELLI STEFANO vs TEATINI DAMIANO Inizio  Singolare Femminile Open FARAONE IOLANDA vs GRIMALDI ANASTASIA Inizio  Singolare Femminile Open PIERETTI ALESSANDRA vs GIANNINI CECILIA EMMA",
-                "26/10/2026; 16:00; 3 Inizio  Singolare Maschile Open DI FEDERICO MATTIA vs MASTRACCI MARCO Inizio  Singolare Femminile Open MARINELLI SIBILLA vs FRANCESCHELLI RAFFAELLA Inizio  Singolare Femminile Open PELLEGRINI QUARANTOTTI GINEVRA vs PALAZZO AURELIA Inizio  Singolare Femminile Open TRIPODI FILOMENA vs COLETTA LAURA Inizio  Singolare Maschile Open CARULLI ROBERTO vs COLELLA ALESSANDRO",
-                "26/10/2026; 17:30; 4 Inizio  Singolare Maschile Open RISPOLI ALESSANDRO vs SCARABOTTI MASSIMILIANO Inizio  Singolare Femminile Open TOMASSO FLAVIA vs POLITO MANUELA Inizio  Singolare Femminile Open CHIRICO LAVINIA vs BRACAGLIA ELENA Inizio  Singolare Maschile Open PASSACANTANDO MATTEO vs TUCCERI CIMINI VITTORIO",
-                "26/10/2026; 19:00; 5 Inizio  Singolare Femminile Open BESTETTI EMANUELA vs FANUELE CHIARA Inizio  Singolare Femminile Open FUSANI CLAUDIA vs DELLA FOLGORE SARA Inizio  Singolare Maschile Open ZUBILE ANDREA MARIA vs GRIECO ALESSANDRO DOMENICO Inizio  Singolare Maschile Open DONATI FRANCESCO vs MACERATESI DANIELE"
-            ]
-        },
-        {
-            "nome": "LAST POINT III EDIZIONE",
-            "data": "26/10/2026",
-            "partite": [
-                "26/10/2026; 00:00; No. Campo 2 Campo 3",
-                "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open BUONGIORNO RICCARDO vs TEI JACOPO Inizio  Singolare Maschile Open CALDERAN MASSIMO vs GORLA CRISTIAN"
             ]
         },
         {
@@ -70,23 +69,24 @@
             ]
         },
         {
-            "nome": "TORNEO DI FINE STAGIONE",
+            "nome": "LAST POINT III EDIZIONE",
             "data": "26/10/2026",
             "partite": [
-                "26/10/2026; 00:00; No. Campo 1",
-                "26/10/2026; 17:30; 1 Inizio  Singolare Maschile Open q o CAPUANO ALESSIO vs MINISSALE ALESSANDRO",
-                "26/10/2026; 00:00; 2 A seguire Singolare Maschile Open APUZZO MANUEL vs DE PETRIS ROBERTO"
+                "26/10/2026; 00:00; No. Campo 2 Campo 3",
+                "26/10/2026; 15:00; 1 Inizio  Singolare Maschile Open BUONGIORNO RICCARDO vs TEI JACOPO Inizio  Singolare Maschile Open CALDERAN MASSIMO vs GORLA CRISTIAN"
             ]
         },
         {
-            "nome": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
+            "nome": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
             "data": "26/10/2026",
             "partite": [
-                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
-                "26/10/2026; 14:00; 6 TROIANI MASSIMILIANO vs ALOISIO MICHELE Inizio  Singolare Maschile Open; 3 FABBRI ALESSANDRO vs MORESCHINI ALESSANDRO Inizio  Singolare Maschile Open; 3 NINFADORO ENRICO vs GRASSETTI FEDERICO Inizio  Singolare Maschile Open; 6 CERRAI NICOLA vs ERCOLANI EMANUELE",
-                "26/10/2026; 16:00; 6 TAMBONE FABIO vs ARMOCIDA DANIELE Non prima delle Singolare Femminile Open; 6 PEPTANARU RIHANNA vs BONAIUTI GIULIA Non prima delle Singolare Femminile Open; 6 DELLATTE AURORA vs TOTARO LUDOVICA Non prima delle Singolare Femminile Open; 6 DORMI AMALIA vs MAGI MATILDA",
-                "26/10/2026; 17:30; 3 LIGUORI RAFFAELE vs GUARALDI DANIELE Non prima delle Singolare Maschile Open; 6 SEGAR ABINATH vs BATTOCCHIO FRANCESCO Non prima delle Singolare Maschile Open; 3 LUNARDI MARCO vs DE PEDIS GIANLUCA Non prima delle Singolare Maschile Open; 3 RAUCO PAOLO vs ROCCA GUIDO",
-                "26/10/2026; 19:00; 6 CESCHIN LEONARDO vs AMICO MARIO Non prima delle Singolare Maschile Open; 3 CHIARELLI FEDERICO vs MARCHETTI FABRIZIO"
+                "26/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6",
+                "26/10/2026; 11:00; 1 Inizio  Singolare Maschile Open FIANO ANDREA vs DE FILIPPO GIAN ROCCO Inizio  Singolare Maschile Open TOTARO LEONARDO vs BARBIERI ALESSANDRO Inizio  Singolare Maschile Open BABUDRI MATTEO vs TROCCA VASCO Inizio  Singolare Femminile Open AMENDOLA ALICE vs CEPARU ISABELLA",
+                "26/10/2026; 12:30; 2 Non prima delle Singolare Maschile Open LA PIANA EDOARDO vs LUZIATELLI MICHELE Non prima delle Singolare Femminile Open GURGHEAN REBECCA vs NATALI MARIANNA Non prima delle Singolare Maschile Open SAGONE PIETRO vs TAGLIAFERRI EMILIO Non prima delle Singolare Maschile Open DE MAIO DAMIANO vs MONTANI NICOLA",
+                "26/10/2026; 14:30; 3 Non prima delle Singolare Femminile Open RATTI MARTINA vs LUPO SOFIA Non prima delle Singolare Femminile Open INZEO SOFIA vs LA PORTA GIULIA Non prima delle Singolare Femminile Open AVOLA LIVIA vs VIGGIANI DIANA Non prima delle Singolare Femminile Open APRILE ISOTTA vs PESCETELLI CHIARA Non prima delle Singolare Maschile Open MARENA KELVIN vs GIORDANO LUCA Non prima delle Doppio Maschile Open DERIU DAVIDE; SCHIAVELLA VALENTINO vs ROSATI ANDREA",
+                "26/10/2026; 16:30; 4 Non prima delle Singolare Femminile Open LAURIA SARA vs MATRIGIANI ANGELICA Non prima delle Singolare Femminile Open CHIAVACCI GRETA vs CASCIA BIANCA Non prima delle Singolare Femminile Open BRESCINI SARA vs MENTO NOEMI SOFIA Non prima delle Singolare Femminile Open FIORENZA GIULIA vs GARAVELLI MARIA VITTORIA Non prima delle Doppio Maschile Open SCUDERI SIMONE; MENESCHINCHERI ANDREA vs ARAGONA JACOPO; CERASI ALESSANDRO Non prima delle Singolare Maschile Open MASERA DIEGO vs D",
+                "26/10/2026; 18:00; 5 Non prima delle Singolare Femminile Open TERZOLI BENEDETTA vs CONCETTI BIANCA MARIA Non prima delle Doppio Maschile Open BOTTI JACOPO; MONTANARO FRANCESCO vs CARUSO CECI JOUHANES; COLARELLI PERSIO PENNESI FRANCESCA vs MARCHIANI FEDERICA",
+                "26/10/2026; 20:00; BIELLI CLAUDIA vs NANNERINI MARIA GRAZIA; FARSETTI SOFIA vs VALERIANI GAIA; MARAVIGLIA GABRIELE vs DE ANGELIS CAROLINA"
             ]
         }
     ]
