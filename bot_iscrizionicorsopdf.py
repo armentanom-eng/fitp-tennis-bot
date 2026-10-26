@@ -7,7 +7,7 @@ from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
-# Nomi dei file
+# Nomi dei file di output
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
@@ -38,9 +38,9 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [START] Avvio bot con log di debug dettagliati ---")
+    print("--- [START] Avvio estrazione Tornei In Corso ---")
     async with async_playwright() as p:
-        # Su GitHub Actions va tenuto True (headless)
+        # headless=True è obbligatorio per l'esecuzione su GitHub Actions
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
         
@@ -55,7 +55,6 @@ async def run_bot():
             print(f"-> Apro la pagina: {BASE_URL}")
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
-            print("-> Pagina caricata correttamente.")
             
             # --- 1. APPLICAZIONE FILTRI A TENDINA ---
             print("-> [Filtro 1/3] Seleziono Stato: In corso...")
@@ -73,7 +72,7 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATE ---
+            # --- 2. IMPOSTAZIONE DATE (30 giorni fa -> Oggi) ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
@@ -91,7 +90,7 @@ async def run_bot():
             await page.press("#dpk_end_date", "Tab")
             await asyncio.sleep(2)
             
-            # VERIFICA VALORE EFFETTIVO NEL DOM (Cruciale per capire se il sito li mantiene)
+            # Verifica valore effettivo nel DOM
             val_start = await page.locator("#dpk_start_date").evaluate("el => el.value")
             val_end = await page.locator("#dpk_end_date").evaluate("el => el.value")
             print(f"-> [DEBUG DOM] Valore letto dal campo Start: '{val_start}' | End: '{val_end}'")
