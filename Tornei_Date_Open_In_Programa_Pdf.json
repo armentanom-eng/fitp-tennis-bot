@@ -1,17 +1,41 @@
 {
-    "report_data": "26/10/2026 09:15",
+    "report_data": "26/10/2026 11:12",
     "tornei": [
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BA31D1FB-47B9-4A2B-82F3-9206AFADFA0A",
-            "nomeTorneo": "TORNEO RODEO MARCOPOLO 3ª E 4ª CAT.",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=45F60F39-6BE1-4148-AF5F-5C0BE2AD519B",
+            "nomeTorneo": "1° OPEN SERALE POLISPORTIVA PALOCCO",
             "data": "26/10/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
-            "nomeTorneo": "5° RODEO LIM 3.1",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8903618D-2B4F-4C29-A9EC-5839A1F08058",
+            "nomeTorneo": "RODEI LAST CHANCE - ROMA NORD - VILLA AURELIA SC - ULTIMI PUNTI PER CLASSIFICHE 2026",
+            "data": "26/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=060A9BC8-3E7C-4D72-B6C0-88500101DFFD",
+            "nomeTorneo": "1° RODEO \"LAST POINT\" LIM 2.7 OASI DI PACE",
+            "data": "26/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=16531F5A-30E9-4CB7-B602-7286CCB644B1",
+            "nomeTorneo": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
+            "data": "26/10/2026",
+            "partite": [
+                "Tabellone non disponibile"
+            ]
+        },
+        {
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
+            "nomeTorneo": "TORNEO RODEO MONTEVERDE CLUB",
             "data": "26/10/2026",
             "partite": [
                 "Tabellone non disponibile"
@@ -34,16 +58,16 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=45F60F39-6BE1-4148-AF5F-5C0BE2AD519B",
-            "nomeTorneo": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
+            "nomeTorneo": "5° RODEO LIM 3.1",
             "data": "26/10/2026",
             "partite": [
                 "Tabellone non disponibile"
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=060A9BC8-3E7C-4D72-B6C0-88500101DFFD",
-            "nomeTorneo": "1° RODEO \"LAST POINT\" LIM 2.7 OASI DI PACE",
+            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=BA31D1FB-47B9-4A2B-82F3-9206AFADFA0A",
+            "nomeTorneo": "TORNEO RODEO MARCOPOLO 3ª E 4ª CAT.",
             "data": "26/10/2026",
             "partite": [
                 "Tabellone non disponibile"
@@ -58,32 +82,8 @@
             ]
         },
         {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
-            "nomeTorneo": "TORNEO RODEO MONTEVERDE CLUB",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
             "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
             "nomeTorneo": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=16531F5A-30E9-4CB7-B602-7286CCB644B1",
-            "nomeTorneo": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
-            "data": "26/10/2026",
-            "partite": [
-                "Tabellone non disponibile"
-            ]
-        },
-        {
-            "url": "https://www.fitp.it/Tornei/Dettaglio-Competizione.html?competitionId=8903618D-2B4F-4C29-A9EC-5839A1F08058",
-            "nomeTorneo": "RODEI LAST CHANCE - ROMA NORD - VILLA AURELIA SC - ULTIMI PUNTI PER CLASSIFICHE 2026",
             "data": "26/10/2026",
             "partite": [
                 "Tabellone non disponibile"
