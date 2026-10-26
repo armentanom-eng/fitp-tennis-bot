@@ -41,7 +41,8 @@ def get_pdf_info(pdf_path):
 async def run_bot():
     print("--- [START] Avvio estrazione PROGRAMMI GARE (30 giorni fa -> Oggi) ---")
     async with async_playwright() as p:
-        browser = await p.chromium.launch(headless=True)
+        # Impostato a False così puoi vedere cosa fa a schermo in tempo reale
+        browser = await p.chromium.launch(headless=False)
         context = await browser.new_context(accept_downloads=True)
         
         for cat_id, filename in CATEGORIES.items():
@@ -52,41 +53,53 @@ async def run_bot():
             await page.goto(BASE_URL, timeout=60000)
             await page.wait_for_load_state("networkidle")
             
-            # --- IMPOSTAZIONE DATE DI RICERCA (30 giorni fa -> Oggi) ---
+            # --- 1. IMPOSTAZIONE DATE DI RICERCA (30 giorni fa -> Oggi) ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
             print(f"-> Impostazione date: da {data_inizio} a {data_fine}")
             
-            # Inserimento sicuro nei campi identificati dalle schermate
+            # Compilazione dei campi data identificati
             await page.locator("#dpk_start_date").evaluate(f"(el) => {{ el.value = '{data_inizio}'; el.dispatchEvent(new Event('input', {{ bubbles: true }})); el.dispatchEvent(new Event('change', {{ bubbles: true }})); }}")
             await page.locator("#dpk_end_date").evaluate(f"(el) => {{ el.value = '{data_fine}'; el.dispatchEvent(new Event('input', {{ bubbles: true }})); el.dispatchEvent(new Event('change', {{ bubbles: true }})); }}")
             await asyncio.sleep(2)
             
+            # --- 2. APPLICAZIONE FILTRI ---
             # Filtro Stato
             await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name="In corso").click()
-            await asyncio.sleep(3)
+            await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click()
+            await asyncio.sleep(2)
             
             # Filtro Regione
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(3)
+            await asyncio.sleep(2)
             
             # Filtro Provincia
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(3)
+            await asyncio.sleep(2)
             
-            # Selezione Categoria con attesa robusta
+            # --- 3. CLIC SUL PULSANTE "CERCA" PER AGGIORNARE I RISULTATI ---
+            print("-> Applicazione filtri e ricerca...")
+            try:
+                # Clicca sul bottone Cerca visibile nella barra dei filtri
+                btn_cerca = page.locator("button:has-text('Cerca')")
+                if await btn_cerca.count() > 0:
+                    await btn_cerca.first.click()
+                    await asyncio.sleep(5) # Attende il caricamento dei risultati filtrati
+            except Exception as e:
+                print(f"   (Nota sul pulsante Cerca: {e})")
+
+            # --- 4. SELEZIONE CATEGORIA ---
             print(f"-> Attendendo categoria {cat_id}...")
             cat_selector = f'a[data-id="{cat_id}"]'
             await page.wait_for_selector(cat_selector, timeout=30000)
             await page.locator(cat_selector).first.click()
             await asyncio.sleep(6)
             
-            # Espansione lista
+            # --- 5. ESPANSIONE LISTA ---
             print("-> Espansione lista tornei...")
             while True:
                 btn_load_more = page.locator("#btn-loadMore")
