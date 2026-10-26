@@ -38,7 +38,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V5] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V6] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -71,35 +71,41 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATE IN SEQUENZA (Inizio -> Fine) ---
+            # --- 2. IMPOSTAZIONE DATE (Bypass forzato del plugin calendario) ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             data_fine = oggi.strftime("%d/%m/%Y")
             
-            print(f"-> [STEP DATA] 1. Imposto Data Inizio: {data_inizio}")
-            await page.click("#dpk_start_date")
-            await page.fill("#dpk_start_date", data_inizio)
-            await page.evaluate("""() => {
-                const start = document.querySelector('#dpk_start_date');
-                if(start) {
-                    start.dispatchEvent(new Event('input', { bubbles: true }));
-                    start.dispatchEvent(new Event('change', { bubbles: true }));
-                    start.dispatchEvent(new Event('blur', { bubbles: true }));
-                }
-            }""")
-            await asyncio.sleep(1)
+            print(f"-> [STEP DATA] Forzatura date senza filtri plugin -> Inizio: {data_inizio} | Fine: {data_fine}")
             
-            print(f"-> [STEP DATA] 2. Imposto Data Fine: {data_fine}")
-            await page.click("#dpk_end_date")
-            await page.fill("#dpk_end_date", data_fine)
-            await page.evaluate("""() => {
+            await page.evaluate(f"""() => {{
+                const start = document.querySelector('#dpk_start_date');
                 const end = document.querySelector('#dpk_end_date');
-                if(end) {
-                    end.dispatchEvent(new Event('input', { bubbles: true }));
-                    end.dispatchEvent(new Event('change', { bubbles: true }));
-                    end.dispatchEvent(new Event('blur', { bubbles: true }));
-                }
-            }""")
+                
+                if(start) {{
+                    start.removeAttribute('min');
+                    start.removeAttribute('max');
+                    start.value = "{data_inizio}";
+                    if (window.jQuery && jQuery(start).data('datepicker')) {{
+                        jQuery(start).datepicker('setStartDate', null);
+                        jQuery(start).datepicker('setDate', '{data_inizio}');
+                    }}
+                    start.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    start.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                }}
+                
+                if(end) {{
+                    end.removeAttribute('min');
+                    end.removeAttribute('max');
+                    end.value = "{data_fine}";
+                    if (window.jQuery && jQuery(end).data('datepicker')) {{
+                        jQuery(end).datepicker('setEndDate', null);
+                        jQuery(end).datepicker('setDate', '{data_fine}');
+                    }}
+                    end.dispatchEvent(new Event('input', {{ bubbles: true }}));
+                    end.dispatchEvent(new Event('change', {{ bubbles: true }}));
+                }}
+            }}""")
             await asyncio.sleep(2)
             
             # VERIFICA DAL DOM
