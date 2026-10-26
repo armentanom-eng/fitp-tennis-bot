@@ -2,10 +2,15 @@ import asyncio
 import pdfplumber
 import re
 import json
+import os
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from playwright.async_api import async_playwright
 
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
+FILE_REGISTRO = "notifiche_inviate.json"
 
 # Nomi dei file di output
 CATEGORIES = {
@@ -13,13 +18,72 @@ CATEGORIES = {
     "t_affiliati": "Open_Partite_incorsopdf.json"
 }
 
+def carica_registro():
+    if os.path.exists(FILE_REGISTRO):
+        try:
+            with open(FILE_REGISTRO, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except:
+            return []
+    return []
+
+def salva_registro(registro):
+    with open(FILE_REGISTRO, "w", encoding="utf-8") as f:
+        json.dump(registro, f, indent=4, ensure_ascii=False)
+
+def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
+    mittente = os.environ.get("EMAIL_USER")
+    password = os.environ.get("EMAIL_PASSWORD")
+    destinatari = ["armentano.m@gmail.com", "Marcella.dellanna@gmail.com"]
+    
+    if not mittente or not password:
+        print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
+        return
+
+    # ID univoco per evitare invii multipli della stessa partita
+    id_univoco = f"{nome_torneo}_{data_target}_{riga_formattata}".replace(" ", "_")
+    registro = carica_registro()
+    
+    if id_univoco in registro:
+        print("-> [Email] Notifica già inviata in precedenza per questa partita.")
+        return
+
+    oggetto = "tornei fit"
+    testo = f"""È stata trovata una partita per il giocatore Armentano!
+
+📅 Data: {data_target}
+🏆 Torneo: {nome_torneo}
+⏰ Dettagli: {riga_formattata}
+"""
+
+    invio_riuscito = True
+    for destinatario in destinatari:
+        msg = MIMEMultipart()
+        msg['From'] = mittente
+        msg['To'] = destinatario
+        msg['Subject'] = oggetto
+        msg.attach(MIMEText(testo, 'plain'))
+
+        try:
+            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server.starttls()
+            server.login(mittente, password)
+            server.sendmail(mittente, destinatario, msg.as_string())
+            server.quit()
+            print(f"-> [Email] Inviata con successo a {destinatario}!")
+        except Exception as e:
+            print(f"-> [Email Errore] Impossibile inviare a {destinatario}: {e}")
+            invio_riuscito = False
+
+    if invio_riuscito:
+        registro.append(id_univoco)
+        salva_registro(registro)
+
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
     match_time = re.search(r"(\d{2})[:.](\d{2})", text)
     time = f"{match_time.group(1)}:{match_time.group(2)}" if match_time else "00:00"
     text = re.sub(r"(INIZIO|ORE|NON PRIMA DI|TABELLONE)?[:\s]*\d{2}[:.](\d{2})", "", text, flags=re.IGNORECASE)
-    
-    # RIMOSSA la sostituzione errata di 'o' in 'vs' per preservare "Nome1 o Nome2 vs Nome3"
     
     partite = re.findall(r"([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+?)\s+vs\s+([A-Z\s\d\(\)àèìòùÀÈÌÒÙ]+)", text, flags=re.IGNORECASE)
     if partite:
@@ -187,53 +251,13 @@ async def run_bot():
                                 await download.save_as("temp.pdf")
                                 matches = get_pdf_info("temp.pdf")
                                 print(f"      -> Trovate {len(matches)} righe nel PDF.")
-                                json_data["tornei"].append({
-                                    "url": full_url, 
-                                    "nomeTorneo": nome_torneo.strip(), 
-                                    "data": data_target, 
-                                    "partite": [format_line_for_swift(m, data_target) for m in matches] if matches else ["Nessuna partita trovata"]
-                                })
-                            else:
-                                print(f"      -> Pulsante download non visibile per il {data_target}.")
-                        else:
-                            print(f"      -> Data {data_target} non presente nel menu a tendina.")
-                            json_data["tornei"].append({
-                                "url": full_url, 
-                                "nomeTorneo": nome_torneo.strip(), 
-                                "data": data_target, 
-                                "partite": ["Nessuna partita trovata"]
-                            })
-                
-                elif await download_btn.is_visible():
-                    print("      -> Download diretto disponibile.")
-                    async with page.expect_download() as dl_info: 
-                        await download_btn.click()
-                    download = await dl_info.value
-                    await download.save_as("temp.pdf")
-                    matches = get_pdf_info("temp.pdf")
-                    data_oggi = datetime.now().strftime("%d/%m/%Y")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": data_oggi, 
-                        "partite": [format_line_for_swift(m, "Oggi") for m in matches] if matches else ["Nessuna partita trovata"]
-                    })
-                else:
-                    print(f"      ! Tabellone non disponibile per questo torneo.")
-                    json_data["tornei"].append({
-                        "url": full_url, 
-                        "nomeTorneo": nome_torneo.strip(), 
-                        "data": datetime.now().strftime("%d/%m/%Y"), 
-                        "partite": ["Tabellone non disponibile"]
-                    })
-            
-            with open(filename, "w", encoding="utf-8") as f: 
-                json.dump(json_data, f, ensure_ascii=False, indent=4)
-            print(f"-> File {filename} salvato correttamente.")
-            await page.close()
-        
-        await browser.close()
-    print("\n--- [END] Processo completato con successo ---")
-
-if __name__ == "__main__": 
-    asyncio.run(run_bot())
+                                
+                                formatted_matches = []
+                                for m in matches:
+                                    fmt_line = format_line_for_swift(m, data_target)
+                                    formatted_matches.append(fmt_line)
+                                    
+                                    # Controllo presenza Armentano (case-insensitive)
+                                    if "armentano" in fmt_line.lower():
+                                        print("-> Trovato match per Armentano! Invio notifiche email...")
+                                        invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
