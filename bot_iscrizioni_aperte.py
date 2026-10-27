@@ -16,31 +16,31 @@ async def run_bot():
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
-        page.set_default_timeout(30000)
+        page.set_default_timeout(60000)
         
         # Iteriamo sulle categorie
         for cat_id, filename in CATEGORIES.items():
             print(f"\n>>> Elaborazione categoria: {cat_id}")
             dati_categoria = {"tornei": []}
             
-            await page.goto(BASE_URL, wait_until="domcontentloaded")
-            await page.wait_for_load_state("networkidle")
+            await page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+            await page.wait_for_load_state("networkidle", timeout=30000)
             
             # --- 1. FILTRI BASE ---
             print("-> Seleziono Stato: Iscrizioni aperte...")
             await page.click('button[data-id="select_status"]')
             await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(12)
             
             print("-> Seleziono Regione: Lazio...")
             await page.click('button[data-id="id_regioneSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(12)
             
             print("-> Seleziono Provincia: Roma...")
             await page.click('button[data-id="id_provinciaSearch"]')
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(2)
+            await asyncio.sleep(12)
             
             # --- IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
@@ -75,7 +75,7 @@ async def run_bot():
                     end.dispatchEvent(new Event('change', {{ bubbles: true }}));
                 }}
             }}""")
-            await asyncio.sleep(2)
+            await asyncio.sleep(12)
             
             # --- ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
@@ -89,7 +89,7 @@ async def run_bot():
                     }
                 }""")
                 print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
-                await asyncio.sleep(6)
+                await asyncio.sleep(16)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
             
@@ -97,15 +97,15 @@ async def run_bot():
             print(f"-> Clicco filtro categoria: {cat_id}")
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
             # Attendiamo il ricaricamento della lista
-            await asyncio.sleep(4) 
+            await asyncio.sleep(14) 
             
             # --- 3. ESPANSIONE LISTA ---
             while True:
                 btn_load_more = page.locator("button#btn-loadMore")
                 if await btn_load_more.is_visible():
                     await btn_load_more.click()
-                    await page.wait_for_load_state("domcontentloaded")
-                    await asyncio.sleep(2)
+                    await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                    await asyncio.sleep(12)
                 else:
                     break
             
@@ -116,18 +116,19 @@ async def run_bot():
             
             for url in urls:
                 try:
-                    await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
+                    await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded", timeout=60000)
                     if await page.locator("text=non e' al momento disponibile").is_visible(): continue
                     
                     count = await page.locator("text=Dettaglio >").count()
                     for i in range(count):
                         # Torniamo alla pagina del torneo per ogni bottone
-                        await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded")
+                        await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded", timeout=60000)
                         btn = page.locator("text=Dettaglio >").nth(i)
                         
                         if await btn.is_visible():
                             await btn.click(force=True)
-                            await page.wait_for_load_state("domcontentloaded")
+                            await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                            await asyncio.sleep(4) # Piccolo respiro post click dettaglio
                             
                             categoria = await page.locator("h1.cc-title-main").first.text_content()
                             tabellone_el = page.locator("span#spn-tournament-description")
