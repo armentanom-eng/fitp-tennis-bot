@@ -137,7 +137,7 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
             await asyncio.sleep(2)
             
-            # --- 2. IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
+            # --- 2. IMPOSTAZIONE DATA INIZIO (-30 GIORNI) E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
             
