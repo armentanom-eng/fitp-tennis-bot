@@ -12,7 +12,6 @@ from playwright.async_api import async_playwright
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 FILE_REGISTRO = "notifiche_inviate.json"
 
-# Nomi dei file di output e chiavi originali corrette
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
@@ -37,9 +36,6 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
     password = os.environ.get("EMAIL_PASSWORD")
     destinatari = ["armentano.m@gmail.com", "Marcella.dellanna@gmail.com"]
     
-    print(f"-> [DEBUG EMAIL] EMAIL_USER presente: {bool(mittente)}")
-    print(f"-> [DEBUG EMAIL] EMAIL_PASSWORD presente: {bool(password)}")
-
     if not mittente or not password:
         print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
         return
@@ -50,8 +46,6 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
     if id_univoco in registro:
         print(f"-> [Email] Notifica già inviata in precedenza per questa partita. ID saltato: {id_univoco}")
         return
-    else:
-        print(f"-> [DEBUG EMAIL] ID univoco non presente nel registro. Procedo con l'invio.")
 
     oggetto = "tornei fit"
     testo = f"""È stata trovata una partita per il giocatore (Armentano / Dalia / Marie)!
@@ -63,7 +57,6 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
 
     invio_riuscito = True
     for destinatario in destinatari:
-        print(f"-> [DEBUG EMAIL] Preparazione invio per destinatario: {destinatario}...")
         try:
             server = smtplib.SMTP('smtp.gmail.com', 587)
             server.starttls()
@@ -83,11 +76,8 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
             invio_riuscito = False
 
     if invio_riuscito:
-        print(f"-> [DEBUG EMAIL] Tutti gli invii riusciti. Aggiungo al registro ID: {id_univoco}")
         registro.append(id_univoco)
         salva_registro(registro)
-    else:
-        print("-> [DEBUG EMAIL] Almeno un invio è fallito, il registro non viene aggiornato.")
 
 def format_line_for_swift(raw_text, date_target):
     text = raw_text.replace("\n", " ").strip()
@@ -114,7 +104,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V10] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V11 - ANTI-TIMEOUT] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -127,63 +117,64 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
-            print(f"-> Apro la pagina: {BASE_URL}")
-            await page.goto(BASE_URL, timeout=60000)
-            await page.wait_for_load_state("networkidle")
+            # Apertura con tentativi per la pagina principale
+            successo_home = False
+            for tentativo in range(3):
+                try:
+                    print(f"-> Apro la pagina (Tentativo {tentativo+1}/3): {BASE_URL}")
+                    await page.goto(BASE_URL, timeout=60000)
+                    await page.wait_for_load_state("networkidle", timeout=30000)
+                    successo_home = True
+                    break
+                except Exception as e:
+                    print(f"-> [TIMEOUT HOME] Tentativo fallito: {e}. Rproprovo tra 5 sec...")
+                    await asyncio.sleep(5)
+            
+            if not successo_home:
+                print(f"-> [ERRORE CRITICO] Impossibile caricare la home dei tornei. Salto categoria {cat_id}.")
+                await page.close()
+                continue
             
             # --- 1. APPLICAZIONE FILTRI A TENDINA ---
-            print("-> [Filtro 1/3] Seleziono Stato: In corso...")
-            await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click()
-            await asyncio.sleep(2)
-            
-            print("-> [Filtro 2/3] Seleziono Regione: Lazio...")
-            await page.click('button[data-id="id_regioneSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(2)
-            
-            print("-> [Filtro 3/3] Seleziono Provincia: Roma...")
-            await page.click('button[data-id="id_provinciaSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(2)
-            
-            # --- 2. IMPOSTAZIONE DATA INIZIO E SVUOTAMENTO DATA FINE ---
+            try:
+                print("-> [Filtro 1/3] Seleziono Stato: In corso...")
+                await page.click('button[data-id="select_status"]', timeout=10000)
+                await page.get_by_role("listbox").get_by_role("option", name=re.compile("in corso", re.IGNORECASE)).click(timeout=10000)
+                await asyncio.sleep(2)
+                
+                print("-> [Filtro 2/3] Seleziono Regione: Lazio...")
+                await page.click('button[data-id="id_regioneSearch"]', timeout=10000)
+                await page.get_by_role("listbox").get_by_role("option", name="Lazio").click(timeout=10000)
+                await asyncio.sleep(2)
+                
+                print("-> [Filtro 3/3] Seleziono Provincia: Roma...")
+                await page.click('button[data-id="id_provinciaSearch"]', timeout=10000)
+                await page.get_by_role("listbox").get_by_role("option", name="Roma").click(timeout=10000)
+                await asyncio.sleep(2)
+            except Exception as e:
+                print(f"-> [ERRORE FILTRI]: {e}")
+
+            # --- 2. IMPOSTAZIONE DATA INIZIO ---
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
-            
-            print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
             
             await page.evaluate(f"""() => {{
                 const start = document.querySelector('#dpk_start_date');
                 const end = document.querySelector('#dpk_end_date');
-                
                 if(start) {{
-                    start.removeAttribute('min');
-                    start.removeAttribute('max');
                     start.value = "{data_inizio}";
-                    if (window.jQuery && jQuery(start).data('datepicker')) {{
-                        jQuery(start).datepicker('setStartDate', null);
-                        jQuery(start).datepicker('setDate', '{data_inizio}');
-                    }}
                     start.dispatchEvent(new Event('input', {{ bubbles: true }}));
                     start.dispatchEvent(new Event('change', {{ bubbles: true }}));
                 }}
-                
                 if(end) {{
-                    end.removeAttribute('min');
-                    end.removeAttribute('max');
                     end.value = ""; 
-                    if (window.jQuery && jQuery(end).data('datepicker')) {{
-                        jQuery(end).datepicker('setDate', null);
-                    }}
                     end.dispatchEvent(new Event('input', {{ bubbles: true }}));
                     end.dispatchEvent(new Event('change', {{ bubbles: true }}));
                 }}
             }}""")
             await asyncio.sleep(2)
             
-            # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
-            print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
+            # --- 3. ATTIVAZIONE RICERCA ---
             try:
                 await page.evaluate("""() => {
                     if(typeof sendPostRequest === 'function') {
@@ -193,99 +184,115 @@ async def run_bot():
                         if(btn) btn.click();
                     }
                 }""")
-                print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
                 await asyncio.sleep(5)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
 
-            # --- 4. SELEZIONE CATEGORIA (dopo la ricerca) ---
+            # --- 4. SELEZIONE CATEGORIA ---
             print(f"-> Clicco sulla scheda categoria: {cat_id}")
             cat_selector = f'a[data-id="{cat_id}"]'
             try:
                 await page.wait_for_selector(cat_selector, timeout=30000)
                 await page.locator(cat_selector).first.click()
-                print("-> Categoria selezionata con successo.")
+                await page.wait_for_selector("a[href*='Dettaglio-Competizione']", timeout=15000)
             except Exception as e:
                 print(f"-> [ERRORE Categoria {cat_id}]: {e}")
+            await asyncio.sleep(3)
             
-            # Attesa intelligente affinché i risultati della categoria compaiano nel DOM
-            try:
-                await page.wait_for_selector("a[href*='Dettaglio-Competizione']", timeout=15000)
-            except:
-                pass
-            await asyncio.sleep(4)
-            
-            # --- 5. ESPANSIONE LISTA ("Carica altri") CON ATTESA ROBUSTA ---
+            # --- 5. ESPANSIONE LISTA ("Carica altri") CON RESILIENZA ---
             print("-> Controllo presenza pulsante 'Carica altri' (#btn-loadMore)...")
             load_count = 0
-            while load_count < 20:
-                btn_load_more = page.locator("#btn-loadMore")
-                if await btn_load_more.is_visible():
-                    load_count += 1
-                    print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
-                    await btn_load_more.click()
-                    await asyncio.sleep(4)
-                else:
-                    print("-> Nessun altro 'Carica altri' disponibile.")
+            while load_count < 25:
+                try:
+                    btn_load_more = page.locator("#btn-loadMore")
+                    if await btn_load_more.is_visible():
+                        load_count += 1
+                        print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
+                        await btn_load_more.click()
+                        await asyncio.sleep(4)
+                    else:
+                        break
+                except:
                     break
             
             locators = await page.locator("a[href*='Dettaglio-Competizione']").all()
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             print(f"-> [RISULTATO FINALE] Tornei trovati per {cat_id}: {len(links)}")
             
+            # --- 6. ANALISI SINGOLO TORNEO CON GESTIONE TIMEOUT & RETRY ---
             for index, link in enumerate(links, start=1):
                 full_url = f"https://www.fitp.it{link}"
                 print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
-                await page.goto(full_url, timeout=60000)
+                
+                # Tentativi multipli per aprire la pagina del torneo se il server va in timeout
+                torneo_caricato = False
+                for tentativo_torneo in range(3):
+                    try:
+                        await page.goto(full_url, timeout=60000)
+                        await page.wait_for_load_state("domcontentloaded", timeout=20000)
+                        torneo_caricato = True
+                        break
+                    except Exception as e:
+                        print(f"   -> [TIMEOUT TORNEO] Tentativo {tentativo_torneo+1}/3 fallito per {full_url}: {e}")
+                        await asyncio.sleep(5)
+                
+                if not torneo_caricato:
+                    print(f"   -> [SALTO] Torneo saltato per ripetuti timeout del server.")
+                    continue
                 
                 try:
-                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
+                    nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text(timeout=5000)
                 except:
                     nome_torneo = "Torneo senza nome"
                 
-                print(f"   [Torneo]: {nome_torneo.strip()}")
+                print(f"   [Torneo]: {nome_torneo.status if hasattr(nome_torneo, 'status') else nome_torneo.strip()}")
                 
                 dropdown_selector = "#select-ordergame"
                 download_btn = page.locator("#btnOrderGameDownload")
                 
-                if await page.locator(dropdown_selector).is_visible():
-                    oggi_ciclo = datetime.now()
-                    for i in range(0, 2):  # Oggi e Domani per i PDF
-                        data_target = (oggi_ciclo + timedelta(days=i)).strftime("%d/%m/%Y")
-                        
-                        if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
-                            print(f"      -> Seleziono data {data_target} dal menu tendina...")
-                            await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(5)
+                try:
+                    if await page.locator(dropdown_selector).is_visible(timeout=5000):
+                        oggi_ciclo = datetime.now()
+                        for i in range(0, 2):  # Oggi e Domani
+                            data_target = (oggi_ciclo + timedelta(days=i)).strftime("%d/%m/%Y")
                             
-                            if await download_btn.is_visible():
-                                print(f"      -> Scarico PDF per il {data_target}...")
-                                async with page.expect_download() as dl_info: 
-                                    await download_btn.click()
-                                download = await dl_info.value
-                                await download.save_as("temp.pdf")
-                                matches = get_pdf_info("temp.pdf")
-                                print(f"      -> Trovate {len(matches)} righe nel PDF.")
+                            if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
+                                print(f"      -> Seleziono data {data_target} dal menu tendina...")
+                                await page.select_option(dropdown_selector, label=data_target)
+                                await asyncio.sleep(4)
                                 
-                                formatted_matches = []
-                                for m in matches:
-                                    fmt_line = format_line_for_swift(m, data_target)
-                                    formatted_matches.append(fmt_line)
+                                if await download_btn.is_visible(timeout=3000):
+                                    print(f"      -> Scarico PDF per il {data_target}...")
+                                    async with page.expect_download(timeout=15000) as dl_info: 
+                                        await download_btn.click()
+                                    download = await dl_info.value
+                                    await download.save_as("temp.pdf")
+                                    matches = get_pdf_info("temp.pdf")
+                                    print(f"      -> Trovate {len(matches)} righe nel PDF.")
                                     
-                                    parole_chiave = ["armentano", "dalia", "marie"]
-                                    if any(chiave in fmt_line.lower() for chiave in parole_chiave):
-                                        print(f"-> [MATCH] Trovato match per una delle parole chiave in {nome_torneo}! Avvio invio notifiche...")
-                                        invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
-                                
-                                if formatted_matches:
-                                    json_data["tornei"].append({
-                                        "nome": nome_torneo.strip(),
-                                        "data": data_target,
-                                        "partite": formatted_matches
-                                    })
+                                    formatted_matches = []
+                                    for m in matches:
+                                        fmt_line = format_line_for_swift(m, data_target)
+                                        formatted_matches.append(fmt_line)
+                                        
+                                        parole_chiave = ["armentano", "dalia", "marie"]
+                                        if any(chiave in fmt_line.lower() for chiave in parole_chiave):
+                                            print(f"-> [MATCH] Trovato match per una delle parole chiave in {nome_torneo}! Invio notifiche...")
+                                            invia_notifiche_giocatore(fmt_line, nome_torneo.strip(), data_target)
+                                    
+                                    if formatted_matches:
+                                        json_data["tornei"].append({
+                                            "nome": nome_torneo.strip(),
+                                            "data": data_target,
+                                            "partite": formatted_matches
+                                        })
+                except Exception as e:
+                    print(f"   -> [ERRORE DOWNLOAD/PDF] Impossibile completare l'estrazione per questo torneo: {e}")
             
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, indent=4, ensure_ascii=False)
+            
+            await page.close()
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
