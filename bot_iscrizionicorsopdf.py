@@ -37,8 +37,8 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
     password = os.environ.get("EMAIL_PASSWORD")
     destinatari = ["armentano.m@gmail.com", "Marcella.dellanna@gmail.com"]
     
-    print(f"-> [DEBUG EMAIL] EMAIL_USER presente: {bool(mittente)} (Valore: {mittente})")
-    print(f"-> [DEBUG EMAIL] EMAIL_PASSWORD presente: {bool(password)} (Lunghezza: {len(password) if password else 0})")
+    print(f"-> [DEBUG EMAIL] EMAIL_USER presente: {bool(mittente)}")
+    print(f"-> [DEBUG EMAIL] EMAIL_PASSWORD presente: {bool(password)}")
 
     if not mittente or not password:
         print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
@@ -66,13 +66,9 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
     for destinatario in destinatari:
         print(f"-> [DEBUG EMAIL] Preparazione invio per destinatario: {destinatario}...")
         try:
-            print("-> [DEBUG EMAIL] Connessione a smtp.gmail.com:587...")
             server = smtplib.SMTP('smtp.gmail.com', 587)
-            print("-> [DEBUG EMAIL] Avvio starttls()...")
             server.starttls()
-            print(f"-> [DEBUG EMAIL] Tentativo di login SMTP con utente: {mittente}...")
             server.login(mittente, password)
-            print("-> [DEBUG EMAIL] Login SMTP completato con successo!")
 
             msg = MIMEMultipart()
             msg['From'] = mittente
@@ -80,7 +76,6 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
             msg['Subject'] = oggetto
             msg.attach(MIMEText(testo, 'plain'))
 
-            print(f"-> [DEBUG EMAIL] Invio messaggio in corso verso {destinatario}...")
             server.sendmail(mittente, destinatario, msg.as_string())
             server.quit()
             print(f"-> [Email] Inviata con successo a {destinatario}!")
@@ -120,7 +115,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V8] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V9] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -188,7 +183,19 @@ async def run_bot():
             }}""")
             await asyncio.sleep(2)
             
-            # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
+            # --- 3. SELEZIONE CATEGORIA (PRIMA DELLA RICERCA) ---
+            print(f"-> Clicco sulla scheda categoria: {cat_id}")
+            cat_selector = f'a[data-id="{cat_id}"]'
+            try:
+                await page.wait_for_selector(cat_selector, timeout=30000)
+                await page.locator(cat_selector).first.click()
+                print("-> Categoria selezionata con successo.")
+            except Exception as e:
+                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
+            
+            await asyncio.sleep(2)
+
+            # --- 4. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
                 await page.evaluate("""() => {
@@ -203,29 +210,17 @@ async def run_bot():
                 await asyncio.sleep(6)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
-
-            # --- 4. SELEZIONE CATEGORIA ---
-            print(f"-> Clicco sulla scheda categoria: {cat_id}")
-            cat_selector = f'a[data-id="{cat_id}"]'
-            try:
-                await page.wait_for_selector(cat_selector, timeout=30000)
-                await page.locator(cat_selector).first.click()
-                print("-> Categoria selezionata con successo.")
-            except Exception as e:
-                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
             
-            await asyncio.sleep(6)
-            
-            # --- 5. ESPANSIONE LISTA ---
+            # --- 5. ESPANSIONE LISTA ("Carica altri") ---
             print("-> Controllo presenza pulsante 'Carica altri' (#btn-loadMore)...")
             load_count = 0
-            while True:
+            while load_count < 15:
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
                     load_count += 1
                     print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
                     await btn_load_more.click()
-                    await asyncio.sleep(6)
+                    await asyncio.sleep(5)
                 else:
                     print("-> Nessun altro 'Carica altri' disponibile.")
                     break
@@ -273,7 +268,6 @@ async def run_bot():
                                     fmt_line = format_line_for_swift(m, data_target)
                                     formatted_matches.append(fmt_line)
                                     
-                                    # Controllo presenza di almeno una delle parole chiave (case-insensitive)
                                     parole_chiave = ["armentano", "dalia", "marie"]
                                     if any(chiave in fmt_line.lower() for chiave in parole_chiave):
                                         print(f"-> [MATCH] Trovato match per una delle parole chiave in {nome_torneo}! Avvio invio notifiche...")
