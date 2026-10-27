@@ -12,7 +12,7 @@ from playwright.async_api import async_playwright
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 FILE_REGISTRO = "notifiche_inviate.json"
 
-# Nomi dei file di output
+# Nomi dei file di output e chiavi originali corrette
 CATEGORIES = {
     "t_giovanili": "Giovanili_Partite_incorsopdf.json", 
     "t_affiliati": "Open_Partite_incorsopdf.json"
@@ -44,7 +44,6 @@ def invia_notifiche_giocatore(riga_formattata, nome_torneo, data_target):
         print("-> [Email] Credenziali non configurate nei Secrets di GitHub.")
         return
 
-    # ID univoco per evitare invii multipli della stessa partita
     id_univoco = f"{nome_torneo}_{data_target}_{riga_formattata}".replace(" ", "_")
     registro = carica_registro()
     
@@ -115,7 +114,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V9] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V10] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -183,19 +182,7 @@ async def run_bot():
             }}""")
             await asyncio.sleep(2)
             
-            # --- 3. SELEZIONE CATEGORIA (PRIMA DELLA RICERCA) ---
-            print(f"-> Clicco sulla scheda categoria: {cat_id}")
-            cat_selector = f'a[data-id="{cat_id}"]'
-            try:
-                await page.wait_for_selector(cat_selector, timeout=30000)
-                await page.locator(cat_selector).first.click()
-                print("-> Categoria selezionata con successo.")
-            except Exception as e:
-                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
-            
-            await asyncio.sleep(2)
-
-            # --- 4. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
+            # --- 3. ATTIVAZIONE RICERCA VIA JAVASCRIPT ---
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
                 await page.evaluate("""() => {
@@ -207,20 +194,37 @@ async def run_bot():
                     }
                 }""")
                 print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
-                await asyncio.sleep(6)
+                await asyncio.sleep(5)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
+
+            # --- 4. SELEZIONE CATEGORIA (dopo la ricerca) ---
+            print(f"-> Clicco sulla scheda categoria: {cat_id}")
+            cat_selector = f'a[data-id="{cat_id}"]'
+            try:
+                await page.wait_for_selector(cat_selector, timeout=30000)
+                await page.locator(cat_selector).first.click()
+                print("-> Categoria selezionata con successo.")
+            except Exception as e:
+                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
             
-            # --- 5. ESPANSIONE LISTA ("Carica altri") ---
+            # Attesa intelligente affinché i risultati della categoria compaiano nel DOM
+            try:
+                await page.wait_for_selector("a[href*='Dettaglio-Competizione']", timeout=15000)
+            except:
+                pass
+            await asyncio.sleep(4)
+            
+            # --- 5. ESPANSIONE LISTA ("Carica altri") CON ATTESA ROBUSTA ---
             print("-> Controllo presenza pulsante 'Carica altri' (#btn-loadMore)...")
             load_count = 0
-            while load_count < 15:
+            while load_count < 20:
                 btn_load_more = page.locator("#btn-loadMore")
                 if await btn_load_more.is_visible():
                     load_count += 1
                     print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
                     await btn_load_more.click()
-                    await asyncio.sleep(5)
+                    await asyncio.sleep(4)
                 else:
                     print("-> Nessun altro 'Carica altri' disponibile.")
                     break
