@@ -104,23 +104,23 @@ async def run_bot():
             print(f"\n>>> Processo categoria: {cat_id}")
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
-            await page.goto(BASE_URL, timeout=60000)
-            await page.wait_for_load_state("networkidle")
+            await page.goto(BASE_URL, timeout=90000)
+            await page.wait_for_load_state("networkidle", timeout=45000)
             
             print("-> Seleziono Stato: Iscrizioni aperte...")
-            await page.click('button[data-id="select_status"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click()
-            await asyncio.sleep(2)
+            await page.click('button[data-id="select_status"]', timeout=15000)
+            await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click(timeout=15000)
+            await asyncio.sleep(12)
             
             print("-> Seleziono Regione: Lazio...")
-            await page.click('button[data-id="id_regioneSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click()
-            await asyncio.sleep(2) 
+            await page.click('button[data-id="id_regioneSearch"]', timeout=15000)
+            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click(timeout=15000)
+            await asyncio.sleep(12) 
             
             print("-> Seleziono Provincia: Roma...")
-            await page.click('button[data-id="id_provinciaSearch"]')
-            await page.get_by_role("listbox").get_by_role("option", name="Roma").click()
-            await asyncio.sleep(2)
+            await page.click('button[data-id="id_provinciaSearch"]', timeout=15000)
+            await page.get_by_role("listbox").get_by_role("option", name="Roma").click(timeout=15000)
+            await asyncio.sleep(12)
             
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
@@ -154,7 +154,7 @@ async def run_bot():
                     end.dispatchEvent(new Event('change', {{ bubbles: true }}));
                 }}
             }}""")
-            await asyncio.sleep(2)
+            await asyncio.sleep(12)
             
             print("-> [STEP CERCA] Eseguo la ricerca tramite script JS...")
             try:
@@ -167,21 +167,21 @@ async def run_bot():
                     }
                 }""")
                 print("-> [STEP CERCA] Richiesta inviata con successo. Attendo aggiornamento...")
-                await asyncio.sleep(6)
+                await asyncio.sleep(16)
             except Exception as e:
                 print(f"-> [ERRORE Cerca]: {e}")
             
             print(f"-> Clicco sulla scheda categoria: {cat_id}")
-            await page.wait_for_selector(f'a[data-id="{cat_id}"]')
+            await page.wait_for_selector(f'a[data-id="{cat_id}"]', timeout=30000)
             await page.locator(f'a[data-id="{cat_id}"]').first.click()
-            await asyncio.sleep(6) 
+            await asyncio.sleep(14) 
             
             print("-> Espansione lista tornei...")
             while True:
                 more_btn = page.locator("#btn-loadMore")
                 if await more_btn.is_visible():
                     await more_btn.click()
-                    await asyncio.sleep(6)
+                    await asyncio.sleep(12)
                 else:
                     break
             
@@ -192,11 +192,11 @@ async def run_bot():
                 try:
                     full_url = f"https://www.fitp.it{link}"
                     print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
-                    await page.goto(full_url, timeout=60000)
-                    await page.wait_for_load_state("networkidle")
+                    await page.goto(full_url, timeout=90000)
+                    await page.wait_for_load_state("networkidle", timeout=30000)
                     
                     try:
-                        nome_torneo = await page.locator("h1").first.inner_text()
+                        nome_torneo = await page.locator("h1").first.inner_text(timeout=5000)
                         nome_torneo = nome_torneo.strip() if nome_torneo else "Torneo FITP"
                     except:
                         nome_torneo = "Torneo FITP"
@@ -208,7 +208,7 @@ async def run_bot():
                             if not href_pdf.startswith("http"):
                                 href_pdf = f"https://www.fitp.it{href_pdf}"
                             
-                            async with page.expect_download() as download_info:
+                            async with page.expect_download(timeout=25000) as download_info: 
                                 await pdf_link.click()
                             download = await download_info.value
                             path_pdf = await download.path()
