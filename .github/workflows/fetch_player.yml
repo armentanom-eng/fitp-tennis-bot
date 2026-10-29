@@ -1,1 +1,37 @@
+name: Fetch FITP Player Stats
 
+on:
+  workflow_dispatch:
+    inputs:
+      player_name:
+        description: 'Nome e Cognome del giocatore da cercare'
+        required: true
+        type: string
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium
+
+      - name: Run script
+        run: python scripts/fetch_fitp.py "${{ github.event.inputs.player_name }}"
+
+      - name: Commit and push result
+        run: |
+          git config --global user.name "GitHub Actions Bot"
+          git config --global user.email "actions@github.com"
+          git add risultato_giocatore.json
+          git commit -m "Aggiornato risultato per ${{ github.event.inputs.player_name }}" || echo "Nessuna modifica da committare"
+          git push
