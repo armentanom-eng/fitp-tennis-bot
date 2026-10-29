@@ -1,6 +1,20 @@
 {
-    "report_data": "29/10/2026 16:35",
+    "report_data": "29/10/2026 22:56",
     "tornei": [
+        {
+            "nome": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
+            "data": "29/10/2026",
+            "partite": [
+                "29/10/2026; 00:00; No. Campo 1 Campo 2 Campo 5 Campo 6",
+                "29/10/2026; 14:00; 1 RUGGIERO PICCI GIORGIO vs BOLLERO ENRICO",
+                "29/10/2026; 16:00; 1 VARIA ALBERTO vs ROSI MICHELE Dopo debito riposo non prima delle Singolare Maschile Open; 1 RUGGIERO PICCI GIORGIO o BOLLERO ENRICO vs GUAZZONE MATTEO",
+                "29/10/2026; 17:00; MARCO vs NANNI VALTER Non prima delle Singolare Maschile Open; 1 LUNGU NICOLAS ANDREI vs CONTI JACOPO",
+                "29/10/2026; 18:00; 1 MINUTOLO GIANLUCA vs VARIA ALBERTO o ROSI MICHELE",
+                "29/10/2026; 19:00; 1 FIORE CARLO vs TORMEN LUCA Dopo debito riposo non prima delle Singolare Maschile Open; 1 PILLA LUCA vs CALI",
+                "29/10/2026; 20:00; 1 LUNGU NICOLAS ANDREI o CONTI JACOPO vs BANI DANIELE Non prima delle Singolare Maschile Open; 1 MECHELLI YURI vs TERZINO ALESSIO",
+                "29/10/2026; 21:00; 1 GALLI DANIELE vs FIORE CARLO o TORMEN LUCA Non prima delle Singolare Maschile Open; 1 MONTANARO JACOPO vs GRANDONE ANDREA Non prima delle Singolare Maschile Open; 1 GUARALDI DANIELE vs NINFADORO ENRICO Non prima delle Singolare Maschile Open; 1 PERLA GIANLUCA vs FUCILE DOMENICO FABIO"
+            ]
+        },
         {
             "nome": "RODEO III E II CAT. (3.5-2.1) - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 64 MASCHILE E TAB A 32 FEMMINILE",
             "data": "29/10/2026",
@@ -18,54 +32,18 @@
             ]
         },
         {
-            "nome": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
-            "data": "29/10/2026",
-            "partite": [
-                "29/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
-                "29/10/2026; 18:00; 1 Inizio  Singolare Maschile Open PERRI ANDREA vs CESARETTI LEONARDO Inizio  Singolare Maschile Open PAIELLA LORENZO vs VANGI GIANPAOLO Inizio  Singolare Maschile Open LUMERA GABRIELE vs CASAVOLA PRATI RICCARDO",
-                "29/10/2026; 19:30; 2 Non prima delle Singolare Maschile Open GIAMMARIONI FEDERICO vs ROSELLI ALEX Non prima delle Singolare Maschile Open ARMELLIN FEDERICO vs BAIA ALESSANDRO Non prima delle Singolare Maschile Open FUSARI EDOARDO vs ARAGONA JACOPO Non prima delle Singolare Femminile Open SPERATI GIULIA vs DOVERI VICTORIA Non prima delle Singolare Maschile Open DE LUCA LORENZO vs BONACINA GIULIO Dopo debito riposo non prima delle Singolare Maschile Open BEDIN DANIELE vs MOSILLO ALESSANDRO Inizio  Singolare Maschile Open LEONI EDOARDO vs MONTANARO FRANCESCO Inizio  Singolare Femminile Open LODI ANGELICA vs SLAV MARTINA Inizio  Singolare Femminile Open ALIBERTINI BENEDETTA vs RIELA SOFIA Inizio  Singolare Femminile Open ROCCHI SABRINA vs INZEO SOFIA",
-                "29/10/2026; 20:30; 3 Non prima delle Singolare Femminile Open DI BISCEGLIA NICOLE vs ROSAPEPE SILVIA Non prima delle Singolare Femminile Open IVAN ALEXANDRA vs BORELLI GAIA Non prima delle Singolare Maschile Open GIULIANO MATTEO CROCIFISSO vs MANGONI FEDERICO Non prima delle Singolare Femminile Open AGOSTINI ELISABETTA vs D; ALESSANDRO MARIA Non prima delle Singolare Maschile Open ARULLANI AUGUSTO vs BORGONUOVO GIULIO Non prima delle Singolare Maschile Open ORLANDI EDOARDO vs GALLI FRANCESCO Inizio  Singolare Femminile Open SATEANU FRANCESCA vs FINI MARTINA Non prima delle Singolare Maschile Open RUSCIO RUBEN vs CAPOROSSI DANIELE Non prima delle Singolare Femminile Open AVENIA GIORGIA vs CORICELLI FRANCESCA Non prima delle Singolare Femminile Open TRIBERTI FLAVIA o FARSETTI SOFIA vs PETROTTA VITTORIA",
-                "29/10/2026; 22:00; 4 Non prima delle Singolare Maschile Open BRANDELLI ANDREA vs BISCEGLIE FRANCESCO Non prima delle Singolare Maschile Open TARTAGLIA MATTIA SALVATORE vs SPAZIANI CHRISTIAN Non prima delle Singolare Femminile Open CIANCHI ILARIA vs DI MATTEO ALICE Non prima delle Singolare Femminile Open RATTI GIORGIA vs DE LEO MARTINA",
-                "29/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC(VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493) FORUM SC (VIA CORNELIA 493)",
-                "29/10/2026; 20:00; 1 Inizio  Singolare Maschile Open SOROKATYY ANDREA vs ZOCCOLI GIACOMO Inizio  Singolare Maschile Open MARCHETTI LORENZO vs CERULLO DAVIDE Inizio  Singolare Maschile Open ESPOSITO MATTIA vs NASCHI ALESSANDRO Non prima delle Singolare Maschile Open CARINCI DAVIDE vs SPAGNUOLO PIERFRANCESCO Non prima delle Singolare Maschile Open RIZZO MATTEO vs DI MARTINO NICCOLO; CARLO Inizio  Singolare Maschile Open LANCIERI FILIPPO vs RUGGERONE SIMONE Non prima delle Singolare Maschile Open DE LUCA EMANUELE vs GIUSTINIANI EDOARDO Inizio  Singolare Maschile Open DI STEFANO MARCO vs TRINCHIERI CESARE Inizio  Singolare Femminile Open ANGELILLI ARIANNA vs URSINI MICHELA Inizio  Singolare Femminile Open PERRONE NICOLE vs POLANO NICOLE",
-                "29/10/2026; 21:30; 2 Non prima delle Singolare Maschile Open BARBUTO FABIO vs SORRENTINO PAOLO Non prima delle Singolare Maschile Open CATALUDDI MICHELE vs CERVELLI MARCO Non prima delle Doppio Maschile Open PROIETTO ALESSANDRO; PELLEGRINI PERRONE ANDREA vs ORFINI VALERIO",
-                "29/10/2026; 00:00; No. FORUM SC (VIA CORNELIA 493)",
-                "29/10/2026; 21:00; 1 Inizio  Singolare Maschile Open MEI TOMMASO vs FORNARI SIMONE"
-            ]
-        },
-        {
-            "nome": "VILLA AURELIA SPORTING CLUB - TORNEO SERALE OPEN LIM. 2.6 - SINGOLI E DOPPI - ULTIMISSIMI PUNTI VALIDO PER CLASSIFICHE 2026- VIA DEI BEVILACQUA 41, 00163 ROMA RM",
+            "nome": "RODEO III E II CAT. (3.5-2.1) - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 64 MASCHILE E TAB A 32 FEMMINILE",
             "data": "30/10/2026",
             "partite": [
-                "30/10/2026; 00:00; No. Campo A (CENTRALE) CAMPO B CAMPO C CAMPO D CAMPO E CAMPO F CAMPO G CAMPO H CAMPO I CAMPO L",
-                "30/10/2026; 18:00; 1 Inizio  Singolare Maschile Open LEONI EDOARDO o MONTANARO FRANCESCO vs LUMERA GABRIELE o CASAVOLA PRATI RICCARDO Inizio  Singolare Maschile Open GIULIANO MATTEO CROCIFISSO o MANGONI FEDERICO vs PERRI ANDREA o CESARETTI LEONARDO Inizio  Singolare Femminile Open CORICELLI FRANCESCA vs LODI ANGELICA o SLAV MARTINA",
-                "30/10/2026; 19:30; 2 Non prima delle Singolare Maschile Open BEDIN DANIELE o MOSILLO ALESSANDRO vs PARINI MASSIMILIANO Non prima delle Singolare Femminile Open CIANCHI ILARIA o DI MATTEO ALICE vs SATEANU FRANCESCA o FINI MARTINA Non prima delle Singolare Femminile Open ROCCHI SABRINA o INZEO SOFIA vs TOZZI MARTINA Inizio  Singolare Maschile Open RUSCIO RUBEN o CAPOROSSI DANIELE vs BRANDELLI ANDREA o BISCEGLIE FRANCESCO Inizio  Singolare Maschile Open SOROKATYY ANDREA o ZOCCOLI GIACOMO vs TARTAGLIA MATTIA SALVATORE o SPAZIANI CHRISTIAN Inizio  Singolare Femminile Open BASTIANINI CATERINA vs CHIURAZZI THI LAN Inizio  Singolare Maschile Open GIAMMARIONI FEDERICO o ROSELLI ALEX vs FUSARI EDOARDO o ARAGONA JACOPO Inizio  Singolare Maschile Open ARMELLIN FEDERICO o BAIA ALESSANDRO vs PAIELLA LORENZO o VANGI GIANPAOLO Inizio  Singolare Femminile Open PERRONE NICOLE o POLANO NICOLE vs GURGHEAN REBECCA Inizio  Singolare Maschile Open DE LUCA LORENZO o BONACINA GIULIO vs LANCIERI FILIPPO o RUGGERONE SIMONE",
-                "30/10/2026; 20:30; 3 Non prima delle Singolare Femminile Open PERRONE MARTINA vs DOVERI VICTORIA Non prima delle Singolare Maschile Open PECCI MATTEO vs SANTORO FRANCESCO Non prima delle Singolare Femminile Open DI BISCEGLIA NICOLE o ROSAPEPE SILVIA vs IVAN ALEXANDRA o BORELLI GAIA Dopo debito riposo non prima delle Singolare Femminile Open DI MATTEO ALICE vs BONAIUTI GIULIA Non prima delle Singolare Femminile Open FARSETTI SOFIA o PETROTTA VITTORIA vs RATTI GIORGIA o DE LEO MARTINA Non prima delle Singolare Maschile Open ARULLANI AUGUSTO o BORGONUOVO GIULIO vs ORLANDI EDOARDO o GALLI FRANCESCO Non prima delle Singolare Femminile Open RATTI GIORGIA vs DORMI ALEXANDRA Non prima delle Singolare Maschile Open GIORGIERI PAOLO vs MARCHETTI LORENZO o CERULLO DAVIDE Non prima delle Doppio Femminile Open MORICI ELISABETTA; DE PERINI ALESSANDRA vs PIRRONE BIANCA; SENIA MARIAELENA Non prima delle Singolare Femminile Open ALIBERTINI BENEDETTA o RIELA SOFIA vs AGOSTINI ELISABETTA o D",
-                "30/10/2026; 22:00; CARLO vs ZANNOTTI MARZIO; TARANTELLI CARLO vs PACELLI LUCA; TARTAGLIA MATTIA SALVATORE Dopo debito riposo non prima delle Singolare Femminile Open DORMI AMALIA vs CORICELLI FRANCESCA Non prima delle Singolare Maschile Open ESPOSITO MATTIA o NASCHI ALESSANDRO vs BERTOLLINI LEONARDO Dopo debito riposo non prima delle Doppio Maschile Open FIASTRI FILIPPO; MOSILLO ALESSANDRO vs SPAGNUOLO PIERFRANCESCO"
-            ]
-        },
-        {
-            "nome": "CAMPIONATI REGIONALI ASSOLUTI \"MEMORIAL GAETANO CALTAGIRONE\"",
-            "data": "29/10/2026",
-            "partite": [
-                "29/10/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5",
-                "29/10/2026; 14:00; 1 Inizio  Singolare Maschile Open CARRARO LUCIANO vs MARENA KELVIN Inizio  Singolare Maschile Open MORONI GIAN MARCO vs MINIGHINI DANIELE Inizio  Singolare Maschile Open IGNOTO RICCARDO vs FERRARI FRANCESCO Inizio  Singolare Femminile Open GARAVELLI MARIA VITTORIA vs NATALI MARIANNA",
-                "29/10/2026; 16:00; 2 Non prima delle Singolare Maschile Open DE FILIPPO GIAN ROCCO vs MICELI ROBERTO Non prima delle Singolare Femminile Open CASCIA BIANCA vs MAIS GAIA Non prima delle Singolare Femminile Open DI SAURO LUDOVICA vs PESCETELLI CHIARA Non prima delle Doppio Maschile Open RUSSANO LORENZO; MINIGHINI DANIELE vs SELLI MATTIA",
-                "29/10/2026; 18:00; CERASI ALESSANDRO vs MICELI ROBERTO; ROSSOLINO SIMONE vs IGNOTO RICCARDO; VIGGIANI DIANA vs TERZOLI BENEDETTA; LA PIANA JACOPO vs FERRARI FRANCESCO; FARSETTI SOFIA vs MAIS GAIA"
-            ]
-        },
-        {
-            "nome": "RODEO IV CAT. - ROMA SUD - CT APPIA COUNTRY - VALIDO PER CLASSIFICHE 2026 - TAB A 32 MASCHILE E TAB A 16 FEMMINILE",
-            "data": "29/10/2026",
-            "partite": [
-                "29/10/2026; 00:00; No. Campo 1 Campo 2 Campo 5 Campo 6",
-                "29/10/2026; 14:00; 1 RUGGIERO PICCI GIORGIO vs BOLLERO ENRICO",
-                "29/10/2026; 16:00; 1 VARIA ALBERTO vs ROSI MICHELE Dopo debito riposo non prima delle Singolare Maschile Open; 1 RUGGIERO PICCI GIORGIO o BOLLERO ENRICO vs GUAZZONE MATTEO",
-                "29/10/2026; 17:00; MARCO vs NANNI VALTER Non prima delle Singolare Maschile Open; 1 LUNGU NICOLAS ANDREI vs CONTI JACOPO",
-                "29/10/2026; 18:00; 1 MINUTOLO GIANLUCA vs VARIA ALBERTO o ROSI MICHELE",
-                "29/10/2026; 19:00; 1 FIORE CARLO vs TORMEN LUCA Dopo debito riposo non prima delle Singolare Maschile Open; 1 PILLA LUCA vs CALI",
-                "29/10/2026; 20:00; 1 LUNGU NICOLAS ANDREI o CONTI JACOPO vs BANI DANIELE Non prima delle Singolare Maschile Open; 1 MECHELLI YURI vs TERZINO ALESSIO",
-                "29/10/2026; 21:00; 1 GALLI DANIELE vs FIORE CARLO o TORMEN LUCA Non prima delle Singolare Maschile Open; 1 MONTANARO JACOPO vs GRANDONE ANDREA Non prima delle Singolare Maschile Open; 1 GUARALDI DANIELE vs NINFADORO ENRICO Non prima delle Singolare Maschile Open; 1 PERLA GIANLUCA vs FUCILE DOMENICO FABIO"
+                "30/10/2026; 00:00; No. Campo 3 Campo 4 Campo 2 Campo 1",
+                "30/10/2026; 14:30; 1 BROGI GINEVRA vs VITAGLIANO KSENIA Inizio  Singolare Femminile Open; MARIA vs FERDINANDI ADELAIDE Inizio  Singolare Femminile Open; 1 MARINELLI SIBILLA vs BERNAS JOANNA MARIA Inizio  Singolare Femminile Open; 1 PEPTANARU RIHANNA vs D",
+                "30/10/2026; 15:30; 1 TARTAGLIA MATTIA SALVATORE vs TRENTADUE FRANCESCO Non prima delle Singolare Maschile Open; 1 DE TOMMASO FLAVIO vs UGRAN ERIC CRISTIAN Non prima delle Singolare Maschile Open; 1 GALLUSI EDOARDO vs GIORGIERI PAOLO Non prima delle Singolare Maschile Open; 1 GIULIANO MATTEO CROCIFISSO vs GALLI FRANCESCO",
+                "30/10/2026; 16:30; 1 RUGGIERI ELISA vs BROGI GINEVRA o VITAGLIANO KSENIA Dopo debito riposo non prima delle Singolare Femminile Open; 1 MARINELLI SIBILLA o BERNAS JOANNA MARIA vs PARRA MANCERA ELENA Non prima delle Singolare Maschile Open; 1 LO IACONO BRUNO IKE vs CIARCIA FEDERICO Non prima delle Singolare Maschile Open; 1 RIZZO MATTEO vs MASTROMARINO ALESSANDRO",
+                "30/10/2026; 17:30; 1 ARMELLIN FEDERICO vs TARTAGLIA MATTIA SALVATORE o TRENTADUE FRANCESCO Non prima delle Singolare Maschile Open; 1 BONOMI JIN YAN vs VITTORI FILIP Dopo debito riposo non prima delle Singolare Maschile Open; 1 VITIELLO GIANMARCO vs GALLUSI EDOARDO o GIORGIERI PAOLO Dopo debito riposo non prima delle Singolare Maschile Open; 1 DE TOMMASO FLAVIO o UGRAN ERIC CRISTIAN vs GIULIANO MATTEO CROCIFISSO o GALLI FRANCESCO",
+                "30/10/2026; 18:30; 1 MUSSET SIMON LUIS vs SILCHUK DANYLO Dopo debito riposo non prima delle Singolare Maschile Open; 1 LO IACONO BRUNO IKE o CIARCIA FEDERICO vs RIZZO MATTEO o MASTROMARINO ALESSANDRO Non prima delle Singolare Maschile Open; 1 CARRARETTO LEONARDO vs GALLUSI GIORGIO",
+                "30/10/2026; 19:00; 1 BONOMI JIN YAN o VITTORI FILIP vs LORETO MARTINEZ MAXIMO ALEJANDRO",
+                "30/10/2026; 20:00; 7 Dopo debito riposo non prima delle Singolare Maschile Open - LIM 3.5 - 2.1 MUSSET SIMON LUIS o SILCHUK DANYLO",
+                "30/10/2026; 00:00; vs CIAMPA CARLO"
             ]
         },
         {
@@ -78,28 +56,12 @@
             ]
         },
         {
-            "nome": "\"LAST POINT FITP\" 2^ EDIZIONE LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
-            "data": "29/10/2026",
-            "partite": [
-                "29/10/2026; 00:00; No. CAMPO PRINCIPALE CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 4 CAMPO 5 CAMPO 6",
-                "29/10/2026; 13:00; 1 Inizio  Singolare Femminile Open POLITO MANUELA vs COLETTA LAURA Inizio  Singolare Femminile Open TAGLIA GIORGIA vs PEDERSEN EVA KRISTIN URESTAD Inizio  Singolare Maschile Open NERVI ANDREA vs MARCELLI GIORGIO Inizio  Singolare Maschile Open PANVINI LUCA vs PADIGLIONE MARIO Inizio  Singolare Maschile Open SIMONI STEFANO vs MASTRACCI MARCO Inizio  Singolare Maschile Open CORSO PIETRO vs COLONNA MARCO Inizio  Singolare Maschile Open MANFREDI FRANCESCO vs DI FEDERICO MATTIA",
-                "29/10/2026; 14:30; 2 Non prima delle Singolare Femminile Open FUSANI CLAUDIA vs SODANI GIORGIA Non prima delle Singolare Femminile Open AGOSTINI ELISABETTA vs MARINELLI SIBILLA Non prima delle Singolare Maschile Open MAZZENGA MARCO vs DELLATTE RENATO Non prima delle Singolare Maschile Open BARBA FRANCESCO vs DE ANGELIS BENEDETTO Non prima delle Singolare Maschile Open LUCENTE DAVIDE vs CINTI ANDREA Non prima delle Singolare Maschile Open SENATORE ENRICO vs FIASTRI FILIPPO",
-                "29/10/2026; 16:00; 3 Non prima delle Singolare Maschile Open CUCURACHI FLAVIO vs CURTU ANDREA Non prima delle Singolare Maschile Open CONTESSA LEONARDO vs GIUSTINIANI EDOARDO Non prima delle Singolare Maschile Open PACIUCCI PIETRO vs TESSE TOMMASO Non prima delle Singolare Maschile Open SAPONARO UGO vs AMICO MARIO Non prima delle Singolare Maschile Open FRANGI PATRIZIO vs MELITO LEONARDO",
-                "29/10/2026; 17:30; 4 Non prima delle Singolare Maschile Open CIAFFI LUCA vs PANICCIA ALESSIO Non prima delle Singolare Maschile Open GABRIELE ALESSANDRO vs MARZO FRANCESCO Non prima delle Singolare Maschile Open TOLFA VALERIO vs CESARINI LORENZO Non prima delle Singolare Femminile Open D; AMICO GIULIANA MARIA vs GIACCHETTI NICOLE Non prima delle Singolare Maschile Open MASTRACCI MARCO vs ARCIERI MATTEO",
-                "29/10/2026; 19:00; 5 Non prima delle Singolare Femminile Open SABATINI SOFIA vs POLICI ADELE Non prima delle Singolare Maschile Open NANNI EDOARDO vs SALVATI FRANCESCO Non prima delle Singolare Maschile Open ZAPPA GABRIELE vs DE GRISOGONO GIORGIO MARIA Non prima delle Singolare Maschile Open QUINZI CRISTIANO vs GARUTI EMILIANO"
-            ]
-        },
-        {
-            "nome": "\"LAST POINT FITP\" 2^ EDIZIONE LIM 3.1 M/F (ULTIMI PUNTI PER LE CLASSIFICHE 2027)",
+            "nome": "MASTER ATP LAZIO TOUR 2026 - SINGOLARE M/F",
             "data": "30/10/2026",
             "partite": [
-                "30/10/2026; 00:00; No. CAMPO PRINCIPALE CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 4 CAMPO 5 CAMPO 6",
-                "30/10/2026; 13:00; 1 Inizio  Singolare Maschile Open QUINZI CRISTIANO o GARUTI EMILIANO vs TROPIANO FABRIZIO MARIA Inizio  Singolare Maschile Open LUCENTE DAVIDE vs ROMUSSI ALESSANDRO Inizio  Singolare Maschile Open FRANGI PATRIZIO o MELITO LEONARDO vs ALOISIO MICHELE",
-                "30/10/2026; 14:30; 2 Non prima delle Singolare Maschile Open MAZZENGA MARCO vs TROIANI MASSIMILIANO Non prima delle Singolare Maschile Open CECCAGNOLI RICCARDO vs CONTESSA LEONARDO o GIUSTINIANI EDOARDO Non prima delle Singolare Maschile Open PALMA MASSIMILIANO vs PACIUCCI PIETRO o TESSE TOMMASO",
-                "30/10/2026; 16:00; 3 Non prima delle Singolare Maschile Open MANFREDI FRANCESCO vs SIMONI STEFANO Non prima delle Singolare Maschile Open CORSO PIETRO vs PADIGLIONE MARIO",
-                "30/10/2026; 17:30; 4 Inizio  Singolare Maschile Open LUPPINO LORENZO vs DE ANGELIS BENEDETTO Non prima delle Singolare Femminile Open SODANI GIORGIA vs POLITO MANUELA Non prima delle Singolare Maschile Open FARINA MARCO vs CIAFFI LUCA o PANICCIA ALESSIO Non prima delle Singolare Maschile Open FIASTRI FILIPPO vs LANZETTA DIEGO Non prima delle Singolare Maschile Open SAPONARO UGO o AMICO MARIO vs PIACENTI VALERIO Non prima delle Singolare Maschile Open MARZO FRANCESCO vs MICARELLI GIANLUCA",
-                "30/10/2026; 19:00; 5 Non prima delle Singolare Maschile Open PARISI GIORGIO vs ZAPPA GABRIELE o DE GRISOGONO GIORGIO MARIA Non prima delle Singolare Maschile Open CESCHIN LEONARDO vs TOLFA VALERIO o CESARINI LORENZO",
-                "30/10/2026; 20:30; 6 Non prima delle Singolare Maschile Open CARBONE PIERO vs CUCURACHI FLAVIO o CURTU ANDREA Non prima delle Singolare Maschile Open MASTRACCI MARCO o ARCIERI MATTEO vs MARTINO FRANCESCO Non prima delle Singolare Maschile Open BALDI ALESSIO vs NANNI EDOARDO o SALVATI FRANCESCO Non prima delle Singolare Femminile Open MARINELLI SIBILLA vs SABATINI SOFIA o POLICI ADELE Non prima delle Singolare Femminile Open TAGLIA GIORGIA vs D"
+                "30/10/2026; 00:00; No. Campo centrale Campo 2 Campo 3",
+                "30/10/2026; 13:00; 3 GUARALDI DANIELE vs SCARABOTTI MASSIMILIANO",
+                "30/10/2026; 19:00; 3 CIASCHI BENEDETTA vs GRECO ALESSANDRA Non prima delle Singolare Femminile Open; 3 CELLI TERESA vs FANUELE CHIARA Non prima delle Singolare Femminile Open; 6 PELLUMBI ARIANNA vs ELEUTERI ASIA"
             ]
         }
     ]
