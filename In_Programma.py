@@ -12,7 +12,7 @@ CATEGORIES = {
 BASE_URL = "https://www.fitp.it/Tornei/Ricerca-tornei"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione WEB (Tornei 'In Programma') ---")
+    print("--- [START] Avvio estrazione WEB (Tornei 'In Programma' - Resiliente) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True, args=["--no-sandbox"])
         page = await browser.new_page()
@@ -23,8 +23,21 @@ async def run_bot():
             print(f"\n>>> Elaborazione categoria: {cat_id}")
             dati_categoria = {"tornei": []}
             
-            await page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
-            await page.wait_for_load_state("networkidle", timeout=30000)
+            # Apertura pagina principale con retry
+            successo_avvio = False
+            for t_avvio in range(3):
+                try:
+                    await page.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+                    await page.wait_for_load_state("networkidle", timeout=30000)
+                    successo_avvio = True
+                    break
+                except Exception as e:
+                    print(f"-> [Warning] Tentativo {t_avvio+1} apertura BASE_URL fallito: {e}")
+                    await asyncio.sleep(5)
+            
+            if not successo_avvio:
+                print(f"-> [Errore] Impossibile raggiungere {BASE_URL}. Salto categoria.")
+                continue
             
             # --- 1. FILTRI BASE ---
             print("-> Seleziono Stato: In programma...")
@@ -44,7 +57,7 @@ async def run_bot():
             
             # --- IMPOSTAZIONE DATA INIZIO (OGGI) E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
-            data_inizio = oggi.strftime("%d/%m/%Y") # Parte da oggi per i tornei futuri/in programma
+            data_inizio = oggi.strftime("%d/%m/%Y") 
             
             print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
             
@@ -102,9 +115,13 @@ async def run_bot():
             while True:
                 btn_load_more = page.locator("button#btn-loadMore")
                 if await btn_load_more.is_visible():
-                    await btn_load_more.click()
-                    await page.wait_for_load_state("domcontentloaded", timeout=30000)
-                    await asyncio.sleep(12)
+                    try:
+                        await btn_load_more.click()
+                        await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                        await asyncio.sleep(12)
+                    except:
+                        await asyncio.sleep(5)
+                        break
                 else:
                     break
             
@@ -114,19 +131,49 @@ async def run_bot():
             print(f"-> Trovati {len(urls)} tornei. Estrazione...")
             
             for url in urls:
+                full_torneo_url = f"https://www.fitp.it{url}"
+                
+                # Tentativo di apertura pagina torneo con retry
+                torneo_aperto = False
+                for t_pag in range(3):
+                    try:
+                        await page.goto(full_torneo_url, wait_until="domcontentloaded", timeout=60000)
+                        torneo_aperto = True
+                        break
+                    except Exception as e:
+                        print(f"    ! [Warning] Tentativo {t_pag+1} apertura torneo fallito: {e}")
+                        await asyncio.sleep(5)
+                
+                if not torneo_aperto:
+                    print(f"    ! [Errore] Impossibile caricare il torneo dopo 3 tentativi. Salto.")
+                    continue
+                
                 try:
-                    await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded", timeout=60000)
-                    if await page.locator("text=non e' al momento disponibile").is_visible(): continue
+                    if await page.locator("text=non e' al momento disponibile").is_visible(): 
+                        continue
                     
                     count = await page.locator("text=Dettaglio >").count()
                     for i in range(count):
-                        await page.goto(f"https://www.fitp.it{url}", wait_until="domcontentloaded", timeout=60000)
+                        # Ri-navighiamo alla pagina del torneo per sicurezza prima di cliccare ogni dettaglio
+                        await page.goto(full_torneo_url, wait_until="domcontentloaded", timeout=60000)
                         btn = page.locator("text=Dettaglio >").nth(i)
                         
                         if await btn.is_visible():
-                            await btn.click(force=True)
-                            await page.wait_for_load_state("domcontentloaded", timeout=30000)
-                            await asyncio.sleep(4)
+                            # Clic sul dettaglio protetto da tentativi
+                            cliccato = False
+                            for t_click in range(3):
+                                try:
+                                    await btn.click(force=True)
+                                    await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                                    await asyncio.sleep(4)
+                                    cliccato = True
+                                    break
+                                except Exception as e:
+                                    print(f"    ! [Warning] Tentativo {t_click+1} click Dettaglio fallito: {e}")
+                                    await asyncio.sleep(3)
+                            
+                            if not cliccato:
+                                continue
                             
                             categoria = await page.locator("h1.cc-title-main").first.text_content()
                             tabellone_el = page.locator("span#spn-tournament-description")
