@@ -1,20 +1,548 @@
 {
-    "report_data": "30/10/2026 14:12",
     "tornei": [
         {
-            "nome": "5° RODEO LIM 3.1",
-            "data": "31/10/2026",
-            "partite": [
-                "31/10/2026; 00:00; No. Campo 1 (Principale) Campo 2 Campo 3 Campo 4",
-                "31/10/2026; 13:00; 1 Inizio  Singolare Maschile Open PALMIERI GIUSEPPE FEDERICO vs GIOVINAZZO VINCENZO Inizio  Singolare Maschile Open XU FENG vs LAVAGNINI CLAUDIO Inizio  Singolare Maschile Open BRUNI ALESSIO vs MANCINELLI MARCO Inizio  Singolare Maschile Open LONGO STEFANO vs CIRAFICI SALVATORE",
-                "31/10/2026; 14:00; 2 Dopo debito riposo non prima delle Singolare Maschile Open GRIMALDI DAVIDE vs PALMIERI GIUSEPPE FEDERICO o GIOVINAZZO VINCENZO Dopo debito riposo non prima delle Singolare Maschile Open PRIOLO PIERANDREA vs XU FENG o LAVAGNINI CLAUDIO Non prima delle Singolare Maschile Open BOLLERO ENRICO vs VASER FRANCESCO",
-                "31/10/2026; 15:00; 3 Dopo debito riposo non prima delle Singolare Maschile Open GRIMALDI DAVIDE o PALMIERI GIUSEPPE FEDERICO o GIOVINAZZO VINCENZO vs BRUNI ALESSIO o MANCINELLI MARCO Dopo debito riposo non prima delle Singolare Maschile Open MELIS GIORGIO vs LONGO STEFANO o CIRAFICI SALVATORE Dopo debito riposo non prima delle Singolare Maschile Open PRIOLO PIERANDREA o XU FENG o LAVAGNINI CLAUDIO vs BOLLERO ENRICO o VASER FRANCESCO Non prima delle Singolare Maschile Open SOLDATI LUCIANO vs PINTA LEONARDO",
-                "31/10/2026; 16:00; 4 Non prima delle Singolare Maschile Open FURINA VALENTINO vs LUCIANI ANDREA Dopo debito riposo non prima delle Singolare Maschile Open TRENTALANCE VANNI vs PRIOLO PIERANDREA o XU FENG o LAVAGNINI CLAUDIO o BOLLERO ENRICO o VASER FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Open GUAZZONE MATTEO vs MELIS GIORGIO o LONGO STEFANO o CIRAFICI SALVATORE Dopo debito riposo non prima delle Singolare Maschile Open SAMELA RICCARDO vs GRIMALDI DAVIDE o PALMIERI GIUSEPPE FEDERICO o GIOVINAZZO VINCENZO o BRUNI ALESSIO o MANCINELLI MARCO",
-                "31/10/2026; 17:00; 5 Non prima delle Singolare Maschile Open RICCI EMANUELE vs CUPINI FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Open FORTUNATI JACOPO vs SAMELA RICCARDO o GRIMALDI DAVIDE o PALMIERI GIUSEPPE FEDERICO o GIOVINAZZO VINCENZO o BRUNI ALESSIO o MANCINELLI MARCO Dopo debito riposo non prima delle Singolare Maschile Open GUAGNI CARLO vs GUAZZONE MATTEO o MELIS GIORGIO o LONGO STEFANO o CIRAFICI SALVATORE Dopo debito riposo non prima delle Singolare Maschile Open SOLDATI LUCIANO o PINTA LEONARDO vs CORINALDESI ALESSANDRO",
-                "31/10/2026; 18:00; 6 Dopo debito riposo non prima delle Singolare Maschile Open BOZZO ADRIANO vs TRENTALANCE VANNI o PRIOLO PIERANDREA o XU FENG o LAVAGNINI CLAUDIO o BOLLERO ENRICO o VASER FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Open FURINA VALENTINO o LUCIANI ANDREA vs CORVAGLIA ALESSIO Dopo debito riposo non prima delle Singolare Maschile Open FORTUNATI JACOPO o SAMELA RICCARDO o GRIMALDI DAVIDE o PALMIERI GIUSEPPE FEDERICO o GIOVINAZZO VINCENZO o BRUNI ALESSIO o MANCINELLI MARCO vs RICCI EMANUELE o CUPINI FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Open GUAGNI CARLO o GUAZZONE MATTEO o MELIS GIORGIO o LONGO STEFANO o CIRAFICI SALVATORE vs SOLDATI LUCIANO o PINTA LEONARDO o CORINALDESI",
-                "31/10/2026; 00:00; ALESSANDRO",
-                "31/10/2026; 00:00; ALESSANDRO",
-                "31/10/2026; 19:00; 7 Dopo debito riposo non prima delle Singolare Maschile Open BOZZO ADRIANO o TRENTALANCE VANNI o PRIOLO PIERANDREA o XU FENG o LAVAGNINI CLAUDIO o BOLLERO ENRICO o VASER FRANCESCO vs FURINA VALENTINO o LUCIANI ANDREA o CORVAGLIA ALESSIO"
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5FABDC36-FF43-414A-8A5B-5B432404CE2D",
+            "categoria": "Ananda Primi Punti",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA NERVI4.NC",
+                "LORENZO COSTANZO4.5",
+                "PIERO FINOCCHI2.8",
+                "FRANCESCO CANDIDI3.3",
+                "FRANCESCO  COCCIONI 4.NC",
+                "SIMONE FAGNANI4.4",
+                "VALENTINO LICO4.NC",
+                "FABRIZIO SACCHI4.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5FABDC36-FF43-414A-8A5B-5B432404CE2D",
+            "categoria": "Ananda Primi Punti",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
+            "tabellone": "Singolare Femminile Open (LIM. 4.NC - 3.1)",
+            "iscritti": [
+                "CONCETTA CUNDO'4.2",
+                "MICHELLE ACCOLLI4.4",
+                "GIULIA PETRINI4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
+            "tabellone": "Singolare Maschile Open (LIM. 4.NC - 3.1)",
+            "iscritti": [
+                "GAETANO ZENO MIELE3.5",
+                "LORENZO LAUDATI4.NC",
+                "ADRIANO PETRIGNANI4.2",
+                "MARCO RANATI4.3",
+                "GABRIELE CIANNELLA4.NC",
+                "ANDREA NERVI4.NC",
+                "MARCO FINARELLI4.NC",
+                "MAURIZIO BALDI4.3",
+                "FLAVIO POZZI3.5",
+                "PAOLO ROSSI4.5",
+                "FRANCESCO MUSILLI4.1",
+                "PAOLO CAREDDU4.3",
+                "SIMONE TRIVELLI4.2",
+                "LUCA IOVANNITTI4.2",
+                "FABIO PELOSI4.3",
+                "LUDOVICO UNGARO4.NC",
+                "MATTEO ANGELUCCI4.6",
+                "MICHELANGELO ABAYA TAN4.NC",
+                "ACHILLE MARIA MARCHETTI3.1",
+                "DAVIDE GALIERO4.1",
+                "GIORGIO TELARICO4.3",
+                "RAFFAELE LIGUORI4.2",
+                "ARMANDO IERVOLINO4.1",
+                "ENRICO NINFADORO4.2",
+                "MAURIZIO BENINCASA4.2",
+                "FRANCESCO MARIA SIBIO4.5",
+                "VALERIO VENERANDO4.4",
+                "FRANCESCO MAROZZI4.5",
+                "ANTONIO LODICO4.6",
+                "MANUEL DOMINI4.3",
+                "LEONARDO MELITO3.3",
+                "ALESSANDRO CAMILLI4.1",
+                "RICCARDO BOSCARINO4.3",
+                "FILIPPO BOLLETTA3.5",
+                "LEONARDO ARMOCIDA4.5",
+                "FENG XU4.5",
+                "FRANCESCO LATTES4.1",
+                "MASSIMILIANO D'ANNA4.3",
+                "MARIO IANNOTTA3.4",
+                "MATTEO MARTINI4.3",
+                "FILIPPO LUPI4.1",
+                "DANIELE ARMOCIDA3.5",
+                "MASSIMO MARIA GIORGIO SERPE4.1",
+                "RICCARDO ROSI4.NC",
+                "DAVIDE ARCIONI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
+            "tabellone": "Doppio Femminile Open (LIM. 4.NC - 3.1)",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
+            "tabellone": "Doppio Maschile Open (LIM. 4.NC - 3.1)",
+            "iscritti": [
+                "LEONARDO ARMOCIDA4.5",
+                "DANIELE ARMOCIDA3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
+            "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
+            "tabellone": "Doppio Misto Open (LIM. 4.NC - 3.1)",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F6EE6844-53F9-41B6-A76A-121A4D5B235E",
+            "categoria": "6° Rodeo Lim 3.1",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "GIULIA PETRINI4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=F6EE6844-53F9-41B6-A76A-121A4D5B235E",
+            "categoria": "6° Rodeo Lim 3.1",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "LUIGI FORTE4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=AE230212-C64D-46D7-86E0-FA361121522D",
+            "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MANUEL DOMINI4.3",
+                "ANDREA FUNARO4.1",
+                "MASSIMILIANO D'ANNA4.3",
+                "ADRIANO PETRIGNANI4.2",
+                "ANDREA NERVI4.NC",
+                "MARCO RANATI4.3",
+                "GABRIELE CIANNELLA4.NC",
+                "JACOPO BOSCHETTI4.2",
+                "FRANCESCO CUPINI4.1",
+                "MARCO CIOTOLA4.NC",
+                "PAOLO CORONGIU4.1",
+                "ENRICO NINFADORO4.2",
+                "FABRIZIO FABRIZI4.4",
+                "FRANCESCO MARIA SIBIO4.5",
+                "LUCA AZIONETI4.2",
+                "RICCARDO BOSCARINO4.3",
+                "LUIGI GENOVA4.5",
+                "ALESSANDRO ROSSETTI4.2",
+                "ALESSANDRO PASTORE4.2",
+                "MATTEO  CHIUSURI 4.3",
+                "MIRKO VALLIFUOCO4.NC",
+                "SALVATORE VACCA4.3",
+                "MATTIA COLOMBO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=AE230212-C64D-46D7-86E0-FA361121522D",
+            "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "LAURA BOZZA4.1",
+                "GIULIA PETRINI4.5",
+                "LAVINIA CHIRICO4.2",
+                "MANUELA PROVENZANO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=AE230212-C64D-46D7-86E0-FA361121522D",
+            "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "tabellone": "Doppio Maschile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=AE230212-C64D-46D7-86E0-FA361121522D",
+            "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "tabellone": "Doppio Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=AE230212-C64D-46D7-86E0-FA361121522D",
+            "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "tabellone": "Doppio Misto Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "categoria": "I tappa winter 34",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "MARTINA D'ASCENZO3.3",
+                "BIANCA PIRRONE3.3",
+                "PIA FAZI4.2",
+                "RACHELE DEGRASSI3.5",
+                "CECILIA EMMA GIANNINI3.5",
+                "MARIA SOLE LANCIA4.2",
+                "GIULIA SELLI4.2",
+                "LIVIA RICCIONI4.2",
+                "CATERINA VETTORELLI4.5",
+                "GIULIA VETTORELLI4.6",
+                "MIA DELVECCHIO4.5",
+                "GINEVRA PUCCINELLI3.5",
+                "OLIVIA DI IORIO4.2",
+                "IRIS CARMELA  MASSA4.2",
+                "LAURA BOZZA4.1",
+                "FRANCESCA PAGLIACCIA3.4",
+                "AMBRA PANZIRONI4.NC",
+                "GAIA CERRITI3.4",
+                "ALESSANDRA PIERETTI3.5",
+                "MELISSA LISNIC3.4",
+                "GINEVRA AURELI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "categoria": "I tappa winter 34",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ANDREA NERVI4.NC",
+                "LORENZO BENADUSI4.2",
+                "FILIPPO MARIA TRENTALANCE4.3",
+                "SALVATORE CHIRICO4.NC",
+                "GIANCARLO CAPECE4.2",
+                "SIMONE TRIVELLI4.2",
+                "CLAUDIO  BRUNI4.NC",
+                "MARCO PELUSO4.4",
+                "LUDOVICO LAMI3.5",
+                "ACHILLE MARIA MARCHETTI3.1",
+                "GIOVANNI ASCIUTTO4.NC",
+                "DINO RICCARDO MARIA GIARRUSSO4.1",
+                "DARIO VITUCCI4.NC",
+                "ANTONIO ACAMPORA3.4",
+                "EMANUELE AIELLO4.NC",
+                "LORENZO RICCIONI4.NC",
+                "CRISTIAN CAPOLA4.2",
+                "GIORGIO ZANARDI3.3",
+                "LORENZO FORNAI4.3",
+                "ANTONIO LODICO4.6",
+                "STEPHEN JOHN BURN-MURDOCH4.5",
+                "CRISTIAN GAROFALO3.5",
+                "PAOLO CAREDDU4.3",
+                "NICCOLO' BARONI3.5",
+                "ALESSIO TAMILIA4.3",
+                "MASSIMILIANO MONFORTE3.5",
+                "MATTEO ANGELUCCI4.6",
+                "RICCARDO D'OVIDIO4.1",
+                "ALESSANDRO TREVALE4.NC",
+                "LUCA INNISI3.1",
+                "MICHELANGELO CAPUA4.NC",
+                "GIORGIO TELARICO4.3",
+                "SERGIO PARISI4.4",
+                "RAFFAELE LIGUORI4.2",
+                "VITTORIO COLABELLA4.4",
+                "MARCO LE MURA3.5",
+                "MAURIZIO BENINCASA4.2",
+                "PHILIPPE LEON ERREDE4.2",
+                "MATTIA NAPOLI4.2",
+                "ANDREA DROZD4.4",
+                "STEFANO VECCHIONE4.2",
+                "LEONARDO MIZZONI3.2",
+                "SALVATORE CIRAFICI4.5",
+                "ELIANO ROMANI3.5",
+                "MICHELANGELO POGGI4.NC",
+                "VALERIO INZIRILLO3.4",
+                "ERMANNO DE ANGELIS4.5",
+                "MARK PETROSYAN3.4",
+                "GIANMARCO MAURO3.5",
+                "TOMMASO BELLI3.3",
+                "MAURIZIO FANELLI4.3",
+                "PIETRO SCALOPPINO4.NC",
+                "TIZIANO MORETTI3.3",
+                "AKASH SAMARASINGHALAGE3.3",
+                "ORLANDO TOWNSHEND4.1",
+                "PAOLO RAUCO4.3",
+                "ANDREA  IRTI4.2",
+                "LORENZO PERINELLI4.NC",
+                "FEDERICO ARMANDO BALDANZA4.4",
+                "MASSIMO MARIA GIORGIO SERPE4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "categoria": "I tappa winter 34",
+            "tabellone": "Doppio Maschile Open",
+            "iscritti": [
+                "MASSIMILIANO MONFORTE3.5",
+                "VALERIO INZIRILLO3.4",
+                "GIANMARCO MAURO3.5",
+                "PIERFRANCESCO MAURO4.1",
+                "NICCOLO' BARONI3.5",
+                "FRANCESCO QUINTIERI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "categoria": "I tappa winter 34",
+            "tabellone": "Doppio Femminile Open",
+            "iscritti": [
+                "GIULIA VETTORELLI4.6",
+                "MIA DELVECCHIO4.5",
+                "CECILIA EMMA GIANNINI3.5",
+                "DALIA MARIE ARMENTANO4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=667D72FA-14D8-4253-B5A8-3E4C08C772D1",
+            "categoria": "I tappa winter 34",
+            "tabellone": "Doppio Misto Open",
+            "iscritti": [
+                "CATERINA VETTORELLI4.5",
+                "PHILIPPE LEON ERREDE4.2",
+                "VALERIO INZIRILLO3.4",
+                "CARLOTTA VALERI3.3",
+                "OLIVIA DI IORIO4.2",
+                "ERMINIO DI IORIO4.NC",
+                "BIANCA PIRRONE3.3",
+                "NICCOLO' BARONI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D4AEFF08-3C91-4036-B633-FE26A3B1A480",
+            "categoria": "4^Cat. M/F \"Città di Grottaferrata\"",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "GIULIA PETRINI4.5",
+                "MARIA CLARA BACCHILEGA4.5",
+                "ELENA  ODDI4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D4AEFF08-3C91-4036-B633-FE26A3B1A480",
+            "categoria": "4^Cat. M/F \"Città di Grottaferrata\"",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "DAMIANO VINCIGUERRA4.NC",
+                "LORENZO  ZUCCHI4.4",
+                "FABRIZIO FABRIZI4.4",
+                "FEDERICO MATTIONI4.5",
+                "ADRIANO PETRIGNANI4.2",
+                "ELIA GATTA4.1",
+                "EMANUELE  ODDI4.3",
+                "MARCO TABARRI4.5",
+                "VINCENZO PARADISO4.NC",
+                "RICCARDO MONTI4.3",
+                "TIZIANO PISANELLI4.NC",
+                "ALBERTO  D'ARMINI4.NC",
+                "DAVIDE ARCIONI4.4",
+                "ANDREA NERVI4.NC",
+                "MATTEO MARCHETTI 4.4",
+                "LORENZO LAUDATI4.NC",
+                "GIANLUCA BATTISTI4.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=45F60F39-6BE1-4148-AF5F-5C0BE2AD519B",
+            "categoria": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "SOPHIA COSENZA 4.5",
+                "SIMONA MARSELLA4.3",
+                "SOFIA ROMAGNOLI4.6",
+                "ELISA KAROL CALAMITA4.2",
+                "MANUELA PROVENZANO4.3",
+                "CAROLA MANFREDONIA2.7"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
+            "categoria": "5° Rodeo Lim 3.1",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=C058376C-CD1F-4853-BB44-84D1966A3873",
+            "categoria": "5° Rodeo Lim 3.1",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "GAETANO ZENO MIELE3.5",
+                "GIORGIO MELIS4.3",
+                "VALENTINO  FURINA4.2",
+                "STEFANO LONGO4.5",
+                "JACOPO FORTUNATI4.1",
+                "EMANUELE RICCI4.1",
+                "MATTEO GUAZZONE4.2",
+                "MARCO MANCINELLI4.4",
+                "LEONARDO PINTA4.2",
+                "TOMMASO TESSE3.3",
+                "GIOVANNI SANSONE3.4",
+                "DAVIDE GRIMALDI4.4",
+                "SALVATORE CIRAFICI4.5",
+                "VANNI TRENTALANCE4.2",
+                "EMANUELE IMPERIO3.4",
+                "GABRIELE LULLI3.5",
+                "FRANCESCO CUPINI4.1",
+                "RICCARDO SAMELA4.2",
+                "ALESSIO BRUNI4.4",
+                "FENG XU4.5",
+                "ALESSANDRO CORINALDESI4.1",
+                "ALESSIO CORVAGLIA4.1",
+                "ADRIANO BOZZO4.1",
+                "ALESSANDRO TOSI3.5",
+                "ENRICO BOLLERO4.3",
+                "CARLO ANNECCHIARICO3.2",
+                "ANDREA LUCIANI4.2",
+                "CLAUDIO LAVAGNINI4.5",
+                "CARLO GUAGNI4.1",
+                "GIAMMARCO CORSETTI3.5",
+                "ALESSIO RUSSO3.5",
+                "VINCENZO GIOVINAZZO4.NC",
+                "FRANCESCO VASER4.3",
+                "PIERANDREA PRIOLO4.3",
+                "LUCIANO SOLDATI4.2",
+                "GIUSEPPE FEDERICO PALMIERI4.NC",
+                "FRANCESCO SALVATI3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ELIA GATTA4.1",
+                "LUCA IGNEO4.1",
+                "RAFFAELE LIGUORI4.2",
+                "ANDREA CHIATRONI4.3",
+                "RICCARDO MONTI4.3",
+                "ANDREA NERVI4.NC",
+                "FABRIZIO FABRIZI4.4",
+                "RICCARDO ROSI4.NC",
+                "MATTEO MARTINI4.3",
+                "MATTEO PALOMBI4.5",
+                "ALESSIO GATTA4.2",
+                "ALESSANDRO MUSOLINO4.4",
+                "EMANUELE  ODDI4.3",
+                "MASSIMO PERONTI4.NC",
+                "SILVANO TURCHINI4.5",
+                "DAMIANO RONGA4.NC",
+                "FLAVIO CROCETTI4.5",
+                "RICCARDO TIBUZZI4.1",
+                "LORENZO LAUDATI4.NC",
+                "RICCARDO QUARTULLI4.1",
+                "DAVIDE ARCIONI4.4",
+                "FEDERICO CORROPPOLI4.NC",
+                "FRANCESCO BALDASSARRE4.3",
+                "GABRIELE PELLEGRINI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ELENA  ODDI4.3",
+                "MARIA CLARA BACCHILEGA4.5",
+                "ALICE STRABIOLI4.5",
+                "ELISA KAROL CALAMITA4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "RICCARDO MONTI4.3",
+                "LEONARDO RONZANI3.5",
+                "FLAVIO CROCETTI4.5",
+                "ELIA GATTA4.1",
+                "RICCARDO TIBUZZI4.1"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "GIORGIA BALESTRA3.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MANUEL DOMINI4.3",
+                "FRANCESCO PUZZILLI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=A9C60896-CD33-4DE1-A2E9-984F794D9C64",
+            "categoria": "Torneo Rodeo Monteverde Club",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "MATTEO BRESSAN4.4",
+                "MATTIA BURALI D'AREZZO4.NC",
+                "ALBERTO ILARIONI4.NC",
+                "MARCO CIPELLI4.NC",
+                "GIAMPIERO DE ANDREIS4.NC",
+                "VALERIO MARRONARO4.5",
+                "MARIO BACCHINI4.6",
+                "DARIO PINO4.3",
+                "MARCO CIOTOLA4.NC",
+                "GIANLUCA NARDONI4.1",
+                "DIEGO ATTANASIO4.NC",
+                "LUCA CARIDI4.5",
+                "GABRIELE CIANNELLA4.NC",
+                "GIORGIO DARI4.NC",
+                "LUIGI FORTE4.NC",
+                "TIZIANO CAPPAI4.NC",
+                "ALESSIO AL CARAFFA4.5",
+                "MASSIMILIANO RICCELLI4.3",
+                "DAVIDE ROSSI4.2",
+                "MATTEO MONNI4.5",
+                "FEDERICO CORROPPOLI4.NC",
+                "GIANLUCA STEFANO ZANINI4.3",
+                "EMANUELE GRECO MIANI4.6",
+                "FABIO PELOSI4.3",
+                "MATTEO ANGELUCCI4.6",
+                "MATTEO MARENGO4.NC",
+                "ANDREA NASSO4.NC",
+                "MARCO  MAGGIANO4.NC",
+                "MICHELANGELO ABAYA TAN4.NC",
+                "MARCO GIUFFRIDA4.2",
+                "MICHELANGELO CAPUA4.NC",
+                "GIOVANNI  GRECO 4.4",
+                "LUCA DI MOLFETTA4.NC",
+                "ALESSANDRO MARRAS4.NC",
+                "FABIO GERLINI4.1",
+                "SALVATORE CIRAFICI4.5",
+                "MATTEO ARCHETTI4.3",
+                "MICHAEL TAGLIACOZZO4.3",
+                "MAURIZIO PARDINI4.2",
+                "CIRO LANGELLA4.NC",
+                "CORRADO MUNAFÒ4.5",
+                "ANDREA SOCCODATO4.NC",
+                "GIUSEPPE FEDERICO PALMIERI4.NC",
+                "ERMANNO DE ANGELIS4.5",
+                "BRUNO ROMPIETTI4.3",
+                "ALBERTO  D'ARMINI4.NC",
+                "TIZIANO PISANELLI4.NC",
+                "FABIO BUSETTI4.2",
+                "FABRIZIO MILAN4.6",
+                "FRANCESCO CASTIGLIONE4.3",
+                "VALENTINO VELLONE4.NC"
             ]
         }
     ]
