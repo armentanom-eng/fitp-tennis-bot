@@ -104,7 +104,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V12 - ANTI-TIMEOUT LUNGO] Avvio script bot_iscrizionicorsopdf.py ---")
+    print("--- [DEBUG DATE V13 - ULTRA RESILIENTE] Avvio script bot_iscrizionicorsopdf.py ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -117,7 +117,7 @@ async def run_bot():
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
             
-            # Apertura con tentativi per la pagina principale (timeout aumentati)
+            # Apertura con tentativi per la pagina principale
             successo_home = False
             for tentativo in range(3):
                 try:
@@ -135,7 +135,7 @@ async def run_bot():
                 await page.close()
                 continue
             
-            # --- 1. APPLICAZIONE FILTRI A TENDINA (+10 sec di respiro) ---
+            # --- 1. APPLICAZIONE FILTRI A TENDINA ---
             try:
                 print("-> [Filtro 1/3] Seleziono Stato: In corso...")
                 await page.click('button[data-id="select_status"]', timeout=15000)
@@ -200,7 +200,7 @@ async def run_bot():
                 print(f"-> [ERRORE Categoria {cat_id}]: {e}")
             await asyncio.sleep(12)
             
-            # --- 5. ESPANSIONE LISTA ("Carica altri") CON RESILIENZA ---
+            # --- 5. ESPANSIONE LISTA ("Carica altri") ---
             print("-> Controllo presenza pulsante 'Carica altri' (#btn-loadMore)...")
             load_count = 0
             while load_count < 25:
@@ -220,7 +220,7 @@ async def run_bot():
             links = list(set([await loc.get_attribute("href") for loc in locators]))
             print(f"-> [RISULTATO FINALE] Tornei trovati per {cat_id}: {len(links)}")
             
-            # --- 6. ANALISI SINGOLO TORNEO CON GESTIONE TIMEOUT & RETRY ---
+            # --- 6. ANALISI SINGOLO TORNEO CON RETRY MULTIPLO SU APERTURA, DATA E DOWNLOAD ---
             for index, link in enumerate(links, start=1):
                 full_url = f"https://www.fitp.it{link}"
                 print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
@@ -258,15 +258,43 @@ async def run_bot():
                             
                             if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                                 print(f"      -> Seleziono data {data_target} dal menu tendina...")
-                                await page.select_option(dropdown_selector, label=data_target)
-                                await asyncio.sleep(12)
+                                
+                                # Protezione selezione data con retry
+                                sel_ok = False
+                                for t_sel in range(3):
+                                    try:
+                                        await page.select_option(dropdown_selector, label=data_target)
+                                        await asyncio.sleep(8)
+                                        sel_ok = True
+                                        break
+                                    except Exception as e:
+                                        print(f"      -> [Warning] Tentativo {t_sel+1} selez. data fallito: {e}")
+                                        await asyncio.sleep(4)
+                                        
+                                if not sel_ok:
+                                    continue
                                 
                                 if await download_btn.is_visible(timeout=5000):
                                     print(f"      -> Scarico PDF per il {data_target}...")
-                                    async with page.expect_download(timeout=25000) as dl_info: 
-                                        await download_btn.click()
-                                    download = await dl_info.value
-                                    await download.save_as("temp.pdf")
+                                    
+                                    # Protezione download PDF con retry in caso di timeout della generazione file
+                                    pdf_ok = False
+                                    for t_dl in range(3):
+                                        try:
+                                            async with page.expect_download(timeout=35000) as dl_info: 
+                                                await download_btn.click()
+                                            download = await dl_info.value
+                                            await download.save_as("temp.pdf")
+                                            pdf_ok = True
+                                            break
+                                        except Exception as e:
+                                            print(f"      -> [Warning] Tentativo {t_dl+1} download PDF fallito: {e}")
+                                            await asyncio.sleep(5)
+                                            
+                                    if not pdf_ok:
+                                        print(f"      -> [Errore] Impossibile scaricare il PDF per {data_target} dopo 3 tentativi.")
+                                        continue
+                                        
                                     matches = get_pdf_info("temp.pdf")
                                     print(f"      -> Trovate {len(matches)} righe nel PDF.")
                                     
