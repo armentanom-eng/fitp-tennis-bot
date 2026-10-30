@@ -14,8 +14,8 @@ FILE_REGISTRO = "notifiche_inviate.json"
 
 # Nomi dei file di output per i tornei In Programma
 CATEGORIES = {
-    "t_giovanili": "Iscritti_Giovanili_In_Programma.json", 
-    "t_affiliati": "Iscritti_Open_In_Programma.json"
+    "t_giovanili": "Tornei_Date_Giovanili_In_Programma_PDF.json", 
+    "t_affiliati": "Tornei_Date_Open_In_Programa_Pdf.json"
 }
 
 def carica_registro():
