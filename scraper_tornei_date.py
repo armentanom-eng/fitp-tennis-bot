@@ -104,7 +104,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V8] Avvio script bot (In Programma) ---")
+    print("--- [DEBUG DATE V8 - RESILIENT] Avvio script bot (In Programma) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -221,7 +221,22 @@ async def run_bot():
             for index, link in enumerate(links, start=1):
                 full_url = f"https://www.fitp.it{link}"
                 print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
-                await page.goto(full_url, timeout=90000)
+                
+                # Tentativo di apertura pagina con retry (fino a 3 volte)
+                torneo_aperto = False
+                for tentativo_pagina in range(3):
+                    try:
+                        await page.goto(full_url, timeout=90000)
+                        await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                        torneo_aperto = True
+                        break
+                    except Exception as e:
+                        print(f"   [Warning] Tentativo {tentativo_pagina + 1} fallito per apertura pagina torneo: {e}")
+                        await asyncio.sleep(5)
+                
+                if not torneo_aperto:
+                    print(f"   [Errore] Impossibile caricare il torneo dopo 3 tentativi. Salto.")
+                    continue
                 
                 try:
                     nome_torneo = await page.locator("h1.cc-title-main.spn-competition-description").inner_text()
@@ -233,6 +248,12 @@ async def run_bot():
                 dropdown_selector = "#select-ordergame"
                 download_btn = page.locator("#btnOrderGameDownload")
                 
+                try:
+                    await page.wait_for_selector(dropdown_selector, timeout=15000)
+                except:
+                    print("   [Info] Menu ordine di gioco non disponibile per questo torneo.")
+                    continue
+                
                 if await page.locator(dropdown_selector).is_visible():
                     oggi_ciclo = datetime.now()
                     for i in range(0, 2):  # Oggi e Domani per i PDF
@@ -240,15 +261,43 @@ async def run_bot():
                         
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             print(f"      -> Seleziono data {data_target} dal menu tendina...")
-                            await page.select_option(dropdown_selector, label=data_target)
-                            await asyncio.sleep(12)
+                            
+                            # Selezione data con retry
+                            successo_selezione = False
+                            for t_sel in range(3):
+                                try:
+                                    await page.select_option(dropdown_selector, label=data_target)
+                                    await asyncio.sleep(6)
+                                    successo_selezione = True
+                                    break
+                                except Exception as e:
+                                    print(f"      [Warning] Tentativo {t_sel+1} selez. data fallito: {e}")
+                                    await asyncio.sleep(3)
+                            
+                            if not successo_selezione:
+                                continue
                             
                             if await download_btn.is_visible():
                                 print(f"      -> Scarico PDF per il {data_target}...")
-                                async with page.expect_download(timeout=25000) as dl_info: 
-                                    await download_btn.click()
-                                download = await dl_info.value
-                                await download.save_as("temp.pdf")
+                                
+                                # Download PDF con retry
+                                pdf_scaricato = False
+                                for t_dl in range(3):
+                                    try:
+                                        async with page.expect_download(timeout=30000) as dl_info: 
+                                            await download_btn.click()
+                                        download = await dl_info.value
+                                        await download.save_as("temp.pdf")
+                                        pdf_scaricato = True
+                                        break
+                                    except Exception as e:
+                                        print(f"      [Warning] Tentativo {t_dl+1} download PDF fallito: {e}")
+                                        await asyncio.sleep(5)
+                                
+                                if not pdf_scaricato:
+                                    print(f"      [Errore] Impossibile scaricare il PDF per {data_target}.")
+                                    continue
+                                
                                 matches = get_pdf_info("temp.pdf")
                                 print(f"      -> Trovate {len(matches)} righe nel PDF.")
                                 
@@ -257,7 +306,6 @@ async def run_bot():
                                     fmt_line = format_line_for_swift(m, data_target)
                                     formatted_matches.append(fmt_line)
                                     
-                                    # Controllo presenza di almeno una delle parole chiave (case-insensitive)
                                     parole_chiave = ["armentano", "dalia", "marie"]
                                     if any(chiave in m.lower() for chiave in parole_chiave):
                                         print(f"Trovato match in {nome_torneo}: {m}")
