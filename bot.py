@@ -95,7 +95,7 @@ def format_line_for_swift(raw_text, date_target):
     return f"{date_target}; {clean_text}"
 
 async def run_bot():
-    print("--- [START] Avvio estrazione completa e resistente (Iscrizioni aperte PDF) ---")
+    print("--- [START] Avvio estrazione completa e resistente (Iscrizioni aperte PDF - Resiliente) ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -104,23 +104,42 @@ async def run_bot():
             print(f"\n>>> Processo categoria: {cat_id}")
             json_data = {"report_data": datetime.now().strftime("%d/%m/%Y %H:%M"), "tornei": []}
             page = await context.new_page()
-            await page.goto(BASE_URL, timeout=90000)
-            await page.wait_for_load_state("networkidle", timeout=45000)
             
-            print("-> Seleziono Stato: Iscrizioni aperte...")
-            await page.click('button[data-id="select_status"]', timeout=15000)
-            await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click(timeout=15000)
-            await asyncio.sleep(12)
+            # Apertura pagina principale con tentativi multipli
+            successo_home = False
+            for tentativo in range(3):
+                try:
+                    print(f"-> Apro la pagina principale (Tentativo {tentativo+1}/3): {BASE_URL}")
+                    await page.goto(BASE_URL, timeout=90000)
+                    await page.wait_for_load_state("networkidle", timeout=45000)
+                    successo_home = True
+                    break
+                except Exception as e:
+                    print(f"-> [TIMEOUT HOME] Tentativo fallito: {e}. Riprovo tra 10 sec...")
+                    await asyncio.sleep(10)
             
-            print("-> Seleziono Regione: Lazio...")
-            await page.click('button[data-id="id_regioneSearch"]', timeout=15000)
-            await page.get_by_role("listbox").get_by_role("option", name="Lazio").click(timeout=15000)
-            await asyncio.sleep(12) 
+            if not successo_home:
+                print(f"-> [ERRORE CRITICO] Impossibile caricare la home. Salto categoria {cat_id}.")
+                await page.close()
+                continue
             
-            print("-> Seleziono Provincia: Roma...")
-            await page.click('button[data-id="id_provinciaSearch"]', timeout=15000)
-            await page.get_by_role("listbox").get_by_role("option", name="Roma").click(timeout=15000)
-            await asyncio.sleep(12)
+            try:
+                print("-> Seleziono Stato: Iscrizioni aperte...")
+                await page.click('button[data-id="select_status"]', timeout=15000)
+                await page.get_by_role("listbox").get_by_role("option", name="Iscrizioni aperte").click(timeout=15000)
+                await asyncio.sleep(12)
+                
+                print("-> Seleziono Regione: Lazio...")
+                await page.click('button[data-id="id_regioneSearch"]', timeout=15000)
+                await page.get_by_role("listbox").get_by_role("option", name="Lazio").click(timeout=15000)
+                await asyncio.sleep(12) 
+                
+                print("-> Seleziono Provincia: Roma...")
+                await page.click('button[data-id="id_provinciaSearch"]', timeout=15000)
+                await page.get_by_role("listbox").get_by_role("option", name="Roma").click(timeout=15000)
+                await asyncio.sleep(12)
+            except Exception as e:
+                print(f"-> [ERRORE FILTRI]: {e}")
             
             oggi = datetime.now()
             data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
@@ -172,35 +191,58 @@ async def run_bot():
                 print(f"-> [ERRORE Cerca]: {e}")
             
             print(f"-> Clicco sulla scheda categoria: {cat_id}")
-            await page.wait_for_selector(f'a[data-id="{cat_id}"]', timeout=30000)
-            await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            try:
+                await page.wait_for_selector(f'a[data-id="{cat_id}"]', timeout=30000)
+                await page.locator(f'a[data-id="{cat_id}"]').first.click()
+            except Exception as e:
+                print(f"-> [ERRORE Categoria {cat_id}]: {e}")
             await asyncio.sleep(14) 
             
             print("-> Espansione lista tornei...")
-            while True:
-                more_btn = page.locator("#btn-loadMore")
-                if await more_btn.is_visible():
-                    await more_btn.click()
-                    await asyncio.sleep(12)
-                else:
+            load_count = 0
+            while load_count < 25:
+                try:
+                    more_btn = page.locator("#btn-loadMore")
+                    if await more_btn.is_visible():
+                        load_count += 1
+                        print(f"-> Clicco 'Carica altri' (Tentativo {load_count})...")
+                        await more_btn.click()
+                        await asyncio.sleep(12)
+                    else:
+                        break
+                except:
                     break
             
             links = list(set([await loc.get_attribute("href") for loc in await page.locator("a[href*='Dettaglio-Competizione']").all()]))
             print(f"   [Tornei trovati]: {len(links)}")
             
             for index, link in enumerate(links, start=1):
-                try:
-                    full_url = f"https://www.fitp.it{link}"
-                    print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
-                    await page.goto(full_url, timeout=90000)
-                    await page.wait_for_load_state("networkidle", timeout=30000)
-                    
+                full_url = f"https://www.fitp.it{link}"
+                print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
+                
+                # Apertura pagina torneo con retry (fino a 3 tentativi)
+                torneo_aperto = False
+                for t_pag in range(3):
                     try:
-                        nome_torneo = await page.locator("h1").first.inner_text(timeout=5000)
-                        nome_torneo = nome_torneo.strip() if nome_torneo else "Torneo FITP"
-                    except:
-                        nome_torneo = "Torneo FITP"
+                        await page.goto(full_url, timeout=90000)
+                        await page.wait_for_load_state("networkidle", timeout=30000)
+                        torneo_aperto = True
+                        break
+                    except Exception as e:
+                        print(f"    ! [Warning] Tentativo {t_pag+1} apertura torneo fallito: {e}")
+                        await asyncio.sleep(5)
+                
+                if not torneo_aperto:
+                    print(f"    ! [Errore] Impossibile caricare il torneo dopo 3 tentativi. Salto.")
+                    continue
+                
+                try:
+                    nome_torneo = await page.locator("h1").first.inner_text(timeout=5000)
+                    nome_torneo = nome_torneo.strip() if nome_torneo else "Torneo FITP"
+                except:
+                    nome_torneo = "Torneo FITP"
 
+                try:
                     pdf_links = await page.locator("a[href$='.pdf']").all()
                     for pdf_link in pdf_links:
                         href_pdf = await pdf_link.get_attribute("href")
@@ -208,10 +250,24 @@ async def run_bot():
                             if not href_pdf.startswith("http"):
                                 href_pdf = f"https://www.fitp.it{href_pdf}"
                             
-                            async with page.expect_download(timeout=25000) as download_info: 
-                                await pdf_link.click()
-                            download = await download_info.value
-                            path_pdf = await download.path()
+                            # Download PDF protetto da tentativi multipli in caso di timeout della generazione file
+                            pdf_scaricato = False
+                            path_pdf = None
+                            for t_dl in range(3):
+                                try:
+                                    async with page.expect_download(timeout=30000) as download_info: 
+                                        await pdf_link.click()
+                                    download = await download_info.value
+                                    path_pdf = await download.path()
+                                    pdf_scaricato = True
+                                    break
+                                except Exception as e:
+                                    print(f"    ! [Warning] Tentativo {t_dl+1} download PDF fallito: {e}")
+                                    await asyncio.sleep(5)
+                            
+                            if not pdf_scaricato or not path_pdf:
+                                print(f"    ! [Errore] Impossibile scaricare il PDF dopo 3 tentativi.")
+                                continue
                             
                             righe_pdf = get_pdf_info(path_pdf)
                             
@@ -241,6 +297,8 @@ async def run_bot():
             with open(filename, "w", encoding="utf-8") as f:
                 json.dump(json_data, f, indent=4, ensure_ascii=False)
             print(f"-> Dati salvati con successo su {filename}")
+            
+            await page.close()
 
 if __name__ == "__main__":
     asyncio.run(run_bot())
