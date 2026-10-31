@@ -104,7 +104,7 @@ def get_pdf_info(pdf_path):
     return matches
 
 async def run_bot():
-    print("--- [DEBUG DATE V8 - RESILIENT] Avvio script bot (In Programma) ---")
+    print("--- [DEBUG DATE V11 - SYNTAX FIX & RESILIENT] Avvio script bot ---")
     async with async_playwright() as p:
         browser = await p.chromium.launch(headless=True)
         context = await browser.new_context(accept_downloads=True)
@@ -137,9 +137,9 @@ async def run_bot():
             await page.get_by_role("listbox").get_by_role("option", name="Roma").click(timeout=15000)
             await asyncio.sleep(12)
             
-            # --- 2. IMPOSTAZIONE DATA INIZIO (-30 GIORNI) E SVUOTAMENTO DATA FINE ---
+            # --- 2. IMPOSTAZIONE DATA INIZIO A OGGI E SVUOTAMENTO DATA FINE ---
             oggi = datetime.now()
-            data_inizio = (oggi - timedelta(days=30)).strftime("%d/%m/%Y")
+            data_inizio = oggi.strftime("%d/%m/%Y")
             
             print(f"-> [STEP DATA] Imposto Data Inizio: {data_inizio} | Data Fine: [VUOTA]")
             
@@ -222,7 +222,6 @@ async def run_bot():
                 full_url = f"https://www.fitp.it{link}"
                 print(f"\n   --- Analizzo torneo {index}/{len(links)} ---")
                 
-                # Tentativo di apertura pagina con retry (fino a 3 volte)
                 torneo_aperto = False
                 for tentativo_pagina in range(3):
                     try:
@@ -262,7 +261,6 @@ async def run_bot():
                         if await page.locator(f"{dropdown_selector} option:has-text('{data_target}')").count() > 0:
                             print(f"      -> Seleziono data {data_target} dal menu tendina...")
                             
-                            # Selezione data con retry
                             successo_selezione = False
                             for t_sel in range(3):
                                 try:
@@ -280,7 +278,6 @@ async def run_bot():
                             if await download_btn.is_visible():
                                 print(f"      -> Scarico PDF per il {data_target}...")
                                 
-                                # Download PDF con retry
                                 pdf_scaricato = False
                                 for t_dl in range(3):
                                     try:
