@@ -168,4 +168,56 @@ async def run_bot():
                         torneo_ricaricato = False
                         for t_ric in range(3):
                             try:
-                                await page.goto(full_torneo_url, wait_until="domcontentloaded", timeout=60
+                                await page.goto(full_torneo_url, wait_until="domcontentloaded", timeout=60000)
+                                torneo_ricaricato = True
+                                break
+                            except:
+                                await asyncio.sleep(3)
+                        
+                        if not torneo_ricaricato:
+                            continue
+                            
+                        btn = page.locator("text=Dettaglio >").nth(i)
+                        
+                        if await btn.is_visible():
+                            # Clic sul dettaglio protetto da tentativi
+                            cliccato = False
+                            for t_click in range(3):
+                                try:
+                                    await btn.click(force=True)
+                                    await page.wait_for_load_state("domcontentloaded", timeout=30000)
+                                    await asyncio.sleep(4)
+                                    cliccato = True
+                                    break
+                                except Exception as e:
+                                    print(f"    ! [Warning] Tentativo {t_click+1} click Dettaglio fallito: {e}")
+                                    await asyncio.sleep(3)
+                            
+                            if not cliccato:
+                                continue
+                            
+                            categoria = await page.locator("h1.cc-title-main").first.text_content()
+                            tabellone_el = page.locator("span#spn-tournament-description")
+                            tabellone = await tabellone_el.text_content() if await tabellone_el.count() > 0 else "N/A"
+                            giocatori = [await el.text_content() for el in await page.locator("a[href*='Pagina-Giocatore']").all()]
+                            
+                            dati_categoria["tornei"].append({
+                                "torneo": url, 
+                                "categoria": categoria.strip() if categoria else "", 
+                                "tabellone": tabellone.strip(), 
+                                "iscritti": [g.strip() for g in giocatori]
+                            })
+                            print(f"    -> Estratto: {tabellone.strip()}")
+                except Exception as e:
+                    print(f"    ! Errore su {url[-10:]}: {e}")
+            
+            # --- 5. SALVATAGGIO ---
+            with open(filename, "w", encoding="utf-8") as f: 
+                json.dump(dati_categoria, f, ensure_ascii=False, indent=4)
+            print(f"-> SALVATO: {filename}")
+            
+        await browser.close()
+        print("--- [END] Processo completato. ---")
+
+if __name__ == "__main__":
+    asyncio.run(run_bot())
