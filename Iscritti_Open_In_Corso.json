@@ -1,3 +1,55 @@
 {
-    "tornei": []
+    "tornei": [
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "ELIA GATTA4.1",
+                "LUCA IGNEO4.1",
+                "RAFFAELE LIGUORI4.2",
+                "ANDREA CHIATRONI4.3",
+                "EMANUELE  ODDI4.3",
+                "RICCARDO TIBUZZI4.1",
+                "RICCARDO QUARTULLI4.1",
+                "LORENZO  ZUCCHI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ELENA  ODDI4.3",
+                "MARIA CLARA BACCHILEGA4.5",
+                "ALICE STRABIOLI4.5",
+                "SARA DONZELLI4.4",
+                "ARIANNA TIBUZZI4.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "LEONARDO RONZANI3.5",
+                "LUCIO DI LORETO3.2",
+                "CHRISTIAN RUSSO4.2",
+                "LUCA PISANI3.3",
+                "EDOARDO RUGGERI3.5",
+                "DARIO LIGALUPO3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=851AF52A-5D7A-43F4-BD16-C59585B11F59",
+            "categoria": "17' CIRCUITO\tCASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "GIORGIA BALESTRA3.2",
+                "BENEDETTA MARIA GRECA PIZZATO3.4",
+                "AURELIA PALAZZO3.4",
+                "LIVIA STORTINI3.5"
+            ]
+        }
+    ]
 }
