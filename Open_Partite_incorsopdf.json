@@ -1,4 +1,15 @@
 {
-    "report_data": "03/11/2026 23:37",
-    "tornei": []
+    "report_data": "04/11/2026 11:50",
+    "tornei": [
+        {
+            "nome": "17' CIRCUITO CASTELLI ROMANI E MONTI LEPINI 3^ 4^ CAT. M/F - MASTER FINALE",
+            "data": "04/11/2026",
+            "partite": [
+                "04/11/2026; 00:00; No. Campo 1 campo 2 Campo 3",
+                "04/11/2026; 15:00; 1 Inizio  Singolare Maschile Open RUGGERI EDOARDO vs LIGALUPO DARIO Inizio  Singolare Maschile Open CHIATRONI ANDREA vs GATTA ELIA",
+                "04/11/2026; 16:30; 2 Inizio  Singolare Maschile Open RONZANI LEONARDO vs RUSSO CHRISTIAN Inizio  Singolare Maschile Open QUARTULLI RICCARDO vs ZUCCHI LORENZO",
+                "04/11/2026; 18:00; 3 Inizio  Singolare Maschile Open TIBUZZI RICCARDO vs LIGUORI RAFFAELE Inizio  Singolare Femminile Open STRABIOLI ALICE vs TIBUZZI ARIANNA Inizio  Singolare Maschile Open ODDI EMANUELE vs IGNEO LUCA"
+            ]
+        }
+    ]
 }
