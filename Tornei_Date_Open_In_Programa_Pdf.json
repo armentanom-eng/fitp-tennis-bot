@@ -1,27 +1,4 @@
 {
-    "report_data": "05/11/2026 23:56",
-    "tornei": [
-        {
-            "nome": "I TAPPA WINTER 34",
-            "data": "05/11/2026",
-            "partite": [
-                "05/11/2026; 00:00; No. Campo 1 Campo 2",
-                "05/11/2026; 13:30; 1 Inizio  Singolare Maschile Open VITUCCI DARIO vs ASCIUTTO GIOVANNI Inizio  Singolare Maschile Open MODICA ALESSANDRO vs LAUDATI LORENZO",
-                "05/11/2026; 15:30; 2 Inizio  Singolare Maschile Open MARCELLI GIORGIO vs PERINELLI LORENZO Inizio  Singolare Maschile Open BRUNI CLAUDIO vs VESPAZIANI EMANUELE",
-                "05/11/2026; 17:00; 3 Inizio  Singolare Maschile Open CAPUA MICHELANGELO vs NERVI ANDREA Inizio  Singolare Maschile Open CHIRICO SALVATORE vs POGGI MICHELANGELO",
-                "05/11/2026; 18:30; 4 Inizio  Singolare Maschile Open PADOVANI CARLO vs UNGARO LUDOVICO Inizio  Singolare Maschile Open ANTONELLI MARCO vs AIELLO EMANUELE"
-            ]
-        },
-        {
-            "nome": "I TAPPA WINTER 34",
-            "data": "06/11/2026",
-            "partite": [
-                "06/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "06/11/2026; 12:00; 1 Inizio  Singolare Maschile Open VERSACE GIORGIO vs DE ANGELIS ERMANNO",
-                "06/11/2026; 17:00; 2 Inizio  Singolare Maschile Open ASCIUTTO GIOVANNI vs ANGELUCCI MATTEO Inizio  Singolare Maschile Open BRUNI CLAUDIO vs CIRAFICI SALVATORE Inizio  Singolare Maschile Open PADOVANI CARLO vs FEDELE FAUSTO",
-                "06/11/2026; 18:30; 3 Inizio  Singolare Maschile Open POGGI MICHELANGELO vs LAVAGNINI EDOARDO Inizio  Singolare Maschile Open CAPUA MICHELANGELO vs PARTENIE GABRIEL Inizio  Singolare Maschile Open ANTONELLI MARCO vs LAVAGNINI CLAUDIO",
-                "06/11/2026; 20:00; 4 Inizio  Singolare Maschile Open MODICA ALESSANDRO vs BURN"
-            ]
-        }
-    ]
+    "report_data": "06/11/2026 12:22",
+    "tornei": []
 }
