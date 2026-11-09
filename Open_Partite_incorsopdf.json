@@ -1,4 +1,16 @@
 {
-    "report_data": "08/11/2026 22:23",
-    "tornei": []
+    "report_data": "09/11/2026 12:29",
+    "tornei": [
+        {
+            "nome": "I TAPPA WINTER 34",
+            "data": "09/11/2026",
+            "partite": [
+                "09/11/2026; 00:00; No. Campo 1 Campo 2",
+                "09/11/2026; 14:00; 1 Inizio  Singolare Maschile Open BALDANZA FEDERICO ARMANDO vs TELARICO GIORGIO Inizio  Singolare Maschile Open RUFINI MARCO vs FANELLI MAURIZIO",
+                "09/11/2026; 15:30; 2 Inizio  Singolare Maschile Open CARA GIOVANNI vs FORNAI LORENZO Inizio  Singolare Maschile Open FEDELE FAUSTO vs TRENTALANCE FILIPPO MARIA",
+                "09/11/2026; 17:00; 3 Inizio  Singolare Maschile Open LAVAGNINI EDOARDO vs CAMONI FRANCESCO Inizio  Singolare Maschile Open ZITO GIACOMO vs DI FABIO NICOLA",
+                "09/11/2026; 18:30; 4 Inizio  Singolare Maschile Open MODICA ALESSANDRO vs TAMILIA ALESSIO Inizio  Singolare Maschile Open MOLITERNI MARIO vs RAUCO PAOLO"
+            ]
+        }
+    ]
 }
