@@ -1,5 +1,5 @@
 {
-    "report_data": "09/11/2026 13:12",
+    "report_data": "09/11/2026 23:34",
     "tornei": [
         {
             "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
@@ -8,6 +8,15 @@
                 "09/11/2026; 00:00; No. CAMPO 5 CAMPO 7 (PRINCIPALE)",
                 "09/11/2026; 18:00; 1 Inizio  Singolare Maschile Open SOLA ALESSANDRO vs CORTI LUIGI Inizio  Singolare Femminile Open SALUCCI FRANCESCA vs ROMAGNOLI SOFIA",
                 "09/11/2026; 19:30; 2 Inizio  Singolare Maschile Open SARACENO FABRIZIO vs LISTORTI ROBERTO"
+            ]
+        },
+        {
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "data": "10/11/2026",
+            "partite": [
+                "10/11/2026; 00:00; No. CAMPO 5 CAMPO 6 CAMPO 7 (PRINCIPALE)",
+                "10/11/2026; 18:00; 1 Inizio  Singolare Maschile Open CORTI LUIGI vs LAUDATI LORENZO Inizio  Singolare Maschile Open BASCO GIANLUIGI vs ALTIERI FABIO",
+                "10/11/2026; 19:30; 2 Inizio  Singolare Femminile Open COSENZA SOPHIA vs ROMAGNOLI SOFIA Inizio  Singolare Maschile Open IZZO ANTONIO vs SARACENO FABRIZIO Inizio  Singolare Maschile Open NERVI ANDREA vs BALDINETTI PIETRO"
             ]
         }
     ]
