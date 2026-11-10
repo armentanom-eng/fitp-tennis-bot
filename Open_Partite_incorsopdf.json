@@ -1,4 +1,16 @@
 {
-    "report_data": "10/11/2026 12:02",
-    "tornei": []
+    "report_data": "10/11/2026 17:28",
+    "tornei": [
+        {
+            "nome": "I TAPPA WINTER 34",
+            "data": "10/11/2026",
+            "partite": [
+                "10/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "10/11/2026; 14:00; 1 Inizio  Singolare Maschile Open ROMPIETTI BRUNO vs CARA GIOVANNI Inizio  Singolare Maschile Open PRETE PIETRO vs PANNESE FULVIO Inizio  Singolare Maschile Open MOLITERNI MARIO o RAUCO PAOLO vs TASSIN CLAUDIO",
+                "10/11/2026; 15:30; 2 Inizio  Singolare Maschile Open BALDANZA FEDERICO ARMANDO vs LOMBARDI GIACOMO Inizio  Singolare Maschile Open FANELLI MAURIZIO vs TRENTALANCE FILIPPO MARIA",
+                "10/11/2026; 17:00; 3 Inizio  Singolare Femminile Open VETTORELLI GIULIA vs PADOVANI ALICE MARIA Inizio  Singolare Femminile Open VETTORELLI CATERINA vs RUETTA CHIARA",
+                "10/11/2026; 18:30; 4 Inizio  Singolare Maschile Open PARTENIE GABRIEL vs TORMEN LUCA Inizio  Singolare Maschile Open LAVAGNINI EDOARDO vs MASALA FABRIZIO"
+            ]
+        }
+    ]
 }
