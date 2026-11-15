@@ -101,7 +101,6 @@
             "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
             "tabellone": "Singolare Femminile Open (LIM. 4.NC - 3.1)",
             "iscritti": [
-                "CONCETTA CUNDO'4.2",
                 "MICHELLE ACCOLLI4.4",
                 "MADDALENA WAS4.5",
                 "MARTA PARAGONA4.3",
@@ -127,7 +126,10 @@
                 "EVA BLEVE3.4",
                 "MARINA MAZZUCCHI4.2",
                 "EMANUELA BESTETTI3.5",
-                "YUKO TANAKA3.5"
+                "YUKO TANAKA3.5",
+                "ALESSANDRA DE MONTE4.1",
+                "SIMONA PENCO3.4",
+                "GIOVANNA GIARDINELLI3.5"
             ]
         },
         {
@@ -168,7 +170,6 @@
                 "RICCARDO ROSI4.NC",
                 "EDOARDO BELLI4.3",
                 "CHRISTIAN ROMANO3.5",
-                "ANDREA NOBILI4.2",
                 "MATTEO MASSARA3.5",
                 "PAOLO RAUCO4.3",
                 "PAOLO CORONGIU4.1",
@@ -194,7 +195,8 @@
                 "CLAUDIO SCIARRA4.6",
                 "ALESSIO CORVAGLIA4.1",
                 "EMANUELE RICCI4.1",
-                "FABIO CUPPITELLI3.5"
+                "FABIO CUPPITELLI3.5",
+                "GABRIELE GARBARINO4.5"
             ]
         },
         {
@@ -237,7 +239,9 @@
             "tabellone": "Doppio Misto Open (LIM. 4.NC - 3.1)",
             "iscritti": [
                 "MICHELLE ACCOLLI4.4",
-                "RICCARDO MAGGI3.1"
+                "RICCARDO MAGGI3.1",
+                "NICCOLÒ MARIA PAGLIARO3.5",
+                "MARIAELENA SENIA3.3"
             ]
         }
     ]
