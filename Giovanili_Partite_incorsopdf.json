@@ -1,42 +1,16 @@
 {
-    "report_data": "15/11/2026 23:03",
+    "report_data": "16/11/2026 12:23",
     "tornei": [
         {
-            "nome": "MASTER JUNIOR NEXT GEN ITALIA 2026",
-            "data": "15/11/2026",
-            "partite": [
-                "15/11/2026; 00:00; No. Campo 3 - CUS TORINO - Corso Sicilia 50 - Torino Campo 4 - CUS TORINO - Corso Sicilia 50 - Torino Campo 5 - CUS TORINO - Corso Sicilia 50 - Torino",
-                "15/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 14 DESIDERI TOMMASO vs PELOSI SEBASTIANO NICOLA Inizio  Singolare Maschile Under 14 MIDILI FEDERICO vs MARINELLI PIETRO Inizio  Singolare Maschile Under 14 DOMENGHINI ACHILLE LEONE vs NEGRO LORENZO",
-                "15/11/2026; 00:00; 2 A seguire Singolare Maschile Under 14 CONDORELLI LUCA vs GROTTI MATTEO A seguire Singolare Maschile Under 14 PETRILLI GIULIO vs SIMONETTI GERARDO A seguire Singolare Maschile Under 14 ROSTI MATTEO vs CALANDRA LORENZO",
-                "15/11/2026; 11:00; 3 Non prima delle Singolare Maschile Under 14 DE SANDOLI CHRISTIAN vs ABBRUZZESE NICOLÒ Non prima delle Singolare Maschile Under 14 ROCCA MARCO vs FILIBERTO ALESSANDRO GIORGIO Non prima delle Singolare Maschile Under 14 MATTI TOMMASO NICHOLAS vs ROSATI ANDREA",
-                "15/11/2026; 00:00; 4 A seguire Singolare Maschile Under 14 BINETTI ANDREA vs CAPRISTO GIUSEPPEMARIA A seguire Singolare Maschile Under 14 GENTILE DIEGO vs CONSOLI LORENZO",
-                "15/11/2026; 00:00; No. Campo 1 - C.S. BEPPE VIOLA - Via Giovanni Palatucci 12 - Torino Campo 2 - C.S. BEPPE VIOLA - Via Giovanni Palatucci 12 - Torino",
-                "15/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 10 FARCAS CLARA vs MORETTI FLAVIA Inizio  Singolare Femminile Under 10 SANGUINETTI BIANCA MARIA vs TAURISANO FRANCESCA",
-                "15/11/2026; 00:00; 2 A seguire Singolare Femminile Under 10 FOGGIA MICOL vs PREZIOSI LETIZIA A seguire Singolare Femminile Under 10 ROSCO OLIMPIA MARIA vs ROSSONI VIRGINIA",
-                "15/11/2026; 11:00; 3 Non prima delle Singolare Femminile Under 10 SALVO ARIANNA vs NACLERIO MELISSA Non prima delle Singolare Femminile Under 10 BELLANI GLORIA vs RESTUCCI MARTA",
-                "15/11/2026; 00:00; 4 A seguire Singolare Femminile Under 10 LETTIERI ALLEGRA vs BUSA MARTINA A seguire Singolare Femminile Under 10 ZANON NICOLE vs TRINGALI GIULIA",
-                "15/11/2026; 00:00; No. Campo 5 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 6 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 7 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 8 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO",
-                "15/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 14 RUGGERI MARTINA vs FRENI AURORA Inizio  Singolare Femminile Under 14 NICOLOSI ARIANNA vs FRANCIA REBECCA CARLA Inizio  Singolare Femminile Under 14 GADALETA GIORGIA vs ZENNARO AILA Inizio  Singolare Femminile Under 14 SINISGALLI GRETA vs AZZOLLINI RAFFAELLA",
-                "15/11/2026; 00:00; 2 A seguire Singolare Femminile Under 14 FREDDUZZI VITTORIA vs CHIODELLI JUNO A seguire Singolare Femminile Under 14 CAMPANA DIAMANTE vs CEREGHINI VIRGINIA A seguire Singolare Femminile Under 14 LOSA CARLA vs TITILINA CHIARA A seguire Singolare Femminile Under 14 PIVETTI GAGLIARDI LUDOVICA vs SCOZZAFAVA GIULIA",
-                "15/11/2026; 11:00; 3 Non prima delle Singolare Femminile Under 14 LIGUORI ALESSANDRA vs WIDMER D; AUTILIA ISABELLA Non prima delle Singolare Femminile Under 14 DEMATTEIS LUDOVICA vs PASQUA LUCREZIA Non prima delle Singolare Femminile Under 14 RONDINA MARTINA vs DOVERI VICTORIA Non prima delle Singolare Femminile Under 14 FURI ANITA vs SERRA ZANETTI GAIA"
-            ]
-        },
-        {
-            "nome": "MASTER JUNIOR NEXT GEN ITALIA 2026",
+            "nome": "JUNIOR TENNIS CUP VII EDITION U10-12-14-16/18 M/F",
             "data": "16/11/2026",
             "partite": [
-                "16/11/2026; 00:00; No. Campo 3 - CUS TORINO - Corso Sicilia 50 - Torino Campo 4 - CUS TORINO - Corso Sicilia 50 - Torino Campo 5 - CUS TORINO - Corso Sicilia 50 - Torino",
-                "16/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 14 ROSTI MATTEO o CALANDRA LORENZO vs DI GIORGIO ALESSANDRO Inizio  Singolare Maschile Under 14 LAMARINA LUIGI MARIA vs CONDORELLI LUCA o GROTTI MATTEO Inizio  Singolare Maschile Under 14 BORIO FILIPPO vs DESIDERI TOMMASO",
-                "16/11/2026; 00:00; 2 A seguire Singolare Maschile Under 14 PETRILLI GIULIO vs ROCCA MARCO o FILIBERTO ALESSANDRO GIORGIO A seguire Singolare Maschile Under 14 ABBRUZZESE NICOLÒ vs BURATO LORENZO EMANUEL A seguire Singolare Maschile Under 14 GENTILE DIEGO o CONSOLI LORENZO vs NEGRO LORENZO",
-                "16/11/2026; 11:00; 3 Non prima delle Singolare Maschile Under 14 FRANCESCHINI TOMMASO vs MARINELLI PIETRO Non prima delle Singolare Maschile Under 14 BINETTI ANDREA o CAPRISTO GIUSEPPEMARIA vs MATTI TOMMASO NICHOLAS o ROSATI ANDREA",
-                "16/11/2026; 00:00; No. Campo 1 - C.S. BEPPE VIOLA - Via Giovanni Palatucci 12 - Torino Campo 2 - C.S. BEPPE VIOLA - Via Giovanni Palatucci 12 - Torino",
-                "16/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 10 DAL TORRIONE DOROTEA vs TRINGALI GIULIA Inizio  Singolare Femminile Under 10 GUALCO NICOLE vs MORETTI FLAVIA",
-                "16/11/2026; 00:00; 2 A seguire Singolare Femminile Under 10 PEZZULO AZZURRA vs SANGUINETTI BIANCA MARIA A seguire Singolare Femminile Under 10 FOGGIA MICOL vs BINDELLA SOFIA",
-                "16/11/2026; 11:00; ABBIERO NATHALIE ELISABETH vs ROSSONI VIRGINIA Non prima delle Singolare Femminile Under 10 NACLERIO MELISSA vs BENANTI GIADA",
-                "16/11/2026; 00:00; 4 A seguire Singolare Femminile Under 10 BELLANI GLORIA o RESTUCCI MARTA vs TORRESI LAVINIA A seguire Singolare Femminile Under 10 LETTIERI ALLEGRA o BUSA MARTINA vs GROSSI MAYA",
-                "16/11/2026; 00:00; No. Campo 5 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 6 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 7 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO Campo 8 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO",
-                "16/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 14 CASTAGNINI MATILDE vs AZZOLLINI RAFFAELLA Inizio  Singolare Femminile Under 14 FREDDUZZI VITTORIA vs RUGGERI MARTINA Inizio  Singolare Femminile Under 14 FURI ANITA o SERRA ZANETTI GAIA vs LOSA CARLA Inizio  Singolare Femminile Under 14 NICOLOSI ARIANNA vs LIGUORI ALESSANDRA o WIDMER D",
-                "16/11/2026; 00:00; 2 A seguire Singolare Femminile Under 14 DEMATTEIS LUDOVICA vs CAMPANA DIAMANTE A seguire Singolare Femminile Under 14 AMICH MATILDE vs RONDINA MARTINA o DOVERI VICTORIA A seguire Singolare Femminile Under 14 SCOZZAFAVA GIULIA vs RATTI MARTINA A seguire Singolare Femminile Under 14 ZENNARO AILA vs FRANCHINI RACHELE"
+                "16/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6 Campo 7",
+                "16/11/2026; 14:30; 1 Inizio  Singolare Maschile Under 10 LAUDONIA GIUSEPPE vs RUSSO MASSIMILIANO Inizio  Singolare Maschile Under 14 CASTIGLIONE SEBASTIANO vs CATERINA MARCO Inizio  Singolare Maschile Under 18 VERRILLO DIEGO vs LORI LEONARDO Inizio  Singolare Maschile Under 18 HADLEY ALEX vs ROMEO FLAVIO Inizio  Singolare Femminile Under 10 LIBERTINI VITTORIA vs MASTROPIETRO CECILIA Inizio  Singolare Femminile Under 12 STORONI CAMILLA vs POLIMENI BIANCA",
+                "16/11/2026; 16:00; 2 Non prima delle Singolare Maschile Under 10 PIZZO GIORGIO vs GORI CLAUDIO Non prima delle Singolare Maschile Under 18 MELITO LEONARDO vs LAZZERETTI NICOLAS Non prima delle Singolare Femminile Under 12 DI IORIO OLIVIA vs AIELLO GIORGIA Non prima delle Singolare Femminile Under 14 CAPPONI NICOLE vs PAUNESCU ANTONIA MARIA Non prima delle Singolare Maschile Under 12 MOSCO LEONARDO vs KOCH GIULIO",
+                "16/11/2026; 17:30; 3 Non prima delle Singolare Maschile Under 10 DOLATTI LEONARDO vs BRUNELLI TOMMASO Non prima delle Singolare Femminile Under 10 PUDDU FLAVIA vs ZUCCHI ROBERTA Non prima delle Singolare Femminile Under 14 CALDERISI GIULIA vs CANTONI CHIARA Non prima delle Singolare Maschile Under 12 BIASINI ANDREA vs ONORINI EDOARDO",
+                "16/11/2026; 19:00; 4 Non prima delle Singolare Maschile Under 10 BUZZETTI LEONARDO vs FLAMMIA RICCARDO Non prima delle Singolare Maschile Under 14 GUERRIERI WOLF SEBASTIANO vs BONFIGLI RICCARDO Non prima delle Singolare Maschile Under 14 FERRARI FRANCESCO vs GIANFELICE NICOLINO Non prima delle Singolare Femminile Under 10 PAGLIACCIA CHIARA vs BUCEFALO CECILIA",
+                "16/11/2026; 20:30; 5 Non prima delle Singolare Maschile Under 14 RONDINI LEONARDO vs RULLO FEDERICO Non prima delle Singolare Maschile Under 14 SIGNORINI TOMMASO vs FOSCHINI FABIO Non prima delle Singolare Maschile Under 14 COLANTUONI RAFFAELE vs CIOTTI LORENZO Non prima delle Singolare Maschile Under 14 CALTAGIRONE EDOARDO VALERIO vs DE BENEDETTI TOMMASO Non prima delle Singolare Maschile Under 18 CAMPETI MATTEO vs NANNERINI GIUSEPPE Non prima delle Singolare Femminile Under 18 CHIRICO LAVINIA vs FUMELLI EMMA Non prima delle Singolare Femminile Under 18 FEMIA MARTA vs OUERGHI EYA"
             ]
         }
     ]
