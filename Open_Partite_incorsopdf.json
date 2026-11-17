@@ -1,5 +1,5 @@
 {
-    "report_data": "17/11/2026 01:59",
+    "report_data": "17/11/2026 12:44",
     "tornei": [
         {
             "nome": "I TAPPA WINTER 34",
@@ -12,6 +12,26 @@
                 "17/11/2026; 17:00; 4 Inizio  Singolare Femminile Open MARTUFI FEDERICA vs AURELI GINEVRA Inizio  Singolare Femminile Open PAGLIACCIA FRANCESCA vs PARRA MANCERA ELENA",
                 "17/11/2026; 18:30; 5 Inizio  Singolare Maschile Open ACAMPORA ANTONIO o BATTOCCHIO FRANCESCO vs GAMBACORTA ETTORE Inizio  Singolare Maschile Open SANSONE GIOVANNI o BATTOCCHIO GIACOMO vs GIURANNA MATTEO",
                 "17/11/2026; 20:00; 6 Inizio  Singolare Femminile Open FAZI PIA vs POLIDORI IRENE Inizio  Singolare Maschile Open VAGNUCCI FRANCESCO o REALI MAURO vs ROSSI EMILIANO Inizio  Singolare Maschile Open BELLI TOMMASO o TOWNSHEND ORLANDO vs SANNA STEFANO"
+            ]
+        },
+        {
+            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
+            "data": "17/11/2026",
+            "partite": [
+                "17/11/2026; 00:00; No. Campo 1 Campo 2",
+                "17/11/2026; 14:30; 1 Inizio  Singolare Maschile Open VINCIGUERRA DAMIANO vs LUCIA GIANMARCO",
+                "17/11/2026; 16:00; 2 Inizio  Singolare Maschile Open PERONTI MASSIMO vs LUCCI CORDISCO MATTEO Inizio  Singolare Maschile Open PASTORE LUCA vs NERVI ANDREA",
+                "17/11/2026; 17:30; 3 Inizio  Singolare Maschile Open MATERA ANTONIO vs LAUDATI LORENZO Dopo debito riposo non prima delle Singolare Maschile Open GOBBI STEFANO vs VINCIGUERRA DAMIANO o LUCIA GIANMARCO"
+            ]
+        },
+        {
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "data": "17/11/2026",
+            "partite": [
+                "17/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9",
+                "17/11/2026; 18:00; 1 Inizio  Singolare Maschile Open CIVITA FEDERICO ALBERTO vs BALDINETTI PIETRO Inizio  Singolare Maschile Open GALLI DANIELE vs POLCE GABRIELE Inizio  Singolare Femminile Open GENTILE EMMA vs ROMAGNOLI SOFIA",
+                "17/11/2026; 19:30; 2 Inizio  Singolare Maschile Open MANCINI RICCARDO vs GHERSI MASSIMO Inizio  Singolare Maschile Open CITTADINI PAOLO vs LORUSSO ALESSANDRO Inizio  Singolare Femminile Open FALCONE IOLE vs CALAMITA ELISA KAROL Inizio  Singolare Maschile Open GALIZIA LORENZO vs MUSILLI FRANCESCO",
+                "17/11/2026; 21:00; 3 Inizio  Singolare Maschile Open DIBIASE MASSIMILIANO vs BIANCAVILLA ANDREA Inizio  Singolare Maschile Open ZAMBONI MATTIA vs CAPPA FRANCESCO Inizio  Singolare Maschile Open IERVOLINO ARMANDO vs ACQUAVIVA CIRO Inizio  Singolare Maschile Open TODISCO PAOLO vs PIERONI FEDERICO"
             ]
         }
     ]
