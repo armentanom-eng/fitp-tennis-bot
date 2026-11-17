@@ -1,5 +1,5 @@
 {
-    "report_data": "17/11/2026 12:44",
+    "report_data": "17/11/2026 18:57",
     "tornei": [
         {
             "nome": "I TAPPA WINTER 34",
@@ -15,6 +15,18 @@
             ]
         },
         {
+            "nome": "I TAPPA WINTER 34",
+            "data": "18/11/2026",
+            "partite": [
+                "18/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
+                "18/11/2026; 14:00; 1 Inizio  Singolare Maschile Open INNISI LUCA vs SANNA STEFANO Inizio  Singolare Maschile Open RIZZO MATTEO vs MORETTI TIZIANO Inizio  Singolare Maschile Open PERINI JACOPO vs INZIRILLO VALERIO",
+                "18/11/2026; 15:30; 2 Inizio  Singolare Femminile Open OLIVIERI LUDOVICA vs PIRRONE BIANCA Inizio  Singolare Femminile Open D; ASCENZO MARTINA vs MARTUFI FEDERICA o AURELI GINEVRA Inizio  Singolare Femminile Open PAGLIACCIA FRANCESCA vs FAZI PIA o POLIDORI IRENE",
+                "18/11/2026; 17:00; 3 Inizio  Singolare Femminile Open MIMMOCCHI IRENE vs NANNERINI FRANCESCA Inizio  Singolare Maschile Open BATTOCCHIO FRANCESCO o GAMBACORTA ETTORE vs PARINI MASSIMILIANO",
+                "18/11/2026; 18:30; 4 Inizio  Singolare Femminile Open DI IORIO OLIVIA vs PADOVANI ALICE MARIA Inizio  Singolare Femminile Open RUETTA CHIARA vs FAZI PIA",
+                "18/11/2026; 20:00; MARTUFI FEDERICA vs DELVECCHIO MIA; VETTORELLI CATERINA vs CERRITI GAIA; PADOVANI ALICE MARIA vs PIRRONE BIANCA"
+            ]
+        },
+        {
             "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
             "data": "17/11/2026",
             "partite": [
@@ -25,6 +37,16 @@
             ]
         },
         {
+            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
+            "data": "18/11/2026",
+            "partite": [
+                "18/11/2026; 00:00; No. Campo 1 Campo 2",
+                "18/11/2026; 15:00; 1 Inizio  Singolare Maschile Open LAUDATI LORENZO vs PAONE FRANCESCO Inizio  Singolare Maschile Open LUCIA GIANMARCO vs LUCIANI GABRIELE",
+                "18/11/2026; 16:30; 2 Inizio  Singolare Maschile Open PERONTI MASSIMO vs GAGLIARDUCCI VITTORIO Inizio  Singolare Maschile Open PASTORE LUCA vs RAPARELLI FILIPPO",
+                "18/11/2026; 17:30; 3 Non prima delle Singolare Maschile Open MATTIONI FEDERICO vs PICCA EDOARDO Non prima delle Singolare Maschile Open CROCETTI FLAVIO vs BATTISTI GIANLUCA"
+            ]
+        },
+        {
             "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
             "data": "17/11/2026",
             "partite": [
@@ -32,6 +54,16 @@
                 "17/11/2026; 18:00; 1 Inizio  Singolare Maschile Open CIVITA FEDERICO ALBERTO vs BALDINETTI PIETRO Inizio  Singolare Maschile Open GALLI DANIELE vs POLCE GABRIELE Inizio  Singolare Femminile Open GENTILE EMMA vs ROMAGNOLI SOFIA",
                 "17/11/2026; 19:30; 2 Inizio  Singolare Maschile Open MANCINI RICCARDO vs GHERSI MASSIMO Inizio  Singolare Maschile Open CITTADINI PAOLO vs LORUSSO ALESSANDRO Inizio  Singolare Femminile Open FALCONE IOLE vs CALAMITA ELISA KAROL Inizio  Singolare Maschile Open GALIZIA LORENZO vs MUSILLI FRANCESCO",
                 "17/11/2026; 21:00; 3 Inizio  Singolare Maschile Open DIBIASE MASSIMILIANO vs BIANCAVILLA ANDREA Inizio  Singolare Maschile Open ZAMBONI MATTIA vs CAPPA FRANCESCO Inizio  Singolare Maschile Open IERVOLINO ARMANDO vs ACQUAVIVA CIRO Inizio  Singolare Maschile Open TODISCO PAOLO vs PIERONI FEDERICO"
+            ]
+        },
+        {
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "data": "18/11/2026",
+            "partite": [
+                "18/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9",
+                "18/11/2026; 18:00; 1 Inizio  Singolare Maschile Open CICIVELLI ALESSIO vs QUINZI CRISTIANO Inizio  Singolare Maschile Open SEGRETO FEDERICO vs q",
+                "18/11/2026; 19:30; 2 Inizio  Singolare Maschile Open ARGENTINO RICCARDO vs q Inizio  Singolare Maschile Open ROSSI JACOPO vs q Inizio  Singolare Maschile Open q vs NICOLETTI FEDERICO",
+                "18/11/2026; 21:00; 3 Inizio  Singolare Maschile Open BOLLETTA FILIPPO vs q Inizio  Singolare Maschile Open q vs COLANERI FILIPPO Inizio  Singolare Femminile Open MITREA FRANCESCA MARIA vs q Inizio  Singolare Femminile Open q vs DEGRASSI RACHELE"
             ]
         }
     ]
