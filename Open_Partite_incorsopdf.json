@@ -1,6 +1,26 @@
 {
-    "report_data": "18/11/2026 12:36",
+    "report_data": "18/11/2026 18:38",
     "tornei": [
+        {
+            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
+            "data": "18/11/2026",
+            "partite": [
+                "18/11/2026; 00:00; No. Campo 1 Campo 2",
+                "18/11/2026; 15:00; 1 Inizio  Singolare Maschile Open LAUDATI LORENZO vs PAONE FRANCESCO Inizio  Singolare Maschile Open LUCIA GIANMARCO vs LUCIANI GABRIELE",
+                "18/11/2026; 16:30; 2 Inizio  Singolare Maschile Open PERONTI MASSIMO vs GAGLIARDUCCI VITTORIO Inizio  Singolare Maschile Open PASTORE LUCA vs RAPARELLI FILIPPO",
+                "18/11/2026; 17:30; 3 Non prima delle Singolare Maschile Open MATTIONI FEDERICO vs PICCA EDOARDO Non prima delle Singolare Maschile Open CROCETTI FLAVIO vs BATTISTI GIANLUCA"
+            ]
+        },
+        {
+            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
+            "data": "19/11/2026",
+            "partite": [
+                "19/11/2026; 00:00; No. Campo 1 Campo 2",
+                "19/11/2026; 16:00; 1 Inizio  Singolare Maschile Open LAUDATI LORENZO vs PAONE FRANCESCO Inizio  Singolare Maschile Open LUCIA GIANMARCO vs LUCIANI GABRIELE",
+                "19/11/2026; 17:30; 2 Inizio  Singolare Maschile Open PERONTI MASSIMO vs GAGLIARDUCCI VITTORIO Inizio  Singolare Maschile Open PASTORE LUCA vs RAPARELLI FILIPPO",
+                "19/11/2026; 18:30; 3 Non prima delle Singolare Maschile Open MATTIONI FEDERICO vs PICCA EDOARDO Non prima delle Singolare Maschile Open CROCETTI FLAVIO vs BATTISTI GIANLUCA"
+            ]
+        },
         {
             "nome": "I TAPPA WINTER 34",
             "data": "18/11/2026",
@@ -14,13 +34,15 @@
             ]
         },
         {
-            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
-            "data": "18/11/2026",
+            "nome": "I TAPPA WINTER 34",
+            "data": "19/11/2026",
             "partite": [
-                "18/11/2026; 00:00; No. Campo 1 Campo 2",
-                "18/11/2026; 15:00; 1 Inizio  Singolare Maschile Open LAUDATI LORENZO vs PAONE FRANCESCO Inizio  Singolare Maschile Open LUCIA GIANMARCO vs LUCIANI GABRIELE",
-                "18/11/2026; 16:30; 2 Inizio  Singolare Maschile Open PERONTI MASSIMO vs GAGLIARDUCCI VITTORIO Inizio  Singolare Maschile Open PASTORE LUCA vs RAPARELLI FILIPPO",
-                "18/11/2026; 17:30; 3 Non prima delle Singolare Maschile Open MATTIONI FEDERICO vs PICCA EDOARDO Non prima delle Singolare Maschile Open CROCETTI FLAVIO vs BATTISTI GIANLUCA"
+                "19/11/2026; 00:00; No. Campo 1 Campo 2",
+                "19/11/2026; 14:00; 1 Inizio  Singolare Maschile Open INNISI LUCA vs MORETTI TIZIANO Inizio  Singolare Maschile Open BATTOCCHIO GIACOMO vs PELLEGRINI PERRONE ANDREA",
+                "19/11/2026; 15:30; 2 Inizio  Singolare Maschile Open ROSSI EMILIANO vs PARINI MASSIMILIANO Inizio  Singolare Maschile Open MARAVIGLIA GABRIELE vs INZIRILLO VALERIO",
+                "19/11/2026; 17:00; 3 Inizio  Singolare Femminile Open RUETTA CHIARA vs FAZI PIA Inizio  Singolare Maschile Open D; OVIDIO RICCARDO vs TOWNSHEND ORLANDO",
+                "19/11/2026; 18:30; VETTORELLI CATERINA vs CONI GIUSEPPE FLAVIO; RICCIONI LIVIA vs DI IORIO ERMINIO",
+                "19/11/2026; 20:00; MANGANO ANTONIO vs LAVAGNINI EDOARDO"
             ]
         },
         {
@@ -30,6 +52,16 @@
                 "18/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9",
                 "18/11/2026; 18:00; 1 Inizio  Singolare Femminile Open FALCONE IOLE vs CALAMITA ELISA KAROL Inizio  Singolare Maschile Open MANCINI RICCARDO vs GHERSI MASSIMO Inizio  Singolare Maschile Open IZZO ANTONIO vs BALDINETTI PIETRO Inizio  Singolare Maschile Open IERVOLINO ARMANDO vs ACQUAVIVA CIRO",
                 "18/11/2026; 19:30; 2 Inizio  Singolare Maschile Open ZAMBONI MATTIA vs CAPPA FRANCESCO Inizio  Singolare Maschile Open CITTADINI PAOLO vs LORUSSO ALESSANDRO Inizio  Singolare Maschile Open GALIZIA LORENZO vs MUSILLI FRANCESCO Inizio  Singolare Maschile Open DIBIASE MASSIMILIANO vs BIANCAVILLA ANDREA"
+            ]
+        },
+        {
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
+            "data": "19/11/2026",
+            "partite": [
+                "19/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8",
+                "19/11/2026; 18:00; 1 Inizio  Singolare Maschile Open CICIVELLI ALESSIO vs QUINZI CRISTIANO Inizio  Singolare Femminile Open MITREA FRANCESCA MARIA vs q Inizio  Singolare Maschile Open ARGENTINO RICCARDO vs q",
+                "19/11/2026; 19:30; 2 Inizio  Singolare Maschile Open q vs NICOLETTI FEDERICO Inizio  Singolare Maschile Open ROSSI JACOPO vs q Inizio  Singolare Maschile Open SEGRETO FEDERICO vs q",
+                "19/11/2026; 21:00; 3 Inizio  Singolare Maschile Open q vs COLANERI FILIPPO Inizio  Singolare Maschile Open BOLLETTA FILIPPO vs q Inizio  Singolare Femminile Open q vs DEGRASSI RACHELE"
             ]
         }
     ]
