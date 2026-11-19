@@ -1,24 +1,4 @@
 {
-    "report_data": "18/11/2026 22:19",
-    "tornei": [
-        {
-            "nome": "3^ E 4^ CATEGORIA M & F",
-            "data": "18/11/2026",
-            "partite": [
-                "18/11/2026; 00:00; No. Campo 1",
-                "18/11/2026; 15:00; 1 Inizio  Singolare Maschile Open GIORGI ANDREA vs ROSSI MARCO",
-                "18/11/2026; 17:00; 2 Inizio  Singolare Maschile Open BRUNI CLAUDIO vs PUZZILLI FRANCESCO",
-                "18/11/2026; 19:00; 3 Inizio  Singolare Maschile Open MANFREDI GIUSEPPE vs MIGLIORINI ALESSANDRO"
-            ]
-        },
-        {
-            "nome": "3^ E 4^ CATEGORIA M & F",
-            "data": "19/11/2026",
-            "partite": [
-                "19/11/2026; 00:00; No. Campo 1",
-                "19/11/2026; 16:00; 1 Inizio  Singolare Maschile Open ANTINORI ALESSANDRO vs GIORGI ANDREA",
-                "19/11/2026; 18:00; 2 Inizio  Singolare Maschile Open MIGLIORINI ALESSANDRO vs PUZZILLI FRANCESCO"
-            ]
-        }
-    ]
+    "report_data": "19/11/2026 00:52",
+    "tornei": []
 }
