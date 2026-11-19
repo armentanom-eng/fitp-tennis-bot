@@ -1,37 +1,14 @@
 {
-    "report_data": "18/11/2026 18:36",
+    "report_data": "19/11/2026 00:40",
     "tornei": [
-        {
-            "nome": "JUNIOR TENNIS CUP VII EDITION U10-12-14-16/18 M/F",
-            "data": "18/11/2026",
-            "partite": [
-                "18/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4 Campo 5 Campo 6",
-                "18/11/2026; 14:30; 1 Inizio  Singolare Maschile Under 10 FLAMMIA RICCARDO vs MATTIA VALERIO Inizio  Singolare Femminile Under 18 FEMIA MARTA vs BRACAGLIA ELENA Inizio  Singolare Maschile Under 18 FARINA MARCO vs HADLEY ALEX Inizio  Singolare Maschile Under 12 ARPAIA GIORGIO vs MACCARONI ALESSANDRO Inizio  Singolare Maschile Under 14 DE BENEDETTI TOMMASO vs ESPOSITO TOMMASO",
-                "18/11/2026; 15:30; 2 Non prima delle Singolare Maschile Under 10 BOLLERO MATTEO vs TORRISI SAMUELE Non prima delle Singolare Femminile Under 14 PAUNESCU ANTONIA MARIA vs ORTENZI ELEONORA Non prima delle Singolare Maschile Under 12 MOSCO LEONARDO vs BIASINI ANDREA Non prima delle Singolare Femminile Under 18 BLEVE EVA vs CHIRICO LAVINIA Non prima delle Singolare Maschile Under 14 COLANTUONI RAFFAELE vs GUERRIERI WOLF SEBASTIANO Inizio  Singolare Maschile Under 12 PANICCI ALESSANDRO vs BOCCANERA GIORGIO",
-                "18/11/2026; 17:00; 3 Non prima delle Singolare Maschile Under 10 PATRIZI PAOLO vs BEDODI ANDREA Non prima delle Singolare Maschile Under 10 CORRADI ANDREA vs FLAMMIA RICCARDO o MATTIA VALERIO Non prima delle Singolare Maschile Under 18 LORI LEONARDO vs LONGO FRANCESCO Non prima delle Singolare Femminile Under 10 MASTROPIETRO CECILIA vs ZUCCHI ROBERTA",
-                "18/11/2026; 18:30; 4 Non prima delle Singolare Maschile Under 10 PUZZILLI MANUEL vs BRUNELLI TOMMASO Non prima delle Singolare Maschile Under 14 MELITO LEONARDO vs GALLI EDOARDO Non prima delle Singolare Femminile Under 10 LIUZZI NATALIA vs PAGLIACCIA CHIARA Non prima delle Singolare Femminile Under 14 CANTONI CHIARA vs CERROCCHI SOFIA Non prima delle Singolare Maschile Under 14 HENTSCHEL MAXIMILIAN vs FOSCHINI FABIO"
-            ]
-        },
         {
             "nome": "JUNIOR TENNIS CUP VII EDITION U10-12-14-16/18 M/F",
             "data": "19/11/2026",
             "partite": [
                 "19/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
-                "19/11/2026; 16:00; 1 Inizio  Singolare Femminile Under 14 PARRA MANCERA ELENA vs NERI FLAMINIA Inizio  Singolare Femminile Under 14 PAUNESCU ANTONIA MARIA vs CANTONI CHIARA o CERROCCHI SOFIA Inizio  Singolare Maschile Under 18 HADLEY ALEX vs MELITO LEONARDO Inizio  Singolare Maschile Under 12 MACCARONI ALESSANDRO vs PANICCI ALESSANDRO",
-                "19/11/2026; 17:30; 2 Non prima delle Singolare Maschile Under 18 CAMPETI MATTEO vs LORI LEONARDO o LONGO FRANCESCO Non prima delle Singolare Maschile Under 14 HENTSCHEL MAXIMILIAN o FOSCHINI FABIO vs COLANTUONI RAFFAELE o GUERRIERI WOLF SEBASTIANO Non prima delle Singolare Maschile Under 12 BORGOGNONI RICCARDO vs MOSCO LEONARDO Non prima delle Singolare Maschile Under 10 BOLLERO MATTEO vs PATRIZI PAOLO o BEDODI ANDREA",
-                "19/11/2026; 19:00; 3 Dopo debito riposo non prima delle Singolare Femminile Under 18 BRACAGLIA ELENA vs CERROCCHI SOFIA Dopo debito riposo non prima delle Singolare Maschile Under 14 MELITO LEONARDO o GALLI EDOARDO vs ESPOSITO TOMMASO Non prima delle Singolare Maschile Under 10 PUZZILLI MANUEL o BRUNELLI TOMMASO vs CORRADI ANDREA o FLAMMIA RICCARDO"
-            ]
-        },
-        {
-            "nome": "MASTER JUNIOR NEXT GEN ITALIA 2026",
-            "data": "18/11/2026",
-            "partite": [
-                "18/11/2026; 00:00; No. Campo 5 - CUS TORINO - Corso Sicilia 50 - Torino",
-                "18/11/2026; 10:00; 1 Inizio  Singolare Maschile Under 14 FRANCESCHINI TOMMASO vs MATTI TOMMASO NICHOLAS",
-                "18/11/2026; 00:00; No. Campo 2 - C.S. BEPPE VIOLA - Via Giovanni Palatucci 12 - Torino",
-                "18/11/2026; 10:00; 1 Inizio  Singolare Femminile Under 10 MORETTI FLAVIA vs FOGGIA MICOL",
-                "18/11/2026; 00:00; No. Campo 6 - SPORTING MONVISO - Corso Allamano 25 - Grugliasco TO",
-                "18/11/2026; 10:00; 1 Inizio  Singolare Femminile Under 14 DEMATTEIS LUDOVICA vs RATTI MARTINA"
+                "19/11/2026; 16:00; 1 Inizio  Singolare Femminile Under 14 PARRA MANCERA ELENA vs NERI FLAMINIA Inizio  Singolare Femminile Under 14 PAUNESCU ANTONIA MARIA vs CERROCCHI SOFIA Inizio  Singolare Maschile Under 18 HADLEY ALEX vs MELITO LEONARDO Inizio  Singolare Maschile Under 12 MACCARONI ALESSANDRO vs PANICCI ALESSANDRO",
+                "19/11/2026; 17:30; 2 Non prima delle Singolare Maschile Under 18 CAMPETI MATTEO vs LONGO FRANCESCO Non prima delle Singolare Maschile Under 14 HENTSCHEL MAXIMILIAN vs COLANTUONI RAFFAELE Non prima delle Singolare Maschile Under 12 BORGOGNONI RICCARDO vs MOSCO LEONARDO Non prima delle Singolare Maschile Under 10 BOLLERO MATTEO vs PATRIZI PAOLO",
+                "19/11/2026; 19:00; 3 Dopo debito riposo non prima delle Singolare Femminile Under 18 BRACAGLIA ELENA vs CERROCCHI SOFIA Dopo debito riposo non prima delle Singolare Maschile Under 14 GALLI EDOARDO vs ESPOSITO TOMMASO Non prima delle Singolare Maschile Under 10 BRUNELLI TOMMASO vs FLAMMIA RICCARDO"
             ]
         },
         {
