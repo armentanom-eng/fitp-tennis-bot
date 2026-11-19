@@ -198,6 +198,12 @@
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2C30B5A2-F742-4D8F-A6CC-E7700B3CCFE2",
             "categoria": "MASTER JUNIOR NEXT GEN ITALIA 2026",
+            "tabellone": "Doppio Maschile Under 10",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=2C30B5A2-F742-4D8F-A6CC-E7700B3CCFE2",
+            "categoria": "MASTER JUNIOR NEXT GEN ITALIA 2026",
             "tabellone": "Doppio Maschile Under 12",
             "iscritti": []
         },
