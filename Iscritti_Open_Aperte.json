@@ -1,58 +1,6 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Femminile Open",
-            "iscritti": [
-                "ELISA MARIA  NEGURA4.2"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
-            "categoria": "3^ e 4^ Categoria M & F",
-            "tabellone": "Singolare Maschile Open",
-            "iscritti": [
-                "FRANCESCO PUZZILLI4.NC",
-                "MATTIA SCARCIGLIA3.5",
-                "CIRO ACQUAVIVA4.1",
-                "FRANCESCO FERRARI3.4",
-                "ALESSANDRO SACCHI4.4",
-                "MASSIMILIANO DI COSIMO4.3",
-                "ANDREA CHIATRONI4.3",
-                "PAOLO ROSSI4.5",
-                "ALESSANDRO ANTINORI4.NC",
-                "FLAVIO DOMIZIANO ROSSI4.3",
-                "MIRKO FIORELLO4.2",
-                "MAURIZIO BENINCASA4.2",
-                "ALESSANDRO MIGLIORINI4.NC",
-                "CLAUDIO  BRUNI4.NC",
-                "MIRCEA TCACIUC3.5",
-                "FERNANDO BOCCHINI4.3",
-                "GIUSEPPE MANFREDI4.NC",
-                "ADRIANO BOZZO4.1",
-                "CLAUDIO CAPOZZA4.1",
-                "ALESSANDRO CARATELLI4.2",
-                "MARCO ROSSI4.NC",
-                "ALBIO PETRONE4.3",
-                "ANDREA GIORGI4.NC",
-                "GIOVANNI COLARUSSO4.3",
-                "ANGELO LO VETRO4.4",
-                "GABRIEL BISCEGLIE4.1",
-                "GIUSEPPE ERCOLANO3.3",
-                "ANTONIO DE LUCA4.1",
-                "SERGIO COSCIONE4.6",
-                "YURI SIMONI4.2",
-                "AUGUSTO LONGATTI3.4",
-                "MATTEO GUAZZONE4.2",
-                "LORENZO PISTOIA4.1",
-                "SIMONE NAPOLITANO3.5",
-                "FABIO MILLESIMI4.2",
-                "SEBASTIANO GIUCASTRO3.5",
-                "LEONARDO MELITO3.3"
-            ]
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=1CA618EA-7D40-4669-842E-A5D3DBA03265",
             "categoria": "II° Tappa WINTER34 - CT APPIA COUNTRY - III e IV CATEGORIA - SINGOLI E DOPPI",
             "tabellone": "Singolare Femminile Open (LIM. 4.NC - 3.1)",
@@ -96,7 +44,8 @@
                 "ELIZA ANTONIA CERGHIT3.1",
                 "NICOLE CAPPONI3.5",
                 "SOFIA RICCI3.4",
-                "DANIELA D'ANGELICA3.5"
+                "DANIELA D'ANGELICA3.5",
+                "MELISSA LISNIC3.4"
             ]
         },
         {
@@ -223,6 +172,58 @@
                 "VALERIO SANTOLOCI4.NC",
                 "MARCO FABIO BERNABUCCI3.5",
                 "ILARIA BARRESI3.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Femminile Open",
+            "iscritti": [
+                "ELISA MARIA  NEGURA4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=E464D84B-6EB3-4BFA-99FD-ABEBC2E1F923",
+            "categoria": "3^ e 4^ Categoria M & F",
+            "tabellone": "Singolare Maschile Open",
+            "iscritti": [
+                "FRANCESCO PUZZILLI4.NC",
+                "MATTIA SCARCIGLIA3.5",
+                "CIRO ACQUAVIVA4.1",
+                "FRANCESCO FERRARI3.4",
+                "ALESSANDRO SACCHI4.4",
+                "MASSIMILIANO DI COSIMO4.3",
+                "ANDREA CHIATRONI4.3",
+                "PAOLO ROSSI4.5",
+                "ALESSANDRO ANTINORI4.NC",
+                "FLAVIO DOMIZIANO ROSSI4.3",
+                "MIRKO FIORELLO4.2",
+                "MAURIZIO BENINCASA4.2",
+                "ALESSANDRO MIGLIORINI4.NC",
+                "CLAUDIO  BRUNI4.NC",
+                "MIRCEA TCACIUC3.5",
+                "FERNANDO BOCCHINI4.3",
+                "GIUSEPPE MANFREDI4.NC",
+                "ADRIANO BOZZO4.1",
+                "CLAUDIO CAPOZZA4.1",
+                "ALESSANDRO CARATELLI4.2",
+                "MARCO ROSSI4.NC",
+                "ALBIO PETRONE4.3",
+                "ANDREA GIORGI4.NC",
+                "GIOVANNI COLARUSSO4.3",
+                "ANGELO LO VETRO4.4",
+                "GABRIEL BISCEGLIE4.1",
+                "GIUSEPPE ERCOLANO3.3",
+                "ANTONIO DE LUCA4.1",
+                "SERGIO COSCIONE4.6",
+                "YURI SIMONI4.2",
+                "AUGUSTO LONGATTI3.4",
+                "MATTEO GUAZZONE4.2",
+                "LORENZO PISTOIA4.1",
+                "SIMONE NAPOLITANO3.5",
+                "FABIO MILLESIMI4.2",
+                "SEBASTIANO GIUCASTRO3.5",
+                "LEONARDO MELITO3.3"
             ]
         }
     ]
