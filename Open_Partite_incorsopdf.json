@@ -1,16 +1,6 @@
 {
-    "report_data": "22/11/2026 17:36",
+    "report_data": "22/11/2026 23:46",
     "tornei": [
-        {
-            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
-            "data": "22/11/2026",
-            "partite": [
-                "22/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9 CAMPO 11",
-                "22/11/2026; 17:00; 1 Inizio  Singolare Maschile Open FORTUNATO FRANCESCO vs ROSSI JACOPO Inizio  Singolare Maschile Open MARZELLA JACOPO vs MAZZUCA STEFANO Inizio  Singolare Femminile Open TALAMELLI SOFIA vs DI GAETANO AURORA Inizio  Singolare Femminile Open NODA CHIZURU vs CIANCHI ILARIA Inizio  Singolare Maschile Open TROMBETTA FRANCO vs HADIR FARIS",
-                "22/11/2026; 18:30; 2 Inizio  Singolare Maschile Open LUZZI STEFANO vs PELLEGRINI PERRONE ANDREA Inizio  Singolare Maschile Open GENTILE NICCOLÒ vs PIZZICONI MARCO Inizio  Singolare Femminile Open SPERATI GIULIA vs VILLANI MATILDE Inizio  Singolare Femminile Open SERMONETA GIORGIA vs GIULIACCI BARBARA Dopo debito riposo non prima delle Singolare Femminile Open TALAMELLI SOFIA o DI GAETANO AURORA vs NODA CHIZURU o CIANCHI ILARIA",
-                "22/11/2026; 20:00; 3 Inizio  Singolare Maschile Open RUSSOTTO LORENZO vs MIRO LEONARDO Inizio  Singolare Maschile Open MINERVA ADRIANO vs PALCICH LORENZO Inizio  Singolare Maschile Open REGA CHRISTIAN vs LUDDI LEONARDO"
-            ]
-        },
         {
             "nome": "3^ E 4^ CATEGORIA M & F",
             "data": "22/11/2026",
@@ -33,39 +23,23 @@
             ]
         },
         {
-            "nome": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
             "data": "22/11/2026",
             "partite": [
-                "22/11/2026; 00:00; No. Campo Centrale Campo 1 Campo 2 Campo 3 Campo 4 Campo 6",
-                "22/11/2026; 10:00; 1) CORVAGLIA ALESSIO vs CAPODACQUA ALESSANDRO Inizio  Singolare Femminile Open (LIM; 1) CUCCHIELLA BEATRICE vs MOLINARI KATIA Inizio  Singolare Maschile Open (LIM; 1) SIRACUSA FRANCESCO vs IERVOLINO ARMANDO Inizio  Singolare Maschile Open (LIM; 1) BARRACO FLAVIO vs LUCCHETTI ALESSIO",
-                "22/11/2026; 11:30; 1) MAZZUCCHI MARINA vs RAPINESI EMMA Non prima delle Singolare Maschile Open (LIM; 1) GALIERO DAVIDE vs INCAGNOLA STEFANO o DOMINI MANUEL Non prima delle Singolare Maschile Open (LIM; 1) CAMPANILE CLAUDIO vs GARBARINO GABRIELE Non prima delle Singolare Maschile Open (LIM; 1) FUSCO REMO vs CAPOLUPO FRANCESCO Inizio  Singolare Maschile Open (LIM; 1) DI FABIO DANILO vs VECCHIONE STEFANO",
-                "22/11/2026; 13:00; 1) CANCIANI GIANLUCA vs LIBERTINI EZIO Non prima delle Singolare Maschile Open (LIM; 1) BOSCARINO RICCARDO o TRIVELLI SIMONE vs ORSO EDOARDO Non prima delle Singolare Maschile Open (LIM; 1) FIORELLI STEFANO vs NINFADORO ENRICO",
-                "22/11/2026; 14:30; 1) CAPPELLI SIMONE vs IANNOTTI MATTEO Non prima delle Singolare Femminile Open (LIM; 1) DE MONTE ALESSANDRA vs ACCOLLI MICHELLE Non prima delle Singolare Maschile Open (LIM; ORAZIO STEFANO vs MUSILLI FRANCESCO Non prima delle Singolare Maschile Open (LIM; 1) COLONNA MARCO vs RAUCO PAOLO",
-                "22/11/2026; 16:00; 1) SPERANZA MASSIMILIANO vs RICCI EMANUELE Non prima delle Singolare Maschile Open (LIM; 1) BELLI EDOARDO o CACCAVALE PASQUALE vs LATTES FRANCESCO Non prima delle Singolare Maschile Open (LIM; 1) PLACIDI LORENZO o BENINCASA MAURIZIO vs MARIELLA GIOVANNI",
-                "22/11/2026; 17:30; 1) BANI DANIELE vs PANVINI LUCA Non prima delle Singolare Maschile Open (LIM; 1) CARULLI ROBERTO vs VARIA ALBERTO Non prima delle Singolare Maschile Open (LIM; 1) CORONGIU PAOLO vs LAZZARI FULVIO Non prima delle Singolare Maschile Open (LIM; 1) IOVANNITTI LUCA vs ZABEO NICCOLO"
+                "22/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9 CAMPO 11",
+                "22/11/2026; 17:00; 1 Inizio  Singolare Maschile Open FORTUNATO FRANCESCO vs ROSSI JACOPO Inizio  Singolare Maschile Open MARZELLA JACOPO vs MAZZUCA STEFANO Inizio  Singolare Femminile Open TALAMELLI SOFIA vs DI GAETANO AURORA Inizio  Singolare Femminile Open NODA CHIZURU vs CIANCHI ILARIA Inizio  Singolare Maschile Open TROMBETTA FRANCO vs HADIR FARIS",
+                "22/11/2026; 18:30; 2 Inizio  Singolare Maschile Open LUZZI STEFANO vs PELLEGRINI PERRONE ANDREA Inizio  Singolare Maschile Open GENTILE NICCOLÒ vs PIZZICONI MARCO Inizio  Singolare Femminile Open SPERATI GIULIA vs VILLANI MATILDE Inizio  Singolare Femminile Open SERMONETA GIORGIA vs GIULIACCI BARBARA Dopo debito riposo non prima delle Singolare Femminile Open TALAMELLI SOFIA o DI GAETANO AURORA vs NODA CHIZURU o CIANCHI ILARIA",
+                "22/11/2026; 20:00; 3 Inizio  Singolare Maschile Open RUSSOTTO LORENZO vs MIRO LEONARDO Inizio  Singolare Maschile Open MINERVA ADRIANO vs PALCICH LORENZO Inizio  Singolare Maschile Open REGA CHRISTIAN vs LUDDI LEONARDO"
             ]
         },
         {
-            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
-            "data": "22/11/2026",
-            "partite": [
-                "22/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "22/11/2026; 09:00; 1 Inizio  Singolare Maschile Open CHIUSURI MATTEO vs PICCA EDOARDO Inizio  Singolare Maschile Open ZACCARI FLAVIO vs PASTORE LUCA Inizio  Singolare Maschile Open BOLLERO ENRICO vs BATTISTI GIANLUCA",
-                "22/11/2026; 10:00; 2 Non prima delle Singolare Maschile Open BALDASSARRE FRANCESCO vs TERZINO ALESSIO Non prima delle Singolare Maschile Open LUCIANI GABRIELE vs FUSCO PASQUALE Non prima delle Singolare Maschile Open GAGLIARDUCCI VITTORIO vs ODDI EMANUELE",
-                "22/11/2026; 11:30; 3 Dopo debito riposo non prima delle Singolare Maschile Open CHIUSURI MATTEO o PICCA EDOARDO vs ZACCARI FLAVIO o PASTORE LUCA Dopo debito riposo non prima delle Singolare Maschile Open MANCIOCCHI GIOSUE; vs BOLLERO ENRICO o BATTISTI GIANLUCA Dopo debito riposo non prima delle Singolare Maschile Open LUCIANI GABRIELE o FUSCO PASQUALE vs GAGLIARDUCCI VITTORIO o ODDI EMANUELE",
-                "22/11/2026; 13:00; 4 Inizio  Singolare Maschile Open CONTE PIERLUIGI vs BALDASSARRE FRANCESCO o TERZINO ALESSIO Inizio  Singolare Maschile Open PAONE FRANCESCO vs MONTI RICCARDO Inizio  Singolare Femminile Open LANCIA MARIA SOLE vs DONZELLI SARA"
-            ]
-        },
-        {
-            "nome": "4^CAT. M/F \"CITTÀ DI GROTTAFERRATA\"",
+            "nome": "1° OPEN SERALE POLISPORTIVA PALOCCO",
             "data": "23/11/2026",
             "partite": [
-                "23/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3",
-                "23/11/2026; 14:00; 1 Inizio  Singolare Maschile Open CHIUSURI MATTEO vs PICCA EDOARDO Inizio  Singolare Maschile Open ZACCARI FLAVIO vs PASTORE LUCA Inizio  Singolare Maschile Open BALDASSARRE FRANCESCO vs TERZINO ALESSIO",
-                "23/11/2026; 15:00; 2 Non prima delle Singolare Maschile Open LUCIANI GABRIELE vs FUSCO PASQUALE Non prima delle Singolare Maschile Open GAGLIARDUCCI VITTORIO vs ODDI EMANUELE Non prima delle Singolare Femminile Open BACCHILEGA MARIA CLARA vs ODDI ELENA",
-                "23/11/2026; 16:30; 3 Inizio  Singolare Maschile Open CHIUSURI MATTEO o PICCA EDOARDO vs ZACCARI FLAVIO o PASTORE LUCA Inizio  Singolare Maschile Open CONTE PIERLUIGI vs BALDASSARRE FRANCESCO o TERZINO ALESSIO Inizio  Singolare Maschile Open PAONE FRANCESCO vs MONTI RICCARDO",
-                "23/11/2026; 18:00; 4 Inizio  Singolare Maschile Open PERONTI MASSIMO vs LUCIA GIANMARCO Inizio  Singolare Maschile Open LUCIANI GABRIELE o FUSCO PASQUALE vs GAGLIARDUCCI VITTORIO o ODDI EMANUELE Inizio  Singolare Femminile Open LANCIA MARIA SOLE vs DONZELLI SARA",
-                "23/11/2026; 19:00; 5 Non prima delle Singolare Maschile Open MANCIOCCHI GIOSUE' vs BATTISTI GIANLUCA"
+                "23/11/2026; 00:00; No. CAMPO 5 (PRINCIPALE) CAMPO 7 CAMPO 8 CAMPO 9",
+                "23/11/2026; 17:00; 1 Inizio  Singolare Maschile Open DE TOMMASO FLAVIO vs RUSSOTTO LORENZO Inizio  Singolare Maschile Open TARTAGLIA MATTIA SALVATORE vs FORTUNATO FRANCESCO Inizio  Singolare Maschile Open MAZZUCA STEFANO vs CARRARETTO LEONARDO Inizio  Singolare Maschile Open LUDDI LEONARDO vs VANGI GIANPAOLO",
+                "23/11/2026; 18:30; 2 Inizio  Singolare Maschile Open SIESTO RICCARDO vs PALCICH LORENZO Inizio  Singolare Maschile Open TROMBETTA FRANCO vs FINOCCHI PIERO Inizio  Singolare Femminile Open DI GAETANO AURORA vs IERVOLINO CAMILLA Inizio  Singolare Femminile Open SERMONETA GIORGIA vs VILLANI MATILDE",
+                "23/11/2026; 20:00; 3 Dopo debito riposo non prima delle Singolare Maschile Open DE TOMMASO FLAVIO o RUSSOTTO LORENZO vs TARTAGLIA MATTIA SALVATORE o FORTUNATO FRANCESCO Inizio  Singolare Maschile Open LUZZI STEFANO vs TIGANI SAMUEL Inizio  Singolare Maschile Open RUGGERONE SIMONE vs GENTILE NICCOLÒ Dopo debito riposo non prima delle Singolare Maschile Open LUDDI LEONARDO o VANGI GIANPAOLO vs MAZZUCA STEFANO o CARRARETTO LEONARDO"
             ]
         }
     ]
