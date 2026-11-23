@@ -1,4 +1,17 @@
 {
-    "report_data": "22/11/2026 23:55",
-    "tornei": []
+    "report_data": "23/11/2026 15:10",
+    "tornei": [
+        {
+            "nome": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
+            "data": "24/11/2026",
+            "partite": [
+                "24/11/2026; 00:00; No. Campo Principale CAMPO 1 CAMPO 2 CAMPO 3",
+                "24/11/2026; 13:00; 1 Inizio  Singolare Maschile Open SCIARPELLETTI FEDERICO vs LUCCHETTI FRANCO Inizio  Singolare Maschile Open DE SOSSI EMILIANO vs NAPPA MAURIZIO Inizio  Singolare Maschile Open PAOLONI RICCARDO vs FALAGARIO GIUSEPPE Inizio  Singolare Maschile Open STIRPE PAOLO vs CECCATO EMANUELE",
+                "24/11/2026; 14:30; 2 Non prima delle Singolare Maschile Open ROSI RICCARDO vs CIOTOLA MARCO Non prima delle Singolare Maschile Open CORBUCCI CLAUDIO vs MARCELLI GIORGIO Non prima delle Singolare Femminile Open WAS MADDALENA vs BRIGLIA GELSOMINA",
+                "24/11/2026; 16:00; 3 Non prima delle Singolare Maschile Open BASCO GIANLUIGI vs MORONI ALESSANDRO Non prima delle Singolare Femminile Open RUFINI CLAUDIA vs RUSSI SUSANNA Non prima delle Singolare Femminile Open ACCOLLI MICHELLE vs RICCITELLI VERONICA Non prima delle Singolare Femminile Open PANNACCI ILARIA vs MEONI LORENZA",
+                "24/11/2026; 17:30; 4 Non prima delle Singolare Maschile Open TUCCERI CIMINI HUNOR vs CONCIATORI EDOARDO Non prima delle Singolare Femminile Open GRIGORAS ADRIANA vs RISI VALENTINA",
+                "24/11/2026; 19:00; 5 Non prima delle Singolare Maschile Open VALLIFUOCO MIRKO vs CHIUCCHIUINI FABIO Non prima delle Singolare Maschile Open LUPERI STEFANO vs MANFREDI GIUSEPPE"
+            ]
+        }
+    ]
 }
