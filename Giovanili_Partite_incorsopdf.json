@@ -1,4 +1,42 @@
 {
-    "report_data": "24/11/2026 14:30",
-    "tornei": []
+    "report_data": "24/11/2026 20:28",
+    "tornei": [
+        {
+            "nome": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
+            "data": "24/11/2026",
+            "partite": [
+                "24/11/2026; 00:00; No. Campo 1 - CT CRESPELLANO (SINTETICO) CAMPO 2 - CT CRESPELLANO (SINTETICO) CAMPO 3 - SCUOLA TENNIS FELSINEA (SINTETICO)",
+                "24/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 11 MARCUCCI SOFIA vs PUPPO LUISA ANTONIA Inizio  Singolare Femminile Under 11 BENVENUTI BEATRICE vs VELKAVRH ANA Inizio  Singolare Femminile Under 11 SANTARELLI GIADA vs MONCADA GIUDITTA",
+                "24/11/2026; 00:00; CINZIA vs ANDERLONI ANNA A seguire Singolare Femminile Under 11 LULLO FATIMA vs RONDINA NICOLE A seguire Singolare Femminile Under 11 FERRARI ANNA vs RAIMONDO MORENA",
+                "24/11/2026; 11:00; 3 Non prima delle Singolare Femminile Under 11 FAEDDA GRETA vs CASTRACANI GIULIA Non prima delle Singolare Femminile Under 11 MAURI EVA vs MANCINO MELISSA",
+                "24/11/2026; 00:00; No. Campo 1 - CT CASTENASO (GREEN SET) Campo 2 - CT CASTENASO (GREEN SET)",
+                "24/11/2026; 08:00; 1 Inizio  Singolare Femminile Under 9 CESARONI MARTINA vs HONCIU MAIA VIOLETA Inizio  Singolare Femminile Under 9 LIGUORI ANNA vs LIERA EMMA",
+                "24/11/2026; 00:00; 2 A seguire Singolare Femminile Under 9 RODILLA DE STEFANO ISABELLA vs SECRIERU IONELA A seguire Singolare Femminile Under 9 FIOCCHETTI AZZURRA vs RAVAGNI MAYA",
+                "24/11/2026; 10:00; 3 Non prima delle Singolare Femminile Under 9 GIANNOCCARO GABRIELLA vs PARMEGGIANI BEATRICE Non prima delle Singolare Femminile Under 9 GUIDA GIULIA vs VELKAVRH EVA",
+                "24/11/2026; 00:00; 4 A seguire Singolare Femminile Under 9 SANCHI GIADA vs BONO FRANCESCA",
+                "24/11/2026; 00:00; No. Campo 3 - SPORT EDUCATION (PLAY IT) CAMPO 4 - SPORT EDUCATION (PLAY IT) CAMPO 5 - SPORT EDUCATION (PLAY IT)",
+                "24/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 11 XOTTA MATTEO vs ALTAVILLA ANDREA Inizio  Singolare Maschile Under 11 SERRA ZANETTI ALESSANDRO vs CARDASCIA MICHELANGELO Inizio  Singolare Maschile Under 11 DELIA PIERMARIO vs PERCONTI BROTONS JAIME",
+                "24/11/2026; 00:00; 2 A seguire Singolare Maschile Under 11 UBINI GREGORIO vs GIOVANNINI THOMAS A seguire Singolare Maschile Under 11 MANCINI ALESSANDRO vs PETRILLI AUGUSTO A seguire Singolare Maschile Under 11 AMERICA LORENZO MARIA vs CHILELLI ANDREA",
+                "24/11/2026; 11:00; 3 Non prima delle Singolare Maschile Under 11 MARROCU GABRIELE vs SENA MATTIA Non prima delle Singolare Maschile Under 11 BRUNO ANDREA vs ZOMPA MATTIA"
+            ]
+        },
+        {
+            "nome": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
+            "data": "25/11/2026",
+            "partite": [
+                "25/11/2026; 00:00; No. Campo 1 - CT CRESPELLANO (SINTETICO) CAMPO 2 - CT CRESPELLANO (SINTETICO)",
+                "25/11/2026; 08:00; 1 Inizio  Singolare Femminile Under 11 BENVENUTI BEATRICE vs MUNACO; CINZIA Inizio  Singolare Femminile Under 11 FERRARI ANNA vs MAURI EVA",
+                "25/11/2026; 00:00; 2 A seguire Singolare Femminile Under 11 PUPPO LUISA ANTONIA vs RONDINA NICOLE A seguire Singolare Femminile Under 11 MONCADA GIUDITTA vs CASTRACANI GIULIA",
+                "25/11/2026; 10:30; CINZIA vs FERRARI ANNA o MAURI EVA Dopo debito riposo non prima delle Singolare Femminile Under 11 MONCADA GIUDITTA o CASTRACANI GIULIA vs PUPPO LUISA ANTONIA o RONDINA NICOLE",
+                "25/11/2026; 00:00; No. Campo 1 - CT CASTENASO (GREEN SET) Campo 2 - CT CASTENASO (GREEN SET)",
+                "25/11/2026; 08:00; 1 Inizio  Singolare Femminile Under 9 BONO FRANCESCA vs HAGEA GIULIA CRISTINA Inizio  Singolare Femminile Under 9 FIOCCHETTI AZZURRA vs VELKAVRH EVA",
+                "25/11/2026; 00:00; 2 A seguire Singolare Femminile Under 9 SECRIERU IONELA vs PARMEGGIANI BEATRICE A seguire Singolare Femminile Under 9 CESARONI MARTINA vs LIERA EMMA",
+                "25/11/2026; 10:30; 3 Dopo debito riposo non prima delle Singolare Femminile Under 9 BONO FRANCESCA o HAGEA GIULIA CRISTINA vs FIOCCHETTI AZZURRA o VELKAVRH EVA Dopo debito riposo non prima delle Singolare Femminile Under 9 SECRIERU IONELA o PARMEGGIANI BEATRICE vs CESARONI MARTINA o LIERA EMMA",
+                "25/11/2026; 00:00; No. Campo 3 - SPORT EDUCATION (PLAY IT) CAMPO 4 - SPORT EDUCATION (PLAY IT)",
+                "25/11/2026; 08:00; 1 Inizio  Singolare Maschile Under 11 SERRA ZANETTI ALESSANDRO vs MANCINI ALESSANDRO Inizio  Singolare Maschile Under 11 DELIA PIERMARIO vs XOTTA MATTEO",
+                "25/11/2026; 00:00; 2 A seguire Singolare Maschile Under 11 GIOVANNINI THOMAS vs BRUNO ANDREA A seguire Singolare Maschile Under 11 AMERICA LORENZO MARIA vs SENA MATTIA",
+                "25/11/2026; 10:30; 3 Dopo debito riposo non prima delle Singolare Maschile Under 11 SERRA ZANETTI ALESSANDRO o MANCINI ALESSANDRO vs DELIA PIERMARIO o XOTTA MATTEO Dopo debito riposo non prima delle Singolare Maschile Under 11 GIOVANNINI THOMAS o BRUNO ANDREA vs AMERICA LORENZO MARIA o SENA MATTIA"
+            ]
+        }
+    ]
 }

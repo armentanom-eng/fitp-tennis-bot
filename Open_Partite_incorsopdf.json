@@ -1,4 +1,48 @@
 {
-    "report_data": "24/11/2026 14:31",
-    "tornei": []
+    "report_data": "24/11/2026 20:30",
+    "tornei": [
+        {
+            "nome": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "data": "24/11/2026",
+            "partite": [
+                "24/11/2026; 00:00; No. Campo Centrale Campo 1 Campo 2 Campo 3 Campo 4",
+                "24/11/2026; 14:00; 1) LIGALUPO DARIO vs ANIELLO MATTEO Inizio  Singolare Maschile Open (LIM; 1) MIELE GAETANO ZENO vs FIORELLI STEFANO Inizio  Singolare Maschile Open (LIM; 1) FUSCO REMO vs SIGNORETTA ALESSANDRO Inizio  Singolare Maschile Open (LIM; 1) DOMINI MANUEL vs CUPPITELLI FABIO",
+                "24/11/2026; 15:30; 1) ARMOCIDA DANIELE vs MASSARA MATTEO Inizio  Singolare Maschile Open (LIM; 1) ROMANO CHRISTIAN vs CANCIANI GIANLUCA Inizio  Singolare Femminile Open (LIM; 1) PIERETTI ALESSANDRA vs PUCCINELLI GINEVRA Inizio  Singolare Femminile Open (LIM; 1) TANAKA YUKO vs SORRENTI EMMA",
+                "24/11/2026; 17:00; 1) BAIOCCO STEFANO vs BARABINO DIEGO Inizio  Singolare Maschile Open (LIM; AZZEO RICCARDO vs ZABEO NICCOLO; 1) GIACOMANTONIO MATTEO vs SANSONE GIOVANNI Inizio  Singolare Maschile Open (LIM; 1) CACCAVALE PASQUALE vs BOLLETTA FILIPPO",
+                "24/11/2026; 18:30; 1) LE MURA MARCO vs POZZI FLAVIO Inizio  Singolare Maschile Open (LIM; 1) COLONNA MARCO vs COLANERI FILIPPO Inizio  Singolare Femminile Open (LIM; 1) MAZZA EVA vs COSCARELLA ARIANNA Inizio  Singolare Femminile Open (LIM; 1) CELLI TERESA vs BESTETTI EMANUELA",
+                "24/11/2026; 20:00; 1) ROMANI ELIANO vs D; 1) NEBBIA LORENZO vs CAPODACQUA ALESSANDRO Inizio  Singolare Maschile Open (LIM; 1) ORSO EDOARDO vs TUCCERI CIMINI VITTORIO Inizio  Singolare Femminile Open (LIM; ANGELICA DANIELA vs GRECO ALESSANDRA Inizio  Singolare Maschile Open (LIM; 1) DE SIMONE EUGENIO vs MADIA LEONARDO"
+            ]
+        },
+        {
+            "nome": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "data": "25/11/2026",
+            "partite": [
+                "25/11/2026; 00:00; No. Campo Centrale Campo 1 Campo 2 Campo 3 Campo 4 Campo 6",
+                "25/11/2026; 14:00; 1) DI CONSIGLIO ANDREA vs CANCIANI GIANLUCA Inizio  Doppio Femminile Open (LIM; PELLEGRINI QUARANTOTTI GINEVRA vs SILVA ALESSANDRA; 1) PERRI TOMMASO vs MIELE GAETANO ZENO Inizio  Singolare Maschile Open (LIM; 1) ORSO EDOARDO o TUCCERI CIMINI VITTORIO vs PISANI LUCA Inizio  Doppio Maschile Open (LIM; ORAZIO STEFANO vs BARBATO RAFFAELE",
+                "25/11/2026; 15:30; 1) LOPES MARCO vs BAIOCCO STEFANO o BARABINO DIEGO Inizio  Singolare Maschile Open (LIM; 1) ANIELLO MATTEO vs TESSE TOMMASO Inizio  Singolare Maschile Open (LIM; 1) CACCAVALE PASQUALE o BOLLETTA FILIPPO vs BOCA DANIELE Inizio  Singolare Femminile Open (LIM; 1) RICCI SOFIA vs TANAKA YUKO",
+                "25/11/2026; 17:00; 1) NANNI EDOARDO vs GIACOMANTONIO MATTEO o SANSONE GIOVANNI Inizio  Singolare Maschile Open (LIM; 1) COLONNA MARCO o COLANERI FILIPPO vs MENOTTI ROBERTO Inizio  Singolare Maschile Open (LIM; 1) LE MURA MARCO o POZZI FLAVIO vs PACIUCCI PIETRO Inizio  Singolare Femminile Open (LIM; 1) TORTI FRANCESCA vs PENCO SIMONA",
+                "25/11/2026; 18:30; 1) CUPPITELLI FABIO vs BOTTAN KHOURY PIERPAOLO Inizio  Singolare Femminile Open (LIM; 1) BLEVE EVA vs MAZZA EVA o COSCARELLA ARIANNA Inizio  Singolare Femminile Open (LIM; 1) RAGNI FABIANA vs PUCCINELLI GINEVRA Inizio  Singolare Femminile Open (LIM; 1) CELLI TERESA o BESTETTI EMANUELA vs BARRESI ILARIA Inizio  Singolare Maschile Open (LIM; AGOSTINO NICOLA vs LISI LEONARDO Inizio  Singolare Femminile Open (LIM; ANGELICA DANIELA o GRECO ALESSANDRA vs LISNIC MELISSA",
+                "25/11/2026; 20:00; 1) MIRO LEONARDO vs ROMANI ELIANO o D; 1) LEONE TOMMASO vs ZABEO NICCOLO; 1) MELITO LEONARDO vs MASSARA MATTEO Inizio  Singolare Maschile Open (LIM; 1) FUSCO REMO vs IANNOTTA MARIO Dopo debito riposo non prima delle Doppio Misto Open (LIM; SENIA MARIAELENA vs RAGNI FABIANA; MAGGI RICCARDO vs BARRESI ILARIA"
+            ]
+        },
+        {
+            "nome": "3^ E 4^ CATEGORIA M & F",
+            "data": "24/11/2026",
+            "partite": [
+                "24/11/2026; 00:00; No. Campo 1 campo 2",
+                "24/11/2026; 15:30; 1 Inizio  Singolare Maschile Open CAPOZZA CLAUDIO vs PUZZILLI FRANCESCO Inizio  Singolare Maschile Open ANTINORI ALESSANDRO vs BISCEGLIE GABRIEL",
+                "24/11/2026; 17:00; 2 Inizio  Singolare Maschile Open BOZZO ADRIANO vs ACQUAVIVA CIRO",
+                "24/11/2026; 18:30; 3 Inizio  Singolare Maschile Open PISTOIA LORENZO vs DE LUCA ANTONIO"
+            ]
+        },
+        {
+            "nome": "3^ E 4^ CATEGORIA M & F",
+            "data": "25/11/2026",
+            "partite": [
+                "25/11/2026; 00:00; No. Campo 1",
+                "25/11/2026; 15:30; 1 Inizio  Singolare Maschile Open SCARCIGLIA MATTIA vs BISCEGLIE GABRIEL",
+                "25/11/2026; 18:30; 2 Inizio  Singolare Maschile Open TCACIUC MIRCEA vs PISTOIA LORENZO"
+            ]
+        }
+    ]
 }
