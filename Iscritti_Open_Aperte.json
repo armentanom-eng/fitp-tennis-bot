@@ -9,7 +9,6 @@
                 "JACOPO BOSCHETTI4.2",
                 "FRANCESCO CUPINI4.1",
                 "MARCO CIOTOLA4.NC",
-                "PAOLO CORONGIU4.1",
                 "ENRICO NINFADORO4.2",
                 "FABRIZIO FABRIZI4.4",
                 "FRANCESCO MARIA SIBIO4.5",
@@ -48,7 +47,6 @@
                 "EMILIANO DE SOSSI 4.NC",
                 "LUCA TORMEN4.3",
                 "TOMMASO CAMPONESCHI4.3",
-                "ALESSANDRO VIRGILI4.2",
                 "CIRO ACQUAVIVA4.1",
                 "VALERIO VENERANDO4.4",
                 "DOMENICO GAMMELLA4.3",
@@ -64,7 +62,9 @@
                 "STEFANO LUPERI4.NC",
                 "FRANCO LUCCHETTI4.NC",
                 "MATTIA COLOMBO4.2",
-                "DINO RICCARDO MARIA GIARRUSSO4.1"
+                "DINO RICCARDO MARIA GIARRUSSO4.1",
+                "GIANLUIGI BASCO4.NC",
+                "MARCO GIUSEPPONI4.2"
             ]
         },
         {
@@ -112,8 +112,6 @@
             "categoria": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
             "tabellone": "Doppio Maschile Open",
             "iscritti": [
-                "EDOARDO MISCHIANTI4.2",
-                "ANGELO FRANCESCO CARBONE4.3",
                 "MATTIA COLOMBO4.2",
                 "MATTIA ZAMBONI4.3",
                 "RICCARDO PAOLONI4.NC",
