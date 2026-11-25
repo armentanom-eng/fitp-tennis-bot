@@ -1,15 +1,6 @@
 {
-    "report_data": "25/11/2026 02:45",
+    "report_data": "25/11/2026 13:50",
     "tornei": [
-        {
-            "nome": "3^ E 4^ CATEGORIA M & F",
-            "data": "25/11/2026",
-            "partite": [
-                "25/11/2026; 00:00; No. Campo 1",
-                "25/11/2026; 15:30; 1 Inizio  Singolare Maschile Open SCARCIGLIA MATTIA vs BISCEGLIE GABRIEL",
-                "25/11/2026; 18:30; 2 Inizio  Singolare Maschile Open TCACIUC MIRCEA vs PISTOIA LORENZO"
-            ]
-        },
         {
             "nome": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
             "data": "25/11/2026",
@@ -20,6 +11,15 @@
                 "25/11/2026; 17:00; 1) NANNI EDOARDO vs SANSONE GIOVANNI Inizio  Singolare Maschile Open (LIM; 1) COLONNA MARCO o COLANERI FILIPPO vs MENOTTI ROBERTO Inizio  Singolare Maschile Open (LIM; 1) POZZI FLAVIO vs PACIUCCI PIETRO Inizio  Singolare Femminile Open (LIM; 1) TORTI FRANCESCA vs PENCO SIMONA",
                 "25/11/2026; 18:30; 1) CUPPITELLI FABIO vs BOTTAN KHOURY PIERPAOLO Inizio  Singolare Femminile Open (LIM; 1) BLEVE EVA vs COSCARELLA ARIANNA Inizio  Singolare Femminile Open (LIM; 1) RAGNI FABIANA vs PUCCINELLI GINEVRA Inizio  Singolare Femminile Open (LIM; 1) CELLI TERESA vs BARRESI ILARIA Inizio  Singolare Maschile Open (LIM; AGOSTINO NICOLA vs LISI LEONARDO Inizio  Singolare Femminile Open (LIM; 1) GRECO ALESSANDRA vs LISNIC MELISSA",
                 "25/11/2026; 20:00; 1) MIRO LEONARDO vs ROMANI ELIANO Inizio  Singolare Maschile Open (LIM; 1) LEONE TOMMASO vs ZABEO NICCOLO; 1) MELITO LEONARDO vs MASSARA MATTEO Inizio  Singolare Maschile Open (LIM; 1) FUSCO REMO vs IANNOTTA MARIO Dopo debito riposo non prima delle Doppio Misto Open (LIM; SENIA MARIAELENA vs RAGNI FABIANA; MAGGI RICCARDO vs BARRESI ILARIA"
+            ]
+        },
+        {
+            "nome": "3^ E 4^ CATEGORIA M & F",
+            "data": "25/11/2026",
+            "partite": [
+                "25/11/2026; 00:00; No. Campo 1",
+                "25/11/2026; 15:30; 1 Inizio  Singolare Maschile Open SCARCIGLIA MATTIA vs BISCEGLIE GABRIEL",
+                "25/11/2026; 18:30; 2 Inizio  Singolare Maschile Open TCACIUC MIRCEA vs PISTOIA LORENZO"
             ]
         }
     ]
