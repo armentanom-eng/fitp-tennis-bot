@@ -1,29 +1,4 @@
 {
-    "report_data": "24/11/2026 23:41",
-    "tornei": [
-        {
-            "nome": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
-            "data": "24/11/2026",
-            "partite": [
-                "24/11/2026; 00:00; No. Campo Principale CAMPO 1 CAMPO 2 CAMPO 3",
-                "24/11/2026; 13:00; 1 Inizio  Singolare Maschile Open SCIARPELLETTI FEDERICO vs LUCCHETTI FRANCO Inizio  Singolare Maschile Open DE SOSSI EMILIANO vs NAPPA MAURIZIO Inizio  Singolare Maschile Open PAOLONI RICCARDO vs FALAGARIO GIUSEPPE Inizio  Singolare Maschile Open STIRPE PAOLO vs CECCATO EMANUELE",
-                "24/11/2026; 14:30; 2 Non prima delle Singolare Maschile Open ROSI RICCARDO vs CIOTOLA MARCO Non prima delle Singolare Maschile Open CORBUCCI CLAUDIO vs MARCELLI GIORGIO Non prima delle Singolare Femminile Open WAS MADDALENA vs BRIGLIA GELSOMINA",
-                "24/11/2026; 16:00; 3 Non prima delle Singolare Maschile Open BASCO GIANLUIGI vs MORONI ALESSANDRO Non prima delle Singolare Femminile Open RUFINI CLAUDIA vs RUSSI SUSANNA Non prima delle Singolare Femminile Open ACCOLLI MICHELLE vs RICCITELLI VERONICA Non prima delle Singolare Femminile Open PANNACCI ILARIA vs MEONI LORENZA",
-                "24/11/2026; 17:30; 4 Non prima delle Singolare Maschile Open TUCCERI CIMINI HUNOR vs CONCIATORI EDOARDO Non prima delle Singolare Femminile Open GRIGORAS ADRIANA vs RISI VALENTINA",
-                "24/11/2026; 19:00; 5 Non prima delle Singolare Maschile Open VALLIFUOCO MIRKO vs CHIUCCHIUINI FABIO Non prima delle Singolare Maschile Open LUPERI STEFANO vs MANFREDI GIUSEPPE"
-            ]
-        },
-        {
-            "nome": "1^ TAPPA CIRCUTO INVERNALE CRLAZIO 4^ CATEGORIA SINGOLARE M/ DOPPIO M/F/MISTO (LIM 4.1)",
-            "data": "25/11/2026",
-            "partite": [
-                "25/11/2026; 00:00; No. Campo Principale CAMPO 1 CAMPO 2 CAMPO 3 CAMPO 5",
-                "25/11/2026; 13:00; 1 Inizio  Singolare Maschile Open TAMBURRO IVAN FILIPPO vs SCIARPELLETTI FEDERICO Inizio  Singolare Maschile Open GAMBETTI ETTORE vs ROSI RICCARDO Non prima delle Singolare Maschile Open q vs GENOVA LUIGI Inizio  Singolare Femminile Open BOSCIONI SABRINA vs INNOCENTE LAURA",
-                "25/11/2026; 14:30; 2 Non prima delle Singolare Maschile Open q vs ELEONORI MASSIMO Non prima delle Singolare Maschile Open q vs SIMONCELLI RICCARDO Non prima delle Singolare Maschile Open q vs SALMERI DANIELE Non prima delle Singolare Maschile Open VENERANDO VALERIO vs MANDELLI MAURO",
-                "25/11/2026; 16:00; 3 Non prima delle Singolare Maschile Open FABRIZI FABRIZIO vs CANTARELLA FRANCESCO Non prima delle Singolare Maschile Open DE STEFANI CARLO vs RAFFAELE CHRISTIAN Non prima delle Singolare Femminile Open STOPPONI ALICE vs RUSSI SUSANNA Non prima delle Singolare Femminile Open ACCOLLI MICHELLE vs MERCANDETTI MARINA Non prima delle Singolare Femminile Open MEONI LORENZA vs ENACHE ANCA",
-                "25/11/2026; 17:30; 4 Non prima delle Singolare Maschile Open q vs PETRUCCI RICCARDO Non prima delle Singolare Maschile Open q vs MORGANTI DANIELE Non prima delle Singolare Maschile Open GHIO ANDREA vs ROSI CLAUDIO Non prima delle Singolare Maschile Open CENTAROLI MATTIA vs SIBIO FRANCESCO MARIA",
-                "25/11/2026; 19:00; 5 Non prima delle Singolare Maschile Open q vs DIGIESI GIUSEPPE Non prima delle Singolare Maschile Open q vs FORNARI MARCO Non prima delle Singolare Maschile Open CORGINI MASSIMO vs AGOSTINELLI GABRIELE Non prima delle Singolare Femminile Open PROVENZANO MANUELA vs FURNO ERMELINDA"
-            ]
-        }
-    ]
+    "report_data": "25/11/2026 02:55",
+    "tornei": []
 }
