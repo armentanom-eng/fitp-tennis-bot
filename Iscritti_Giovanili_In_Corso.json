@@ -98,30 +98,6 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Maschile Under 12",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Femminile Under 12",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Femminile Under 18",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Maschile Under 18",
-            "iscritti": []
-        },
-        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=382BA64B-27BB-4E5F-8213-BB8556F17394",
             "categoria": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
             "tabellone": "Singolare Maschile Under 11",
@@ -407,6 +383,30 @@
                 "ZHI CHENG DAVIDE ZHOU4.NC",
                 "WILLIAM PIRRITANO4.NC"
             ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": []
         }
     ]
 }
