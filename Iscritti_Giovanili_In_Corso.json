@@ -1,6 +1,127 @@
 {
     "tornei": [
         {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Maschile Under 10",
+            "iscritti": [
+                "GIORGIO MARIA GIAMBUSSO4.NC",
+                "LORENZO  PICA4.NC",
+                "SEBASTIAN FRENDO4.NC",
+                "DAVIDE CRISTIAN ZAINEA4.NC",
+                "EDOARDO SEGESTA4.NC",
+                "FELIPE RODRIGO MATRANGA4.NC",
+                "SAMUELE TORRISI4.NC",
+                "PAOLO PATRIZI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "GABRIELE FODAYBA  SAMURA 4.3",
+                "FEDERICO BISCIONE4.5",
+                "BRANDO GABRIEL ROSSETTI4.NC",
+                "FRANCESCO IAGATTA4.3",
+                "ALESSANDRO GIAROLA4.5",
+                "MATTIA IOVINE4.4",
+                "NICHOLAS GANGEMI4.3",
+                "ALESSANDRO MACCHIUSI4.3",
+                "MATTIA DORIO4.NC",
+                "MATTEO TINTI4.4",
+                "TOMMASO CARNAZZA4.3",
+                "LUDOVICO BLUMENTHAL4.4",
+                "FRANCESCO PANARELLI4.4",
+                "NICOLÒ CIASCA4.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "IVO VESSELINOV  KOIROUCHKI4.3",
+                "LEONARDO CANTONETTI4.NC",
+                "CHRISTIAN FALCIONE4.2",
+                "GABRIELE ALBARELLO4.2",
+                "FABRIZIO PESANTE4.2",
+                "ANDREA CALISTI4.NC",
+                "RICCARDO FERRAO4.NC",
+                "VITTORIO TINTI4.2",
+                "FRANCESCO GIACOPELLO4.2",
+                "MATTEO COMMINI4.NC",
+                "ALESSANDRO CIRILLO4.NC",
+                "DANIELE PIZZO4.3",
+                "MATTEO FIORAVANTI4.1",
+                "MICHELE CAPOZZI3.5"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": [
+                "NATHAN DI FRAIA4.NC",
+                "MIRO' TORRONI4.NC",
+                "FABRIZIO LOI4.1",
+                "EMANUELE CUSTER4.6"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Femminile Under 10",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "ALICE BERNABINI4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=842E8344-38BA-4546-BA24-D2E9747C45B1",
+            "categoria": "RODEO GIOVANILE ROMAN SPORT CITY",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": [
+                "MARTINA SPAGNOL4.2",
+                "SERENA IZZO4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": []
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": []
+        },
+        {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=382BA64B-27BB-4E5F-8213-BB8556F17394",
             "categoria": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
             "tabellone": "Singolare Maschile Under 11",
