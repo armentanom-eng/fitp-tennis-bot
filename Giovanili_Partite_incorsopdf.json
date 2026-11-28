@@ -1,6 +1,36 @@
 {
-    "report_data": "28/11/2026 12:38",
+    "report_data": "28/11/2026 17:55",
     "tornei": [
+        {
+            "nome": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
+            "data": "28/11/2026",
+            "partite": [
+                "28/11/2026; 00:00; No. Campo 1 - CT CRESPELLANO (SINTETICO) CAMPO 2 - CT CRESPELLANO (SINTETICO)",
+                "28/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 13 RONDINA MARTINA vs NOVELLO TERESA Inizio  Singolare Femminile Under 13 RADCLIFFE NORAH GRACE vs SERRA ZANETTI GAIA",
+                "28/11/2026; 00:00; 2 A seguire Singolare Femminile Under 13 FRANCIA REBECCA CARLA vs AZZOLLINI RAFFAELLA A seguire Singolare Femminile Under 13 WIDMER D; AUTILIA ISABELLA vs TAGLIAFERRI DALILA",
+                "28/11/2026; 11:00; 3 Dopo debito riposo non prima delle Singolare Femminile Under 13 RONDINA MARTINA o NOVELLO TERESA vs RADCLIFFE NORAH GRACE o SERRA ZANETTI GAIA Dopo debito riposo non prima delle Singolare Femminile Under 13 FRANCIA REBECCA CARLA o AZZOLLINI RAFFAELLA vs WIDMER D",
+                "28/11/2026; 00:00; No. Campo 4 - CT CASTENASO (GREEN SET) Campo 5 - CT CASTENASO (GREEN SET)",
+                "28/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 9 SCARPA ALVISE vs GIORDANO FRANCESCO Inizio  Singolare Maschile Under 9 COSCHIGNANO SOLINAS MATTIA vs OBERJAKOBER LENNY",
+                "28/11/2026; 00:00; ENEA FABRIZIO vs D",
+                "28/11/2026; 11:00; 3 Dopo debito riposo non prima delle Singolare Maschile Under 9 SCARPA ALVISE o GIORDANO FRANCESCO vs COSCHIGNANO SOLINAS MATTIA o OBERJAKOBER LENNY Dopo debito riposo non prima delle Singolare Maschile Under 9 EVIANI NICOL; o BOSCO FILIPPO vs GIANGARE",
+                "28/11/2026; 00:00; No. Campo 3 - SPORT EDUCATION (PLAY IT) CAMPO 4 - SPORT EDUCATION (PLAY IT)",
+                "28/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 13 MICARELLI ANDREA vs BONGIOVANNI MATTIA Inizio  Singolare Maschile Under 13 MEINI JACOPO vs HARTLEY SAMUEL",
+                "28/11/2026; 00:00; 2 A seguire Singolare Maschile Under 13 BURATO LORENZO EMANUEL vs ZUPIC VIKTOR A seguire Singolare Maschile Under 13 DESIDERI TOMMASO vs MINUTELLA EDOARDO",
+                "28/11/2026; 11:00; 3 Dopo debito riposo non prima delle Singolare Maschile Under 13 MICARELLI ANDREA o BONGIOVANNI MATTIA vs MEINI JACOPO o HARTLEY SAMUEL Dopo debito riposo non prima delle Singolare Maschile Under 13 BURATO LORENZO EMANUEL o ZUPIC VIKTOR vs DESIDERI TOMMASO o MINUTELLA EDOARDO"
+            ]
+        },
+        {
+            "nome": "JUNIOR MASTER ROAD TO BOLOGNA 2026",
+            "data": "29/11/2026",
+            "partite": [
+                "29/11/2026; 00:00; No. CAMPO 2 - CT CRESPELLANO (SINTETICO)",
+                "29/11/2026; 09:00; 1 Inizio  Singolare Femminile Under 13 FRANCIA REBECCA CARLA vs SERRA ZANETTI GAIA",
+                "29/11/2026; 00:00; No. Campo 4 - CT CASTENASO (GREEN SET)",
+                "29/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 9 SCARPA ALVISE vs EVIANI NICOL",
+                "29/11/2026; 00:00; No. CAMPO 5 - SPORT EDUCATION (PLAY IT)",
+                "29/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 13 BURATO LORENZO EMANUEL vs MICARELLI ANDREA"
+            ]
+        },
         {
             "nome": "6° RODEO GIOVANILE BORUSSIA",
             "data": "28/11/2026",
@@ -18,41 +48,18 @@
             ]
         },
         {
-            "nome": "TORNEO RODEO GIOVANILE GST ACADEMY BY AUSTRALIAN",
-            "data": "28/11/2026",
-            "partite": [
-                "28/11/2026; 00:00; No. Campo 1 campo 2 campo 3",
-                "28/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 18 ZHOU ZHI CHENG DAVIDE vs PIRRITANO WILLIAM Inizio  Singolare Maschile Under 18 BOZZA TOMMASO vs BOZZO ADRIANO",
-                "28/11/2026; 00:00; 2 A seguire Singolare Femminile Under 12 ZUGARELLI ANGELICA vs FONTE JAMIRA A seguire Singolare Femminile Under 12 BUZELLI ALESSANDRA vs MONTECUOLLO FLAVIA",
-                "28/11/2026; 10:30; 3 Dopo debito riposo non prima delle Singolare Maschile Under 18 MELITO LEONARDO vs ZHOU ZHI CHENG DAVIDE o PIRRITANO WILLIAM Dopo debito riposo non prima delle Singolare Maschile Under 18 BOZZA TOMMASO o BOZZO ADRIANO vs VERRILLO DIEGO",
-                "28/11/2026; 11:00; 4 Dopo debito riposo non prima delle Singolare Femminile Under 12 SCALETTA VIRGINIA vs ZUGARELLI ANGELICA o FONTE JAMIRA A seguire Singolare Femminile Under 14 DI CROCE VITTORIA vs LOREFICE NICOLE",
-                "28/11/2026; 12:30; 5 Dopo debito riposo non prima delle Singolare Maschile Under 18 MELITO LEONARDO o ZHOU ZHI CHENG DAVIDE o PIRRITANO WILLIAM vs BOZZA TOMMASO o BOZZO ADRIANO o VERRILLO DIEGO Non prima delle Singolare Femminile Under 14 SIGNORINI GIULIA vs DE SANCTIS ELETTRA Dopo debito riposo non prima delle Singolare Femminile Under 12 SCALETTA VIRGINIA o ZUGARELLI ANGELICA o FONTE JAMIRA vs BUZELLI ALESSANDRA o MONTECUOLLO FLAVIA",
-                "28/11/2026; 13:30; 6 Dopo debito riposo non prima delle Singolare Femminile Under 14 SIGNORINI GIULIA o DE SANCTIS ELETTRA vs DI CROCE VITTORIA o LOREFICE NICOLE A seguire Singolare Maschile Under 12 MONACO SORGE TANCREDI vs MANCINI NICCOLO; A seguire Singolare Maschile Under 12 CONTINANZA TOMMASO vs D",
-                "28/11/2026; 14:30; 7 A seguire Singolare Maschile Under 12 BATTISTA EDOARDO vs GARUTI TOMMASO Dopo debito riposo non prima delle Singolare Maschile Under 12 MONACO SORGE TANCREDI o MANCINI NICCOLO",
-                "28/11/2026; 15:00; 8 Dopo debito riposo non prima delle Dopo debito riposo non prima delle Inizio",
-                "28/11/2026; 00:00; Singolare Maschile Under 12 Singolare Maschile Under 12 Singolare Maschile Under 12",
-                "28/11/2026; 00:00; Singolare Maschile Under 12 PALOMBA GIACOMO vs BATTISTA EDOARDO o GARUTI TOMMASO Singolare Maschile Under 12 MONACO SORGE TANCREDI o MANCINI NICCOLO; ANNIBALE RICCARDO vs SOLIMEI RICCARDO Singolare Maschile Under 12 SCARINO FEDERICO vs CHIRIVI",
-                "28/11/2026; 16:00; 9 Dopo debito riposo non prima delle Singolare Maschile Under 12 ARQUINT SEBASTIAN vs PALOMBA GIACOMO o BATTISTA EDOARDO o GARUTI TOMMASO A seguire Singolare Maschile Under 12 SCARINO FEDERICO o CHIRIVI; MATTEO vs CORLETO LORENZO A seguire Singolare Maschile Under 12 NEBULONI THOMAS vs IACOVACCI EDOARDO LORENZO",
-                "28/11/2026; 17:00; 10 Dopo debito riposo non prima delle Singolare Maschile Under 12 PAFFI FRANCESCO vs ARQUINT SEBASTIAN o PALOMBA GIACOMO o BATTISTA EDOARDO o GARUTI TOMMASO Dopo debito riposo non prima delle Singolare Maschile Under 12 MONACO SORGE TANCREDI o MANCINI NICCOLO; ANNIBALE RICCARDO o SOLIMEI RICCARDO vs RITA LORENZO PIO",
-                "28/11/2026; 18:00; 11 Dopo debito riposo non prima delle Singolare Maschile Under 12 PAFFI FRANCESCO o ARQUINT SEBASTIAN o PALOMBA GIACOMO o BATTISTA EDOARDO o GARUTI TOMMASO vs NEBULONI THOMAS o IACOVACCI EDOARDO LORENZO Dopo debito riposo non prima delle Singolare Maschile Under 12 SCARINO FEDERICO o CHIRIVI; MATTEO o CORLETO LORENZO vs MONACO SORGE TANCREDI o MANCINI NICCOLO",
-                "28/11/2026; 18:30; 12 Dopo debito riposo non prima delle Singolare Maschile Under 12 PAFFI FRANCESCO o ARQUINT SEBASTIAN o PALOMBA GIACOMO o BATTISTA EDOARDO o GARUTI TOMMASO o NEBULONI THOMAS o IACOVACCI EDOARDO LORENZO vs SCARINO FEDERICO o CHIRIVI"
-            ]
-        },
-        {
-            "nome": "TORNEO RODEO GIOVANILE GST ACADEMY BY AUSTRALIAN",
+            "nome": "6° RODEO GIOVANILE BORUSSIA",
             "data": "29/11/2026",
             "partite": [
-                "29/11/2026; 00:00; No. Campo 1 campo 2 campo 3",
-                "29/11/2026; 09:00; 1 Inizio  Singolare Maschile Under 14 ARNAUT MATTEO vs TARTAGLIA EMANUELE Inizio  Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO vs VERTUCCI RICCARDO Inizio  Singolare Maschile Under 14 VETTURINI DARIO vs MONACO SORGE LEONE",
-                "29/11/2026; 10:00; 2 Dopo debito riposo non prima delle Singolare Maschile Under 14 BUONANNO ALESSANDRO vs ARNAUT MATTEO o TARTAGLIA EMANUELE Dopo debito riposo non prima delle Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO vs NAZZARO MARCO A seguire Singolare Maschile Under 14 GHEGHI GABRIELE vs CABAN LUCA",
-                "29/11/2026; 11:00; 3 Dopo debito riposo non prima delle Singolare Maschile Under 14 PACETTI DIEGO vs BUONANNO ALESSANDRO o ARNAUT MATTEO o TARTAGLIA EMANUELE Dopo debito riposo non prima delle Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO o NAZZARO MARCO vs CAMILLI EDOARDO GABRIELE Dopo debito riposo non prima delle Singolare Maschile Under 14 VETTURINI DARIO o MONACO SORGE LEONE vs FIORE GABRIELE",
-                "29/11/2026; 12:00; 4 Dopo debito riposo non prima delle Singolare Maschile Under 18 Singolare Maschile Under 14 CENTORE GABRIELE vs PACETTI DIEGO o BUONANNO ALESSANDRO o ARNAUT MATTEO o TARTAGLIA EMANUELE Dopo debito riposo non prima delle Singolare Maschile Under 14 DELLA PORTA LORENZO vs GHEGHI GABRIELE o CABAN LUCA",
-                "29/11/2026; 12:30; 5 Dopo debito riposo non prima delle Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO o NAZZARO MARCO o CAMILLI EDOARDO GABRIELE vs ARRIGONI ALESSANDRO Dopo debito riposo non prima delle Singolare Maschile Under 14 VETTURINI DARIO o MONACO SORGE LEONE o FIORE GABRIELE vs VALDARCHI VALERIO",
-                "29/11/2026; 14:00; 6 Dopo debito riposo non prima delle Singolare Maschile Under 14 MICHETTI TOMMASO vs CENTORE GABRIELE o PACETTI DIEGO o BUONANNO ALESSANDRO o ARNAUT MATTEO o TARTAGLIA EMANUELE Dopo debito riposo non prima delle Singolare Maschile Under 14 FARCOMENI VALERIO vs DELLA PORTA LORENZO o GHEGHI GABRIELE o CABAN LUCA",
-                "29/11/2026; 14:30; 7 Dopo debito riposo non prima delle Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO o NAZZARO MARCO o CAMILLI EDOARDO GABRIELE o ARRIGONI ALESSANDRO vs FERRO PIETRO Dopo debito riposo non prima delle Singolare Maschile Under 14 VETTURINI DARIO o MONACO SORGE LEONE o FIORE GABRIELE o VALDARCHI VALERIO vs LIBERATI EDOARDO",
-                "29/11/2026; 15:00; 8 Dopo debito riposo non prima delle Dopo debito riposo non prima delle",
-                "29/11/2026; 00:00; Singolare Maschile Under 14 MICHETTI TOMMASO o CENTORE GABRIELE o PACETTI DIEGO o BUONANNO ALESSANDRO o ARNAUT MATTEO o TARTAGLIA EMANUELE vs FARCOMENI VALERIO o DELLA PORTA LORENZO o GHEGHI GABRIELE o CABAN LUCA Singolare Maschile Under 14 DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO o NAZZARO MARCO o CAMILLI EDOARDO GABRIELE o ARRIGONI ALESSANDRO o FERRO PIETRO vs VETTURINI DARIO o MONACO SORGE LEONE o FIORE GABRIELE o VALDARCHI VALERIO o LIBERATI EDOARDO",
-                "29/11/2026; 16:00; 9 Dopo debito riposo non prima delle Singolare Maschile Under 14 MICHETTI TOMMASO o CENTORE GABRIELE o PACETTI DIEGO o BUONANNO ALESSANDRO o ARNAUT MATTEO o TARTAGLIA EMANUELE o FARCOMENI VALERIO o DELLA PORTA LORENZO o GHEGHI GABRIELE o CABAN LUCA vs DI GIAMBERARDINO MATTEO o VERTUCCI RICCARDO o NAZZARO MARCO o CAMILLI EDOARDO GABRIELE o ARRIGONI ALESSANDRO o FERRO PIETRO o VETTURINI DARIO o MONACO SORGE LEONE o FIORE GABRIELE o VALDARCHI VALERIO o LIBERATI EDOARDO"
+                "29/11/2026; 00:00; No. Campo 1 Campo 2 Campo 3 Campo 4",
+                "29/11/2026; 11:30; 1 Inizio  Singolare Maschile Under 14 MATTIA LEONARDO vs KOCH GIULIO o LENTSCHIG BRUNO Inizio  Singolare Maschile Under 14 LIBRANDI MATTIA vs MONTANARO JACOPO o CAMONI FRANCESCO Inizio  Singolare Maschile Under 14 RASTRELLI ALESSIO o ANIELLO ANDREA o CELLETTI VALERIO vs RICCARDI EDOARDO Inizio  Singolare Maschile Under 14 ORSI GABRIELE o LISSANDRELLI DAVIDE vs PANICCI ALESSANDRO",
+                "29/11/2026; 12:30; 2 Inizio  Singolare Maschile Under 12 MINGARELLI NICHOLAS vs LAVAGNINI FRANCESCO MARIA o MEREU DAMIANO o DONATO NICOLO; Inizio  Singolare Maschile Under 12 ANTICHI GREGORIO MARIA vs CARNAZZA TOMMASO Inizio  Singolare Maschile Under 12 VACCARO SAMUEL o GIUFFRE; o RITTORE CARLO vs CERVELLI LORENZO",
+                "29/11/2026; 13:30; 3 Dopo debito riposo non prima delle Singolare Maschile Under 14 GROSSI GIACOMO vs MATTIA LEONARDO o KOCH GIULIO o LENTSCHIG BRUNO Dopo debito riposo non prima delle Singolare Maschile Under 14 CERVELLI TOMMASO vs LIBRANDI MATTIA o MONTANARO JACOPO o CAMONI FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Under 14 RASTRELLI ALESSIO o ANIELLO ANDREA o CELLETTI VALERIO o RICCARDI EDOARDO vs VIVONA MICHELE Dopo debito riposo non prima delle Singolare Maschile Under 14 ORSI GABRIELE o LISSANDRELLI DAVIDE o PANICCI ALESSANDRO vs INZIRILLO VALERIO",
+                "29/11/2026; 14:30; 4 Dopo debito riposo non prima delle Singolare Maschile Under 12 BRANCOLI BUSDRAGHI SEBASTIANO vs MINGARELLI NICHOLAS o LAVAGNINI FRANCESCO MARIA o MEREU DAMIANO o DONATO NICOLO; Inizio  Singolare Maschile Under 12 DI PASCALE LUCIO vs MILITTO LORENZO Dopo debito riposo non prima delle Singolare Maschile Under 12 ANTICHI GREGORIO MARIA o CARNAZZA TOMMASO vs RIETTI RICCARDO Dopo debito riposo non prima delle Singolare Maschile Under 12 VACCARO SAMUEL o GIUFFRE; o RITTORE CARLO o CERVELLI LORENZO vs LIBRANDI MATTIA",
+                "29/11/2026; 15:30; 5 Dopo debito riposo non prima delle Singolare Maschile Under 14 GROSSI GIACOMO o MATTIA LEONARDO o KOCH GIULIO o LENTSCHIG BRUNO vs CERVELLI TOMMASO o LIBRANDI MATTIA o MONTANARO JACOPO o CAMONI FRANCESCO Dopo debito riposo non prima delle Singolare Maschile Under 14 RASTRELLI ALESSIO o ANIELLO ANDREA o CELLETTI VALERIO o RICCARDI EDOARDO o VIVONA MICHELE vs ORSI GABRIELE o LISSANDRELLI DAVIDE o PANICCI ALESSANDRO o INZIRILLO VALERIO Inizio  Singolare Maschile Under 18 ANTINORI ADRIANO vs BENEDETTI LUDOVICO o FARINELLI MATTEO Inizio  Singolare Maschile Under 18 D; URSO MATTEO o GRECO STEFANO o VALOPPI EDOARDO vs MATTIOLI ALESSANDRO",
+                "29/11/2026; 16:30; vs DI PASCALE LUCIO o MILITTO LORENZO Dopo debito riposo non prima delle Singolare Maschile Under 12 ANTICHI GREGORIO MARIA o CARNAZZA TOMMASO o RIETTI RICCARDO vs VACCARO SAMUEL o GIUFFRE; o RITTORE CARLO o CERVELLI LORENZO o LIBRANDI MATTIA Dopo debito riposo non prima delle Singolare Maschile Under 18 DI GIUSEPPE GABRIELE vs ANTINORI ADRIANO o BENEDETTI LUDOVICO o FARINELLI MATTEO Dopo debito riposo non prima delle Singolare Maschile Under 18 D; URSO MATTEO o GRECO STEFANO o VALOPPI EDOARDO o MATTIOLI ALESSANDRO vs MASTROIANNI DAVIDE",
+                "29/11/2026; 17:30; 7 Dopo debito riposo non prima delle Dopo debito riposo non prima delle Dopo debito riposo non prima",
+                "29/11/2026; 17:30; 7 Dopo debito riposo non prima delle Singolare Maschile Under 14 GROSSI GIACOMO o MATTIA LEONARDO o KOCH GIULIO o LENTSCHIG BRUNO o CERVELLI TOMMASO o LIBRANDI MATTIA o MONTANARO JACOPO o CAMONI FRANCESCO vs RASTRELLI ALESSIO o ANIELLO ANDREA o CELLETTI VALERIO o RICCARDI EDOARDO o VIVONA MICHELE o ORSI GABRIELE o LISSANDRELLI DAVIDE o PANICCI ALESSANDRO o INZIRILLO VALERIO Dopo debito riposo non prima delle Singolare Maschile Under 12 BRANCOLI BUSDRAGHI SEBASTIANO o MINGARELLI NICHOLAS o LAVAGNINI FRANCESCO MARIA o MEREU DAMIANO o DONATO NICOLO; o DI PASCALE LUCIO o MILITTO LORENZO vs ANTICHI GREGORIO MARIA o CARNAZZA TOMMASO o RIETTI RICCARDO o VACCARO SAMUEL o GIUFFRE; o RITTORE CARLO o CERVELLI LORENZO o LIBRANDI MATTIA Dopo debito riposo non prima delle Singolare Maschile Under 18 DI GIUSEPPE GABRIELE o ANTINORI ADRIANO o BENEDETTI LUDOVICO o FARINELLI MATTEO vs D"
             ]
         }
     ]
