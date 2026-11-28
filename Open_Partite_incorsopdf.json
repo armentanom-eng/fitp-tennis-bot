@@ -1,6 +1,18 @@
 {
-    "report_data": "28/11/2026 01:37",
+    "report_data": "28/11/2026 12:40",
     "tornei": [
+        {
+            "nome": "II° TAPPA WINTER34 - CT APPIA COUNTRY - III E IV CATEGORIA - SINGOLI E DOPPI",
+            "data": "28/11/2026",
+            "partite": [
+                "28/11/2026; 00:00; No. Campo Centrale Campo 1 Campo 2 Campo 3 Campo 4 Campo 6",
+                "28/11/2026; 10:00; 1) CUCCHIELLA BEATRICE vs RAPINESI EMMA Inizio  Singolare Femminile Open (LIM; 1) SORRENTI EMMA vs ACCOLLI MICHELLE Inizio  Singolare Femminile Open (LIM; 1) PARRA MANCERA ELENA vs SENIA MARIAELENA",
+                "28/11/2026; 11:30; 1) TESSE TOMMASO vs PALCICH LORENZO Inizio  Singolare Maschile Open (LIM; 1) BOTTAN KHOURY PIERPAOLO vs PACETTI SMITH MAXIMILIAN MARIA Inizio  Singolare Maschile Open (LIM; 1) TASSILO HERBST vs CAVALLARI LORENZO Inizio  Singolare Maschile Open (LIM; 1) LISI LEONARDO vs MARAVIGLIA GABRIELE",
+                "28/11/2026; 13:00; 1) RICCI SOFIA vs DI GIOVANNI EMILIA Inizio  Singolare Maschile Open (LIM; 1) REMIDDI CARLO FELICE vs DI CONSIGLIO ANDREA Inizio  Singolare Maschile Open (LIM; 1) HENTSCHEL MAXIMILIAN vs COLANERI FILIPPO Dopo debito riposo non prima delle Doppio Maschile Open (LIM; MENOTTI ROBERTO vs BOCA DANIELE; 1) NEBBIA LORENZO vs ESPOSITO TOMMASO",
+                "28/11/2026; 14:30; PACETTI SMITH MAXIMILIAN MARIA vs CAMPANILE CLAUDIO; NEGRO EDOARDO vs GIACOMANTONIO MATTEO; 1) CERGHIT ELIZA ANTONIA vs BLEVE EVA Dopo debito riposo non prima delle Doppio Misto Open (LIM; SENIA MARIAELENA vs RAGNI FABIANA; 1) CANCIANI GIANLUCA vs ORSO EDOARDO",
+                "28/11/2026; 17:00; 1) FIORELLI STEFANO vs DOMINI MANUEL Inizio  Singolare Maschile Open (LIM; 1) ROSSI EMILIANO vs LANZETTA DIEGO Inizio  Singolare Femminile Open (LIM; 1) CIPRARI FRANCESCA SOFIA vs CAPODACQUA CHIARA Inizio  Doppio Maschile Open (LIM; ARMOCIDA DANIELE vs SEGAR ABINATH"
+            ]
+        },
         {
             "nome": "7° RODEO LIM 3.1",
             "data": "28/11/2026",
@@ -12,15 +24,6 @@
                 "28/11/2026; 16:00; 4 Dopo debito riposo non prima delle Singolare Maschile Open MORESCHINI ALESSANDRO vs FIORAVANTI FLAVIO o MANCINELLI MARCO Dopo debito riposo non prima delle Singolare Maschile Open q o GRISANZIO FEDERICO JAMES vs TORTORELLA MARCO GIUSEPPE Dopo debito riposo non prima delle Singolare Maschile Open q o D; AMBRA GIANFRANCO vs FERRANTE SIMONE Dopo debito riposo non prima delle Singolare Maschile Open q o CECCHINI GABRIELE vs CONTARINI LUDOVICO",
                 "28/11/2026; 17:00; 5 Dopo debito riposo non prima delle Singolare Maschile Open MARTA TOMMASO vs PELOSI FABIO o ROSSI PAOLO o q Dopo debito riposo non prima delle Singolare Maschile Open IACOBONE SABINO vs q o CECCHINI GABRIELE o CONTARINI LUDOVICO Dopo debito riposo non prima delle Singolare Maschile Open GHEGAI FRANCESCO vs q o D; AMBRA GIANFRANCO o FERRANTE SIMONE Dopo debito riposo non prima delle Singolare Maschile Open CAPORASO GIANCARLO vs q o GRISANZIO FEDERICO JAMES o TORTORELLA MARCO GIUSEPPE",
                 "28/11/2026; 18:00; 6 Dopo debito riposo non prima delle Singolare Maschile Open MORESCHINI ALESSANDRO o FIORAVANTI FLAVIO o MANCINELLI MARCO vs CORDOVANI DANIELE o CALDARONE LORENZO Dopo debito riposo non prima delle Singolare Maschile Open MARTA TOMMASO o PELOSI FABIO o ROSSI PAOLO o q vs GUAZZONE MATTEO o BUSETTI FABIO"
-            ]
-        },
-        {
-            "nome": "3^ E 4^ CATEGORIA M & F",
-            "data": "28/11/2026",
-            "partite": [
-                "28/11/2026; 00:00; No. Campo 1",
-                "28/11/2026; 10:00; 1 Inizio  Singolare Maschile Open NAPOLITANO SIMONE vs LONGATTI AUGUSTO",
-                "28/11/2026; 13:00; 2 Inizio  Singolare Maschile Open ERCOLANO GIUSEPPE vs FIATA DAVIDE"
             ]
         }
     ]
