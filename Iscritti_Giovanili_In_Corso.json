@@ -1,28 +1,183 @@
 {
     "tornei": [
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Maschile Under 12",
-            "iscritti": []
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
             "tabellone": "Singolare Femminile Under 12",
             "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
-            "tabellone": "Singolare Femminile Under 18",
-            "iscritti": []
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "SHANA CAMPISI4.NC",
+                "VERONICA  SANTORO4.NC"
+            ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
-            "categoria": "ANANDA",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": [
+                "SVEVA BARONE4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "VALERIO PALMULLI4.5",
+                "SEBASTIANO BRANCOLI BUSDRAGHI4.2",
+                "FRANCESCO RICCIARDELLI4.5",
+                "LUCIO  DI PASCALE 4.2",
+                "GREGORIO MARIA ANTICHI4.5",
+                "CARLO RITTORE4.4",
+                "NICOLO' DONATO4.NC",
+                "TOMMASO CARNAZZA4.3",
+                "DAMIANO MEREU4.NC",
+                "MATTIA LIBRANDI4.2",
+                "NICCOLO' GIUFFRE'4.5",
+                "LORENZO CERVELLI4.3",
+                "CARLO SPAGNA4.5",
+                "RICCARDO RIETTI4.2",
+                "FRANCESCO MARIA LAVAGNINI4.5",
+                "SAMUEL VACCARO4.6",
+                "NICHOLAS MINGARELLI 4.4",
+                "LORENZO  MILITTO4.2"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "GABRIELE  ORSI4.NC",
+                "FRANCESCO ILLUMINATI4.NC",
+                "ENRICO                         DEL GIUDICE                             4.NC",
+                "MICHELE VIVONA3.4",
+                "LEONARDO MATTIA4.1",
+                "ANDREA ANIELLO4.5",
+                "GIULIO KOCH4.2",
+                "DIEGO SILVESTRI4.5",
+                "BRUNO LENTSCHIG4.4",
+                "FRANCESCO CAMONI4.3",
+                "ALESSANDRO PANICCI4.2",
+                "TOMMASO CERVELLI3.5",
+                "ALESSIO RASTRELLI4.NC",
+                "VALERIO CELLETTI4.3",
+                "EDOARDO RICCARDI4.1",
+                "LORENZO COLZI4.NC",
+                "GIACOMO GROSSI3.3",
+                "VALERIO INZIRILLO3.4",
+                "MATTIA LIBRANDI4.2",
+                "JACOPO MONTANARO4.3",
+                "DAVIDE LISSANDRELLI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=5BCF950A-83CB-46F5-932B-8A574C5E1CE9",
+            "categoria": "6° Rodeo Giovanile Borussia",
             "tabellone": "Singolare Maschile Under 18",
-            "iscritti": []
+            "iscritti": [
+                "MATTEO D'URSO4.NC",
+                "MATTEO FARINELLI4.NC",
+                "ADRIANO ANTINORI4.4",
+                "ALESSANDRO MATTIOLI4.4",
+                "EDOARDO  VALOPPI4.5",
+                "GABRIELE DI GIUSEPPE4.2",
+                "STEFANO  GRECO4.NC",
+                "LUDOVICO BENEDETTI4.NC",
+                "DAVIDE MASTROIANNI4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
+            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": [
+                "ALESSANDRA BUZELLI4.5",
+                "JAMIRA FONTE4.NC",
+                "VIRGINIA SCALETTA4.3",
+                "ANGELICA ZUGARELLI4.6",
+                "FLAVIA MONTECUOLLO4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
+            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "tabellone": "Singolare Maschile Under 12",
+            "iscritti": [
+                "TANCREDI MONACO SORGE4.NC",
+                "FRANCESCO PAFFI4.3",
+                "EDOARDO  BATTISTA4.6",
+                "RICCARDO SOLIMEI4.5",
+                "LORENZO PIO RITA4.3",
+                "GIACOMO PALOMBA4.5",
+                "NICCOLO' MANCINI4.NC",
+                "LORENZO CORLETO4.3",
+                "MATTEO CHIRIVI'4.5",
+                "THOMAS NEBULONI4.3",
+                "TOMMASO CONTINANZA4.NC",
+                "TOMMASO  GARUTI 4.6",
+                "FEDERICO  SCARINO 4.5",
+                "SEBASTIAN ARQUINT4.4",
+                "RICCARDO D'ANNIBALE4.NC",
+                "EDOARDO LORENZO IACOVACCI4.3"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
+            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "tabellone": "Singolare Maschile Under 14",
+            "iscritti": [
+                "VALERIO FARCOMENI4.2",
+                "LEONE MONACO SORGE4.5",
+                "PIETRO FERRO4.1",
+                "RICCARDO  VERTUCCI4.NC",
+                "GABRIELE CENTORE4.2",
+                "EDOARDO GABRIELE CAMILLI4.3",
+                "GABRIELE FIORE4.3",
+                "GABRIELE GHEGHI4.3",
+                "TOMMASO MICHETTI4.1",
+                "DARIO VETTURINI4.5",
+                "MATTEO ARNAUT4.NC",
+                "LORENZO DELLA PORTA4.2",
+                "EMANUELE  TARTAGLIA 4.NC",
+                "ALESSANDRO ARRIGONI4.2",
+                "MARCO NAZZARO4.4",
+                "MATTEO DI GIAMBERARDINO4.NC",
+                "LUCA CABAN4.3",
+                "EDOARDO LIBERATI4.1",
+                "VALERIO VALDARCHI4.2",
+                "ALESSANDRO BUONANNO4.6",
+                "DIEGO PACETTI4.4"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
+            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "tabellone": "Singolare Femminile Under 14",
+            "iscritti": [
+                "GIULIA SIGNORINI4.5",
+                "VITTORIA DI CROCE 4.NC",
+                "ELETTRA DE SANCTIS4.NC",
+                "NICOLE LOREFICE4.NC"
+            ]
+        },
+        {
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
+            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "tabellone": "Singolare Maschile Under 18",
+            "iscritti": [
+                "TOMMASO BOZZA4.4",
+                "DIEGO VERRILLO3.3",
+                "ADRIANO BOZZO4.1",
+                "LEONARDO MELITO3.3",
+                "ZHI CHENG DAVIDE ZHOU4.NC",
+                "WILLIAM PIRRITANO4.NC"
+            ]
         },
         {
             "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=382BA64B-27BB-4E5F-8213-BB8556F17394",
@@ -322,91 +477,28 @@
             ]
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
-            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
-            "tabellone": "Singolare Femminile Under 12",
-            "iscritti": [
-                "ALESSANDRA BUZELLI4.5",
-                "JAMIRA FONTE4.NC",
-                "VIRGINIA SCALETTA4.3",
-                "ANGELICA ZUGARELLI4.6",
-                "FLAVIA MONTECUOLLO4.3"
-            ]
-        },
-        {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
-            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
             "tabellone": "Singolare Maschile Under 12",
-            "iscritti": [
-                "TANCREDI MONACO SORGE4.NC",
-                "FRANCESCO PAFFI4.3",
-                "EDOARDO  BATTISTA4.6",
-                "RICCARDO SOLIMEI4.5",
-                "LORENZO PIO RITA4.3",
-                "GIACOMO PALOMBA4.5",
-                "NICCOLO' MANCINI4.NC",
-                "LORENZO CORLETO4.3",
-                "MATTEO CHIRIVI'4.5",
-                "THOMAS NEBULONI4.3",
-                "TOMMASO CONTINANZA4.NC",
-                "TOMMASO  GARUTI 4.6",
-                "FEDERICO  SCARINO 4.5",
-                "SEBASTIAN ARQUINT4.4",
-                "RICCARDO D'ANNIBALE4.NC",
-                "EDOARDO LORENZO IACOVACCI4.3"
-            ]
+            "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
-            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
-            "tabellone": "Singolare Maschile Under 14",
-            "iscritti": [
-                "VALERIO FARCOMENI4.2",
-                "LEONE MONACO SORGE4.5",
-                "PIETRO FERRO4.1",
-                "RICCARDO  VERTUCCI4.NC",
-                "GABRIELE CENTORE4.2",
-                "EDOARDO GABRIELE CAMILLI4.3",
-                "GABRIELE FIORE4.3",
-                "GABRIELE GHEGHI4.3",
-                "TOMMASO MICHETTI4.1",
-                "DARIO VETTURINI4.5",
-                "MATTEO ARNAUT4.NC",
-                "LORENZO DELLA PORTA4.2",
-                "EMANUELE  TARTAGLIA 4.NC",
-                "ALESSANDRO ARRIGONI4.2",
-                "MARCO NAZZARO4.4",
-                "MATTEO DI GIAMBERARDINO4.NC",
-                "LUCA CABAN4.3",
-                "EDOARDO LIBERATI4.1",
-                "VALERIO VALDARCHI4.2",
-                "ALESSANDRO BUONANNO4.6",
-                "DIEGO PACETTI4.4"
-            ]
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 12",
+            "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
-            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
-            "tabellone": "Singolare Femminile Under 14",
-            "iscritti": [
-                "GIULIA SIGNORINI4.5",
-                "VITTORIA DI CROCE 4.NC",
-                "ELETTRA DE SANCTIS4.NC",
-                "NICOLE LOREFICE4.NC"
-            ]
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
+            "tabellone": "Singolare Femminile Under 18",
+            "iscritti": []
         },
         {
-            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=EB9323BF-AE29-408A-8E4E-B806C7A8D1D4",
-            "categoria": "Torneo Rodeo Giovanile GST Academy By Australian",
+            "torneo": "/Tornei/Dettaglio-Competizione.html?competitionId=D2584291-5D8B-4540-B583-C82669D0D4B2",
+            "categoria": "ANANDA",
             "tabellone": "Singolare Maschile Under 18",
-            "iscritti": [
-                "TOMMASO BOZZA4.4",
-                "DIEGO VERRILLO3.3",
-                "ADRIANO BOZZO4.1",
-                "LEONARDO MELITO3.3",
-                "ZHI CHENG DAVIDE ZHOU4.NC",
-                "WILLIAM PIRRITANO4.NC"
-            ]
+            "iscritti": []
         }
     ]
 }
